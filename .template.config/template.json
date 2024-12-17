@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Evangelos Chavlis",
+  "classifications": ["Clean Architecture", ".NET", "React", "Typescript"],
+  "identity": "CleanArchitecture.Project",
+  "name": "Clean Architecture Template",
+  "description": "A robust and scalable Clean Architecture template for .NET applications, designed to promote separation of concerns, maintainability, and testability. This template integrates best practices for .NET Core, React, and TypeScript, making it ideal for enterprise-level applications that require a strong architecture foundation. Perfect for developers looking to create modular and easily maintainable applications with a clear structure.",
+  "shortName": "cleanArch",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "project",
+  "preferNameDirectory": false
+}

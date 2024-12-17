@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // For absolute imports
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // Build info file location
+    "target": "ES2020", // JavaScript target version
+    "useDefineForClassFields": true, // Enforces `useDefineForClassFields`
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Define the libraries to be included
+    "module": "ESNext", // Module system (ES Modules)
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "moduleResolution": "bundler", // Use bundler mode for module resolution
+    "allowImportingTsExtensions": true, // Allow importing `.ts` extensions
+    "isolatedModules": true, // Ensures each file can be safely transpiled in isolation
+    "moduleDetection": "force", // Force module detection
+    "noEmit": true, // Do not emit output files
+    "jsx": "react-jsx", // JSX transformation for React 17+
+    
+    /* Linting */
+    "strict": true, // Enable all strict type-checking options
+    "noUnusedLocals": true, // Disallow unused locals
+    "noUnusedParameters": true, // Disallow unused parameters
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough in switch statements
+    "noUncheckedSideEffectImports": true // Ensure that side-effect imports are checked
+  },
+  "include": ["src"] // Include all files in the "src" directory
+}

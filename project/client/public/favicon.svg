@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="gold" viewBox="0 0 16 16">
+  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:gold;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:orange;stop-opacity:1" />
+  </linearGradient>
+  <path fill="url(#gradient)" d="M11.473 9.058a3 3 0 0 0-4.856-2.632 3.5 3.5 0 0 0-4.263 5.443A2.998 2.998 0 0 0 4.5 15H13a3 3 0 0 0-1.527-5.942zM1.5 4.75a.75.75 0 0 1 0-1.5h1a.75.75 0 0 1 0 1.5h-1zm8.5-3a.5.5 0 0 1 1 0v1a.5.5 0 0 1-1 0V1.75zM13.25 3.1a.5.5 0 0 1 .707 0l.707.707a.5.5 0 0 1-.707.707l-.707-.707a.5.5 0 0 1 0-.707zm2.043 3.036a.5.5 0 0 1 0 1h-1a.5.5 0 0 1 0-1h1zM13.25 6.9a.5.5 0 0 1 .707 0l.707-.707a.5.5 0 1 1-.707.707l-.707-.707a.5.5 0 0 1 0 .707zM9.75 3.1a.5.5 0 0 1 .707 0l-.707.707a.5.5 0 1 1-.707-.707l.707-.707z"/>
+</svg>
