@@ -6,11 +6,21 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Evangelos Chavlis</Authors>
+    <Owners>Evangelos Chavlis</Owners>
+    <Readme>README.md</Readme>
+    <Summary>Clean Architecture template integrating .NET, React, and TypeScript.</Summary>
     <Description>Clean Architecture Template with .NET and React, Typescript</Description>
-    <PackageId>Clean.Architecture.Template.Evangelos.Chavlis</PackageId>
+    <PackageId>Clean.Architecture.Template.NetReactTS</PackageId>
     <Version>1.0.0</Version>
     <PackageTags>CleanArchitecture,.Net,React,Typescript</PackageTags>
     <RepositoryUrl>https://github.com/EvangelosChavlis/template</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/EvangelosChavlis/template</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <ReleaseNotes>
+      Initial release of Clean Architecture Template.
+      - Includes .NET server project.
+      - React and TypeScript client project.
+    </ReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ReleaseNotes>Initial release of Clean Architecture Template with .NET and React, Typescript</ReleaseNotes>
     <Copyright>Copyright © 2024 Evangelos Chavlis</Copyright>
@@ -18,7 +28,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="**\*" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Include all files, except those we explicitly exclude -->
+    <Content Include="**/*" CopyToOutputDirectory="PreserveNewest" Exclude="README.md;dotnet.template.pack.csproj;pack.bat;.git/**" />
   </ItemGroup>
 
 </Project>

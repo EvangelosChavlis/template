@@ -8,6 +8,26 @@ This is a template for setting up a Clean Architecture project with .NET, React,
 - **.NET 8.0 server project**: A robust and flexible backend using the latest version of .NET.
 - **React & TypeScript client project**: A modern, type-safe front-end using React and TypeScript.
 
+## Installation
+
+To install the template globally on your machine, use the following command:
+
+`dotnet new install Clean.Architecture.Template.NetReactTS::1.0.0`
+
+## Project Creation
+To create a new project using this template:
+
+### Generate a New Project
+Run the following command to generate a project:
+
+
+`dotnet new cleanArch --name Your-Project-Name`
+
+Replace Your-Project-Name with the desired name of your project.
+
+This will generate a new project with a complete folder structure, pre-configured to follow Clean Architecture principles.
+   
+
 ## Project Structure
 
 The template includes the following structure:
