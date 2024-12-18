@@ -30,14 +30,14 @@ const Users = () => {
       placement: "top",
       disabled: false,
     },
-    {
-      title: "Initialize Users",
-      action: () => navigate("initialize"),
-      icon: <i className="bi bi-folder-plus"></i>,
-      color: "success",
-      placement: "top",
-      disabled: false,
-    },
+    // {
+    //   title: "Initialize Users",
+    //   action: () => navigate("initialize"),
+    //   icon: <i className="bi bi-folder-plus"></i>,
+    //   color: "success",
+    //   placement: "top",
+    //   disabled: false,
+    // },
   ];
 
   return (
