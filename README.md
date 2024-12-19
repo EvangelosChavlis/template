@@ -23,7 +23,7 @@ Run the following command to generate a project:
 
 `dotnet new cleanArch --name Your-Project-Name`
 
-Replace Your-Project-Name with the desired name of your project.
+Replace **Your-Project-Name** with the desired name of your project.
 
 This will generate a new project with a complete folder structure, pre-configured to follow Clean Architecture principles.
    
@@ -61,11 +61,15 @@ The template includes the following structure:
    cd project/client
    npm install 
    cd ..
-3. Run project
+3. Setup database
+   ```bash
+   cd scripts
+   ./setup-database.sh (or Powershell file)
+4. Run project
    ```bash
    cd scripts
    ./run-dev.sh (or Powershell file)
-3. Happy coding!
+5. Happy coding!
 
 ## Author
 Evangelos Chavlis  
