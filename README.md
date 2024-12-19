@@ -12,7 +12,7 @@ This is a template for setting up a Clean Architecture project with .NET, React,
 
 To install the template globally on your machine, use the following command:
 
-`dotnet new install Clean.Architecture.Template.NetReactTS::1.0.0`
+`dotnet new install Clean.Architecture.Template.NetReactTS::1.0.1`
 
 ## Project Creation
 To create a new project using this template:
