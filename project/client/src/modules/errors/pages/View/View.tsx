@@ -9,12 +9,10 @@ import Tabs from 'react-bootstrap/Tabs';
 import useView from 'src/modules/errors/pages/View/useView';
 import Header from 'src/modules/shared/Header';
 import { ButtonProps } from 'src/models/shared/buttonProps';
-import LoadingSpinner from 'src/modules/shared/LoadingSpinner';
 
 const View = () => {
   const { error } = useView();
 
-  if (!error) return <LoadingSpinner />
   const header = "Error Info";
 
   const buttons: ButtonProps[] = [

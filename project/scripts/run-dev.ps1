@@ -33,7 +33,7 @@ Foreach($path in $paths)
 if (!$clean)
 {
     Start-Process wt -ArgumentList "PowerShell.exe", 
-        "-NoExit", "& {Set-Location $dir\; dotnet watch run --project .\server\src\Api\}",
+        "-NoExit", "& {Set-Location $dir\; dotnet watch run -p .\server\src\Api\}",
         ";",
         "PowerShell.exe",
         "-NoExit", 

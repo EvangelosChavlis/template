@@ -11,12 +11,15 @@ const useView = () => {
     const { id } = useParams<{ id: string }>();
 
     const { data: result } = useQuery<ItemResponse<ItemTelemetryDto>, Error>(
-        ['role', id],
+        ['telemetry', id],
         () => getTelemetryItem(id!),
-        { enabled: !!id }
+        {
+            suspense: true, 
+            enabled: !!id 
+        }
     );
 
-    return { telemetry: result?.data };
+    return { telemetry: result?.data! };
 };
 
 export default useView;

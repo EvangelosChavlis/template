@@ -24,6 +24,11 @@ public class Warning
     /// </summary>
     public string Description { get; set; }
 
+    /// <summary>
+    /// Gets or sets the version GUID for optimistic concurrency control.
+    /// </summary>
+    public Guid Version { get; set; }
+
     #region Navigation Properties
     /// <summary>
     /// Gets or sets the list of forecasts associated with this warning.

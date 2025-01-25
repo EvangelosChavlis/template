@@ -11,7 +11,7 @@ namespace server.src.Domain.Dto.Auth;
 /// <param name="PhoneNumber">The user's phone number.</param>
 /// <param name="MobilePhoneNumber">The user's mobile phone number.</param>
 public record ListItemUserDto(
-    string Id,
+    Guid Id,
     string FirstName,
     string LastName,
     string Email,
@@ -46,7 +46,7 @@ public record ListItemUserDto(
 /// <param name="IsActive">Indicates whether the user is active.</param>
 /// <param name="Roles">The list of roles assigned to the user.</param>
 public record ItemUserDto(
-    string Id,
+    Guid Id,
     string FirstName,
     string LastName,
     string Email,
@@ -66,8 +66,7 @@ public record ItemUserDto(
     bool MobilePhoneNumberConfirmed,
     string Bio,
     string DateOfBirth,
-    bool IsActive,
-    List<string> Roles
+    bool IsActive
 );
 
 /// <summary>
@@ -136,11 +135,11 @@ public record ResetPasswordDto(string Email, string Token, string NewPassword);
 /// Represents the data required to enable two-factor authentication for a user.
 /// </summary>
 /// <param name="UserId">The unique identifier of the user.</param>
-public record Enable2FADto(string UserId);
+public record Enable2FADto(Guid UserId);
 
 /// <summary>
 /// Represents the data required to verify two-factor authentication for a user.
 /// </summary>
 /// <param name="UserId">The unique identifier of the user.</param>
 /// <param name="Token">The verification token for two-factor authentication.</param>
-public record Verify2FADto(string UserId, string Token);
+public record Verify2FADto(Guid UserId, string Token);

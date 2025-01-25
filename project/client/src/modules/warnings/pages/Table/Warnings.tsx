@@ -11,6 +11,7 @@ import { ListItemWarningDto } from "src/models/weather/warningsDto";
 import { getBadgeColor, incNumberFunction } from "src/utils/utils";
 import TableFooter from "src/modules/shared/TableFooter";
 import Header from "src/modules/shared/Header";
+import SortIcon from "src/modules/shared/SortIcon";
 
 const Warnings = () => {
   const navigate = useNavigate();
@@ -19,6 +20,12 @@ const Warnings = () => {
     warnings,
     pagination,
     handlePageChange,
+    handleRowsPerPageChange,
+    handleFilterChange,
+    handleSortByChange,
+    sortBy,
+    sortOrder,
+    filter,
   } = useWarnings();
 
   const navigateClick = (warningId: string) => {
@@ -30,7 +37,7 @@ const Warnings = () => {
     {
       title: "Create Warning",
       action: () => navigate("create"),
-      icon: <i className="bi bi-plus-square"></i>,
+      icon: <i className="bi bi-plus-square" />,
       color: "primary",
       placement: "top",
       disabled: false,
@@ -38,7 +45,7 @@ const Warnings = () => {
     {
       title: "Initialize Warnings",
       action: () => navigate("initialize"),
-      icon: <i className="bi bi-folder-plus"></i>,
+      icon: <i className="bi bi-folder-plus" />,
       color: "success",
       placement: "top",
       disabled: false,
@@ -49,27 +56,56 @@ const Warnings = () => {
     <div className="container mt-4">
       <Header header={header} buttons={buttons} />
       <div className="p-3 border rounded mt-2">
-        {warnings.length > 0 ? (
-          <Table 
-            responsive 
-            hover 
+        <div className="mb-3">
+          <input
+            type="text"
+            value={filter}
+            onChange={handleFilterChange}
+            placeholder="Search warnings..."
+            className="form-control"
+          />
+        </div>
+
+        <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+          <Table
+            responsive
+            hover
             className="shadow-sm"
-            style={{
-              borderCollapse: "collapse",
-            }}
+            style={{ borderCollapse: "collapse" }}
           >
             <thead className="bg-primary text-white">
               <tr>
                 <th className="text-center" style={{ width: "5%" }}>#</th>
-                <th className="text-center" style={{ width: "30%" }}>
-                  <i className="bi bi-chat icon-margin-right"/>
+                <th
+                  className="text-center"
+                  style={{ width: "30%", cursor: "pointer" }}
+                  onClick={() => handleSortByChange("Name")}
+                >
+                  <SortIcon
+                    column="Name"
+                    sortBy={sortBy}
+                    sortOrder={sortOrder}
+                  />
+                  <i className="bi bi-chat icon-margin-right" />
                   <span>Name</span>
                 </th>
-                <th className="text-center" style={{ width: "50%" }}>
+                <th
+                  className="text-center"
+                  style={{ width: "50%", cursor: "pointer" }}
+                  onClick={() => handleSortByChange("Description")}
+                >
+                  <SortIcon
+                    column="Description"
+                    sortBy={sortBy}
+                    sortOrder={sortOrder}
+                  />
                   <i className="bi bi-chat-dots icon-margin-right" />
                   <span>Description</span>
                 </th>
-                <th className="text-center" style={{ width: "15%" }}>
+                <th
+                  className="text-center"
+                  style={{ width: "15%" }}
+                >
                   <i className="bi bi-cloud-haze-fill icon-margin-right" />
                   <span>Forecasts</span>
                 </th>
@@ -100,12 +136,14 @@ const Warnings = () => {
               ))}
             </tbody>
           </Table>
-        ) : (
-          <div className="alert alert-warning text-center">
-            No warnings found.
-          </div>
-        )}
-        <TableFooter pagination={pagination} handlePageChange={handlePageChange} />
+        </div>
+
+        <TableFooter
+          pagination={pagination}
+          handlePageChange={handlePageChange}
+          rowsPerPage={pagination.pageSize}
+          onRowsPerPageChange={handleRowsPerPageChange}
+        />
       </div>
     </div>
   );

@@ -1,22 +1,28 @@
 // packages
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using server.src.Application.Auth.Roles;
+using server.src.Application.Auth.Users;
 
 // source
-using server.src.Application.Interfaces.Auth;
+using server.src.Application.Helpers;
+using server.src.Application.Interfaces.Auth.UserLogins;
+using server.src.Application.Interfaces.Auth.UserLogouts;
+using server.src.Application.Interfaces.Auth.UserRoles;
 using server.src.Application.Interfaces.Data;
 using server.src.Application.Interfaces.Metrics;
-using server.src.Application.Interfaces.Weather;
-using server.src.Application.Services.Auth;
+using server.src.Application.Services.Auth.UserLogins;
+using server.src.Application.Services.Auth.UserLogouts;
+using server.src.Application.Services.Auth.UserRoles;
 using server.src.Application.Services.Data;
 using server.src.Application.Services.Metrics;
-using server.src.Application.Services.Weather;
 using server.src.Application.Validators.Auth;
 using server.src.Application.Validators.Forecast;
 using server.src.Application.Validators.Role;
 using server.src.Application.Validators.Warning;
+using server.src.Application.Weather.Forecasts;
+using server.src.Application.Weather.Warnings;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Weather;
 
@@ -24,22 +30,34 @@ namespace server.src.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApplication(this IServiceCollection services)
     {
+
         //Data
-        services.AddScoped<IDataService, DataService>();
+        services.AddScoped<IDataCommands, DataCommands>();
 
         //Auth
-        services.AddScoped<IUserService, UserService>();
-        services.AddScoped<IRoleService, RoleService>();
+        services.AddScoped<IUserRoleCommands, UserRoleCommands>();
+        services.AddScoped<IUserLoginQueries, UserLoginQueries>();
+        services.AddScoped<IUserLoginCommands, UserLoginCommands>();
+        services.AddScoped<IUserLogoutQueries, UserLogoutQueries>();
+        services.AddScoped<IUserLogoutCommands, UserLogoutCommands>();
 
-        //Weather
-        services.AddScoped<IWarningsService, WarningsService>();
-        services.AddScoped<IForecastsService, ForecastsService>();
+        // Auth
+        services.AddUsers();
+        services.AddRoles();
 
+        // Weather
+        services.AddWarnings();
+        services.AddForecasts();
+        
         //Metrics
-        services.AddScoped<IErrorsService, ErrorsService>();
-        services.AddScoped<ITelemetryService, TelemetryService>();
+        services.AddScoped<IErrorQueries, ErrorQueries>();
+        services.AddScoped<ITelemetryQueries, TelemetryQueries>();
+
+        // Helpers
+        services.AddScoped<IAuthHelper, AuthHelper>();
+        // services.AddScoped<IAuditLogHelper, AuditLogHelper>();
 
         services.AddFluentValidationAutoValidation();
 

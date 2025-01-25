@@ -54,7 +54,10 @@ const useUpdate = () => {
   const { data: result } = useQuery<ItemResponse<ItemForecastDto>, Error>(
     ["forecast", id],
     () => getForecast(id!),
-    { enabled: !!id }
+    {
+      suspense: true, 
+      enabled: !!id 
+    }
   );
 
   const { data: warningsPicker} = useQuery<ItemResponse<PickerWarningDto[]>, Error>(

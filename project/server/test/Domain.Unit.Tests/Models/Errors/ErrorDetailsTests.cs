@@ -12,11 +12,11 @@ public class ErrorDetailsTests
         var errorDetails = new ErrorDetails();
 
         // Assert
-        Assert.Equal(string.Empty, errorDetails.Error); // Default value for string
+        Assert.Equal(null!, errorDetails.Error); // Default value for string
         Assert.Equal(0, errorDetails.StatusCode); // Default value for int
-        Assert.Equal(string.Empty, errorDetails.Instance); // Default value for string
-        Assert.Equal(string.Empty, errorDetails.ExceptionType); // Default value for string
-        Assert.Equal(string.Empty, errorDetails.StackTrace); // Default value for string
+        Assert.Equal(null!, errorDetails.Instance); // Default value for string
+        Assert.Equal(null!, errorDetails.ExceptionType); // Default value for string
+        Assert.Equal(null!, errorDetails.StackTrace); // Default value for string
         Assert.Equal(default(DateTime), errorDetails.Timestamp); // Default value for DateTime
     }
 

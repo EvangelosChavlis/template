@@ -11,12 +11,31 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
-        builder.HasKey(r => r.Id);
+       builder.HasKey(r => r.Id);
 
-        // Configure relationships
-        builder.HasMany(r => r.UserRoles)
-            .WithOne(ur => ur.Role)
-            .HasForeignKey(ur => ur.RoleId)
-            .IsRequired();
+       builder.Property(r => r.Name)
+              .IsRequired()
+              .HasMaxLength(100);
+
+       builder.Property(r => r.NormalizedName)
+              .IsRequired()
+              .HasMaxLength(100);
+
+       builder.Property(r => r.Description)
+              .IsRequired()
+              .HasMaxLength(250);
+
+       builder.Property(r => r.IsActive)
+              .IsRequired();
+
+       builder.Property(r => r.Version)
+              .IsRequired();
+
+       builder.HasMany(r => r.UserRoles)
+              .WithOne(ur => ur.Role)
+              .HasForeignKey(ur => ur.RoleId)
+              .IsRequired();
+
+       builder.ToTable("Roles");
     }
 }

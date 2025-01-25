@@ -12,11 +12,14 @@ namespace server.src.Persistence;
 
 public static class DependencyInjection
 {
+    private static readonly string _connectionString = "DefaultConnection";
+
     public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<DataContext>(options =>
-            options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(configuration.GetConnectionString(_connectionString)));
 
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<ICommonRepository, CommonRepository>();
         
         

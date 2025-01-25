@@ -11,7 +11,7 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
 {
     public void Configure(EntityTypeBuilder<UserRole> builder)
     {
-        builder.HasKey(ur => new { ur.UserId, ur.RoleId });
+        builder.HasKey(ur => ur.Id);
 
         builder.HasOne(ur => ur.User)
             .WithMany(u => u.UserRoles)
@@ -22,5 +22,7 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
             .WithMany(r => r.UserRoles)
             .HasForeignKey(ur => ur.RoleId)
             .IsRequired();
+
+        builder.ToTable("UserRoles");
     }
 }

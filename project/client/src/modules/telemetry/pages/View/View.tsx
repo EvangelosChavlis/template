@@ -2,12 +2,10 @@ import Header from 'src/modules/shared/Header';
 import { ButtonProps } from 'src/models/shared/buttonProps';
 import { Badge, Col, Row, Tab, Tabs } from 'react-bootstrap';
 import useView from 'src/modules/telemetry/pages/View/useView';
-import LoadingSpinner from 'src/modules/shared/LoadingSpinner';
+import { Link } from 'react-router-dom';
 
 const View = () => {
   const { telemetry } = useView();
-
-  if (!telemetry) return <LoadingSpinner />;
 
   const header = "Telemetry Info";
 
@@ -160,6 +158,17 @@ const View = () => {
                     Thread ID
                   </strong>
                   <span >{telemetry.threadId}</span>
+                </div>
+                <div className="mt-5">
+                  <strong className="strong-margin-right">
+                    <i className="bi bi-person-fill icon-margin-right" />
+                    User
+                  </strong>
+                  <span>
+                    <Link to={`/users/${telemetry.userId}`} className="text-decoration-none">
+                      {telemetry.userName}
+                    </Link>
+                  </span>
                 </div>
               </div>
             </Tab>

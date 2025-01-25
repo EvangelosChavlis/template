@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  azurite:
+    image: mcr.microsoft.com/azure-storage/azurite
+    container_name: "azurite"
+    hostname: azurite
+    restart: always
+    ports:
+      - "10000:10000"  # Blob service
+      - "10001:10001"  # Queue service
+      - "10002:10002"  # Table service (if needed)
+    volumes:
+      - azurite-data:/data
+    environment:
+      - AZURITE_ACCOUNTS=devstoreaccount1:Eby8vdM02xNO6vIY7PcsCqJ2fLNdP21r6n58KUkA6uLRe7bFBJq61D0mM0NSJmLC67UoFA==  # Azurite account and key
+      - AZURITE_VERBOSE=true  # Optional: Enable verbose logging for easier troubleshooting
+
+  azure-cli:
+    image: mcr.microsoft.com/azure-cli
+    container_name: "azure-cli"
+    restart: always
+    depends_on:
+      - azurite
+    environment:
+      - AZURE_STORAGE_ACCOUNT=devstoreaccount1
+      - AZURE_STORAGE_KEY=Eby8vdM02xNO6vIY7PcsCqJ2fLNdP21r6n58KUkA6uLRe7bFBJq61D0mM0NSJmLC67UoFA==  # Same as Azurite account key
+      - AZURE_STORAGE_EMULATOR=http://azurite:10000  # Azurite endpoint
+    entrypoint: /bin/bash -c "while sleep 3600; do :; done"  # Keep the container running for CLI access
+
+volumes:
+  azurite-data:
+    driver: local

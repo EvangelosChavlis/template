@@ -1,13 +1,26 @@
-// packages
-using Microsoft.AspNetCore.Identity;
-
 namespace server.src.Domain.Models.Auth;
 
 /// <summary>
-/// Represents a role in the authentication system, extending the IdentityRole class to include additional properties.
+/// Represents a role in the authentication system.
 /// </summary>
-public class Role : IdentityRole
+public class Role
 {
+    /// <summary>
+    /// Gets or sets the unique identifier for the role.
+    /// </summary>
+    public Guid Id { get; set; }
+
+    /// <summary>
+    /// Gets or sets the name of the role.
+    /// </summary>
+    public string Name { get; set; }
+
+    /// <summary>
+    /// Gets or sets the normalized name of the role.
+    /// This can be used for case-insensitive searches.
+    /// </summary>
+    public string NormalizedName { get; set; }
+
     /// <summary>
     /// Gets or sets the description of the role.
     /// Provides additional details about the role's purpose or functionality.
@@ -19,6 +32,11 @@ public class Role : IdentityRole
     /// Determines whether the role is enabled for assignment or usage.
     /// </summary>
     public bool IsActive { get; set; }
+
+    /// <summary>
+    /// Gets or sets the version GUID for optimistic concurrency control.
+    /// </summary>
+    public Guid Version { get; set; }
 
     #region Navigation Properties
 

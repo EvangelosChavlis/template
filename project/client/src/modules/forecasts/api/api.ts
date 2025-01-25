@@ -6,20 +6,63 @@ import { Pagination } from "src/models/common/pagination";
 import { 
   ListItemForecastDto, 
   ItemForecastDto, 
-  ForecastDto 
+  ForecastDto, 
+  StatItemForecastDto
 } from "src/models/weather/forecastsDto";
-import { urlParams, baseUrl } from "src/utils/utils";
+import { urlParams, baseUrl, getAuthToken } from "src/utils/utils";
 
 /**
- * Fetches a paginated list of forecasts.
+ * Fetches the statistics of forecasts.
+ * 
+ * This function sends a request to the weather API to retrieve statistical data related to the forecasts. 
+ * The result typically contains aggregated metrics or summary data for the forecasts, such as the number of forecasts, 
+ * or any other statistical values that are provided by the backend.
+ * 
+ * @returns {Promise<ItemResponse<StatItemForecastDto[]>>} A promise that resolves to an object containing 
+ * a list of statistical data (`StatItemForecastDto[]`). The `ItemResponse` wrapper contains additional metadata 
+ * about the response, such as error information or status codes.
+ * 
+ * @throws {Error} If the request to fetch the statistics fails, an error will be thrown indicating the failure.
+ */
+export const getForecastsStats = async (): Promise<ItemResponse<StatItemForecastDto[]>> => {
+  const token = getAuthToken();
+  const response = await fetch(`${baseUrl}/weather/forecasts/statistics`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch forecasts statistics");
+  }
+
+  const result = await response.json();
+  return result
+};
+
+/**
+ * Fetches a paginated list of forecasts with sorting and filtering.
  * 
  * @param {Pagination} pagination - The pagination parameters (page number and size).
+ * @param {string} [filter=''] - The filter term for searching forecasts.
+ * @param {string} [sortBy='Date'] - The column to sort by (e.g., 'Date').
+ * @param {"asc" | "desc"} [sortOrder='asc'] - The order of sorting, either 'asc' or 'desc'.
  * @returns {Promise<ListResponse<ListItemForecastDto[]>>} A promise that resolves to the list of forecasts with pagination metadata.
  */
-export const getForecasts = async (pagination: Pagination): Promise<ListResponse<ListItemForecastDto[]>> => {
-  const params = urlParams(pagination);
+export const getForecasts = async (
+  pagination: Pagination,
+  filter: string = '',
+  sortBy: string = 'Date',
+  sortOrder: "asc" | "desc" = "asc"
+): Promise<ListResponse<ListItemForecastDto[]>> => {
+  const token = getAuthToken();
+  const params = urlParams(pagination, { filter, sortBy, sortOrder });
   const response = await fetch(`${baseUrl}/weather/forecasts${params}`, {
     method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {
@@ -27,6 +70,7 @@ export const getForecasts = async (pagination: Pagination): Promise<ListResponse
   }
 
   const result = await response.json();
+
   return {
     data: result.data,
     pagination: {
@@ -45,7 +89,14 @@ export const getForecasts = async (pagination: Pagination): Promise<ListResponse
  * @returns {Promise<ItemResponse<ItemForecastDto>>} A promise that resolves to the forecast details.
  */
 export const getForecast = async (id: string): Promise<ItemResponse<ItemForecastDto>> => {
-  const response = await fetch(`${baseUrl}/weather/forecasts/${id}`);
+  const token = getAuthToken();
+  const response = await fetch(`${baseUrl}/weather/forecasts/${id}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  });
+
   if (!response.ok) {
     throw new Error("Failed to fetch forecast");
   }
@@ -63,10 +114,12 @@ export const getForecast = async (id: string): Promise<ItemResponse<ItemForecast
 export const createForecast = async (
   data: Partial<ForecastDto>
 ): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/forecasts`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   });
@@ -86,10 +139,12 @@ export const createForecast = async (
  * @returns {Promise<CommandResponse<string>>} A promise that resolves to the initialization response.
  */
 export const initializeForecasts = async (dataList: ForecastDto[]): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/forecasts/initialize`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(dataList),
   });
@@ -112,10 +167,12 @@ export const initializeForecasts = async (dataList: ForecastDto[]): Promise<Comm
 export const updateForecast = async (
   id: string, data: Partial<ForecastDto>
 ): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/forecasts/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   });
@@ -135,8 +192,13 @@ export const updateForecast = async (
  * @returns {Promise<CommandResponse<string>>} A promise that resolves to the deletion response.
  */
 export const deleteForecast = async (id: string): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/forecasts/${id}`, {
     method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {

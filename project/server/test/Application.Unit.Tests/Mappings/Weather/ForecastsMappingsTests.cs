@@ -9,6 +9,29 @@ namespace server.tests.Application.Mappings.Weather;
 public class ForecastsMappingsTests
 {
     [Fact]
+    public void StatItemForecastDtoMapping_MapsForecastToStatItemForecastDto()
+    {
+        // Arrange
+        var warning = new Warning { Id = Guid.NewGuid(), Name = "Heatwave" };
+        var forecast = new Forecast
+        {
+            Id = Guid.NewGuid(),
+            Date = new DateTime(2023, 12, 4, 10, 0, 0, DateTimeKind.Utc),
+            TemperatureC = 35,
+            Warning = warning
+        };
+
+        // Act
+        var result = forecast.StatItemForecastDtoMapping();
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.Equal(forecast.Id, result.Id);
+        Assert.Equal(forecast.Date.GetFullLocalDateTimeString(), result.Date);
+        Assert.Equal(forecast.TemperatureC, result.TemperatureC);
+    }
+
+    [Fact]
     public void ListItemForecastDtoMapping_MapsForecastToListItemForecastDto()
     {
         // Arrange

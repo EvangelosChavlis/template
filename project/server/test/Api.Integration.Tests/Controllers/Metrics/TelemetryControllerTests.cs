@@ -66,7 +66,7 @@ public class TelemetryControllerTests : IClassFixture<TestingWebAppFactory<Progr
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<List<ListItemTelemetryDto>>>(content);
+        var result = JsonConvert.DeserializeObject<Response<List<ListItemTelemetryDto>>>(content);
 
         Assert.NotNull(result);
         Assert.NotEmpty(result.Data!);
@@ -87,7 +87,7 @@ public class TelemetryControllerTests : IClassFixture<TestingWebAppFactory<Progr
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<List<ListItemTelemetryDto>>>(content);
+        var result = JsonConvert.DeserializeObject<Response<List<ListItemTelemetryDto>>>(content);
 
         Assert.NotNull(result);
         Assert.Empty(result.Data!);

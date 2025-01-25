@@ -27,8 +27,8 @@ public record PickerWarningDto(
 public record ItemWarningDto(
     Guid Id,
     string Name, 
-    string Description, 
-    List<string> Forecasts
+    string Description,
+    Guid Version
 );
 
 /// <summary>
@@ -37,5 +37,6 @@ public record ItemWarningDto(
 /// </summary>
 public record WarningDto(
     string Name,
-    string Description
+    string Description,
+    Guid Version
 );

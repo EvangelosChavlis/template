@@ -9,19 +9,31 @@ import {
   ItemWarningDto, 
   WarningDto 
 } from "src/models/weather/warningsDto";
-import { urlParams, baseUrl } from "src/utils/utils";
+import { urlParams, baseUrl, getAuthToken } from "src/utils/utils";
 
 /**
- * Fetches a list of warnings with pagination.
+ * Fetches a list of warnings with pagination, filtering, and sorting.
  * 
  * @param {Pagination} pagination - Pagination information (e.g., page number, page size).
+ * @param {string} [filter=''] - The filter term for searching warnings.
+ * @param {string} [sortBy='Name'] - The column to sort by (e.g., 'Name').
+ * @param {"asc" | "desc"} [sortOrder='asc'] - The order of sorting, either 'asc' or 'desc'.
  * @returns {Promise<ListResponse<ListItemWarningDto[]>>} A promise that resolves to a list of warning items with pagination info.
  * @throws {Error} Throws an error if the fetch request fails.
  */
-export const getWarnings = async (pagination: Pagination): Promise<ListResponse<ListItemWarningDto[]>> => {
-  const params = urlParams(pagination);
+export const getWarnings = async (
+  pagination: Pagination,
+  filter: string = '',
+  sortBy: string = 'Name',
+  sortOrder: "asc" | "desc" = "asc"
+): Promise<ListResponse<ListItemWarningDto[]>> => {
+  const token = getAuthToken();
+  const params = urlParams(pagination, { filter, sortBy, sortOrder });
   const response = await fetch(`${baseUrl}/weather/warnings${params}`, {
     method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {
@@ -29,6 +41,7 @@ export const getWarnings = async (pagination: Pagination): Promise<ListResponse<
   }
 
   const result = await response.json();
+
   return {
     data: result.data,
     pagination: {
@@ -47,7 +60,14 @@ export const getWarnings = async (pagination: Pagination): Promise<ListResponse<
  * @throws {Error} Throws an error if the fetch request fails.
  */
 export const getWarningsPicker = async (): Promise<ItemResponse<PickerWarningDto[]>> => {
-  const response = await fetch(`${baseUrl}/weather/warnings/picker`);
+  const token = getAuthToken();
+  const response = await fetch(`${baseUrl}/weather/warnings/picker`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  });
+  
   if (!response.ok) {
     throw new Error("Failed to fetch warnings picker");
   }
@@ -64,7 +84,14 @@ export const getWarningsPicker = async (): Promise<ItemResponse<PickerWarningDto
  * @throws {Error} Throws an error if the fetch request fails.
  */
 export const getWarning = async (id: string): Promise<ItemResponse<ItemWarningDto>> => {
-  const response = await fetch(`${baseUrl}/weather/warnings/${id}`);
+  const token = getAuthToken();
+  const response = await fetch(`${baseUrl}/weather/warnings/${id}`, {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  });
+  
   if (!response.ok) {
     throw new Error("Failed to fetch warning");
   }
@@ -83,10 +110,12 @@ export const getWarning = async (id: string): Promise<ItemResponse<ItemWarningDt
 export const createWarning = async (
   data: Partial<WarningDto>
 ): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/warnings`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   });
@@ -106,10 +135,12 @@ export const createWarning = async (
  * @returns {Promise<CommandResponse<string>>} A promise that resolves to the initialization response.
  */
 export const initializeWarnings = async (dataList: WarningDto[]): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/warnings/initialize`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(dataList),
   });
@@ -134,10 +165,12 @@ export const initializeWarnings = async (dataList: WarningDto[]): Promise<Comman
 export const updateWarning = async (
   id: string, data: Partial<WarningDto>
 ): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/warnings/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   });
@@ -158,8 +191,12 @@ export const updateWarning = async (
  * @throws {Error} Throws an error if the delete request fails.
  */
 export const deleteWarning = async (id: string): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/weather/warnings/${id}`, {
     method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {

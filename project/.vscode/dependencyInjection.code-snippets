@@ -1,0 +1,47 @@
+{
+    "Entity Dependency Injection": {
+      "prefix": "entityDependencyInjection",
+      "body": [
+        "// packages",
+        "using Microsoft.Extensions.DependencyInjection;",
+        "",
+        "// source",
+        "using server.src.Application.${Entity}s.Commands;",
+        "using server.src.Application.${Entity}s.Interfaces;",
+        "using server.src.Application.${Entity}s.Queries;",
+        "using server.src.Application.${Entity}s.Services;",
+        "using server.src.Application.Interfaces;",
+        "using server.src.Domain.Dto.Common;",
+        "using server.src.Domain.Dto.${Entity};",
+        "",
+        "namespace server.src.Application.${Entity}s;",
+        "",
+        "public static class DependencyInjection",
+        "{",
+        "    public static IServiceCollection Add${Entity}s(this IServiceCollection services)",
+        "    {",
+        "        // register query handlers",
+        "        services.AddScoped<IRequestHandler<Get${Entity}sQuery, ListResponse<List<ListItem${Entity}Dto>>>, Get${Entity}sHandler>();",
+        "        services.AddScoped<IRequestHandler<Get${Entity}sPickerQuery, Response<List<Picker${Entity}Dto>>>, Get${Entity}sPickerHandler>();",
+        "        services.AddScoped<IRequestHandler<Get${Entity}ByIdQuery, Response<Item${Entity}Dto>>, Get${Entity}ByIdHandler>();",
+        "",
+        "        // register queries",
+        "        services.AddScoped<I${Entity}Queries, ${Entity}Queries>();",
+        "",
+        "        // register command handlers",
+        "        services.AddScoped<IRequestHandler<Initialize${Entity}sCommand, Response<string>>, Initialize${Entity}sHandler>();",
+        "        services.AddScoped<IRequestHandler<Create${Entity}Command, Response<string>>, Create${Entity}Handler>();",
+        "        services.AddScoped<IRequestHandler<Update${Entity}Command, Response<string>>, Update${Entity}Handler>();",
+        "        services.AddScoped<IRequestHandler<Delete${Entity}Command, Response<string>>, Delete${Entity}Handler>();",
+        "",
+        "        // register commands",
+        "        services.AddScoped<I${Entity}Commands, ${Entity}Commands>();",
+        "",
+        "        return services;",
+        "    }",
+        "}"
+      ],
+      "description": "Registers dependency injection for entity-related commands and queries."
+    }
+  }
+  

@@ -25,7 +25,7 @@ public class TelemetryServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new TelemetryService(context, commonRepository);
+        var service = new TelemetryQueries(context, commonRepository);
         await _contextSetup.ClearDatabase(context);
 
         var telemetryData = new List<Telemetry>
@@ -94,7 +94,7 @@ public class TelemetryServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new TelemetryService(context, commonRepository);
+        var service = new TelemetryQueries(context, commonRepository);
         await _contextSetup.ClearDatabase(context);
 
         var telemetryRecord = new Telemetry
@@ -135,7 +135,7 @@ public class TelemetryServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new TelemetryService(context, commonRepository);
+        var service = new TelemetryQueries(context, commonRepository);
         await _contextSetup.ClearDatabase(context);
 
         var nonExistentId = Guid.NewGuid();

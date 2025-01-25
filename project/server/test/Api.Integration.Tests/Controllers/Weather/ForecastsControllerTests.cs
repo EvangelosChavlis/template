@@ -54,6 +54,42 @@ public class ForecastsControllerTests : IClassFixture<TestingWebAppFactory<Progr
         context.SaveChanges();
     }
 
+    [Fact]
+    public async Task GetForecastsStats_ReturnsStatistics()
+    {
+        // Arrange: Clear and seed the database before the test
+        ClearAndSeedDatabase();
+
+        var context = _factory.GetDataContext();
+        var warning = context.Warnings.FirstOrDefault(w => w.Name == "Thunderstorm")!;
+        var forecast = new Forecast
+        {
+            Date = DateTime.Now.AddDays(-1),
+            TemperatureC = 25,
+            Summary = "Partly Cloudy",
+            WarningId = warning.Id
+        };
+
+        // Add a forecast to the database
+        context.Forecasts.Add(forecast);
+        context.SaveChanges();
+
+        // Act
+        var response = await _client.GetAsync("/api/weather/forecasts/statistics");
+
+        // Assert
+        response.EnsureSuccessStatusCode();
+        var content = await response.Content.ReadAsStringAsync();
+        var result = JsonConvert.DeserializeObject<ListResponse<List<StatItemForecastDto>>>(content);
+
+        Assert.NotNull(result);
+        Assert.NotEmpty(result.Data!);
+        
+        // Example checks (adapt based on your StatItemForecastDto structure)
+        var stats = result.Data!.First();
+        Assert.Equal(25, stats.TemperatureC);
+    }
+
 
     [Fact]
     public async Task GetForecasts_ReturnsListOfForecasts()
@@ -124,7 +160,7 @@ public class ForecastsControllerTests : IClassFixture<TestingWebAppFactory<Progr
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Forecast {newForecast.Date.GetLocalDateString()} inserted successfully!", result.Data);
@@ -157,7 +193,7 @@ public class ForecastsControllerTests : IClassFixture<TestingWebAppFactory<Progr
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Forecast {updatedForecast.Date.GetLocalDateString()} updated successfully!", result.Data);
@@ -182,7 +218,7 @@ public class ForecastsControllerTests : IClassFixture<TestingWebAppFactory<Progr
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Forecast {forecast.Date.GetLocalDateString()} deleted successfully!", result.Data);
@@ -219,7 +255,7 @@ public class ForecastsControllerTests : IClassFixture<TestingWebAppFactory<Progr
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
     }

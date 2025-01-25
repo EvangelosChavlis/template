@@ -1,17 +1,33 @@
 // packages
 using System.Linq.Expressions;
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 
 // source
+using server.src.Application.Helpers;
 using server.src.Domain.Models.Common;
+using server.src.Persistence.Contexts;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Persistence.Repositories;
 
 public class CommonRepository : ICommonRepository
 {
+    private readonly DataContext _context;
+    private readonly IAuditLogHelper _auditLogHelper;
+    private readonly IUnitOfWork _unitOfWork;
+    
+    public CommonRepository(DataContext context, IAuditLogHelper auditLogHelper,
+        IUnitOfWork unitOfWork)
+    {
+        _context = context;
+        _auditLogHelper = auditLogHelper;
+        _unitOfWork = unitOfWork;
+    }
+
+    public CommonRepository() {}
+
     public async Task<Envelope<T>> GetPagedResultsAsync<T>(
-        DbSet<T> query,
         UrlQuery pageParams,
         Expression<Func<T, bool>>[] filterExpressions,
         IncludeThenInclude<T>[] includeThenIncludeExpressions,
@@ -22,33 +38,34 @@ public class CommonRepository : ICommonRepository
         var pageNum = pageParams.PageNumber ?? 1;
         var pageSize = pageParams.PageSize;
 
-        // Filtering query
-        var filteredQuery = query.AsQueryable();
+        // Retrieve the dataset dynamically
+        var query = _context.Set<T>().AsQueryable();
 
+        // Apply filtering
         if (filterExpressions != null)
         {
             foreach (var filterExpression in filterExpressions)
             {
                 if (filterExpression != null)
-                    filteredQuery = filteredQuery.Where(filterExpression);
+                    query = query.Where(filterExpression);
             }
         }
 
-        // Calculating records
-        var totalRecords = await filteredQuery.CountAsync(token);
+        // Calculate total records and pages
+        var totalRecords = await query.CountAsync(token);
         var totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
 
-        // Ordering query
-        IQueryable<T> orderedQuery = pageParams.SortDescending
-            ? filteredQuery.OrderByDescending(x => EF.Property<object>(x, pageParams.SortBy!))
-            : filteredQuery.OrderBy(x => EF.Property<object>(x, pageParams.SortBy!));
+        // Apply sorting
+        query = pageParams.SortDescending
+            ? query.OrderByDescending(x => EF.Property<object>(x, pageParams.SortBy!))
+            : query.OrderBy(x => EF.Property<object>(x, pageParams.SortBy!));
 
-        // Apply the include and thenInclude expressions to the query
+        // Apply includes and thenIncludes
         if (includeThenIncludeExpressions != null)
         {
             foreach (var includeThenInclude in includeThenIncludeExpressions)
             {
-                var includableQuery = orderedQuery.Include(includeThenInclude.Include);
+                var includableQuery = query.Include(includeThenInclude.Include);
 
                 if (includeThenInclude.ThenIncludes != null)
                 {
@@ -58,86 +75,124 @@ public class CommonRepository : ICommonRepository
                     }
                 }
 
-                orderedQuery = includableQuery;
+                query = includableQuery;
             }
         }
 
-        // Paging query
-        var pagedData = await orderedQuery
+        // Apply pagination
+        var pagedData = await query
             .Skip((pageNum - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync(token);
 
         pageParams.TotalRecords = totalRecords;
 
-        // Initializing object
-        var envelope = new Envelope<T>
+        // Initialize response
+        return new Envelope<T>
         {
             Rows = pagedData,
             UrlQuery = pageParams
         };
-
-        return envelope;
     }
 
-    public async Task<List<T>> GetResultPickerAsync<T>(DbSet<T> query, CancellationToken token = default) 
+
+    public async Task<List<T>> GetResultPickerAsync<T>(CancellationToken token = default) 
         where T : class
     {
-        var elements = await query.ToListAsync(token);
-
-        return elements;
+        return await _context.Set<T>().ToListAsync(token);
     }
 
     public async Task<T?> GetResultByIdAsync<T>(
-        DbSet<T> query, 
         Expression<Func<T, bool>>[] filterExpressions,
         Expression<Func<T, object>>[] includeExpressions,
         CancellationToken token = default
     ) where T : class
     {
-        // Filtering query
-        var filteredQuery = query.AsQueryable();
+        var query = _context.Set<T>().AsQueryable();
 
+        // Apply filtering
         if (filterExpressions is not null)
         {
             foreach (var filterExpression in filterExpressions)
             {
                 if (filterExpression is not null)
-                    filteredQuery = filteredQuery.Where(filterExpression);
+                    query = query.Where(filterExpression);
             }
         }
 
-        // Apply the include expressions to the query
+        // Apply includes
         if (includeExpressions is not null)
         {
             foreach (var includeExpression in includeExpressions)
-                filteredQuery = filteredQuery.Include(includeExpression);
+                query = query.Include(includeExpression);
         }
 
-        var item = await filteredQuery.FirstOrDefaultAsync(token);
-
-        return item;
+        return await query.SingleOrDefaultAsync(token);
     }
 
-    public async Task<int> GetCountAsync<T>(DbSet<T> query, 
-        Expression<Func<T, bool>>[] filterExpressions, 
+
+    public async Task<int> GetCountAsync<T>(
+        Expression<Func<T, bool>>[] filterExpressions,
         CancellationToken token = default
     ) where T : class
     {
-        // Filtering query
-        var filteredQuery = query.AsQueryable();
+        var query = _context.Set<T>().AsQueryable();
 
         if (filterExpressions is not null)
         {
             foreach (var filterExpression in filterExpressions)
             {
                 if (filterExpression is not null)
-                    filteredQuery = filteredQuery.Where(filterExpression);
+                    query = query.Where(filterExpression);
             }
         }
 
-        var count = await filteredQuery.CountAsync(token);
+        return await query.CountAsync(token);
+    }
 
-        return count;
+    public async Task<bool> AddAsync<T>(T entity, CancellationToken token = default) 
+        where T : class
+    {
+        await _context.Set<T>().AddAsync(entity, token);
+        
+        var result = await _unitOfWork.CommitAsync(token);
+
+        if (result)
+            await _auditLogHelper.CreateAuditLogAsync(null, entity, token);
+
+        return result;
+    }
+
+    public async Task<bool> UpdateAsync<T>(T entity, CancellationToken token = default) 
+        where T : class
+    {
+        var idProperty = entity.GetType().GetProperty("Id", BindingFlags.Public | BindingFlags.Instance);
+        var entityId = idProperty?.GetValue(entity);
+
+        if (entityId is null) return false;
+
+        var existingEntity = await _context.Set<T>().FindAsync([entityId], token);
+
+        if (existingEntity is null) return false;
+
+        _context.Set<T>().Update(entity);
+        var result = await _unitOfWork.CommitAsync(token);
+
+        if (result)
+            await _auditLogHelper.CreateAuditLogAsync(existingEntity, entity, token);
+
+        return result;
+    }
+
+    public async Task<bool> DeleteAsync<T>(T entity, CancellationToken token = default) 
+        where T : class
+    {
+        _context.Set<T>().Remove(entity);
+        var result = await _unitOfWork.CommitAsync(token);
+
+        if (result)
+            await _auditLogHelper.CreateAuditLogAsync(entity, null, token);
+
+        return result;
     }
 }

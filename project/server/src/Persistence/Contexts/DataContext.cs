@@ -1,6 +1,4 @@
 // packages
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 // source
@@ -14,16 +12,25 @@ using server.src.Persistence.Configurations.Weather;
 
 namespace server.src.Persistence.Contexts;
 
-public class DataContext : IdentityDbContext<User, Role, string, 
-    IdentityUserClaim<string>, UserRole, IdentityUserLogin<string>, 
-    IdentityRoleClaim<string>, IdentityUserToken<string>>
+public class DataContext : DbContext
 {
+    #region Auth
+    public DbSet<User> Users { get; set; }
+    public DbSet<Role> Roles { get; set; }
+    public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<UserLogin> UserLogins { get; set; }
+    public DbSet<UserLogout> UserLogouts { get; set; }
+    public DbSet<UserClaim> UserClaims { get; set; }
+    #endregion
+
     #region Weather
     public DbSet<Forecast> Forecasts { get; set; }
     public DbSet<Warning> Warnings { get; set; }
     #endregion
 
     #region Metrics 
+    public DbSet<AuditLog> AuditLogs { get; set; }
+    public DbSet<Chain> Chains { get; set; }
     public DbSet<LogError> LogErrors { get; set; }
     public DbSet<Telemetry> TelemetryRecords { get; set; }
     #endregion
@@ -42,6 +49,9 @@ public class DataContext : IdentityDbContext<User, Role, string,
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new RoleConfiguration());
         modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
+        modelBuilder.ApplyConfiguration(new UserLoginConfiguration());
+        modelBuilder.ApplyConfiguration(new UserLogoutConfiguration());
+        modelBuilder.ApplyConfiguration(new UserClaimConfiguration());
         #endregion
 
         #region Weather Configuration
@@ -50,17 +60,14 @@ public class DataContext : IdentityDbContext<User, Role, string,
         #endregion
        
         #region Metrics Configuration
+        modelBuilder.ApplyConfiguration(new AuditLogConfiguration());
+        modelBuilder.ApplyConfiguration(new ChainConfiguration());
         modelBuilder.ApplyConfiguration(new TelemetryConfiguration());
         modelBuilder.ApplyConfiguration(new LogErrorConfiguration());
         #endregion
 
-        // Custom table names
-        modelBuilder.Entity<User>().ToTable("Users");
-        modelBuilder.Entity<Role>().ToTable("Roles");
-        modelBuilder.Entity<UserRole>().ToTable("UserRoles");
-        modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
-        modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
-        modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
-        modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
+        // modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
+        // modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
     }
+
 }

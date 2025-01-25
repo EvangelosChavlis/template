@@ -1,3 +1,6 @@
+// source
+using server.src.Domain.Models.Auth;
+
 namespace server.src.Domain.Models.Metrics;
 
 /// <summary>
@@ -90,4 +93,30 @@ public class Telemetry
     /// This is useful for debugging and tracing the request processing on the server.
     /// </summary>
     public string ThreadId { get; set; }
+
+    #region Foreign Keys
+    /// <summary>
+    /// Gets or sets the ID of the user associated with the telemetry record.
+    /// This establishes a relationship between the telemetry data and a user.
+    /// </summary>
+    public Guid UserId { get; set; }
+    #endregion
+
+    #region Navigation Properties
+    /// <summary>
+    /// Gets or sets the user associated with the telemetry record.
+    /// This represents the relationship between telemetry data and the user.
+    /// </summary>
+    public User User { get; set; }
+
+    /// <summary>
+    /// Gets or sets the audit log associated with this telemetry record.
+    /// </summary>
+    public List<AuditLog> AuditLogs { get; set; }
+
+    /// <summary>
+    /// Gets or sets the history entity associated with this telemetry record.
+    /// </summary>
+    public List<History> Histories { get; set; }
+    #endregion
 }

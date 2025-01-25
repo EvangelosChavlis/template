@@ -13,10 +13,13 @@ const useView = () => {
     const { data: result } = useQuery<ItemResponse<ItemErrorDto>, Error>(
         ['role', id],
         () => getError(id!),
-        { enabled: !!id }
+        {
+            suspense: true, 
+            enabled: !!id 
+        }
     );
 
-    return { error: result?.data };
+    return { error: result?.data! };
 };
 
 export default useView;

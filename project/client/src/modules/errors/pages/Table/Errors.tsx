@@ -10,23 +10,27 @@ import { ListItemErrorDto } from "src/models/metrics/errorsDto";
 import { incNumberFunction } from "src/utils/utils";
 import TableFooter from "src/modules/shared/TableFooter";
 import Header from "src/modules/shared/Header";
+import SortIcon from "src/modules/shared/SortIcon";
 import useErrors from "src/modules/errors/pages/Table/useErrors";
-import LoadingSpinner from "src/modules/shared/LoadingSpinner";
 
 const Errors = () => {
   const navigate = useNavigate();
 
-  const { 
-    errors, 
-    pagination, 
-    handlePageChange
+  const {
+    errors,
+    pagination,
+    handlePageChange,
+    handleRowsPerPageChange,
+    handleFilterChange,
+    handleSortByChange,
+    sortBy,
+    sortOrder,
+    filter,
   } = useErrors();
 
   const navigateClick = (errorId: string) => {
     navigate(`/errors/${errorId}`);
   };
-
-  if (!errors) return <LoadingSpinner />;
 
   const header = "Errors Page";
   const buttons: ButtonProps[] = [];
@@ -35,27 +39,62 @@ const Errors = () => {
     <div className="container mt-4">
       <Header header={header} buttons={buttons} />
       <div className="p-3 border rounded mt-2">
-        {errors.length > 0 ? (
-          <Table 
-            responsive 
-            hover 
+        <div className="mb-3">
+          <input
+            type="text"
+            value={filter}
+            onChange={handleFilterChange}
+            placeholder="Search errors..."
+            className="form-control"
+          />
+        </div>
+
+        <div style={{ maxHeight: "60vh", overflowY: "auto" }}>
+          <Table
+            responsive
+            hover
             className="shadow-sm"
-            style={{
-              borderCollapse: "collapse",
-            }}
+            style={{ borderCollapse: "collapse" }}
           >
             <thead className="bg-primary text-white">
               <tr>
                 <th className="text-center" style={{ width: "5%" }}>#</th>
-                <th className="text-center" style={{ width: "40%" }}>
-                  <i className="bi bi-clock-history icon-margin-right" />
+                <th
+                  className="text-center"
+                  style={{ width: "40%", cursor: "pointer" }}
+                  onClick={() => handleSortByChange("Error")}
+                >
+                  <SortIcon
+                    column="Error"
+                    sortBy={sortBy}
+                    sortOrder={sortOrder}
+                  />
+                  <i className="bi bi-exclamation-circle icon-margin-right" />
                   <span>Error</span>
                 </th>
-                <th className="text-center" style={{ width: "15%" }}>
+                <th
+                  className="text-center"
+                  style={{ width: "15%", cursor: "pointer" }}
+                  onClick={() => handleSortByChange("StatusCode")}
+                >
+                  <SortIcon
+                    column="StatusCode"
+                    sortBy={sortBy}
+                    sortOrder={sortOrder}
+                  />
                   <i className="bi bi-info-circle icon-margin-right" />
                   <span>Status Code</span>
                 </th>
-                <th className="text-center" style={{ width: "40%" }}>
+                <th
+                  className="text-center"
+                  style={{ width: "40%", cursor: "pointer" }}
+                  onClick={() => handleSortByChange("Timestamp")}
+                >
+                  <SortIcon
+                    column="Timestamp"
+                    sortBy={sortBy}
+                    sortOrder={sortOrder}
+                  />
                   <i className="bi bi-calendar-check icon-margin-right" />
                   <span>Timestamp</span>
                 </th>
@@ -70,7 +109,7 @@ const Errors = () => {
                   <td className="text-center">
                     <Button
                       variant="link"
-                      className={`text-decoration-none text-primary fw-bold`}
+                      className="text-decoration-none text-primary fw-bold"
                       onClick={() => navigateClick(error.id)}
                     >
                       {error.error}
@@ -90,12 +129,14 @@ const Errors = () => {
               ))}
             </tbody>
           </Table>
-        ) : (
-          <div className="alert alert-warning text-center">
-            No errors found.
-          </div>
-        )}
-        <TableFooter pagination={pagination} handlePageChange={handlePageChange} />
+        </div>
+
+        <TableFooter
+          pagination={pagination}
+          handlePageChange={handlePageChange}
+          rowsPerPage={pagination.pageSize}
+          onRowsPerPageChange={handleRowsPerPageChange}
+        />
       </div>
     </div>
   );

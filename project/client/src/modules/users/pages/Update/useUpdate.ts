@@ -117,6 +117,7 @@ const useUpdate = () => {
           () => getUser(id!),
           {
               enabled: !!id,
+              suspense: true,
               onError: (err: any) => {
                   console.error("Error fetching user:", err);
                   toast.error("Failed to fetch user.");
@@ -125,7 +126,7 @@ const useUpdate = () => {
       );
 
   return {
-    user,
+    user: user?.data!,
     handleSubmit
   };
 };

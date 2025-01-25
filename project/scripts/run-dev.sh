@@ -43,7 +43,7 @@ if [ "$CLEAN" = false ]; then
     # Open new terminal windows to run the APIs and npm commands
     osascript <<EOF
         tell application "Terminal"
-            do script "dotnet watch run --project $DIR/server/src/Api"
+            do script "dotnet watch run -p $DIR/server/src/Api"
             do script "cd $DIR/client && npm run dev"
         end tell
 EOF

@@ -11,7 +11,7 @@ public class CommandResponseTests
     public void CommandResponse_ShouldInitializeWithNullDataAndFalseSuccess()
     {
         // Arrange & Act
-        var commandResponse = new CommandResponse<string>();
+        var commandResponse = new Response<string>();
 
         // Assert
         Assert.Null(commandResponse.Data);
@@ -26,7 +26,7 @@ public class CommandResponseTests
     public void WithData_ShouldSetDataProperty()
     {
         // Arrange
-        var commandResponse = new CommandResponse<string>();
+        var commandResponse = new Response<string>();
         var testData = "Test data";
 
         // Act
@@ -40,7 +40,7 @@ public class CommandResponseTests
     public void WithData_ShouldReturnSameObjectForMethodChaining()
     {
         // Arrange
-        var commandResponse = new CommandResponse<string>();
+        var commandResponse = new Response<string>();
         var testData = "Test data";
 
         // Act
@@ -58,7 +58,7 @@ public class CommandResponseTests
     public void WithSuccess_ShouldSetSuccessProperty()
     {
         // Arrange
-        var commandResponse = new CommandResponse<string>();
+        var commandResponse = new Response<string>();
         var success = true;
 
         // Act
@@ -72,7 +72,7 @@ public class CommandResponseTests
     public void WithSuccess_ShouldReturnSameObjectForMethodChaining()
     {
         // Arrange
-        var commandResponse = new CommandResponse<string>();
+        var commandResponse = new Response<string>();
         var success = true;
 
         // Act

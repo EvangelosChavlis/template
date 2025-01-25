@@ -1,7 +1,9 @@
+// packages
 import { useQuery, useMutation } from 'react-query';
 import { toast } from 'react-toastify';
 import { useNavigate, useParams } from 'react-router-dom';
 
+// source
 import { ItemRoleDto } from 'src/models/auth/roleDto';
 import { activateRole, deactivateRole, deleteRole, getRole } from 'src/modules/roles/api/api';
 import { ItemResponse } from 'src/models/common/itemResponse';
@@ -13,7 +15,10 @@ const useView = () => {
   const { data: result, isLoading, isError, error } = useQuery<ItemResponse<ItemRoleDto>, Error>(
     ['role', id],
     () => getRole(id!),
-    { enabled: !!id }
+    { 
+      enabled: !!id,
+      suspense: true,
+    }
   );
 
   const useActionMutation = (action: (id: string) => Promise<any>, _successMessage: string, reload = false) =>
@@ -32,22 +37,21 @@ const useView = () => {
         },
     });
 
-    const deleteMutation = useActionMutation(deleteRole, "Role deleted successfully");
-    const activateMutation = useActionMutation(activateRole, "Role activated successfully", true);
-    const deactivateMutation = useActionMutation(deactivateRole, "Role deactivated successfully", true);
+  const deleteMutation = useActionMutation(deleteRole, "Role deleted successfully");
+  const activateMutation = useActionMutation(activateRole, "Role activated successfully", true);
+  const deactivateMutation = useActionMutation(deactivateRole, "Role deactivated successfully", true);
 
-
-    return {
-        id,
-        navigate,
-        role: result?.data,
-        isLoading,
-        isError,
-        error,
-        handleActivateRole: () => activateMutation.mutate(id!),
-        handleDeactivateRole: () => deactivateMutation.mutate(id!),
-        handleDelete: () => deleteMutation.mutate(id!),
-    };
+  return {
+    id,
+    navigate,
+    role: result?.data!,
+    isLoading,
+    isError,
+    error,
+    handleActivateRole: () => activateMutation.mutate(id!),
+    handleDeactivateRole: () => deactivateMutation.mutate(id!),
+    handleDelete: () => deleteMutation.mutate(id!),
+  };
 };
 
 export default useView;

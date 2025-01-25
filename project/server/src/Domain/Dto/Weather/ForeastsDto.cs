@@ -1,6 +1,18 @@
 namespace server.src.Domain.Dto.Weather;
 
 /// <summary>
+/// Represents a simplified forecast containing basic information 
+/// about the forecast's date and temperature.
+/// This record is primarily used to store statistical data related 
+/// to weather forecasts.
+/// </summary>
+public record StatItemForecastDto(
+    Guid Id, 
+    string Date, 
+    int TemperatureC
+);
+
+/// <summary>
 /// Represents a simplified forecast item containing basic information
 /// about the forecast date, temperature, and associated warning.
 /// </summary>
@@ -8,7 +20,8 @@ public record ListItemForecastDto(
     Guid Id, 
     string Date, 
     int TemperatureC,
-    string Warning
+    string Warning,
+    bool IsRead
 );
 
 /// <summary>
@@ -31,5 +44,7 @@ public record ForecastDto(
     DateTime Date, 
     int TemperatureC,
     string Summary,
-    Guid WarningId
+    Guid WarningId,
+    double Longitude,
+    double Latitude
 );

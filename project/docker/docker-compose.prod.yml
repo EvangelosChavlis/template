@@ -1,0 +1,83 @@
+version: "3.9"  # Use the latest version for better compatibility
+
+services:
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"   # Expose Nginx to host on port 80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./application.conf:/etc/nginx/conf.d/application.conf
+      - ./html:/usr/share/nginx/html
+    depends_on:
+      - server  # Ensure server is started before Nginx
+      - client  # Ensure client is also started before Nginx
+    networks:
+      - webnet
+
+  # Client service
+  client:
+    build:
+      context: ../client
+      dockerfile: Dockerfile
+    container_name: client
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "80"
+    networks:
+      - webnet
+
+  # Server service
+  server:
+    build:
+      context: ../server
+      dockerfile: Dockerfile
+    container_name: server
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    expose:
+      - "5000"
+    depends_on:
+      - postgres
+    networks:
+      - webnet
+
+  # PostgreSQL database service
+  postgres:
+    image: postgres:latest
+    container_name: my_postgres
+    environment:
+      POSTGRES_USER: evangelos.chavlis
+      POSTGRES_PASSWORD: Ar@g0rn1996
+      POSTGRES_DB: weather_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - webnet
+
+  # PgAdmin service for managing the database
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: my_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
+    name: docker_webnet
+
+volumes:
+  postgres_data:

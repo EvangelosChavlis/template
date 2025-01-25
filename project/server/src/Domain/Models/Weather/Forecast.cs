@@ -30,6 +30,24 @@ public class Forecast
     /// </summary>
     public string Summary { get; set; }
 
+    /// <summary>
+    /// Gets or sets a value indicating whether the forecast has been read.
+    /// This can be used to track if a user has viewed the forecast.
+    /// </summary>
+    public bool IsRead { get; set; }
+
+    /// <summary>
+    /// Gets or sets the longitude of the forecast location.
+    /// This helps in associating the forecast with a specific geographic location.
+    /// </summary>
+    public double Longitude { get; set; }
+
+    /// <summary>
+    /// Gets or sets the latitude of the forecast location.
+    /// This helps in associating the forecast with a specific geographic location.
+    /// </summary>
+    public double Latitude { get; set; }
+
     #region Foreign Keys
     /// <summary>
     /// Gets or sets the identifier for the associated warning.

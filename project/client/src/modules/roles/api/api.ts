@@ -1,8 +1,7 @@
-// source
 import { ItemRoleDto, RoleDto } from "src/models/auth/roleDto";
 import { CommandResponse } from "src/models/common/commandResponse";
 import { ItemResponse } from "src/models/common/itemResponse";
-import { baseUrl } from "src/utils/utils";
+import { baseUrl, getAuthToken } from "src/utils/utils";
 
 /**
  * Fetches a list of all roles.
@@ -11,8 +10,12 @@ import { baseUrl } from "src/utils/utils";
  * @throws {Error} Throws an error if the fetch request fails.
  */
 export const getRoles = async (): Promise<ItemRoleDto[]> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles`, {
     method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {
@@ -31,8 +34,12 @@ export const getRoles = async (): Promise<ItemRoleDto[]> => {
  * @throws {Error} Throws an error if the fetch request fails.
  */
 export const getRole = async (id: string): Promise<ItemResponse<ItemRoleDto>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles/${id}`, {
     method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {
@@ -51,8 +58,12 @@ export const getRole = async (id: string): Promise<ItemResponse<ItemRoleDto>> =>
  * @throws {Error} Throws an error if the activation request fails.
  */
 export const activateRole = async (id: string): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles/activate/${id}`, {
     method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {
@@ -71,8 +82,12 @@ export const activateRole = async (id: string): Promise<CommandResponse<string>>
  * @throws {Error} Throws an error if the deactivation request fails.
  */
 export const deactivateRole = async (id: string): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles/deactivate/${id}`, {
     method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {
@@ -93,10 +108,12 @@ export const deactivateRole = async (id: string): Promise<CommandResponse<string
 export const createRole = async (
   data: Partial<RoleDto>
 ): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   });
@@ -115,14 +132,16 @@ export const createRole = async (
  * @param {RoleDto[]} dataList - The list of roles to initialize.
  * @returns {Promise<CommandResponse<string>>} A promise that resolves to the initialization response.
  * @throws {Error} Throws an error if the initialization request fails. 
-*/
+ */
 export const initializeRoles = async (dataList: RoleDto[]): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles/initialize`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
-    body: JSON.stringify(dataList), // Send the list of roles as JSON
+    body: JSON.stringify(dataList),
   });
 
   if (!response.ok) {
@@ -133,7 +152,6 @@ export const initializeRoles = async (dataList: RoleDto[]): Promise<CommandRespo
   return result;
 };
 
-
 /**
  * Updates an existing role.
  * 
@@ -141,14 +159,16 @@ export const initializeRoles = async (dataList: RoleDto[]): Promise<CommandRespo
  * @param {Partial<RoleDto>} data - The updated role data.
  * @returns {Promise<CommandResponse<string>>} A promise that resolves to a response indicating success or failure.
  * @throws {Error} Throws an error if the update request fails. 
-*/
+ */
 export const updateRole = async (
   id: string, data: Partial<RoleDto>
 ): Promise<CommandResponse<string>> => {
+  const token = getAuthToken(); // Retrieve token from localStorage
   const response = await fetch(`${baseUrl}/auth/roles/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`, // Add Bearer token in header
     },
     body: JSON.stringify(data),
   });
@@ -169,8 +189,12 @@ export const updateRole = async (
  * @throws {Error} Throws an error if the delete request fails.
  */
 export const deleteRole = async (id: string): Promise<CommandResponse<string>> => {
+  const token = getAuthToken();
   const response = await fetch(`${baseUrl}/auth/roles/${id}`, {
     method: "DELETE",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
   });
 
   if (!response.ok) {

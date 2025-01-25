@@ -3,7 +3,6 @@ import Badge from "react-bootstrap/Badge";
 
 // source
 import { ButtonProps } from "src/models/shared/buttonProps";
-import LoadingSpinner from "src/modules/shared/LoadingSpinner";
 import useView from "src/modules/forecasts/pages/View/useView";
 import Header from "src/modules/shared/Header";
 import { getBadgeColor } from "src/utils/utils";
@@ -16,7 +15,6 @@ const View = () => {
     id,
   } = useView();
 
-  if (!forecast) return <LoadingSpinner />;
   
   const header = "Forecast Info";
 

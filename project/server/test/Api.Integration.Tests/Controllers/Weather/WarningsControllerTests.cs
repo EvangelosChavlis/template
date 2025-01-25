@@ -106,7 +106,7 @@ public class WarningsControllerTests : IClassFixture<TestingWebAppFactory<Progra
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<List<PickerWarningDto>>>(content);
+        var result = JsonConvert.DeserializeObject<Response<List<PickerWarningDto>>>(content);
 
         Assert.NotNull(result);
         Assert.NotEmpty(result.Data!);
@@ -131,7 +131,7 @@ public class WarningsControllerTests : IClassFixture<TestingWebAppFactory<Progra
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
     }
@@ -150,7 +150,7 @@ public class WarningsControllerTests : IClassFixture<TestingWebAppFactory<Progra
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Warning {newWarning.Name} inserted successfully!", result.Data);
@@ -179,7 +179,7 @@ public class WarningsControllerTests : IClassFixture<TestingWebAppFactory<Progra
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Warning {updatedWarning.Name} updated successfully!", result.Data);
@@ -204,7 +204,7 @@ public class WarningsControllerTests : IClassFixture<TestingWebAppFactory<Progra
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Warning {warning.Name} deleted successfully!", result.Data);

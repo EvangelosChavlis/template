@@ -17,7 +17,7 @@ const useRoles = () => {
   );
 
   return {
-    roles,
+    roles: roles || [],
     isLoading,
     isError,
     error,

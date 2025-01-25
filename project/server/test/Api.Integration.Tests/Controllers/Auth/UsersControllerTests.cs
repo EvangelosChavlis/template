@@ -58,7 +58,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
             EmailConfirmed = true,
             LockoutEnabled = false,
             IsActive = true,
-            DateOfBirth = DateTime.Now.AddYears(-30),
+            DateOfBirth = DateTime.Now.AddYears(-30).ToUniversalTime(),
             MobilePhoneNumber = "1234567890",
             MobilePhoneNumberConfirmed = true,
             Address = "123 Admin Street",
@@ -123,7 +123,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"User {user.UserName} activated successfully", result.Data);
@@ -147,7 +147,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"User {user.UserName} deactivated successfully" , result.Data);
@@ -173,7 +173,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"User {user.UserName} locked successfully", result.Data);
@@ -205,7 +205,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"User {user.UserName} unlocked successfully", result.Data);
@@ -237,7 +237,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Email {user.Email} confirmed successfully", result.Data);
@@ -269,7 +269,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Phone number {user.PhoneNumber} confirmed successfully", result.Data);
@@ -301,7 +301,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Mobile phone number {user.MobilePhoneNumber} confirmed successfully", result.Data);
@@ -331,7 +331,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"User {user.UserName} deleted successfully", result.Data);
@@ -377,7 +377,7 @@ public class UsersControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"User {updatedUserDto.UserName} updated successfully", result.Data);

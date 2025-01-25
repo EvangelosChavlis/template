@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 
 // source
+using server.src.Domain.Exceptions;
 using server.src.Domain.Models.Errors;
 using server.src.Persistence.Contexts;
 
@@ -30,23 +31,32 @@ public class ExceptionHandlingMiddleware
         }
     }
 
+
     private async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         var code = StatusCodes.Status500InternalServerError;
+        var message = exception.Message;
+
+        if (exception is CustomException customEx)
+        {
+            code = customEx.StatusCode;
+            message = customEx.Message;
+        }
+
         var errorDetails = new ErrorDetails
         {
-            Error = exception.Message,
+            Error = message,
             StatusCode = code,
             Instance = $"{context.Request.Method} {context.Request.Path}",
             ExceptionType = exception.GetType().Name,
-            StackTrace = exception.StackTrace!,
+            StackTrace = exception.StackTrace ?? "N/A",
             Timestamp = DateTime.UtcNow
         };
 
-        // Log error
+        // Log the exception
         _logger.LogError(exception, "An error occurred: {Error}", exception.Message);
 
-        // Save error to database using DataContext
+        // Save the error details to the database (optional)
         using (var scope = context.RequestServices.CreateScope())
         {
             var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
@@ -63,10 +73,8 @@ public class ExceptionHandlingMiddleware
             await dbContext.SaveChangesAsync();
         }
 
-        // Check if the response has already started
         if (!context.Response.HasStarted)
         {
-            // Prepare response
             var result = JsonConvert.SerializeObject(errorDetails);
 
             context.Response.ContentType = "application/json";
@@ -75,18 +83,8 @@ public class ExceptionHandlingMiddleware
         }
         else
         {
-            // If the response has already started, log the issue and avoid modifying the response
             _logger.LogWarning("The response has already started, unable to write error response.");
         }
     }
-}
 
-
-// Extension method used to add the middleware to the HTTP request pipeline.
-public static class ExceptionHandlingMiddlewareExtensions
-{
-    public static IApplicationBuilder UseExceptionHandlingMiddleware(this IApplicationBuilder builder)
-    {
-        return builder.UseMiddleware<ExceptionHandlingMiddleware>();
-    }
 }

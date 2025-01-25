@@ -51,5 +51,13 @@ public class TelemetryConfiguration : IEntityTypeConfiguration<Telemetry>
 
         builder.Property(t => t.ThreadId)
             .IsRequired();
+
+        
+        builder.HasOne(t => t.User)
+            .WithMany(u => u.TelemetryRecords)
+            .HasForeignKey(t => t.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.ToTable("TelemetryRecords");
     }
 }

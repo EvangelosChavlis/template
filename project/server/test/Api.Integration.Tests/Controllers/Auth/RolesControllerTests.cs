@@ -121,7 +121,7 @@ public class RolesControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Role {newRole.Name} created successfully", result.Data);
@@ -159,7 +159,7 @@ public class RolesControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Role {updatedRole.Name} updated successfully", result.Data);
@@ -183,7 +183,7 @@ public class RolesControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Role {role.Name} deleted successfully", result.Data);
@@ -206,7 +206,7 @@ public class RolesControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result!.Data);
     }
@@ -231,7 +231,7 @@ public class RolesControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Role {role.Name} activated successfully", result.Data);
@@ -255,7 +255,7 @@ public class RolesControllerTests : IClassFixture<TestingWebAppFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonConvert.DeserializeObject<CommandResponse<string>>(content);
+        var result = JsonConvert.DeserializeObject<Response<string>>(content);
 
         Assert.NotNull(result);
         Assert.Equal($"Role {role.Name} deactivated successfully" , result.Data);

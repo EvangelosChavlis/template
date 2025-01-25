@@ -5,7 +5,6 @@ import { useState } from "react";
 
 // source
 import { ButtonProps } from "src/models/shared/buttonProps";
-import LoadingSpinner from "src/modules/shared/LoadingSpinner";
 import Header from "src/modules/shared/Header";
 import useView from "src/modules/warnings/pages/View/useView";
 import ConfirmModal from "src/modules/shared/ConfirmModal";
@@ -27,8 +26,6 @@ const View = () => {
       setShowDeleteModal(false);
     };
   
-
-  if (!warning) return <LoadingSpinner />;
 
   const header = "Warning Info";
   const buttons: ButtonProps[] = [

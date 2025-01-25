@@ -34,7 +34,10 @@ const useUpdate = () => {
   const { data: result } = useQuery<ItemResponse<ItemRoleDto>, Error>(
     ["role", id],
     () => getRole(id!),
-    { enabled: !!id }
+    { 
+      enabled: !!id,
+      suspense: true
+    }
   );
 
   useMemo(() => {

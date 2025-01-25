@@ -1,8 +1,8 @@
-// packages
+// Packages
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-// packages
+// source
 using server.src.Domain.Models.Weather;
 
 namespace server.src.Persistence.Configurations.Weather
@@ -11,24 +11,32 @@ namespace server.src.Persistence.Configurations.Weather
     {
         public void Configure(EntityTypeBuilder<Forecast> builder)
         {
-            // Configure the primary key
-            builder.HasKey(wf => wf.Id);
+            builder.HasKey(f => f.Id);
 
-            // Configure the required fields
-            builder.Property(wf => wf.Date)
+            builder.Property(f => f.Date)
                    .IsRequired();
 
-            builder.Property(wf => wf.TemperatureC)
+            builder.Property(f => f.TemperatureC)
                    .IsRequired();
 
-            builder.Property(wf => wf.Summary)
+            builder.Property(f => f.Summary)
                    .HasMaxLength(200);
 
-            // Configure the relationship with Alert (many-to-one)
-            builder.HasOne(wf => wf.Warning)
-                   .WithMany(a => a.Forecasts)
-                   .HasForeignKey(wf => wf.WarningId)
-                   .OnDelete(DeleteBehavior.Cascade); // Optional: specify behavior on delete
+            builder.Property(f => f.IsRead)
+                   .IsRequired();
+
+            builder.Property(f => f.Longitude)
+                   .IsRequired();
+
+            builder.Property(f => f.Latitude)
+                   .IsRequired();
+
+            builder.HasOne(f => f.Warning)
+                   .WithMany(w => w.Forecasts)
+                   .HasForeignKey(f => f.WarningId)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            builder.ToTable("Forecasts");
         }
     }
 }

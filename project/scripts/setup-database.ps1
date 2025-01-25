@@ -4,7 +4,7 @@
 $ErrorActionPreference = "Stop"
 
 # Move to the parent directory
-Set-Location ..
+Set-Location .. 
 
 # Prompting the user for the migration name
 $MigrationName = Read-Host "Enter the migration name"

@@ -19,4 +19,14 @@ public static class TelemetryFiltrers
                 t.RequestTimestamp.ToString().Contains(filter ?? "");
     }
 
+    public static Expression<Func<Telemetry, bool>>[] TelemetryMatchFilters(this Expression<Func<Telemetry, bool>>? filter, Guid userId)
+    {
+        var filters = new Expression<Func<Telemetry, bool>>[]
+        {
+            filter!,
+            x => x.UserId == userId
+        };
+
+        return filters;
+    }
 }

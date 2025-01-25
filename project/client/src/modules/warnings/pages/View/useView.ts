@@ -15,7 +15,10 @@ const useView = () => {
   const { data: result , isLoading, isError, error } = useQuery<ItemResponse<ItemWarningDto>, Error>(
     ['warning', id],
     () => getWarning(id!),
-    { enabled: !!id }
+    {
+      suspense: true, 
+      enabled: !!id 
+    }
   );
 
   const deleteMutation = useMutation(deleteWarning, {
@@ -41,7 +44,7 @@ const useView = () => {
   }
 
   return {
-    warning: result?.data,
+    warning: result?.data!,
     handleDelete,
     navigate,
     id,

@@ -6,6 +6,23 @@ namespace server.test.Domain.Unit.Tests.Dto.Weather;
 public class ForecastsDtoTests
 {
     [Fact]
+    public void Should_Create_Valid_StatItemForecastDto()
+    {
+        // Arrange
+        var id = Guid.NewGuid();
+        var date = "2024-12-15";
+        var temperatureC = 25;
+
+        // Act
+        var dto = new StatItemForecastDto(id, date, temperatureC);
+
+        // Assert
+        Assert.Equal(id, dto.Id);
+        Assert.Equal(date, dto.Date);
+        Assert.Equal(temperatureC, dto.TemperatureC);
+    }
+
+    [Fact]
     public void Should_Create_Valid_ListItemForecastDto()
     {
         // Arrange

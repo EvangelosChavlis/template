@@ -14,13 +14,32 @@ const useUsers = () => {
     totalPages: 0,
   };
 
+  const [filter, setFilter] = useState<string>(''); 
+  const [sortBy, setSortBy] = useState<string>('');
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+
+  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilter(e.target.value);
+  };
+
+  const handleSortByChange = (value: string | null) => {
+      if (value) {
+        if (value === sortBy) {
+          setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"));
+        } else {
+          setSortBy(value);
+          setSortOrder("asc");
+        }
+      }
+    };
+
   const [pagination, setPagination] = useState<Pagination>(initialPagination);
 
   const { data: result, isLoading, isError, error } = useQuery(
-    ['users', pagination.pageNumber, pagination.pageSize], // Query key includes pagination state
-    () => getUsers(pagination),
+    ['users', pagination.pageNumber, pagination.pageSize, filter, sortBy, sortOrder],
+    () => getUsers(pagination, filter, sortBy, sortOrder),
     {
-      keepPreviousData: true, // Keeps previous data while fetching new data
+      keepPreviousData: true,
       onSuccess: (result) => {
         setPagination((prevPagination) => ({
           ...prevPagination,
@@ -38,13 +57,23 @@ const useUsers = () => {
     setPagination((prev) => ({ ...prev, pageNumber }));
   };
 
+  const handleRowsPerPageChange = (pageSize: number) => {
+    setPagination((prev) => ({ ...prev, pageSize, pageNumber: 1 }));
+  };
+
   return {
     users: result?.data || [],
     pagination,
     handlePageChange,
+    handleRowsPerPageChange,
+    handleFilterChange,
+    handleSortByChange,
     isLoading,
     isError,
     error,
+    sortBy,
+    sortOrder,
+    filter
   };
 };
 

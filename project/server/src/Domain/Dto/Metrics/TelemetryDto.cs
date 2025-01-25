@@ -31,5 +31,7 @@ public record ItemTelemetryDto(
     string ResponseTimestamp,
     string ClientIp,
     string UserAgent,
-    string ThreadId
+    string ThreadId,
+    Guid UserId,
+    string UserName
 );

@@ -7,14 +7,13 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 
 // Source
 import Header from "src/modules/shared/Header";
 import { ButtonProps } from "src/models/shared/buttonProps";
 import ValidationErrorMessage from "src/modules/shared/ValidationErrorMessage";
 import useCreate from "src/modules/users/pages/Create/useCreate";
-import { Button } from "react-bootstrap";
-
 
 const Create = () => {
   const { handleSubmit } = useCreate();

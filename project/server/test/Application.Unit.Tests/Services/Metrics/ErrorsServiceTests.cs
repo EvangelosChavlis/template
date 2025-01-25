@@ -25,7 +25,7 @@ public class ErrorsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ErrorsService(context, commonRepository);
+        var service = new ErrorQueries(context, commonRepository);
 
         // Seed data
         context.LogErrors.AddRange(new List<LogError>
@@ -74,7 +74,7 @@ public class ErrorsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ErrorsService(context, commonRepository);
+        var service = new ErrorQueries(context, commonRepository);
 
         var logError = new LogError
         {
@@ -107,7 +107,7 @@ public class ErrorsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ErrorsService(context, commonRepository);
+        var service = new ErrorQueries(context, commonRepository);
 
         var nonExistentId = Guid.NewGuid();
 

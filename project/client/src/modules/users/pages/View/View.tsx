@@ -8,19 +8,27 @@ import Col from "react-bootstrap/Col";
 // source
 import { ButtonProps } from "src/models/shared/buttonProps";
 import Header from "src/modules/shared/Header";
-import LoadingSpinner from "src/modules/shared/LoadingSpinner";
 import useView from "src/modules/users/pages/View/useView";
 import ConfirmModal from "src/modules/shared/ConfirmModal";
+import Drawer from "src/modules/shared/Drawer";
+import { Badge, Button, Table } from "react-bootstrap";
+import Details from "src/modules/users/pages/View/components/TabDetails";
+import TabDetails from "src/modules/users/pages/View/components/TabDetails";
+import TabContactInfo from "src/modules/users/pages/View/components/TabContactInfo";
+import TabSystemInfo from "src/modules/users/pages/View/components/TabSystemInfo";
 
 const View = () => {
   const {
     user,
+    roles,
     handleDelete,
     handleActivateUser,
     handleDeactivateUser,
     handleLockUser,
     handleUnlockUser,
     handleGeneratePasswordUser,
+    handleAssignRoleToUser,
+    handleUnassignRoleFromUser,
     navigate,
     id,
   } = useView();
@@ -29,12 +37,14 @@ const View = () => {
   const handleShowDeleteModal = () => setShowDeleteModal(true);
   const handleCloseDeleteModal = () => setShowDeleteModal(false);
 
+  const [showRoleDrawer, setShowRoleDrawer] = useState(false);
+  const handleOpenRoleDrawer = () => setShowRoleDrawer(true);
+  const handleCloseRoleDrawer = () => setShowRoleDrawer(false);
+
   const handleConfirmDelete = () => {
     handleDelete();
     setShowDeleteModal(false);
   };
-
-  if (!user) return <LoadingSpinner />;
 
   const header = "User Info";
   const buttons: ButtonProps[] = [
@@ -73,7 +83,7 @@ const View = () => {
     {
       title: "Activate User",
       action: () => handleActivateUser(),
-      icon: <i className="bi bi-check-circle-fill"></i>,
+      icon: <i className="bi bi-check-circle-fill" />,
       color: "info",
       placement: "top",
       disabled: user.isActive,
@@ -81,7 +91,7 @@ const View = () => {
     {
       title: "Deactivate User",
       action: () => handleDeactivateUser(),
-      icon: <i className="bi bi-x-circle-fill"></i>,
+      icon: <i className="bi bi-x-circle-fill" />,
       color: "info",
       placement: "top",
       disabled: !user.isActive,
@@ -89,15 +99,23 @@ const View = () => {
     {
       title: "Reset Password",
       action: () => handleGeneratePasswordUser(),
-      icon: <i className="bi bi-arrow-clockwise"></i>,
+      icon: <i className="bi bi-arrow-clockwise" />,
       color: "info",
       placement: "top",
       disabled: false,
     },
+    {
+      title: "Manage Roles",
+      action: () => handleOpenRoleDrawer(),
+      icon: <i className="bi bi-shield-lock" />,
+      color: "secondary",
+      placement: "top",
+      disabled: false,
+    }
   ];
 
   return (
-    <div className="container mt-4 mb-3">
+    <div className="container mt-4 mb-4">
       <Header header={header} buttons={buttons} />
 
       <Row className="mt-2" style={{ flex: 1 }}>
@@ -106,160 +124,23 @@ const View = () => {
             <Tab
               eventKey="details"
               title={
-                <span>
+              <span>
                   <i className="bi bi-info-circle-fill"></i> Details
-                </span>
+              </span>
               }
             >
-              <div
-                className="p-3 border rounded bg-light"
-                style={{ flex: 1, overflowY: "auto" }}
-              >
-                <div className="mt-2">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-person-fill icon-margin-right" />First Name
-                  </strong>
-                  <span>{user.firstName}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-person icon-margin-right" />Last Name
-                  </strong>
-                  <span>{user.lastName}</span>
-                </div>
-                <hr />
-                <div className="mt-4">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-envelope-fill icon-margin-right" /> Email
-                  </strong>
-                  <span>{user.email}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-envelope  icon-margin-right" />Email Confirmed
-                  </strong>
-                  {user.emailConfirmed ? (
-                    <i className="bi bi-check-square-fill text-success" />
-                  ) : (
-                    <i className="bi bi-x-square-fill text-danger" />
-                  )}
-                </div>
-                <hr />
-                <div className="mt-4">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-person-badge-fill icon-margin-right"/> Username
-                  </strong>
-                  <span>{user.userName}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-key-fill icon-margin-right" />Initial Password
-                  </strong>
-                  <span>{user.initialPassword}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-person-fill-lock  icon-margin-right" /> Locked
-                  </strong>
-                  {user.lockoutEnabled ? (
-                    <i className="bi bi-lock-fill text-danger" />
-                  ) : (
-                    <i className="bi bi-unlock-fill text-success" />
-                  )}
-                </div>
-                <hr />
-                <div className="mt-4">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-calendar-event-fill  icon-margin-right" /> Date of Birth
-                  </strong>
-                  <span>{user.dateOfBirth}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-file-earmark-text-fill icon-margin-right" /> Bio
-                  </strong>
-                  <span>{user.bio}</span>
-                </div>
-              </div>
-            </Tab>
-            <Tab
-              eventKey="contact-info"
-              title={
-                <span>
-                  <i className="bi bi-telephone-fill" /> Contact Info
-                </span>
-              }
-            >
-              <div
-                className="p-3 border rounded bg-light"
-                style={{ flex: 1, overflowY: "auto" }}
-              >
-                <div className="mt-2">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-geo-alt-fill icon-margin-right" /> Address
-                  </strong>
-                  <span>{user.address}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-postcard-fill icon-margin-right"/> Zip code
-                  </strong>
-                  <span>{user.zipCode}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-building-fill icon-margin-right" /> City
-                  </strong>
-                  <span>{user.city}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-map-fill icon-margin-right" /> State
-                  </strong>
-                  <span>{user.state}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-globe2 icon-margin-right" /> Country
-                  </strong>
-                  <span>{user.country}</span>
-                </div>
-                <hr />
-                <div className="mt-4">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-telephone-fill icon-margin-right" /> Phone Number
-                  </strong>
-                  <span>{user.phoneNumber}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-telephone icon-margin-right" /> Phone Confirmed
-                  </strong>
-                  {user.phoneNumberConfirmed ? (
-                    <i className="bi bi-check-square-fill text-success" />
-                  ) : (
-                    <i className="bi bi-x-square-fill text-danger" />
-                  )}
-                </div>
-                <hr />
-                <div className="mt-4">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-phone-fill icon-margin-right" /> Mobile Phone Number
-                  </strong>
-                  <span>{user.mobilePhoneNumber}</span>
-                </div>
-                <div className="mt-5">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-phone icon-margin-right" /> Mobile Phone Confirmed
-                  </strong>
-                  {user.mobilePhoneNumberConfirmed ? (
-                    <i className="bi bi-check-square-fill text-success" />
-                  ) : (
-                    <i className="bi bi-x-square-fill text-danger" />
-                  )}
-                </div>
-              </div>
-            </Tab>
+            <TabDetails user={user}/>
+          </Tab>
+          <Tab
+            eventKey="contact-info"
+            title={
+              <span>
+                <i className="bi bi-telephone-fill" /> Contact Info
+              </span>
+            }
+          >
+            <TabContactInfo user={user}/>
+          </Tab>
             <Tab
               eventKey="system-info"
               title={
@@ -268,21 +149,7 @@ const View = () => {
                 </span>
               }
             >
-              <div
-                className="p-3 border rounded bg-light"
-                style={{ flex: 1, overflowY: "auto" }}
-              >
-                <div className="mt-4">
-                  <strong className="strong-margin-right">
-                    <i className="bi bi-toggle-on icon-margin-right" /> Active
-                  </strong>
-                  {user.isActive ? (
-                    <i className="bi bi-check-square-fill text-success" /> 
-                  ) : (
-                    <i className="bi bi-x-square-fill text-danger" />
-                  )}
-                </div>
-              </div>
+              <TabSystemInfo user={user}/>
             </Tab>
             <Tab
               eventKey="roles"
@@ -296,7 +163,7 @@ const View = () => {
                 className="p-3 border rounded bg-light"
                 style={{ flex: 1, overflowY: "auto" }}
               >
-                {user.roles.length > 0 ? (
+                {/* {user.roles.length > 0 ? (
                   <ul>
                     {user.roles.map((role, index) => (
                       <li key={index}>{role}</li>
@@ -304,8 +171,116 @@ const View = () => {
                   </ul>
                 ) : (
                   <div>No roles assigned</div>
-                )}
+                )} */}
               </div>
+            </Tab>
+            <Tab
+              eventKey="telemetry"
+              title={
+                <span>
+                  <i className="bi bi-bar-chart-line" /> Telemetry
+                </span>
+              }
+            >
+               {/* <div className="p-3 border rounded" style={{ maxHeight: "60vh", overflowY: "auto" }}>
+                <Table
+                  responsive
+                  hover
+                  className="shadow-sm"
+                  style={{ borderCollapse: "collapse" }}
+                >
+                  <thead className="bg-primary text-white">
+                    <tr>
+                      <th className="text-center" style={{ width: "5%" }}>#</th>
+                      <th
+                        className="text-center"
+                        style={{ width: "10%", cursor: "pointer" }}
+                      >
+                        <i className="bi bi-arrow-right-circle-fill icon-margin-right" />
+                        <span>Method</span>
+                      </th>
+                      <th
+                        className="text-center"
+                        style={{ width: "25%", cursor: "pointer" }}
+                      >
+                        <i className="bi bi-file-earmark-code-fill icon-margin-right" />
+                        <span>Path</span>
+                      </th>
+                      <th 
+                        className="text-center" 
+                        style={{ width: "15%" }}
+                      >
+                        <i className="bi bi-patch-check-fill icon-margin-right" />
+                        <span>Status Code</span>
+                      </th>
+                      <th 
+                        className="text-center" 
+                        style={{ width: "20%" }}
+                      >
+                        <i className="bi bi-speedometer2 icon-margin-right" />
+                        <span>Response Time (ms)</span>
+                      </th>
+                      <th 
+                        className="text-center" 
+                        style={{ width: "25%" }}
+                      >
+                        <i className="bi bi-clock-history icon-margin-right" />
+                        <span>Timestamp</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {user.telemetry.map((telemetry, idx) => (
+                      <tr key={telemetry.id}>
+                        <td className="text-center">
+                          {idx}
+                        </td>
+                        <td className="text-center">
+                          <Button
+                            variant="link"
+                            className="text-decoration-none text-primary fw-bold"
+                            onClick={() => navigate(`/telemetry/${telemetry.id}`)}
+                          >
+                            {telemetry.method}
+                          </Button>
+                        </td>
+                        <td className="text-center">{telemetry.path}</td>
+                        <td className="text-center">
+                          <Badge bg="dark" pill>
+                            {telemetry.statusCode}
+                          </Badge>
+                        </td>
+                        <td className="text-center">
+                          <Badge bg="info">{telemetry.responseTime} ms</Badge>
+                        </td>
+                        <td className="text-center">
+                          <Badge bg="primary">{telemetry.requestTimestamp}</Badge>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </div> */}
+            </Tab>
+            <Tab
+              eventKey="logins"
+              title={
+                <span>
+                  <i className="bi bi-box-arrow-left" /> Logins
+                </span>
+              }
+            >
+
+            </Tab>
+            <Tab
+              eventKey="logouts"
+              title={
+                <span>
+                  <i className="bi bi-box-arrow-right" /> Logouts
+                </span>
+              }
+            >
+
             </Tab>
           </Tabs>
         </Col>
@@ -318,6 +293,16 @@ const View = () => {
         title="Confirm Deletion"
         message="Are you sure you want to delete this user? This action cannot be undone."
       />
+
+      {/* <Drawer
+        roles={roles}
+        show={showRoleDrawer}
+        onClose={handleCloseRoleDrawer}
+        handleAssignRoleToUser={handleAssignRoleToUser}
+        handleUnassignRoleFromUser={handleUnassignRoleFromUser}
+        userId={id!}
+        currentRoles={user.roles}
+      /> */}
     </div>
   );
 };

@@ -14,7 +14,6 @@ import { ButtonProps } from "src/models/shared/buttonProps";
 import ValidationErrorMessage from "src/modules/shared/ValidationErrorMessage";
 import { Button } from "react-bootstrap";
 import useUpdate from "src/modules/users/pages/Update/useUpdate";
-import LoadingSpinner from "src/modules/shared/LoadingSpinner";
 
 
 const Update = () => {
@@ -101,7 +100,6 @@ const Update = () => {
     },
   ];
 
-  if (!user) return <LoadingSpinner />;
 
   return (
     <div className="container mt-4 mb-3">
@@ -132,7 +130,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="firstName"
-                      defaultValue={user.data!.firstName}
+                      defaultValue={user.firstName}
                       ref={firstNameRef}
                       placeholder="First name ..."
                       className={errors.firstName ? "is-invalid" : ""}
@@ -146,7 +144,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="lastName"
-                      defaultValue={user.data!.lastName}
+                      defaultValue={user.lastName}
                       ref={lastNameRef}
                       placeholder="Last name ..."
                       className={errors.lastName ? "is-invalid" : ""}
@@ -160,7 +158,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="email"
-                      defaultValue={user.data!.email}
+                      defaultValue={user.email}
                       ref={emailRef}
                       type="email"
                       placeholder="Email ..."
@@ -175,7 +173,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="userName"
-                      defaultValue={user.data!.userName}
+                      defaultValue={user.userName}
                       ref={userNameRef}
                       placeholder="User name ..."
                       className={errors.userName ? "is-invalid" : ""}
@@ -189,7 +187,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="password"
-                      defaultValue={user.data!.initialPassword}
+                      defaultValue={user.initialPassword}
                       ref={passwordRef}
                       type={showPassword ? "text" : "password"}
                       placeholder="Password ..."
@@ -231,7 +229,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="phoneNumber"
-                      defaultValue={user.data!.phoneNumber}
+                      defaultValue={user.phoneNumber}
                       ref={phoneNumberRef}
                       placeholder="Phone number ..."
                       className={errors.country ? "is-invalid" : ""}
@@ -245,7 +243,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="mobilePhoneNumber"
-                      defaultValue={user.data!.mobilePhoneNumber}
+                      defaultValue={user.mobilePhoneNumber}
                       ref={mobilePhoneNumberRef}
                       placeholder="Mobile phone number ..."
                       className={errors.country ? "is-invalid" : ""}
@@ -259,7 +257,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="country"
-                      defaultValue={user.data!.country}
+                      defaultValue={user.country}
                       ref={countryRef}
                       placeholder="Country ..."
                       className={errors.country ? "is-invalid" : ""}
@@ -273,7 +271,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="state"
-                      defaultValue={user.data!.state}
+                      defaultValue={user.state}
                       ref={stateRef}
                       placeholder="State ..."
                       className={errors.state ? "is-invalid" : ""}
@@ -287,7 +285,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="city"
-                      defaultValue={user.data!.city}
+                      defaultValue={user.city}
                       ref={cityRef}
                       placeholder="City ..."
                       className={errors.city ? "is-invalid" : ""}
@@ -301,7 +299,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="address"
-                      defaultValue={user.data!.address}
+                      defaultValue={user.address}
                       ref={addressRef}
                       placeholder="Address ..."
                       className={errors.address ? "is-invalid" : ""}
@@ -315,7 +313,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="zipCode"
-                      defaultValue={user.data!.zipCode}
+                      defaultValue={user.zipCode}
                       ref={zipCodeRef}
                       placeholder="Zip code ..."
                       className={errors.zipCode ? "is-invalid" : ""}
@@ -344,7 +342,7 @@ const Update = () => {
                     <Form.Control
                       name="dateOfBirth"
                       ref={dateOfBirthRef}
-                      defaultValue={user?.data?.dateOfBirth}
+                      defaultValue={user.dateOfBirth}
                       type="date"
                       placeholder="Select date of birth"
                       className={errors.dateOfBirth ? "is-invalid" : ""}
@@ -358,7 +356,7 @@ const Update = () => {
                     </InputGroup.Text>
                     <Form.Control
                       name="bio"
-                      defaultValue={user?.data?.bio}
+                      defaultValue={user.bio}
                       ref={bioRef}
                       as="textarea"
                       placeholder="Bio ..."

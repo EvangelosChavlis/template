@@ -33,7 +33,10 @@ const useUpdate = () => {
   const { data: result } = useQuery<ItemResponse<ItemWarningDto>, Error>(
     ["warning", id],
     () => getWarning(id!),
-    { enabled: !!id }
+    {
+      suspense: true, 
+      enabled: !!id 
+    }
   );
 
   useMemo(() => {

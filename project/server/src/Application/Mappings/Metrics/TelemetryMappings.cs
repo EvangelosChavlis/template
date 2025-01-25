@@ -1,12 +1,21 @@
 // source
 using server.src.Domain.Dto.Metrics;
 using server.src.Domain.Extensions;
+using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Metrics;
 
 namespace server.src.Application.Mappings.Metrics;
 
+/// <summary>
+/// Contains static mapping methods to transform Telemetry models into their corresponding DTOs.
+/// </summary>
 public static class TelemetryMappings
 {
+    /// <summary>
+    /// Maps a Telemetry model to a ListItemTelemetryDto.
+    /// </summary>
+    /// <param name="model">The Telemetry model that will be mapped to a ListItemTelemetryDto.</param>
+    /// <returns>A ListItemTelemetryDto representing the Telemetry model with key details for a list view.</returns>
     public static ListItemTelemetryDto ListItemTelemetryDtoMapping(
         this Telemetry model) => new(
             Id: model.Id,
@@ -17,8 +26,12 @@ public static class TelemetryMappings
             RequestTimestamp: model.RequestTimestamp.GetFullLocalDateTimeString()
         );
 
-
-   public static ItemTelemetryDto ItemTelemetryDtoMapping(
+    /// <summary>
+    /// Maps a Telemetry model to an ItemTelemetryDto.
+    /// </summary>
+    /// <param name="model">The Telemetry model that will be mapped to an ItemTelemetryDto.</param>
+    /// <returns>An ItemTelemetryDto representing the Telemetry model with full details for an individual item view.</returns>
+    public static ItemTelemetryDto ItemTelemetryDtoMapping(
         this Telemetry model) => new(
             Id: model.Id,
             Method: model.Method,
@@ -33,6 +46,32 @@ public static class TelemetryMappings
             ResponseTimestamp: model.RequestTimestamp.GetFullLocalDateTimeString(),
             ClientIp: model.ClientIp,
             UserAgent: model.UserAgent,
-            ThreadId: model.ThreadId
+            ThreadId: model.ThreadId,
+            UserId: model.User.Id,
+            UserName: model.User.UserName!
+        );
+
+    /// <summary>
+    /// Generates an error ItemTelemetryDto with default empty or invalid values.
+    /// </summary>
+    /// <returns>An ItemTelemetryDto containing default values, typically used for error scenarios.</returns>
+    public static ItemTelemetryDto ErrorItemTelemetryDtoMapping()
+        => new(
+            Id: Guid.Empty,
+            Method: string.Empty,
+            Path: string.Empty,
+            StatusCode: "0",
+            ResponseTime: 0,
+            MemoryUsed: 0,
+            CPUusage: 0,
+            RequestBodySize: 0,
+            RequestTimestamp: string.Empty,
+            ResponseBodySize: 0,
+            ResponseTimestamp: string.Empty,
+            ClientIp: string.Empty,
+            UserAgent: string.Empty,
+            ThreadId: string.Empty,
+            UserId: Guid.Empty,
+            UserName: string.Empty
         );
 }

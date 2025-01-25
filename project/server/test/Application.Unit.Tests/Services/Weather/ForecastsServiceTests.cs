@@ -1,6 +1,8 @@
 // packages
 using System.Net;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+
 
 // source
 using server.src.Application.Services.Weather;
@@ -25,13 +27,113 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         _contextSetup = contextSetup;
     }
 
+
+    [Fact]
+    public async Task GetForecastsStatsService_ShouldReturnCachedData()
+    {
+        // Arrange
+        var context = _contextSetup.CreateDbContext(_dbName);
+        var commonRepository = _contextSetup.CreateCommonRepository();
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
+
+        await _contextSetup.ClearDatabase(context);
+
+        var forecast1 = new Forecast 
+        { 
+            Id = Guid.NewGuid(), 
+            Date = DateTime.UtcNow.AddDays(-1), 
+            TemperatureC = 20, 
+            Summary = "Cool and cloudy" 
+        };
+
+        var forecast2 = new Forecast 
+        { 
+            Id = Guid.NewGuid(), 
+            Date = DateTime.UtcNow, 
+            TemperatureC = 25, 
+            Summary = "Mild and sunny" 
+        };
+
+        context.Forecasts.AddRange(forecast1, forecast2);
+        await context.SaveChangesAsync();
+
+        var cacheKey = "forecastStats";
+        var expectedData = new List<StatItemForecastDto>
+        {
+            new (Id: Guid.NewGuid(), Date: DateTime.Now.GetFullLocalDateTimeString(), TemperatureC: 20),
+            new (Id: Guid.NewGuid(), Date: DateTime.Now.GetFullLocalDateTimeString(), TemperatureC: 25)
+        };
+
+        memoryCache.Set(cacheKey, expectedData, TimeSpan.FromHours(1));
+
+        // Act
+        var result = await service.GetForecastsStatsService();
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.NotNull(result.Data);
+        Assert.Equal(2, result.Data!.Count);
+        Assert.Equal(expectedData[0].Date, result.Data[0].Date);
+        Assert.Equal(expectedData[1].Date, result.Data[1].Date);
+    }
+
+    [Fact]
+    public async Task GetForecastsStatsService_ShouldFetchFromDatabaseAndCacheData()
+    {
+        // Arrange
+        var context = _contextSetup.CreateDbContext(_dbName);
+        var commonRepository = _contextSetup.CreateCommonRepository();
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
+
+        await _contextSetup.ClearDatabase(context);
+
+        var forecast1 = new Forecast 
+        { 
+            Id = Guid.NewGuid(), 
+            Date = DateTime.UtcNow.AddDays(-1), 
+            TemperatureC = 20, 
+            Summary = "Cool and cloudy" 
+        };
+
+        var forecast2 = new Forecast 
+        { 
+            Id = Guid.NewGuid(), 
+            Date = DateTime.UtcNow, 
+            TemperatureC = 25, 
+            Summary = "Mild and sunny" 
+        };
+
+        context.Forecasts.AddRange(forecast1, forecast2);
+        await context.SaveChangesAsync();
+
+        // Act
+        var result = await service.GetForecastsStatsService();
+
+        // Assert
+        Assert.NotNull(result);
+        Assert.NotNull(result.Data);
+        Assert.Equal(2, result.Data!.Count);
+        Assert.Equal(forecast1.TemperatureC, result.Data[0].TemperatureC);
+        Assert.Equal(forecast2.TemperatureC, result.Data[1].TemperatureC);
+
+        // Verify cache
+        var cacheKey = "forecastStats";
+        var isCached = memoryCache.TryGetValue(cacheKey, out List<StatItemForecastDto>? cachedData);
+        Assert.True(isCached);
+        Assert.NotNull(cachedData);
+        Assert.Equal(2, cachedData!.Count);
+    }
+
     [Fact]
     public async Task GetForecastsService_ShouldReturnPagedForecasts()
     {
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
 
         await _contextSetup.ClearDatabase(context);
 
@@ -89,7 +191,8 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
 
         await _contextSetup.ClearDatabase(context);
 
@@ -128,7 +231,9 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
+
         await _contextSetup.ClearDatabase(context);
         var invalidId = Guid.NewGuid(); 
 
@@ -144,7 +249,8 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
 
         await _contextSetup.ClearDatabase(context);
 
@@ -197,7 +303,8 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
 
         await _contextSetup.ClearDatabase(context);
 
@@ -241,7 +348,8 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName, simulateFailure: true); 
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
         await _contextSetup.ClearDatabase(context);
 
         // Add warning
@@ -273,7 +381,8 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
 
         await _contextSetup.ClearDatabase(context);
 
@@ -326,7 +435,9 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
+
         var invalidId = Guid.NewGuid(); 
 
         var highWarning = new Warning 
@@ -359,7 +470,8 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
 
         await _contextSetup.ClearDatabase(context);
 
@@ -388,7 +500,9 @@ public class ForecastsServiceTests : IClassFixture<ContextSetup>
         // Arrange
         var context = _contextSetup.CreateDbContext(_dbName);
         var commonRepository = _contextSetup.CreateCommonRepository();
-        var service = new ForecastsService(context, commonRepository);
+        var memoryCache = _contextSetup.CreateMemoryCache();
+        var service = new ForecastsService(context, commonRepository, memoryCache);
+        
         var invalidId = Guid.NewGuid(); 
 
         // Act & Assert

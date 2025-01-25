@@ -1,6 +1,8 @@
 // packages
 using System.Diagnostics;
+using System.Security.Claims;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 // source
 using server.src.Domain.Models.Metrics;
@@ -68,29 +70,40 @@ public class PerformanceMonitoringMiddleware
         await responseBodyStream.CopyToAsync(originalResponseBodyStream);
         context.Response.Body = originalResponseBodyStream;
 
-        // Create a new Telemetry instance
-        var telemetry = new Telemetry
-        {
-            Method = context.Request.Method,
-            Path = context.Request.Path,
-            StatusCode = context.Response.StatusCode,
-            ResponseTime = elapsedMilliseconds,
-            MemoryUsed = memoryUsed,
-            CPUusage = cpuUsage,
-            RequestBodySize = requestBodySize,
-            RequestTimestamp = requestTimestamp,
-            ResponseBodySize = responseBodySize,
-            ResponseTimestamp = responseTimestamp,
-            ClientIp = context.Connection.RemoteIpAddress?.ToString()!,
-            UserAgent = context.Request.Headers["User-Agent"].ToString(),
-            ThreadId = Environment.CurrentManagedThreadId.ToString()
-        };
+        // Retrieve the userName from claims
+        var userName = context.User.FindFirst(ClaimTypes.Name)?.Value;
 
         // Save the telemetry data to the database
         var scope = context.RequestServices.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
-        dbContext.TelemetryRecords.Add(telemetry);
-        await dbContext.SaveChangesAsync();
+
+        var user = await dbContext.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+        
+        if (user is not null)
+        {
+            var telemetry = new Telemetry
+            {
+                Method = context.Request.Method,
+                Path = context.Request.Path,
+                StatusCode = context.Response.StatusCode,
+                ResponseTime = elapsedMilliseconds,
+                MemoryUsed = memoryUsed,
+                CPUusage = cpuUsage,
+                RequestBodySize = requestBodySize,
+                RequestTimestamp = requestTimestamp,
+                ResponseBodySize = responseBodySize,
+                ResponseTimestamp = responseTimestamp,
+                ClientIp = context.Connection.RemoteIpAddress?.ToString()!,
+                UserAgent = context.Request.Headers["User-Agent"].ToString(),
+                ThreadId = Environment.CurrentManagedThreadId.ToString(),
+                UserId = user.Id,
+                User = user
+            };
+
+            dbContext.TelemetryRecords.Add(telemetry);
+            await dbContext.SaveChangesAsync();
+        }
+
     }
 
     private async Task<long> GetRequestBodySize(HttpRequest request)

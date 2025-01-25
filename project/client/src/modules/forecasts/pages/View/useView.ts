@@ -15,6 +15,7 @@ const useView = () => {
     () => getForecast(id!),
     {
       enabled: !!id,
+      suspense: true,
       onError: (err) => {
         console.error("Error fetching forecast:", err);
         toast.error("Failed to fetch forecast.");
@@ -41,7 +42,7 @@ const useView = () => {
   };
 
   return {
-    forecast: result?.data,
+    forecast: result?.data!,
     isLoading,
     isError,
     error,

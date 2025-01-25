@@ -5,7 +5,6 @@ import { useState } from "react";
 import { ButtonProps } from "src/models/shared/buttonProps";
 import useView from "src/modules/roles/pages/View/useView";
 import Header from "src/modules/shared/Header";
-import LoadingSpinner from "src/modules/shared/LoadingSpinner";
 import ConfirmModal from "src/modules/shared/ConfirmModal";
 
 const View = () => {
@@ -26,8 +25,6 @@ const View = () => {
     handleDelete();
     setShowDeleteModal(false);
   };
-
-  if (!role) return <LoadingSpinner />;
 
   const header = "Role Info";
   const buttons: ButtonProps[] = [

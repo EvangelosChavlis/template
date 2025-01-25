@@ -1,5 +1,7 @@
 // packages
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+
 
 // source
 using server.src.Persistence.Contexts;
@@ -37,5 +39,10 @@ public class ContextSetup
         var warnings = context.Warnings.ToList();
         context.Warnings.RemoveRange(warnings);
         await context.SaveChangesAsync();
+    }
+
+    public IMemoryCache CreateMemoryCache()
+    {
+        return new MemoryCache(new MemoryCacheOptions());
     }
 }
