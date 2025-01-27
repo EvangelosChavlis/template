@@ -54,12 +54,15 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
 
         // Check for existence
         if (role is null)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error deleting role.")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("Role not found.");
-
+        }
+            
         // Check for concurrency issues
         if (role.Version != command.Version)
         {

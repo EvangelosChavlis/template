@@ -5,32 +5,40 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 // source
 using server.src.Domain.Models.Auth;
 
-namespace server.src.Persistence.Configurations.Auth
+namespace server.src.Persistence.Configurations.Auth;
+
+public class UserLogoutConfiguration : IEntityTypeConfiguration<UserLogout>
 {
-    public class UserLogoutConfiguration : IEntityTypeConfiguration<UserLogout>
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public UserLogoutConfiguration(string tableName, string schema)
     {
-       public void Configure(EntityTypeBuilder<UserLogout> builder)
-       {
-              builder.HasKey(ul => ul.Id);
+       _tableName = tableName;
+       _schema = schema;
+    }
 
-              builder.Property(ul => ul.Date)
-                     .IsRequired();
+    public void Configure(EntityTypeBuilder<UserLogout> builder)
+   {
+       builder.HasKey(ul => ul.Id);
 
-              builder.HasOne(ul => ul.User)
-                     .WithMany(u => u.UserLogouts)
-                     .HasForeignKey(ul => ul.UserId)
-                     .IsRequired()
-                     .OnDelete(DeleteBehavior.Cascade);
+       builder.Property(ul => ul.Date)
+              .IsRequired();
 
-              builder.Property(ul => ul.LoginProvider)
-                     .IsRequired()
-                     .HasMaxLength(100);
+       builder.HasOne(ul => ul.User)
+              .WithMany(u => u.UserLogouts)
+              .HasForeignKey(ul => ul.UserId)
+              .IsRequired()
+              .OnDelete(DeleteBehavior.Cascade);
 
-              builder.Property(ul => ul.ProviderKey)
-                     .IsRequired()
-                     .HasMaxLength(100);
+       builder.Property(ul => ul.LoginProvider)
+              .IsRequired()
+              .HasMaxLength(100);
 
-              builder.ToTable("UserLogouts");
-       }
+       builder.Property(ul => ul.ProviderKey)
+              .IsRequired()
+              .HasMaxLength(100);
+
+       builder.ToTable(_tableName, _schema);
     }
 }

@@ -12,19 +12,16 @@ using server.src.Application.Interfaces.Auth.UserLogouts;
 using server.src.Application.Interfaces.Auth.UserRoles;
 using server.src.Application.Interfaces.Data;
 using server.src.Application.Interfaces.Metrics;
+using server.src.Application.Metrics.Telemetry;
 using server.src.Application.Services.Auth.UserLogins;
 using server.src.Application.Services.Auth.UserLogouts;
 using server.src.Application.Services.Auth.UserRoles;
 using server.src.Application.Services.Data;
 using server.src.Application.Services.Metrics;
 using server.src.Application.Validators.Auth;
-using server.src.Application.Validators.Forecast;
-using server.src.Application.Validators.Role;
-using server.src.Application.Validators.Warning;
 using server.src.Application.Weather.Forecasts;
 using server.src.Application.Weather.Warnings;
 using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Weather;
 
 namespace server.src.Application;
 
@@ -32,7 +29,6 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-
         //Data
         services.AddScoped<IDataCommands, DataCommands>();
 
@@ -52,30 +48,22 @@ public static class DependencyInjection
         services.AddForecasts();
         
         //Metrics
+        services.AddTelemetry();
+
+
         services.AddScoped<IErrorQueries, ErrorQueries>();
-        services.AddScoped<ITelemetryQueries, TelemetryQueries>();
 
         // Helpers
         services.AddScoped<IAuthHelper, AuthHelper>();
-        // services.AddScoped<IAuditLogHelper, AuditLogHelper>();
 
         services.AddFluentValidationAutoValidation();
 
-        //Auth/Roles
-        services.AddScoped<IValidator<RoleDto>, RoleValidators>();
-        services.AddScoped<IValidator<RoleDto>, RoleValidators>();
-
         //Auth/Users
-        services.AddScoped<IValidator<UserDto>, UserValidators>();
         services.AddScoped<IValidator<UserLoginDto>, UserLoginValidators>();
         services.AddScoped<IValidator<ForgotPasswordDto>, ForgotPasswordValidators>();
         services.AddScoped<IValidator<ResetPasswordDto>, ResetPasswordValidators>();
         services.AddScoped<IValidator<Verify2FADto>, Verify2FAValidator>();
 
-        //Weather
-        services.AddScoped<IValidator<ForecastDto>, ForecastValidators>();
-        services.AddScoped<IValidator<WarningDto>, WarningValidators>();
-        
         return services;
     }
 }

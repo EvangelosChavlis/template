@@ -112,16 +112,16 @@ public class AuditLogHelper : IAuditLogHelper
                 .WithSuccess(false)
                 .WithData("An error occurred while creating the audit log. Please try again.");
 
-        // Create chain relationships if needed
+        // Create trail relationships if needed
         if (actionType != ActionType.Created)
         {
             // Get the last audit log entry for the entity
             var previousAuditLog = await GetLastAuditLogAsync(entityId, entityType, token);
             if (previousAuditLog != null)
             {
-                var chain = ChainMapping(auditLog, previousAuditLog);
+                var trail = TrailMapping(auditLog, previousAuditLog);
 
-                await _dataContext.Chains.AddAsync(chain, token);
+                await _dataContext.Trails.AddAsync(trail, token);
                 var chainResult = await _unitOfWork.CommitAsync(token);
 
                 if (!chainResult)
@@ -140,9 +140,9 @@ public class AuditLogHelper : IAuditLogHelper
             .WithData("Audit log created successfully.");
     }
 
-    private static Chain ChainMapping(AuditLog auditLog, AuditLog previousAuditLog)
+    private static Trail TrailMapping(AuditLog auditLog, AuditLog previousAuditLog)
     {
-        return new Chain
+        return new Trail
         {
             SourceAuditLogId = previousAuditLog.Id,
             TargetAuditLogId = auditLog.Id,

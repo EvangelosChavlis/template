@@ -48,6 +48,11 @@ public class Forecast
     /// </summary>
     public double Latitude { get; set; }
 
+    /// <summary>
+    /// Gets or sets the version GUID for optimistic concurrency control.
+    /// </summary>
+    public Guid Version { get; set; }
+
     #region Foreign Keys
     /// <summary>
     /// Gets or sets the identifier for the associated warning.

@@ -3,7 +3,7 @@ using server.src.Domain.Dto.Weather;
 using server.src.Domain.Extensions;
 using server.src.Domain.Models.Weather;
 
-namespace server.src.Application.Mappings.Weather;
+namespace server.src.Application.Weather.Forecasts.Mappings;
 
 /// <summary>
 /// Contains static mapping methods to transform Forecast models into their corresponding DTOs.
@@ -49,7 +49,8 @@ public static class ForecastsMappings
             Date: model.Date.GetFullLocalDateTimeString(),
             TemperatureC: model.TemperatureC,
             Summary: model.Summary,
-            Warning: model.Warning.Name
+            Warning: model.Warning.Name,
+            Version: model.Version
         );
 
     /// <summary>
@@ -63,7 +64,8 @@ public static class ForecastsMappings
             Date: string.Empty,
             TemperatureC: int.MinValue,
             Summary: string.Empty,
-            Warning: string.Empty
+            Warning: string.Empty,
+            Version: Guid.Empty
         );
 
     /// <summary>
@@ -81,6 +83,7 @@ public static class ForecastsMappings
             IsRead = false,
             Longitude = dto.Latitude,
             Latitude = dto.Latitude,
+            Version = Guid.NewGuid(),
             WarningId = warningModel.Id,
             Warning = warningModel
         };
@@ -91,12 +94,16 @@ public static class ForecastsMappings
     /// <param name="dto">The ForecastDto containing updated data for the Forecast model.</param>
     /// <param name="model">The Forecast model to be updated.</param>
     /// <param name="warningModel">The Warning model to be associated with the updated Forecast.</param>
-    public static void UpdateForecastMapping(this ForecastDto dto, Forecast model, Warning warningModel)
+    public static void UpdateForecastModelMapping(this ForecastDto dto, 
+        Forecast model, Warning warningModel)
     {
         model.Date = dto.Date;
         model.TemperatureC = dto.TemperatureC;
         model.Summary = dto.Summary;
+        model.Longitude = dto.Latitude;
+        model.Latitude = dto.Latitude;
         model.WarningId = warningModel.Id;
         model.Warning = warningModel;
+        model.Version = Guid.NewGuid(); 
     }
 }

@@ -4,9 +4,8 @@ using System.Net;
 
 // source
 using server.src.Application.Filters.Weather;
-using server.src.Application.Includes.Weather;
 using server.src.Application.Interfaces;
-using server.src.Application.Mappings.Weather;
+using server.src.Application.Weather.Warnings.Mappings;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;
 using server.src.Domain.Models.Common;
@@ -49,15 +48,16 @@ public class GetWarningsHandler : IRequestHandler<GetWarningsQuery, ListResponse
         var includes = WarningsIncludes.GetWarningsIncludes();
 
         // Fetch paginated results
-        var pagedWarnings = await _commonRepository.GetPagedResultsAsync(
-            _context.Warnings, pageParams, filters, includes, token);
+        var pagedWarnings = await _commonRepository.GetPagedResultsAsync( pageParams, 
+            filters, includes, token);
         
-        // Map retrieved warnings to DTOs
+        // Mapping
         var dto = pagedWarnings.Rows.Select(w => w.ListItemWarningDtoMapping()).ToList();
 
         // Determine if the operation was successful
         var success = pagedWarnings.Rows.Count > 0;
 
+        // Initializing object
         return new ListResponse<List<ListItemWarningDto>>()
         {
             Data = dto,

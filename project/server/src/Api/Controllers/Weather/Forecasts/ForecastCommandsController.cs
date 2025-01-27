@@ -64,13 +64,13 @@ public class ForecastCommandsController : BaseApiController
 
     [ApiExplorerSettings(GroupName = "weather")]
     [HttpDelete]
-    [Route("{id}")]
+    [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a weather forecast by ID", Description = "Deletes a specific weather forecast by its unique ID.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Forecast deleted successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Forecast not found")]
-    public async Task<IActionResult> DeleteForecast(Guid id, CancellationToken token)
+    public async Task<IActionResult> DeleteForecast(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _forecastCommands.DeleteForecastAsync(id, token);
+        var result = await _forecastCommands.DeleteForecastAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 }

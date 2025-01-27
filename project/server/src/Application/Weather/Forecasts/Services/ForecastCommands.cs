@@ -48,9 +48,9 @@ public class ForecastCommands : IForecastCommands
     }
 
     public async Task<Response<string>> DeleteForecastAsync(Guid id, 
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new DeleteForecastCommand(id);
+        var command = new DeleteForecastCommand(id, version);
         return await _deleteForecastHandler.Handle(command, token);
     }
 }

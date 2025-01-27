@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Auth;
 
 public class UserClaimConfiguration : IEntityTypeConfiguration<UserClaim>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public UserClaimConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<UserClaim> builder)
     {
         builder.HasKey(uc => uc.Id);
@@ -26,7 +35,7 @@ public class UserClaimConfiguration : IEntityTypeConfiguration<UserClaim>
             .HasForeignKey(uc => uc.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.ToTable("UserClaims");
+        builder.ToTable(_tableName, _schema);
     }
 
 }

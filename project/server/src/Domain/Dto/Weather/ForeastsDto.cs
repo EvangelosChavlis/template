@@ -33,7 +33,8 @@ public record ItemForecastDto(
     string Date,
     int TemperatureC,
     string Summary,
-    string Warning
+    string Warning,
+    Guid Version
 );
 
 /// <summary>
@@ -45,6 +46,7 @@ public record ForecastDto(
     int TemperatureC,
     string Summary,
     Guid WarningId,
+    Guid Version,
     double Longitude,
     double Latitude
 );

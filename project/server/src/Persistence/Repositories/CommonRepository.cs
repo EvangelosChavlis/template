@@ -14,13 +14,16 @@ namespace server.src.Persistence.Repositories;
 public class CommonRepository : ICommonRepository
 {
     private readonly DataContext _context;
+    private readonly ArchiveContext _archiveContext;
     private readonly IAuditLogHelper _auditLogHelper;
     private readonly IUnitOfWork _unitOfWork;
     
-    public CommonRepository(DataContext context, IAuditLogHelper auditLogHelper,
-        IUnitOfWork unitOfWork)
+    
+    public CommonRepository(DataContext context, ArchiveContext archiveContext, 
+        IAuditLogHelper auditLogHelper, IUnitOfWork unitOfWork)
     {
         _context = context;
+        _archiveContext = archiveContext;
         _auditLogHelper = auditLogHelper;
         _unitOfWork = unitOfWork;
     }
@@ -187,6 +190,10 @@ public class CommonRepository : ICommonRepository
     public async Task<bool> DeleteAsync<T>(T entity, CancellationToken token = default) 
         where T : class
     {
+        // Archive entity
+        await _archiveContext.Set<T>().AddAsync(entity, token);
+
+        // Remove entity
         _context.Set<T>().Remove(entity);
         var result = await _unitOfWork.CommitAsync(token);
 

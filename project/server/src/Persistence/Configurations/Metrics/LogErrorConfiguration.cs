@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Metrics;
 
 public class LogErrorConfiguration : IEntityTypeConfiguration<LogError>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public LogErrorConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<LogError> builder)
     {
         builder.HasKey(c => c.Id);
@@ -34,8 +43,6 @@ public class LogErrorConfiguration : IEntityTypeConfiguration<LogError>
         builder.Property(c => c.Timestamp)
             .IsRequired();
 
-        builder.HasIndex(c => c.Timestamp);
-
-        builder.ToTable("LogErrors");
+        builder.ToTable(_tableName, _schema);
     }
 }

@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Metrics;
 
 public class TelemetryConfiguration : IEntityTypeConfiguration<Telemetry>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public TelemetryConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<Telemetry> builder)
     {
         builder.HasKey(t => t.Id);
@@ -58,6 +67,6 @@ public class TelemetryConfiguration : IEntityTypeConfiguration<Telemetry>
             .HasForeignKey(t => t.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.ToTable("TelemetryRecords");
+        builder.ToTable(_tableName, _schema);
     }
 }

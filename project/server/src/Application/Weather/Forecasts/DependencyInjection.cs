@@ -18,17 +18,21 @@ public static class DependencyInjection
     {
         services.AddMemoryCache();
                 
+        // register query handlers
         services.AddScoped<IRequestHandler<GetForecastsStatsQuery, Response<List<StatItemForecastDto>>>, GetForecastsStatsHandler>();
         services.AddScoped<IRequestHandler<GetForecastsQuery, ListResponse<List<ListItemForecastDto>>>, GetForecastsHandler>();
         services.AddScoped<IRequestHandler<GetForecastByIdQuery, Response<ItemForecastDto>>, GetForecastByIdHandler>();
 
+        // register queries
         services.AddScoped<IForecastQueries, ForecastQueries>();
 
+        // register command handlers
         services.AddScoped<IRequestHandler<InitializeForecastsCommand, Response<string>>, InitializeForecastsHandler>();
         services.AddScoped<IRequestHandler<CreateForecastCommand, Response<string>>, CreateForecastHandler>();
         services.AddScoped<IRequestHandler<UpdateForecastCommand, Response<string>>, UpdateForecastHandler>();
         services.AddScoped<IRequestHandler<DeleteForecastCommand, Response<string>>, DeleteForecastHandler>();
 
+        // register commands
         services.AddScoped<IForecastCommands, ForecastCommands>();
 
         return services;

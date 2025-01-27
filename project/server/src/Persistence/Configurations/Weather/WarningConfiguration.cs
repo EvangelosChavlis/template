@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Weather;
 
 public class WarningConfiguration : IEntityTypeConfiguration<Warning>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public WarningConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<Warning> builder)
     {
         builder.HasKey(w => w.Id);
@@ -25,6 +34,6 @@ public class WarningConfiguration : IEntityTypeConfiguration<Warning>
                 .HasForeignKey(wf => wf.WarningId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-        builder.ToTable("Warnings");
+        builder.ToTable(_tableName, _schema);
     }
 }

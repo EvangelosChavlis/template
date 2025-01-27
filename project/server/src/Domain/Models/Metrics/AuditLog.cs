@@ -92,8 +92,8 @@ public class AuditLog
     public Telemetry Telemetry { get; set; }
 
     /// <summary>
-    /// Gets or sets the chain entity associated with this audit log.
+    /// Gets or sets the trail entity associated with this audit log.
     /// </summary>
-    public List<Chain> Chains { get; set; }
+    public List<Trail> Trails { get; set; }
     #endregion
 }

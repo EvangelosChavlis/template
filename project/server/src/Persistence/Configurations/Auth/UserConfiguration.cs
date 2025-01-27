@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Auth;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public UserConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasKey(u => u.Id);

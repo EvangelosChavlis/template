@@ -41,8 +41,9 @@ public interface IForecastCommands
     /// Deletes a weather forecast by its unique identifier.
     /// </summary>
     /// <param name="id">The unique identifier of the forecast to delete.</param>
+    /// <param name="version">The version of the role for concurrency control.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response containing the result message of the deletion operation.</returns>
     Task<Response<string>> DeleteForecastAsync(Guid id, 
-        CancellationToken token = default);
+        Guid version, CancellationToken token = default);
 }

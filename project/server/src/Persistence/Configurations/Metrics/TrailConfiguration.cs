@@ -7,9 +7,18 @@ using server.src.Domain.Models.Metrics;
 
 namespace server.src.Persistence.Configurations.Metrics;
 
-public class ChainConfiguration : IEntityTypeConfiguration<Chain>
+public class TrailConfiguration : IEntityTypeConfiguration<Trail>
 {
-    public void Configure(EntityTypeBuilder<Chain> builder)
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public TrailConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
+    public void Configure(EntityTypeBuilder<Trail> builder)
     {
         builder.HasKey(c => c.Id);
 
@@ -17,15 +26,15 @@ public class ChainConfiguration : IEntityTypeConfiguration<Chain>
                 .IsRequired();
 
         builder.HasOne(c => c.SourceAuditLog)
-                .WithMany(a => a.Chains)
+                .WithMany(a => a.Trails)
                 .HasForeignKey(c => c.SourceAuditLogId)
                 .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(c => c.TargetAuditLog)
-                .WithMany(a => a.Chains) 
+                .WithMany(a => a.Trails) 
                 .HasForeignKey(c => c.TargetAuditLogId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-        builder.ToTable("Chains");
+        builder.ToTable(_tableName, _schema);
     }
 }

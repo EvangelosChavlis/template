@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 // source
 using server.src.Domain.Models.Metrics;
 
-namespace server.src.Application.Filters.Metrics;
+namespace server.src.Application.Telemetry.Filters;
 
 public static class TelemetryFiltrers
 {

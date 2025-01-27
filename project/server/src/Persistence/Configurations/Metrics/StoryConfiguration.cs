@@ -7,9 +7,18 @@ using server.src.Domain.Models.Metrics;
 
 namespace server.src.Persistence.Configurations.Metrics;
 
-public class HistoryConfiguration : IEntityTypeConfiguration<History>
+public class StoryConfiguration : IEntityTypeConfiguration<Story>
 {
-    public void Configure(EntityTypeBuilder<History> builder)
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public StoryConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
+    public void Configure(EntityTypeBuilder<Story> builder)
     {
         builder.HasKey(h => h.Id);
 
@@ -17,15 +26,15 @@ public class HistoryConfiguration : IEntityTypeConfiguration<History>
             .IsRequired();
 
         builder.HasOne(h => h.SourceTelemetry)
-            .WithMany(t => t.Histories)
+            .WithMany(t => t.Stories)
             .HasForeignKey(h => h.SourceTelemetryId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(h => h.TargetTelemetry)
-            .WithMany(t => t.Histories)
+            .WithMany(t => t.Stories)
             .HasForeignKey(h => h.TargetTelemetryId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.ToTable("Histories");
+        builder.ToTable(_tableName, _schema);
     }
 }

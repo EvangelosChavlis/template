@@ -2,7 +2,6 @@
 using server.src.Domain.Models.Auth;
 
 namespace server.src.Domain.Models.Metrics;
-
 /// <summary>
 /// Represents telemetry data for an HTTP request and its associated metrics.
 /// This class stores performance metrics related to the request and response lifecycle, 
@@ -117,6 +116,6 @@ public class Telemetry
     /// <summary>
     /// Gets or sets the history entity associated with this telemetry record.
     /// </summary>
-    public List<History> Histories { get; set; }
+    public List<Story> Stories { get; set; }
     #endregion
 }

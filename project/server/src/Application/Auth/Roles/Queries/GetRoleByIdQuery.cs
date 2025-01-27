@@ -26,9 +26,8 @@ public class GetRoleByIdHandler : IRequestHandler<GetRoleByIdQuery, Response<Ite
 
     public async Task<Response<ItemRoleDto>> Handle(GetRoleByIdQuery query, CancellationToken token = default)
     {
-        // validation
+        // Validation
         var validationResult = RoleValidators.Validate(query.Id);
-        
         if (!validationResult.IsValid)
             return new Response<ItemRoleDto>()
                 .WithMessage(string.Join("\n", validationResult.Errors))

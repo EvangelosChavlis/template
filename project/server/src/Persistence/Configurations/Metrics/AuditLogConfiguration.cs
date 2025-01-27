@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Metrics;
 
 public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public AuditLogConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<AuditLog> builder)
     {
         builder.HasKey(a => a.Id);
@@ -55,6 +64,6 @@ public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
                    .HasForeignKey(a => a.TelemetryId)
                    .OnDelete(DeleteBehavior.Cascade);
 
-        builder.ToTable("AuditLogs");
+        builder.ToTable(_tableName, _schema);
     }
 }

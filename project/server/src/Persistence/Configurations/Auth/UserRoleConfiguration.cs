@@ -9,6 +9,15 @@ namespace server.src.Persistence.Configurations.Auth;
 
 public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
 {
+    private readonly string _tableName;
+    private readonly string _schema;
+
+    public UserRoleConfiguration(string tableName, string schema)
+    {
+        _tableName = tableName;
+        _schema = schema;
+    }
+
     public void Configure(EntityTypeBuilder<UserRole> builder)
     {
         builder.HasKey(ur => ur.Id);
@@ -23,6 +32,6 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
             .HasForeignKey(ur => ur.RoleId)
             .IsRequired();
 
-        builder.ToTable("UserRoles");
+        builder.ToTable(_tableName, _schema);
     }
 }

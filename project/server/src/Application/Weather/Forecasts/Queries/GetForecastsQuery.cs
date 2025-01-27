@@ -4,9 +4,8 @@ using System.Net;
 
 // source
 using server.src.Application.Filters.Weather;
-using server.src.Application.Includes.Weather;
 using server.src.Application.Interfaces;
-using server.src.Application.Mappings.Weather;
+using server.src.Application.Weather.Forecasts.Mappings;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;
 using server.src.Domain.Models.Common;
@@ -50,7 +49,7 @@ public class GetForecastsHandler : IRequestHandler<GetForecastsQuery, ListRespon
         var includes = ForecastsIncludes.GetForecastsIncludes();
 
         // Paging
-        var pagedForecasts = await _commonRepository.GetPagedResultsAsync(_context.Forecasts, pageParams, filters, includes, token);
+        var pagedForecasts = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
         // Mapping
         var dto = pagedForecasts.Rows.Select(w => w.ListItemForecastDtoMapping()).ToList();
 
