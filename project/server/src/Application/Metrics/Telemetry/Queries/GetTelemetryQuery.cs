@@ -70,5 +70,4 @@ public class GetTelemetryHandler : IRequestHandler<GetTelemetryQuery, ListRespon
             }
         };
     }
-
 }

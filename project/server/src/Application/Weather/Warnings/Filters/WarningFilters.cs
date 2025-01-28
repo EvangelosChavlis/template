@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 // source
 using server.src.Domain.Models.Weather;
 
-namespace server.src.Application.Filters.Weather;
+namespace server.src.Application.Weather.Warnings.Filters;
 
 public static class WarningFilters
 {

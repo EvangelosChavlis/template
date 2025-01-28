@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 // source
 using server.src.Domain.Models.Errors;
 
-namespace server.src.Application.Filters.Metrics;
+namespace server.src.Application.Metrics.Errors.Filters;
 
 public static class ErrorsFiltrers
 {

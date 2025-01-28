@@ -86,37 +86,37 @@ public class UserCommands : IUserCommands
     }
 
     public async Task<Response<string>> ForgotPasswordAsync(string email, 
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new ForgotPasswordCommand(email);
+        var command = new ForgotPasswordCommand(email, version);
         return await _forgotPasswordHandler.Handle(command, token);
     }
 
-    public async Task<Response<string>> ResetPasswordAsync(string email, string authToken, 
-        string newPassword, CancellationToken token = default)
+    public async Task<Response<string>> ResetPasswordAsync(Guid version, string email, 
+        string authToken, string newPassword, CancellationToken token = default)
     {
-        var command = new ResetPasswordCommand(email, authToken, newPassword);
+        var command = new ResetPasswordCommand(email, authToken, newPassword, version);
         return await _resetPasswordHandler.Handle(command, token);
     }
 
     public async Task<Response<string>> GeneratePasswordAsync(Guid id, 
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new GeneratePasswordCommand(id);
+        var command = new GeneratePasswordCommand(id, version);
         return await _generatePasswordCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> Enable2FAAsync(Guid id, 
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new Enable2FACommand(id);
+        var command = new Enable2FACommand(id, version);
         return await _enable2FACommand.Handle(command, token);
     }
 
     public async Task<Response<string>> Verify2FAAsync(Guid id, string authToken,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new Verify2FACommand(id, authToken);
+        var command = new Verify2FACommand(id, authToken, version);
         return await _verify2FACommand.Handle(command, token);
     }
 
@@ -128,58 +128,58 @@ public class UserCommands : IUserCommands
     }
 
     public async Task<Response<string>> ActivateUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new ActivateUserCommand(id);
+        var command = new ActivateUserCommand(id, version);
         return await _activateUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> DeactivateUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new DeactivateUserCommand(id);
+        var command = new DeactivateUserCommand(id, version);
         return await _deactivateUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> LockUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new LockUserCommand(id);
+        var command = new LockUserCommand(id, version);
         return await _lockUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> UnlockUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new UnlockUserCommand(id);
+        var command = new UnlockUserCommand(id, version);
         return await _unlockUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> ConfirmEmailUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new ConfirmEmailUserCommand(id);
+        var command = new ConfirmEmailUserCommand(id, version);
         return await _confirmEmailUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> ConfirmPhoneNumberUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new ConfirmPhoneNumberUserCommand(id);
+        var command = new ConfirmPhoneNumberUserCommand(id, version);
         return await _confirmPhoneNumberUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> ConfirmMobilePhoneNumberUserAsync(Guid id,
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new ConfirmMobilePhoneNumberUserCommand(id);
+        var command = new ConfirmMobilePhoneNumberUserCommand(id, version);
         return await _confirmMobilePhoneNumberUserCommand.Handle(command, token);
     }
 
     public async Task<Response<string>> DeleteUserAsync(Guid id, 
-        CancellationToken token = default)
+        Guid version, CancellationToken token = default)
     {
-        var command = new DeleteUserCommand(id);
+        var command = new DeleteUserCommand(id, version);
         return await _deleteUserHandler.Handle(command, token);
     }
 }

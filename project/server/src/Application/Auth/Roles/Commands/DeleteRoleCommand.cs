@@ -76,12 +76,15 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
 
         // Check if role is already active
         if (role.IsActive)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error deleting role.")
                 .WithStatusCode((int)HttpStatusCode.BadRequest)
                 .WithSuccess(false)
                 .WithData("Role is active.");
-
+        }
+            
         // Deleting Item
         var result = await _commonRepository.DeleteAsync(role, token);
 

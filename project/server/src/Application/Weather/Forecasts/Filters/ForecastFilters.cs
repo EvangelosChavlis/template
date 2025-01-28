@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using server.src.Domain.Extensions;
 using server.src.Domain.Models.Weather;
 
-namespace server.src.Application.Filters.Weather;
+namespace server.src.Application.Weather.Forecasts.Filters;
 
 public static class ForecastFilters
 {

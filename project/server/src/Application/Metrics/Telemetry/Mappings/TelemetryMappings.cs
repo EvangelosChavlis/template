@@ -1,10 +1,9 @@
 // source
 using server.src.Domain.Dto.Metrics;
 using server.src.Domain.Extensions;
-using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Metrics;
 
-namespace server.src.Application.Mappings.Metrics;
+namespace server.src.Application.Metrics.Telemetry.Mappings;
 
 /// <summary>
 /// Contains static mapping methods to transform Telemetry models into their corresponding DTOs.

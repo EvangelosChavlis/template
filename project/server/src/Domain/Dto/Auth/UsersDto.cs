@@ -44,7 +44,7 @@ public record ListItemUserDto(
 /// <param name="Bio">A brief biography of the user.</param>
 /// <param name="DateOfBirth">The user's date of birth.</param>
 /// <param name="IsActive">Indicates whether the user is active.</param>
-/// <param name="Roles">The list of roles assigned to the user.</param>
+/// /// <param name="Version">The version of the role for concurrency control during updates.</param>
 public record ItemUserDto(
     Guid Id,
     string FirstName,
@@ -66,7 +66,8 @@ public record ItemUserDto(
     bool MobilePhoneNumberConfirmed,
     string Bio,
     string DateOfBirth,
-    bool IsActive
+    bool IsActive,
+    Guid Version
 );
 
 /// <summary>
@@ -86,6 +87,7 @@ public record ItemUserDto(
 /// <param name="MobilePhoneNumber">The user's mobile phone number.</param>
 /// <param name="Bio">A brief biography of the user.</param>
 /// <param name="DateOfBirth">The user's date of birth.</param>
+/// /// <param name="Version">The version of the role for concurrency control during updates.</param>
 public record UserDto(
     string FirstName,
     string LastName,
@@ -100,7 +102,8 @@ public record UserDto(
     string PhoneNumber,
     string MobilePhoneNumber,
     string Bio,
-    DateTime DateOfBirth
+    DateTime DateOfBirth,
+    Guid Version
 );
 
 /// <summary>

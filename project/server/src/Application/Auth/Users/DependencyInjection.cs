@@ -15,12 +15,15 @@ namespace server.src.Application.Auth.Users;
 public static class DependencyInjection
 {
     public static IServiceCollection AddUsers(this IServiceCollection services)
-    {        
+    {
+        // register query handlers        
         services.AddScoped<IRequestHandler<GetUsersQuery, ListResponse<List<ListItemUserDto>>>, GetUsersHandler>();
         services.AddScoped<IRequestHandler<GetUserByIdQuery, Response<ItemUserDto>>, GetUserByIdHandler>();
 
+        // register queries
         services.AddScoped<IUserQueries, UserQueries>();
 
+        // register command handlers
         services.AddScoped<IRequestHandler<InitializeUsersCommand, Response<string>>, InitializeUsersHandler>();
         services.AddScoped<IRequestHandler<RegisterUserCommand, Response<string>>, RegisterUserHandler>();
         services.AddScoped<IRequestHandler<UpdateUserCommand, Response<string>>, UpdateUserHandler>();
@@ -39,6 +42,7 @@ public static class DependencyInjection
         services.AddScoped<IRequestHandler<ConfirmMobilePhoneNumberUserCommand, Response<string>>, ConfirmMobilePhoneNumberUserHandler>();
         services.AddScoped<IRequestHandler<DeleteUserCommand, Response<string>>, DeleteUserHandler>();
 
+        // register commands
         services.AddScoped<IUserCommands, UserCommands>();
 
         return services;

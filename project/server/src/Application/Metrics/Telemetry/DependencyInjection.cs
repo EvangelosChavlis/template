@@ -2,10 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 
 // source
-using server.src.Application.Auth.Roles.Interfaces;
-using server.src.Application.Auth.Roles.Services;
+using server.src.Application.Auth.Telemetry.Interfaces;
 using server.src.Application.Interfaces;
 using server.src.Application.Metrics.Telemetry.Queries;
+using server.src.Application.Telemetry.Services;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Metrics;
 
@@ -21,7 +21,7 @@ public static class DependencyInjection
         services.AddScoped<IRequestHandler<GetTelemetryByIdQuery, Response<ItemTelemetryDto>>, GetTelemetryByIdHandler>();
 
         // register queries
-        services.AddScoped<IRoleQueries, RoleQueries>();
+        services.AddScoped<ITelemetryQueries, TelemetryQueries>();
 
         return services;
     }

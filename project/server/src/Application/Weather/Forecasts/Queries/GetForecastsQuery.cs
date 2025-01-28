@@ -3,8 +3,8 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Filters.Weather;
 using server.src.Application.Interfaces;
+using server.src.Application.Weather.Forecasts.Filters;
 using server.src.Application.Weather.Forecasts.Mappings;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;

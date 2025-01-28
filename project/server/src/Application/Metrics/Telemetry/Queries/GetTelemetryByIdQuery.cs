@@ -5,10 +5,10 @@ using System.Net;
 // source
 using server.src.Domain.Models.Metrics;
 using server.src.Application.Interfaces;
-using server.src.Application.Mappings.Metrics;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Metrics;
 using server.src.Persistence.Interfaces;
+using server.src.Application.Metrics.Telemetry.Mappings;
 
 namespace server.src.Application.Metrics.Telemetry.Queries;
 

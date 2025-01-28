@@ -68,7 +68,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         // Check if user with this username already exists in the system
         if (existingUserName is not null)
         {
-            await _unitOfWork.RollbackTransactionAsync(token);
+await _unitOfWork.RollbackTransactionAsync(token);            
             return new Response<string>()
                 .WithMessage("Error creating user.")
                 .WithStatusCode((int)HttpStatusCode.BadRequest)
@@ -93,6 +93,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         }
         var result = await _commonRepository.AddAsync(user, token);
 
+        // Saving failed
         if (!result)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -108,6 +109,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         var roleFilters = new Expression<Func<Role, bool>>[] { x => x.Name!.Equals("User")};
         var role = await _commonRepository.GetResultByIdAsync(roleFilters, roleIncludes, token);
 
+        // Check for existence
         if (role is null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -117,7 +119,6 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
                 .WithSuccess(false)
                 .WithData($"Role with name 'User' not found.");
         }
-            
 
         // Assigning role to the user
         var assignResult = await _userRoleCommands.AssignRoleToUserService(user.Id, role.Id);

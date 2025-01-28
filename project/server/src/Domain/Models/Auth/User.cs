@@ -240,7 +240,7 @@ public class User
     /// Represents a one-to-many relationship between the user and their activity history,  
     /// tracking changes and interactions over time.  
     /// </summary>
-    public List<History> Histories { get; set; }
+    public List<Story> Stories { get; set; }
 
     #endregion
 }

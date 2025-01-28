@@ -3,7 +3,7 @@ using server.src.Domain.Dto.Metrics;
 using server.src.Domain.Extensions;
 using server.src.Domain.Models.Errors;
 
-namespace server.src.Application.Mappings.Metrics;
+namespace server.src.Application.Metrics.Errors.Mappings;
 
 /// <summary>
 /// Contains static mapping methods to transform between LogError models and their corresponding DTOs.

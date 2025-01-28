@@ -36,7 +36,7 @@ public class ActivateUserHandler : IRequestHandler<ActivateUserCommand, Response
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = UserValidators.Validate(command.Id);
+        var versionValidationResult = UserValidators.Validate(command.Version);
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -71,10 +71,10 @@ public class ActivateUserHandler : IRequestHandler<ActivateUserCommand, Response
                 .WithMessage("Concurrency conflict.")
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
-                .WithData("The role has been modified by another user. Please try again.");
+                .WithData("User has been modified by another user. Please try again.");
         }   
 
-        // Check if the role is already active
+        // Check if user is already active
         if (user.IsActive)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -103,7 +103,6 @@ public class ActivateUserHandler : IRequestHandler<ActivateUserCommand, Response
         if(!result)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
-
             return new Response<string>()
                 .WithMessage("Error in activating user.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)

@@ -41,7 +41,7 @@ public class InitializeUsersHandler : IRequestHandler<InitializeUsersCommand, Re
             return new Response<string>()
                 .WithMessage("Error initializing users.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithSuccess(false)
+                .WithSuccess(success)
                 .WithData("Failed to initialize users.");
 
         // Initializing object

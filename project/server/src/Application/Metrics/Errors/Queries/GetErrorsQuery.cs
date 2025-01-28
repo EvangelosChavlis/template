@@ -3,33 +3,33 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Filters.Metrics;
-using server.src.Application.Includes.Metrics;
-using server.src.Application.Interfaces.Metrics;
-using server.src.Application.Mappings.Metrics;
+using server.src.Application.Metrics.Errors.Filters;
+using server.src.Application.Metrics.Errors.Includes;
+using server.src.Application.Metrics.Errors.Mappings;
+using server.src.Application.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Metrics;
 using server.src.Domain.Models.Common;
 using server.src.Domain.Models.Errors;
-using server.src.Persistence.Contexts;
 using server.src.Persistence.Interfaces;
 
-namespace server.src.Application.Services.Metrics;
+namespace server.src.Application.Metrics.Errors.Queries;
 
-public class ErrorQueries : IErrorQueries
+public record GetErrorsQuery(UrlQuery UrlQuery) : IRequest<ListResponse<List<ListItemErrorDto>>>;
+
+public class GetErrorsHandler : IRequestHandler<GetErrorsQuery, ListResponse<List<ListItemErrorDto>>>
 {
-    private readonly DataContext _context;
     private readonly ICommonRepository _commonRepository;
-
-    public ErrorQueries(DataContext context, ICommonRepository commonRepository)
+    
+    public GetErrorsHandler(ICommonRepository commonRepository)
     {
-        _context = context;
         _commonRepository = commonRepository;
     }
 
-
-    public async Task<ListResponse<List<ListItemErrorDto>>> GetErrorsService(UrlQuery pageParams, CancellationToken token = default)
+    public async Task<ListResponse<List<ListItemErrorDto>>> Handle(GetErrorsQuery query, CancellationToken token = default)
     {
+        var pageParams = query.UrlQuery;
+
         // Default Sorting
         if (!pageParams.HasSortBy)
         {
@@ -47,7 +47,7 @@ public class ErrorQueries : IErrorQueries
         var includes = ErrorsIncludes.GetErrorsIncludes();
 
         // Paging
-        var pagedErrors = await _commonRepository.GetPagedResultsAsync(_context.LogErrors, pageParams, filters, includes, token);
+        var pagedErrors = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
         // Mapping
         var dto = pagedErrors.Rows.Select(e => e.ListItemErrorDtoMapping()).ToList();
 
@@ -70,30 +70,5 @@ public class ErrorQueries : IErrorQueries
                 PageNumber = pagedErrors.UrlQuery.PageNumber ?? 1,
             }
         };
-    }
-
-    public async Task<Response<ItemErrorDto>> GetErrorByIdService(Guid id, CancellationToken token = default)
-    {
-        // Searching Item
-        var includes = new Expression<Func<LogError, object>>[] { };
-        var filters = new Expression<Func<LogError, bool>>[] { x => x.Id == id};
-        var warning = await _commonRepository.GetResultByIdAsync(_context.LogErrors, filters, includes, token);
-
-        if (warning is null)
-            return new Response<ItemErrorDto>()
-                .WithMessage("Error not found")
-                .WithStatusCode((int)HttpStatusCode.NotFound)
-                .WithSuccess(false)
-                .WithData(ErrorsMappings.ItemErrorDtoMapping());
-
-        // Mapping
-        var dto = warning.ItemErrorDtoMapping();
-
-        // Initializing object
-        return new Response<ItemErrorDto>()
-            .WithMessage("Error fetched successfully")
-            .WithStatusCode((int)HttpStatusCode.OK)
-            .WithSuccess(true)
-            .WithData(dto);
     }
 }
