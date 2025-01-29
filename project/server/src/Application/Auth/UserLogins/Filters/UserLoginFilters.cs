@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 // source
 using server.src.Domain.Models.Auth;
 
-namespace server.src.Application.Filters.Auth;
+namespace server.src.Application.Auth.UserLogins.Filters;
 
 public static class UserLoginFilters
 {

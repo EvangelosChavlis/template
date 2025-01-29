@@ -3,42 +3,45 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Filters.Auth;
-using server.src.Application.Includes.Auth;
-using server.src.Application.Interfaces.Auth.UserLogins;
-using server.src.Application.Mappings.Auth;
+using server.src.Application.Auth.UserLogins.Filters;
+using server.src.Application.Auth.UserLogins.Includes;
+using server.src.Application.Auth.UserLogins.Mappings;
+using server.src.Application.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Common;
-using server.src.Persistence.Contexts;
 using server.src.Persistence.Interfaces;
 
-namespace server.src.Application.Services.Auth.UserLogins;
+namespace server.src.Application.Auth.UserLogins.Queries;
 
-public class UserLoginQueries : IUserLoginQueries
+public record GetLoginsByUserIdQuery(Guid Id, UrlQuery UrlQuery) : IRequest<ListResponse<List<ListItemUserLoginDto>>>;
+
+public class GetLoginsByUserIdHandler : IRequestHandler<GetLoginsByUserIdQuery, ListResponse<List<ListItemUserLoginDto>>>
 {
-    private readonly DataContext _context;
     private readonly ICommonRepository _commonRepository;
     
-    public UserLoginQueries(DataContext context, ICommonRepository commonRepository)
+    public GetLoginsByUserIdHandler(ICommonRepository commonRepository)
     {
-        _context = context;
         _commonRepository = commonRepository;
     }
 
-    public async Task<ListResponse<List<ListItemUserLoginDto>>> GetLoginsByUserIdService(Guid id, UrlQuery pageParams, CancellationToken token = default)
+    public async Task<ListResponse<List<ListItemUserLoginDto>>> Handle(GetLoginsByUserIdQuery query, CancellationToken token = default)
     {
+        // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
-        var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == id};
-        var user = await _commonRepository.GetResultByIdAsync(_context.Users, userFilters, userIncludes, token);
+        var userFilters = new Expression<Func<User, bool>>[] { u => u.Id == query.Id};
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
 
+        // Check for existence
         if (user is null)
             return new ListResponse<List<ListItemUserLoginDto>>()
                 .WithMessage("User not found")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData([]);
+
+        var pageParams = query.UrlQuery;
 
         // Default Sorting
         if (!pageParams.HasSortBy)
@@ -57,7 +60,7 @@ public class UserLoginQueries : IUserLoginQueries
         var includes = UserLoginIncludes.GetUserLoginsIncludes();
 
         // Paging
-        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(_context.UserLogins, pageParams, filters, includes, token);
+        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
         // Mapping
         var dto = pagedUserLogins.Rows.Select(ul => ul.ListItemUserLoginDtoMapping()).ToList();
 

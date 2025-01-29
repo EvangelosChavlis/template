@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Application.Interfaces.Auth.UserLogins;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.WebApi.Controllers;
+using server.src.Application.Auth.UserLogins.Interfaces;
 
 namespace server.src.Api.Controllers.Auth.UserLogin;
 
@@ -29,5 +29,8 @@ public class UserLoginCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status200OK, "User logged in successfully", typeof(Response<AuthenticatedUserDto>))]
     [SwaggerResponse(StatusCodes.Status401Unauthorized, "Invalid credentials")]
     public async Task<IActionResult> Login([FromBody] UserLoginDto dto, CancellationToken token)
-        => Ok(await _userLoginCommands.LoginUserService(dto, token));
+    {
+        var result = await _userLoginCommands.LoginUserAsync(dto, token);
+        return StatusCode(result.StatusCode, result);
+    }
 }

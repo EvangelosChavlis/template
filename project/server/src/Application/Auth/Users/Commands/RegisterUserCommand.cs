@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
+using server.src.Application.Auth.UserRoles.Interfaces;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Helpers;
 using server.src.Application.Interfaces;
@@ -21,13 +22,15 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
     private readonly ICommonRepository _commonRepository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IAuthHelper _authHelper;
+    private readonly IUserRoleCommands _userRoleCommands;
 
     public RegisterUserHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork, 
-        IAuthHelper authHelper)
+        IAuthHelper authHelper, IUserRoleCommands userRoleCommands)
     {
         _commonRepository = commonRepository;
         _unitOfWork = unitOfWork;
         _authHelper = authHelper;
+        _userRoleCommands = userRoleCommands;
     }
 
     public async Task<Response<string>> Handle(RegisterUserCommand command, CancellationToken token = default)
@@ -121,7 +124,7 @@ await _unitOfWork.RollbackTransactionAsync(token);
         }
 
         // Assigning role to the user
-        var assignResult = await _userRoleCommands.AssignRoleToUserService(user.Id, role.Id);
+        var assignResult = await _userRoleCommands.AssignRoleToUserAsync(user.Id, role.Id);
         if (!assignResult.Success)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

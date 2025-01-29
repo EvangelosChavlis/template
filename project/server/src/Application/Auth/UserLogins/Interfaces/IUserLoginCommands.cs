@@ -2,7 +2,7 @@
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 
-namespace server.src.Application.Interfaces.Auth.UserLogins;
+namespace server.src.Application.Auth.UserLogins.Interfaces;
 
 /// <summary>
 /// Defines command operations related to user logins, such as authentication.
@@ -15,5 +15,5 @@ public interface IUserLoginCommands
     /// <param name="dto">The login credentials, including username and password.</param>
     /// <param name="token">A cancellation token to handle request cancellation (optional).</param>
     /// <returns>A task representing the asynchronous operation, containing a response with authenticated user details.</returns>
-    Task<Response<AuthenticatedUserDto>> LoginUserService(UserLoginDto dto, CancellationToken token = default);
+    Task<Response<AuthenticatedUserDto>> LoginUserAsync(UserLoginDto dto, CancellationToken token = default);
 }

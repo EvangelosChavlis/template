@@ -11,7 +11,6 @@ using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Common;
-using server.src.Persistence.Contexts;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Users.Queries;
@@ -20,12 +19,10 @@ public record GetUsersQuery(UrlQuery UrlQuery) : IRequest<ListResponse<List<List
 
 public class GetUsersHandler : IRequestHandler<GetUsersQuery, ListResponse<List<ListItemUserDto>>>
 {
-    private readonly DataContext _context;
     private readonly ICommonRepository _commonRepository;
 
-    public GetUsersHandler(DataContext context, ICommonRepository commonRepository)
+    public GetUsersHandler(ICommonRepository commonRepository)
     {
-        _context = context;
         _commonRepository = commonRepository;
     }
 
@@ -50,7 +47,7 @@ public class GetUsersHandler : IRequestHandler<GetUsersQuery, ListResponse<List<
         var includes = UserIncludes.GetUsersIncludes();
 
         // Paging
-        var pagedUsers = await _commonRepository.GetPagedResultsAsync(_context.Users, pageParams, filters, includes, token);
+        var pagedUsers = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
         // Mapping
         var dto = pagedUsers.Rows.Select(a => a.ListItemUserDtoMapping()).ToList();
 
