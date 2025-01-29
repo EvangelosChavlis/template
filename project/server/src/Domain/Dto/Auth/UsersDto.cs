@@ -87,7 +87,7 @@ public record ItemUserDto(
 /// <param name="MobilePhoneNumber">The user's mobile phone number.</param>
 /// <param name="Bio">A brief biography of the user.</param>
 /// <param name="DateOfBirth">The user's date of birth.</param>
-/// /// <param name="Version">The version of the role for concurrency control during updates.</param>
+/// <param name="Version">The version of the role for concurrency control during updates.</param>
 public record UserDto(
     string FirstName,
     string LastName,
@@ -124,7 +124,8 @@ public record AuthenticatedUserDto(string UserName, string Token);
 /// Represents the data required to request a password reset.
 /// </summary>
 /// <param name="Email">The email address of the user requesting a password reset.</param>
-public record ForgotPasswordDto(string Email);
+/// <param name="VersionId">The version of the role for concurrency control during updates.</param>
+public record ForgotPasswordDto(string Email, Guid VersionId);
 
 /// <summary>
 /// Represents the data required to reset a user's password.
@@ -132,17 +133,20 @@ public record ForgotPasswordDto(string Email);
 /// <param name="Email">The user's email address.</param>
 /// <param name="Token">The token required to authorize the password reset.</param>
 /// <param name="NewPassword">The new password for the user.</param>
-public record ResetPasswordDto(string Email, string Token, string NewPassword);
+/// <param name="VersionId">The version of the role for concurrency control during updates.</param>
+public record ResetPasswordDto(string Email, string Token, string NewPassword, Guid VersionId);
 
 /// <summary>
 /// Represents the data required to enable two-factor authentication for a user.
 /// </summary>
 /// <param name="UserId">The unique identifier of the user.</param>
-public record Enable2FADto(Guid UserId);
+/// <param name="VersionId">The version of the role for concurrency control during updates.</param>
+public record Enable2FADto(Guid UserId, Guid VersionId);
 
 /// <summary>
 /// Represents the data required to verify two-factor authentication for a user.
 /// </summary>
 /// <param name="UserId">The unique identifier of the user.</param>
 /// <param name="Token">The verification token for two-factor authentication.</param>
-public record Verify2FADto(Guid UserId, string Token);
+/// <param name="VersionId">The version of the role for concurrency control during updates.</param>
+public record Verify2FADto(Guid UserId, string Token, Guid VersionId);

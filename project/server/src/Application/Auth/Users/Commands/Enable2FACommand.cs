@@ -1,18 +1,18 @@
 // package
 using System.Linq.Expressions;
 using System.Net;
-using server.src.Application.Auth.Users.Validators;
-
 
 // source
+using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Interfaces;
+using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 
-public record Enable2FACommand(Guid Id, Guid Version) : IRequest<Response<string>>;
+public record Enable2FACommand(Enable2FADto Dto) : IRequest<Response<string>>;
 
 public class Enable2FAHandler : IRequestHandler<Enable2FACommand, Response<string>>
 {
@@ -28,7 +28,7 @@ public class Enable2FAHandler : IRequestHandler<Enable2FACommand, Response<strin
     public async Task<Response<string>> Handle(Enable2FACommand command, CancellationToken token = default)
     {
         // Id Validation
-        var idValidationResult = UserValidators.Validate(command.Id);
+        var idValidationResult = UserValidators.Validate(command.Dto.UserId);
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -37,7 +37,7 @@ public class Enable2FAHandler : IRequestHandler<Enable2FACommand, Response<strin
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = UserValidators.Validate(command.Version);
+        var versionValidationResult = UserValidators.Validate(command.Dto.VersionId);
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -50,7 +50,7 @@ public class Enable2FAHandler : IRequestHandler<Enable2FACommand, Response<strin
 
         // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
-        var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == command.Id };
+        var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == command.Dto.UserId };
         var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
 
         // Check for existence
@@ -65,7 +65,7 @@ public class Enable2FAHandler : IRequestHandler<Enable2FACommand, Response<strin
         }
 
         // Check for concurrency issues
-        if (user.Version != command.Version)
+        if (user.Version != command.Dto.VersionId)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()

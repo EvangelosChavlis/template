@@ -6,18 +6,14 @@ using System.Net;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Helpers;
 using server.src.Application.Interfaces;
+using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 
-public record ResetPasswordCommand(
-    string Email, 
-    string AuthToken, 
-    string NewPassword,
-    Guid Version
-) : IRequest<Response<string>>;
+public record ResetPasswordCommand(ResetPasswordDto Dto) : IRequest<Response<string>>;
 
 public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Response<string>>
 {
@@ -36,7 +32,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
     public async Task<Response<string>> Handle(ResetPasswordCommand command, CancellationToken token = default)
     {
         // Version Validation
-        var versionValidationResult = UserValidators.Validate(command.Version);
+        var versionValidationResult = UserValidators.Validate(command.Dto.VersionId);
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -45,7 +41,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
                 .WithData(string.Join("\n", versionValidationResult.Errors));
 
         // Email Validation
-        var emailValidationResult = UserValidators.ValidateEmail(command.Email);
+        var emailValidationResult = UserValidators.ValidateEmail(command.Dto.Email);
         if (!emailValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -54,7 +50,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
                 .WithData(string.Join("\n", emailValidationResult.Errors));
 
         // AuthToken Validation
-        var authValidationResult = UserValidators.ValidateEmail(command.AuthToken);
+        var authValidationResult = UserValidators.ValidateEmail(command.Dto.Token);
         if (!authValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -63,7 +59,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
                 .WithData(string.Join("\n", authValidationResult.Errors));
 
         // New Password Validation
-        var passwordValidationResult = UserValidators.ValidateEmail(command.NewPassword);
+        var passwordValidationResult = UserValidators.ValidateEmail(command.Dto.NewPassword);
         if (!passwordValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -76,7 +72,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
                 
         // Searching Item      
         var userIncludes = new Expression<Func<User, object>>[] { };
-        var userFilters = new Expression<Func<User, bool>>[] { x => x.Email == command.Email };
+        var userFilters = new Expression<Func<User, bool>>[] { x => x.Email == command.Dto.Email };
         var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
 
         // Check for existence
@@ -91,7 +87,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
         }
 
         // Check for concurrency issues
-        if (user.Version != command.Version)
+        if (user.Version != command.Dto.VersionId)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
@@ -113,7 +109,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
         }   
             
         // Check password token
-        if (user.PasswordResetToken != command.AuthToken || user.PasswordResetTokenExpiry < DateTime.UtcNow)
+        if (user.PasswordResetToken != command.Dto.Token || user.PasswordResetTokenExpiry < DateTime.UtcNow)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
@@ -125,7 +121,7 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
             
 
         // Reset password logic
-        user.PasswordHash = _authHelper.HashPassword(command.NewPassword);
+        user.PasswordHash = _authHelper.HashPassword(command.Dto.NewPassword);
         user.PasswordResetToken = string.Empty;
         user.PasswordResetTokenExpiry = null;
 

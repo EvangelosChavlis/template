@@ -6,7 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 // source
 using server.src.Domain.Dto.Common;
 using server.src.WebApi.Controllers;
-using server.src.Application.Interfaces.Auth.UserRoles;
+using server.src.Application.Auth.UserRoles.Interfaces;
 
 namespace server.src.Api.Controllers.Auth.Users;
 
@@ -31,7 +31,10 @@ public class UserRoleCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status404NotFound, "User or role not found")]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid assignment request")]
     public async Task<IActionResult> AssignRoleToUser(Guid userId, Guid roleId, CancellationToken token)
-        => Ok(await _userRoleCommands.AssignRoleToUserService(userId, roleId, token));
+    {
+        var result = await _userRoleCommands.AssignRoleToUserAsync(userId, roleId, token);
+        return StatusCode(result.StatusCode, result);
+    }
 
 
     [ApiExplorerSettings(GroupName = "auth")]
@@ -43,5 +46,8 @@ public class UserRoleCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status404NotFound, "User or role not found")]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid assignment request")]
     public async Task<IActionResult> UnassignRoleFromUser(Guid userId, Guid roleId, CancellationToken token)
-        => Ok(await _userRoleCommands.UnassignRoleFromUserService(userId, roleId, token));
+    {
+        var result = await _userRoleCommands.UnassignRoleFromUserAsync(userId, roleId, token);
+        return StatusCode(result.StatusCode, result);
+    }
 }

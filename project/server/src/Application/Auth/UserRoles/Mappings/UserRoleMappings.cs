@@ -1,7 +1,7 @@
 // source
 using server.src.Domain.Models.Auth;
 
-namespace server.src.Application.Mappings.Auth;
+namespace server.src.Application.Auth.UserRoles.Mappings;
 
 /// <summary>
 /// Provides mappings for the relationship between users and roles.
@@ -18,6 +18,7 @@ public static class UserRoleMappings
     public static UserRole AssignRoleToUserMapping(this Role roleModel, User userModel)
     => new ()
     {
+        Date = DateTime.UtcNow,
         User = userModel,
         UserId = userModel.Id,
         Role = roleModel,

@@ -22,6 +22,9 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
     {
         builder.HasKey(ur => ur.Id);
 
+        builder.Property(ur => ur.Date)
+            .IsRequired();
+
         builder.HasOne(ur => ur.User)
             .WithMany(u => u.UserRoles)
             .HasForeignKey(ur => ur.UserId)

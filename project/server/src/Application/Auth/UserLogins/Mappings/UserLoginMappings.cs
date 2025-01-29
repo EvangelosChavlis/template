@@ -3,7 +3,7 @@ using server.src.Domain.Dto.Auth;
 using server.src.Domain.Extensions;
 using server.src.Domain.Models.Auth;
 
-namespace server.src.Application.Mappings.Auth;
+namespace server.src.Application.Auth.UserLogins.Mappings;
 
 /// <summary>
 /// Provides extension methods for mapping user data to user login records.
@@ -38,4 +38,13 @@ public static class UserLoginMappings
             UserId = user.Id,
             User = user
         };
+
+    /// <summary>
+    /// Maps a username and token to an AuthenticatedUserDto.
+    /// </summary>
+    /// <param name="userName">The username of the authenticated user.</param>
+    /// <param name="token">The authentication token for the user.</param>
+    /// <returns>An AuthenticatedUserDto containing the username and token.</returns>
+    public static AuthenticatedUserDto AuthenticatedUserDtoMapping(this string userName, string token) 
+        => new (UserName: userName, Token: token);
 }

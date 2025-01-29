@@ -115,6 +115,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                 .HasForeignKey(a => a.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-        builder.ToTable("Users");
+        builder.ToTable(_tableName, _schema);
     }
 }

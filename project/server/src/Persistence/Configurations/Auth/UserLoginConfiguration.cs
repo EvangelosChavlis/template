@@ -25,6 +25,9 @@ public class UserLoginConfiguration : IEntityTypeConfiguration<UserLogin>
        builder.Property(ul => ul.Date)
               .IsRequired();
 
+       builder.Property(ul => ul.ProviderDisplayName)
+              .IsRequired();
+
        builder.HasOne(ul => ul.User)
               .WithMany(u => u.UserLogins)
               .HasForeignKey(ul => ul.UserId)

@@ -76,7 +76,7 @@ public class UserCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
     public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto dto, CancellationToken token)
     {
-        var result = await _userCommands.ForgotPasswordAsync(dto.Email, token);
+        var result = await _userCommands.ForgotPasswordAsync(dto, token);
         return StatusCode(result.StatusCode, result);
     }
 
@@ -88,19 +88,19 @@ public class UserCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid token or password")]
     public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto, CancellationToken token)
     {
-        var result = await _userCommands.ResetPasswordAsync(dto.Email, dto.Token, dto.NewPassword, token);
+        var result = await _userCommands.ResetPasswordAsync(dto, token);
         return StatusCode(result.StatusCode, result);
     }
 
 
-    [HttpGet("generate-password/{id}")]
+    [HttpGet("generate-password/{id}/{versionId}")]
     [Authorize(Roles = "Administrator")]
     [SwaggerOperation(Summary = "Generate a new password for a user", Description = "Generates a new password for a specific user by their unique ID.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Password generated successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
-    public async Task<IActionResult> GeneratePassword(Guid id, CancellationToken token)
+    public async Task<IActionResult> GeneratePassword(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.GeneratePasswordAsync(id, token);
+        var result = await _userCommands.GeneratePasswordAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
@@ -109,7 +109,7 @@ public class UserCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Enable two-factor authentication for a user")]
     public async Task<IActionResult> Enable2FA([FromBody] Enable2FADto dto, CancellationToken token)
     {
-        var result = await _userCommands.Enable2FAAsync(dto.UserId, token);
+        var result = await _userCommands.Enable2FAAsync(dto, token);
         return StatusCode(result.StatusCode, result);
     }
 
@@ -118,7 +118,7 @@ public class UserCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Verify two-factor authentication for a user")]
     public async Task<IActionResult> Verify2FA([FromBody] Verify2FADto dto, CancellationToken token)
     {
-        var result = await _userCommands.Verify2FAAsync(dto.UserId, dto.Token, token);
+        var result = await _userCommands.Verify2FAAsync(dto.UserId, dto.Token, dto.VersionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
@@ -133,59 +133,59 @@ public class UserCommandsController : BaseApiController
     }
 
 
-    [HttpGet("activate/{id}")]
+    [HttpGet("activate/{id}/{versionId}")]
     [Authorize(Roles = "Administrator")]
     [SwaggerOperation(Summary = "Activate a user")]
-    public async Task<IActionResult> ActivateUser(Guid id, CancellationToken token)
+    public async Task<IActionResult> ActivateUser(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.ActivateUserAsync(id, token);
+        var result = await _userCommands.ActivateUserAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
 
-    [HttpGet("deactivate/{id}")]
+    [HttpGet("deactivate/{id}/{versionId}")]
     [Authorize(Roles = "Administrator")]
     [SwaggerOperation(Summary = "Deactivate a user")]
-    public async Task<IActionResult> DeactivateUser(Guid id, CancellationToken token)
+    public async Task<IActionResult> DeactivateUser(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.DeactivateUserAsync(id, token);
+        var result = await _userCommands.DeactivateUserAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
 
-    [HttpGet("lock/{id}")]
+    [HttpGet("lock/{id}/{versionId}")]
     [SwaggerOperation(Summary = "Lock a user")]
-    public async Task<IActionResult> LockUser(Guid id, CancellationToken token)
+    public async Task<IActionResult> LockUser(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.LockUserAsync(id, token);
+        var result = await _userCommands.LockUserAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
 
-    [HttpGet("unlock/{id}")]
+    [HttpGet("unlock/{id}/{versionId}")]
     [SwaggerOperation(Summary = "Unlock a user")]
-    public async Task<IActionResult> UnlockUser(Guid id, CancellationToken token)
+    public async Task<IActionResult> UnlockUser(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.UnlockUserAsync(id, token);
+        var result = await _userCommands.UnlockUserAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
 
-    [HttpGet("confirm/email/{id}")]
+    [HttpGet("confirm/email/{id}/{versionId}")]
     [SwaggerOperation(Summary = "Confirm a user's email")]
-    public async Task<IActionResult> ConfirmEmailUser(Guid id, CancellationToken token)
+    public async Task<IActionResult> ConfirmEmailUser(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.ConfirmEmailUserAsync(id, token);
+        var result = await _userCommands.ConfirmEmailUserAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id}/{versionId}")]
     [Authorize(Roles = "Administrator")]
     [SwaggerOperation(Summary = "Delete user")]
-    public async Task<IActionResult> DeleteUser(Guid id, CancellationToken token)
+    public async Task<IActionResult> DeleteUser(Guid id, Guid versionId, CancellationToken token)
     {
-        var result = await _userCommands.DeleteUserAsync(id, token);
+        var result = await _userCommands.DeleteUserAsync(id, versionId, token);
         return StatusCode(result.StatusCode, result);
     }
 }

@@ -85,17 +85,16 @@ public class UserCommands : IUserCommands
         return await _updateUserHandler.Handle(command, token);
     }
 
-    public async Task<Response<string>> ForgotPasswordAsync(string email, 
-        Guid version, CancellationToken token = default)
+    public async Task<Response<string>> ForgotPasswordAsync(ForgotPasswordDto dto, 
+        CancellationToken token = default)
     {
-        var command = new ForgotPasswordCommand(email, version);
+        var command = new ForgotPasswordCommand(dto);
         return await _forgotPasswordHandler.Handle(command, token);
     }
 
-    public async Task<Response<string>> ResetPasswordAsync(Guid version, string email, 
-        string authToken, string newPassword, CancellationToken token = default)
+    public async Task<Response<string>> ResetPasswordAsync(ResetPasswordDto dto, CancellationToken token = default)
     {
-        var command = new ResetPasswordCommand(email, authToken, newPassword, version);
+        var command = new ResetPasswordCommand(dto);
         return await _resetPasswordHandler.Handle(command, token);
     }
 
@@ -106,10 +105,10 @@ public class UserCommands : IUserCommands
         return await _generatePasswordCommand.Handle(command, token);
     }
 
-    public async Task<Response<string>> Enable2FAAsync(Guid id, 
-        Guid version, CancellationToken token = default)
+    public async Task<Response<string>> Enable2FAAsync(Enable2FADto dto, 
+        CancellationToken token = default)
     {
-        var command = new Enable2FACommand(id, version);
+        var command = new Enable2FACommand(dto);
         return await _enable2FACommand.Handle(command, token);
     }
 

@@ -5,13 +5,14 @@ using System.Net;
 // source
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Interfaces;
+using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 
-public record ForgotPasswordCommand(string Email, Guid Version) : IRequest<Response<string>>;
+public record ForgotPasswordCommand(ForgotPasswordDto Dto) : IRequest<Response<string>>;
 
 public class ForgotPasswordHandler : IRequestHandler<ForgotPasswordCommand, Response<string>>
 {
@@ -27,7 +28,7 @@ public class ForgotPasswordHandler : IRequestHandler<ForgotPasswordCommand, Resp
     public async Task<Response<string>> Handle(ForgotPasswordCommand command, CancellationToken token = default)
     {
         // Email Validation
-        var idValidationResult = UserValidators.ValidateEmail(command.Email);
+        var idValidationResult = UserValidators.ValidateEmail(command.Dto.Email);
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -36,7 +37,7 @@ public class ForgotPasswordHandler : IRequestHandler<ForgotPasswordCommand, Resp
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = UserValidators.Validate(command.Version);
+        var versionValidationResult = UserValidators.Validate(command.Dto.VersionId);
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -49,7 +50,7 @@ public class ForgotPasswordHandler : IRequestHandler<ForgotPasswordCommand, Resp
 
         // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
-        var userFilters = new Expression<Func<User, bool>>[] { x => x.Email == command.Email };
+        var userFilters = new Expression<Func<User, bool>>[] { x => x.Email == command.Dto.Email };
         var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
 
         // Searching Item
@@ -64,7 +65,7 @@ public class ForgotPasswordHandler : IRequestHandler<ForgotPasswordCommand, Resp
         }
 
         // Check for concurrency issues
-        if (user.Version != command.Version)
+        if (user.Version != command.Dto.VersionId)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()

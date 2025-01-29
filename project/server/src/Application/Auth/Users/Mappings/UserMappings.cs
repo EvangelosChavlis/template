@@ -55,7 +55,8 @@ public static class UserMappings
 
             Bio: model.Bio,
             DateOfBirth: model.DateOfBirth.GetLocalDateTimeString(),
-            IsActive: model.IsActive
+            IsActive: model.IsActive,
+            Version: Guid.Empty
         );
 
     /// <summary>
@@ -87,7 +88,8 @@ public static class UserMappings
 
             Bio: string.Empty,
             DateOfBirth: string.Empty,
-            IsActive: false
+            IsActive: false,
+            Version: Guid.Empty
         );
 
 
@@ -164,13 +166,4 @@ public static class UserMappings
         model.Bio = dto.Bio;
         model.DateOfBirth = dto.DateOfBirth;
     }
-
-    /// <summary>
-    /// Maps a username and token to an AuthenticatedUserDto.
-    /// </summary>
-    /// <param name="userName">The username of the authenticated user.</param>
-    /// <param name="token">The authentication token for the user.</param>
-    /// <returns>An AuthenticatedUserDto containing the username and token.</returns>
-    public static AuthenticatedUserDto AuthenticatedUserDtoMapping(this string userName, string token) 
-        => new (UserName: userName, Token: token);
 }
