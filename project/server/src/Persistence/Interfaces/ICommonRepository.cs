@@ -28,13 +28,16 @@ public interface ICommonRepository
     ) where T : class;
 
     /// <summary>
-    /// Retrieves a list of results from a queryable data source without applying pagination or filtering.
+    /// Retrieves a list of results from a queryable data source based on the provided filter expressions, without applying pagination.
     /// </summary>
     /// <typeparam name="T">The type of the data being queried.</typeparam>
-    /// <param name="token">Cancellation token to allow the operation to be canceled.</param>
-    /// <returns>A task that represents the asynchronous operation. The task result contains a list of results.</returns>
-    Task<List<T>> GetResultPickerAsync<T>(CancellationToken token = default) 
-        where T : class;
+    /// <param name="filterExpressions">An array of filter expressions used to refine the query results.</param>
+    /// <param name="token">A cancellation token to allow the operation to be canceled.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains a list of matching results.</returns>
+    Task<List<T>> GetResultPickerAsync<T>(
+        Expression<Func<T, bool>>[] filterExpressions, 
+        CancellationToken token = default
+    ) where T : class;
 
     /// <summary>
     /// Retrieves a single result from a queryable data source based on its identifier and additional filtering.

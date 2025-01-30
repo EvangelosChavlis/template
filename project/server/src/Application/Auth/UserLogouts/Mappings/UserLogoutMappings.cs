@@ -3,13 +3,43 @@ using server.src.Domain.Dto.Auth;
 using server.src.Domain.Extensions;
 using server.src.Domain.Models.Auth;
 
-namespace server.src.Application.Mappings.Auth;
+namespace server.src.Application.Auth.UserLogouts.Mappings;
 
 /// <summary>
 /// Provides extension methods for mapping user data to user logout records.
 /// </summary>
 public static class UserLogoutMappings
 {
+    /// <summary>
+    /// Maps a <see cref="UserLogout"/> model to a <see cref="ItemUserLogoutDto"/> DTO.
+    /// </summary>
+    /// <param name="model">The <see cref="UserLogout"/> model to map from.</param>
+    /// <returns>A <see cref="ItemUserLogoutDto"/> containing mapped user login details.</returns>
+    public static ItemUserLogoutDto ItemUserLogoutDtoMapping(this UserLogout model)
+        => new (
+            Id: model.Id,
+            LoginProvider: model.LoginProvider,
+            ProviderKey: model.ProviderKey,
+            ProviderDisplayName: model.ProviderDisplayName,
+            Date: model.Date.GetFullLocalDateTimeString(),
+            User: model.User.UserName
+        );
+
+    /// <summary>
+    /// Returns a default <see cref="ItemUserLogoutDto"/> instance representing an error state.
+    /// This is used when mapping a <see cref="UserLogout"/> model fails or returns invalid data.
+    /// </summary>
+    /// <returns>An <see cref="ItemUserLogoutDto"/> with empty or default values.</returns>
+    public static ItemUserLogoutDto ErrorItemUserLogoutDtoMapping()
+        => new (
+            Id: Guid.Empty,
+            LoginProvider: string.Empty,
+            ProviderKey: string.Empty,
+            ProviderDisplayName: string.Empty,
+            Date: string.Empty,
+            User: string.Empty
+        );
+
     /// <summary>
     /// Maps a <see cref="UserLogout"/> model to a <see cref="ListItemUserLogoutDto"/> DTO.
     /// </summary>

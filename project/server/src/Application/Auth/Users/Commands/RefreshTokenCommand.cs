@@ -64,11 +64,30 @@ public class RefreshTokenHandler : IRequestHandler<RefreshTokenCommand, Response
         // Generating Token
         var newToken = await _authHelper.GenerateJwtToken(user, token);
 
+        // Generating failed
+        if (!newToken.Success)
+        {
+            return new Response<string>()
+                .WithMessage("An error occurred while generating token. Please try again.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(newToken.Success)
+                .WithData(newToken.Data!);
+        }
+
+        // Check for existence
+        if (!newToken.Success)
+            return new Response<string>()
+                .WithMessage("Error in refreshing token.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(false)
+                .WithData("User not found.");
+
+
         // Initializing object
         return new Response<string>()
             .WithMessage("Success in refreshing token.")
             .WithStatusCode((int)HttpStatusCode.OK)
             .WithSuccess(true)
-            .WithData(newToken);
+            .WithData(newToken.Data!);
     }
 }

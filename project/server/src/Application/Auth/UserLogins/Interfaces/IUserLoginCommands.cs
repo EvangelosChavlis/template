@@ -15,5 +15,5 @@ public interface IUserLoginCommands
     /// <param name="dto">The login credentials, including username and password.</param>
     /// <param name="token">A cancellation token to handle request cancellation (optional).</param>
     /// <returns>A task representing the asynchronous operation, containing a response with authenticated user details.</returns>
-    Task<Response<AuthenticatedUserDto>> LoginUserAsync(UserLoginDto dto, CancellationToken token = default);
+    Task<Response<AuthenticatedUserDto>> UserLoginAsync(UserLoginDto dto, CancellationToken token = default);
 }

@@ -7,7 +7,7 @@ using server.src.Application.Auth.UserRoles.Interfaces;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Helpers;
 using server.src.Application.Interfaces;
-using server.src.Application.Users.Mappings;
+using server.src.Application.Auth.Users.Mappings;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;

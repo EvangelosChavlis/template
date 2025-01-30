@@ -1,4 +1,5 @@
 // packages
+using System.Linq.Expressions;
 using System.Net;
 
 // source
@@ -24,11 +25,14 @@ public class GetRolesPickerHandler : IRequestHandler<GetRolesPickerQuery, Respon
 
     public async Task<Response<List<PickerRoleDto>>> Handle(GetRolesPickerQuery query, CancellationToken token = default)
     {
-        var roles = await _commonRepository.GetResultPickerAsync<Role>(token);
+        // Searching Items
+        var filters = new Expression<Func<Role, bool>>[] { r => r.IsActive == true };
+        var roles = await _commonRepository.GetResultPickerAsync(filters, token);
 
         // Mapping
         var dto = roles.Select(o => o.PickerRoleDtoMapping()).ToList();
 
+        // Determine if the operation was successful
         var success = dto.Count > 0;
 
         // Initializing object

@@ -1,5 +1,6 @@
 // packages
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -7,8 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 // source
+using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Contexts;
+using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Helpers;
 
@@ -16,15 +19,24 @@ public class AuthHelper : IAuthHelper
 {
     private readonly DataContext _context;
     private readonly JwtSettings _jwtSettings;
+    private readonly ICommonRepository _commonRepository;
+    private readonly IUnitOfWork _unitOfWork;
     
-    public AuthHelper(DataContext context, JwtSettings jwtSettings)
+    public AuthHelper(DataContext context, JwtSettings jwtSettings, 
+        ICommonRepository commonRepository, IUnitOfWork unitOfWork)
     {
+            
         _context = context;
         _jwtSettings = jwtSettings;
+        _commonRepository = commonRepository;
+        _unitOfWork = unitOfWork;
     }
 
-    public async Task<string> GenerateJwtToken(User user, CancellationToken token = default)
+    public async Task<Response<string>> GenerateJwtToken(User user, CancellationToken token = default)
     {
+        //Begin Transaction
+        await _unitOfWork.BeginTransactionAsync(token);
+        
         var roles = await _context.Roles
             .Include(r => r.UserRoles)
             .Where(r => r.UserRoles.Any(ur => ur.UserId == user.Id))
@@ -57,7 +69,7 @@ public class AuthHelper : IAuthHelper
 
         var jwtToken = new JwtSecurityTokenHandler().WriteToken(authToken);
 
-        // Persist claims in the UserClaims table (optional)
+        var result = true;
         foreach (var claim in claims)
         {
             var userClaim = new UserClaim
@@ -67,14 +79,28 @@ public class AuthHelper : IAuthHelper
                 ClaimValue = claim.Value
             };
 
-            // Add the claim to the database
-            await _context.UserClaims.AddAsync(userClaim, token);
+            result &= await _commonRepository.AddAsync(userClaim, token);
         }
 
-        // Save changes to the database
-        await _context.SaveChangesAsync(token);
+        if (!result)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error in persisting user claims.")
+                .WithSuccess(result)
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithData("The prodution of token failed");
+        }
 
-        return jwtToken;
+        // Commit Transaction
+        await _unitOfWork.CommitTransactionAsync(token);
+
+        // Initializing object
+        return new Response<string>()
+            .WithMessage("Success in creating token.")
+            .WithStatusCode((int)HttpStatusCode.Created)
+            .WithSuccess(result)
+            .WithData(jwtToken);
     }
 
 

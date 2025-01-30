@@ -3,42 +3,45 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Filters.Auth;
-using server.src.Application.Includes.Auth;
-using server.src.Application.Interfaces.Auth.UserLogouts;
-using server.src.Application.Mappings.Auth;
+using server.src.Application.Auth.UserLogouts.Filters;
+using server.src.Application.Auth.UserLogouts.Includes;
+using server.src.Application.Auth.UserLogouts.Mappings;
+using server.src.Application.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Common;
-using server.src.Persistence.Contexts;
 using server.src.Persistence.Interfaces;
 
-namespace server.src.Application.Services.Auth.UserLogouts;
+namespace server.src.Application.Auth.UserLogouts.Queries;
 
-public class UserLogoutQueries : IUserLogoutQueries
+public record GetLogoutsByUserIdQuery(Guid Id, UrlQuery UrlQuery) : IRequest<ListResponse<List<ListItemUserLogoutDto>>>;
+
+public class GetLogoutsByUserIdHandler : IRequestHandler<GetLogoutsByUserIdQuery, ListResponse<List<ListItemUserLogoutDto>>>
 {
-    private readonly DataContext _context;
     private readonly ICommonRepository _commonRepository;
-    
-    public UserLogoutQueries(DataContext context, ICommonRepository commonRepository)
+
+    public GetLogoutsByUserIdHandler(ICommonRepository commonRepository)
     {
-        _context = context;
         _commonRepository = commonRepository;
     }
 
-    public async Task<ListResponse<List<ListItemUserLogoutDto>>> GetLogoutsByUserIdService(Guid id, UrlQuery pageParams, CancellationToken token = default)
+    public async Task<ListResponse<List<ListItemUserLogoutDto>>> Handle(GetLogoutsByUserIdQuery query, CancellationToken token = default)
     {
+        // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
-        var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == id};
-        var user = await _commonRepository.GetResultByIdAsync(_context.Users, userFilters, userIncludes, token);
+        var userFilters = new Expression<Func<User, bool>>[] { u => u.Id == query.Id};
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
 
+        // Check for existence
         if (user is null)
             return new ListResponse<List<ListItemUserLogoutDto>>()
                 .WithMessage("User not found")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData([]);
+
+        var pageParams = query.UrlQuery;
 
         // Default Sorting
         if (!pageParams.HasSortBy)
@@ -57,7 +60,7 @@ public class UserLogoutQueries : IUserLogoutQueries
         var includes = UserLogoutIncludes.GetUserLogoutIncludes();
 
         // Paging
-        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(_context.UserLogouts, pageParams, filters, includes, token);
+        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
         // Mapping
         var dto = pagedUserLogins.Rows.Select(ul => ul.ListItemUserLogoutDtoMapping()).ToList();
 
@@ -81,4 +84,6 @@ public class UserLogoutQueries : IUserLogoutQueries
             }
         };
     }
+
 }
+    

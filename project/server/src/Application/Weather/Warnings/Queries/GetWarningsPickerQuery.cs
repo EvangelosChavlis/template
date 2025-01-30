@@ -1,4 +1,5 @@
 // packages
+using System.Linq.Expressions;
 using System.Net;
 
 // source
@@ -24,11 +25,14 @@ public class GetWarningsPickerHandler : IRequestHandler<GetWarningsPickerQuery, 
 
     public async Task<Response<List<PickerWarningDto>>> Handle(GetWarningsPickerQuery query, CancellationToken token = default)
     {
-        var warnings = await _commonRepository.GetResultPickerAsync<Warning>(token);
+        // Searching Items
+        var filters = new Expression<Func<Warning, bool>>[] { };
+        var warnings = await _commonRepository.GetResultPickerAsync(filters, token);
 
         // Mapping
         var dto = warnings.Select(o => o.PickerWarningDtoMapping()).ToList();
-
+        
+        // Determine if the operation was successful
         var success = dto.Count > 0;
 
         // Initializing object

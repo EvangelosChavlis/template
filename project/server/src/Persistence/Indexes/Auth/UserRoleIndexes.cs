@@ -7,18 +7,19 @@ using server.src.Domain.Models.Auth;
 
 namespace server.src.Persistence.Indexes.Auth;
 
-public class RoleIndexes : IEntityTypeConfiguration<Role>
+public class UserRoleIndexes : IEntityTypeConfiguration<UserRole>
 {
-    public void Configure(EntityTypeBuilder<Role> builder)
+    public void Configure(EntityTypeBuilder<UserRole> builder)
     {
-        builder.HasIndex(u => u.Id)
+        builder.HasIndex(ur => ur.Id)
             .IsUnique();
 
-        builder.HasIndex(u 
+        builder.HasIndex(ur
             => new { 
-                u.Id, 
-                u.Name, 
-                u.Description
+                ur.Id, 
+                ur.UserId, 
+                ur.RoleId, 
+                ur.Date
             })
             .IsUnique();
     }

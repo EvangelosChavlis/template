@@ -30,7 +30,7 @@ public class UserLoginCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status401Unauthorized, "Invalid credentials")]
     public async Task<IActionResult> Login([FromBody] UserLoginDto dto, CancellationToken token)
     {
-        var result = await _userLoginCommands.LoginUserAsync(dto, token);
+        var result = await _userLoginCommands.UserLoginAsync(dto, token);
         return StatusCode(result.StatusCode, result);
     }
 }

@@ -198,15 +198,28 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
                 .WithData(new AuthenticatedUserDto("", ""));
         }
 
-        // Commit Transaction
-        await _unitOfWork.CommitTransactionAsync(token);
             
         // Generate JWT token
         var authToken = await _authHelper.GenerateJwtToken(user, token);
 
-        // Map user and token to DTO
-        var resultDto = user.UserName!.AuthenticatedUserDtoMapping(authToken);
+        // Generating failed
+        if (!authToken.Success)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<AuthenticatedUserDto>()
+                .WithMessage("An error occurred while generating token. Please try again.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(authToken.Success)
+                .WithData(new AuthenticatedUserDto("", ""));
+        }
 
+        // Map user and token to DTO
+        var resultDto = user.UserName!.AuthenticatedUserDtoMapping(authToken.Data!);
+
+        // Commit Transaction
+        await _unitOfWork.CommitTransactionAsync(token);
+
+        // Initializing object
         return new Response<AuthenticatedUserDto>()
             .WithMessage("Login successful.")
             .WithStatusCode((int)HttpStatusCode.OK)

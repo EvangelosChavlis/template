@@ -1,7 +1,7 @@
 // source
 using server.src.Domain.Dto.Common;
 
-namespace server.src.Application.Interfaces.Data;
+namespace server.src.Application.Data.Interfaces;
 
 /// <summary>
 /// Interface for managing data-related operations, such as seeding and clearing data.

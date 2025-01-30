@@ -99,10 +99,24 @@ public class CommonRepository : ICommonRepository
     }
 
 
-    public async Task<List<T>> GetResultPickerAsync<T>(CancellationToken token = default) 
-        where T : class
+    public async Task<List<T>> GetResultPickerAsync<T>(
+        Expression<Func<T, bool>>[] filterExpressions, 
+        CancellationToken token = default
+    ) where T : class
     {
-        return await _context.Set<T>().ToListAsync(token);
+        var query = _context.Set<T>().AsQueryable();
+
+        // Apply filtering
+        if (filterExpressions is not null)
+        {
+            foreach (var filterExpression in filterExpressions)
+            {
+                if (filterExpression is not null)
+                    query = query.Where(filterExpression);
+            }
+        }
+
+        return await query.ToListAsync(token);
     }
 
     public async Task<T?> GetResultByIdAsync<T>(

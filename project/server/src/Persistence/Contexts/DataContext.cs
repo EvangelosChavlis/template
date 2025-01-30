@@ -1,5 +1,7 @@
 // packages
 using Microsoft.EntityFrameworkCore;
+using server.Persistence.Configurations;
+
 
 // source
 using server.src.Domain.Models.Auth;
@@ -9,16 +11,13 @@ using server.src.Domain.Models.Weather;
 using server.src.Persistence.Configurations.Auth;
 using server.src.Persistence.Configurations.Metrics;
 using server.src.Persistence.Configurations.Weather;
+using server.src.Persistence.Indexes.Auth;
 using server.src.Persistence.Indexes.Weather;
 
 namespace server.src.Persistence.Contexts;
 
 public class DataContext : DbContext
 {
-    private readonly string _authSchema = "auth";
-    private readonly string _weatherSchema = "weather";
-    private readonly string _metricsSchema = "metrics";
-
     #region Auth
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
@@ -51,27 +50,7 @@ public class DataContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        #region Auth Configuration
-        modelBuilder.ApplyConfiguration(new UserConfiguration("Users", _authSchema));
-        modelBuilder.ApplyConfiguration(new RoleConfiguration("Roles", _authSchema));
-        modelBuilder.ApplyConfiguration(new UserRoleConfiguration("UserRoles", _authSchema));
-        modelBuilder.ApplyConfiguration(new UserLoginConfiguration("UserLogins", _authSchema));
-        modelBuilder.ApplyConfiguration(new UserLogoutConfiguration("UserLogouts", _authSchema));
-        modelBuilder.ApplyConfiguration(new UserClaimConfiguration("UserClaims", _authSchema));
-        #endregion
-
-        #region Weather Configuration
-        modelBuilder.ApplyConfiguration(new ForecastConfiguration("Forecasts", _weatherSchema));
-        modelBuilder.ApplyConfiguration(new WarningConfiguration("Warnings", _weatherSchema));
-        #endregion
-       
-        #region Metrics Configuration
-        modelBuilder.ApplyConfiguration(new AuditLogConfiguration("AuditLogs", _metricsSchema));
-        modelBuilder.ApplyConfiguration(new TrailConfiguration("Trails", _metricsSchema));
-        modelBuilder.ApplyConfiguration(new LogErrorConfiguration("LogErrors", _metricsSchema));
-        modelBuilder.ApplyConfiguration(new TelemetryConfiguration("TelemetryRecords", _metricsSchema));
-        modelBuilder.ApplyConfiguration(new StoryConfiguration("Stories", _metricsSchema));
-        #endregion
+        modelBuilder.AddConfigurations();
 
         // modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
         // modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
@@ -79,11 +58,17 @@ public class DataContext : DbContext
         #region Auth Indexes
         modelBuilder.ApplyConfiguration(new UserIndexes());
         modelBuilder.ApplyConfiguration(new RoleIndexes());
+        modelBuilder.ApplyConfiguration(new UserLoginIndexes());
+        modelBuilder.ApplyConfiguration(new UserLogoutIndexes());
+        modelBuilder.ApplyConfiguration(new UserRoleIndexes());
         #endregion
 
         #region Weather Indexes
         modelBuilder.ApplyConfiguration(new ForecastIndexes());
         modelBuilder.ApplyConfiguration(new WarningIndexes());
+        #endregion
+
+        #region Metrics Indexes
         #endregion
     }
 

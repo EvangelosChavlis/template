@@ -1,5 +1,7 @@
 // packages
 using System.Security.Claims;
+using server.src.Domain.Dto.Common;
+
 
 // source
 using server.src.Domain.Models.Auth;
@@ -18,7 +20,7 @@ public interface IAuthHelper
     /// <param name="user">The user for whom the token is generated.</param>
     /// <param name="token">A cancellation token.</param>
     /// <returns>A JWT token as a string.</returns>
-    Task<string> GenerateJwtToken(User user, CancellationToken token = default);
+    Task<Response<string>> GenerateJwtToken(User user, CancellationToken token = default);
 
     /// <summary>
     /// Extracts claims from an expired JWT token.

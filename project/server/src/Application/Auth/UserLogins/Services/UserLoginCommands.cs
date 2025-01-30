@@ -18,7 +18,7 @@ public class UserLoginCommands : IUserLoginCommands
         _userLoginHandler = userLoginHandler;
     }
 
-    public async Task<Response<AuthenticatedUserDto>> LoginUserAsync(UserLoginDto dto, 
+    public async Task<Response<AuthenticatedUserDto>> UserLoginAsync(UserLoginDto dto, 
         CancellationToken token = default)
     {
         var command = new UserLoginCommand(dto);

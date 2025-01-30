@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Application.Interfaces.Data;
 using server.src.Domain.Dto.Common;
+using server.src.Application.Data.Interfaces;
 
 namespace server.src.WebApi.Controllers.Data;
 
@@ -13,11 +13,11 @@ namespace server.src.WebApi.Controllers.Data;
 // [Authorize(Roles = "Administrator")]
 public class DataCommandsController : BaseApiController
 {
-    private readonly IDataCommands _dataService;
+    private readonly IDataCommands _dataCommands;
     
-    public DataCommandsController(IDataCommands dataService)
+    public DataCommandsController(IDataCommands dataCommands)
     {
-        _dataService = dataService;
+        _dataCommands = dataCommands;
     }
 
     [ApiExplorerSettings(GroupName = "data")]
@@ -27,7 +27,10 @@ public class DataCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status200OK, "Data seeded successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Error while seeding data")]
     public async Task<IActionResult> Seed(CancellationToken token)
-        => Ok(await _dataService.SeedDataAsync(token));
+    {
+        var result = await _dataCommands.SeedDataAsync(token);
+        return StatusCode(result.StatusCode, result);
+    }
 
 
     [ApiExplorerSettings(GroupName = "data")]
@@ -37,5 +40,8 @@ public class DataCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status200OK, "Data cleared successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Error while clearing data")]
     public async Task<IActionResult> Clear(CancellationToken token)
-        => Ok(await _dataService.ClearDataAsync(token));
+    {
+        var result = await _dataCommands.ClearDataAsync(token);
+        return StatusCode(result.StatusCode, result);
+    }
 }

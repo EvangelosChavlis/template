@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Application.Interfaces.Metrics;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Metrics;
 using server.src.Domain.Models.Common;
+using server.src.Application.Metrics.Errors.Interfaces;
 
 namespace server.src.WebApi.Controllers.Metrics;
 
@@ -30,7 +30,10 @@ public class ErrorQueriesController : BaseApiController
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid query parameters")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "No errors found")]
     public async Task<IActionResult> GetErrors([FromQuery] UrlQuery urlQuery, CancellationToken token)
-        => Ok(await _errorQueries.GetErrorsService(urlQuery, token));
+    {
+        var result = await _errorQueries.GetErrorsAsync(urlQuery, token);
+        return StatusCode(result.StatusCode, result);
+    }
 
 
     [ApiExplorerSettings(GroupName = "metrics")]
@@ -40,5 +43,8 @@ public class ErrorQueriesController : BaseApiController
     [SwaggerResponse(StatusCodes.Status200OK, "Error retrieved successfully", typeof(Response<ItemErrorDto>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Error not found")]
     public async Task<IActionResult> GetErrorByIdS(Guid id, CancellationToken token)
-        => Ok(await _errorQueries.GetErrorByIdService(id, token));
+    {
+        var result = await _errorQueries.GetErrorByIdAsync(id, token);
+        return StatusCode(result.StatusCode, result);
+    }
 }
