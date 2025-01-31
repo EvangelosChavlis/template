@@ -15,7 +15,7 @@ public interface IForecastCommands
     /// <param name="dto">A list of forecast data transfer objects to be created.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response indicating the success or failure of the bulk initialization process.</returns>
-    Task<Response<string>> InitializeForecastsAsync(List<ForecastDto> dto, 
+    Task<Response<string>> InitializeForecastsAsync(List<CreateForecastDto> dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -24,7 +24,7 @@ public interface IForecastCommands
     /// <param name="dto">The data transfer object containing forecast details.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response containing the result message of the operation.</returns>
-    Task<Response<string>> CreateForecastAsync(ForecastDto dto, 
+    Task<Response<string>> CreateForecastAsync(CreateForecastDto dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -34,7 +34,7 @@ public interface IForecastCommands
     /// <param name="dto">The data transfer object containing updated forecast details.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response containing the result message of the update operation.</returns>
-    Task<Response<string>> UpdateForecastAsync(Guid id, ForecastDto dto, 
+    Task<Response<string>> UpdateForecastAsync(Guid id, UpdateForecastDto dto, 
         CancellationToken token = default);
 
     /// <summary>

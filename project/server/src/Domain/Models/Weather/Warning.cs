@@ -25,6 +25,18 @@ public class Warning
     public string Description { get; set; }
 
     /// <summary>
+    /// Gets or sets the recommended actions for people in the affected area.
+    /// Example: "Seek shelter immediately", "Avoid outdoor activities", etc.
+    /// </summary>
+    public string RecommendedActions { get; set; }
+
+    /// <summary>
+    /// Gets or sets the status indicating if the warning is active.
+    /// Determines whether the warning is enabled for assignment or usage.
+    /// </summary>
+    public bool IsActive { get; set; }
+
+    /// <summary>
     /// Gets or sets the version GUID for optimistic concurrency control.
     /// </summary>
     public Guid Version { get; set; }

@@ -54,7 +54,8 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
         {
             new ( Name: "User", Description: "User description", Guid.Empty),
             new ( Name: "Manager", Description: "Manager description", Guid.Empty),
-            new ( Name: "Administrator", Description: "Administrator description", Guid.Empty)
+            new ( Name: "Administrator", Description: "Administrator description", Guid.Empty),
+            new ( Name: "Developer", Description: "Developer description", Guid.Empty),
         };
 
         var rolesResponse = await _roleCommands.InitializeRolesAsync(roles, token);
@@ -168,24 +169,28 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
 
         var warningDtos = new List<WarningDto>
         {
-            new ( 
+            new (
                 Name: "Extreme", 
                 Description: "This alert is given for extreme alerts. Immediate action is advised to ensure safety.",
+                RecommendedActions: "Seek shelter, follow emergency protocols, and stay tuned for official updates.",
                 Version: Guid.Empty 
             ),
-            new ( 
+            new (
                 Name: "High", 
                 Description: "This alert is given for high alerts. Be prepared for potentially hazardous conditions.",
+                RecommendedActions: "Stay alert, prepare emergency supplies, and monitor updates from authorities.",
                 Version: Guid.Empty 
             ),
-            new ( 
+            new (
                 Name: "Normal", 
                 Description: "This alert is given for normal alerts. General conditions are safe, but stay informed.",
+                RecommendedActions: "No immediate action needed. Stay updated with weather reports.",
                 Version: Guid.Empty 
             ), 
-            new ( 
+            new (
                 Name: "Low", 
                 Description: "This alert is given for low alerts. Minimal risk; no immediate action required.",
+                RecommendedActions: "Enjoy normal conditions, but remain aware of potential changes.",
                 Version: Guid.Empty 
             )
         };
@@ -315,8 +320,6 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
             forecastDtos.Add(new ForecastDto(
                 Date: date.ToUniversalTime(),
                 TemperatureC: temperature,
-                Latitude: 0.0,
-                Longitude: 0.0,
                 Summary: summary,
                 WarningId: warningId,
                 Version: Guid.Empty

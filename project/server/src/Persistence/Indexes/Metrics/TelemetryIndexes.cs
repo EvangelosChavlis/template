@@ -12,7 +12,8 @@ public class TelemetryIndexes : IEntityTypeConfiguration<Telemetry>
     public void Configure(EntityTypeBuilder<Telemetry> builder)
     {
         builder.HasIndex(t => t.Id)
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($"{nameof(Telemetry)}_{nameof(Telemetry.Id)}");
 
         builder.HasIndex(t 
             => new { 
@@ -23,6 +24,14 @@ public class TelemetryIndexes : IEntityTypeConfiguration<Telemetry>
                 t.ResponseTime,
                 t.RequestTimestamp
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"
+                {nameof(Telemetry)}_
+                {nameof(Telemetry.Id)}_
+                {nameof(Telemetry.Method)}_
+                {nameof(Telemetry.StatusCode)}_
+                {nameof(Telemetry.ResponseTime)}_
+                {nameof(Telemetry.RequestTimestamp)}
+            ".Replace("\n", "").Trim());
     }
 }

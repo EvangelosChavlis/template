@@ -26,21 +26,21 @@ public class ForecastCommands : IForecastCommands
         _deleteForecastHandler = deleteForecastHandler;
     }
 
-    public async Task<Response<string>> InitializeForecastsAsync(List<ForecastDto> dto, 
+    public async Task<Response<string>> InitializeForecastsAsync(List<CreateForecastDto> dto, 
         CancellationToken token = default)
     {
         var command = new InitializeForecastsCommand(dto);
         return await _initializeForecastsHander.Handle(command, token);
     }
 
-    public async Task<Response<string>> CreateForecastAsync(ForecastDto dto, 
+    public async Task<Response<string>> CreateForecastAsync(CreateForecastDto dto, 
         CancellationToken token = default)
     {
         var command = new CreateForecastCommand(dto);
         return await _createForecastHandler.Handle(command, token);
     }
 
-    public async Task<Response<string>> UpdateForecastAsync(Guid id, ForecastDto dto, 
+    public async Task<Response<string>> UpdateForecastAsync(Guid id, UpdateForecastDto dto, 
         CancellationToken token = default)
     {
         var command = new UpdateForecastCommand(id, dto);

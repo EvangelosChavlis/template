@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
 using server.src.Domain.Models.Auth;
-using server.src.Persistence.Extensions;
 
 namespace server.src.Persistence.Configurations.Auth;
 
@@ -15,7 +14,7 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
     
     public RoleConfiguration(string tableName, string schema)
     {
-       _tableName = PluralizedName.GetPluralizedName<Role>();
+       _tableName = tableName;
        _schema = schema;
     }
 

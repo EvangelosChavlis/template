@@ -20,7 +20,12 @@ public record ListItemForecastDto(
     Guid Id, 
     string Date, 
     int TemperatureC,
+    int Humidity,
     string Warning,
+    string MoonPhase,
+    double Longitude,
+    double Latitude,
+    double Altitude,
     bool IsRead
 );
 
@@ -32,6 +37,24 @@ public record ItemForecastDto(
     Guid Id,
     string Date,
     int TemperatureC,
+    int TemperatureF,
+    int FeelsLikeC,
+    int Humidity,
+    double WindSpeedKph,
+    int WindDirection,
+    double PressureHpa,
+    double PrecipitationMm,
+    double VisibilityKm,
+    int UVIndex,
+    int AirQualityIndex,
+    int CloudCover,
+    int LightningProbability,
+    int PollenCount,
+    TimeSpan Sunrise,
+    TimeSpan Sunset,
+    double Longitude,
+    double Latitude,
+    double Altitude,
     string Summary,
     string Warning,
     Guid Version
@@ -39,14 +62,58 @@ public record ItemForecastDto(
 
 /// <summary>
 /// Represents a forecast data transfer object containing detailed 
-/// information about the forecast's date, temperature, summary, and related warning.
+/// meteorological information, including temperature, humidity, wind, 
+/// atmospheric pressure, and related warnings.
 /// </summary>
-public record ForecastDto(
+public record CreateForecastDto(
     DateTime Date, 
     int TemperatureC,
+    int FeelsLikeC,
+    int Humidity,
+    double WindSpeedKph,
+    int WindDirection,
+    double PressureHpa,
+    double PrecipitationMm,
+    double VisibilityKm,
+    int UVIndex,
+    int AirQualityIndex,
+    int CloudCover,
+    int LightningProbability,
+    int PollenCount,
+    TimeSpan Sunrise,
+    TimeSpan Sunset,
     string Summary,
+    Guid LocationId,
     Guid WarningId,
-    Guid Version,
-    double Longitude,
-    double Latitude
+    Guid MoonPhaseId
+);
+
+
+/// <summary>
+/// Represents a forecast data transfer object containing detailed 
+/// meteorological information, including temperature, humidity, wind, 
+/// atmospheric pressure, and related warnings.
+/// </summary>
+public record UpdateForecastDto(
+    DateTime Date, 
+    int TemperatureC,
+    int FeelsLikeC,
+    int Humidity,
+    double WindSpeedKph,
+    int WindDirection,
+    double PressureHpa,
+    double PrecipitationMm,
+    double VisibilityKm,
+    int UVIndex,
+    int AirQualityIndex,
+    int CloudCover,
+    int LightningProbability,
+    int PollenCount,
+    TimeSpan Sunrise,
+    TimeSpan Sunset,
+    string Summary,
+    Guid LocationId,
+    Guid WarningId,
+    Guid MoonPhaseId,
+    Guid Version
 );

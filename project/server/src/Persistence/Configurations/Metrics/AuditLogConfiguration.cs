@@ -55,14 +55,14 @@ public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
                 .HasColumnType("jsonb");
 
         builder.HasOne(a => a.User)
-                   .WithMany(u => u.AuditLogs)
-                   .HasForeignKey(a => a.UserId)
-                   .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(u => u.AuditLogs)
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(a => a.Telemetry)
-                   .WithMany(t => t.AuditLogs)
-                   .HasForeignKey(a => a.TelemetryId)
-                   .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(t => t.AuditLogs)
+                .HasForeignKey(a => a.TelemetryId)
+                .OnDelete(DeleteBehavior.Cascade);
 
         builder.ToTable(_tableName, _schema);
     }

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 // source
 using server.src.Persistence.Configurations.Auth;
+using server.src.Persistence.Configurations.Geography;
 using server.src.Persistence.Configurations.Metrics;
 using server.src.Persistence.Configurations.Weather;
 
@@ -12,6 +13,7 @@ public static class DependencyInjection
 {
     private readonly static string _authSchema = "auth";
     private readonly static string _weatherSchema = "weather";
+    private readonly static string _geographySchema = "geography";
     private readonly static string _metricsSchema = "metrics";
 
     public static void AddConfigurations(this ModelBuilder modelBuilder)
@@ -28,6 +30,13 @@ public static class DependencyInjection
         #region Weather Configuration
         modelBuilder.ApplyConfiguration(new ForecastConfiguration("Forecasts", _weatherSchema));
         modelBuilder.ApplyConfiguration(new WarningConfiguration("Warnings", _weatherSchema));
+        #endregion
+
+        #region Geography Configuration
+        modelBuilder.ApplyConfiguration(new ClimateZoneConfiguration("ClimateZone", _geographySchema));
+        modelBuilder.ApplyConfiguration(new LocationConfiguration("Locations", _geographySchema));
+        modelBuilder.ApplyConfiguration(new TerrainTypeConfiguration("TerrainTypes", _geographySchema));
+        modelBuilder.ApplyConfiguration(new TimeZoneConfiguration("TimeZones", _geographySchema));
         #endregion
 
         #region Metrics Configuration

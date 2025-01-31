@@ -10,7 +10,7 @@ using server.src.Domain.Dto.Weather;
 
 namespace server.src.Application.Weather.Forecasts.Commands;
 
-public record InitializeForecastsCommand(List<ForecastDto> Dto) : IRequest<Response<string>>;
+public record InitializeForecastsCommand(List<CreateForecastDto> Dto) : IRequest<Response<string>>;
 
 public class InitializeForecastsHandler : IRequestHandler<InitializeForecastsCommand, Response<string>>
 {

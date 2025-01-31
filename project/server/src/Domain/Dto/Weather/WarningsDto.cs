@@ -38,5 +38,6 @@ public record ItemWarningDto(
 public record WarningDto(
     string Name,
     string Description,
+    string RecommendedActions,
     Guid Version
 );

@@ -9,12 +9,13 @@ using server.src.Application.Weather.Forecasts.Validators;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;
 using server.src.Domain.Extensions;
+using server.src.Domain.Models.Geography;
 using server.src.Domain.Models.Weather;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Weather.Forecasts.Commands;
 
-public record UpdateForecastCommand(Guid Id, ForecastDto Dto) : IRequest<Response<string>>;
+public record UpdateForecastCommand(Guid Id, UpdateForecastDto Dto) : IRequest<Response<string>>;
 
 public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Response<string>>
 {
@@ -42,6 +43,32 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
+        var forecastIncludes = new Expression<Func<Forecast, object>>[] {  };
+        var forecastFilters = new Expression<Func<Forecast, bool>>[] { x => x.Id == command.Id};
+        var forecast = await _commonRepository.GetResultByIdAsync(forecastFilters, forecastIncludes, token);
+
+        // Check for existence
+        if (forecast is null)
+        {
+            return new Response<string>()
+                .WithMessage("Error updating forecast.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(false)
+                .WithData("Forecast not found");
+        }
+            
+        // Check for concurrency issues
+        if (forecast.Version != command.Dto.Version)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Concurrency conflict.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData("The role has been modified by another user. Please try again.");
+        }
+
+        // Searching Item
         var warningIncludes = new Expression<Func<Warning, object>>[] {  };
         var warningFilters = new Expression<Func<Warning, bool>>[] { x => x.Id == command.Dto.WarningId};
         var warning = await _commonRepository.GetResultByIdAsync(warningFilters, warningIncludes, token);
@@ -58,33 +85,40 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         }
 
         // Searching Item
-        var forecastIncludes = new Expression<Func<Forecast, object>>[] {  };
-        var forecastFilters = new Expression<Func<Forecast, bool>>[] { x => x.Id == command.Id};
-        var forecast = await _commonRepository.GetResultByIdAsync(forecastFilters, forecastIncludes, token);
-
+        var locationIncludes = new Expression<Func<Location, object>>[] {  };
+        var locationFilters = new Expression<Func<Location, bool>>[] { l => l.Id == command.Dto.LocationId};
+        var location = await _commonRepository.GetResultByIdAsync(locationFilters, locationIncludes, token);
+        
         // Check for existence
-        if (forecast is null)
+        if (location is null)
         {
+            await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error updating forecast.")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData("Forecast not found");
+                .WithData("Location not found");
         }
-            
-        // Check for concurrency issues
-        if (warning.Version != command.Dto.Version)
+
+        // Searching Item
+        var moonPhaseIncludes = new Expression<Func<MoonPhase, object>>[] {  };
+        var moonPhaseFilters = new Expression<Func<MoonPhase, bool>>[] { l => l.Id == command.Dto.MoonPhaseId};
+        var moonPhase = await _commonRepository.GetResultByIdAsync(moonPhaseFilters, moonPhaseIncludes, token);
+        
+        // Check for existence
+        if (moonPhase is null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
-                .WithMessage("Concurrency conflict.")
-                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithMessage("Error updating forecast.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData("The role has been modified by another user. Please try again.");
+                .WithData("Moon phase not found");
         }
 
         // Mapping, Validating, Saving Item
-        command.Dto.UpdateForecastModelMapping(forecast, warning);
+        command.Dto.UpdateForecastModelMapping(forecast, warning, 
+            location, moonPhase);
         var modelValidationResult = ForecastValidators.Validate(forecast);
         if (!modelValidationResult.IsValid)
         {

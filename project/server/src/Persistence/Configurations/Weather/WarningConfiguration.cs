@@ -29,6 +29,12 @@ public class WarningConfiguration : IEntityTypeConfiguration<Warning>
         builder.Property(w => w.Description)
                 .HasMaxLength(500);
 
+        builder.Property(w => w.RecommendedActions)
+                .HasMaxLength(250);
+
+        builder.Property(w => w.IsActive)
+                .IsRequired();
+
         builder.HasMany(w => w.Forecasts)
                 .WithOne(wf => wf.Warning)
                 .HasForeignKey(wf => wf.WarningId)

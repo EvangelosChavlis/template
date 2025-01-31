@@ -70,6 +70,7 @@ public static class WarningsMappings
         {
             Name = dto.Name,
             Description = dto.Description,
+            IsActive = true,
             Version = Guid.NewGuid()
         };
 
