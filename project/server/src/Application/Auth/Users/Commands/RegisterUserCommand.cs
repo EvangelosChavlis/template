@@ -7,7 +7,7 @@ using server.src.Application.Auth.UserRoles.Interfaces;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Helpers;
 using server.src.Application.Interfaces;
-using server.src.Application.Auth.Users.Mappings;
+using server.src.Application.Users.Mappings;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
@@ -71,7 +71,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         // Check if user with this username already exists in the system
         if (existingUserName is not null)
         {
-await _unitOfWork.RollbackTransactionAsync(token);            
+            await _unitOfWork.RollbackTransactionAsync(token);            
             return new Response<string>()
                 .WithMessage("Error creating user.")
                 .WithStatusCode((int)HttpStatusCode.BadRequest)

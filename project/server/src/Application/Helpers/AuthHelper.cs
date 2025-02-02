@@ -21,20 +21,28 @@ public class AuthHelper : IAuthHelper
     private readonly JwtSettings _jwtSettings;
     private readonly ICommonRepository _commonRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly RSA _privateRsa;
+    private readonly RSA _publicRsa;
     
     public AuthHelper(DataContext context, JwtSettings jwtSettings, 
         ICommonRepository commonRepository, IUnitOfWork unitOfWork)
     {
-            
         _context = context;
         _jwtSettings = jwtSettings;
         _commonRepository = commonRepository;
         _unitOfWork = unitOfWork;
+
+        // Load RSA keys from the settings
+        _privateRsa = RSA.Create();
+        _privateRsa.ImportFromPem(_jwtSettings.PrivateKey.ToCharArray());
+
+        _publicRsa = RSA.Create();
+        _publicRsa.ImportFromPem(_jwtSettings.PublicKey.ToCharArray());
     }
 
     public async Task<Response<string>> GenerateJwtToken(User user, CancellationToken token = default)
     {
-        //Begin Transaction
+        // Begin Transaction
         await _unitOfWork.BeginTransactionAsync(token);
         
         var roles = await _context.Roles
@@ -42,30 +50,29 @@ public class AuthHelper : IAuthHelper
             .Where(r => r.UserRoles.Any(ur => ur.UserId == user.Id))
             .ToListAsync(token);
 
-        // Define claims, including role claims
+        // Define claims
         var claims = new List<Claim>
         {
-            new(ClaimTypes.NameIdentifier, user.Id.ToString()),   // User ID
-            new(ClaimTypes.Name, user.UserName!),                  // User Name
-            new(JwtRegisteredClaimNames.Sub, user.Email!),         // Email
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()), // JWT ID (unique identifier)
+            new(ClaimTypes.NameIdentifier, user.Id.ToString()),  // User ID
+            new(ClaimTypes.Name, user.UserName!),                 // User Name
+            new(JwtRegisteredClaimNames.Sub, user.Email!),        // Email
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()), // JWT ID
             new("SecurityStamp", user.SecurityStamp)
         };
 
-        // Add role claims
         claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role.Name!)));
 
-        // Create signing credentials using JwtSettings
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        // Signing using RSA private key
+        var signingKey = new RsaSecurityKey(_privateRsa);
+        var creds = new SigningCredentials(signingKey, SecurityAlgorithms.RsaSha256);
 
-        // Generate the JWT Token
         var authToken = new JwtSecurityToken(
             issuer: _jwtSettings.Issuer,
             audience: _jwtSettings.Audience,
             claims: claims,
             expires: DateTime.Now.AddMinutes(30).ToUniversalTime(),
-            signingCredentials: creds);
+            signingCredentials: creds
+        );
 
         var jwtToken = new JwtSecurityTokenHandler().WriteToken(authToken);
 
@@ -89,20 +96,18 @@ public class AuthHelper : IAuthHelper
                 .WithMessage("Error in persisting user claims.")
                 .WithSuccess(result)
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithData("The prodution of token failed");
+                .WithData("The production of token failed");
         }
 
         // Commit Transaction
         await _unitOfWork.CommitTransactionAsync(token);
 
-        // Initializing object
         return new Response<string>()
             .WithMessage("Success in creating token.")
             .WithStatusCode((int)HttpStatusCode.Created)
             .WithSuccess(result)
             .WithData(jwtToken);
     }
-
 
     public ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
     {
@@ -111,7 +116,7 @@ public class AuthHelper : IAuthHelper
             ValidateAudience = false,
             ValidateIssuer = false,
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key)),
+            IssuerSigningKey = new RsaSecurityKey(_publicRsa),
             ValidateLifetime = false
         };
 
@@ -119,7 +124,7 @@ public class AuthHelper : IAuthHelper
         var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out var securityToken);
 
         if (!(securityToken is JwtSecurityToken jwtSecurityToken) ||
-            !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+            !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.RsaSha256, StringComparison.InvariantCultureIgnoreCase))
         {
             throw new SecurityTokenException("Invalid token");
         }
@@ -129,7 +134,7 @@ public class AuthHelper : IAuthHelper
 
     public string HashPassword(string password)
     {
-        var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
+        var key = Encoding.UTF8.GetBytes(_jwtSettings.PasswordKey);
 
         // Generate a cryptographically secure salt (64 bytes)
         var saltBytes = new byte[64];
@@ -153,7 +158,6 @@ public class AuthHelper : IAuthHelper
                 var extendedHashBytes = hmacWithSalt.ComputeHash(passwordBytes.Concat(saltBytes).ToArray());
 
                 // Combine the salt and the extended hash into a single string for storage
-                // Format: "{salt}:{hash}"
                 var passwordHashed = $"{salt}:{Convert.ToBase64String(extendedHashBytes)}";
 
                 return passwordHashed;
@@ -161,6 +165,40 @@ public class AuthHelper : IAuthHelper
         }
     }
 
+    public string HashSensitiveData(string data)
+    {
+        var key = Encoding.UTF8.GetBytes(_jwtSettings.PasswordKey);
+
+        // Generate a cryptographically secure salt (64 bytes)
+        var saltBytes = new byte[64];
+        var rng = RandomNumberGenerator.Create();
+        rng.GetBytes(saltBytes);
+
+        // Output the salt as a Base64 string
+        var salt = Convert.ToBase64String(saltBytes);
+
+        // Create an HMACSHA256 instance with the retrieved key
+        using (var hmac = new HMACSHA256(key))
+        {
+            // Compute the hash of the data with the salt
+            var dataBytes = Encoding.UTF8.GetBytes(data);
+            var hashBytes = hmac.ComputeHash(dataBytes);
+
+            // Optionally, generate a longer hash by using the salt in combination with the password
+            // Creating a new HMACSHA256 instance to use the combined password and salt as input for hashing
+            using (var hmacWithSalt = new HMACSHA256(key))
+            {
+                var extendedHashBytes = hmacWithSalt.ComputeHash(dataBytes.Concat(saltBytes).ToArray());
+
+                // Combine the salt and the extended hash into a single string for storage
+                var dataHashed = $"{salt}:{Convert.ToBase64String(extendedHashBytes)}";
+
+                return dataHashed;
+            }
+        }
+    }
+
+    // Verify the password against the stored hash
     public bool VerifyPassword(string password, string storedPasswordHash)
     {
         var parts = storedPasswordHash.Split(':');
@@ -170,16 +208,36 @@ public class AuthHelper : IAuthHelper
         var salt = Convert.FromBase64String(parts[0]);
         var storedHash = Convert.FromBase64String(parts[1]);
 
-        var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
+        var key = Encoding.UTF8.GetBytes(_jwtSettings.PasswordKey);
 
         // Recompute the HMACSHA256 hash with the provided password and the stored salt
         using (var hmacWithSalt = new HMACSHA256(key))
         {
-            // Compute the hash of the password combined with the salt
             var passwordBytes = Encoding.UTF8.GetBytes(password);
             var computedHash = hmacWithSalt.ComputeHash(passwordBytes.Concat(salt).ToArray());
 
-            // Compare the computed hash with the stored hash
+            return computedHash.SequenceEqual(storedHash); // Returns true if the hashes match
+        }
+    }
+
+    // Verify the password against the stored hash
+    public bool VerifySensitiveData(string data, string storedDataHash)
+    {
+        var parts = storedDataHash.Split(':');
+        if (parts.Length != 2)
+            return false;
+
+        var salt = Convert.FromBase64String(parts[0]);
+        var storedHash = Convert.FromBase64String(parts[1]);
+
+        var key = Encoding.UTF8.GetBytes(_jwtSettings.PasswordKey);
+
+        // Recompute the HMACSHA256 hash with the provided password and the stored salt
+        using (var hmacWithSalt = new HMACSHA256(key))
+        {
+            var dataBytes = Encoding.UTF8.GetBytes(data);
+            var computedHash = hmacWithSalt.ComputeHash(dataBytes.Concat(salt).ToArray());
+
             return computedHash.SequenceEqual(storedHash); // Returns true if the hashes match
         }
     }
