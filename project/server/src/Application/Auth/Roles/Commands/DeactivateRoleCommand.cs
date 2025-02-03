@@ -4,7 +4,9 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Roles.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
@@ -27,7 +29,7 @@ public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Resp
     public async Task<Response<string>> Handle(DeactivateRoleCommand command, CancellationToken token = default)
     {
         // Id Validation
-        var idValidationResult = RoleValidators.Validate(command.Id);
+        var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -36,7 +38,7 @@ public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Resp
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = RoleValidators.Validate(command.Version);
+        var versionValidationResult = command.Version.ValidateId();
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -98,8 +100,20 @@ public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Resp
                 .WithData("The role is assigned to active users and cannot be deactivated.");
         }
             
-        // Saving Item
+        // Validating, Saving Item
         role.IsActive = false;
+        role.Version = Guid.NewGuid();
+
+        var modelValidationResult = role.Validate();
+        if (!modelValidationResult.IsValid)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity validation failed.")
+                .WithStatusCode((int)HttpStatusCode.BadRequest)
+                .WithSuccess(modelValidationResult.IsValid)
+                .WithData(string.Join("\n", modelValidationResult.Errors));
+        }
         var result = await _commonRepository.UpdateAsync(role, token);
 
         // Saving failed

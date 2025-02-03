@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Mappings;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;

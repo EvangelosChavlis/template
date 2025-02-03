@@ -4,11 +4,11 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Roles.Mappings;
-using server.src.Application.Auth.Roles.Validators;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
@@ -27,12 +27,12 @@ public class GetRoleByIdHandler : IRequestHandler<GetRoleByIdQuery, Response<Ite
     public async Task<Response<ItemRoleDto>> Handle(GetRoleByIdQuery query, CancellationToken token = default)
     {
         // Validation
-        var validationResult = RoleValidators.Validate(query.Id);
+        var validationResult = query.Id.ValidateId();
         if (!validationResult.IsValid)
             return new Response<ItemRoleDto>()
                 .WithMessage(string.Join("\n", validationResult.Errors))
                 .WithSuccess(validationResult.IsValid)
-                .WithData(RoleMappings.ErrorItemRoleDtoMapping());
+                .WithData(ErrorItemRoleDtoMapper.ErrorItemRoleDtoMapping());
 
         // Searching Item
         var includes = new Expression<Func<Role, object>>[] { };
@@ -45,7 +45,7 @@ public class GetRoleByIdHandler : IRequestHandler<GetRoleByIdQuery, Response<Ite
                 .WithMessage("Role not found.")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData(RoleMappings.ErrorItemRoleDtoMapping());
+                .WithData(ErrorItemRoleDtoMapper.ErrorItemRoleDtoMapping());
 
         // Mapping
         var dto = role.ItemRoleDtoMapping();

@@ -76,6 +76,16 @@ public interface ICommonRepository
         where T : class;
 
     /// <summary>
+    /// Adds multiple entities to the database in a single operation.
+    /// </summary>
+    /// <typeparam name="T">The type of entities to add.</typeparam>
+    /// <param name="entities">A list of entities to be added.</param>
+    /// <param name="token">Cancellation token to allow the operation to be canceled.</param>
+    /// <returns>A task representing the asynchronous operation. The task result indicates whether the operation was successful.</returns>
+    Task<bool> AddRangeAsync<T>(List<T> entities, CancellationToken token = default) 
+        where T : class;
+
+    /// <summary>
     /// Updates an existing entity in the database.
     /// </summary>
     /// <typeparam name="T">The type of entity to update.</typeparam>

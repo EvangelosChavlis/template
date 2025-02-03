@@ -20,6 +20,16 @@ public static class DateTimeExtensions
     }
 
     /// <summary>
+    /// Converts a nullable DateTime to a string suitable for encryption (format: "yyyy-MM-ddTHH:mm:ss").
+    /// </summary>
+    /// <param name="d">The nullable DateTime to format.</param>
+    /// <returns>A formatted string representing the local date and time for encryption.</returns>
+    public static string GetDateTimeForEncryptionString(this DateTime? d)
+    {
+        return d?.ToLocalTime().ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture)!;
+    }
+
+    /// <summary>
     /// Converts a nullable DateTime to local time and formats it as "dd/MM/yyyy".
     /// </summary>
     /// <param name="d">The nullable DateTime to format.</param>
@@ -59,8 +69,6 @@ public static class DateTimeExtensions
         return d?.ToLocalTime().ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)!;
     }
 
-    // Non-nullable DateTime versions of the same methods
-
     /// <summary>
     /// Converts a DateTime to local time and formats it as "dd/MM/yyyy HH:mm".
     /// </summary>
@@ -69,6 +77,16 @@ public static class DateTimeExtensions
     public static string GetLocalDateTimeString(this DateTime d)
     {
         return d.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+    }
+
+    /// <summary>
+    /// Converts a DateTime to a string suitable for encryption (format: "yyyy-MM-ddTHH:mm:ss").
+    /// </summary>
+    /// <param name="d">The DateTime to format.</param>
+    /// <returns>A formatted string representing the local date and time for encryption.</returns>
+    public static string GetDateTimeForEncryptionString(this DateTime d)
+    {
+        return d.ToLocalTime().ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture)!;
     }
 
     /// <summary>

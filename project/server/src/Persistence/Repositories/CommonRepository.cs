@@ -4,9 +4,9 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 
 // source
-using server.src.Application.Helpers;
 using server.src.Domain.Models.Common;
 using server.src.Persistence.Contexts;
+using server.src.Persistence.Helpers;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Persistence.Repositories;
@@ -179,6 +179,26 @@ public class CommonRepository : ICommonRepository
 
         return result;
     }
+
+    public async Task<bool> AddRangeAsync<T>(List<T> entities, CancellationToken token = default) 
+        where T : class
+    {
+        if (entities is null || entities.Count is 0) 
+            return false;
+
+        await _context.Set<T>().AddRangeAsync(entities, token);
+        
+        var result = await _unitOfWork.CommitAsync(token);
+
+        if (result)
+        {
+            foreach (var entity in entities)
+                await _auditLogHelper.CreateAuditLogAsync(null, entity, token);
+        }
+
+        return result;
+    }
+
 
     public async Task<bool> UpdateAsync<T>(T entity, CancellationToken token = default) 
         where T : class

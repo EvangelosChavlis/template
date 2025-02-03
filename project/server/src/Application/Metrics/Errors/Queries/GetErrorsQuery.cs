@@ -6,7 +6,7 @@ using System.Net;
 using server.src.Application.Metrics.Errors.Filters;
 using server.src.Application.Metrics.Errors.Includes;
 using server.src.Application.Metrics.Errors.Mappings;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Metrics;
 using server.src.Domain.Models.Common;

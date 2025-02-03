@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 // source
 using server.src.Application.Auth.Telemetry.Interfaces;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Metrics.Telemetry.Queries;
 using server.src.Application.Telemetry.Services;
 using server.src.Domain.Dto.Common;

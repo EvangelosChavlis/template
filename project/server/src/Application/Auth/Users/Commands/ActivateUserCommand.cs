@@ -4,7 +4,7 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
@@ -87,6 +87,7 @@ public class ActivateUserHandler : IRequestHandler<ActivateUserCommand, Response
             
         // Validating, Saving Item
         user.IsActive = true;
+        user.Version = Guid.NewGuid();
         var modelValidationResult = UserValidators.Validate(user);
         if (!modelValidationResult.IsValid)
         {

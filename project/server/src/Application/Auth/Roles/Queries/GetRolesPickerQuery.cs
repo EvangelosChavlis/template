@@ -4,10 +4,10 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Roles.Mappings;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
@@ -30,7 +30,7 @@ public class GetRolesPickerHandler : IRequestHandler<GetRolesPickerQuery, Respon
         var roles = await _commonRepository.GetResultPickerAsync(filters, token);
 
         // Mapping
-        var dto = roles.Select(o => o.PickerRoleDtoMapping()).ToList();
+        var dto = roles.Select(r => r.PickerRoleDtoMapping()).ToList();
 
         // Determine if the operation was successful
         var success = dto.Count > 0;

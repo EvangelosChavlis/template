@@ -4,7 +4,7 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
@@ -91,6 +91,7 @@ public class Verify2FAHandler : IRequestHandler<Verify2FACommand, Response<strin
         user.TwoFactorEnabled = true;
         user.TwoFactorToken = string.Empty;
         user.TwoFactorTokenExpiry = null;
+        user.Version = Guid.NewGuid();
 
         // Validating, Saving Item
         var modelValidationResult = UserValidators.Validate(user);
@@ -127,4 +128,3 @@ public class Verify2FAHandler : IRequestHandler<Verify2FACommand, Response<strin
             .WithData("2FA verified successfully.");
     }
 }
-    

@@ -1,4 +1,4 @@
-namespace server.src.Application.Interfaces;
+namespace server.src.Application.Common.Interfaces;
 
 /// <summary>
 /// Handles requests and returns a response.

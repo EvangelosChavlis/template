@@ -3,7 +3,7 @@ using System.Net;
 using System.Text;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;

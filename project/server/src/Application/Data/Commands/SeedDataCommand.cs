@@ -7,7 +7,7 @@ using Bogus;
 using server.src.Application.Auth.Roles.Interfaces;
 using server.src.Application.Auth.Users.Interfaces;
 using server.src.Application.Helpers;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Interfaces;
 using server.src.Application.Weather.Warnings.Interfaces;
 using server.src.Domain.Dto.Auth;

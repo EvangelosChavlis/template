@@ -5,15 +5,16 @@ using System.Net;
 // source
 using server.src.Application.Auth.Roles.Mappings;
 using server.src.Application.Auth.Roles.Validators;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
-public record UpdateRoleCommand(Guid Id, RoleDto Dto) : IRequest<Response<string>>;
+public record UpdateRoleCommand(Guid Id, UpdateRoleDto Dto) : IRequest<Response<string>>;
 
 public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<string>>
 {
@@ -28,14 +29,23 @@ public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<str
 
     public async Task<Response<string>> Handle(UpdateRoleCommand command, CancellationToken token = default)
     {
-        // Validation
-        var validationResult = RoleValidators.Validate(command.Dto);
-        if (!validationResult.IsValid)
+        // Id Validation
+        var idValidationResult = command.Id.ValidateId();
+        if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
                 .WithStatusCode((int)HttpStatusCode.BadRequest)
-                .WithSuccess(validationResult.IsValid)
-                .WithData(string.Join("\n", validationResult.Errors));
+                .WithSuccess(idValidationResult.IsValid)
+                .WithData(string.Join("\n", idValidationResult.Errors));
+
+        // Validation
+        var dtoValidationResult = command.Dto.Validate();
+        if (!dtoValidationResult.IsValid)
+            return new Response<string>()
+                .WithMessage("Validation failed.")
+                .WithStatusCode((int)HttpStatusCode.BadRequest)
+                .WithSuccess(dtoValidationResult.IsValid)
+                .WithData(string.Join("\n", dtoValidationResult.Errors));
 
         // Begin Transaction
         await _unitOfWork.BeginTransactionAsync(token);
@@ -80,7 +90,7 @@ public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<str
             
         // Mapping, Validating, Saving Item
         command.Dto.UpdateRoleModelMapping(role);
-        var modelValidationResult = RoleValidators.Validate(role);
+        var modelValidationResult = role.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

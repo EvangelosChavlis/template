@@ -7,7 +7,7 @@ using server.src.Application.Auth.UserLogouts.Commands;
 using server.src.Application.Auth.UserLogouts.Interfaces;
 using server.src.Application.Auth.UserLogouts.Queries;
 using server.src.Application.Auth.UserLogouts.Services;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 

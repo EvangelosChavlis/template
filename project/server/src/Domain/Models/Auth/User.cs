@@ -180,7 +180,7 @@ public class User
     /// <summary>
     /// Gets or sets the user's date of birth.
     /// </summary>
-    public DateTime DateOfBirth { get; set; }
+    public string DateOfBirth { get; set; }
 
     #endregion
 

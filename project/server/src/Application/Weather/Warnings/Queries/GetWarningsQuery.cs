@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Warnings.Filters;
 using server.src.Application.Weather.Warnings.Mappings;
 using server.src.Domain.Dto.Common;

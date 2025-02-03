@@ -4,8 +4,7 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Helpers;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
@@ -19,14 +18,15 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
 {
     private readonly ICommonRepository _commonRepository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IAuthHelper _authHelper;
+    private readonly ICommonQueries _commonQueries;
 
     public ResetPasswordHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork, 
-        IAuthHelper authHelper)
+        ICommonQueries commonQueries)
     {
         _commonRepository = commonRepository;
         _unitOfWork = unitOfWork;
-        _authHelper = authHelper;
+        _commonQueries = commonQueries;
+       
     }
 
     public async Task<Response<string>> Handle(ResetPasswordCommand command, CancellationToken token = default)
@@ -121,9 +121,10 @@ public class ResetPasswordHandler : IRequestHandler<ResetPasswordCommand, Respon
             
 
         // Reset password logic
-        user.PasswordHash = _authHelper.HashPassword(command.Dto.NewPassword);
+        user.PasswordHash = await _commonQueries.HashPassword(command.Dto.NewPassword, token);
         user.PasswordResetToken = string.Empty;
         user.PasswordResetTokenExpiry = null;
+        user.Version = Guid.NewGuid();
 
         // Validating, Saving Item
         var modelValidationResult = UserValidators.Validate(user);

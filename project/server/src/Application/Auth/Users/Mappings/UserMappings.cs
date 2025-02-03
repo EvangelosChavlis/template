@@ -94,23 +94,27 @@ public static class UserMappings
 
 
     /// <summary>
-    /// Maps a UserDto to a new User model, typically for user creation.
+    /// Maps a <see cref="UserDto"/> and an <see cref="EncryptedUserDto"/> to a new <see cref="User"/> model,
+    /// typically for user creation.
     /// </summary>
-    /// <param name="dto">The UserDto containing data for creating the User model.</param>
-    /// <param name="registered">Flag indicating if the user is registered (determines the initial password).</param>
-    /// <param name="passwordHash">The hashed password for the user.</param>
-    /// <returns>A User model populated with data from the UserDto.</returns>
-    public static User CreateUserModelMapping(this UserDto dto, bool registered, string passwordHash) => new()
+    /// <param name="userDto">The <see cref="CreateUserDto"/> containing unencrypted user data.</param>
+    /// <param name="registered">
+    /// A flag indicating whether the user is registered. If true, the initial password is set from registration;
+    /// otherwise, it uses the provided password from <paramref name="userDto"/>.
+    /// </param>
+    /// <param name="encryptedUserDto">The <see cref="EncryptedUserDto"/> containing encrypted user details.</param>
+    /// <returns>A new <see cref="User"/> model populated with data from the provided DTOs.</returns>
+    public static User CreateUserModelMapping(this CreateUserDto userDto, bool registered, 
+        EncryptedUserDto encryptedUserDto) 
+    => new()
     {
         // Authentication Information
-        UserName = dto.UserName,
-        NormalizedUserName = dto.UserName.ToUpperInvariant(),
-        Email = dto.Email,
-        NormalizedEmail = dto.Email.ToUpperInvariant(),
-        PasswordHash = passwordHash,
+        UserName = userDto.UserName,
+        NormalizedUserName = userDto.UserName.ToUpperInvariant(),
+        Email = encryptedUserDto.EmailEncrypted,
+        NormalizedEmail = encryptedUserDto.NormalizedEmailEncrypted,
+        PasswordHash = encryptedUserDto.PasswordHash,
         EmailConfirmed = false,
-        PhoneNumber = dto.PhoneNumber,
-        PhoneNumberConfirmed = false,
         TwoFactorEnabled = false,
         LockoutEnabled = false,
         AccessFailedCount = 0,
@@ -119,25 +123,28 @@ public static class UserMappings
         LockoutEnd = null,
 
         // Personal Information
-        FirstName = dto.FirstName,
-        LastName = dto.LastName,
-        InitialPassword = registered ? "from registration" : dto.Password,
+        FirstName = encryptedUserDto.FirstNameEncrypted,
+        LastName = encryptedUserDto.LastNameEncrypted,
+        InitialPassword = registered ? "from registration" : userDto.Password,
 
         // Contact Information
-        Address = dto.Address,
-        ZipCode = dto.ZipCode,
-        City = dto.City,
-        State = dto.State,
-        Country = dto.Country,
-        MobilePhoneNumber = dto.MobilePhoneNumber,
+        Address = encryptedUserDto.AddressEncrypted,
+        ZipCode = encryptedUserDto.ZipCodeEncrypted,
+        City = userDto.City,
+        State = userDto.State,
+        Country = userDto.Country,
+        PhoneNumber = encryptedUserDto.PhoneNumberEncrypted,
+        PhoneNumberConfirmed = false,
+        MobilePhoneNumber = encryptedUserDto.MobilePhoneNumberEncrypted,
         MobilePhoneNumberConfirmed = false,
 
         // Profile Information
-        Bio = dto.Bio,
-        DateOfBirth = dto.DateOfBirth,
+        Bio = encryptedUserDto.BioEncrypted,
+        DateOfBirth = encryptedUserDto.DateOfBirthEncrypted,
 
         // System Information
         IsActive = true,
+        Version = Guid.NewGuid()
     };
 
     /// <summary>
@@ -145,7 +152,7 @@ public static class UserMappings
     /// </summary>
     /// <param name="dto">The UserDto containing updated data.</param>
     /// <param name="model">The User model to be updated.</param>
-    public static void UpdateUserModelMapping(this UserDto dto, User model)
+    public static void UpdateUserModelMapping(this UpdateUserDto dto, User model)
     {
         model.FirstName = dto.FirstName;
         model.LastName = dto.LastName;

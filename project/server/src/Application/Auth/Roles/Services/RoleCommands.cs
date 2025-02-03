@@ -1,7 +1,8 @@
 // source
 using server.src.Application.Auth.Roles.Commands;
 using server.src.Application.Auth.Roles.Interfaces;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 
@@ -32,21 +33,21 @@ public class RoleCommands : IRoleCommands
         _deleteRoleHandler = deleteRoleHandler;
     }
 
-    public async Task<Response<string>> InitializeRolesAsync(List<RoleDto> dto, 
+    public async Task<Response<string>> InitializeRolesAsync(List<CreateRoleDto> dto, 
         CancellationToken token = default)
     {
         var command = new InitializeRolesCommand(dto);
         return await _initializeRolesHander.Handle(command, token);
     }
 
-    public async Task<Response<string>> CreateRoleAsync(RoleDto dto, 
+    public async Task<Response<string>> CreateRoleAsync(CreateRoleDto dto, 
         CancellationToken token = default)
     {
         var command = new CreateRoleCommand(dto);
         return await _createRoleHandler.Handle(command, token);
     }
 
-    public async Task<Response<string>> UpdateRoleAsync(Guid id, RoleDto dto, 
+    public async Task<Response<string>> UpdateRoleAsync(Guid id, UpdateRoleDto dto, 
         CancellationToken token = default)
     {
         var command = new UpdateRoleCommand(id, dto);

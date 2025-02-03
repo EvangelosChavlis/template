@@ -5,15 +5,15 @@ using System.Net;
 // source
 using server.src.Application.Auth.Roles.Mappings;
 using server.src.Application.Auth.Roles.Validators;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
-public record CreateRoleCommand(RoleDto Dto) : IRequest<Response<string>>;
+public record CreateRoleCommand(CreateRoleDto Dto) : IRequest<Response<string>>;
 
 public class CreateRoleHandler : IRequestHandler<CreateRoleCommand, Response<string>>
 {
@@ -29,7 +29,7 @@ public class CreateRoleHandler : IRequestHandler<CreateRoleCommand, Response<str
     public async Task<Response<string>> Handle(CreateRoleCommand command, CancellationToken token = default)
     {
         // Dto Validation
-        var dtoValidationResult = RoleValidators.Validate(command.Dto);
+        var dtoValidationResult = command.Dto.Validate();
         if (!dtoValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -58,7 +58,7 @@ public class CreateRoleHandler : IRequestHandler<CreateRoleCommand, Response<str
 
         // Mapping, Validating, Saving Item
         var role = command.Dto.CreateRoleModelMapping();
-        var modelValidationResult = RoleValidators.Validate(role);
+        var modelValidationResult = role.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

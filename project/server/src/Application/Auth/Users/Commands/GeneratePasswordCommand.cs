@@ -5,11 +5,9 @@ using server.src.Application.Auth.Users.Validators;
 
 
 // source
-using server.src.Application.Helpers;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
-using server.src.Persistence.Contexts;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
@@ -20,14 +18,14 @@ public class GeneratePasswordHandler : IRequestHandler<GeneratePasswordCommand, 
 {
     private readonly ICommonRepository _commonRepository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IAuthHelper _authHelper;
+    private readonly ICommonQueries _commonQueries;
     
     public GeneratePasswordHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork, 
-        IAuthHelper authHelper)
+        ICommonQueries commonQueries)
     {
         _commonRepository = commonRepository;
         _unitOfWork = unitOfWork;
-        _authHelper = authHelper;
+        _commonQueries = commonQueries;
     }
 
     public async Task<Response<string>> Handle(GeneratePasswordCommand command, CancellationToken token = default)
@@ -93,8 +91,9 @@ public class GeneratePasswordHandler : IRequestHandler<GeneratePasswordCommand, 
             
 
         // Generate new password
-        var newPassword = _authHelper.GeneratePassword(12);
-        user.PasswordHash = _authHelper.HashPassword(newPassword);
+        var newPassword = await _commonQueries.GeneratePassword(12, token);
+        user.PasswordHash = await _commonQueries.HashPassword(newPassword, token);
+        user.Version = Guid.NewGuid();
 
         // Validating, Saving Item
         var modelValidationResult = UserValidators.Validate(user);

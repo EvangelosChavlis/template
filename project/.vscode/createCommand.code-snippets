@@ -9,7 +9,7 @@
         "// source",
         "using server.src.Application.${Entity}s.Mappings;",
         "using server.src.Application.${Entity}s.Validators;",
-        "using server.src.Application.Interfaces;",
+        "using server.src.Application.Common.Interfaces;",
         "using server.src.Domain.Dto.Common;",
         "using server.src.Persistence.Interfaces;",
         "",

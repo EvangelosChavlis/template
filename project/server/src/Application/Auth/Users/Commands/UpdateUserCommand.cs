@@ -4,7 +4,7 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
@@ -13,7 +13,7 @@ using server.src.Application.Users.Mappings;
 
 namespace server.src.Application.Auth.Users.Commands;
 
-public record UpdateUserCommand(Guid Id, UserDto Dto) : IRequest<Response<string>>;
+public record UpdateUserCommand(Guid Id, UpdateUserDto Dto) : IRequest<Response<string>>;
 
 public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<string>>
 {

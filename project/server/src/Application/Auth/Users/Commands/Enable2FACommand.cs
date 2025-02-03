@@ -4,7 +4,7 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
@@ -101,6 +101,7 @@ public class Enable2FAHandler : IRequestHandler<Enable2FACommand, Response<strin
         var twoFactorToken = Guid.NewGuid().ToString().Substring(0, 6); // Example: a 6-digit token
         user.TwoFactorToken = twoFactorToken;
         user.TwoFactorTokenExpiry = DateTime.UtcNow.AddMinutes(10);
+        user.Version = Guid.NewGuid();
 
         // Validating, Saving Item
         var modelValidationResult = UserValidators.Validate(user);

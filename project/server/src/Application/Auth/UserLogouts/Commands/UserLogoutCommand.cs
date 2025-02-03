@@ -6,7 +6,7 @@ using System.Net;
 using server.src.Application.Auth.Roles.Validators;
 using server.src.Application.Auth.UserLogouts.Mappings;
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;

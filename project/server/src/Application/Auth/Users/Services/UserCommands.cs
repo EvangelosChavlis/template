@@ -1,7 +1,7 @@
 // source
 using server.src.Application.Auth.Users.Commands;
 using server.src.Application.Auth.Users.Interfaces;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 
@@ -64,21 +64,21 @@ public class UserCommands : IUserCommands
         _deleteUserHandler = deleteUserHandler;
     }
 
-    public async Task<Response<string>> InitializeUsersAsync(List<UserDto> dto, 
+    public async Task<Response<string>> InitializeUsersAsync(List<CreateUserDto> dto, 
         CancellationToken token = default)
     {
         var command = new InitializeUsersCommand(dto);
         return await _initializeUsersHander.Handle(command, token);
     }
 
-    public async Task<Response<string>> RegisterUserAsync(UserDto dto, bool registered,
+    public async Task<Response<string>> RegisterUserAsync(CreateUserDto dto, bool registered,
         CancellationToken token = default)
     {
         var command = new RegisterUserCommand(dto, registered);
         return await _registerUserHandler.Handle(command, token);
     }
 
-    public async Task<Response<string>> UpdateUserAsync(Guid id, UserDto dto, 
+    public async Task<Response<string>> UpdateUserAsync(Guid id, UpdateUserDto dto, 
         CancellationToken token = default)
     {
         var command = new UpdateUserCommand(id, dto);

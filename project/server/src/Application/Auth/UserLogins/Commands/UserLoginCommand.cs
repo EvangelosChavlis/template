@@ -6,8 +6,7 @@ using System.Net;
 using server.src.Application.Auth.Roles.Validators;
 using server.src.Application.Auth.UserLogins.Mappings;
 using server.src.Application.Auth.Users.Validators;
-using server.src.Application.Helpers;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
@@ -21,14 +20,16 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
 {
     private readonly ICommonRepository _commonRepository;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IAuthHelper _authHelper;
+    private readonly ICommonQueries _commonQueries;
+    private readonly ICommonCommands _commonCommands;
 
-    public UserLoginHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork,
-        IAuthHelper authHelper)
+    public UserLoginHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork, 
+        ICommonQueries commonQueries, ICommonCommands commonCommands)
     {
         _commonRepository = commonRepository;
         _unitOfWork = unitOfWork;
-        _authHelper = authHelper;
+        _commonQueries = commonQueries;
+        _commonCommands = commonCommands;
     }
 
     public async Task<Response<AuthenticatedUserDto>> Handle(UserLoginCommand command, CancellationToken token = default)
@@ -84,7 +85,7 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
                 .WithData(new AuthenticatedUserDto("", ""));
         }
 
-        var checkPassword = _authHelper.VerifyPassword(command.Dto.Password, user.PasswordHash);
+        var checkPassword = await _commonQueries.VerifyPassword(command.Dto.Password, user.PasswordHash, token);
 
         if (!checkPassword)
         {
@@ -200,7 +201,8 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
 
             
         // Generate JWT token
-        var authToken = await _authHelper.GenerateJwtToken(user, token);
+        var authToken = await _commonCommands.GenerateJwtToken(user.Id, user.UserName, 
+            user.Email, user.SecurityStamp, token);
 
         // Generating failed
         if (!authToken.Success)

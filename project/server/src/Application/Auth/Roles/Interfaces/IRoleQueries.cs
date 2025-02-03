@@ -1,5 +1,5 @@
 // source
-using server.src.Domain.Dto.Auth;
+using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Common;
 
@@ -16,7 +16,7 @@ public interface IRoleQueries
     /// <param name="urlQuery">Query parameters for filtering and pagination.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A list response containing roles.</returns>
-    Task<ListResponse<List<ItemRoleDto>>> GetRolesAsync(UrlQuery urlQuery, 
+    Task<ListResponse<List<ListItemRoleDto>>> GetRolesAsync(UrlQuery urlQuery, 
         CancellationToken token = default);
 
     /// <summary>

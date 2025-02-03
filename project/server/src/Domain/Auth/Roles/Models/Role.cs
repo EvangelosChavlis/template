@@ -1,4 +1,4 @@
-namespace server.src.Domain.Models.Auth;
+namespace server.src.Domain.Auth.Roles.Models;
 
 /// <summary>
 /// Represents a role in the authentication system.

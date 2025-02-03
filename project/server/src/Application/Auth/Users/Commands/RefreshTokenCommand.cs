@@ -4,8 +4,7 @@ using System.Net;
 using System.Security.Claims;
 
 // source
-using server.src.Application.Helpers;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
@@ -17,18 +16,21 @@ public record RefreshTokenCommand(string AuthToken) : IRequest<Response<string>>
 public class RefreshTokenHandler : IRequestHandler<RefreshTokenCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
-    private readonly IAuthHelper _authHelper;
+    private readonly ICommonQueries _commonQueries;
+    private readonly ICommonCommands _commonCommands;
 
-    public RefreshTokenHandler(ICommonRepository commonRepository, IAuthHelper authHelper)
+    public RefreshTokenHandler(ICommonRepository commonRepository, ICommonQueries commonQueries,
+        ICommonCommands commonCommands)
     {
         _commonRepository = commonRepository;
-        _authHelper = authHelper;
+        _commonQueries = commonQueries;
+        _commonCommands = commonCommands;
     }
 
     public async Task<Response<string>> Handle(RefreshTokenCommand command, CancellationToken token = default)
     {
         // Implementation for refreshing JWT token
-        var principal = _authHelper.GetPrincipalFromExpiredToken(command.AuthToken);
+        var principal = await _commonQueries.GetPrincipalFromExpiredToken(command.AuthToken, token);
         if (principal is null)
             return new Response<string>()
                 .WithMessage("Error in refreshing token.")
@@ -62,7 +64,8 @@ public class RefreshTokenHandler : IRequestHandler<RefreshTokenCommand, Response
                 .WithData("User not found.");
 
         // Generating Token
-        var newToken = await _authHelper.GenerateJwtToken(user, token);
+        var newToken = await _commonCommands.GenerateJwtToken(user.Id, user.UserName, 
+            user.Email, user.SecurityStamp, token);
 
         // Generating failed
         if (!newToken.Success)

@@ -6,7 +6,7 @@ using server.src.Application.Weather.Warnings.Commands;
 using server.src.Application.Weather.Warnings.Interfaces;
 using server.src.Application.Weather.Warnings.Queries;
 using server.src.Application.Weather.Warnings.Services;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;
 

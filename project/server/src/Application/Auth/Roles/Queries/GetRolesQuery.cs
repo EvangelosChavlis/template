@@ -6,18 +6,18 @@ using System.Net;
 using server.src.Application.Auth.Roles.Filters;
 using server.src.Application.Auth.Roles.Includes;
 using server.src.Application.Auth.Roles.Mappings;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Common;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
 
-public record GetRolesQuery(UrlQuery UrlQuery) : IRequest<ListResponse<List<ItemRoleDto>>>;
+public record GetRolesQuery(UrlQuery UrlQuery) : IRequest<ListResponse<List<ListItemRoleDto>>>;
 
-public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<ItemRoleDto>>>
+public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<ListItemRoleDto>>>
 {
     private readonly ICommonRepository _commonRepository;
     
@@ -26,7 +26,7 @@ public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<
         _commonRepository = commonRepository;
     }
 
-    public async Task<ListResponse<List<ItemRoleDto>>> Handle(GetRolesQuery query, CancellationToken token = default)
+    public async Task<ListResponse<List<ListItemRoleDto>>> Handle(GetRolesQuery query, CancellationToken token = default)
     {
         var pageParams = query.UrlQuery;
         
@@ -49,13 +49,13 @@ public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<
         // Paging
         var pagedRoles = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
         // Mapping
-        var dto = pagedRoles.Rows.Select(r => r.ItemRoleDtoMapping()).ToList();
+        var dto = pagedRoles.Rows.Select(r => r.ListItemRoleDtoMapping()).ToList();
 
         // Determine success 
         var success = pagedRoles.Rows.Count > 0;
 
         // Initializing object
-        return new ListResponse<List<ItemRoleDto>>()
+        return new ListResponse<List<ListItemRoleDto>>()
         {
             Data = dto,
             Success = success,

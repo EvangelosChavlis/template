@@ -1,5 +1,5 @@
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Interfaces;
 using server.src.Application.Weather.Forecasts.Queries;
 using server.src.Domain.Dto.Common;

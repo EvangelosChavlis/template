@@ -3,10 +3,10 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Auth.Roles.Validators;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
@@ -27,7 +27,7 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
     public async Task<Response<string>> Handle(DeleteRoleCommand command, CancellationToken token = default)
     {
         // Id Validation
-        var idValidationResult = RoleValidators.Validate(command.Id);
+        var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -36,7 +36,7 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = RoleValidators.Validate(command.Version);
+        var versionValidationResult = command.Version.ValidateId();
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")

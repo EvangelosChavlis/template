@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Metrics.Errors.Mappings;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Metrics;

@@ -71,7 +71,7 @@ public record ItemUserDto(
 );
 
 /// <summary>
-/// Represents the data required to create or update a user.
+/// Represents the data required to update a user.
 /// </summary>
 /// <param name="FirstName">The user's first name.</param>
 /// <param name="LastName">The user's last name.</param>
@@ -88,7 +88,7 @@ public record ItemUserDto(
 /// <param name="Bio">A brief biography of the user.</param>
 /// <param name="DateOfBirth">The user's date of birth.</param>
 /// <param name="Version">The version of the role for concurrency control during updates.</param>
-public record UserDto(
+public record UpdateUserDto(
     string FirstName,
     string LastName,
     string Email,
@@ -105,6 +105,69 @@ public record UserDto(
     DateTime DateOfBirth,
     Guid Version
 );
+
+/// <summary>
+/// Represents the data required to create or update a user.
+/// </summary>
+/// <param name="FirstName">The user's first name.</param>
+/// <param name="LastName">The user's last name.</param>
+/// <param name="Email">The user's email address.</param>
+/// <param name="UserName">The user's username.</param>
+/// <param name="Password">The user's password.</param>
+/// <param name="Address">The user's physical address.</param>
+/// <param name="ZipCode">The ZIP code of the user's address.</param>
+/// <param name="City">The city of the user's address.</param>
+/// <param name="State">The state of the user's address.</param>
+/// <param name="Country">The country of the user's address.</param>
+/// <param name="PhoneNumber">The user's phone number.</param>
+/// <param name="MobilePhoneNumber">The user's mobile phone number.</param>
+/// <param name="Bio">A brief biography of the user.</param>
+/// <param name="DateOfBirth">The user's date of birth.</param>
+public record CreateUserDto(
+    string FirstName,
+    string LastName,
+    string Email,
+    string UserName,
+    string Password,
+    string Address,
+    string ZipCode,
+    string City,
+    string State,
+    string Country,
+    string PhoneNumber,
+    string MobilePhoneNumber,
+    string Bio,
+    DateTime DateOfBirth
+);
+
+/// <summary>
+/// Represents an encrypted user data transfer object (DTO) used for securely storing user details.
+/// </summary>
+/// <param name="FirstNameEncrypted">The encrypted first name of the user.</param>
+/// <param name="LastNameEncrypted">The encrypted last name of the user.</param>
+/// <param name="EmailEncrypted">The encrypted email address of the user.</param>
+/// <param name="NormalizedEmailEncrypted">The encrypted normalized email address of the user.</param>
+/// <param name="PasswordHash">The securely hashed password of the user.</param>
+/// <param name="AddressEncrypted">The encrypted physical address of the user.</param>
+/// <param name="ZipCodeEncrypted">The encrypted ZIP code of the user's address.</param>
+/// <param name="PhoneNumberEncrypted">The encrypted phone number of the user.</param>
+/// <param name="MobilePhoneNumberEncrypted">The encrypted mobile phone number of the user.</param>
+/// <param name="BioEncrypted">The encrypted biography or additional user information.</param>
+/// <param name="DateOfBirthEncrypted">The encrypted date of birth of the user.</param>
+public record EncryptedUserDto(
+    string FirstNameEncrypted,
+    string LastNameEncrypted,
+    string EmailEncrypted,
+    string NormalizedEmailEncrypted,
+    string PasswordHash,
+    string AddressEncrypted,
+    string ZipCodeEncrypted,
+    string PhoneNumberEncrypted,
+    string MobilePhoneNumberEncrypted,
+    string BioEncrypted,
+    string DateOfBirthEncrypted
+);
+
 
 /// <summary>
 /// Represents the credentials required for a user login request.

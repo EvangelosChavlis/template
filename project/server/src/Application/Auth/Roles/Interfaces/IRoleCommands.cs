@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 
@@ -15,7 +16,7 @@ public interface IRoleCommands
     /// <param name="dto">A list of role data transfer objects to be initialized.</param>
     /// <param name="token">Optional cancellation token to cancel the operation.</param>
     /// <returns>A response indicating the success or failure of the initialization process.</returns>
-    Task<Response<string>> InitializeRolesAsync(List<RoleDto> dto, 
+    Task<Response<string>> InitializeRolesAsync(List<CreateRoleDto> dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -24,7 +25,7 @@ public interface IRoleCommands
     /// <param name="dto">The data transfer object containing the role details.</param>
     /// <param name="token">Optional cancellation token to cancel the operation.</param>
     /// <returns>A response containing the result message of the creation operation.</returns>
-    Task<Response<string>> CreateRoleAsync(RoleDto dto, 
+    Task<Response<string>> CreateRoleAsync(CreateRoleDto dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -34,7 +35,7 @@ public interface IRoleCommands
     /// <param name="dto">The data transfer object containing the updated role details.</param>
     /// <param name="token">Optional cancellation token to cancel the operation.</param>
     /// <returns>A response containing the result message of the update operation.</returns>
-    Task<Response<string>> UpdateRoleAsync(Guid id, RoleDto dto, 
+    Task<Response<string>> UpdateRoleAsync(Guid id, UpdateRoleDto dto, 
         CancellationToken token = default);
 
     /// <summary>

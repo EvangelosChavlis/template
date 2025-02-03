@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 
 // source
-using server.src.Domain.Models.Auth;
+using server.src.Domain.Auth.Roles.Models;
 
 namespace server.src.Application.Auth.Roles.Filters;
 

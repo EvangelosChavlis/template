@@ -6,9 +6,10 @@ using System.Net;
 using server.src.Application.Auth.Roles.Filters;
 using server.src.Application.Auth.Roles.Includes;
 using server.src.Application.Auth.Roles.Mappings;
-using server.src.Application.Auth.Roles.Validators;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Common;
@@ -30,7 +31,7 @@ public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, Li
     public async Task<ListResponse<List<ItemRoleDto>>> Handle(GetRolesByUserIdQuery query, CancellationToken token = default)
     {
         // Validation
-        var validationResult = RoleValidators.Validate(query.Id);
+        var validationResult = query.Id.ValidateId();
         
         if (!validationResult.IsValid)
             return new ListResponse<List<ItemRoleDto>>()

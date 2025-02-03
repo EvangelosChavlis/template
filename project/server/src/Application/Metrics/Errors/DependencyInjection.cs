@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Application.Metrics.Errors.Interfaces;
 using server.src.Application.Metrics.Errors.Queries;
 using server.src.Application.Metrics.Errors.Services;

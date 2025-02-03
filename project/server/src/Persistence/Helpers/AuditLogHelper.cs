@@ -16,7 +16,7 @@ using server.src.Domain.Models.Enums;
 using server.src.Domain.Models.Metrics;
 using server.src.Persistence.Contexts;
 
-namespace server.src.Application.Helpers;
+namespace server.src.Persistence.Helpers;
 
 public class AuditLogHelper : IAuditLogHelper
 {

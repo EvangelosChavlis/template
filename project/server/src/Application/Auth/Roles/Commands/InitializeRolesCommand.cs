@@ -4,13 +4,13 @@ using System.Text;
 
 // source
 using server.src.Application.Auth.Roles.Interfaces;
-using server.src.Application.Interfaces;
-using server.src.Domain.Dto.Auth;
+using server.src.Application.Common.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Dto.Common;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
-public record InitializeRolesCommand(List<RoleDto> Dto) : IRequest<Response<string>>;
+public record InitializeRolesCommand(List<CreateRoleDto> Dto) : IRequest<Response<string>>;
 
 public class InitializeRolesHandler : IRequestHandler<InitializeRolesCommand, Response<string>>
 {

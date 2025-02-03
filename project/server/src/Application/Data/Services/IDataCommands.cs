@@ -1,7 +1,7 @@
 // source
 using server.src.Application.Data.Commands;
 using server.src.Application.Data.Interfaces;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 
 namespace server.src.Application.Auth.Roles.Services;

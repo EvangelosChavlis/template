@@ -6,7 +6,7 @@ using server.src.Application.Auth.UserLogins.Commands;
 using server.src.Application.Auth.UserLogins.Interfaces;
 using server.src.Application.Auth.UserLogins.Queries;
 using server.src.Application.Auth.UserLogins.Services;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 

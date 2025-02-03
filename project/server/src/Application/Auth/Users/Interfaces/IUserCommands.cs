@@ -15,7 +15,7 @@ public interface IUserCommands
     /// <param name="dto">List of user data transfer objects.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response indicating the result of the operation.</returns>
-    Task<Response<string>> InitializeUsersAsync(List<UserDto> dto, 
+    Task<Response<string>> InitializeUsersAsync(List<CreateUserDto> dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -25,7 +25,7 @@ public interface IUserCommands
     /// <param name="registered">Indicates whether the user is already registered.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response indicating the result of the operation.</returns>
-    Task<Response<string>> RegisterUserAsync(UserDto dto, bool registered,
+    Task<Response<string>> RegisterUserAsync(CreateUserDto dto, bool registered,
         CancellationToken token = default);
 
     /// <summary>
@@ -35,7 +35,7 @@ public interface IUserCommands
     /// <param name="dto">User data transfer object containing updated user details.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response indicating the result of the operation.</returns>
-    Task<Response<string>> UpdateUserAsync(Guid id, UserDto dto, 
+    Task<Response<string>> UpdateUserAsync(Guid id, UpdateUserDto dto, 
         CancellationToken token = default);
 
     /// <summary>

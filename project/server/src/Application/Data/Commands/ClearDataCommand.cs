@@ -3,7 +3,7 @@ using System.Net;
 using Microsoft.EntityFrameworkCore;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 using server.src.Persistence.Contexts;
 

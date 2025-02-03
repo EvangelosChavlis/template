@@ -1,5 +1,5 @@
 // source
-using server.src.Domain.Models.Auth;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Models.Common;
 
 namespace server.src.Application.Auth.Roles.Includes;

@@ -1,46 +1,13 @@
 // source
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Models.Auth;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Models.Errors;
 
 namespace server.src.Application.Auth.Roles.Validators;
 
 public static class RoleValidators
 {
-    public static ValidationResult Validate(RoleDto dto)
-    {
-        var errors = new List<string>();
-
-        // Validation for Name
-        if (string.IsNullOrWhiteSpace(dto.Name))
-            errors.Add("Name is required.");
-        else if (dto.Name.Length > 100)
-            errors.Add("Name must not exceed 100 characters.");
-        else if (ContainsInjectionCharacters(dto.Name))
-            errors.Add("Name contains invalid characters.");
-        else if (ContainsNonPrintableCharacters(dto.Name))
-            errors.Add("Name contains non-printable characters.");
-
-        // Validation for Description
-        if (string.IsNullOrWhiteSpace(dto.Description))
-            errors.Add("Description is required.");
-        else if (dto.Description.Length > 250)
-            errors.Add("Description must not exceed 250 characters.");
-        else if (ContainsInjectionCharacters(dto.Description))
-            errors.Add("Description contains invalid characters.");
-        else if (ContainsNonPrintableCharacters(dto.Description))
-            errors.Add("Description contains non-printable characters.");
-
-        // Validation for Version
-        if (dto.Version == Guid.Empty)
-            errors.Add("Invalid Version. The GUID must not be empty.");
-
-        // Return validation result
-        return errors.Count > 0 ? 
-            ValidationResult.Failure(errors) : ValidationResult.Success();
-    }
-
-    public static ValidationResult Validate(Role model)
+    public static ValidationResult Validate(this Role model)
     {
         var errors = new List<string>();
 
@@ -49,9 +16,9 @@ public static class RoleValidators
             errors.Add("Name is required.");
         else if (model.Name.Length > 100)
             errors.Add("Name must not exceed 100 characters.");
-        else if (ContainsInjectionCharacters(model.Name))
+        else if (model.Name.ContainsInjectionCharacters())
             errors.Add("Name contains invalid characters.");
-        else if (ContainsNonPrintableCharacters(model.Name))
+        else if (model.Name.ContainsNonPrintableCharacters())
             errors.Add("Name contains non-printable characters.");
 
         // Validation for Normalized Name
@@ -61,9 +28,9 @@ public static class RoleValidators
             errors.Add("NormalizedName must not exceed 100 characters.");
         else if (!model.NormalizedName.All(char.IsUpper))
             errors.Add("NormalizedName must be in capital letters.");
-        else if (ContainsInjectionCharacters(model.NormalizedName))
+        else if (model.NormalizedName.ContainsInjectionCharacters())
             errors.Add("NormalizedName contains invalid characters.");
-        else if (ContainsNonPrintableCharacters(model.NormalizedName))
+        else if (model.NormalizedName.ContainsNonPrintableCharacters())
             errors.Add("NormalizedName contains non-printable characters.");
 
         // Validation for Description
@@ -71,9 +38,9 @@ public static class RoleValidators
             errors.Add("Description is required.");
         else if (model.Description.Length > 250)
             errors.Add("Description must not exceed 250 characters.");
-        else if (ContainsInjectionCharacters(model.Description))
+        else if (model.Description.ContainsInjectionCharacters())
             errors.Add("Description contains invalid characters.");
-        else if (ContainsNonPrintableCharacters(model.Description))
+        else if (model.Description.ContainsNonPrintableCharacters())
             errors.Add("Description contains non-printable characters.");
 
         // Validation for IsActive (boolean)
@@ -87,32 +54,5 @@ public static class RoleValidators
         // Return validation result
         return errors.Count > 0 ? 
             ValidationResult.Failure(errors) : ValidationResult.Success();
-    }
-
-    public static ValidationResult Validate(Guid id)
-    {
-        var errors = new List<string>();
-
-        // Validation for Id
-        if (id == Guid.Empty)
-            errors.Add("Invalid ID. The GUID must not be empty.");
-
-        // Return validation result
-        return errors.Count > 0 ? 
-            ValidationResult.Failure(errors) : ValidationResult.Success();
-    }
-
-    // Helper method to check for dangerous characters in input (SQL Injection prevention)
-    private static bool ContainsInjectionCharacters(string input)
-    {
-        var dangerousChars = new[] { "'", ";", "--", "<", ">", 
-            "/*", "*/", "=", "%", "@", "!", "#", "$", "^", "&" };
-        return dangerousChars.Any(c => input.Contains(c));
-    }
-
-    // Helper method to check for non-printable characters (e.g., control characters)
-    private static bool ContainsNonPrintableCharacters(string input)
-    {
-        return input.Any(c => char.IsControl(c));
     }
 }

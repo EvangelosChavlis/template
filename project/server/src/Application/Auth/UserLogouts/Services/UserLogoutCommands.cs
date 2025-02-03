@@ -1,7 +1,7 @@
 // source
 using server.src.Application.Auth.UserLogouts.Commands;
 using server.src.Application.Auth.UserLogouts.Interfaces;
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Common;
 
 namespace server.src.Application.Auth.UserLogins.Services;

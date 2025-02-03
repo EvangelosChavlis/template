@@ -4,13 +4,13 @@ using System.Text;
 using server.src.Application.Auth.Users.Interfaces;
 
 // source
-using server.src.Application.Interfaces;
+using server.src.Application.Common.Interfaces;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
 
 namespace server.src.Application.Auth.Users.Commands;
 
-public record InitializeUsersCommand(List<UserDto> Dto) : IRequest<Response<string>>;
+public record InitializeUsersCommand(List<CreateUserDto> Dto) : IRequest<Response<string>>;
 
 public class InitializeUsersHandler : IRequestHandler<InitializeUsersCommand, Response<string>>
 {

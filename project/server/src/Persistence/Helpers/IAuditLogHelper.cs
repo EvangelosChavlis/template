@@ -1,7 +1,7 @@
 // source
 using server.src.Domain.Dto.Common;
 
-namespace server.src.Application.Helpers;
+namespace server.src.Persistence.Helpers;
 
 public interface IAuditLogHelper
 {
