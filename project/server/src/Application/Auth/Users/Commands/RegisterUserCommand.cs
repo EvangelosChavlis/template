@@ -7,9 +7,11 @@ using server.src.Application.Auth.UserRoles.Interfaces;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Users.Mappings;
+using server.src.Domain.Auth.Roles.Models;
+using server.src.Domain.Auth.Users.Dtos;
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
+using server.src.Domain.Users.Models;
 using server.src.Persistence.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
@@ -35,7 +37,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
     public async Task<Response<string>> Handle(RegisterUserCommand command, CancellationToken token = default)
     {
         // Dto Validation
-        var dtoValidationResult = UserValidators.Validate(command.Dto);
+        var dtoValidationResult = command.Dto.Validate();
         if (!dtoValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")

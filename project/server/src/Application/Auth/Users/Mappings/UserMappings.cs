@@ -2,6 +2,7 @@
 using server.src.Domain.Dto.Auth;
 using server.src.Domain.Extensions;
 using server.src.Domain.Models.Auth;
+using server.src.Domain.Users.Models;
 
 namespace server.src.Application.Users.Mappings;
 

@@ -1,3 +1,6 @@
+// source
+using server.src.Domain.Auth.UserRoles.Models;
+
 namespace server.src.Domain.Auth.Roles.Models;
 
 /// <summary>
@@ -38,13 +41,13 @@ public class Role
     /// </summary>
     public Guid Version { get; set; }
 
-    #region Navigation Properties
+    #region Navigation properties
 
     /// <summary>
     /// Gets or sets the list of user roles associated with this role.
     /// Represents the many-to-many relationship between users and roles.
     /// </summary>
-    public List<UserRole> UserRoles { get; set; }
+    public virtual List<UserRole> UserRoles { get; set; }
 
     #endregion
 }
