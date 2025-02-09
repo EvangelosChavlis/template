@@ -1,10 +1,21 @@
 // packages
 using System.Security.Claims;
 
+// source
+using server.src.Domain.Common.Dtos;
+
 namespace server.src.Application.Common.Interfaces;
 
 public interface ICommonQueries
 {
+    /// <summary>
+    /// Retrieves the current user based on the claims in the HTTP context.
+    /// </summary>
+    /// <param name="token">Optional cancellation token to allow the operation to be canceled.</param>
+    /// <returns>Returns a task representing the asynchronous operation, with the current user’s data as a <see cref="CurrentUserDto"/>. 
+    /// If no user is found, it will return a default <see cref="CurrentUserDto"/>.</returns>
+    Task<CurrentUserDto> GetCurrentUser(CancellationToken token = default);
+
     /// <summary>
     /// Decrypts sensitive data using a decryption handler.
     /// </summary>

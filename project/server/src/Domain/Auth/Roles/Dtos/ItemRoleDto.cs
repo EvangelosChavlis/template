@@ -14,5 +14,6 @@ public record ItemRoleDto(
     string Name,
     string Description,
     bool IsActive,
+    bool IsLocked,
     Guid Version
 );

@@ -7,8 +7,8 @@ using server.src.Application.Auth.Roles.Validators;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Dto.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
@@ -49,9 +49,8 @@ public class ActivateRoleHandler : IRequestHandler<ActivateRoleCommand, Response
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var roleIncludes = new Expression<Func<Role, object>>[] { };
         var roleFilters = new Expression<Func<Role, bool>>[] { r => r.Id == command.Id};
-        var role = await _commonRepository.GetResultByIdAsync(roleFilters, roleIncludes, token);
+        var role = await _commonRepository.GetResultByIdAsync(roleFilters,  token: token);
 
         // Check for existence
         if (role is null)

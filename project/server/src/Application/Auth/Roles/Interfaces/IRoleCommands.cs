@@ -1,7 +1,6 @@
 // source
 using server.src.Domain.Auth.Roles.Dtos;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Application.Auth.Roles.Interfaces;
 

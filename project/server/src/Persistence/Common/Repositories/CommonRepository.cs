@@ -1,13 +1,16 @@
 // packages
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 
 // source
+using server.src.Domain.Common.Extensions;
 using server.src.Domain.Common.Models;
+using server.src.Persistence.Common.Contexts;
+using server.src.Persistence.Common.Helpers;
+using server.src.Persistence.Common.Interfaces;
 using server.src.Persistence.Contexts;
-using server.src.Persistence.Helpers;
-using server.src.Persistence.Interfaces;
 
 namespace server.src.Persistence.Common.Repositories;
 
@@ -32,8 +35,9 @@ public class CommonRepository : ICommonRepository
 
     public async Task<Envelope<T>> GetPagedResultsAsync<T>(
         UrlQuery pageParams,
-        Expression<Func<T, bool>>[] filterExpressions,
-        IncludeThenInclude<T>[] includeThenIncludeExpressions,
+        Expression<Func<T, bool>>[]? filterExpressions = default,
+        IncludeThenInclude<T>[]? includeThenIncludeExpressions = default,
+        Expression<Func<T, T>>? projection = default,
         CancellationToken token = default
     ) where T : class
     {
@@ -42,7 +46,7 @@ public class CommonRepository : ICommonRepository
         var pageSize = pageParams.PageSize;
 
         // Retrieve the dataset dynamically
-        var query = _context.Set<T>().AsQueryable();
+        IQueryable<T> query = _context.Set<T>();
 
         // Apply filtering
         if (filterExpressions != null)
@@ -64,7 +68,7 @@ public class CommonRepository : ICommonRepository
             : query.OrderBy(x => EF.Property<object>(x, pageParams.SortBy!));
 
         // Apply includes and thenIncludes
-        if (includeThenIncludeExpressions != null)
+        if (includeThenIncludeExpressions is not null)
         {
             foreach (var includeThenInclude in includeThenIncludeExpressions)
             {
@@ -81,6 +85,10 @@ public class CommonRepository : ICommonRepository
                 query = includableQuery;
             }
         }
+
+        // Apply projection
+        if (projection is not null)
+            query = query.Select(projection);
 
         // Apply pagination
         var pagedData = await query
@@ -100,12 +108,12 @@ public class CommonRepository : ICommonRepository
 
 
     public async Task<List<T>> GetResultPickerAsync<T>(
-        this DbSet<T> dbSet,
-        Expression<Func<T, bool>>[] filterExpressions, 
+        Expression<Func<T, bool>>[]? filterExpressions = default,
+        Expression<Func<T, T>>? projection = default, 
         CancellationToken token = default
     ) where T : class
     {
-        var query = dbSet.AsQueryable();
+        IQueryable<T> query = _context.Set<T>();
 
         // Apply filtering
         if (filterExpressions is not null)
@@ -117,16 +125,21 @@ public class CommonRepository : ICommonRepository
             }
         }
 
+        // Apply projection
+        if (projection is not null)
+            query = query.Select(projection);
+
         return await query.ToListAsync(token);
     }
 
     public async Task<T?> GetResultByIdAsync<T>(
-        Expression<Func<T, bool>>[] filterExpressions,
-        Expression<Func<T, object>>[] includeExpressions,
+        Expression<Func<T, bool>>[]? filterExpressions = default,
+        Expression<Func<T, object>>[]? includeExpressions = default,
+        Expression<Func<T, T>>? projection = default,
         CancellationToken token = default
     ) where T : class
     {
-        var query = _context.Set<T>().AsQueryable();
+        IQueryable<T> query = _context.Set<T>();
 
         // Apply filtering
         if (filterExpressions is not null)
@@ -144,8 +157,13 @@ public class CommonRepository : ICommonRepository
             foreach (var includeExpression in includeExpressions)
                 query = query.Include(includeExpression);
         }
+        
+        // Apply projection
+        if (projection is not null)
+            query = query.Select(projection);
 
-        return await query.SingleOrDefaultAsync(token);
+        return await query
+            .SingleOrDefaultAsync(token);
     }
 
 
@@ -154,7 +172,7 @@ public class CommonRepository : ICommonRepository
         CancellationToken token = default
     ) where T : class
     {
-        var query = _context.Set<T>().AsQueryable();
+        IQueryable<T> query = _context.Set<T>();
 
         if (filterExpressions is not null)
         {
@@ -168,8 +186,29 @@ public class CommonRepository : ICommonRepository
         return await query.CountAsync(token);
     }
 
-    public async Task<bool> AddAsync<T>(T entity, CancellationToken token = default) 
-        where T : class
+    public async Task<bool> AnyExistsAsync<T>(
+        Expression<Func<T, bool>>[] filterExpressions,
+        CancellationToken token = default
+    ) where T : class
+    {
+        IQueryable<T> query = _context.Set<T>();
+
+        if (filterExpressions is not null)
+        {
+            foreach (var filterExpression in filterExpressions)
+            {
+                if (filterExpression is not null)
+                    query = query.Where(filterExpression);
+            }
+        }
+
+        return await query.AnyAsync(token);
+    }
+
+    public async Task<bool> AddAsync<T>(
+        T entity, 
+        CancellationToken token = default
+    ) where T : class
     {
         await _context.Set<T>().AddAsync(entity, token);
         
@@ -181,8 +220,10 @@ public class CommonRepository : ICommonRepository
         return result;
     }
 
-    public async Task<bool> AddRangeAsync<T>(List<T> entities, CancellationToken token = default) 
-        where T : class
+    public async Task<bool> AddRangeAsync<T>(
+        List<T> entities, 
+        CancellationToken token = default
+    ) where T : class
     {
         if (entities is null || entities.Count is 0) 
             return false;
@@ -201,8 +242,10 @@ public class CommonRepository : ICommonRepository
     }
 
 
-    public async Task<bool> UpdateAsync<T>(T entity, CancellationToken token = default) 
-        where T : class
+    public async Task<bool> UpdateAsync<T>(
+        T entity, 
+        CancellationToken token = default
+    ) where T : class
     {
         var idProperty = entity.GetType().GetProperty("Id", BindingFlags.Public | BindingFlags.Instance);
         var entityId = idProperty?.GetValue(entity);
@@ -222,8 +265,10 @@ public class CommonRepository : ICommonRepository
         return result;
     }
 
-    public async Task<bool> DeleteAsync<T>(T entity, CancellationToken token = default) 
-        where T : class
+    public async Task<bool> DeleteAsync<T>(
+        T entity, 
+        CancellationToken token = default
+    ) where T : class
     {
         // Archive entity
         await _archiveContext.Set<T>().AddAsync(entity, token);
@@ -234,6 +279,64 @@ public class CommonRepository : ICommonRepository
 
         if (result)
             await _auditLogHelper.CreateAuditLogAsync(entity, null, token);
+
+        return result;
+    }
+
+    public async Task<bool> LockAsync<T>(
+        Guid entityId, 
+        Guid userId, 
+        TimeSpan duration, 
+        CancellationToken token = default
+    ) where T : BaseEntity
+    {
+        var entity = await _context.Set<T>().FindAsync([entityId], token);
+        
+        if (entity is null)
+            return false;
+
+        if (entity.IsLocked())
+            return false;
+        
+        var oldEntity = JsonSerializer.Deserialize<T>(JsonSerializer.Serialize(entity));
+
+        entity.LockUntil = DateTime.UtcNow.Add(duration);
+        entity.UserLockedId = userId;
+        
+        _context.Set<T>().Update(entity);
+        var result = await _unitOfWork.CommitAsync(token);
+
+        if (result)
+            await _auditLogHelper.CreateAuditLogAsync(oldEntity, entity, token);
+
+        return result;
+    }
+
+
+    public async Task<bool> UnlockAsync<T>(
+        Guid entityId, 
+        CancellationToken token = default
+    ) where T : BaseEntity
+    {
+        var entity = await _context.Set<T>().FindAsync([entityId], token);
+        
+        if (entity is null) 
+            return false;
+
+        if (entity.IsNotLocked())
+            return false;
+
+        var oldEntity = JsonSerializer.Deserialize<T>(JsonSerializer.Serialize(entity));
+        
+        entity.LockUntil = null;
+        entity.UserLockedId = null;
+        
+        _context.Set<T>().Update(entity);
+        
+        var result = await _unitOfWork.CommitAsync(token);
+
+        if (result)
+            await _auditLogHelper.CreateAuditLogAsync(oldEntity, entity, token);
 
         return result;
     }

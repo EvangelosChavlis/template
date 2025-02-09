@@ -1,18 +1,14 @@
 // source
 using server.src.Domain.Auth.UserRoles.Models;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Domain.Auth.Roles.Models;
 
 /// <summary>
 /// Represents a role in the authentication system.
 /// </summary>
-public class Role
+public class Role : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the role.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the role.
     /// </summary>
@@ -35,11 +31,6 @@ public class Role
     /// Determines whether the role is enabled for assignment or usage.
     /// </summary>
     public bool IsActive { get; set; }
-
-    /// <summary>
-    /// Gets or sets the version GUID for optimistic concurrency control.
-    /// </summary>
-    public Guid Version { get; set; }
 
     #region Navigation properties
 

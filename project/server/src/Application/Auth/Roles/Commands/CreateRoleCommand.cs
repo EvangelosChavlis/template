@@ -8,8 +8,8 @@ using server.src.Application.Auth.Roles.Validators;
 using server.src.Application.Common.Interfaces;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Dto.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
@@ -41,19 +41,18 @@ public class CreateRoleHandler : IRequestHandler<CreateRoleCommand, Response<str
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var includes = new Expression<Func<Role, object>>[] { };
         var filters = new Expression<Func<Role, bool>>[] { r => r.Name!.Equals(command.Dto.Name)};
-        var existingRole = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var existingRole = await _commonRepository.AnyExistsAsync(filters, token);
         
         // Check if the role already exists in the system
-        if(existingRole is not null)
+        if(existingRole)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error creating role.")
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
-                .WithData($"Role with name {existingRole.Name} already exists.");
+                .WithData($"Role with name {command.Dto.Name} already exists.");
         }
 
         // Mapping, Validating, Saving Item

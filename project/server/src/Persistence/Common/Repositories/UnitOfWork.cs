@@ -1,12 +1,9 @@
 // packages
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using server.src.Persistence.Common.Interfaces;
-
 
 // source
-using server.src.Persistence.Contexts;
-using server.src.Persistence.Interfaces;
+using server.src.Persistence.Common.Contexts;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Persistence.Common.Repositories;
 
@@ -22,14 +19,14 @@ public class UnitOfWork : IUnitOfWork
 
     public UnitOfWork() { }
 
-    public async Task<bool> CommitAsync(DbContext context, CancellationToken token = default)
+    public async Task<bool> CommitAsync(CancellationToken token = default)
     {
-        return await context.SaveChangesAsync(token) > 0;
+        return await _context.SaveChangesAsync(token) > 0;
     }
 
-    public async Task BeginTransactionAsync(DbContext context, CancellationToken token = default)
+    public async Task BeginTransactionAsync(CancellationToken token = default)
     {
-        _transaction = await context.D.BeginTransactionAsync(token);
+        _transaction = await _context.Database.BeginTransactionAsync(token);
     }
 
     public async Task CommitTransactionAsync(CancellationToken token = default)

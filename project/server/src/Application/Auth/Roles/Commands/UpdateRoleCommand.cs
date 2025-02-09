@@ -9,8 +9,8 @@ using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Dto.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
@@ -51,9 +51,8 @@ public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<str
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var roleIncludes = new Expression<Func<Role, object>>[] { };
         var roleFilters = new Expression<Func<Role, bool>>[] { x => x.Id == command.Id};
-        var role = await _commonRepository.GetResultByIdAsync(roleFilters, roleIncludes, token);
+        var role = await _commonRepository.GetResultByIdAsync(roleFilters, token: token);
 
         // Check for existence
         if (role is null)
@@ -64,6 +63,16 @@ public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<str
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("Role not found.");
+        }
+
+        if (role.LockUntil is true)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData($"The role has been modified by another {role.LockedByUser!.UserName}. Please try again.");
         }
 
         // Check for concurrency issues

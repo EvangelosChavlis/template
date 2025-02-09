@@ -24,6 +24,7 @@ public static class ItemRoleDtoMapper
             Name: model.Name,
             Description: model.Description,
             IsActive: model.IsActive,
+            IsLocked: model.LockUntil,
             Version: model.Version
         );
 }

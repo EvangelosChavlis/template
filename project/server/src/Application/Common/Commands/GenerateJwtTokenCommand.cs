@@ -8,10 +8,11 @@ using Microsoft.IdentityModel.Tokens;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Persistence.Contexts;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.UserClaims.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Persistence.Common.Contexts;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Common.Commands;
 
@@ -46,7 +47,7 @@ public class GenerateJwtTokenHandler : IRequestHandler<GenerateJwtTokenCommand, 
         // Begin Transaction
         await _unitOfWork.BeginTransactionAsync(token);
         
-        var roles = await _context.Roles
+        var roles = await _context.AuthDbSets.Roles
             .Include(r => r.UserRoles)
             .Where(r => r.UserRoles.Any(ur => ur.UserId == command.UserId))
             .ToListAsync(token);

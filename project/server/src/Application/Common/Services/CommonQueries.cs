@@ -4,11 +4,13 @@ using System.Security.Claims;
 // source
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Queries;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Application.Common.Services;
 
 public class CommonQueries : ICommonQueries
 {
+    private readonly IRequestHandler<CurrentUserQuery, CurrentUserDto> _currentUserHandler;
     private readonly IRequestHandler<DecryptSensitiveDataQuery, object> _decryptSensitiveDataHandler;
     private readonly IRequestHandler<EncryptSensitiveDataQuery, string> _encryptSensitiveDataHandler;
     private readonly IRequestHandler<GeneratePasswordQuery, string> _generatePasswordHandler;
@@ -17,6 +19,7 @@ public class CommonQueries : ICommonQueries
     private readonly IRequestHandler<VerifyPasswordQuery, bool> _verifyPasswordHandler;
 
     public CommonQueries(
+        IRequestHandler<CurrentUserQuery, CurrentUserDto> currentUserHandler,
         IRequestHandler<DecryptSensitiveDataQuery, object> decryptSensitiveDataHandler,
         IRequestHandler<EncryptSensitiveDataQuery, string> encryptSensitiveDataHandler,
         IRequestHandler<GeneratePasswordQuery, string> generatePasswordHandler,
@@ -24,12 +27,19 @@ public class CommonQueries : ICommonQueries
         IRequestHandler<HashPasswordQuery, string> hashPasswordHandler,
         IRequestHandler<VerifyPasswordQuery, bool> verifyPasswordHandler)
     {
+        _currentUserHandler = currentUserHandler;
         _decryptSensitiveDataHandler = decryptSensitiveDataHandler;
         _encryptSensitiveDataHandler = encryptSensitiveDataHandler;
         _generatePasswordHandler = generatePasswordHandler;
         _getPrincipalFromExpiredTokenHandler = getPrincipalFromExpiredTokenHandler;
         _hashPasswordHandler = hashPasswordHandler;
         _verifyPasswordHandler = verifyPasswordHandler;
+    }
+
+    public async Task<CurrentUserDto> GetCurrentUser(CancellationToken token = default)
+    {
+        var query = new CurrentUserQuery();
+        return await _currentUserHandler.Handle(query, token);
     }
 
     public async Task<object> DecryptSensitiveData(string encryptedData, CancellationToken token = default)

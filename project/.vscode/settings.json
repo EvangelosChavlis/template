@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
         "operatoration"
-    ]
+    ],
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
 }
