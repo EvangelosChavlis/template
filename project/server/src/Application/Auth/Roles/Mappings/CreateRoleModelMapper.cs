@@ -21,6 +21,9 @@ public static class CreateRoleModelMapper
             NormalizedName = dto.Name.ToUpperInvariant(),
             Description = dto.Description,
             IsActive = true,
-            Version = Guid.NewGuid()
+            Version = Guid.NewGuid(),
+            LockUntil = null,
+            UserLockedId = null,
+            TenantId = null
         };
 }

@@ -68,10 +68,11 @@ public class GetRoleByIdHandler : IRequestHandler<GetRoleByIdQuery, Response<Ite
                 .WithSuccess(false)
                 .WithData(ErrorItemRoleDtoMapper.ErrorItemRoleDtoMapping());
 
-        if (role.IsNotLocked())
+        // Lock entity
+        if (!role.IsLockedByOtherUser(currentUser.Id))
         {
             var lockResult = await _commonRepository.LockAsync<Role>(role.Id, currentUser.Id, 
-                TimeSpan.FromMinutes(30), token);
+                TimeSpan.FromMinutes(10), token);
             if (!lockResult)
                 return new Response<ItemRoleDto>()
                     .WithMessage("Failed to lock role.")

@@ -25,6 +25,7 @@ public static class ErrorItemRoleDtoMapper
             Name: string.Empty,
             Description: string.Empty,
             IsActive: false,
+            IsLocked: true,
             Version: Guid.Empty
         );
 }

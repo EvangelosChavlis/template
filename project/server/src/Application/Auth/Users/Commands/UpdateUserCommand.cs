@@ -5,11 +5,11 @@ using System.Net;
 // source
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Persistence.Interfaces;
 using server.src.Application.Users.Mappings;
+using server.src.Domain.Auth.Users.Dtos;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 

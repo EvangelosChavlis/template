@@ -76,7 +76,7 @@ public class CreateRoleHandler : IRequestHandler<CreateRoleCommand, Response<str
             return new Response<string>()
                 .WithMessage("Error creating role.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithSuccess(false)
+                .WithSuccess(result)
                 .WithData("Failed to create role.");
         }
         

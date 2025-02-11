@@ -6,12 +6,13 @@ using System.Net;
 using server.src.Application.Auth.Roles.Filters;
 using server.src.Application.Auth.Roles.Includes;
 using server.src.Application.Auth.Roles.Mappings;
+using server.src.Application.Auth.Roles.Projections;
 using server.src.Application.Common.Interfaces;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
 
@@ -29,7 +30,7 @@ public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<
     public async Task<ListResponse<List<ListItemRoleDto>>> Handle(GetRolesQuery query, CancellationToken token = default)
     {
         var pageParams = query.UrlQuery;
-        
+
         // Default Sorting
         if (!pageParams.HasSortBy)
         {
@@ -45,9 +46,16 @@ public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<
 
         // Including
         var includes = RoleIncludes.GetRolesIncludes();
-
+        // Projection
+        var projection = RoleProjections.GetRoleProjection();
         // Paging
-        var pagedRoles = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
+        var pagedRoles = await _commonRepository.GetPagedResultsAsync(
+            pageParams,
+            filters,
+            includes,
+            projection,
+            token
+        );
         // Mapping
         var dto = pagedRoles.Rows.Select(r => r.ListItemRoleDtoMapping()).ToList();
 
@@ -58,10 +66,11 @@ public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<
         return new ListResponse<List<ListItemRoleDto>>()
         {
             Data = dto,
+            Permissions = [""],
             Success = success,
-            Message = success ? "Roles fetched successfully." : 
+            Message = success ? "Roles fetched successfully." :
                 "No roles found matching the filter criteria.",
-            StatusCode = success ? (int)HttpStatusCode.OK : 
+            StatusCode = success ? (int)HttpStatusCode.OK :
                 (int)HttpStatusCode.NotFound,
             Pagination = new PaginatedList
             {

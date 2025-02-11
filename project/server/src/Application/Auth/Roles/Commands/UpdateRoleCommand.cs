@@ -10,25 +10,41 @@ using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Extensions;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
-public record UpdateRoleCommand(Guid Id, UpdateRoleDto Dto) : IRequest<Response<string>>;
+public record UpdateRoleCommand(
+    Guid Id, 
+    UpdateRoleDto Dto
+) : IRequest<Response<string>>;
 
 public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
     
-    public UpdateRoleHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public UpdateRoleHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(UpdateRoleCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error updating role.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("User not found");
+
         // Id Validation
         var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
@@ -65,14 +81,16 @@ public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<str
                 .WithData("Role not found.");
         }
 
-        if (role.LockUntil is true)
+        // Check for concurrency issues
+        if (role.IsLockedByOtherUser(currentUser.Id))
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Entity is currently locked.")
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
-                .WithData($"The role has been modified by another {role.LockedByUser!.UserName}. Please try again.");
+                .WithData(@$"The role has been modified by another {role.LockedByUser!.UserName}. 
+                    Please try again.");
         }
 
         // Check for concurrency issues
@@ -119,6 +137,18 @@ public class UpdateRoleHandler : IRequestHandler<UpdateRoleCommand, Response<str
                 .WithMessage("Error updating role.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
+                .WithData("Failed to update role.");
+        }
+
+        // Unlock result
+        var unlockResult = await _commonRepository.UnlockAsync<Role>(role.Id, token);
+        if(!unlockResult)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error updating role.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(unlockResult)
                 .WithData("Failed to update role.");
         }
             

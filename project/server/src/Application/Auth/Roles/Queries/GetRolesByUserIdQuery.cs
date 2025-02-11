@@ -10,10 +10,10 @@ using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
 
@@ -40,9 +40,8 @@ public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, Li
                 .WithData([]);
 
         // Searching Item
-        var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == query.Id};
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, token: token);
 
         // Check for existence
         if (user is null)

@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // Source
-using server.src.Domain.Dto.Common;
 using server.src.WebApi.Controllers;
-using server.src.Domain.Dto.Auth;
 using server.src.Application.Auth.Users.Interfaces;
+using server.src.Domain.Auth.Users.Dtos;
 
 namespace server.src.Api.Controllers.Auth.Users;
 
@@ -27,7 +26,7 @@ public class UserCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Register a new user", Description = "Registers a new user with the provided details.")]
     [SwaggerResponse(StatusCodes.Status201Created, "User registered successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid user data")]
-    public async Task<IActionResult> Register([FromBody] UserDto dto, CancellationToken token)
+    public async Task<IActionResult> Register([FromBody] CreateUserDto dto, CancellationToken token)
     {
         var result = await _userCommands.RegisterUserAsync(dto, true, token);
         return StatusCode(result.StatusCode, result);

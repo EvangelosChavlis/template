@@ -323,7 +323,7 @@ public class CommonRepository : ICommonRepository
         if (entity is null) 
             return false;
 
-        if (entity.IsNotLocked())
+        if (!entity.IsLocked())
             return false;
 
         var oldEntity = JsonSerializer.Deserialize<T>(JsonSerializer.Serialize(entity));

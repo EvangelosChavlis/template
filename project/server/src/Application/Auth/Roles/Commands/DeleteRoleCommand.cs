@@ -7,6 +7,7 @@ using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Extensions;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
@@ -16,16 +17,28 @@ public record DeleteRoleCommand(Guid Id, Guid Version) : IRequest<Response<strin
 public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
 
-    public DeleteRoleHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public DeleteRoleHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(DeleteRoleCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error activating role.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("Current user not found");
+
         // Id Validation
         var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
@@ -71,6 +84,18 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
                 .WithData("The role has been modified by another user. Please try again.");
+        }
+
+        // Check for concurrency issues
+        if (role.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"The role has been modified by another {role.LockedByUser!.UserName}. 
+                    Please try again.");
         }
 
         // Check if role is already active

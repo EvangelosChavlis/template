@@ -1,6 +1,7 @@
 // source
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
+using server.src.Domain.Common.Extensions;
 
 namespace server.src.Application.Auth.Roles.Mappings;
 
@@ -24,7 +25,7 @@ public static class ItemRoleDtoMapper
             Name: model.Name,
             Description: model.Description,
             IsActive: model.IsActive,
-            IsLocked: model.LockUntil,
+            IsLocked: model.IsLocked(),
             Version: model.Version
         );
 }

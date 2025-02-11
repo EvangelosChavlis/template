@@ -1,4 +1,4 @@
-using server.src.Domain.Models.Errors;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Common.Validators;
 

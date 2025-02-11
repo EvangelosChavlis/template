@@ -9,6 +9,7 @@ using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Auth.UserRoles.Models;
 using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Extensions;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
@@ -18,16 +19,28 @@ public record DeactivateRoleCommand(Guid Id, Guid Version) : IRequest<Response<s
 public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
     
-    public DeactivateRoleHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public DeactivateRoleHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(DeactivateRoleCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error deactivating role.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("Current user not found");
+
         // Id Validation
         var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
@@ -62,6 +75,18 @@ public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Resp
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("Role not found.");
+        }
+
+        // Check for concurrency issues
+        if (role.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"The role has been modified by another {role.LockedByUser!.UserName}. 
+                    Please try again.");
         }
 
         // Check for concurrency issues
@@ -123,7 +148,19 @@ public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Resp
                 .WithMessage("Error deactivating role.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
-                .WithData("Failed to deactivate role.");
+                .WithData("Failed to update role entity.");
+        }
+
+        // Unlock result
+        var unlockResult = await _commonRepository.UnlockAsync<Role>(role.Id, token);
+        if(!unlockResult)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error deactivating role.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(unlockResult)
+                .WithData("Failed to unlock role.");
         }
             
         // Commit Transaction

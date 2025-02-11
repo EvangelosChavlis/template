@@ -39,6 +39,12 @@ public class ListResponse<T>
     public string? Message { get; set; }
 
     /// <summary>
+    /// Gets or sets the list of permissions associated with the response.
+    /// This can be used to define access control and authorization rules.
+    /// </summary>
+    public string[]? Permissions { get; set; }
+
+    /// <summary>
     /// Sets the provided list of data to the response and returns the updated instance.
     /// This method allows for fluent chaining of the response object.
     /// </summary>
@@ -83,6 +89,18 @@ public class ListResponse<T>
     public ListResponse<T> WithMessage(string message)
     {
         this.Message = message;
+        return this;
+    }
+
+    /// <summary>
+    /// Sets the permissions for the response and returns the updated instance.
+    /// This method allows fluent chaining to define access control for the response.
+    /// </summary>
+    /// <param name="permissions">A list of permission strings.</param>
+    /// <returns>The updated <see cref="ListResponse{T}"/> instance.</returns>
+    public ListResponse<T> WithPermissions(string[] permissions)
+    {
+        this.Permissions = permissions;
         return this;
     }
 }
