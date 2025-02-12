@@ -1,5 +1,5 @@
 // source
-using server.src.Domain.Dto.Common;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Application.Auth.UserLogouts.Interfaces;
 

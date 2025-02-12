@@ -47,7 +47,7 @@ public class GetRolesHandler : IRequestHandler<GetRolesQuery, ListResponse<List<
         // Including
         var includes = RoleIncludes.GetRolesIncludes();
         // Projection
-        var projection = RoleProjections.GetRoleProjection();
+        var projection = RoleProjections.GetRolesProjection();
         // Paging
         var pagedRoles = await _commonRepository.GetPagedResultsAsync(
             pageParams,

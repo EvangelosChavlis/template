@@ -5,9 +5,9 @@ using System.Security.Claims;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 
@@ -51,9 +51,8 @@ public class RefreshTokenHandler : IRequestHandler<RefreshTokenCommand, Response
         }
 
         // Searching Item
-        var userIncludes = new Expression<Func<User, object>>[] { };
-        var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == userGuid }; // Compare with Guid
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == userGuid };
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, token: token);
 
         // Check for existence
         if (user is null)

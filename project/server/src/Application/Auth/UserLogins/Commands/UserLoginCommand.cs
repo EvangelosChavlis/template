@@ -5,6 +5,7 @@ using System.Net;
 // source
 using server.src.Application.Auth.Roles.Validators;
 using server.src.Application.Auth.UserLogins.Mappings;
+using server.src.Application.Auth.UserLogins.Validators;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Common.Interfaces;
 using server.src.Domain.Auth.Users.Dtos;
@@ -35,7 +36,7 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
     public async Task<Response<AuthenticatedUserDto>> Handle(UserLoginCommand command, CancellationToken token = default)
     {
         // Dto Validation
-        var dtoValidationResult = UserLoginValidators.Validate(command.Dto);
+        var dtoValidationResult = UserLoginDtoValidators.Validate(command.Dto);
         if (!dtoValidationResult.IsValid)
             return new Response<AuthenticatedUserDto>()
                 .WithMessage(string.Join("\n", dtoValidationResult.Errors))
@@ -49,7 +50,7 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
         // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { u => u.UserName!.Equals(command.Dto.Username) };
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token: token);
 
         // Check for existence
         if (user is null)
@@ -99,7 +100,7 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
                 user.LockoutEnabled = true;
             }
 
-            var modelValidationResult = UserValidators.Validate(user);
+            var modelValidationResult = UserModelValidators.Validate(user);
             if (!modelValidationResult.IsValid)
             {
                 await _unitOfWork.RollbackTransactionAsync(token);
@@ -150,7 +151,7 @@ public class UserLoginHandler : IRequestHandler<UserLoginCommand, Response<Authe
             user.LockoutEnd = null;
             
 
-            var modelValidationResult = UserValidators.Validate(user);
+            var modelValidationResult = UserModelValidators.Validate(user);
             if (!modelValidationResult.IsValid)
             {
                 await _unitOfWork.RollbackTransactionAsync(token);

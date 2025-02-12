@@ -1,25 +1,23 @@
 // source
 using server.src.Application.Auth.UserLogouts.Commands;
 using server.src.Application.Auth.UserLogouts.Interfaces;
-using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Common;
+using server.src.Application.Common.Services;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Application.Auth.UserLogins.Services;
 
 public class UserLogoutCommands : IUserLogoutCommands
 {
-    private readonly IRequestHandler<UserLogoutCommand, Response<string>> _userLogoutHandler;
+    private readonly RequestExecutor _requestExecutor;
 
-    public UserLogoutCommands(
-        IRequestHandler<UserLogoutCommand, Response<string>> userLogoutHandler
-    )
+    public UserLogoutCommands(RequestExecutor requestExecutor)
     {
-        _userLogoutHandler = userLogoutHandler;
+        _requestExecutor = requestExecutor;
     }
 
     public async Task<Response<string>> UserLogoutAsync(Guid userId, CancellationToken token = default)
     {
         var command = new UserLogoutCommand(userId);
-        return await _userLogoutHandler.Handle(command, token);
+        return await _requestExecutor.Execute<UserLogoutCommand, Response<string>>(command, token);
     }
 }

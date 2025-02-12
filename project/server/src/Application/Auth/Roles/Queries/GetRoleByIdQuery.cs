@@ -11,6 +11,7 @@ using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Common.Extensions;
 using server.src.Domain.Common.Dtos;
 using server.src.Persistence.Common.Interfaces;
+using server.src.Application.Auth.Roles.Projections;
 
 namespace server.src.Application.Auth.Roles.Queries;
 
@@ -49,14 +50,7 @@ public class GetRoleByIdHandler : IRequestHandler<GetRoleByIdQuery, Response<Ite
         // Searching Item
         var includes = new Expression<Func<Role, object>>[] { };
         var filters = new Expression<Func<Role, bool>>[] { x => x.Id == query.Id};
-        var projection = (Expression<Func<Role, Role>>)(r => new Role 
-        { 
-            Id = r.Id, 
-            Name = r.Name,
-            Description = r.Description,
-            IsActive = r.IsActive,
-            Version = r.Version 
-        });
+        var projection = RoleProjections.GetRoleByIdProjection();
         var role = await _commonRepository.GetResultByIdAsync(filters, includes, 
             projection, token);
 

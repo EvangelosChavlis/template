@@ -3,6 +3,7 @@ using server.src.Domain.Auth.UserClaims.Models;
 using server.src.Domain.Auth.UserLogins.Models;
 using server.src.Domain.Auth.UserLogouts.Models;
 using server.src.Domain.Auth.UserRoles.Models;
+using server.src.Domain.Common.Models;
 using server.src.Domain.Metrics.AuditLogs.Models;
 using server.src.Domain.Metrics.LogErrors.Models;
 using server.src.Domain.Metrics.Stories;
@@ -13,15 +14,9 @@ namespace server.src.Domain.Auth.Users.Models;
 /// <summary>
 /// Represents a user in the authentication system, including properties for authentication, contact, and profile information.
 /// </summary>
-public class User
+public class User : BaseEntity
 {
     #region Authentication Information
-
-    /// <summary>
-    /// Gets or sets the unique identifier for the user.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the normalized username used for authentication.
     /// </summary>
@@ -197,11 +192,7 @@ public class User
     /// Gets or sets a value indicating whether the user is active in the system.
     /// </summary>
     public bool IsActive { get; set; }
-
-    /// <summary>
-    /// Gets or sets the version GUID for optimistic concurrency control.
-    /// </summary>
-    public Guid Version { get; set; }
+    
     #endregion
 
     #region Navigation properties

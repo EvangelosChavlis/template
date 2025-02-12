@@ -6,12 +6,15 @@ using System.Net;
 using server.src.Application.Auth.UserLogins.Filters;
 using server.src.Application.Auth.UserLogins.Includes;
 using server.src.Application.Auth.UserLogins.Mappings;
+using server.src.Application.Auth.UserLogins.Projections;
+using server.src.Application.Auth.Users.Projections;
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.UserLogins.Dtos;
+using server.src.Domain.Auth.UserLogins.Models;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.UserLogins.Queries;
 
@@ -31,7 +34,8 @@ public class GetLoginsByUserIdHandler : IRequestHandler<GetLoginsByUserIdQuery, 
         // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { u => u.Id == query.Id};
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var userProjection = UserProjections.GetUserProjection();
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, userProjection, token);
 
         // Check for existence
         if (user is null)
@@ -54,13 +58,20 @@ public class GetLoginsByUserIdHandler : IRequestHandler<GetLoginsByUserIdQuery, 
         Expression<Func<UserLogin, bool>>? filter = null;
         if (pageParams.HasFilter) filter = pageParams.Filter!.UserLoginSearchFilter();
 
-        var filters = filter.UserLoginMatchFilters();
+        var filters = filter.UserLoginMatchFilters(user.Id);
 
         // Including
         var includes = UserLoginIncludes.GetUserLoginsIncludes();
-
+        // Projection
+        var projection = UserLoginProjections.GetUserLoginsProjection();
         // Paging
-        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
+        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(
+            pageParams, 
+            filters, 
+            includes,
+            projection, 
+            token
+        );
         // Mapping
         var dto = pagedUserLogins.Rows.Select(ul => ul.ListItemUserLoginDtoMapping()).ToList();
 

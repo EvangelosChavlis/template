@@ -6,6 +6,7 @@ using System.Net;
 using server.src.Application.Auth.Roles.Filters;
 using server.src.Application.Auth.Roles.Includes;
 using server.src.Application.Auth.Roles.Mappings;
+using server.src.Application.Auth.Roles.Projections;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Dtos;
@@ -17,9 +18,9 @@ using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
 
-public record GetRolesByUserIdQuery(Guid Id, UrlQuery UrlQuery) : IRequest<ListResponse<List<ItemRoleDto>>>;
+public record GetRolesByUserIdQuery(Guid Id, UrlQuery UrlQuery) : IRequest<ListResponse<List<ListItemRoleDto>>>;
 
-public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, ListResponse<List<ItemRoleDto>>>
+public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, ListResponse<List<ListItemRoleDto>>>
 {
     private readonly ICommonRepository _commonRepository;
     
@@ -28,13 +29,13 @@ public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, Li
         _commonRepository = commonRepository;
     }
 
-    public async Task<ListResponse<List<ItemRoleDto>>> Handle(GetRolesByUserIdQuery query, CancellationToken token = default)
+    public async Task<ListResponse<List<ListItemRoleDto>>> Handle(GetRolesByUserIdQuery query, CancellationToken token = default)
     {
         // Validation
         var validationResult = query.Id.ValidateId();
         
         if (!validationResult.IsValid)
-            return new ListResponse<List<ItemRoleDto>>()
+            return new ListResponse<List<ListItemRoleDto>>()
                 .WithMessage(string.Join("\n", validationResult.Errors))
                 .WithSuccess(validationResult.IsValid)
                 .WithData([]);
@@ -45,7 +46,7 @@ public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, Li
 
         // Check for existence
         if (user is null)
-            return new ListResponse<List<ItemRoleDto>>()
+            return new ListResponse<List<ListItemRoleDto>>()
                 .WithMessage("User not found")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
@@ -67,18 +68,25 @@ public class GetRolesByUserIdHandler : IRequestHandler<GetRolesByUserIdQuery, Li
         var filters = filter.RoleMatchFilters(user.Id);
 
         // Including
-        var includes = RoleIncludes.GetRolesByUserIdIncludes();
-
+        var includes = RoleIncludes.GetRolesIncludes();
+        // Projection
+        var projection = RoleProjections.GetRolesProjection();
         // Paging
-        var pagedRoles = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
+        var pagedRoles = await _commonRepository.GetPagedResultsAsync(
+            pageParams,
+            filters,
+            includes,
+            projection,
+            token
+        );
         // Mapping
-        var dto = pagedRoles.Rows.Select(r => r.ItemRoleDtoMapping()).ToList();
+        var dto = pagedRoles.Rows.Select(r => r.ListItemRoleDtoMapping()).ToList();
 
         // Determine success 
         var success = pagedRoles.Rows.Count > 0;
 
         // Initializing object
-        return new ListResponse<List<ItemRoleDto>>()
+        return new ListResponse<List<ListItemRoleDto>>()
         {
             Data = dto,
             Success = success,

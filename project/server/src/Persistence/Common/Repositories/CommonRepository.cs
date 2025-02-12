@@ -3,6 +3,8 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+
 
 // source
 using server.src.Domain.Common.Extensions;
@@ -265,6 +267,7 @@ public class CommonRepository : ICommonRepository
         return result;
     }
 
+
     public async Task<bool> DeleteAsync<T>(
         T entity, 
         CancellationToken token = default
@@ -290,54 +293,77 @@ public class CommonRepository : ICommonRepository
         CancellationToken token = default
     ) where T : BaseEntity
     {
-        var entity = await _context.Set<T>().FindAsync([entityId], token);
+        var dbSet = _context.Set<T>();
+
+        var existingEntity = await dbSet
+            .AsNoTracking()
+            .FirstOrDefaultAsync(e => EF.Property<object>(e, "Id").Equals(entityId), token);
         
-        if (entity is null)
-            return false;
+        if (existingEntity is null) return false;
 
-        if (entity.IsLocked())
-            return false;
-        
-        var oldEntity = JsonSerializer.Deserialize<T>(JsonSerializer.Serialize(entity));
+        if (existingEntity.IsLocked()) return false;
 
-        entity.LockUntil = DateTime.UtcNow.Add(duration);
-        entity.UserLockedId = userId;
-        
-        _context.Set<T>().Update(entity);
-        var result = await _unitOfWork.CommitAsync(token);
+        var result = await dbSet
+            .Where(e => EF.Property<object>(e, "Id").Equals(entityId))
+            .ExecuteUpdateAsync(update => update
+                .SetProperty(e => e.LockUntil, DateTime.UtcNow.Add(duration))
+                .SetProperty(e => e.UserLockedId, userId), token);
 
-        if (result)
-            await _auditLogHelper.CreateAuditLogAsync(oldEntity, entity, token);
+        if (result > 0)
+        {
+            var commitResult = await _unitOfWork.CommitAsync(token);
+            if (commitResult)
+            {
+                var updatedEntity = await dbSet
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(e => EF.Property<object>(e, "Id").Equals(entityId), token);
 
-        return result;
+                if (updatedEntity is not null)
+                    await _auditLogHelper.CreateAuditLogAsync(existingEntity, updatedEntity, token);
+            }
+            return commitResult;
+        }
+
+        return false;
     }
-
 
     public async Task<bool> UnlockAsync<T>(
         Guid entityId, 
         CancellationToken token = default
     ) where T : BaseEntity
     {
-        var entity = await _context.Set<T>().FindAsync([entityId], token);
-        
-        if (entity is null) 
-            return false;
+        var dbSet = _context.Set<T>();
 
-        if (!entity.IsLocked())
-            return false;
+        var existingEntity = await dbSet
+            .AsNoTracking()
+            .FirstOrDefaultAsync(e => EF.Property<object>(e, "Id").Equals(entityId), token);
 
-        var oldEntity = JsonSerializer.Deserialize<T>(JsonSerializer.Serialize(entity));
-        
-        entity.LockUntil = null;
-        entity.UserLockedId = null;
-        
-        _context.Set<T>().Update(entity);
-        
-        var result = await _unitOfWork.CommitAsync(token);
+        if (existingEntity is null) return false;
 
-        if (result)
-            await _auditLogHelper.CreateAuditLogAsync(oldEntity, entity, token);
+        if (!existingEntity.IsLocked()) return false;
 
-        return result;
+        var result = await dbSet
+            .Where(e => EF.Property<object>(e, "Id").Equals(entityId))
+            .ExecuteUpdateAsync(update => update
+                .SetProperty(e => e.LockUntil, (DateTime?)null)
+                .SetProperty(e => e.UserLockedId, (Guid?)null),
+            token);
+
+        if (result > 0)
+        {
+            var commitResult = await _unitOfWork.CommitAsync(token);
+            if (commitResult)
+            {
+                var updatedEntity = await dbSet
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(e => EF.Property<object>(e, "Id").Equals(entityId), token);
+
+                if (updatedEntity is not null)
+                    await _auditLogHelper.CreateAuditLogAsync(existingEntity, updatedEntity, token);
+            }
+            return commitResult;
+        }
+
+        return false;
     }
 }

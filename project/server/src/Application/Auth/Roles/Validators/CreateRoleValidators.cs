@@ -1,7 +1,7 @@
 // source
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Roles.Dtos;
-using server.src.Domain.Models.Errors;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.Roles.Validators;
 

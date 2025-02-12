@@ -74,17 +74,6 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
                 .WithSuccess(false)
                 .WithData("Role not found.");
         }
-            
-        // Check for concurrency issues
-        if (role.Version != command.Version)
-        {
-            await _unitOfWork.RollbackTransactionAsync(token);
-            return new Response<string>()
-                .WithMessage("Concurrency conflict.")
-                .WithStatusCode((int)HttpStatusCode.Conflict)
-                .WithSuccess(false)
-                .WithData("The role has been modified by another user. Please try again.");
-        }
 
         // Check for concurrency issues
         if (role.IsLockedByOtherUser(currentUser.Id))
@@ -96,6 +85,17 @@ public class DeleteRoleHandler : IRequestHandler<DeleteRoleCommand, Response<str
                 .WithSuccess(false)
                 .WithData(@$"The role has been modified by another {role.LockedByUser!.UserName}. 
                     Please try again.");
+        }
+            
+        // Check for concurrency issues
+        if (role.Version != command.Version)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Concurrency conflict.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData("The role has been modified by another user. Please try again.");
         }
 
         // Check if role is already active

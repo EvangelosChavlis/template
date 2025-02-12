@@ -1,6 +1,7 @@
 // source
 using server.src.Application.Common.Commands;
 using server.src.Application.Common.Interfaces;
+using server.src.Domain.Common.Dtos;
 using server.src.Domain.Dto.Common;
 
 namespace server.src.Application.Common.Services;

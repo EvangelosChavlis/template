@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 
 // source
-using server.src.Domain.Models.Auth;
+using server.src.Domain.Auth.UserLogouts.Models;
 
 namespace server.src.Application.Auth.UserLogouts.Filters;
 
@@ -16,11 +16,13 @@ public static class UserLogoutFilters
             ul.ProviderDisplayName.Contains(filter ?? "");
     }
 
-    public static Expression<Func<UserLogout, bool>>[] UserLogoutMatchFilters(this Expression<Func<UserLogout, bool>>? filter)
+    public static Expression<Func<UserLogout, bool>>[] UserLogoutMatchFilters(
+        this Expression<Func<UserLogout, bool>>? filter, Guid userId)
     {
         var filters = new Expression<Func<UserLogout, bool>>[]
         {
-            filter!
+            filter!,
+            ul => ul.UserId == userId
         };
 
         return filters;

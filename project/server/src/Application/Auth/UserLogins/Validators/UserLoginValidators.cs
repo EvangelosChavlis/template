@@ -1,33 +1,11 @@
 // source
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Errors;
+using server.src.Domain.Auth.UserLogins.Models;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.Roles.Validators;
 
 public static class UserLoginValidators
 {
-    public static ValidationResult Validate(UserLoginDto dto)
-    {
-        var errors = new List<string>();
-
-        // Validation for Username
-        if (string.IsNullOrWhiteSpace(dto.Username))
-            errors.Add("Username is required.");
-        else if (ContainsInjectionCharacters(dto.Username))
-            errors.Add("Username contains invalid characters.");
-        else if (ContainsNonPrintableCharacters(dto.Username))
-            errors.Add("Username contains non-printable characters.");
-
-        // Validation for Password
-        if (string.IsNullOrWhiteSpace(dto.Password))
-            errors.Add("Password is required.");
-
-        // Return validation result
-        return errors.Count > 0 ? 
-            ValidationResult.Failure(errors) : ValidationResult.Success();
-    }
-
     public static ValidationResult Validate(UserLogin model)
     {
         var errors = new List<string>();
@@ -53,19 +31,5 @@ public static class UserLoginValidators
         // Return validation result
         return errors.Count > 0 ? 
             ValidationResult.Failure(errors) : ValidationResult.Success();
-    }
-
-    // Helper method to check for dangerous characters in input (SQL Injection prevention)
-    private static bool ContainsInjectionCharacters(string input)
-    {
-        var dangerousChars = new[] { "'", ";", "--", "<", ">", 
-            "/*", "*/", "=", "%", "@", "!", "#", "$", "^", "&" };
-        return dangerousChars.Any(c => input.Contains(c));
-    }
-
-    // Helper method to check for non-printable characters (e.g., control characters)
-    private static bool ContainsNonPrintableCharacters(string input)
-    {
-        return input.Any(c => char.IsControl(c));
     }
 }

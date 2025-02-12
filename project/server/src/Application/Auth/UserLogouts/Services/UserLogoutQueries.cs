@@ -1,37 +1,34 @@
 // source
 using server.src.Application.Auth.UserLogouts.Interfaces;
 using server.src.Application.Auth.UserLogouts.Queries;
-using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Common;
+using server.src.Application.Common.Services;
+using server.src.Domain.Auth.UserLogouts;
+using server.src.Domain.Auth.UserLogouts.Dtos;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.UserLogouts.Services;
 
 public class UserLogoutQueries : IUserLogoutQueries
 {
-    private readonly IRequestHandler<GetLogoutsByUserIdQuery, ListResponse<List<ListItemUserLogoutDto>>> _getLogoutsByUserIdHandler;
-    private readonly IRequestHandler<GetUserLogoutByIdQuery, Response<ItemUserLogoutDto>> _getUserLogoutByIdHandler;
+    private readonly RequestExecutor _requestExecutor;
 
-    public UserLogoutQueries(
-        IRequestHandler<GetLogoutsByUserIdQuery, ListResponse<List<ListItemUserLogoutDto>>> getLogoutsByUserIdHandler,
-        IRequestHandler<GetUserLogoutByIdQuery, Response<ItemUserLogoutDto>> getUserLogoutByIdHandler)
+    public UserLogoutQueries(RequestExecutor requestExecutor)
     {
-        _getLogoutsByUserIdHandler = getLogoutsByUserIdHandler;
-        _getUserLogoutByIdHandler = getUserLogoutByIdHandler;
+        _requestExecutor = requestExecutor;
     }
 
-    public async Task<ListResponse<List<ListItemUserLogoutDto>>> GetLogoutsByUserIdAsync(Guid id, UrlQuery urlQuery, 
-        CancellationToken token = default)
+    public async Task<ListResponse<List<ListItemUserLogoutDto>>> GetLogoutsByUserIdAsync(Guid id, 
+        UrlQuery urlQuery, CancellationToken token = default)
     {
         var query = new GetLogoutsByUserIdQuery(id, urlQuery);
-        return await _getLogoutsByUserIdHandler.Handle(query, token);
+        return await _requestExecutor.Execute<GetLogoutsByUserIdQuery, ListResponse<List<ListItemUserLogoutDto>>>(query, token);
     }
 
     public async Task<Response<ItemUserLogoutDto>> GetUserLogoutByIdAsync(Guid id, 
         CancellationToken token = default)
     {
         var query = new GetUserLogoutByIdQuery(id);
-        return await _getUserLogoutByIdHandler.Handle(query, token);
+        return await _requestExecutor.Execute<GetUserLogoutByIdQuery, Response<ItemUserLogoutDto>>(query, token);
     }
 }

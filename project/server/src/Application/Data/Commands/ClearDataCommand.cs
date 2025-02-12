@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Common;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Contexts;
 using server.src.Persistence.Contexts;
 
 namespace server.src.Application.Data.Commands;

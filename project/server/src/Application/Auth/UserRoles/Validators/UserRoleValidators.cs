@@ -1,23 +1,10 @@
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Errors;
+using server.src.Domain.Auth.UserRoles.Models;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.UserRoles.Validators;
 
 public static class UserRoleValidators
 {
-    public static ValidationResult Validate(Guid id)
-    {
-        var errors = new List<string>();
-
-        // Validation for Id
-        if (id == Guid.Empty)
-            errors.Add("Invalid ID. The GUID must not be empty.");
-
-        // Return validation result
-        return errors.Count > 0 ? 
-            ValidationResult.Failure(errors) : ValidationResult.Success();
-    }
-
     public static ValidationResult Validate(UserRole model)
     {
         var errors = new List<string>();

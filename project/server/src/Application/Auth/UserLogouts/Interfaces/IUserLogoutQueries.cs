@@ -1,7 +1,8 @@
 // source
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Common;
+using server.src.Domain.Auth.UserLogouts;
+using server.src.Domain.Auth.UserLogouts.Dtos;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.UserLogouts.Interfaces;
 

@@ -4,15 +4,14 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.UserRoles.Interfaces;
+using server.src.Application.Auth.Users.Mappings;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Users.Mappings;
 using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Auth.Users.Dtos;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Users.Models;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 
@@ -49,9 +48,8 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var emailIncludes = new Expression<Func<User, object>>[] { };
         var emailFilters = new Expression<Func<User, bool>>[] { x => x.Email!.Equals(command.Dto.Email) };
-        var existingEmail = await _commonRepository.GetResultByIdAsync(emailFilters, emailIncludes, token);
+        var existingEmail = await _commonRepository.GetResultByIdAsync(emailFilters, token: token);
 
         // Check if user with this email already exists in the system
         if (existingEmail is not null)
@@ -65,9 +63,8 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         }
 
         // Searching Item for existing username
-        var userNameIncludes = new Expression<Func<User, object>>[] { };
         var userNameFilters = new Expression<Func<User, bool>>[] { x => x.UserName!.Equals(command.Dto.UserName) };
-        var existingUserName = await _commonRepository.GetResultByIdAsync(userNameFilters, userNameIncludes, token);
+        var existingUserName = await _commonRepository.GetResultByIdAsync(userNameFilters, token: token);
 
         // Check if user with this username already exists in the system
         if (existingUserName is not null)
@@ -97,7 +94,7 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
 
         // Mapping and Saving User
         var user = command.Dto.CreateUserModelMapping(command.Registered, encryptedUserDto);
-        var modelValidationResult = UserValidators.Validate(user);
+        var modelValidationResult = UserModelValidators.Validate(user);
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -121,9 +118,8 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
         }
 
         // Searching for the Role (e.g., 'User' role)
-        var roleIncludes = new Expression<Func<Role, object>>[] { };
         var roleFilters = new Expression<Func<Role, bool>>[] { x => x.Name!.Equals("User") };
-        var role = await _commonRepository.GetResultByIdAsync(roleFilters, roleIncludes, token);
+        var role = await _commonRepository.GetResultByIdAsync(roleFilters, token: token);
 
         // Check for existence
         if (role is null)

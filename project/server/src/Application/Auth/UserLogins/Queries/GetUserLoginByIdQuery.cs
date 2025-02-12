@@ -5,10 +5,10 @@ using System.Net;
 // source
 using server.src.Application.Auth.UserLogins.Mappings;
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.UserLogins.Dtos;
+using server.src.Domain.Auth.UserLogins.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.UserLogins.Queries;
 
@@ -28,7 +28,7 @@ public class GetUserLoginByIdHandler : IRequestHandler<GetUserLoginByIdQuery, Re
         // Searching Item
         var includes = new Expression<Func<UserLogin, object>>[] { ul => ul.User };
         var filters = new Expression<Func<UserLogin, bool>>[] { ul => ul.Id == query.Id};
-        var userLogin = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var userLogin = await _commonRepository.GetResultByIdAsync(filters, includes, token: token);
 
         // Check for existence
         if (userLogin is null)
@@ -36,7 +36,7 @@ public class GetUserLoginByIdHandler : IRequestHandler<GetUserLoginByIdQuery, Re
                 .WithMessage("User not found")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData(UserLoginMappings.ErrorItemUserLoginDtoMapping());
+                .WithData(ErrorItemUserLoginDtoMapper.ErrorItemUserLoginDtoMapping());
 
         // Mapping
         var dto = userLogin.ItemUserLoginDtoMapping();

@@ -7,11 +7,11 @@ using server.src.Application.Auth.Roles.Filters;
 using server.src.Application.Auth.Users.Includes;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Auth.Users.Mappings;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Persistence.Common.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Auth.Users.Dtos;
+using server.src.Domain.Auth.Users.Models;
 
 namespace server.src.Application.Auth.Users.Queries;
 
@@ -44,10 +44,9 @@ public class GetUsersHandler : IRequestHandler<GetUsersQuery, ListResponse<List<
         var filters = filter.UserMatchFilters();
 
         // Including
-        var includes = UserIncludes.GetUsersIncludes();
-
+        var includes = UserIncludes.GetUsersIncludes(); 
         // Paging
-        var pagedUsers = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
+        var pagedUsers = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token: token);
         // Mapping
         var dto = pagedUsers.Rows.Select(a => a.ListItemUserDtoMapping()).ToList();
 

@@ -1,6 +1,6 @@
 // source
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Common;
+using server.src.Domain.Auth.UserLogins.Models;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.UserLogins.Includes;
 

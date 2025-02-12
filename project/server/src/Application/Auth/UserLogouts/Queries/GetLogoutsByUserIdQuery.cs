@@ -6,12 +6,15 @@ using System.Net;
 using server.src.Application.Auth.UserLogouts.Filters;
 using server.src.Application.Auth.UserLogouts.Includes;
 using server.src.Application.Auth.UserLogouts.Mappings;
+using server.src.Application.Auth.UserLogouts.Projection;
+using server.src.Application.Auth.Users.Projections;
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Auth.UserLogouts;
+using server.src.Domain.Auth.UserLogouts.Models;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.UserLogouts.Queries;
 
@@ -31,7 +34,8 @@ public class GetLogoutsByUserIdHandler : IRequestHandler<GetLogoutsByUserIdQuery
         // Searching Item
         var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { u => u.Id == query.Id};
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var userProjection = UserProjections.GetUserProjection();
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, userProjection, token);
 
         // Check for existence
         if (user is null)
@@ -54,13 +58,20 @@ public class GetLogoutsByUserIdHandler : IRequestHandler<GetLogoutsByUserIdQuery
         Expression<Func<UserLogout, bool>>? filter = null;
         if (pageParams.HasFilter) filter = pageParams.Filter!.UserLogoutSearchFilter();
 
-        var filters = filter.UserLogoutMatchFilters();
+        var filters = filter.UserLogoutMatchFilters(user.Id);
 
         // Including
         var includes = UserLogoutIncludes.GetUserLogoutIncludes();
-
+        // Projection
+        var projection = UserLogoutProjections.GetUserLogoutsProjection();
         // Paging
-        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
+        var pagedUserLogins = await _commonRepository.GetPagedResultsAsync(
+            pageParams, 
+            filters, 
+            includes, 
+            projection, 
+            token
+        );
         // Mapping
         var dto = pagedUserLogins.Rows.Select(ul => ul.ListItemUserLogoutDtoMapping()).ToList();
 
@@ -84,6 +95,4 @@ public class GetLogoutsByUserIdHandler : IRequestHandler<GetLogoutsByUserIdQuery
             }
         };
     }
-
 }
-    

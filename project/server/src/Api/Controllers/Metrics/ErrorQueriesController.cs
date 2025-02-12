@@ -16,9 +16,9 @@ namespace server.src.WebApi.Controllers.Metrics;
 [Authorize(Roles = "Administrator")]
 public class ErrorQueriesController : BaseApiController
 {
-    private readonly IErrorQueries _errorQueries;
+    private readonly ILogErrorQueries _errorQueries;
     
-    public ErrorQueriesController(IErrorQueries errorQueries)
+    public ErrorQueriesController(ILogErrorQueries errorQueries)
     {
         _errorQueries = errorQueries;
     }

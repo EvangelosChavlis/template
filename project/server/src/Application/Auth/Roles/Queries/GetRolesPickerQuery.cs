@@ -4,11 +4,12 @@ using System.Net;
 
 // source
 using server.src.Application.Auth.Roles.Mappings;
+using server.src.Application.Auth.Roles.Projections;
 using server.src.Application.Common.Interfaces;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Dto.Common;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Queries;
 
@@ -27,7 +28,8 @@ public class GetRolesPickerHandler : IRequestHandler<GetRolesPickerQuery, Respon
     {
         // Searching Items
         var filters = new Expression<Func<Role, bool>>[] { r => r.IsActive == true };
-        var roles = await _commonRepository.GetResultPickerAsync(filters, token);
+        var projection = RoleProjections.GetRolesPickerProjection();
+        var roles = await _commonRepository.GetResultPickerAsync(filters, projection, token);
 
         // Mapping
         var dto = roles.Select(r => r.PickerRoleDtoMapping()).ToList();

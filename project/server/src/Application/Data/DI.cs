@@ -1,0 +1,41 @@
+// packages
+using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
+
+// source
+using server.src.Application.Auth.Roles.Services;
+using server.src.Application.Data.Interfaces;
+using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Services;
+
+namespace server.src.Application.Data;
+
+public static class DI
+{
+    public static IServiceCollection AddData(this IServiceCollection services)
+    {   
+        var assembly = Assembly.GetExecutingAssembly();
+        
+        // Register all IRequestHandler<TRequest, TResponse> implementations dynamically
+        var handlerTypes = assembly.GetTypes()
+            .Where(t => t.GetInterfaces()
+                .Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IRequestHandler<,>)))
+            .ToList();
+
+        foreach (var handlerType in handlerTypes)
+        {
+            var interfaceType = handlerType.GetInterfaces().First(i => 
+                i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IRequestHandler<,>));
+
+            services.AddScoped(interfaceType, handlerType);
+        }
+
+        // Register RequestExecutor
+        services.AddSingleton<RequestExecutor>();
+
+        // Register DataCommands
+        services.AddTransient<IDataCommands, DataCommands>();
+
+        return services;
+    }
+}

@@ -4,13 +4,13 @@ using System.Text.RegularExpressions;
 // source
 using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Users.Dtos;
-using server.src.Domain.Models.Errors;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.Users.Validators;
 
 public static class CreateUserValidators
 {
-    public static ValidationResult Validate(CreateUserDto dto)
+    public static ValidationResult Validate(this CreateUserDto dto)
     {
         var errors = new List<string>();
 

@@ -63,7 +63,7 @@ public class ActivateRoleHandler : IRequestHandler<ActivateRoleCommand, Response
 
         // Searching Item
         var roleFilters = new Expression<Func<Role, bool>>[] { r => r.Id == command.Id};
-        var role = await _commonRepository.GetResultByIdAsync(roleFilters,  token: token);
+        var role = await _commonRepository.GetResultByIdAsync(roleFilters, token: token);
 
         // Check for existence
         if (role is null)

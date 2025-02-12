@@ -1,22 +1,18 @@
 // source
 using server.src.Application.Auth.UserRoles.Commands;
 using server.src.Application.Auth.UserRoles.Interfaces;
-using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Common;
+using server.src.Application.Common.Services;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Application.Auth.UserRoles.Services;
 
 public class UserRoleCommands : IUserRoleCommands
 {
-    private readonly IRequestHandler<AssingRoleToUserCommand, Response<string>> _assingRoleToUserHander;
-    private readonly IRequestHandler<UnassignRoleFromUserCommand, Response<string>> _unassignRoleFromUserHandler;
+    private readonly RequestExecutor _requestExecutor;
 
-    public UserRoleCommands(
-        IRequestHandler<AssingRoleToUserCommand, Response<string>> assingRoleToUserHander,
-        IRequestHandler<UnassignRoleFromUserCommand, Response<string>> unassignRoleFromUserHandler)
+    public UserRoleCommands(RequestExecutor requestExecutor)
     {
-        _assingRoleToUserHander = assingRoleToUserHander;
-        _unassignRoleFromUserHandler = unassignRoleFromUserHandler;
+        _requestExecutor = requestExecutor;
     }
 
 
@@ -24,14 +20,14 @@ public class UserRoleCommands : IUserRoleCommands
         Guid roleId, CancellationToken token = default)
     {
         var command = new AssingRoleToUserCommand(userId, roleId);
-        return await _assingRoleToUserHander.Handle(command, token);
+        return await _requestExecutor.Execute<AssingRoleToUserCommand, Response<string>>(command, token);
     }
 
     public async Task<Response<string>> UnassignRoleFromUserAsync(Guid userId, 
         Guid roleId, CancellationToken token = default)
     {
         var command = new UnassignRoleFromUserCommand(userId, roleId);
-        return await _unassignRoleFromUserHandler.Handle(command, token);
+        return await _requestExecutor.Execute<UnassignRoleFromUserCommand, Response<string>>(command, token);
     }
 
 }

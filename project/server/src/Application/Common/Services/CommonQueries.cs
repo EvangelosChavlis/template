@@ -10,76 +10,57 @@ namespace server.src.Application.Common.Services;
 
 public class CommonQueries : ICommonQueries
 {
-    private readonly IRequestHandler<CurrentUserQuery, CurrentUserDto> _currentUserHandler;
-    private readonly IRequestHandler<DecryptSensitiveDataQuery, object> _decryptSensitiveDataHandler;
-    private readonly IRequestHandler<EncryptSensitiveDataQuery, string> _encryptSensitiveDataHandler;
-    private readonly IRequestHandler<GeneratePasswordQuery, string> _generatePasswordHandler;
-    private readonly IRequestHandler<GetPrincipalFromExpiredTokenQuery, ClaimsPrincipal> _getPrincipalFromExpiredTokenHandler;
-    private readonly IRequestHandler<HashPasswordQuery, string> _hashPasswordHandler;
-    private readonly IRequestHandler<VerifyPasswordQuery, bool> _verifyPasswordHandler;
+    private readonly RequestExecutor _requestExecutor;
 
-    public CommonQueries(
-        IRequestHandler<CurrentUserQuery, CurrentUserDto> currentUserHandler,
-        IRequestHandler<DecryptSensitiveDataQuery, object> decryptSensitiveDataHandler,
-        IRequestHandler<EncryptSensitiveDataQuery, string> encryptSensitiveDataHandler,
-        IRequestHandler<GeneratePasswordQuery, string> generatePasswordHandler,
-        IRequestHandler<GetPrincipalFromExpiredTokenQuery, ClaimsPrincipal> getPrincipalFromExpiredTokenHandler,
-        IRequestHandler<HashPasswordQuery, string> hashPasswordHandler,
-        IRequestHandler<VerifyPasswordQuery, bool> verifyPasswordHandler)
+    public CommonQueries(RequestExecutor requestExecutor)
     {
-        _currentUserHandler = currentUserHandler;
-        _decryptSensitiveDataHandler = decryptSensitiveDataHandler;
-        _encryptSensitiveDataHandler = encryptSensitiveDataHandler;
-        _generatePasswordHandler = generatePasswordHandler;
-        _getPrincipalFromExpiredTokenHandler = getPrincipalFromExpiredTokenHandler;
-        _hashPasswordHandler = hashPasswordHandler;
-        _verifyPasswordHandler = verifyPasswordHandler;
+        _requestExecutor = requestExecutor;
     }
 
     public async Task<CurrentUserDto> GetCurrentUser(CancellationToken token = default)
     {
         var query = new CurrentUserQuery();
-        return await _currentUserHandler.Handle(query, token);
+        return await _requestExecutor.Execute<CurrentUserQuery, CurrentUserDto>(query, token);
     }
 
     public async Task<object> DecryptSensitiveData(string encryptedData, CancellationToken token = default)
     {
         var query = new DecryptSensitiveDataQuery(encryptedData);
-        return await _decryptSensitiveDataHandler.Handle(query, token);
+        return await _requestExecutor.Execute<DecryptSensitiveDataQuery, object>(query, token);
     }
 
     public async Task<string> EncryptSensitiveData(object data, 
         CancellationToken token = default)
     {
         var query = new EncryptSensitiveDataQuery(data);
-        return await _encryptSensitiveDataHandler.Handle(query, token);
+        return await _requestExecutor.Execute<EncryptSensitiveDataQuery, string>(query, token);
     }
 
     public async Task<string> GeneratePassword(int length, 
         CancellationToken token = default)
     {
         var query = new GeneratePasswordQuery(length);
-        return await _generatePasswordHandler.Handle(query, token);
+        return await _requestExecutor.Execute<GeneratePasswordQuery, string>(query, token);
     }
 
     public async Task<ClaimsPrincipal> GetPrincipalFromExpiredToken(string authToken, 
         CancellationToken token = default)
     {
         var query = new GetPrincipalFromExpiredTokenQuery(authToken);
-        return await _getPrincipalFromExpiredTokenHandler.Handle(query, token);
+        return await _requestExecutor.Execute<GetPrincipalFromExpiredTokenQuery, ClaimsPrincipal>(query, token);
     }
 
     public async Task<string> HashPassword(string password, 
         CancellationToken token = default)
     {
         var query = new HashPasswordQuery(password);
-        return await _hashPasswordHandler.Handle(query, token);
+        return await _requestExecutor.Execute<HashPasswordQuery, string>(query, token);
     }
 
     public async Task<bool> VerifyPassword(string password, 
         string storedPasswordHash, CancellationToken token = default)
     {
         var query = new VerifyPasswordQuery(password, storedPasswordHash);
-        return await _verifyPasswordHandler.Handle(query, token);
+        return await _requestExecutor.Execute<VerifyPasswordQuery, bool>(query, token);
     }
 }

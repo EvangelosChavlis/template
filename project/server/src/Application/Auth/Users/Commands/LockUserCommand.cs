@@ -5,9 +5,11 @@ using System.Net;
 // source
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Auth;
-using server.src.Persistence.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Extensions;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
 
@@ -16,18 +18,30 @@ public record LockUserCommand(Guid Id, Guid Version) : IRequest<Response<string>
 public class LockUserHandler : IRequestHandler<LockUserCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
 
-    public LockUserHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public LockUserHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(LockUserCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error in locking user.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("Current user not found");
+
         // Id Validation
-        var idValidationResult = UserValidators.Validate(command.Id);
+        var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -36,7 +50,7 @@ public class LockUserHandler : IRequestHandler<LockUserCommand, Response<string>
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = UserValidators.Validate(command.Id);
+        var versionValidationResult = command.Id.ValidateId();
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -48,9 +62,8 @@ public class LockUserHandler : IRequestHandler<LockUserCommand, Response<string>
         await _unitOfWork.BeginTransactionAsync(token);
                 
         // Searching Item
-        var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == command.Id};
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, token: token);
 
         // Check for existence
         if (user is null)
@@ -61,6 +74,18 @@ public class LockUserHandler : IRequestHandler<LockUserCommand, Response<string>
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData($"User with id {command.Id} not found.");
+        }
+
+        // Check for concurrency issues
+        if (user.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"This user has been modified by another {user.LockedByUser!.UserName}. 
+                    Please try again.");
         }
 
         // Check for concurrency issues
@@ -99,7 +124,7 @@ public class LockUserHandler : IRequestHandler<LockUserCommand, Response<string>
         // Validating, Saving Item
         user.LockoutEnabled = true;
         user.Version = Guid.NewGuid();
-        var modelValidationResult = UserValidators.Validate(user);
+        var modelValidationResult = user.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -121,6 +146,19 @@ public class LockUserHandler : IRequestHandler<LockUserCommand, Response<string>
                 .WithSuccess(false)
                 .WithData("Failed to lock user.");
         }
+
+        // Unlock result
+        var unlockResult = await _commonRepository.UnlockAsync<User>(user.Id, token);
+        if(!unlockResult)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error in locking user.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(unlockResult)
+                .WithData("Failed to unlock user.");
+        }
+            
         
         // Commit Transaction
         await _unitOfWork.CommitTransactionAsync(token);

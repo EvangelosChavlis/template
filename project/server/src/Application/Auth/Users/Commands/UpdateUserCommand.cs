@@ -3,12 +3,14 @@ using System.Linq.Expressions;
 using System.Net;
 
 // source
+using server.src.Application.Auth.Users.Mappings;
 using server.src.Application.Auth.Users.Validators;
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Users.Mappings;
+using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Users.Dtos;
 using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Extensions;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
@@ -18,18 +20,30 @@ public record UpdateUserCommand(Guid Id, UpdateUserDto Dto) : IRequest<Response<
 public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
 
-    public UpdateUserHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public UpdateUserHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(UpdateUserCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error in deactivating user.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("Current user not found");
+
         // Id Validation
-        var idValidationResult = UserValidators.Validate(command.Id);
+        var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -38,7 +52,7 @@ public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<str
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Dto Validation
-        var dtoValidationResult = UserValidators.Validate(command.Dto);
+        var dtoValidationResult = command.Dto.Validate();
         if (!dtoValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -50,9 +64,8 @@ public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<str
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == command.Id };
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, token);
+        var user = await _commonRepository.GetResultByIdAsync(userFilters, token: token);
 
         // Check for existence
         if (user is null)
@@ -63,6 +76,29 @@ public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<str
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("User with not found.");
+        }
+
+        // Check for concurrency issues
+        if (user.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"This user has been modified by another {user.LockedByUser!.UserName}. 
+                    Please try again.");
+        }
+
+        // Check for concurrency issues
+        if (user.Version != command.Dto.Version)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Concurrency conflict.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData("User has been modified by another user. Please try again.");
         }
 
         // Check if user is deactivated
@@ -78,7 +114,7 @@ public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<str
             
         // Validating, Saving Item
         command.Dto.UpdateUserModelMapping(user);
-        var modelValidationResult = UserValidators.Validate(user);
+        var modelValidationResult = UserModelValidators.Validate(user);
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -99,6 +135,18 @@ public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<str
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
                 .WithData("Failed to update user.");
+        }
+
+        // Unlock result
+        var unlockResult = await _commonRepository.UnlockAsync<User>(user.Id, token);
+        if(!unlockResult)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error in updating user.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(unlockResult)
+                .WithData("Failed to unlock user.");
         }
 
         // Commit Transaction
