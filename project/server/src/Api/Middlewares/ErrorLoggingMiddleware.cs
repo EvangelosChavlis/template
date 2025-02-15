@@ -1,7 +1,7 @@
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Errors;
-using server.src.Persistence.Contexts;
 using System.Text.Json;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Metrics.LogErrors.Models;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Api.Middlewares;
 
@@ -83,7 +83,7 @@ public class ErrorLoggingMiddleware
         {
             var scope = context.RequestServices.CreateScope();
             var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
-            dbContext.LogErrors.Add(logError);
+            dbContext.MetricsDbSets.LogErrors.Add(logError);
             await dbContext.SaveChangesAsync();
         }
         catch (Exception ex)

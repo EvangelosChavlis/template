@@ -5,8 +5,8 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 
 // source
-using server.src.Domain.Models.Metrics;
-using server.src.Persistence.Contexts;
+using server.src.Domain.Metrics.TelemetryRecords.Models;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Api.Middlewares;
 
@@ -77,11 +77,11 @@ public class PerformanceMonitoringMiddleware
         var scope = context.RequestServices.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
 
-        var user = await dbContext.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+        var user = await dbContext.AuthDbSets.Users.FirstOrDefaultAsync(u => u.UserName == userName);
         
         if (user is not null)
         {
-            var telemetry = new Telemetry
+            var telemetry = new TelemetryRecord
             {
                 Method = context.Request.Method,
                 Path = context.Request.Path,
@@ -100,7 +100,7 @@ public class PerformanceMonitoringMiddleware
                 User = user
             };
 
-            dbContext.TelemetryRecords.Add(telemetry);
+            dbContext.MetricsDbSets.TelemetryRecords.Add(telemetry);
             await dbContext.SaveChangesAsync();
         }
 

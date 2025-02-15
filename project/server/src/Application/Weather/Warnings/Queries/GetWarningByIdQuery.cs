@@ -4,12 +4,12 @@ using System.Net;
 
 // source
 using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
 using server.src.Application.Weather.Warnings.Mappings;
-using server.src.Application.Weather.Warnings.Validators;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Warnings.Queries;
 
@@ -27,17 +27,17 @@ public class GetWarningByIdHandler : IRequestHandler<GetWarningByIdQuery, Respon
     public async Task<Response<ItemWarningDto>> Handle(GetWarningByIdQuery query, CancellationToken token = default)
     {
         // Validation
-        var validationResult = WarningValidators.Validate(query.Id);
+        var validationResult = query.Id.ValidateId();
         if (!validationResult.IsValid)
             return new Response<ItemWarningDto>()
                 .WithMessage(string.Join("\n", validationResult.Errors))
                 .WithSuccess(validationResult.IsValid)
-                .WithData(WarningsMappings.ErrorItemWarningDtoMapping());
+                .WithData(ErrorItemWarningDtoMapper
+                    .ErrorItemWarningDtoMapping());
          
         // Searching Item
-        var includes = new Expression<Func<Warning, object>>[] { };
-        var filters = new Expression<Func<Warning, bool>>[] { x => x.Id == query.Id };
-        var warning = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var filters = new Expression<Func<Warning, bool>>[] { w => w.Id == query.Id };
+        var warning = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         // Check for existence
         if (warning is null)
@@ -45,7 +45,8 @@ public class GetWarningByIdHandler : IRequestHandler<GetWarningByIdQuery, Respon
                 .WithMessage("Warning not found")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData(WarningsMappings.ErrorItemWarningDtoMapping());
+                .WithData(ErrorItemWarningDtoMapper
+                    .ErrorItemWarningDtoMapping());
 
         // Mapping
         var dto = warning.ItemWarningDtoMapping();

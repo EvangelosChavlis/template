@@ -1,12 +1,13 @@
 namespace server.src.Domain.Weather.Warnings.Dtos;
 
 /// <summary>
-/// Represents a detailed warning item that includes the warning's name, 
-/// description, and a list of related forecasts.
+/// Represents a detailed warning item, including its unique identifier,  
+/// name, description, recommended actions, and version information.
 /// </summary>
 public record ItemWarningDto(
     Guid Id,
     string Name, 
     string Description,
+    string RecommendedActions,
     Guid Version
 );

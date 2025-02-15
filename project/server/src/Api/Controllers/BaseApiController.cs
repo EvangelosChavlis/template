@@ -1,7 +1,7 @@
 // packages
 using Microsoft.AspNetCore.Mvc;
 
-namespace server.src.WebApi.Controllers;
+namespace server.src.Api.Controllers;
 
 [ApiController]
 public class BaseApiController : ControllerBase

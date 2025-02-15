@@ -6,12 +6,14 @@ using System.Net;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Mappings;
 using server.src.Application.Weather.Forecasts.Validators;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Extensions;
-using server.src.Domain.Models.Geography;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Forecasts.Dtos;
+using server.src.Domain.Weather.Forecasts.Models;
+using server.src.Domain.Common.Extensions;
+using server.src.Persistence.Common.Interfaces;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Domain.Geography.Locations.Models;
+using server.src.Domain.Weather.MoonPhases.Models;
 
 namespace server.src.Application.Weather.Forecasts.Commands;
 
@@ -20,18 +22,30 @@ public record UpdateForecastCommand(Guid Id, UpdateForecastDto Dto) : IRequest<R
 public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
 
-    public UpdateForecastHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public UpdateForecastHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(UpdateForecastCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error updating forecast.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("Current user not found");
+
         // Validation
-        var validationResult = ForecastValidators.Validate(command.Dto);
+        var validationResult = command.Dto.Validate();
         if (!validationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -43,9 +57,8 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var forecastIncludes = new Expression<Func<Forecast, object>>[] {  };
         var forecastFilters = new Expression<Func<Forecast, bool>>[] { x => x.Id == command.Id};
-        var forecast = await _commonRepository.GetResultByIdAsync(forecastFilters, forecastIncludes, token);
+        var forecast = await _commonRepository.GetResultByIdAsync(forecastFilters, token: token);
 
         // Check for existence
         if (forecast is null)
@@ -55,6 +68,18 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("Forecast not found");
+        }
+
+        // Check for concurrency issues
+        if (forecast.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"The forecast has been modified by another {forecast.LockedByUser!.UserName}. 
+                    Please try again.");
         }
             
         // Check for concurrency issues
@@ -69,9 +94,8 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         }
 
         // Searching Item
-        var warningIncludes = new Expression<Func<Warning, object>>[] {  };
         var warningFilters = new Expression<Func<Warning, bool>>[] { x => x.Id == command.Dto.WarningId};
-        var warning = await _commonRepository.GetResultByIdAsync(warningFilters, warningIncludes, token);
+        var warning = await _commonRepository.GetResultByIdAsync(warningFilters, token: token);
         
         // Check for existence
         if (warning is null)
@@ -85,9 +109,8 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         }
 
         // Searching Item
-        var locationIncludes = new Expression<Func<Location, object>>[] {  };
         var locationFilters = new Expression<Func<Location, bool>>[] { l => l.Id == command.Dto.LocationId};
-        var location = await _commonRepository.GetResultByIdAsync(locationFilters, locationIncludes, token);
+        var location = await _commonRepository.GetResultByIdAsync(locationFilters, token: token);
         
         // Check for existence
         if (location is null)
@@ -101,9 +124,8 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         }
 
         // Searching Item
-        var moonPhaseIncludes = new Expression<Func<MoonPhase, object>>[] {  };
         var moonPhaseFilters = new Expression<Func<MoonPhase, bool>>[] { l => l.Id == command.Dto.MoonPhaseId};
-        var moonPhase = await _commonRepository.GetResultByIdAsync(moonPhaseFilters, moonPhaseIncludes, token);
+        var moonPhase = await _commonRepository.GetResultByIdAsync(moonPhaseFilters, token: token);
         
         // Check for existence
         if (moonPhase is null)
@@ -119,7 +141,7 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         // Mapping, Validating, Saving Item
         command.Dto.UpdateForecastModelMapping(forecast, warning, 
             location, moonPhase);
-        var modelValidationResult = ForecastValidators.Validate(forecast);
+        var modelValidationResult = ForecastModelValidators.Validate(forecast);
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -139,6 +161,18 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
                 .WithMessage("Error updating forecast.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
+                .WithData("Failed to update forecast.");
+        }
+
+        // Unlock result
+        var unlockResult = await _commonRepository.UnlockAsync<Forecast>(forecast.Id, token);
+        if(!unlockResult)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error updating forecast.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(unlockResult)
                 .WithData("Failed to update forecast.");
         }
 

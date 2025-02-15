@@ -112,7 +112,7 @@ public class DeactivateRoleHandler : IRequestHandler<DeactivateRoleCommand, Resp
         }
             
         var userRoleFilters = new Expression<Func<UserRole, bool>>[] { ur => ur.RoleId == role.Id };
-        var usersWithActiveRole = await _commonRepository.GetCountAsync(userRoleFilters, token) > 0;
+        var usersWithActiveRole = await _commonRepository.AnyExistsAsync(userRoleFilters, token);
 
         if (usersWithActiveRole)
         {

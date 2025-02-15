@@ -1,11 +1,11 @@
 // packages
 using System.IdentityModel.Tokens.Jwt;
-using System.Text;
+using System.Security.Cryptography;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 // source
-using server.src.Domain.Models.Auth;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Api.Middlewares;
 
@@ -37,11 +37,14 @@ public class JwtMiddleware
         try
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
+            
+            var rsa = RSA.Create();
+            rsa.ImportFromPem(_jwtSettings.TokenPublicKey.ToCharArray());
+
             var parameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(key),
+                IssuerSigningKey = new RsaSecurityKey(rsa),
                 ValidateIssuer = true,
                 ValidateAudience = true,
                 ValidIssuer = _jwtSettings.Issuer,
@@ -51,9 +54,8 @@ public class JwtMiddleware
 
             var principal = tokenHandler.ValidateToken(token, parameters, out var validatedToken);
 
-            // Attach claims to the HttpContext
             if (validatedToken is JwtSecurityToken jwtToken &&
-                jwtToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+                jwtToken.Header.Alg.Equals(SecurityAlgorithms.RsaSha256, StringComparison.InvariantCultureIgnoreCase))
             {
                 context.User = principal;
             }

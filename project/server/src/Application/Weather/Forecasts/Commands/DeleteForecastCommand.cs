@@ -4,11 +4,11 @@ using System.Net;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Weather.Forecasts.Validators;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Extensions;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
+using server.src.Application.Common.Validators;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Extensions;
+using server.src.Domain.Weather.Forecasts.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Forecasts.Commands;
 
@@ -17,18 +17,30 @@ public record DeleteForecastCommand(Guid Id, Guid Version) : IRequest<Response<s
 public class DeleteForecastHandler : IRequestHandler<DeleteForecastCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
     
-    public DeleteForecastHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public DeleteForecastHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(DeleteForecastCommand command, CancellationToken token = default)
     {
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error deleting forecast.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("Current user not found");
+
         // Id Validation
-        var idValidationResult = ForecastValidators.Validate(command.Id);
+        var idValidationResult = command.Id.ValidateId();
         if (!idValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -37,7 +49,7 @@ public class DeleteForecastHandler : IRequestHandler<DeleteForecastCommand, Resp
                 .WithData(string.Join("\n", idValidationResult.Errors));
 
         // Version Validation
-        var versionValidationResult = ForecastValidators.Validate(command.Version);
+        var versionValidationResult = command.Version.ValidateId();
         if (!versionValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -49,9 +61,8 @@ public class DeleteForecastHandler : IRequestHandler<DeleteForecastCommand, Resp
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var includes = new Expression<Func<Forecast, object>>[] { };
         var filters = new Expression<Func<Forecast, bool>>[] { x => x.Id == command.Id};
-        var forecast = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var forecast = await _commonRepository.GetResultByIdAsync(filters, token: token);
         
         // Check for existence
         if (forecast is null)
@@ -62,6 +73,18 @@ public class DeleteForecastHandler : IRequestHandler<DeleteForecastCommand, Resp
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("Forecast not found.");
+        }
+
+        // Check for concurrency issues
+        if (forecast.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"The forecast has been modified by another {forecast.LockedByUser!.UserName}. 
+                    Please try again.");
         }
             
         // Check for concurrency issues

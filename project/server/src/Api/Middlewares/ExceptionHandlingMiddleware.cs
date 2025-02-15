@@ -1,10 +1,11 @@
 // packages
 using Newtonsoft.Json;
+using server.src.Domain.Common.Models;
+
 
 // source
-using server.src.Domain.Exceptions;
-using server.src.Domain.Models.Errors;
-using server.src.Persistence.Contexts;
+using server.src.Domain.Metrics.LogErrors.Models;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Api.Middlewares;
 
@@ -69,7 +70,7 @@ public class ExceptionHandlingMiddleware
                 StackTrace = errorDetails.StackTrace,
                 Timestamp = errorDetails.Timestamp
             };
-            dbContext.LogErrors.Add(logError);
+            dbContext.MetricsDbSets.LogErrors.Add(logError);
             await dbContext.SaveChangesAsync();
         }
 

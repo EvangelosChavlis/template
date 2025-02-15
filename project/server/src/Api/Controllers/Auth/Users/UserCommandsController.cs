@@ -4,9 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // Source
-using server.src.WebApi.Controllers;
+using server.src.Api.Controllers;
 using server.src.Application.Auth.Users.Interfaces;
 using server.src.Domain.Auth.Users.Dtos;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Api.Controllers.Auth.Users;
 
@@ -38,7 +39,7 @@ public class UserCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Create a new user", Description = "Creates a user without registering.")]
     [SwaggerResponse(StatusCodes.Status201Created, "User created successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid user data")]
-    public async Task<IActionResult> CreateUser([FromBody] UserDto dto, CancellationToken token)
+    public async Task<IActionResult> CreateUser([FromBody] CreateUserDto dto, CancellationToken token)
     {
         var result = await _userCommands.RegisterUserAsync(dto, false, token);
         return StatusCode(result.StatusCode, result);
@@ -50,7 +51,7 @@ public class UserCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Initialize users", Description = "Creates multiple users at once.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Users initialized successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid user data")]
-    public async Task<IActionResult> InitializeUsers([FromBody] List<UserDto> dto, CancellationToken token)
+    public async Task<IActionResult> InitializeUsers([FromBody] List<CreateUserDto> dto, CancellationToken token)
     {
         var result = await _userCommands.InitializeUsersAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -125,7 +126,7 @@ public class UserCommandsController : BaseApiController
     [HttpPut("{id}")]
     [Authorize(Roles = "Administrator")]
     [SwaggerOperation(Summary = "Update user details")]
-    public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UserDto dto, CancellationToken token)
+    public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UpdateUserDto dto, CancellationToken token)
     {
         var result = await _userCommands.UpdateUserAsync(id, dto, token);
         return StatusCode(result.StatusCode, result);

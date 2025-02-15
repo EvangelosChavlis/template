@@ -6,12 +6,11 @@ using System.Net;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Warnings.Filters;
 using server.src.Application.Weather.Warnings.Mappings;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Common;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Contexts;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Warnings.Queries;
 
@@ -19,12 +18,10 @@ public record GetWarningsQuery(UrlQuery UrlQuery) : IRequest<ListResponse<List<L
 
 public class GetWarningsHandler : IRequestHandler<GetWarningsQuery, ListResponse<List<ListItemWarningDto>>>
 {
-    private readonly DataContext _context;
     private readonly ICommonRepository _commonRepository;
 
-    public GetWarningsHandler(DataContext context, ICommonRepository commonRepository)
+    public GetWarningsHandler(ICommonRepository commonRepository)
     {
-        _context = context;
         _commonRepository = commonRepository;
     }
 
@@ -49,7 +46,7 @@ public class GetWarningsHandler : IRequestHandler<GetWarningsQuery, ListResponse
 
         // Fetch paginated results
         var pagedWarnings = await _commonRepository.GetPagedResultsAsync( pageParams, 
-            filters, includes, token);
+            filters, includes, token: token);
         
         // Mapping
         var dto = pagedWarnings.Rows.Select(w => w.ListItemWarningDtoMapping()).ToList();

@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Auth.Permissions.Models;
 using server.src.Domain.Auth.UserRoles.Models;
 using server.src.Domain.Common.Models;
 
@@ -39,6 +40,8 @@ public class Role : BaseEntity
     /// Represents the many-to-many relationship between users and roles.
     /// </summary>
     public virtual List<UserRole> UserRoles { get; set; }
+
+    public virtual List<Permission> Permissions { get; set; }
 
     #endregion
 }

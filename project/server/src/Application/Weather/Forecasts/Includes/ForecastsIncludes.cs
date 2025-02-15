@@ -1,6 +1,7 @@
 // source
-using server.src.Domain.Models.Common;
-using server.src.Domain.Models.Weather;
+
+using server.src.Domain.Common.Models;
+using server.src.Domain.Weather.Forecasts.Models;
 
 namespace server.src.Application.Weather.Forecasts;
 
@@ -10,7 +11,9 @@ public class ForecastsIncludes
     {
         return
         [
-            new (v => v.Warning)
+            new (f => f.Warning),
+            new (f => f.MoonPhase),
+            new (f => f.Location)
         ];
     }
 }

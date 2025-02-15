@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Models.Common;
-using server.src.WebApi.Controllers;
+using server.src.Api.Controllers;
 using server.src.Application.Auth.UserLogins.Interfaces;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Auth.UserLogins.Dtos;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Api.Controllers.Auth.UserLogin;
 

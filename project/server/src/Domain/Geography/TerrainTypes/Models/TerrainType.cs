@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Locations.Models;
 
 namespace server.src.Domain.Geography.TerrainTypes.Models;
@@ -6,13 +7,8 @@ namespace server.src.Domain.Geography.TerrainTypes.Models;
 /// <summary>
 /// Represents a type of terrain, such as coastal, mountainous, desert, or urban.
 /// </summary>
-public class TerrainType
+public class TerrainType : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the terrain type.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the terrain type (e.g., Mountainous, Coastal, Desert).
     /// </summary>

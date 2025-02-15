@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Weather;
-using server.src.WebApi.Controllers;
-using server.src.Domain.Dto.Common;
+using server.src.Api.Controllers;
 using server.src.Application.Weather.Forecasts.Interfaces;
+using server.src.Domain.Weather.Forecasts.Dtos;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Api.Controllers.Weather.Forecasts;
 
@@ -28,7 +28,7 @@ public class ForecastCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Create a new weather forecast", Description = "Creates a new weather forecast entry in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Forecast created successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid forecast data")]
-    public async Task<IActionResult> CreateForecast([FromBody] ForecastDto dto, CancellationToken token)
+    public async Task<IActionResult> CreateForecast([FromBody] CreateForecastDto dto, CancellationToken token)
     {
         var result = await _forecastCommands.CreateForecastAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -41,7 +41,7 @@ public class ForecastCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Initialize multiple weather forecasts", Description = "Initializes multiple weather forecasts in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Forecasts initialized successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid forecast data")]
-    public async Task<IActionResult> InitializeForecasts([FromBody] List<ForecastDto> dto, CancellationToken token)
+    public async Task<IActionResult> InitializeForecasts([FromBody] List<CreateForecastDto> dto, CancellationToken token)
     {
         var result = await _forecastCommands.InitializeForecastsAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -55,7 +55,7 @@ public class ForecastCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status200OK, "Forecast updated successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid forecast data")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Forecast not found")]
-    public async Task<IActionResult> UpdateForecast(Guid id, [FromBody] ForecastDto dto, CancellationToken token)
+    public async Task<IActionResult> UpdateForecast(Guid id, [FromBody] UpdateForecastDto dto, CancellationToken token)
     {
         var result = await _forecastCommands.UpdateForecastAsync(id, dto, token);
         return StatusCode(result.StatusCode, result);

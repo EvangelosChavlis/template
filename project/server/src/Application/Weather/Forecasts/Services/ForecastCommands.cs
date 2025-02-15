@@ -1,56 +1,50 @@
 // source
-using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Services;
 using server.src.Application.Weather.Forecasts.Commands;
 using server.src.Application.Weather.Forecasts.Interfaces;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Forecasts.Dtos;
 
 namespace server.src.Application.Weather.Forecasts.Services;
 
 public class ForecastCommands : IForecastCommands
 {
-    private readonly IRequestHandler<InitializeForecastsCommand, Response<string>> _initializeForecastsHander;
-    private readonly IRequestHandler<CreateForecastCommand, Response<string>> _createForecastHandler;
-    private readonly IRequestHandler<UpdateForecastCommand, Response<string>> _updateForecastHandler;
-    private readonly IRequestHandler<DeleteForecastCommand, Response<string>> _deleteForecastHandler;
+    private readonly RequestExecutor _requestExecutor;
 
-    public ForecastCommands(
-        IRequestHandler<InitializeForecastsCommand, Response<string>> initializeForecastsHander,
-        IRequestHandler<CreateForecastCommand, Response<string>> createForecastHandler,
-        IRequestHandler<UpdateForecastCommand, Response<string>> updateForecastHandler,
-        IRequestHandler<DeleteForecastCommand, Response<string>> deleteForecastHandler)
+    public ForecastCommands(RequestExecutor requestExecutor)
     {
-        _initializeForecastsHander = initializeForecastsHander;
-        _createForecastHandler = createForecastHandler;
-        _updateForecastHandler = updateForecastHandler;
-        _deleteForecastHandler = deleteForecastHandler;
+        _requestExecutor = requestExecutor;
     }
 
     public async Task<Response<string>> InitializeForecastsAsync(List<CreateForecastDto> dto, 
         CancellationToken token = default)
     {
         var command = new InitializeForecastsCommand(dto);
-        return await _initializeForecastsHander.Handle(command, token);
+        return await _requestExecutor
+            .Execute<InitializeForecastsCommand, Response<string>>(command, token);
     }
 
     public async Task<Response<string>> CreateForecastAsync(CreateForecastDto dto, 
         CancellationToken token = default)
     {
         var command = new CreateForecastCommand(dto);
-        return await _createForecastHandler.Handle(command, token);
+        return await _requestExecutor
+            .Execute<CreateForecastCommand, Response<string>>(command, token);
     }
 
     public async Task<Response<string>> UpdateForecastAsync(Guid id, UpdateForecastDto dto, 
         CancellationToken token = default)
     {
         var command = new UpdateForecastCommand(id, dto);
-        return await _updateForecastHandler.Handle(command, token);
+        return await _requestExecutor
+            .Execute<UpdateForecastCommand, Response<string>>(command, token);
     }
 
     public async Task<Response<string>> DeleteForecastAsync(Guid id, 
         Guid version, CancellationToken token = default)
     {
         var command = new DeleteForecastCommand(id, version);
-        return await _deleteForecastHandler.Handle(command, token);
+        return await _requestExecutor
+            .Execute<DeleteForecastCommand, Response<string>>(command, token);
     }
 }

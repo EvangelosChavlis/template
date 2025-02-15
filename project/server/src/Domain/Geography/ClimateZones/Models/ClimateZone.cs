@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Locations.Models;
 
 namespace server.src.Domain.Geography.ClimateZones.Models;
@@ -6,13 +7,8 @@ namespace server.src.Domain.Geography.ClimateZones.Models;
 /// <summary>
 /// Represents a climate zone, such as tropical, temperate, arid, or polar.
 /// </summary>
-public class ClimateZone
+public class ClimateZone : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the climate zone.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the climate zone (e.g., Tropical, Temperate, Arid).
     /// </summary>

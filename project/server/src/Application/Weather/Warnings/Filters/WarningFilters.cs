@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 
 // source
-using server.src.Domain.Models.Weather;
+using server.src.Domain.Weather.Warnings.Models;
 
 namespace server.src.Application.Weather.Warnings.Filters;
 

@@ -7,7 +7,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using server.src.Domain.Dto.Common;
 using server.src.Domain.Dto.Weather;
 using server.src.Domain.Models.Common;
-using server.src.WebApi.Controllers;
+using server.src.Api.Controllers;
 using server.src.Application.Weather.Forecasts.Interfaces;
 
 namespace server.src.Api.Controllers.Weather.Forecasts;

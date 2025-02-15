@@ -6,12 +6,12 @@ using System.Net;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Filters;
 using server.src.Application.Weather.Forecasts.Mappings;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Common;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Contexts;
-using server.src.Persistence.Interfaces;
+using server.src.Application.Weather.Forecasts.Projections;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Weather.Forecasts.Dtos;
+using server.src.Domain.Weather.Forecasts.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Forecasts.Queries;
 
@@ -19,12 +19,10 @@ public record GetForecastsQuery(UrlQuery UrlQuery) : IRequest<ListResponse<List<
 
 public class GetForecastsHandler : IRequestHandler<GetForecastsQuery, ListResponse<List<ListItemForecastDto>>>
 {
-    private readonly DataContext _context;
     private readonly ICommonRepository _commonRepository;
 
-    public GetForecastsHandler(DataContext context, ICommonRepository commonRepository)
+    public GetForecastsHandler(ICommonRepository commonRepository)
     {
-        _context = context;
         _commonRepository = commonRepository;
     }
 
@@ -47,11 +45,17 @@ public class GetForecastsHandler : IRequestHandler<GetForecastsQuery, ListRespon
 
         // Including
         var includes = ForecastsIncludes.GetForecastsIncludes();
-
+        // Projection
+        var projection = ForecastProjections.GetForecastsProjection();
         // Paging
-        var pagedForecasts = await _commonRepository.GetPagedResultsAsync(pageParams, filters, includes, token);
+        var pagedForecasts = await _commonRepository.GetPagedResultsAsync(
+            pageParams, 
+            filters, 
+            includes, 
+            token: token
+        );
         // Mapping
-        var dto = pagedForecasts.Rows.Select(w => w.ListItemForecastDtoMapping()).ToList();
+        var dto = pagedForecasts.Rows.Select(f => f.ListItemForecastDtoMapping()).ToList();
 
         // Determine success 
         var success = pagedForecasts.Rows.Count > 0;

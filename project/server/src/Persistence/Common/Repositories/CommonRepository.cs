@@ -1,9 +1,7 @@
 // packages
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 
 
 // source
@@ -12,23 +10,23 @@ using server.src.Domain.Common.Models;
 using server.src.Persistence.Common.Contexts;
 using server.src.Persistence.Common.Helpers;
 using server.src.Persistence.Common.Interfaces;
-using server.src.Persistence.Contexts;
+// using server.src.Persistence.Contexts;
 
 namespace server.src.Persistence.Common.Repositories;
 
 public class CommonRepository : ICommonRepository
 {
     private readonly DataContext _context;
-    private readonly ArchiveContext _archiveContext;
+    // private readonly ArchiveContext _archiveContext;
     private readonly IAuditLogHelper _auditLogHelper;
     private readonly IUnitOfWork _unitOfWork;
     
     
-    public CommonRepository(DataContext context, ArchiveContext archiveContext, 
+    public CommonRepository(DataContext context,/*, ArchiveContext archiveContext, */
         IAuditLogHelper auditLogHelper, IUnitOfWork unitOfWork)
     {
         _context = context;
-        _archiveContext = archiveContext;
+        // _archiveContext = archiveContext;
         _auditLogHelper = auditLogHelper;
         _unitOfWork = unitOfWork;
     }
@@ -274,7 +272,7 @@ public class CommonRepository : ICommonRepository
     ) where T : class
     {
         // Archive entity
-        await _archiveContext.Set<T>().AddAsync(entity, token);
+        // await _archiveContext.Set<T>().AddAsync(entity, token);
 
         // Remove entity
         _context.Set<T>().Remove(entity);

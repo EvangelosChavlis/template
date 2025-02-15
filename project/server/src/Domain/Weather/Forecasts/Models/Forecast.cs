@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Locations.Models;
 using server.src.Domain.Weather.MoonPhases.Models;
 using server.src.Domain.Weather.Warnings.Models;
@@ -9,14 +10,8 @@ namespace server.src.Domain.Weather.Forecasts.Models;
 /// Represents a weather forecast for a specific date, including temperature and a summary.
 /// This class is used to store forecast data, including associated warning information.
 /// </summary>
-public class Forecast
+public class Forecast : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the forecast.
-    /// This is used to uniquely identify the forecast entry in the system.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the date of the forecast.
     /// This represents the specific date the forecast is valid for.
@@ -118,17 +113,6 @@ public class Forecast
     /// This typically provides a brief overview of the expected weather conditions (e.g., sunny, cloudy, rainy).
     /// </summary>
     public string Summary { get; set; }
-
-    /// <summary>
-    /// Gets or sets a value indicating whether the forecast has been read.
-    /// This can be used to track if a user has viewed the forecast.
-    /// </summary>
-    public bool IsRead { get; set; }
-
-    /// <summary>
-    /// Gets or sets the version GUID for optimistic concurrency control.
-    /// </summary>
-    public Guid Version { get; set; }
 
     #region Foreign Keys
     /// <summary>

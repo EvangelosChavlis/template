@@ -9,12 +9,13 @@ using System.Security.Claims;
 using System.Text.Json;
 
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Persistence.Interfaces;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Enums;
-using server.src.Domain.Models.Metrics;
-using server.src.Persistence.Contexts;
+using server.src.Persistence.Common.Contexts;
+using server.src.Persistence.Common.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Metrics.AuditLogs.Enums;
+using server.src.Domain.Metrics.AuditLogs.Models;
+using server.src.Domain.Metrics.Trails;
 
 namespace server.src.Persistence.Common.Helpers;
 
@@ -39,9 +40,8 @@ public class AuditLogHelper : IAuditLogHelper
     {
         var userName = _httpContext.User.FindFirst(ClaimTypes.Name)?.Value;
 
-        var includes = new Expression<Func<User, object>>[] { };
         var filters = new Expression<Func<User, bool>>[] { u => u.UserName == userName };
-        var user = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var user = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         if (user is null)
             return new Response<string>()
@@ -102,7 +102,7 @@ public class AuditLogHelper : IAuditLogHelper
             User = user,
         };
 
-        await _dataContext.AuditLogs.AddAsync(auditLog, token);
+        await _dataContext.MetricsDbSets.AuditLogs.AddAsync(auditLog, token);
         var result = await _unitOfWork.CommitAsync(token);
 
         if (!result)
@@ -121,7 +121,7 @@ public class AuditLogHelper : IAuditLogHelper
             {
                 var trail = TrailMapping(auditLog, previousAuditLog);
 
-                await _dataContext.Trails.AddAsync(trail, token);
+                await _dataContext.MetricsDbSets.Trails.AddAsync(trail, token);
                 var chainResult = await _unitOfWork.CommitAsync(token);
 
                 if (!chainResult)
@@ -152,7 +152,7 @@ public class AuditLogHelper : IAuditLogHelper
 
     private async Task<AuditLog?> GetLastAuditLogAsync(Guid entityId, string entityType, CancellationToken token)
     {
-        return await _dataContext.AuditLogs
+        return await _dataContext.MetricsDbSets.AuditLogs
             .Where(log => log.EntityId == entityId && log.EntityType == entityType)
             .OrderByDescending(log => log.Timestamp)
             .FirstOrDefaultAsync(token);

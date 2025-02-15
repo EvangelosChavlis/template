@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Common;
 using server.src.Application.Data.Interfaces;
+using server.src.Domain.Common.Dtos;
 
-namespace server.src.WebApi.Controllers.Data;
+namespace server.src.Api.Controllers.Data;
 
 [ApiController]
 [Route("api/data")]

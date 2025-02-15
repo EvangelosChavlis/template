@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.WebApi.Controllers;
 using server.src.Application.Weather.Warnings.Interfaces;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Api.Controllers.Weather.Warnings;
 
@@ -28,7 +27,7 @@ public class WarningCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Create a new weather warning", Description = "Creates a new weather warning in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Warning created successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid warning data")]
-    public async Task<IActionResult> CreateWarning([FromBody] WarningDto dto, CancellationToken token)
+    public async Task<IActionResult> CreateWarning([FromBody] CreateWarningDto dto, CancellationToken token)
     {
         var result = await _warningCommands.CreateWarningAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -41,7 +40,7 @@ public class WarningCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Initialize multiple weather warnings", Description = "Initializes multiple weather warnings in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Warnings initialized successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid warning data")]
-    public async Task<IActionResult> InitializeWarning([FromBody] List<WarningDto> dto, CancellationToken token)
+    public async Task<IActionResult> InitializeWarning([FromBody] List<CreateWarningDto> dto, CancellationToken token)
     {
         var result = await _warningCommands.InitializeWarningsAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -54,7 +53,7 @@ public class WarningCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Update an existing weather warning", Description = "Updates an existing weather warning by its unique ID.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Warning updated successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Warning not found")]
-    public async Task<IActionResult> UpdateWarning(Guid id, [FromBody] WarningDto dto, CancellationToken token)
+    public async Task<IActionResult> UpdateWarning(Guid id, [FromBody] UpdateWarningDto dto, CancellationToken token)
     {
         var result = await _warningCommands.UpdateWarningAsync(id, dto, token);
         return StatusCode(result.StatusCode, result);

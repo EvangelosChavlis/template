@@ -59,7 +59,7 @@ public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
                 .HasForeignKey(a => a.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-        builder.HasOne(a => a.Telemetry)
+        builder.HasOne(a => a.TelemetryRecord)
                 .WithMany(t => t.AuditLogs)
                 .HasForeignKey(a => a.TelemetryId)
                 .OnDelete(DeleteBehavior.Cascade);

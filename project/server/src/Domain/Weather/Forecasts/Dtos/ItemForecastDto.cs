@@ -28,5 +28,7 @@ public record ItemForecastDto(
     double Altitude,
     string Summary,
     string Warning,
+    string MoonPhase,
+    string Location,
     Guid Version
 );

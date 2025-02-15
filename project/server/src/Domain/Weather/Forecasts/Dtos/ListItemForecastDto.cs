@@ -13,6 +13,5 @@ public record ListItemForecastDto(
     string MoonPhase,
     double Longitude,
     double Latitude,
-    double Altitude,
-    bool IsRead
+    double Altitude
 );

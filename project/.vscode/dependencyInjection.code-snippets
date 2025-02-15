@@ -1,6 +1,6 @@
 {
     "Entity Dependency Injection": {
-      "prefix": "entityDependencyInjection",
+      "prefix": "entityDI",
       "body": [
         "// packages",
         "using Microsoft.Extensions.DependencyInjection;",
@@ -16,7 +16,7 @@
         "",
         "namespace server.src.Application.${Entity}s;",
         "",
-        "public static class DependencyInjection",
+        "public static class DI",
         "{",
         "    public static IServiceCollection Add${Entity}s(this IServiceCollection services)",
         "    {",

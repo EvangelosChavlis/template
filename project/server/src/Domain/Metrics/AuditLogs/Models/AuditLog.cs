@@ -1,6 +1,7 @@
 // source
 using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Metrics.AuditLogs.Enums;
+using server.src.Domain.Metrics.TelemetryRecords.Models;
 using server.src.Domain.Metrics.Trails;
 
 namespace server.src.Domain.Metrics.AuditLogs.Models;
@@ -91,7 +92,7 @@ public class AuditLog
     /// <summary>
     /// Gets or sets the telemetry data associated with this audit log.
     /// </summary>
-    public virtual Telemetry Telemetry { get; set; }
+    public virtual TelemetryRecord TelemetryRecord { get; set; }
 
     /// <summary>
     /// Gets or sets the trail entity associated with this audit log.

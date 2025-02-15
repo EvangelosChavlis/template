@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Metrics;
-using server.src.Domain.Models.Common;
-using server.src.Application.Auth.Telemetry.Interfaces;
+using server.src.Application.Auth.TelemetryRecords.Interfaces;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Metrics.TelemetryRecords.Dtos;
 
-namespace server.src.WebApi.Controllers.Metrics;
+namespace server.src.Api.Controllers.Metrics;
 
 [ApiController]
 [Route("api/metrics/telemetry")]
 [Authorize(Roles = "Administrator")]
 public class TelemetryQueriesController : BaseApiController
 {
-    private readonly ITelemetryQueries _telemetryQueries;
+    private readonly ITelemetryRecordQueries _telemetryQueries;
     
-    public TelemetryQueriesController(ITelemetryQueries telemetryQueries)
+    public TelemetryQueriesController(ITelemetryRecordQueries telemetryQueries)
     {
         _telemetryQueries = telemetryQueries;
     }
@@ -26,12 +26,12 @@ public class TelemetryQueriesController : BaseApiController
     [ApiExplorerSettings(GroupName = "metrics")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of telemetry data", Description = "Retrieves a list of telemetry data with optional query parameters to filter results.")]
-    [SwaggerResponse(StatusCodes.Status200OK, "List of telemetry data retrieved successfully", typeof(Response<List<ListItemTelemetryDto>>))]
+    [SwaggerResponse(StatusCodes.Status200OK, "List of telemetry data retrieved successfully", typeof(Response<List<ListItemTelemetryRecordDto>>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid query parameters")]
     [SwaggerResponse(StatusCodes.Status404NotFound, "No telemetry data found")]
-    public async Task<IActionResult> GetTelemetry([FromQuery] UrlQuery urlQuery, CancellationToken token)
+    public async Task<IActionResult> GetTelemetryRecords([FromQuery] UrlQuery urlQuery, CancellationToken token)
     {
-        var result = await _telemetryQueries.GetTelemetryAsync(urlQuery, token);
+        var result = await _telemetryQueries.GetTelemetryRecordsAsync(urlQuery, token);
         return StatusCode(result.StatusCode, result);
     }
 
@@ -39,10 +39,10 @@ public class TelemetryQueriesController : BaseApiController
     [ApiExplorerSettings(GroupName = "metrics")]
     [HttpGet("user/{id}")]
     [SwaggerOperation(Summary = "Get a list of telemetry data by user id", Description = "Retrieves a list of telemetry by user id with optional query parameters to filter results.")]
-    [SwaggerResponse(StatusCodes.Status200OK, "List of telemetry data by user id retrieved successfully", typeof(ListResponse<List<ListItemTelemetryDto>>))]
-    public async Task<IActionResult> GetTelemetryByUserId(Guid id, [FromQuery] UrlQuery urlQuery, CancellationToken token)
+    [SwaggerResponse(StatusCodes.Status200OK, "List of telemetry data by user id retrieved successfully", typeof(ListResponse<List<ListItemTelemetryRecordDto>>))]
+    public async Task<IActionResult> GetTelemetryRecordByUserId(Guid id, [FromQuery] UrlQuery urlQuery, CancellationToken token)
     {
-        var result = await _telemetryQueries.GetTelemetryByUserIdAsync(id, urlQuery, token);
+        var result = await _telemetryQueries.GetTelemetryRecordByUserIdAsync(id, urlQuery, token);
         return StatusCode(result.StatusCode, result);
     }
 
@@ -51,11 +51,11 @@ public class TelemetryQueriesController : BaseApiController
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get specific telemetry data by ID", Description = "Retrieves the details of a specific telemetry record by its unique ID.")]
-    [SwaggerResponse(StatusCodes.Status200OK, "Telemetry data retrieved successfully", typeof(Response<ItemTelemetryDto>))]
+    [SwaggerResponse(StatusCodes.Status200OK, "Telemetry data retrieved successfully", typeof(Response<ItemTelemetryRecordDto>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Telemetry data not found")]
     public async Task<IActionResult> GetTelemetryItem(Guid id, CancellationToken token)
     {
-        var result = await _telemetryQueries.GetTelemetryByIdAsync(id, token);
+        var result = await _telemetryQueries.GetTelemetryRecordByIdAsync(id, token);
         return StatusCode(result.StatusCode, result);
     }
 }

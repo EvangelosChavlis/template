@@ -1,6 +1,6 @@
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Warnings.Dtos;
 
 namespace server.src.Application.Weather.Warnings.Interfaces;
 
@@ -15,7 +15,7 @@ public interface IWarningCommands
     /// <param name="dto">A list of warning data transfer objects to be created.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response indicating the success or failure of the bulk initialization process.</returns>
-    Task<Response<string>> InitializeWarningsAsync(List<WarningDto> dto, 
+    Task<Response<string>> InitializeWarningsAsync(List<CreateWarningDto> dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -24,7 +24,7 @@ public interface IWarningCommands
     /// <param name="dto">The data transfer object containing warning details.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response containing the result message of the operation.</returns>
-    Task<Response<string>> CreateWarningAsync(WarningDto dto, 
+    Task<Response<string>> CreateWarningAsync(CreateWarningDto dto, 
         CancellationToken token = default);
 
     /// <summary>
@@ -34,8 +34,28 @@ public interface IWarningCommands
     /// <param name="dto">The data transfer object containing updated warning details.</param>
     /// <param name="token">Optional cancellation token.</param>
     /// <returns>A response containing the result message of the update operation.</returns>
-    Task<Response<string>> UpdateWarningAsync(Guid id, WarningDto dto, 
+    Task<Response<string>> UpdateWarningAsync(Guid id, UpdateWarningDto dto, 
         CancellationToken token = default);
+
+    /// <summary>
+    /// Activates a warning by its unique identifier.
+    /// </summary>
+    /// <param name="id">The unique identifier of the warning to activate.</param>
+    /// <param name="version">The version of the warning for concurrency control.</param>
+    /// <param name="token">Optional cancellation token to cancel the operation.</param>
+    /// <returns>A response indicating whether the activation was successful.</returns>
+    Task<Response<string>> ActivateWarningAsync(Guid id, 
+        Guid version, CancellationToken token = default);
+
+    /// <summary>
+    /// Deactivates a warning by its unique identifier.
+    /// </summary>
+    /// <param name="id">The unique identifier of the warning to deactivate.</param>
+    /// <param name="version">The version of the warning for concurrency control.</param>
+    /// <param name="token">Optional cancellation token to cancel the operation.</param>
+    /// <returns>A response indicating whether the deactivation was successful.</returns>
+    Task<Response<string>> DeactivateWarningAsync(Guid id, 
+        Guid version, CancellationToken token = default);
 
     /// <summary>
     /// Deletes a weather warning by its unique identifier and version.

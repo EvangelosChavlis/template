@@ -1,5 +1,5 @@
 // source
-using server.src.Domain.Auth.UserLogouts;
+using server.src.Domain.Auth.UserLogouts.Dtos;
 using server.src.Domain.Auth.UserLogouts.Models;
 using server.src.Domain.Common.Extensions;
 

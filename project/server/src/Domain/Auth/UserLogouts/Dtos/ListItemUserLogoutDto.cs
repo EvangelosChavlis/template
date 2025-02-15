@@ -1,4 +1,4 @@
-namespace server.src.Domain.Auth.UserLogouts;
+namespace server.src.Domain.Auth.UserLogouts.Dtos;
 
 /// <summary>
 /// Represents a user's login details with external authentication providers.

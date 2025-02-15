@@ -6,9 +6,9 @@ using Microsoft.Extensions.Caching.Memory;
 // source
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Mappings;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Persistence.Contexts;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Forecasts.Dtos;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Application.Weather.Forecasts.Queries;
 
@@ -37,7 +37,7 @@ public class GetForecastsStatsHandler : IRequestHandler<GetForecastsStatsQuery, 
         }
 
         // If data is not in cache or is empty, fetch data from the database
-        var dto = await _context.Forecasts
+        var dto = await _context.WeatherDbSets.Forecasts
             .OrderBy(f => f.Date)
             .Select(f => f.StatItemForecastDtoMapping())
             .ToListAsync(token);

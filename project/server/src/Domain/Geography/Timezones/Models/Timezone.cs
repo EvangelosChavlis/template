@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Locations.Models;
 
 namespace server.src.Domain.Geography.Timezones.Models;
@@ -6,13 +7,8 @@ namespace server.src.Domain.Geography.Timezones.Models;
 /// <summary>
 /// Represents a time zone with a standard identifier, offset, and description.
 /// </summary>
-public class Timezone
+public class Timezone : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the time zone.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the time zone (e.g., UTC, PST, EST).
     /// </summary>

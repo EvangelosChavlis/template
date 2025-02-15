@@ -10,7 +10,7 @@
         "// source",
         "using server.src.Domain.Dto.Common;",
         "using server.src.Domain.Dto.${Entity};",
-        "using server.src.WebApi.Controllers;",
+        "using server.src.Api.Controllers;",
         "using server.src.Application.${Entity}s.Interfaces;",
         "",
         "namespace server.src.Api.Controllers.${Entity}s;",

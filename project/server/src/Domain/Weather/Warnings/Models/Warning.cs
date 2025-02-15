@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Weather.Forecasts.Models;
 
 namespace server.src.Domain.Weather.Warnings.Models;
@@ -7,14 +8,8 @@ namespace server.src.Domain.Weather.Warnings.Models;
 /// Represents a weather warning, such as extreme weather alerts, related to specific forecasts.
 /// This class is used to store warning data that can be associated with multiple forecasts.
 /// </summary>
-public class Warning
+public class Warning : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the warning.
-    /// This is used to uniquely identify the warning in the system.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the weather warning.
     /// This could be a title or brief description of the warning (e.g., "Severe Thunderstorm Warning").
@@ -38,11 +33,6 @@ public class Warning
     /// Determines whether the warning is enabled for assignment or usage.
     /// </summary>
     public bool IsActive { get; set; }
-
-    /// <summary>
-    /// Gets or sets the version GUID for optimistic concurrency control.
-    /// </summary>
-    public Guid Version { get; set; }
 
     #region Navigation properties
 

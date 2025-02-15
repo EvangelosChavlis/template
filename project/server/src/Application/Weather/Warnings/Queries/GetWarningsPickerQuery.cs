@@ -5,10 +5,10 @@ using System.Net;
 // source
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Warnings.Mappings;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Warnings.Queries;
 
@@ -26,11 +26,11 @@ public class GetWarningsPickerHandler : IRequestHandler<GetWarningsPickerQuery, 
     public async Task<Response<List<PickerWarningDto>>> Handle(GetWarningsPickerQuery query, CancellationToken token = default)
     {
         // Searching Items
-        var filters = new Expression<Func<Warning, bool>>[] { };
-        var warnings = await _commonRepository.GetResultPickerAsync(filters, token);
+        var filters = new Expression<Func<Warning, bool>>[] { w => w.IsActive };
+        var warnings = await _commonRepository.GetResultPickerAsync(filters, token: token);
 
         // Mapping
-        var dto = warnings.Select(o => o.PickerWarningDtoMapping()).ToList();
+        var dto = warnings.Select(w => w.PickerWarningDtoMapping()).ToList();
         
         // Determine if the operation was successful
         var success = dto.Count > 0;

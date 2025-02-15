@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Models.Auth;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Common.Queries;
 

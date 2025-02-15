@@ -20,8 +20,7 @@ public class ForecastIndexes : IEntityTypeConfiguration<Forecast>
                 f.Id, 
                 f.Date, 
                 f.TemperatureC,
-                f.Humidity,
-                f.IsRead,
+                f.Humidity
             })
             .IsUnique()
              .HasDatabaseName($@"
@@ -29,8 +28,7 @@ public class ForecastIndexes : IEntityTypeConfiguration<Forecast>
                 {nameof(Forecast.Id)}_
                 {nameof(Forecast.Date)}_
                 {nameof(Forecast.TemperatureC)}_
-                {nameof(Forecast.Humidity)}_
-                {nameof(Forecast.IsRead)}
+                {nameof(Forecast.Humidity)}
             ".Replace("\n", "").Trim());
     }
 }

@@ -9,7 +9,7 @@ using server.src.Application.Auth.UserLogouts.Mappings;
 using server.src.Application.Auth.UserLogouts.Projection;
 using server.src.Application.Auth.Users.Projections;
 using server.src.Application.Common.Interfaces;
-using server.src.Domain.Auth.UserLogouts;
+using server.src.Domain.Auth.UserLogouts.Dtos;
 using server.src.Domain.Auth.UserLogouts.Models;
 using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Common.Dtos;

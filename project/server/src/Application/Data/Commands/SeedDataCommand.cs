@@ -16,6 +16,15 @@ using server.src.Domain.Dto.Weather;
 using server.src.Domain.Models.Auth;
 using server.src.Domain.Models.Weather;
 using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Auth.Users.Dtos;
+using server.src.Domain.Auth.Roles.Models;
+using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Domain.Weather.Forecasts.Dtos;
 
 namespace server.src.Application.Data.Commands;
 
@@ -28,20 +37,24 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
     private readonly IUserCommands _userCommands;
     private readonly IWarningCommands _warningCommands;
     private readonly IForecastCommands _forecastCommands;
-    private readonly IAuthHelper _authHelper;
-        
+    private readonly ICommonQueries _commonQueries; 
         
     
-    public SeedDataHandler(ICommonRepository commonRepository, IRoleCommands roleCommands, 
-        IUserCommands userCommands, IWarningCommands warningCommands, IForecastCommands forecastCommands,
-        IAuthHelper authHelper)
+    public SeedDataHandler(
+        ICommonRepository commonRepository, 
+        IRoleCommands roleCommands, 
+        IUserCommands userCommands, 
+        IWarningCommands warningCommands, 
+        IForecastCommands forecastCommands, 
+        ICommonQueries commonQueries
+    )
     {   
         _commonRepository = commonRepository;
         _roleCommands = roleCommands;
         _userCommands = userCommands;
         _warningCommands = warningCommands;
         _forecastCommands = forecastCommands;
-        _authHelper = authHelper;
+        _commonQueries = commonQueries;
     }
 
 
@@ -50,12 +63,12 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
         var faker = new Faker();
         var random = new Random();
 
-        var roles = new List<RoleDto>()
+        var roles = new List<CreateRoleDto>()
         {
-            new ( Name: "User", Description: "User description", Guid.Empty),
-            new ( Name: "Manager", Description: "Manager description", Guid.Empty),
-            new ( Name: "Administrator", Description: "Administrator description", Guid.Empty),
-            new ( Name: "Developer", Description: "Developer description", Guid.Empty),
+            new ( Name: "User", Description: "User description"),
+            new ( Name: "Manager", Description: "Manager description"),
+            new ( Name: "Administrator", Description: "Administrator description"),
+            new ( Name: "Developer", Description: "Developer description"),
         };
 
         var rolesResponse = await _roleCommands.InitializeRolesAsync(roles, token);
@@ -67,7 +80,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithData("Data seeding was failed!");
         
-        var admin = new UserDto(
+        var admin = new CreateUserDto(
             // User Details
             FirstName: "Evangelos",
             LastName: "Chavlis",
@@ -86,9 +99,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
 
             // Additional Info
             Bio: faker.Lorem.Paragraph(),                
-            DateOfBirth: faker.Date.Past(30, DateTime.Today.AddYears(-18)).ToUniversalTime(),
-        
-            Version: Guid.Empty
+            DateOfBirth: faker.Date.Past(30, DateTime.Today.AddYears(-18)).ToUniversalTime()
         );
 
         var adminRegistrationResult = await _userCommands.RegisterUserAsync(admin, false, token);
@@ -100,9 +111,8 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithData("Data seeding was failed!");
 
         // Searching Item
-        var includes = new Expression<Func<Role, object>>[] { };
         var filters = new Expression<Func<Role, bool>>[] { r => r.Name!.Equals("Administrator")};
-        var role = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var role = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         // Check for existence
         if (role is null)
@@ -113,9 +123,8 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithData("Data seeding was failed!");
 
         // Searching Item
-        var adminUserIncludes = new Expression<Func<User, object>>[] { };
         var adminUserFilters = new Expression<Func<User, bool>>[] { u => u.UserName!.Equals("evangelos.chavlis") };
-        var adminUser = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var adminUser = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         // Check for existence
         if (adminUser is null)
@@ -125,13 +134,13 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithSuccess(false)
                 .WithData("Data seeding was failed!");
 
-        var dtoUsers = new List<UserDto>();
+        var dtoUsers = new List<CreateUserDto>();
 
         for (int i = 0; i < 10; i++)
         {
-            var password = _authHelper.GeneratePassword(12);
+            var password = await _commonQueries.GeneratePassword(12, token);
 
-            var item = new UserDto(
+            var item = new CreateUserDto(
                 // User Details
                 FirstName: faker.Name.FirstName(),
                 LastName: faker.Name.LastName(),
@@ -150,9 +159,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
 
                 // Additional Info
                 Bio: faker.Lorem.Paragraph(),                
-                DateOfBirth: faker.Date.Past(30, DateTime.Today.AddYears(-18)).ToUniversalTime(),
-            
-                Version: Guid.Empty
+                DateOfBirth: faker.Date.Past(30, DateTime.Today.AddYears(-18)).ToUniversalTime()
             );
 
             dtoUsers.Add(item);
@@ -167,31 +174,27 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithData("Data seeding was failed!");
 
-        var warningDtos = new List<WarningDto>
+        var warningDtos = new List<CreateWarningDto>
         {
             new (
                 Name: "Extreme", 
                 Description: "This alert is given for extreme alerts. Immediate action is advised to ensure safety.",
-                RecommendedActions: "Seek shelter, follow emergency protocols, and stay tuned for official updates.",
-                Version: Guid.Empty 
+                RecommendedActions: "Seek shelter, follow emergency protocols, and stay tuned for official updates."
             ),
             new (
                 Name: "High", 
                 Description: "This alert is given for high alerts. Be prepared for potentially hazardous conditions.",
-                RecommendedActions: "Stay alert, prepare emergency supplies, and monitor updates from authorities.",
-                Version: Guid.Empty 
+                RecommendedActions: "Stay alert, prepare emergency supplies, and monitor updates from authorities."
             ),
             new (
                 Name: "Normal", 
                 Description: "This alert is given for normal alerts. General conditions are safe, but stay informed.",
-                RecommendedActions: "No immediate action needed. Stay updated with weather reports.",
-                Version: Guid.Empty 
+                RecommendedActions: "No immediate action needed. Stay updated with weather reports."
             ), 
             new (
                 Name: "Low", 
                 Description: "This alert is given for low alerts. Minimal risk; no immediate action required.",
-                RecommendedActions: "Enjoy normal conditions, but remain aware of potential changes.",
-                Version: Guid.Empty 
+                RecommendedActions: "Enjoy normal conditions, but remain aware of potential changes."
             )
         };
 
@@ -205,10 +208,8 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithData("Data seeding was failed!");
 
         // Searching Items
-        var warningIncludes = new Expression<Func<Warning, object>>[] { };
-
         var lowFilters = new Expression<Func<Warning, bool>>[] { w => w.Name.Equals("Low") };
-        var low = await _commonRepository.GetResultByIdAsync(lowFilters, warningIncludes, token);
+        var low = await _commonRepository.GetResultByIdAsync(lowFilters, token: token);
 
         // Check for existence
         if (low is null)
@@ -220,7 +221,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
 
 
         var normalFilters = new Expression<Func<Warning, bool>>[] { w => w.Name.Equals("Normal") };
-        var normal = await _commonRepository.GetResultByIdAsync(lowFilters, warningIncludes, token);
+        var normal = await _commonRepository.GetResultByIdAsync(lowFilters, token: token);
 
         // Check for existence
         if (normal is null)
@@ -231,7 +232,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithData("Data seeding was failed!");
 
         var highFilters = new Expression<Func<Warning, bool>>[] { w => w.Name.Equals("High") };
-        var high = await _commonRepository.GetResultByIdAsync(lowFilters, warningIncludes, token);
+        var high = await _commonRepository.GetResultByIdAsync(lowFilters, token: token);
 
         // Check for existence
         if (high is null)
@@ -242,7 +243,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 .WithData("Data seeding was failed!");
 
         var extremeFilters = new Expression<Func<Warning, bool>>[] { w => w.Name.Equals("Extreme") };
-        var extreme = await _commonRepository.GetResultByIdAsync(lowFilters, warningIncludes, token);
+        var extreme = await _commonRepository.GetResultByIdAsync(lowFilters, token: token);
 
         // Check for existence
         if (extreme is null)
@@ -262,8 +263,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
         };
 
         
-
-        var forecastDtos = new List<ForecastDto>();
+        var forecastDtos = new List<CreateForecastDto>();
 
         for (int i = 0; i < 365; i++)
         {
@@ -317,12 +317,11 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
                 warningId = extreme.Id;
 
             // Add forecast to the list
-            forecastDtos.Add(new ForecastDto(
+            forecastDtos.Add(new CreateForecastDto(
                 Date: date.ToUniversalTime(),
                 TemperatureC: temperature,
                 Summary: summary,
-                WarningId: warningId,
-                Version: Guid.Empty
+                WarningId: warningId
             ));
         }
 

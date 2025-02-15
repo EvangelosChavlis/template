@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Models.Common;
-using server.src.WebApi.Controllers;
+using server.src.Api.Controllers;
 using server.src.Application.Auth.Users.Interfaces;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Auth.Users.Dtos;
 
 namespace server.src.Api.Controllers.Auth.Users;
 
@@ -40,7 +40,7 @@ public class UserQueriesController : BaseApiController
     [Route("{id}")]
     [Authorize(Roles = "Administrator")]
     [SwaggerOperation(Summary = "Get user by ID", Description = "Fetches a user by their ID.")]
-    [SwaggerResponse(StatusCodes.Status200OK, "User retrieved successfully", typeof(UserDto))]
+    [SwaggerResponse(StatusCodes.Status200OK, "User retrieved successfully", typeof(ListItemUserDto))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "User not found")]
     public async Task<IActionResult> GetUserById(Guid id, CancellationToken token)
     {

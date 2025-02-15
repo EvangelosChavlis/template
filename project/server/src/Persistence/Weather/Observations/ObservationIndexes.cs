@@ -1,0 +1,35 @@
+// packages
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+// source
+using server.src.Domain.Weather.Forecasts.Models;
+using server.src.Domain.Weather.Observations.Models;
+
+namespace server.src.Persistence.Weather.Observations;
+
+public class ObservationIndexes : IEntityTypeConfiguration<Observation>
+{
+    public void Configure(EntityTypeBuilder<Observation> builder)
+    {
+        builder.HasIndex(f => f.Id)
+            .IsUnique()
+            .HasDatabaseName($"{nameof(Forecast)}_{nameof(Forecast.Id)}");
+
+        builder.HasIndex(f 
+            => new { 
+                f.Id, 
+                f.Timestamp, 
+                f.TemperatureC,
+                f.Humidity
+            })
+            .IsUnique()
+             .HasDatabaseName($@"
+                {nameof(Forecast)}_
+                {nameof(Forecast.Id)}_
+                {nameof(Forecast.Date)}_
+                {nameof(Forecast.TemperatureC)}_
+                {nameof(Forecast.Humidity)}
+            ".Replace("\n", "").Trim());
+    }
+}

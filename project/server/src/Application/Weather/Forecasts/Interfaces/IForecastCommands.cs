@@ -1,6 +1,6 @@
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Forecasts.Dtos;
 
 namespace server.src.Application.Weather.Forecasts.Interfaces;
 

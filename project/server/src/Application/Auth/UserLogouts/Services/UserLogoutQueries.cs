@@ -2,7 +2,7 @@
 using server.src.Application.Auth.UserLogouts.Interfaces;
 using server.src.Application.Auth.UserLogouts.Queries;
 using server.src.Application.Common.Services;
-using server.src.Domain.Auth.UserLogouts;
+using server.src.Domain.Auth.UserLogouts.Dtos;
 using server.src.Domain.Auth.UserLogouts.Dtos;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Common.Models;

@@ -26,14 +26,14 @@ public class StoryConfiguration : IEntityTypeConfiguration<Story>
             .IsRequired();
 
         builder.HasOne(h => h.SourceTelemetryRecord)
-            .WithMany(t => t.Stories)
+            .WithMany()
             .HasForeignKey(h => h.SourceTelemetryRecordId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.SetNull);
 
         builder.HasOne(h => h.TargetTelemetryRecord)
-            .WithMany(t => t.Stories)
+            .WithMany()
             .HasForeignKey(h => h.TargetTelemetryRecordId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.SetNull);
 
         builder.ToTable(_tableName, _schema);
     }

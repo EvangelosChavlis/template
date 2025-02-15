@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.WebApi.Controllers;
+using server.src.Api.Controllers;
 using server.src.Application.Auth.Roles.Interfaces;
+using server.src.Domain.Auth.Roles.Dtos;
+using server.src.Domain.Common.Dtos;
 
 namespace server.src.Api.Controllers.Auth.Roles;
 
@@ -28,7 +28,7 @@ public class RoleCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Create a new role", Description = "Creates a new role using the provided role data.")]
     [SwaggerResponse(StatusCodes.Status201Created, "Role created successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid role data")]
-    public async Task<IActionResult> CreateRole([FromBody] RoleDto dto, CancellationToken token)
+    public async Task<IActionResult> CreateRole([FromBody] CreateRoleDto dto, CancellationToken token)
     {
         var result = await _roleCommands.CreateRoleAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -40,7 +40,7 @@ public class RoleCommandsController : BaseApiController
     [SwaggerOperation(Summary = "Initialize roles", Description = "Initializes multiple roles using a list of role data.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Roles initialized successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid roles data")]
-    public async Task<IActionResult> InitializeRole([FromBody] List<RoleDto> dto, CancellationToken token)
+    public async Task<IActionResult> InitializeRole([FromBody] List<CreateRoleDto> dto, CancellationToken token)
     {
         var result = await _roleCommands.InitializeRolesAsync(dto, token);
         return StatusCode(result.StatusCode, result);
@@ -53,7 +53,7 @@ public class RoleCommandsController : BaseApiController
     [SwaggerResponse(StatusCodes.Status200OK, "Role updated successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Role not found")]
     [SwaggerResponse(StatusCodes.Status400BadRequest, "Invalid role data")]
-    public async Task<IActionResult> UpdateRole(Guid id, [FromBody] RoleDto dto, CancellationToken token)
+    public async Task<IActionResult> UpdateRole(Guid id, [FromBody] UpdateRoleDto dto, CancellationToken token)
     {
         var result = await _roleCommands.UpdateRoleAsync(id, dto, token);
         return StatusCode(result.StatusCode, result);

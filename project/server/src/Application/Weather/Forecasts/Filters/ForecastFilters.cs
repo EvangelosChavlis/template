@@ -2,8 +2,8 @@
 using System.Linq.Expressions;
 
 // source
-using server.src.Domain.Extensions;
-using server.src.Domain.Models.Weather;
+using server.src.Domain.Common.Extensions;
+using server.src.Domain.Weather.Forecasts.Models;
 
 namespace server.src.Application.Weather.Forecasts.Filters;
 

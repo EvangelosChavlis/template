@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
 using server.src.Domain.Auth.Users.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Auth.Users;
 
@@ -20,7 +21,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.HasKey(u => u.Id);
+        builder.ConfigureBaseEntityProperties();
 
         builder.Property(u => u.FirstName)
             .IsRequired();

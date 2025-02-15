@@ -4,33 +4,55 @@ using System.Net;
 
 // source
 using server.src.Application.Common.Interfaces;
+using server.src.Application.Common.Validators;
 using server.src.Application.Weather.Warnings.Mappings;
 using server.src.Application.Weather.Warnings.Validators;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Domain.Common.Extensions;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Warnings.Commands;
 
-public record UpdateWarningCommand(Guid Id, WarningDto Dto) : IRequest<Response<string>>;
+public record UpdateWarningCommand(Guid Id, UpdateWarningDto Dto) : IRequest<Response<string>>;
 
 public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Response<string>>
 {
     private readonly ICommonRepository _commonRepository;
+    private readonly ICommonQueries _commonQueries;
     private readonly IUnitOfWork _unitOfWork;
     
-    public UpdateWarningHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public UpdateWarningHandler(ICommonRepository commonRepository, 
+        ICommonQueries commonQueries, IUnitOfWork unitOfWork)
     {
         _commonRepository = commonRepository;
+        _commonQueries = commonQueries;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(UpdateWarningCommand command, CancellationToken token = default)
     {
-        // Validation
-        var validationResult = WarningValidators.Validate(command.Dto);
+        // Check current user
+        var currentUser = await _commonQueries.GetCurrentUser(token);
+        if(!currentUser.UserFound)
+            return new Response<string>()
+                .WithMessage("Error updating warning.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(currentUser.UserFound)
+                .WithData("User not found");
 
+        // Id Validation
+        var idValidationResult = command.Id.ValidateId();
+        if (!idValidationResult.IsValid)
+            return new Response<string>()
+                .WithMessage("Validation failed.")
+                .WithStatusCode((int)HttpStatusCode.BadRequest)
+                .WithSuccess(idValidationResult.IsValid)
+                .WithData(string.Join("\n", idValidationResult.Errors));
+
+        // Dto Validation
+        var validationResult = command.Dto.Validate();
         if (!validationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Validation failed.")
@@ -41,11 +63,9 @@ public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Respon
         // Begin Transaction
         await _unitOfWork.BeginTransactionAsync(token);
 
-
         // Searching Item
-        var includes = new Expression<Func<Warning, object>>[] {  };
         var filters = new Expression<Func<Warning, bool>>[] { x => x.Id == command.Id};
-        var warning = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var warning = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         // Check for existence
         if (warning is null)
@@ -56,6 +76,18 @@ public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Respon
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
                 .WithData("Warning not found");
+        }
+
+        // Check for concurrency issues
+        if (warning.IsLockedByOtherUser(currentUser.Id))
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Entity is currently locked.")
+                .WithStatusCode((int)HttpStatusCode.Conflict)
+                .WithSuccess(false)
+                .WithData(@$"The warning has been modified by another {warning.LockedByUser!.UserName}. 
+                    Please try again.");
         }
 
         // Check for concurrency issues
@@ -71,7 +103,7 @@ public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Respon
 
         // Mapping, Validating, Saving Item
         command.Dto.UpdateWarningMapping(warning);
-        var modelValidationResult = WarningValidators.Validate(warning);
+        var modelValidationResult = WarningModelValidators.Validate(warning);
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -91,6 +123,18 @@ public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Respon
                 .WithMessage("Error updating warning.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
+                .WithData("Failed to update warning.");
+        }
+
+        // Unlock result
+        var unlockResult = await _commonRepository.UnlockAsync<Warning>(warning.Id, token);
+        if(!unlockResult)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error updating warning.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(unlockResult)
                 .WithData("Failed to update warning.");
         }
             

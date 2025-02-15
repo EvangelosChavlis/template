@@ -6,14 +6,14 @@ using System.Net;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Warnings.Mappings;
 using server.src.Application.Weather.Warnings.Validators;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Warnings.Dtos;
+using server.src.Domain.Weather.Warnings.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Weather.Warnings.Commands;
 
-public record CreateWarningCommand(WarningDto Dto) : IRequest<Response<string>>;
+public record CreateWarningCommand(CreateWarningDto Dto) : IRequest<Response<string>>;
 
 public class CreateWarningHandler : IRequestHandler<CreateWarningCommand, Response<string>>
 {
@@ -29,7 +29,7 @@ public class CreateWarningHandler : IRequestHandler<CreateWarningCommand, Respon
     public async Task<Response<string>> Handle(CreateWarningCommand command, CancellationToken token = default)
     {
         // Dto Validation
-        var dtoValidationResult = WarningValidators.Validate(command.Dto);
+        var dtoValidationResult = command.Dto.Validate();
         if (!dtoValidationResult.IsValid)
             return new Response<string>()
                 .WithMessage("Dto validation failed.")
@@ -41,9 +41,8 @@ public class CreateWarningHandler : IRequestHandler<CreateWarningCommand, Respon
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var includes = new Expression<Func<Warning, object>>[] { };
         var filters = new Expression<Func<Warning, bool>>[] { x => x.Name!.Equals(command.Dto.Name) };
-        var existingWarning = await _commonRepository.GetResultByIdAsync(filters, includes, token);
+        var existingWarning = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         // Check if the warning already exists in the system
         if (existingWarning is not null)
@@ -58,7 +57,7 @@ public class CreateWarningHandler : IRequestHandler<CreateWarningCommand, Respon
 
         // Mapping and Saving Warning
         var warning = command.Dto.CreateWarningModelMapping();
-        var modelValidationResult = WarningValidators.Validate(warning);
+        var modelValidationResult = WarningModelValidators.Validate(warning);
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

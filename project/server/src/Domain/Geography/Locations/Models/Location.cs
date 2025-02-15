@@ -3,19 +3,16 @@ using server.src.Domain.Geography.ClimateZones.Models;
 using server.src.Domain.Geography.TerrainTypes.Models;
 using server.src.Domain.Weather.Forecasts.Models;
 using server.src.Domain.Geography.Timezones.Models;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Weather.Observations.Models;
 
 namespace server.src.Domain.Geography.Locations.Models;
 
 /// <summary>
 /// Represents a geographic location with detailed attributes, including longitude, latitude, altitude, and region-specific information.
 /// </summary>
-public class Location
+public class Location : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the location.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the longitude coordinate of the location.
     /// </summary>
@@ -77,6 +74,11 @@ public class Location
     /// Gets or sets the list of forecasts associated with this location.
     /// </summary>
     public virtual List<Forecast> Forecasts { get; set; }
+
+    /// <summary>
+    /// Gets or sets the list of observations associated with this location.
+    /// </summary>
+    public virtual List<Observation> Observation { get; set; }
 
     #endregion
 }

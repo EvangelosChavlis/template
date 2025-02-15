@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.WebApi.Controllers;
+using server.src.Api.Controllers;
 using server.src.Application.Auth.UserLogouts.Interfaces;
 
 namespace server.src.Api.Controllers.Auth.UserLogout;

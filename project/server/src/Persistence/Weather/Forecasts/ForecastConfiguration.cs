@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
 using server.src.Domain.Weather.Forecasts.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Weather.Forecasts;
 
@@ -20,7 +21,7 @@ public class ForecastConfiguration : IEntityTypeConfiguration<Forecast>
 
     public void Configure(EntityTypeBuilder<Forecast> builder)
     {
-       builder.HasKey(f => f.Id);
+       builder.ConfigureBaseEntityProperties();
 
        builder.Property(f => f.Date)
               .IsRequired();
@@ -72,9 +73,6 @@ public class ForecastConfiguration : IEntityTypeConfiguration<Forecast>
 
        builder.Property(f => f.Summary)
               .HasMaxLength(200);
-
-       builder.Property(f => f.IsRead)
-              .IsRequired();
 
        builder.Property(f => f.WarningId)
               .IsRequired();

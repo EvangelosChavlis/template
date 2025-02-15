@@ -12,6 +12,8 @@ using server.src.Application.Data;
 using server.src.Application.Metrics.Errors;
 using server.src.Application.Metrics.Telemetry;
 using server.src.Application.Weather.Forecasts;
+using server.src.Application.Weather.MoonPhases;
+using server.src.Application.Weather.Observations;
 using server.src.Application.Weather.Warnings;
 
 namespace server.src.Application;
@@ -27,15 +29,17 @@ public static class DI
         services.AddData();
 
         // Auth
-        services.AddUsers();
         services.AddRoles();
+        services.AddUsers();
         services.AddUserRoles();
         services.AddUserLogins();
         services.AddUserLogouts();
 
         // Weather
-        services.AddWarnings();
         services.AddForecasts();
+        services.AddMoonPhases();
+        services.AddObservations();
+        services.AddWarnings();
         
         //Metrics
         services.AddTelemetry();

@@ -26,14 +26,14 @@ public class TrailConfiguration : IEntityTypeConfiguration<Trail>
                 .IsRequired();
 
         builder.HasOne(c => c.SourceAuditLog)
-                .WithMany(a => a.Trails)
-                .HasForeignKey(c => c.SourceAuditLogId)
-                .OnDelete(DeleteBehavior.Restrict);
+               .WithMany()
+               .HasForeignKey(c => c.SourceAuditLogId)
+               .OnDelete(DeleteBehavior.SetNull);
 
         builder.HasOne(c => c.TargetAuditLog)
-                .WithMany(a => a.Trails) 
-                .HasForeignKey(c => c.TargetAuditLogId)
-                .OnDelete(DeleteBehavior.Restrict);
+               .WithMany()
+               .HasForeignKey(c => c.TargetAuditLogId)
+               .OnDelete(DeleteBehavior.SetNull);
 
         builder.ToTable(_tableName, _schema);
     }

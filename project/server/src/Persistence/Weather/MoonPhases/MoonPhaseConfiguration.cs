@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
 using server.src.Domain.Weather.MoonPhases.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Weather.MoonPhases.Models;
 
@@ -20,7 +21,7 @@ public class MoonPhaseConfiguration : IEntityTypeConfiguration<MoonPhase>
 
     public void Configure(EntityTypeBuilder<MoonPhase> builder)
     {
-        builder.HasKey(m => m.Id);
+        builder.ConfigureBaseEntityProperties();
         
         builder.Property(m => m.Name)
                 .IsRequired()
