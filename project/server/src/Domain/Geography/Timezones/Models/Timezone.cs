@@ -1,4 +1,3 @@
-// source
 using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Locations.Models;
 
@@ -29,6 +28,17 @@ public class Timezone : BaseEntity
     /// Determines whether the time zone is enabled for assignment or usage.
     /// </summary>
     public bool IsActive { get; set; }
+
+    /// <summary>
+    /// Gets or sets the description of the time zone (e.g., "Pacific Standard Time (PST)").
+    /// </summary>
+    public string Description { get; set; }
+
+    /// <summary>
+    /// Gets or sets the UTC offset during daylight saving time (if applicable).
+    /// If SupportsDaylightSaving is false, this will be the same as UtcOffset.
+    /// </summary>
+    public double? DstOffset { get; set; }
 
     #region Navigation properties
 
