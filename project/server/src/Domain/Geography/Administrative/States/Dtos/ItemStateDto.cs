@@ -12,5 +12,6 @@ public record ItemStateDto(
     long Population,
     double AreaKm2,
     bool IsActive,
-    Guid CountryId
+    string Country,
+    Guid Version
 );
