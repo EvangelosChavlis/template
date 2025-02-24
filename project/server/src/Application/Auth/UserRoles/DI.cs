@@ -12,7 +12,7 @@ namespace server.src.Application.Auth.UserRoles;
 
 public static class DI
 {
-    public static IServiceCollection AddUserRoles(this IServiceCollection services)
+    public static IServiceCollection RegisterUserRoles(this IServiceCollection services)
     {
         var assembly = Assembly.GetExecutingAssembly();
         

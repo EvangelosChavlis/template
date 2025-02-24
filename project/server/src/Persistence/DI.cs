@@ -15,7 +15,7 @@ public static class DI
     private static readonly string _connectionString = "DefaultConnection";
     private static readonly string _archiveConnectionString = "ArchiveConnection";
 
-    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection RegisterPersistence(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<DataContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString(_connectionString)));

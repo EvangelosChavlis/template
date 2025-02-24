@@ -11,7 +11,6 @@ public record UpdateCountryDto(
     string Capital,
     long Population,
     double AreaKm2,
-    bool IsActive,
     Guid ContinentId,
     Guid Version
 );

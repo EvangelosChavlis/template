@@ -12,7 +12,7 @@ namespace server.src.Application.Geography.Natural.TerrainTypes;
 
 public static class DI
 {
-    public static IServiceCollection AddTerrainTypes(this IServiceCollection services)
+    public static IServiceCollection RegisterTerrainTypes(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

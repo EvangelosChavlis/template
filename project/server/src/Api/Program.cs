@@ -10,14 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-// Add Application Layer Services
-builder.Services.AddApplication();
+// Register Application Layer Services
+builder.Services.RegisterApplication();
 
-// Add Persistence Layer Services
-builder.Services.AddPersistence(builder.Configuration);
+// Register Persistence Layer Services
+builder.Services.RegisterPersistence(builder.Configuration);
 
-// Add Api Layer Services
-builder.Services.AddApi(builder.Logging, builder.WebHost, 
+// Register Api Layer Services
+builder.Services.RegisterApi(builder.Logging, builder.WebHost, 
     builder.Environment);
 
 var app = builder.Build();

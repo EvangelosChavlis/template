@@ -12,7 +12,7 @@ namespace server.src.Application.Weather.Warnings;
 
 public static class DI
 {
-    public static IServiceCollection AddWarnings(this IServiceCollection services)
+    public static IServiceCollection RegisterWarnings(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

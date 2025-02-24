@@ -12,7 +12,7 @@ namespace server.src.Application.Geography.Administrative.Continents;
 
 public static class DI
 {
-    public static IServiceCollection AddContinents(this IServiceCollection services)
+    public static IServiceCollection RegisterContinents(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

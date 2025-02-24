@@ -12,7 +12,7 @@ namespace server.src.Application.Geography.Natural.ClimateZones;
 
 public static class DI
 {
-    public static IServiceCollection AddClimateZones(this IServiceCollection services)
+    public static IServiceCollection RegisterClimateZones(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

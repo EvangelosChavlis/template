@@ -10,7 +10,7 @@ namespace server.src.Application.Common;
 
 public static class DI
 {
-    public static IServiceCollection AddCommon(this IServiceCollection services)
+    public static IServiceCollection RegisterCommon(this IServiceCollection services)
     {
         var assembly = Assembly.GetExecutingAssembly();
         

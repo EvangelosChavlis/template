@@ -9,7 +9,7 @@ namespace server.src.Api;
 
 public static class DI
 {
-    public static IServiceCollection AddApi(this IServiceCollection services, ILoggingBuilder logging, 
+    public static IServiceCollection RegisterApi(this IServiceCollection services, ILoggingBuilder logging, 
         IWebHostBuilder webHostBuilder, IHostEnvironment environment)
     {
         // Configure Kestrel for production

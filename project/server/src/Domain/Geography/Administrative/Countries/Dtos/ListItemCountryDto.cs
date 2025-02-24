@@ -9,5 +9,6 @@ public record ListItemCountryDto(
     string Name,
     string IsoCode,
     bool IsActive,
-    long Population
+    long Population,
+    int Count
 );

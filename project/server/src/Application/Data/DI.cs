@@ -12,7 +12,7 @@ namespace server.src.Application.Data;
 
 public static class DI
 {
-    public static IServiceCollection AddData(this IServiceCollection services)
+    public static IServiceCollection RegisterData(this IServiceCollection services)
     {   
         var assembly = Assembly.GetExecutingAssembly();
         

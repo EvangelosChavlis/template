@@ -13,5 +13,6 @@ public record ItemCountryDto(
     long Population,
     double AreaKm2,
     bool IsActive,
-    string Continent
+    string Continent,
+    Guid Version
 );

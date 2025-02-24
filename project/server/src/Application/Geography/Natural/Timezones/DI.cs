@@ -12,7 +12,7 @@ namespace server.src.Application.Geography.Natural.Timezones;
 
 public static class DI
 {
-    public static IServiceCollection AddTimezones(this IServiceCollection services)
+    public static IServiceCollection RegisterTimezones(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

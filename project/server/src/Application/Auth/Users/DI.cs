@@ -12,7 +12,7 @@ namespace server.src.Application.Auth.Users;
 
 public static class DI
 {
-    public static IServiceCollection AddUsers(this IServiceCollection services)
+    public static IServiceCollection RegisterUsers(this IServiceCollection services)
     {
         var assembly = Assembly.GetExecutingAssembly();
         

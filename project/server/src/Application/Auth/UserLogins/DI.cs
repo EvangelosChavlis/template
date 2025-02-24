@@ -12,7 +12,7 @@ namespace server.src.Application.Auth.UserLogins;
 
 public static class DI
 {
-    public static IServiceCollection AddUserLogins(this IServiceCollection services)
+    public static IServiceCollection RegisterUserLogins(this IServiceCollection services)
     {        
         var assembly = Assembly.GetExecutingAssembly();
         

@@ -12,7 +12,7 @@ namespace server.src.Application.Weather.Observations;
 
 public static class DI
 {
-    public static IServiceCollection AddObservations(this IServiceCollection services)
+    public static IServiceCollection RegisterObservations(this IServiceCollection services)
     {
         services.AddMemoryCache();
                 

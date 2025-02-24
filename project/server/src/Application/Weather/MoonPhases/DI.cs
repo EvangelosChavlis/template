@@ -12,7 +12,7 @@ namespace server.src.Application.Weather.MoonPhases;
 
 public static class DI
 {
-    public static IServiceCollection AddMoonPhases(this IServiceCollection services)
+    public static IServiceCollection RegisterMoonPhases(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

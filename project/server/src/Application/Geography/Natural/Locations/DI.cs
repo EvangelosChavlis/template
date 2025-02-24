@@ -12,7 +12,7 @@ namespace server.src.Application.Geography.Natural.Locations;
 
 public static class DI
 {
-    public static IServiceCollection AddLocations(this IServiceCollection services)
+    public static IServiceCollection RegisterLocations(this IServiceCollection services)
     {       
         var assembly = Assembly.GetExecutingAssembly();
         

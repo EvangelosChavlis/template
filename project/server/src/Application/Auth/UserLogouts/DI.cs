@@ -13,7 +13,7 @@ namespace server.src.Application.Auth.UserLogouts;
 
 public static class DI
 {
-    public static IServiceCollection AddUserLogouts(this IServiceCollection services)
+    public static IServiceCollection RegisterUserLogouts(this IServiceCollection services)
     {        
         var assembly = Assembly.GetExecutingAssembly();
         

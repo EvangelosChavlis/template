@@ -8,11 +8,11 @@ using server.src.Application.Common.Services;
 using server.src.Application.Metrics.Errors.Services;
 using server.src.Application.Metrics.LogErrors.Interfaces;
 
-namespace server.src.Application.Metrics.Errors;
+namespace server.src.Application.Metrics.LogErrors;
 
 public static class DI
 {
-    public static IServiceCollection AddLogErrors(this IServiceCollection services)
+    public static IServiceCollection RegisterLogErrors(this IServiceCollection services)
     {        
         var assembly = Assembly.GetExecutingAssembly();
         

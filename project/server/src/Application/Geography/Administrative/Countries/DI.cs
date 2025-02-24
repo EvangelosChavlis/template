@@ -3,17 +3,17 @@ using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
 // source
-using server.src.Application.Auth.TelemetryRecords.Interfaces;
+using server.src.Application.Geography.Administrative.Countries.Interfaces;
+using server.src.Application.Geography.Administrative.Countries.Services;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Common.Services;
-using server.src.Application.TelemetryRecords.Services;
 
-namespace server.src.Application.Metrics.Telemetry;
+namespace server.src.Application.Geography.Administrative.Countries;
 
 public static class DI
 {
-    public static IServiceCollection RegisterTelemetry(this IServiceCollection services)
-    {        
+    public static IServiceCollection RegisterCountries(this IServiceCollection services)
+    {       
         var assembly = Assembly.GetExecutingAssembly();
         
         // Register all IRequestHandler<TRequest, TResponse> implementations dynamically
@@ -33,8 +33,9 @@ public static class DI
         // Register RequestExecutor
         services.AddSingleton<RequestExecutor>();
 
-        // Register TelemetryRecordQueries
-        services.AddTransient<ITelemetryRecordQueries, TelemetryRecordQueries>();
+        // Register CountryCommands and CountryQueries
+        services.AddTransient<ICountryCommands, CountryCommands>();
+        services.AddTransient<ICountryQueries, CountryQueries>();
 
         return services;
     }
