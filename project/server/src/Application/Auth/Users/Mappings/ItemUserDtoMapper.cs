@@ -38,7 +38,7 @@ public static class ItemUserDtoMapper
             MobilePhoneNumberConfirmed: model.MobilePhoneNumberConfirmed,
 
             Bio: model.Bio,
-            DateOfBirth: model.DateOfBirth.GetLocalDateTimeString(),
+            DateOfBirth: model.DateOfBirth,
             IsActive: model.IsActive,
             Version: Guid.Empty
         );

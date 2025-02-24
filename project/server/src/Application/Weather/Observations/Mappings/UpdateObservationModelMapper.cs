@@ -1,8 +1,8 @@
 // source
-using server.src.Domain.Geography.Locations.Models;
 using server.src.Domain.Weather.Observations.Dtos;
 using server.src.Domain.Weather.Observations.Models;
 using server.src.Domain.Weather.MoonPhases.Models;
+using server.src.Domain.Geography.Natural.Locations.Models;
 
 namespace server.src.Application.Weather.Observations.Mappings;
 

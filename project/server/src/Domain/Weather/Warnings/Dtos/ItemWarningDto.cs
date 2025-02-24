@@ -9,5 +9,6 @@ public record ItemWarningDto(
     string Name, 
     string Description,
     string RecommendedActions,
+    bool IsActive,
     Guid Version
 );

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 // source
-using server.src.Persistence.Contexts;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Api.Helpers;
 

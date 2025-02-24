@@ -8,7 +8,7 @@ using server.src.Application.Weather.Forecasts.Mappings;
 using server.src.Application.Weather.Forecasts.Validators;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Common.Extensions;
-using server.src.Domain.Geography.Locations.Models;
+using server.src.Domain.Geography.Natural.Locations.Models;
 using server.src.Domain.Weather.Forecasts.Dtos;
 using server.src.Domain.Weather.Forecasts.Models;
 using server.src.Domain.Weather.MoonPhases.Models;
@@ -68,7 +68,7 @@ public class CreateForecastHandler : IRequestHandler<CreateForecastCommand, Resp
         }
 
         // Searching Item
-        var warningFilters = new Expression<Func<Warning, bool>>[] { x => x.Id == command.Dto.WarningId};
+        var warningFilters = new Expression<Func<Warning, bool>>[] { w => w.Id == command.Dto.WarningId};
         var warning = await _commonRepository.GetResultByIdAsync(warningFilters, token: token);
 
         // Check for existence
@@ -148,7 +148,7 @@ public class CreateForecastHandler : IRequestHandler<CreateForecastCommand, Resp
         // Mapping, Validating, Saving Item
         var forecast = command.Dto.CreateForecastModelMapping(warning, 
             location, moonPhase);
-        var modelValidationResult = ForecastModelValidators.Validate(forecast);
+        var modelValidationResult = forecast.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

@@ -9,6 +9,11 @@ using server.src.Application.Auth.UserRoles;
 using server.src.Application.Auth.Users;
 using server.src.Application.Common;
 using server.src.Application.Data;
+using server.src.Application.Geography.Administrative.Continents;
+using server.src.Application.Geography.Natural.ClimateZones;
+using server.src.Application.Geography.Natural.Locations;
+using server.src.Application.Geography.Natural.TerrainTypes;
+using server.src.Application.Geography.Natural.Timezones;
 using server.src.Application.Metrics.Errors;
 using server.src.Application.Metrics.Telemetry;
 using server.src.Application.Weather.Forecasts;
@@ -40,6 +45,13 @@ public static class DI
         services.AddMoonPhases();
         services.AddObservations();
         services.AddWarnings();
+
+        // Geography
+        services.AddContinents();
+        services.AddClimateZones();
+        services.AddLocations();
+        services.AddTimezones();
+        services.AddTerrainTypes();
         
         //Metrics
         services.AddTelemetry();

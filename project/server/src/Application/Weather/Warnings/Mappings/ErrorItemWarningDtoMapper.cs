@@ -18,6 +18,7 @@ public class ErrorItemWarningDtoMapper
             Name: string.Empty,
             Description: string.Empty,
             RecommendedActions: string.Empty,
+            IsActive: false,
             Version: Guid.Empty 
         );
 }

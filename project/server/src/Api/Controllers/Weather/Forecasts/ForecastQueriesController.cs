@@ -4,11 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // source
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Common;
-using server.src.Api.Controllers;
 using server.src.Application.Weather.Forecasts.Interfaces;
+using server.src.Domain.Common.Dtos;
+using server.src.Domain.Weather.Forecasts.Dtos;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Api.Controllers.Weather.Forecasts;
 

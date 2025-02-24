@@ -51,6 +51,10 @@ public static class UserModelValidators
         if (string.IsNullOrWhiteSpace(model.DateOfBirth))
             errors.Add("Date of birth is required.");
 
+        // Validation for IsActive (boolean)
+        if (model.IsActive is not true && model.IsActive is not false)
+            errors.Add("IsActive must be either true or false.");
+
         // Validation for Version
         if (model.Version == Guid.Empty)
             errors.Add("Invalid version. The GUID must not be empty.");

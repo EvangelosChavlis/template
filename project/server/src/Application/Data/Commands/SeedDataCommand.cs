@@ -6,16 +6,9 @@ using Bogus;
 // source
 using server.src.Application.Auth.Roles.Interfaces;
 using server.src.Application.Auth.Users.Interfaces;
-using server.src.Application.Helpers;
 using server.src.Application.Common.Interfaces;
 using server.src.Application.Weather.Forecasts.Interfaces;
 using server.src.Application.Weather.Warnings.Interfaces;
-using server.src.Domain.Dto.Auth;
-using server.src.Domain.Dto.Common;
-using server.src.Domain.Dto.Weather;
-using server.src.Domain.Models.Auth;
-using server.src.Domain.Models.Weather;
-using server.src.Persistence.Interfaces;
 using server.src.Domain.Common.Dtos;
 using server.src.Persistence.Common.Interfaces;
 using server.src.Domain.Auth.Roles.Dtos;
@@ -316,13 +309,13 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
             else
                 warningId = extreme.Id;
 
-            // Add forecast to the list
-            forecastDtos.Add(new CreateForecastDto(
-                Date: date.ToUniversalTime(),
-                TemperatureC: temperature,
-                Summary: summary,
-                WarningId: warningId
-            ));
+            // // Add forecast to the list
+            // forecastDtos.Add(new CreateForecastDto(
+            //     Date: date.ToUniversalTime(),
+            //     TemperatureC: temperature,
+            //     Summary: summary,
+            //     WarningId: warningId
+            // ));
         }
 
 

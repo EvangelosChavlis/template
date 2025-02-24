@@ -21,6 +21,7 @@ public static class ItemWarningDtoMapper
             Name: model.Name,
             Description: model.Description,
             RecommendedActions: model.RecommendedActions,
+            IsActive: model.IsActive,
             Version: model.Version
         );
 }

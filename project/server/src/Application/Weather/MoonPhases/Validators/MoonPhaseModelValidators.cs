@@ -46,6 +46,10 @@ public static class MoonPhaseModelValidators
         // Validation for OccurrenceDate (Cannot be in the past)
         if (model.OccurrenceDate < DateTime.UtcNow.Date)
             errors.Add("Occurrence date cannot be in the past.");
+        
+        // Validation for IsActive (boolean)
+        if (model.IsActive is not true && model.IsActive is not false)
+            errors.Add("IsActive must be either true or false.");
 
         // Validation for Version
         if (model.Version == Guid.Empty)

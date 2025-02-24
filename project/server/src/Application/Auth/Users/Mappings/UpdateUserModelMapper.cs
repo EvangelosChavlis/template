@@ -34,6 +34,6 @@ public static class UpdateUserModelMapper
         model.MobilePhoneNumberConfirmed = model.MobilePhoneNumberConfirmed;
         
         model.Bio = dto.Bio;
-        model.DateOfBirth = dto.DateOfBirth;
+        model.DateOfBirth = dto.DateOfBirth.ToString();
     }
 }

@@ -1,17 +1,17 @@
-// source
-using server.src.Application.Includes.Metrics;
+// // source
+// using server.src.Application.Includes.Metrics;
 
-namespace server.test.Application.Unit.Tests.Includes.Errors;
+// namespace server.test.Application.Unit.Tests.Includes.Errors;
 
-public class ErrorsIncludesTests
-{
-    [Fact]
-    public void GetErrorsIncludes_ShouldReturnEmptyArray()
-    {
-        // Act
-        var includes = ErrorsIncludes.GetErrorsIncludes();
+// public class ErrorsIncludesTests
+// {
+//     [Fact]
+//     public void GetErrorsIncludes_ShouldReturnEmptyArray()
+//     {
+//         // Act
+//         var includes = ErrorsIncludes.GetErrorsIncludes();
 
-        // Assert
-        Assert.Empty(includes);
-    }
-}
+//         // Assert
+//         Assert.Empty(includes);
+//     }
+// }

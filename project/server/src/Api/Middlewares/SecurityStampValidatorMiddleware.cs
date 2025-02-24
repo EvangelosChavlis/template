@@ -3,7 +3,7 @@ using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 
 // source
-using server.src.Persistence.Contexts;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Api.Middlewares;
 
@@ -29,7 +29,7 @@ public class SecurityStampValidatorMiddleware
                 using var scope = context.RequestServices.CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
 
-                var user = await dbContext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+                var user = await dbContext.AuthDbSets.Users.FirstOrDefaultAsync(u => u.Id == userId);
 
                 if (user == null || user.SecurityStamp != tokenSecurityStamp)
                 {

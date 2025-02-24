@@ -12,8 +12,8 @@ using server.src.Domain.Weather.Forecasts.Models;
 using server.src.Domain.Common.Extensions;
 using server.src.Persistence.Common.Interfaces;
 using server.src.Domain.Weather.Warnings.Models;
-using server.src.Domain.Geography.Locations.Models;
 using server.src.Domain.Weather.MoonPhases.Models;
+using server.src.Domain.Geography.Natural.Locations.Models;
 
 namespace server.src.Application.Weather.Forecasts.Commands;
 
@@ -141,7 +141,7 @@ public class UpdateForecastHandler : IRequestHandler<UpdateForecastCommand, Resp
         // Mapping, Validating, Saving Item
         command.Dto.UpdateForecastModelMapping(forecast, warning, 
             location, moonPhase);
-        var modelValidationResult = ForecastModelValidators.Validate(forecast);
+        var modelValidationResult = forecast.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

@@ -1,6 +1,6 @@
 // source
 using server.src.Domain.Common.Models;
-using server.src.Domain.Geography.Locations.Models;
+using server.src.Domain.Geography.Natural.Locations.Models;
 using server.src.Domain.Weather.MoonPhases.Models;
 
 namespace server.src.Domain.Weather.Observations.Models;

@@ -31,6 +31,10 @@ public static class WarningModelValidators
         else if (model.Description.ContainsNonPrintableCharacters())
             errors.Add("Description contains non-printable characters.");
 
+        // Validation for IsActive (boolean)
+        if (model.IsActive is not true && model.IsActive is not false)
+            errors.Add("IsActive must be either true or false.");
+
         // Validation for Version
         if (model.Version == Guid.Empty)
             errors.Add("Invalid Version. The GUID must not be empty.");

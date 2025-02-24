@@ -57,7 +57,7 @@ public class CreateWarningHandler : IRequestHandler<CreateWarningCommand, Respon
 
         // Mapping and Saving Warning
         var warning = command.Dto.CreateWarningModelMapping();
-        var modelValidationResult = WarningModelValidators.Validate(warning);
+        var modelValidationResult = warning.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

@@ -2,7 +2,7 @@
 using server.src.Domain.Common.Models;
 using server.src.Domain.Weather.Warnings.Models;
 
-namespace server.src.Application.Weather.Warnings;
+namespace server.src.Application.Weather.Warnings.Includes;
 
 public class WarningsIncludes
 {

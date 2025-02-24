@@ -64,7 +64,7 @@ public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Respon
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<Warning, bool>>[] { x => x.Id == command.Id};
+        var filters = new Expression<Func<Warning, bool>>[] { w => w.Id == command.Id};
         var warning = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
         // Check for existence
@@ -103,7 +103,7 @@ public class UpdateWarningHandler : IRequestHandler<UpdateWarningCommand, Respon
 
         // Mapping, Validating, Saving Item
         command.Dto.UpdateWarningMapping(warning);
-        var modelValidationResult = WarningModelValidators.Validate(warning);
+        var modelValidationResult = warning.Validate();
         if (!modelValidationResult.IsValid)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

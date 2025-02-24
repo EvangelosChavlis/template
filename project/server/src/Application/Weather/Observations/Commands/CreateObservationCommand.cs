@@ -8,11 +8,11 @@ using server.src.Application.Weather.Observations.Mappings;
 using server.src.Application.Weather.Observations.Validators;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Common.Extensions;
-using server.src.Domain.Geography.Locations.Models;
 using server.src.Domain.Weather.Observations.Dtos;
 using server.src.Domain.Weather.Observations.Models;
 using server.src.Domain.Weather.MoonPhases.Models;
 using server.src.Persistence.Common.Interfaces;
+using server.src.Domain.Geography.Natural.Locations.Models;
 
 namespace server.src.Application.Weather.Observations.Commands;
 

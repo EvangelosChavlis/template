@@ -1,5 +1,5 @@
 // source
-using server.src.Domain.Geography.Locations.Models;
+using server.src.Domain.Geography.Natural.Locations.Models;
 using server.src.Domain.Weather.Forecasts.Dtos;
 using server.src.Domain.Weather.Forecasts.Models;
 using server.src.Domain.Weather.MoonPhases.Models;

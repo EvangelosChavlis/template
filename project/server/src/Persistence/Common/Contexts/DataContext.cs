@@ -25,7 +25,7 @@ namespace server.src.Persistence.Common.Contexts
             WeatherDbSets = new WeatherDbSets(this);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 

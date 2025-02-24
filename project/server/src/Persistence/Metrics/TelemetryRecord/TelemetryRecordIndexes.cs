@@ -9,7 +9,7 @@ using server.src.Domain.Metrics.TelemetryRecords.Models;
 
 namespace server.src.Persistence.Metrics.TelemetryRecords;
 
-public class TelemetryIndexes : IEntityTypeConfiguration<TelemetryRecord>
+public class TelemetryRecordIndexes : IEntityTypeConfiguration<TelemetryRecord>
 {
     public void Configure(EntityTypeBuilder<TelemetryRecord> builder)
     {
