@@ -4,7 +4,6 @@ using System.Net;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Geography.Administrative.Includes.Countries;
 using server.src.Application.Geography.Administrative.Countries.Filters;
 using server.src.Application.Geography.Natural.Countries.Mappings;
 using server.src.Domain.Common.Dtos;
@@ -12,6 +11,7 @@ using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Administrative.Countries.Dtos;
 using server.src.Domain.Geography.Administrative.Countries.Models;
 using server.src.Persistence.Common.Interfaces;
+using server.src.Application.Geography.Administrative.Countries.Includes;
 
 namespace server.src.Application.Geography.Administrative.Countries.Queries;
 
@@ -43,7 +43,7 @@ public class GetCountrysHandler : IRequestHandler<GetCountriesQuery, ListRespons
         var filters = new Expression<Func<Country, bool>>[] { filter! };
 
         // Include related entities
-        var includes = CountrysIncludes.GetCountrysIncludes();
+        var includes = CountriesIncludes.GetCountrysIncludes();
 
         // Fetch paginated results
         var pagedCountrys = await _commonRepository.GetPagedResultsAsync( pageParams, 

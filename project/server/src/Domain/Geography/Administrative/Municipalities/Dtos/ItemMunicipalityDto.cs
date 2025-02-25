@@ -10,6 +10,6 @@ public record ItemMunicipalityDto(
     string Description,
     long Population,
     bool IsActive,
-    Guid RegionId,
+    string Region,
     Guid Version
 );

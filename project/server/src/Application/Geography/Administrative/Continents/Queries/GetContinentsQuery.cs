@@ -4,7 +4,6 @@ using System.Net;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Geography.Administrative.Includes.Continents;
 using server.src.Application.Geography.Administrative.Continents.Filters;
 using server.src.Application.Geography.Natural.Continents.Mappings;
 using server.src.Domain.Common.Dtos;
@@ -12,6 +11,7 @@ using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Administrative.Continents.Dtos;
 using server.src.Domain.Geography.Administrative.Continents.Models;
 using server.src.Persistence.Common.Interfaces;
+using server.src.Application.Geography.Administrative.Continents.Includes;
 
 namespace server.src.Application.Geography.Administrative.Continents.Queries;
 

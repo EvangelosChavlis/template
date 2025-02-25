@@ -2,7 +2,7 @@
 using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Administrative.Continents.Models;
 
-namespace server.src.Application.Geography.Administrative.Includes.Continents;
+namespace server.src.Application.Geography.Administrative.Continents.Includes;
 
 public class ContinentsIncludes
 {

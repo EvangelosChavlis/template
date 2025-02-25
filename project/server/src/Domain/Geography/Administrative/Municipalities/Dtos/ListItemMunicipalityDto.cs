@@ -7,6 +7,7 @@ namespace server.src.Domain.Geography.Administrative.Municipalities.Dtos;
 public record ListItemMunicipalityDto(
     Guid Id,
     string Name,
+    long Population,
     bool IsActive,
-    long Population
+    int Count
 );
