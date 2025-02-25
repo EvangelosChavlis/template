@@ -23,7 +23,7 @@ public class CountryQueriesController : BaseApiController
         _countryQueries = countryQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography countries", Description = "Retrieves a list of geography countries with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of countries retrieved successfully", typeof(ListResponse<List<ListItemCountryDto>>))]
@@ -34,7 +34,7 @@ public class CountryQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography country by ID", Description = "Retrieves details of a specific geography country by its unique ID.")]

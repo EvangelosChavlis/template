@@ -23,7 +23,7 @@ public class MunicipalityQueriesController : BaseApiController
         _municipalityQueries = municipalityQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography municipalities", Description = "Retrieves a list of geography municipalities with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of municipalities retrieved successfully", typeof(ListResponse<List<ListItemMunicipalityDto>>))]
@@ -34,7 +34,7 @@ public class MunicipalityQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography municipality by ID", Description = "Retrieves details of a specific geography municipality by its unique ID.")]

@@ -23,7 +23,7 @@ public class ContinentQueriesController : BaseApiController
         _continentQueries = continentQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography continents", Description = "Retrieves a list of geography continents with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of continents retrieved successfully", typeof(ListResponse<List<ListItemContinentDto>>))]
@@ -34,7 +34,7 @@ public class ContinentQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography continent by ID", Description = "Retrieves details of a specific geography continent by its unique ID.")]

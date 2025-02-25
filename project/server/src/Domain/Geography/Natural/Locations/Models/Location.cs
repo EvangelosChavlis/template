@@ -1,5 +1,6 @@
 // source
 using server.src.Domain.Common.Models;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 using server.src.Domain.Geography.Natural.ClimateZones.Models;
 using server.src.Domain.Geography.Natural.NaturalFeatures.Models;
 using server.src.Domain.Geography.Natural.TerrainTypes.Models;
@@ -53,10 +54,15 @@ public class Location : BaseEntity
     /// </summary>
     public Guid ClimateZoneId { get; set; }
 
-     /// <summary>
+    /// <summary>
     /// Foreign key for the associated natural feature (e.g., a mountain, river, island).
     /// </summary>
     public Guid NaturalFeatureId { get; set; }
+
+    /// <summary>
+    /// Foreign key for the associated neighborhood.
+    /// </summary>
+    public Guid NeighborhoodId { get; set; }
 
     #endregion
 
@@ -81,6 +87,11 @@ public class Location : BaseEntity
     /// Navigation property to the associated natural feature.
     /// </summary>
     public virtual NaturalFeature NaturalFeature { get; set; }
+
+    /// <summary>
+    /// Navigation property to the neighborhood.
+    /// </summary>
+    public virtual Neighborhood Neighborhood { get; set; }
 
     /// <summary>
     /// Gets or sets the list of forecasts associated with this location.

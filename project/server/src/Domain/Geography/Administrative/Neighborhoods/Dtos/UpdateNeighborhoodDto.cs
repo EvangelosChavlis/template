@@ -1,4 +1,4 @@
-namespace server.src.Domain.Geography.Natural.Neighborhoods.Dtos;
+namespace server.src.Domain.Geography.Administrative.Neighborhoods.Dtos;
 
 /// <summary>
 /// DTO for updating an existing Neighborhood.
@@ -8,5 +8,6 @@ public record UpdateNeighborhoodDto(
     string Description,
     long Population,
     string Zipcode,
+    Guid DistrictId,
     Guid Version
 );

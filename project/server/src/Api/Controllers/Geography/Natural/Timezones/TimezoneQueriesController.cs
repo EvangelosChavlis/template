@@ -23,7 +23,7 @@ public class TimezoneQueriesController : BaseApiController
         _timezoneQueries = timezoneQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography timezones", Description = "Retrieves a list of geography timezones with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of timezones retrieved successfully", typeof(ListResponse<List<ListItemTimezoneDto>>))]
@@ -34,7 +34,7 @@ public class TimezoneQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography timezone by ID", Description = "Retrieves details of a specific geography timezone by its unique ID.")]
@@ -47,7 +47,7 @@ public class TimezoneQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("picker")]
     [SwaggerOperation(Summary = "Get a list of geography timezones for the picker", Description = "Retrieves a list of geography timezones available for selection in the picker.")]

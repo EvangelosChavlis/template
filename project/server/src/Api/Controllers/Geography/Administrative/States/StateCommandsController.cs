@@ -22,7 +22,7 @@ public class StateCommandsController : BaseApiController
         _stateCommands = StateCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography state", Description = "Creates a new geography state in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "state created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class StateCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography states", Description = "Initializes multiple geography states in the system.")]
@@ -47,7 +47,7 @@ public class StateCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography State", Description = "Updates an existing geography State by its unique ID.")]
@@ -60,7 +60,7 @@ public class StateCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography state by ID", Description = "Deletes a specific geography state by its unique ID.")]

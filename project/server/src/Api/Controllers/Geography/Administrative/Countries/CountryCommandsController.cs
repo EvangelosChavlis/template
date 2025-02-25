@@ -17,12 +17,12 @@ public class CountryCommandsController : BaseApiController
 {
     private readonly ICountryCommands _countryCommands;
     
-    public CountryCommandsController(ICountryCommands CountryCommands)
+    public CountryCommandsController(ICountryCommands countryCommands)
     {
-        _countryCommands = CountryCommands;
+        _countryCommands = countryCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography country", Description = "Creates a new geography country in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "country created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class CountryCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography countries", Description = "Initializes multiple geography countries in the system.")]
@@ -47,10 +47,10 @@ public class CountryCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPut]
     [Route("{id}")]
-    [SwaggerOperation(Summary = "Update an existing geography Country", Description = "Updates an existing geography Country by its unique ID.")]
+    [SwaggerOperation(Summary = "Update an existing geography country", Description = "Updates an existing geography Country by its unique ID.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Country updated successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "Country not found")]
     public async Task<IActionResult> UpdateCountry(Guid id, [FromBody] UpdateCountryDto dto, CancellationToken token)
@@ -60,7 +60,7 @@ public class CountryCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography country by ID", Description = "Deletes a specific geography country by its unique ID.")]

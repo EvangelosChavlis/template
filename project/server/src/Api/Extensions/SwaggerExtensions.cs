@@ -27,10 +27,15 @@ public static class SwaggerExtensions
                 Title = "weather API",
                 Version = "weather"
             });
-            c.SwaggerDoc("weather", new OpenApiInfo
+            c.SwaggerDoc("geography-administrative", new OpenApiInfo
             {
-                Title = "weather API",
-                Version = "weather"
+                Title = "Geography Administrative API",
+                Version = "v1"
+            });
+            c.SwaggerDoc("geography-natural", new OpenApiInfo
+            {
+                Title = "Geography Natural API",
+                Version = "v1"
             });
             c.SwaggerDoc("metrics", new OpenApiInfo
             {
@@ -82,7 +87,14 @@ public static class SwaggerExtensions
             c.SwaggerEndpoint("/swagger/data/swagger.json", "data API");
             c.SwaggerEndpoint("/swagger/auth/swagger.json", "auth API");
             c.SwaggerEndpoint("/swagger/weather/swagger.json", "weather API");
-            c.SwaggerEndpoint("/swagger/geography/swagger.json", "geography API");
+            c.SwaggerEndpoint(
+                "/swagger/geography-administrative/swagger.json", 
+                "geography-administrative API"
+            );
+            c.SwaggerEndpoint(
+                "/swagger/geography-natural/swagger.json", 
+                "geography-natural API"
+            );
             c.SwaggerEndpoint("/swagger/metrics/swagger.json", "metrics API");
             c.RoutePrefix = "swagger";
         });

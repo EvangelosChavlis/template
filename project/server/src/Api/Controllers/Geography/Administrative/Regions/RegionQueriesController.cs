@@ -23,7 +23,7 @@ public class RegionQueriesController : BaseApiController
         _regionQueries = regionQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography regions", Description = "Retrieves a list of geography regions with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of regions retrieved successfully", typeof(ListResponse<List<ListItemRegionDto>>))]
@@ -34,7 +34,7 @@ public class RegionQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography region by ID", Description = "Retrieves details of a specific geography region by its unique ID.")]

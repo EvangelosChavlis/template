@@ -17,12 +17,12 @@ public class MunicipalityCommandsController : BaseApiController
 {
     private readonly IMunicipalityCommands _municipalityCommands;
     
-    public MunicipalityCommandsController(IMunicipalityCommands MunicipalityCommands)
+    public MunicipalityCommandsController(IMunicipalityCommands municipalityCommands)
     {
-        _municipalityCommands = MunicipalityCommands;
+        _municipalityCommands = municipalityCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography municipality", Description = "Creates a new geography municipality in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "municipality created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class MunicipalityCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography municipalities", Description = "Initializes multiple geography municipalities in the system.")]
@@ -47,7 +47,7 @@ public class MunicipalityCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography Municipality", Description = "Updates an existing geography Municipality by its unique ID.")]
@@ -60,7 +60,7 @@ public class MunicipalityCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography municipality by ID", Description = "Deletes a specific geography municipality by its unique ID.")]

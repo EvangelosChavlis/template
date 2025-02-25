@@ -23,7 +23,7 @@ public class LocationQueriesController : BaseApiController
         _locationQueries = locationQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography locations", Description = "Retrieves a list of geography locations with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of locations retrieved successfully", typeof(ListResponse<List<ListItemLocationDto>>))]
@@ -34,7 +34,7 @@ public class LocationQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography location by ID", Description = "Retrieves details of a specific geography location by its unique ID.")]

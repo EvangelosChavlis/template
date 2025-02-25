@@ -22,7 +22,7 @@ public class ClimateZoneCommandsController : BaseApiController
         _climateZoneCommands = climatezoneCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography climate zone", Description = "Creates a new geography climate zone in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Climate zone created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class ClimateZoneCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography climate zones", Description = "Initializes multiple geography climate zones in the system.")]
@@ -47,7 +47,7 @@ public class ClimateZoneCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography climate zone", Description = "Updates an existing geography climate zone by its unique ID.")]
@@ -60,7 +60,7 @@ public class ClimateZoneCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography climate zone by ID", Description = "Deletes a specific geography climate zone by its unique ID.")]

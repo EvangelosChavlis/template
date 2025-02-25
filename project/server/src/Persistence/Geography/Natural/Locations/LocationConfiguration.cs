@@ -66,6 +66,11 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
             .HasForeignKey(l => l.TimezoneId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.HasOne(l => l.Neighborhood)
+            .WithMany(n => n.Locations)
+            .HasForeignKey(l => l.NeighborhoodId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         builder.HasMany(l => l.Forecasts)
             .WithOne(f => f.Location)
             .HasForeignKey(f => f.LocationId)

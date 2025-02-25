@@ -23,7 +23,7 @@ public class ClimateZoneQueriesController : BaseApiController
         _climatezoneQueries = climatezoneQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography climate zones", Description = "Retrieves a list of geography climatezones with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of climate zones retrieved successfully", typeof(ListResponse<List<ListItemClimateZoneDto>>))]
@@ -34,7 +34,7 @@ public class ClimateZoneQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography climate zone by ID", Description = "Retrieves details of a specific geography climate zone by its unique ID.")]
@@ -47,7 +47,7 @@ public class ClimateZoneQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("picker")]
     [SwaggerOperation(Summary = "Get a list of geography climatezones for the picker", Description = "Retrieves a list of geography climatezones available for selection in the picker.")]

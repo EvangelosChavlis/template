@@ -22,7 +22,7 @@ public class TimezoneCommandsController : BaseApiController
         _timezoneCommands = timezoneCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography timezone", Description = "Creates a new geography timezone in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Timezone created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class TimezoneCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography timezones", Description = "Initializes multiple geography timezones in the system.")]
@@ -47,7 +47,7 @@ public class TimezoneCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography timezone", Description = "Updates an existing geography timezone by its unique ID.")]
@@ -60,7 +60,7 @@ public class TimezoneCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography timezone by ID", Description = "Deletes a specific geography timezone by its unique ID.")]

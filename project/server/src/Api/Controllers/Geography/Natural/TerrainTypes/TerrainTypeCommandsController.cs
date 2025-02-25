@@ -22,7 +22,7 @@ public class TerrainTypeCommandsController : BaseApiController
         _terraintypeCommands = terraintypeCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography terraintype", Description = "Creates a new geography terraintype in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "TerrainType created successfully", typeof(Response<string>))]
@@ -33,8 +33,7 @@ public class TerrainTypeCommandsController : BaseApiController
         return StatusCode(result.StatusCode, result);
     }
        
-
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography terraintypes", Description = "Initializes multiple geography terraintypes in the system.")]
@@ -46,8 +45,7 @@ public class TerrainTypeCommandsController : BaseApiController
         return StatusCode(result.StatusCode, result);
     }
 
-
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography terraintype", Description = "Updates an existing geography terraintype by its unique ID.")]
@@ -59,11 +57,10 @@ public class TerrainTypeCommandsController : BaseApiController
         return StatusCode(result.StatusCode, result);
     }
 
-
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
-    [SwaggerOperation(Summary = "Delete a geography terraintype by ID", Description = "Deletes a specific geography terraintype by its unique ID.")]
+    [SwaggerOperation(Summary = "Delete a geography terrain type by ID", Description = "Deletes a specific geography terraintype by its unique ID.")]
     [SwaggerResponse(StatusCodes.Status200OK, "TerrainType deleted successfully", typeof(Response<string>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "TerrainType not found")]
     public async Task<IActionResult> DeleteTerrainType(Guid id, Guid versionId, CancellationToken token)

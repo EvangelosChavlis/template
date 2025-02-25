@@ -23,9 +23,9 @@ public class TerrainTypeQueriesController : BaseApiController
         _terraintypeQueries = terraintypeQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
-    [SwaggerOperation(Summary = "Get a list of geography terraintypes", Description = "Retrieves a list of geography terraintypes with optional query parameters to filter results.")]
+    [SwaggerOperation(Summary = "Get a list of geography terrain types", Description = "Retrieves a list of geography terraintypes with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of terraintypes retrieved successfully", typeof(ListResponse<List<ListItemTerrainTypeDto>>))]
     public async Task<IActionResult> GetTerrainTypes([FromQuery] UrlQuery urlQuery, CancellationToken token)
     {
@@ -34,10 +34,10 @@ public class TerrainTypeQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("{id}")]
-    [SwaggerOperation(Summary = "Get a specific geography terraintype by ID", Description = "Retrieves details of a specific geography terraintype by its unique ID.")]
+    [SwaggerOperation(Summary = "Get a specific geography terrain type by ID", Description = "Retrieves details of a specific geography terraintype by its unique ID.")]
     [SwaggerResponse(StatusCodes.Status200OK, "TerrainType retrieved successfully", typeof(Response<ItemTerrainTypeDto>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "TerrainType not found")]
     public async Task<IActionResult> GetTerrainTypeById(Guid id, CancellationToken token)
@@ -47,10 +47,10 @@ public class TerrainTypeQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpGet]
     [Route("picker")]
-    [SwaggerOperation(Summary = "Get a list of geography terraintypes for the picker", Description = "Retrieves a list of geography terraintypes available for selection in the picker.")]
+    [SwaggerOperation(Summary = "Get a list of geography terrain types for the picker", Description = "Retrieves a list of geography terraintypes available for selection in the picker.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of terraintypes for picker retrieved successfully", typeof(Response<List<PickerTerrainTypeDto>>))]
     [SwaggerResponse(StatusCodes.Status404NotFound, "No terraintypes found for picker")]
     public async Task<IActionResult> GetTerrainTypesPicker(CancellationToken token)

@@ -17,12 +17,12 @@ public class RegionCommandsController : BaseApiController
 {
     private readonly IRegionCommands _regionCommands;
     
-    public RegionCommandsController(IRegionCommands RegionCommands)
+    public RegionCommandsController(IRegionCommands regionCommands)
     {
-        _regionCommands = RegionCommands;
+        _regionCommands = regionCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography region", Description = "Creates a new geography region in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "region created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class RegionCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography regions", Description = "Initializes multiple geography regions in the system.")]
@@ -47,7 +47,7 @@ public class RegionCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography Region", Description = "Updates an existing geography Region by its unique ID.")]
@@ -60,7 +60,7 @@ public class RegionCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography region by ID", Description = "Deletes a specific geography region by its unique ID.")]

@@ -22,7 +22,7 @@ public class LocationCommandsController : BaseApiController
         _locationCommands = locationCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography location", Description = "Creates a new geography location in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Location created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class LocationCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography locations", Description = "Initializes multiple geography locations in the system.")]
@@ -47,7 +47,7 @@ public class LocationCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography location", Description = "Updates an existing geography location by its unique ID.")]
@@ -60,7 +60,7 @@ public class LocationCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-natural")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography location by ID", Description = "Deletes a specific geography location by its unique ID.")]

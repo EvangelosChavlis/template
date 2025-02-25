@@ -1,4 +1,4 @@
-namespace server.src.Domain.Geography.Natural.Neighborhoods.Dtos;
+namespace server.src.Domain.Geography.Administrative.Neighborhoods.Dtos;
 
 /// <summary>
 /// DTO for creating a new Neighborhood.

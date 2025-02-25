@@ -22,7 +22,7 @@ public class ContinentCommandsController : BaseApiController
         _continentCommands = continentCommands;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [SwaggerOperation(Summary = "Create a new geography continent", Description = "Creates a new geography continent in the system.")]
     [SwaggerResponse(StatusCodes.Status200OK, "Continent created successfully", typeof(Response<string>))]
@@ -34,7 +34,7 @@ public class ContinentCommandsController : BaseApiController
     }
        
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPost]
     [Route("initialize")]
     [SwaggerOperation(Summary = "Initialize multiple geography continents", Description = "Initializes multiple geography continents in the system.")]
@@ -47,7 +47,7 @@ public class ContinentCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpPut]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Update an existing geography continent", Description = "Updates an existing geography continent by its unique ID.")]
@@ -60,7 +60,7 @@ public class ContinentCommandsController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpDelete]
     [Route("{id}/{versionId}")]
     [SwaggerOperation(Summary = "Delete a geography continent by ID", Description = "Deletes a specific geography continent by its unique ID.")]

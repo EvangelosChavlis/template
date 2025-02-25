@@ -23,7 +23,7 @@ public class StateQueriesController : BaseApiController
         _stateQueries = stateQueries;
     }
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [SwaggerOperation(Summary = "Get a list of geography states", Description = "Retrieves a list of geography states with optional query parameters to filter results.")]
     [SwaggerResponse(StatusCodes.Status200OK, "List of states retrieved successfully", typeof(ListResponse<List<ListItemStateDto>>))]
@@ -34,7 +34,7 @@ public class StateQueriesController : BaseApiController
     }
 
 
-    [ApiExplorerSettings(GroupName = "geography")]
+    [ApiExplorerSettings(GroupName = "geography-administrative")]
     [HttpGet]
     [Route("{id}")]
     [SwaggerOperation(Summary = "Get a specific geography state by ID", Description = "Retrieves details of a specific geography state by its unique ID.")]

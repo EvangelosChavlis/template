@@ -11,5 +11,6 @@ public record ItemDistrictDto(
     string Description,
     long Population,
     bool IsActive,
-    string Municipality
+    string Municipality,
+    Guid Version
 );

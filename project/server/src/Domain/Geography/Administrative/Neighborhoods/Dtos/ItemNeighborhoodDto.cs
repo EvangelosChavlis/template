@@ -1,4 +1,4 @@
-namespace server.src.Domain.Geography.Natural.Neighborhoods.Dtos;
+namespace server.src.Domain.Geography.Administrative.Neighborhoods.Dtos;
 
 /// <summary>
 /// DTO for retrieving detailed Neighborhood data.
@@ -10,6 +10,6 @@ public record ItemNeighborhoodDto(
     long Population,
     string Zipcode,
     bool IsActive,
-    Guid Vesrion,
-    string District
+    string District,
+    Guid Version
 );
