@@ -20,6 +20,12 @@ public class WarningIndexes : IEntityTypeConfiguration<Warning>
                 w.Name, 
                 w.Description 
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"IX_
+                {nameof(Warning)}_
+                {nameof(Warning.Id)}_
+                {nameof(Warning.Name)}_
+                {nameof(Warning.Description)}
+            ".Replace("\n", "").Trim());
     }
 }

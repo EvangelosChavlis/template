@@ -21,8 +21,8 @@ public static class ListItemCountryDtoMapper
             Id: model.Id,
             Name: model.Name,
             IsoCode: model.IsoCode,
-            IsActive: model.IsActive,
             Population: model.Population,
+            IsActive: model.IsActive,
             Count: model.States.Count
         );
 }

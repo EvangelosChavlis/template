@@ -20,6 +20,12 @@ public class MoonPhaseIndexes : IEntityTypeConfiguration<MoonPhase>
                 m.Name, 
                 m.Description 
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"IX_
+                {nameof(MoonPhase)}_
+                {nameof(MoonPhase.Id)}_
+                {nameof(MoonPhase.Name)}_
+                {nameof(MoonPhase.Description)}
+            ".Replace("\n", "").Trim());
     }
 }

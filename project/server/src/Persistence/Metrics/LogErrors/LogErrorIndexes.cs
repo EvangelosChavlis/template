@@ -23,7 +23,7 @@ public class LogErrorIndexes : IEntityTypeConfiguration<LogError>
                 e.Timestamp
             })
             .IsUnique()
-            .HasDatabaseName($@"
+            .HasDatabaseName($@"IX_
                 {nameof(LogError)}_
                 {nameof(LogError.Id)}_
                 {nameof(LogError.Error)}_

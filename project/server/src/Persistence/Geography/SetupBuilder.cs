@@ -9,9 +9,9 @@ namespace server.src.Persistence.Geography;
 
 public static class SetupBuilder
 {
-    public static void AddGeography(this ModelBuilder modelBuilder)
+    public static void SetupGeography(this ModelBuilder modelBuilder)
     {
-        modelBuilder.AddNatural();
-        modelBuilder.AddAdministrative();
+        modelBuilder.SetupAdministrative();
+        modelBuilder.SetupNatural();
     }
 }

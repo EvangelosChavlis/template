@@ -8,7 +8,7 @@ public record ListItemCountryDto(
     Guid Id,
     string Name,
     string IsoCode,
-    bool IsActive,
     long Population,
+    bool IsActive,
     int Count
 );

@@ -14,7 +14,7 @@ public static class SetupBuilder
 {
     private readonly static string _metricsSchema = "metrics";
 
-    public static void AddMetrics(this ModelBuilder modelBuilder)
+    public static void SetupMetrics(this ModelBuilder modelBuilder)
     {
         #region Configuration
         modelBuilder.ApplyConfiguration(new AuditLogConfiguration("AuditLogs", _metricsSchema));

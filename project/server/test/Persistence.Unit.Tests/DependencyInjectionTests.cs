@@ -21,7 +21,7 @@
 //             // Use ConfigurationBuilder to build configuration
 //             var configuration = new ConfigurationBuilder()
 //                 .AddInMemoryCollection(new[] { 
-//                     new KeyValuePair<string, string>("ConnectionStrings:DefaultConnection", "DataSource=:memory:") 
+//                     new KeyValuePair<string, string>("ConnectionStrings:DataConnection", "DataSource=:memory:") 
 //                 }!)
 //                 .Build();
 
@@ -45,7 +45,7 @@
 //             // Use ConfigurationBuilder to build configuration
 //             var configuration = new ConfigurationBuilder()
 //                 .AddInMemoryCollection(new[] { 
-//                     new KeyValuePair<string, string>("ConnectionStrings:DefaultConnection", "DataSource=:memory:") 
+//                     new KeyValuePair<string, string>("ConnectionStrings:DataConnection", "DataSource=:memory:") 
 //                 }!)
 //                 .Build();
 

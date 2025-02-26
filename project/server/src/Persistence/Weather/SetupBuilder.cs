@@ -13,7 +13,7 @@ public static class SetupBuilder
 {
     private readonly static string _weatherSchema = "weather";
 
-    public static void AddWeather(this ModelBuilder modelBuilder)
+    public static void SetupWeather(this ModelBuilder modelBuilder)
     {
         #region Configuration
         modelBuilder.ApplyConfiguration(new ForecastConfiguration("Forecasts", _weatherSchema));

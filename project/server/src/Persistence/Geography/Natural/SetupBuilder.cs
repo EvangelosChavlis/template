@@ -13,13 +13,20 @@ public static class SetupBuilder
 {
     private readonly static string _naturalSchema = "geography_natural";
 
-    public static void AddNatural(this ModelBuilder modelBuilder)
+    public static void SetupNatural(this ModelBuilder modelBuilder)
     {
         #region Configuration
         modelBuilder.ApplyConfiguration(new ClimateZoneConfiguration("ClimateZone", _naturalSchema));
         modelBuilder.ApplyConfiguration(new LocationConfiguration("Locations", _naturalSchema));
         modelBuilder.ApplyConfiguration(new TerrainTypeConfiguration("TerrainTypes", _naturalSchema));
         modelBuilder.ApplyConfiguration(new TimezoneConfiguration("TimeZones", _naturalSchema));
+        #endregion
+
+        #region Indexes
+        modelBuilder.ApplyConfiguration(new ClimateZoneIndexes());
+        modelBuilder.ApplyConfiguration(new LocationIndexes());
+        modelBuilder.ApplyConfiguration(new TerrainTypeIndexes());
+        modelBuilder.ApplyConfiguration(new TimezoneIndexes());
         #endregion
     }
 }

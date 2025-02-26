@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
-using server.src.Domain.Weather.Forecasts.Models;
 using server.src.Domain.Weather.Observations.Models;
 
 namespace server.src.Persistence.Weather.Observations;
@@ -14,7 +13,7 @@ public class ObservationIndexes : IEntityTypeConfiguration<Observation>
     {
         builder.HasIndex(f => f.Id)
             .IsUnique()
-            .HasDatabaseName($"{nameof(Forecast)}_{nameof(Forecast.Id)}");
+            .HasDatabaseName($"{nameof(Observation)}_{nameof(Observation.Id)}");
 
         builder.HasIndex(f 
             => new { 
@@ -25,11 +24,11 @@ public class ObservationIndexes : IEntityTypeConfiguration<Observation>
             })
             .IsUnique()
              .HasDatabaseName($@"
-                {nameof(Forecast)}_
-                {nameof(Forecast.Id)}_
-                {nameof(Forecast.Date)}_
-                {nameof(Forecast.TemperatureC)}_
-                {nameof(Forecast.Humidity)}
+                {nameof(Observation)}_
+                {nameof(Observation.Id)}_
+                {nameof(Observation.Timestamp)}_
+                {nameof(Observation.TemperatureC)}_
+                {nameof(Observation.Humidity)}
             ".Replace("\n", "").Trim());
     }
 }

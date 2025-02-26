@@ -24,6 +24,16 @@ public class UserIndexes : IEntityTypeConfiguration<User>
                 u.PhoneNumber, 
                 u.MobilePhoneNumber 
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"IX_
+                {nameof(User)}_
+                {nameof(User.Id)}_
+                {nameof(User.FirstName)}_
+                {nameof(User.LastName)}_
+                {nameof(User.Email)}_
+                {nameof(User.UserName)}_
+                {nameof(User.PhoneNumber)}_
+                {nameof(User.MobilePhoneNumber)}
+            ".Replace("\n", "").Trim());
     }
 }

@@ -27,7 +27,7 @@ public class TelemetryRecordIndexes : IEntityTypeConfiguration<TelemetryRecord>
                 t.RequestTimestamp
             })
             .IsUnique()
-            .HasDatabaseName($@"
+            .HasDatabaseName($@"IX_
                 {nameof(TelemetryRecord)}_
                 {nameof(TelemetryRecord.Id)}_
                 {nameof(TelemetryRecord.Method)}_

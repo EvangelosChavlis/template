@@ -39,7 +39,7 @@ class Program
             .AddScoped<Program>() // Add the Program class itself
             // Register the DataContext explicitly
             .AddDbContext<DataContext>(options =>
-                options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))) // Use PostgreSQL connection string
+                options.UseNpgsql(configuration.GetConnectionString("DataConnection"))) // Use PostgreSQL connection string
             .AddMemoryCache() // Add IMemoryCache
             .BuildServiceProvider();
 

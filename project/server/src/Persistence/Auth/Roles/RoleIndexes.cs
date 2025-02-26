@@ -21,6 +21,13 @@ public class RoleIndexes : IEntityTypeConfiguration<Role>
                 r.Description,
                 r.IsActive
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"IX_
+                {nameof(Role)}_
+                {nameof(Role.Id)}_
+                {nameof(Role.Name)}_
+                {nameof(Role.Description)}_
+                {nameof(Role.IsActive)}
+            ".Replace("\n", "").Trim());
     }
 }

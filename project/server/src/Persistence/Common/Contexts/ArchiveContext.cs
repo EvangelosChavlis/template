@@ -1,70 +1,38 @@
-// // packages
-// using Microsoft.EntityFrameworkCore;
+// packages
+using Microsoft.EntityFrameworkCore;
 
-// // source
-// namespace server.src.Persistence.Contexts;
+// source
+using server.src.Persistence.Auth;
+using server.src.Persistence.Geography;
+using server.src.Persistence.Metrics;
+using server.src.Persistence.Weather;
 
-// public class ArchiveContext : DbContext
-// {
-//     private readonly string _authSchema = "auth";
-//     private readonly string _weatherSchema = "weather";
-//     private readonly string _metricsSchema = "metrics";
+namespace server.src.Persistence.Common.Contexts;
 
-//     #region Auth
-//     public DbSet<User> Users { get; set; }
-//     public DbSet<Role> Roles { get; set; }
-//     public DbSet<UserRole> UserRoles { get; set; }
-//     public DbSet<UserLogin> UserLogins { get; set; }
-//     public DbSet<UserLogout> UserLogouts { get; set; }
-//     public DbSet<UserClaim> UserClaims { get; set; }
-//     #endregion
-
-//     #region Weather
-//     public DbSet<Forecast> Forecasts { get; set; }
-//     public DbSet<Warning> Warnings { get; set; }
-//     #endregion
-
-//     #region Metrics 
-//     public DbSet<AuditLog> AuditLogs { get; set; }
-//     public DbSet<Trail> Trails { get; set; }
-//     public DbSet<LogError> LogErrors { get; set; }
-//     public DbSet<Telemetry> TelemetryRecords { get; set; }
-//     public DbSet<Story> Stories { get; set; }
-//     #endregion
+public class ArchiveContext : DbContext
+{
+    public AuthDbSets AuthDbSets { get; private set; }
+    public GeographyDbSets GeographyDbSets { get; private set; }
+    public MetricsDbSets MetricsDbSets { get; private set; }
+    public WeatherDbSets WeatherDbSets { get; private set; }
 
     
-//     public ArchiveContext(DbContextOptions<DataContext> options)
-//         : base(options)
-//     {
-//     }
+    public ArchiveContext(DbContextOptions<ArchiveContext> options)
+        : base(options)
+    {
+        AuthDbSets = new AuthDbSets(this);
+        GeographyDbSets = new GeographyDbSets(this);
+        MetricsDbSets = new MetricsDbSets(this);
+        WeatherDbSets = new WeatherDbSets(this);
+    }
 
-//     protected override void OnModelCreating(ModelBuilder modelBuilder)
-//     {
-//         base.OnModelCreating(modelBuilder);
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
 
-//         // #region Auth Configuration
-//         // modelBuilder.ApplyConfiguration(new UserConfiguration("Users", _authSchema));
-//         // modelBuilder.ApplyConfiguration(new RoleConfiguration("Roles", _authSchema));
-//         // modelBuilder.ApplyConfiguration(new UserRoleConfiguration("UserRoles", _authSchema));
-//         // modelBuilder.ApplyConfiguration(new UserLoginConfiguration("UserLogins", _authSchema));
-//         // modelBuilder.ApplyConfiguration(new UserLogoutConfiguration("UserLogouts", _authSchema));
-//         // modelBuilder.ApplyConfiguration(new UserClaimConfiguration("UserClaims", _authSchema));
-//         // #endregion
-
-//         // #region Weather Configuration
-//         // modelBuilder.ApplyConfiguration(new ForecastConfiguration("Forecasts", _weatherSchema));
-//         // modelBuilder.ApplyConfiguration(new WarningConfiguration("Warnings", _weatherSchema));
-//         // #endregion
-       
-//         // #region Metrics Configuration
-//         // modelBuilder.ApplyConfiguration(new AuditLogConfiguration("AuditLogs", _metricsSchema));
-//         // modelBuilder.ApplyConfiguration(new TrailConfiguration("Trails", _metricsSchema));
-//         // modelBuilder.ApplyConfiguration(new LogErrorConfiguration("LogErrors", _metricsSchema));
-//         // modelBuilder.ApplyConfiguration(new TelemetryConfiguration("TelemetryRecords", _metricsSchema));
-//         // modelBuilder.ApplyConfiguration(new StoryConfiguration("Stories", _metricsSchema));
-//         // #endregion
-
-//         // modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
-//         // modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
-//     }
-// }
+        modelBuilder.SetupAuth();
+        modelBuilder.SetupMetrics();
+        modelBuilder.SetupGeography();
+        modelBuilder.SetupWeather();
+    }
+}

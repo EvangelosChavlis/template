@@ -14,13 +14,20 @@ public class UserLoginIndexes : IEntityTypeConfiguration<UserLogin>
         builder.HasIndex(ul => ul.Id)
             .IsUnique();
 
-        builder.HasIndex(ul
+        builder.HasIndex(ul 
             => new { 
                 ul.Id, 
                 ul.LoginProvider, 
                 ul.ProviderDisplayName, 
                 ul.Date
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"IX_
+                {nameof(UserLogin)}_
+                {nameof(UserLogin.Id)}_
+                {nameof(UserLogin.LoginProvider)}_
+                {nameof(UserLogin.ProviderDisplayName)}_
+                {nameof(UserLogin.Date)}
+            ".Replace("\n", "").Trim());
     }
 }

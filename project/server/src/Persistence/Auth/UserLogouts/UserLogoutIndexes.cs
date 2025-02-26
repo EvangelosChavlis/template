@@ -14,13 +14,20 @@ public class UserLogoutIndexes : IEntityTypeConfiguration<UserLogout>
         builder.HasIndex(ul => ul.Id)
             .IsUnique();
 
-        builder.HasIndex(ul
+        builder.HasIndex(ul 
             => new { 
                 ul.Id, 
                 ul.LoginProvider, 
                 ul.ProviderDisplayName, 
                 ul.Date
             })
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($@"IX_
+                {nameof(UserLogout)}_
+                {nameof(UserLogout.Id)}_
+                {nameof(UserLogout.LoginProvider)}_
+                {nameof(UserLogout.ProviderDisplayName)}_
+                {nameof(UserLogout.Date)}
+            ".Replace("\n", "").Trim());
     }
 }

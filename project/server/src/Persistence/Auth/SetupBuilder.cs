@@ -15,7 +15,7 @@ public static class SetupBuilder
 {
     private readonly static string _authSchema = "auth";
 
-    public static void AddAuth(this ModelBuilder modelBuilder)
+    public static void SetupAuth(this ModelBuilder modelBuilder)
     {
         #region Configuration
         modelBuilder.ApplyConfiguration(new UserConfiguration("Users", _authSchema));

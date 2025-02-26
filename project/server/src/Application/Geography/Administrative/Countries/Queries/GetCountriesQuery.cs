@@ -50,7 +50,7 @@ public class GetCountrysHandler : IRequestHandler<GetCountriesQuery, ListRespons
             filters, includes, token: token);
         
         // Mapping
-        var dto = pagedCountrys.Rows.Select(t => t.ListItemCountryDtoMapping()).ToList();
+        var dto = pagedCountrys.Rows.Select(c => c.ListItemCountryDtoMapping()).ToList();
 
         // Determine if the operation was successful
         var success = pagedCountrys.Rows.Count > 0;

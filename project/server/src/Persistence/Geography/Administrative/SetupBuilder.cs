@@ -16,7 +16,7 @@ public static class SetupBuilder
 {
     private readonly static string _administrativeSchema = "geography_administrative";
 
-    public static void AddAdministrative(this ModelBuilder modelBuilder)
+    public static void SetupAdministrative(this ModelBuilder modelBuilder)
     {
         #region Configuration
         modelBuilder.ApplyConfiguration(new ContinentConfiguration("Continents", _administrativeSchema));
@@ -26,6 +26,16 @@ public static class SetupBuilder
         modelBuilder.ApplyConfiguration(new NeighborhoodConfiguration("Neighborhoods", _administrativeSchema));
         modelBuilder.ApplyConfiguration(new RegionConfiguration("Regions", _administrativeSchema));
         modelBuilder.ApplyConfiguration(new StateConfiguration("States", _administrativeSchema));
+        #endregion
+
+        #region Indexes
+        modelBuilder.ApplyConfiguration(new ContinentIndexes());
+        modelBuilder.ApplyConfiguration(new CountryIndexes());
+        modelBuilder.ApplyConfiguration(new DistrictIndexes());
+        modelBuilder.ApplyConfiguration(new MunicipalityIndexes());
+        modelBuilder.ApplyConfiguration(new NeighborhoodIndexes());
+        modelBuilder.ApplyConfiguration(new RegionIndexes());
+        modelBuilder.ApplyConfiguration(new StateIndexes());
         #endregion
     }
 }

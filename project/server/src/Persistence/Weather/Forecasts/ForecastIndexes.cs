@@ -23,7 +23,7 @@ public class ForecastIndexes : IEntityTypeConfiguration<Forecast>
                 f.Humidity
             })
             .IsUnique()
-             .HasDatabaseName($@"
+            .HasDatabaseName($@"IX_
                 {nameof(Forecast)}_
                 {nameof(Forecast.Id)}_
                 {nameof(Forecast.Date)}_

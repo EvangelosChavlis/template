@@ -7,7 +7,7 @@ namespace server.src.Domain.Geography.Administrative.Districts.Dtos;
 public record ListItemDistrictDto(
     Guid Id,
     string Name,
-    bool IsActive,
     long Population,
+    bool IsActive,
     int Count
 );
