@@ -36,6 +36,11 @@ public class State : BaseEntity
     public double AreaKm2 { get; set; }
 
     /// <summary>
+    /// Gets or sets the code of the state.
+    /// </summary>
+    public string Code { get; set; }
+
+    /// <summary>
     /// Gets or sets a value indicating whether the state is active.
     /// </summary>
     public bool IsActive { get; set; }

@@ -11,19 +11,15 @@ public class ObservationIndexes : IEntityTypeConfiguration<Observation>
 {
     public void Configure(EntityTypeBuilder<Observation> builder)
     {
-        builder.HasIndex(f => f.Id)
-            .IsUnique()
-            .HasDatabaseName($"{nameof(Observation)}_{nameof(Observation.Id)}");
-
-        builder.HasIndex(f 
+        builder.HasIndex(o 
             => new { 
-                f.Id, 
-                f.Timestamp, 
-                f.TemperatureC,
-                f.Humidity
+                o.Id, 
+                o.Timestamp, 
+                o.TemperatureC,
+                o.Humidity
             })
             .IsUnique()
-             .HasDatabaseName($@"
+             .HasDatabaseName($@"IX_
                 {nameof(Observation)}_
                 {nameof(Observation.Id)}_
                 {nameof(Observation.Timestamp)}_

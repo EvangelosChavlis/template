@@ -26,7 +26,7 @@ public static class UpdateCountryMapper
         // Mapping all properties
         modelCountry.Name = dto.Name;
         modelCountry.Description = dto.Description;
-        modelCountry.IsoCode = dto.IsoCode;
+        modelCountry.Code = dto.Code;
         modelCountry.Capital = dto.Capital;
         modelCountry.Population = dto.Population;
         modelCountry.AreaKm2 = dto.AreaKm2;

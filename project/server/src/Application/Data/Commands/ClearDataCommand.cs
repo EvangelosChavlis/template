@@ -14,37 +14,49 @@ public record ClearDataCommand : IRequest<Response<string>>;
 public class ClearDataHandler : IRequestHandler<ClearDataCommand, Response<string>>
 {
     private readonly DataContext _dataContext;
-    // private readonly ArchiveContext _archiveContext;
+    private readonly ArchiveContext _archiveContext;
     
-    public ClearDataHandler(DataContext dataContext/*, ArchiveContext archiveContext*/)
+    public ClearDataHandler(DataContext dataContext, ArchiveContext archiveContext)
     {
         _dataContext = dataContext;
-        // _archiveContext = archiveContext;
+        _archiveContext = archiveContext;
     }
-
 
     public async Task<Response<string>> Handle(ClearDataCommand request, CancellationToken token = default)
     {
-        // Get all DbSet properties dynamically
-        var dataDbSets = _dataContext.GetType()
-            .GetProperties()
-            .Where(p => p.PropertyType.IsGenericType 
-                     && p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
-            .ToList();
-
-        foreach (var dbSetProperty in dataDbSets)
+        // Clearing main database
+        var dbSetContainers = new object[]
         {
-            // Get DbSet instance
-            var dbSet = dbSetProperty.GetValue(_dataContext);
+            _dataContext.AuthDbSets,
+            _dataContext.GeographyDbSets.AdministrativeDbSets,
+            _dataContext.GeographyDbSets.NaturalDbSets,
+            _dataContext.MetricsDbSets,
+            _dataContext.WeatherDbSets
+        };
 
-            if (dbSet is IQueryable<object> queryableDbSet)
+        foreach (var dbSetContainer in dbSetContainers)
+        {
+            // Get all DbSet properties dynamically from each DbSet container
+            var dataDbSets = dbSetContainer.GetType()
+                .GetProperties()
+                .Where(p => p.PropertyType.IsGenericType 
+                        && p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
+                .ToList();
+
+            foreach (var dbSetProperty in dataDbSets)
             {
-                // Remove all records in the DbSet
-                _dataContext.RemoveRange(queryableDbSet);
+                // Get DbSet instance
+                var dbSet = dbSetProperty.GetValue(dbSetContainer);
+
+                if (dbSet is IQueryable<object> queryableDbSet)
+                {
+                    // Remove all records in the DbSet
+                    _dataContext.RemoveRange(queryableDbSet);
+                }
             }
         }
 
-        // Save changes to delete data from the database
+        // Save changes to delete data from the main database
         var resultData = await _dataContext.SaveChangesAsync(token) > 0;
 
         if (!resultData)
@@ -54,27 +66,40 @@ public class ClearDataHandler : IRequestHandler<ClearDataCommand, Response<strin
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithData("Data clearing failed!");
 
-        // Get all DbSet properties dynamically
-        // var archiveDbSets = _archiveContext.GetType()
-        //     .GetProperties()
-        //     .Where(p => p.PropertyType.IsGenericType 
-        //              && p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
-        //     .ToList();
+        // Clearing archive database
+        var archiveDbSetContainers = new object[]
+        {
+            _archiveContext.AuthDbSets,
+            _archiveContext.GeographyDbSets.AdministrativeDbSets,
+            _archiveContext.GeographyDbSets.NaturalDbSets,
+            _archiveContext.MetricsDbSets,
+            _archiveContext.WeatherDbSets
+        };
 
-        // foreach (var dbSetProperty in archiveDbSets)
-        // {
-        //     // Get DbSet instance
-        //     var dbSet = dbSetProperty.GetValue(_dataContext);
+        foreach (var dbSetContainer in archiveDbSetContainers)
+        {
+            // Get all DbSet properties dynamically from each DbSet container in archive
+            var archiveDbSets = dbSetContainer.GetType()
+                .GetProperties()
+                .Where(p => p.PropertyType.IsGenericType 
+                        && p.PropertyType.GetGenericTypeDefinition() == typeof(DbSet<>))
+                .ToList();
 
-        //     if (dbSet is IQueryable<object> queryableDbSet)
-        //     {
-        //         // Remove all records in the DbSet
-        //         _dataContext.RemoveRange(queryableDbSet);
-        //     }
-        // }
+            foreach (var dbSetProperty in archiveDbSets)
+            {
+                // Get DbSet instance
+                var dbSet = dbSetProperty.GetValue(dbSetContainer);
 
-        // Save changes to delete data from the database
-        var resultArchive = await _dataContext.SaveChangesAsync(token) > 0;
+                if (dbSet is IQueryable<object> queryableDbSet)
+                {
+                    // Remove all records in the DbSet
+                    _archiveContext.RemoveRange(queryableDbSet);
+                }
+            }
+        }
+
+        // Save changes to delete data from the archive database
+        var resultArchive = await _archiveContext.SaveChangesAsync(token) > 0;
 
         if (!resultArchive)
             return new Response<string>()
@@ -87,8 +112,6 @@ public class ClearDataHandler : IRequestHandler<ClearDataCommand, Response<strin
             .WithMessage("Success in clearing data")
             .WithSuccess(true)
             .WithStatusCode((int)HttpStatusCode.OK)
-            .WithData("Data deletion was successful!");
+            .WithData("Data and archive deletion was successful!");
     }
-
 }
-    

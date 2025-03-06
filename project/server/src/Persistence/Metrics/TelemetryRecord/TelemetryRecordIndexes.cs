@@ -13,10 +13,6 @@ public class TelemetryRecordIndexes : IEntityTypeConfiguration<TelemetryRecord>
 {
     public void Configure(EntityTypeBuilder<TelemetryRecord> builder)
     {
-        builder.HasIndex(t => t.Id)
-            .IsUnique()
-            .HasDatabaseName($"{nameof(TelemetryRecord)}_{nameof(TelemetryRecord.Id)}");
-
         builder.HasIndex(t 
             => new { 
                 t.Id, 

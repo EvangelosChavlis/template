@@ -19,6 +19,7 @@ public class ErrorItemRegionDtoMapper
             Name: string.Empty,
             Description: string.Empty,
             AreaKm2: double.MinValue,
+            Code: string.Empty,
             IsActive: false,
             State: string.Empty,
             Version: Guid.Empty

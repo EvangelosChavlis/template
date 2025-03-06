@@ -2,6 +2,7 @@
 using server.src.Application.Common.Validators;
 using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Administrative.Countries.Dtos;
+using server.src.Domain.Geography.Administrative.Countries.Extensions;
 
 namespace server.src.Application.Geography.Administrative.Countries.Validators;
 
@@ -14,8 +15,8 @@ public static class UpdateCountryValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > 100)
-            errors.Add("Name must not exceed 100 characters.");
+        else if (dto.Name.Length > CountryLength.NameLength)
+            errors.Add($"Name must not exceed {CountryLength.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
             errors.Add("Name contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
@@ -24,21 +25,23 @@ public static class UpdateCountryValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > 250)
-            errors.Add("Description must not exceed 250 characters.");
+        else if (dto.Description.Length > CountryLength.DescriptionLength)
+            errors.Add($"Description must not exceed {CountryLength.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add("Description contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
             errors.Add("Description contains non-printable characters.");
 
-        // Validation for IsoCode
-        if (string.IsNullOrWhiteSpace(dto.IsoCode))
-            errors.Add("IsoCode is required.");
-        else if (dto.IsoCode.Length != 2)
-            errors.Add("IsoCode must be exactly 2 characters.");
-        else if (!dto.IsoCode.All(char.IsUpper))
-            errors.Add("IsoCode must be uppercase.");
-
+        // Validation for Code
+        if (string.IsNullOrWhiteSpace(dto.Code))
+            errors.Add("Code is required.");
+        else if (dto.Code.Length > CountryLength.CodeLength)
+            errors.Add($"Code must not exceed {CountryLength.CodeLength} characters.");
+        else if (dto.Code.ContainsInjectionCharacters())
+            errors.Add("Code contains invalid characters.");
+        else if (dto.Code.ContainsNonPrintableCharacters())
+            errors.Add("Code contains non-printable characters.");
+            
         // Validation for Population
         if (dto.Population < 0)
             errors.Add("Population cannot be negative.");

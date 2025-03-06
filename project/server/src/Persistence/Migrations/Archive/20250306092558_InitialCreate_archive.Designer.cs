@@ -2,18 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using server.src.Persistence.Common.Contexts;
 
 #nullable disable
 
-namespace Persistence.Migrations
+namespace Persistence.Migrations.Archive
 {
-    [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ArchiveContext))]
+    [Migration("20250306092558_InitialCreate_archive")]
+    partial class InitialCreate_archive
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,6 +98,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Name", "Description", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Role_\r                Id_\r                Name_\r                Description_\r                IsActive");
+
                     b.ToTable("Roles", "auth");
                 });
 
@@ -154,6 +161,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserId");
 
+                    b.HasIndex("Id", "LoginProvider", "ProviderDisplayName", "Date")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                UserLogin_\r                Id_\r                LoginProvider_\r                ProviderDisplayName_\r                Date");
+
                     b.ToTable("UserLogins", "auth");
                 });
 
@@ -187,6 +198,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserId");
 
+                    b.HasIndex("Id", "LoginProvider", "ProviderDisplayName", "Date")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                UserLogout_\r                Id_\r                LoginProvider_\r                ProviderDisplayName_\r                Date");
+
                     b.ToTable("UserLogouts", "auth");
                 });
 
@@ -210,6 +225,10 @@ namespace Persistence.Migrations
                     b.HasIndex("RoleId");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("Id", "UserId", "RoleId", "Date")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                UserRole_\r                Id_\r                UserId_\r                RoleId_\r                Date");
 
                     b.ToTable("UserRoles", "auth");
                 });
@@ -350,6 +369,10 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "FirstName", "LastName", "Email", "UserName", "PhoneNumber", "MobilePhoneNumber")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                User_\r                Id_\r                FirstName_\r                LastName_\r                Email_\r                UserName_\r                PhoneNumber_\r                MobilePhoneNumber");
 
                     b.ToTable("Users", "auth");
                 });
@@ -536,6 +559,11 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(2)
+                        .HasColumnType("character varying(2)");
+
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
@@ -564,6 +592,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Name", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Continent_\r                Id_\r                Name_\r                Code_\r                IsActive");
+
                     b.ToTable("Continents", "geography_administrative");
                 });
 
@@ -580,6 +612,11 @@ namespace Persistence.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
                     b.Property<Guid>("ContinentId")
                         .HasColumnType("uuid");
 
@@ -589,11 +626,6 @@ namespace Persistence.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
-
-                    b.Property<string>("IsoCode")
-                        .IsRequired()
-                        .HasMaxLength(2)
-                        .HasColumnType("character varying(2)");
 
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
@@ -620,6 +652,10 @@ namespace Persistence.Migrations
                     b.HasIndex("ContinentId");
 
                     b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Code", "Population", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Country_\r                Id_\r                Name_\r                Code_\r                Population_\r                IsActive");
 
                     b.ToTable("Countries", "geography_administrative");
                 });
@@ -666,6 +702,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Name", "Population", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                District_\r                Id_\r                Name_\r                Population_\r                IsActive");
+
                     b.ToTable("Districts", "geography_administrative");
                 });
 
@@ -710,6 +750,10 @@ namespace Persistence.Migrations
                     b.HasIndex("RegionId");
 
                     b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Population", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Municipality_\r                Id_\r                Name_\r                Population_\r                IsActive");
 
                     b.ToTable("Municipalities", "geography_administrative");
                 });
@@ -760,6 +804,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Name", "Zipcode", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Neighborhood_\r                Id_\r                Name_\r                Zipcode_\r                IsActive");
+
                     b.ToTable("Neighborhoods", "geography_administrative");
                 });
 
@@ -771,6 +819,11 @@ namespace Persistence.Migrations
 
                     b.Property<double>("AreaKm2")
                         .HasColumnType("double precision");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -805,6 +858,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Name", "AreaKm2", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Region_\r                Id_\r                Name_\r                AreaKm2_\r                Code_\r                IsActive");
+
                     b.ToTable("Regions", "geography_administrative");
                 });
 
@@ -820,6 +877,11 @@ namespace Persistence.Migrations
                     b.Property<string>("Capital")
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
 
                     b.Property<Guid>("CountryId")
                         .HasColumnType("uuid");
@@ -856,6 +918,10 @@ namespace Persistence.Migrations
                     b.HasIndex("CountryId");
 
                     b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Population", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                State_\r                Id_\r                Name_\r                Population_\r                Code_\r                IsActive");
 
                     b.ToTable("States", "geography_administrative");
                 });
@@ -904,6 +970,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("LockedByUserId");
 
+                    b.HasIndex("Id", "Name", "AvgTemperatureC", "AvgPrecipitationMm", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                ClimateZone_\r                Id_\r                Name_\r                AvgTemperatureC_\r                AvgPrecipitationMm_\r                IsActive");
+
                     b.ToTable("ClimateZone", "geography_natural");
                 });
 
@@ -937,7 +1007,7 @@ namespace Persistence.Migrations
                     b.Property<Guid>("NaturalFeatureId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("NeighborhoodId")
+                    b.Property<Guid>("NeighborhoodId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid?>("TenantId")
@@ -959,6 +1029,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("ClimateZoneId");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Location_Id");
+
                     b.HasIndex("LockedByUserId");
 
                     b.HasIndex("NaturalFeatureId");
@@ -968,6 +1042,10 @@ namespace Persistence.Migrations
                     b.HasIndex("TerrainTypeId");
 
                     b.HasIndex("TimezoneId");
+
+                    b.HasIndex("Id", "Longitude", "Latitude", "Altitude", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Location_\r                Id_\r                Longitude_\r                Latitude_\r                Altitude_\r                IsActive");
 
                     b.ToTable("Locations", "geography_natural");
                 });
@@ -1049,6 +1127,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("LockedByUserId");
 
+                    b.HasIndex("Id", "Name", "Description", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                TerrainType_\r                Id_\r                Name_\r                Description_\r                IsActive");
+
                     b.ToTable("TerrainTypes", "geography_natural");
                 });
 
@@ -1097,6 +1179,10 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("LockedByUserId");
+
+                    b.HasIndex("Id", "Name", "UtcOffset", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Timezone_\r                Id_\r                Name_\r                UtcOffset_\r                IsActive");
 
                     b.ToTable("TimeZones", "geography_natural");
                 });
@@ -1195,6 +1281,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserId");
 
+                    b.HasIndex("Id", "Error", "StatusCode", "Timestamp")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                LogError_\r                Id_\r                Error_\r                StatusCode_\r                Timestamp");
+
                     b.ToTable("LogErrors", "metrics");
                 });
 
@@ -1288,6 +1378,10 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("Id", "Method", "Path", "StatusCode", "ResponseTime", "RequestTimestamp")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                TelemetryRecord_\r                Id_\r                Method_\r                StatusCode_\r                ResponseTime_\r                RequestTimestamp");
 
                     b.ToTable("TelemetryRecords", "metrics");
                 });
@@ -1411,6 +1505,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("WarningId");
 
+                    b.HasIndex("Id", "Date", "TemperatureC", "Humidity")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Forecast_\r                Id_\r                Date_\r                TemperatureC_\r                Humidity");
+
                     b.ToTable("Forecasts", "weather");
                 });
 
@@ -1463,6 +1561,10 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Description")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                MoonPhase_\r                Id_\r                Name_\r                Description");
 
                     b.ToTable("MoonPhases", "weather");
                 });
@@ -1538,6 +1640,10 @@ namespace Persistence.Migrations
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Timestamp", "TemperatureC", "Humidity")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Observation_\r                Id_\r                Timestamp_\r                TemperatureC_\r                Humidity");
+
                     b.ToTable("Observations", "weather");
                 });
 
@@ -1583,6 +1689,10 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("LockedByUserId");
+
+                    b.HasIndex("Id", "Name", "Description")
+                        .IsUnique()
+                        .HasDatabaseName("IX_\r                Warning_\r                Id_\r                Name_\r                Description");
 
                     b.ToTable("Warnings", "weather");
                 });
@@ -1881,9 +1991,11 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", null)
+                    b.HasOne("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", "Neighborhood")
                         .WithMany("Locations")
-                        .HasForeignKey("NeighborhoodId");
+                        .HasForeignKey("NeighborhoodId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("server.src.Domain.Geography.Natural.TerrainTypes.Models.TerrainType", "TerrainType")
                         .WithMany("Locations")
@@ -1902,6 +2014,8 @@ namespace Persistence.Migrations
                     b.Navigation("LockedByUser");
 
                     b.Navigation("NaturalFeature");
+
+                    b.Navigation("Neighborhood");
 
                     b.Navigation("TerrainType");
 

@@ -11,6 +11,7 @@ public record ItemStateDto(
     string Capital,
     long Population,
     double AreaKm2,
+    string Code,
     bool IsActive,
     string Country,
     Guid Version

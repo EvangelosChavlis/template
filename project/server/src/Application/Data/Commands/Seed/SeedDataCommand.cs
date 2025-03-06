@@ -1,5 +1,4 @@
 // packages
-using System.Linq.Expressions;
 using System.Net;
 using Bogus;
 
@@ -11,13 +10,8 @@ using server.src.Application.Weather.Forecasts.Interfaces;
 using server.src.Application.Weather.Warnings.Interfaces;
 using server.src.Domain.Common.Dtos;
 using server.src.Persistence.Common.Interfaces;
-using server.src.Domain.Auth.Roles.Dtos;
-using server.src.Domain.Auth.Users.Dtos;
-using server.src.Domain.Auth.Roles.Models;
-using server.src.Domain.Auth.Users.Models;
-using server.src.Domain.Weather.Warnings.Dtos;
-using server.src.Domain.Weather.Warnings.Models;
-using server.src.Domain.Weather.Forecasts.Dtos;
+using server.src.Application.Geography.Administrative.Continents.Interfaces;
+using server.src.Application.Data.Interfaces;
 
 namespace server.src.Application.Data.Commands;
 
@@ -30,8 +24,11 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
     private readonly IUserCommands _userCommands;
     private readonly IWarningCommands _warningCommands;
     private readonly IForecastCommands _forecastCommands;
-    private readonly ICommonQueries _commonQueries; 
-        
+    private readonly ICommonQueries _commonQueries;
+
+    private readonly IDataCommands _dataCommands;
+    
+    private readonly IContinentCommands _continentCommands;
     
     public SeedDataHandler(
         ICommonRepository commonRepository, 
@@ -39,39 +36,92 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
         IUserCommands userCommands, 
         IWarningCommands warningCommands, 
         IForecastCommands forecastCommands, 
-        ICommonQueries commonQueries
+        ICommonQueries commonQueries,
+        IContinentCommands continentCommands,
+
+        IDataCommands dataCommands
     )
-    {   
+    {
         _commonRepository = commonRepository;
         _roleCommands = roleCommands;
         _userCommands = userCommands;
         _warningCommands = warningCommands;
         _forecastCommands = forecastCommands;
         _commonQueries = commonQueries;
-    }
 
+        _continentCommands = continentCommands;
+
+        _dataCommands = dataCommands;
+    }
 
     public async Task<Response<string>> Handle(SeedDataCommand command, CancellationToken token = default)
     {
         var faker = new Faker();
         var random = new Random();
 
-        var roles = new List<CreateRoleDto>()
-        {
-            new ( Name: "User", Description: "User description"),
-            new ( Name: "Manager", Description: "Manager description"),
-            new ( Name: "Administrator", Description: "Administrator description"),
-            new ( Name: "Developer", Description: "Developer description"),
-        };
+        var continents = await _dataCommands.SeedContinentsAsync(token);
+        var countries = await _dataCommands.SeedCountriesAsync(token);
+        var states = await _dataCommands.SeedStatesAsync(token);
 
-        var rolesResponse = await _roleCommands.InitializeRolesAsync(roles, token);
+        // var a = new SeedCountriesCommand(_continentCommands);
+        // var h = await c.Handle(token);
 
-        if (!rolesResponse.Success)
-            return new Response<string>()
-                .WithMessage(rolesResponse.Message!)
-                .WithSuccess(rolesResponse.Success)
-                .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithData("Data seeding was failed!");
+        // var roles = new List<CreateRoleDto>()
+        // {
+        //     new ( Name: "User", Description: "User description"),
+        //     new ( Name: "Manager", Description: "Manager description"),
+        //     new ( Name: "Administrator", Description: "Administrator description"),
+        //     new ( Name: "Developer", Description: "Developer description"),
+        // };
+
+        // var rolesResponse = await _roleCommands.InitializeRolesAsync(roles, token);
+
+        // if (!rolesResponse.Success)
+        //     return new Response<string>()
+        //         .WithMessage(rolesResponse.Message!)
+        //         .WithSuccess(rolesResponse.Success)
+        //         .WithStatusCode((int)HttpStatusCode.InternalServerError)
+        //         .WithData("Data seeding was failed!");
+
+        
+
+        
+
+        // // Countries initialization logic
+        // var countries = new List<CreateCountryDto>()
+        // {
+        //     new (
+        //         Name: "United States",
+        //         Description: "A country in North America.",
+        //         Code: "US",
+        //         Capital: "Washington D.C.",
+        //         Population: 331_002_651,
+        //         AreaKm2: 9_833_517,
+        //         IsActive: true,
+        //         ContinentId: continents.FirstOrDefault(c => c.Name == "North America")?.Id ?? Guid.Empty
+        //     ),
+        //     new (
+        //         Name: "Brazil",
+        //         Description: "Largest country in South America.",
+        //         Code: "BR",
+        //         Capital: "Brasília",
+        //         Population: 211_049_527,
+        //         AreaKm2: 8_515_767,
+        //         IsActive: true,
+        //         ContinentId: continents.FirstOrDefault(c => c.Name == "South America")?.Id ?? Guid.Empty
+        //     ),
+        //     new (
+        //         Name: "Germany",
+        //         Description: "A country in Europe.",
+        //         Code: "DE",
+        //         Capital: "Berlin",
+        //         Population: 83_783_942,
+        //         AreaKm2: 357_022,
+        //         IsActive: true,
+        //         ContinentId: continents.FirstOrDefault(c => c.Name == "Europe")?.Id ?? Guid.Empty
+        //     ),
+        //     // Add more countries...
+        // };
         
         // var admin = new CreateUserDto(
         //     // User Details

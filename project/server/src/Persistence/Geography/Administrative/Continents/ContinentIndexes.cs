@@ -11,13 +11,11 @@ public class ContinentIndexes : IEntityTypeConfiguration<Continent>
 {
     public void Configure(EntityTypeBuilder<Continent> builder)
     {
-        builder.HasIndex(c => c.Id)
-            .IsUnique();
-
         builder.HasIndex(c 
             => new { 
                 c.Id, 
                 c.Name,
+                c.Code,
                 c.IsActive
             })
             .IsUnique()
@@ -25,6 +23,7 @@ public class ContinentIndexes : IEntityTypeConfiguration<Continent>
                 {nameof(Continent)}_
                 {nameof(Continent.Id)}_
                 {nameof(Continent.Name)}_
+                {nameof(Continent.Code)}_
                 {nameof(Continent.IsActive)}
             ".Replace("\n", "").Trim());
     }

@@ -20,6 +20,7 @@ public static class ListItemContinentDtoMapper
         this Continent model) => new(
             Id: model.Id,
             Name: model.Name,
+            Code: model.Code,
             IsActive: model.IsActive,
             Count: model.Countries.Count
         );

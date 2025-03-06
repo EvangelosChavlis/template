@@ -46,11 +46,11 @@ public class GetContinentsHandler : IRequestHandler<GetContinentsQuery, ListResp
         var includes = ContinentsIncludes.GetContinentsIncludes();
 
         // Fetch paginated results
-        var pagedContinents = await _commonRepository.GetPagedResultsAsync( pageParams, 
+        var pagedContinents = await _commonRepository.GetPagedResultsAsync(pageParams, 
             filters, includes, token: token);
         
         // Mapping
-        var dto = pagedContinents.Rows.Select(t => t.ListItemContinentDtoMapping()).ToList();
+        var dto = pagedContinents.Rows.Select(c => c.ListItemContinentDtoMapping()).ToList();
 
         // Determine if the operation was successful
         var success = pagedContinents.Rows.Count > 0;

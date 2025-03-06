@@ -9,6 +9,7 @@ public record UpdateStateDto(
     string Capital,
     long Population,
     double AreaKm2,
+    string Code,
     bool IsActive,
     Guid CountryId,
     Guid Version

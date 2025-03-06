@@ -15,6 +15,12 @@ public class Continent : BaseEntity
     public string Name { get; set; }
 
     /// <summary>
+    /// Gets or sets the code for the continent (e.g., "AF" for Africa, "AS" for Asia).
+    /// The code is typically two uppercase letters representing the continent's region.
+    /// </summary>
+    public string Code { get; set; }
+
+    /// <summary>
     /// Gets or sets a brief description of the continent.
     /// </summary>
     public string Description { get; set; }

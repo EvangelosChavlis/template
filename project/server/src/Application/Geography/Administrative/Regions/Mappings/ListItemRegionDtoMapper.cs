@@ -21,6 +21,7 @@ public static class ListItemRegionDtoMapper
             Id: model.Id,
             Name: model.Name,
             AreaKm2: model.AreaKm2,
+            Code: model.Code,
             IsActive: model.IsActive,
             Count: model.Municipalities.Count
         );

@@ -22,6 +22,7 @@ public static class ItemRegionDtoMapper
         Name: model.Name,
         Description: model.Description,
         AreaKm2: model.AreaKm2,
+        Code: model.Code,
         IsActive: model.IsActive,
         State: model.State.Name,
         Version: model.Version

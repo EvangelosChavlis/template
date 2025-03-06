@@ -11,9 +11,6 @@ public class ClimateZoneIndexes : IEntityTypeConfiguration<ClimateZone>
 {
     public void Configure(EntityTypeBuilder<ClimateZone> builder)
     {
-        builder.HasIndex(c => c.Id)
-            .IsUnique();
-
         builder.HasIndex(c 
             => new { 
                 c.Id, 

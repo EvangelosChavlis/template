@@ -1,6 +1,8 @@
 // packages
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using server.src.Domain.Geography.Administrative.Countries.Extensions;
+
 
 // source
 using server.src.Domain.Geography.Administrative.Countries.Models;
@@ -25,19 +27,19 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
 
         builder.Property(c => c.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(CountryLength.NameLength);
 
         builder.Property(c => c.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(CountryLength.DescriptionLength);
 
-        builder.Property(c => c.IsoCode)
+        builder.Property(c => c.Code)
             .IsRequired()
-            .HasMaxLength(2);
+            .HasMaxLength(CountryLength.CodeLength);
 
         builder.Property(c => c.Capital)
             .IsRequired(false)
-            .HasMaxLength(100);
+            .HasMaxLength(CountryLength.CapitalLength);
 
         builder.Property(c => c.Population)
             .IsRequired();

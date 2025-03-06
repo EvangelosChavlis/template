@@ -11,9 +11,6 @@ public class TimezoneIndexes : IEntityTypeConfiguration<Timezone>
 {
     public void Configure(EntityTypeBuilder<Timezone> builder)
     {
-        builder.HasIndex(t => t.Id)
-            .IsUnique();
-
         builder.HasIndex(t 
             => new { 
                 t.Id, 

@@ -25,6 +25,7 @@ public static class CreateStateModelMapper
             Capital = dto.Capital,
             Population = dto.Population,
             AreaKm2 = dto.AreaKm2,
+            Code = dto.Code,
             IsActive = true,
             Version = Guid.NewGuid(),
             Country = model,

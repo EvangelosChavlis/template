@@ -16,32 +16,33 @@ using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Metrics.AuditLogs.Enums;
 using server.src.Domain.Metrics.AuditLogs.Models;
 using server.src.Domain.Metrics.Trails;
+using System.Linq;
 
 namespace server.src.Persistence.Common.Helpers;
 
 public class AuditLogHelper : IAuditLogHelper
 {
     private readonly DataContext _dataContext;
-    private readonly HttpContext _httpContext;
-    private readonly ICommonRepository _commonRepository;
+    private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly IUnitOfWork _unitOfWork;
     
-    public AuditLogHelper(DataContext dataContext, HttpContext httpContext, 
-        ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public AuditLogHelper(DataContext dataContext, IHttpContextAccessor httpContextAccessor, 
+        IUnitOfWork unitOfWork)
     {
         _dataContext = dataContext;
-        _httpContext = httpContext;
-        _commonRepository = commonRepository;
+        _httpContextAccessor = httpContextAccessor;
         _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> CreateAuditLogAsync<TEntity>(TEntity oldEntityData, TEntity newEntityData, 
         CancellationToken token = default)
     {
-        var userName = _httpContext.User.FindFirst(ClaimTypes.Name)?.Value;
+        var httpContext = _httpContextAccessor.HttpContext;
+
+        var userName = httpContext.User.FindFirst(ClaimTypes.Name)?.Value;
 
         var filters = new Expression<Func<User, bool>>[] { u => u.UserName == userName };
-        var user = await _commonRepository.GetResultByIdAsync(filters, token: token);
+        var user = await _dataContext.AuthDbSets.Users.Where(u => u.UserName == userName).FirstOrDefaultAsync(token);
 
         if (user is null)
             return new Response<string>()
@@ -50,7 +51,7 @@ public class AuditLogHelper : IAuditLogHelper
                 .WithSuccess(false)
                 .WithData($"User with username '{userName}' not found.");
 
-        var ipAddress = _httpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
+        var ipAddress = httpContext.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
 
         var entityType = typeof(TEntity).Name;
         var idProperty = typeof(TEntity).GetProperty("Id", BindingFlags.Public | BindingFlags.Instance);

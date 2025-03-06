@@ -13,7 +13,8 @@ public static class ContinentFilters
 
     public static Expression<Func<Continent, bool>> ContinentSearchFilter(this string filter)
     {
-        return o => o.Name.Contains(filter ?? "") ||
-            o.Description.Contains(filter ?? "");
+        return c => c.Name.Contains(filter ?? "") ||
+            c.Code.Contains(filter ?? "") ||
+            c.Description.Contains(filter ?? "");
     }
 }

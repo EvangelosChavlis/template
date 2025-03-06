@@ -15,7 +15,7 @@ public static class DI
     public static IServiceCollection RegisterData(this IServiceCollection services)
     {   
         var assembly = Assembly.GetExecutingAssembly();
-        
+     
         // Register all IRequestHandler<TRequest, TResponse> implementations dynamically
         var handlerTypes = assembly.GetTypes()
             .Where(t => t.GetInterfaces()
@@ -27,11 +27,11 @@ public static class DI
             var interfaceType = handlerType.GetInterfaces().First(i => 
                 i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IRequestHandler<,>));
 
-            services.AddScoped(interfaceType, handlerType);
+            services.AddScoped(interfaceType, handlerType);  // Ensure handlers are scoped
         }
 
-        // Register RequestExecutor
-        services.AddSingleton<RequestExecutor>();
+        // Register RequestExecutor as scoped to ensure it resolves scoped services
+        services.AddScoped<RequestExecutor>();
 
         // Register DataCommands
         services.AddTransient<IDataCommands, DataCommands>();

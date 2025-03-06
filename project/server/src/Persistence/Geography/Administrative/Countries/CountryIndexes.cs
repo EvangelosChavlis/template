@@ -11,14 +11,11 @@ public class CountryIndexes : IEntityTypeConfiguration<Country>
 {
     public void Configure(EntityTypeBuilder<Country> builder)
     {
-        builder.HasIndex(c => c.Id)
-            .IsUnique();
-
         builder.HasIndex(c 
             => new { 
                 c.Id, 
                 c.Name,
-                c.IsoCode,
+                c.Code,
                 c.Population,
                 c.IsActive
             })
@@ -27,7 +24,7 @@ public class CountryIndexes : IEntityTypeConfiguration<Country>
                 {nameof(Country)}_
                 {nameof(Country.Id)}_
                 {nameof(Country.Name)}_
-                {nameof(Country.IsoCode)}_
+                {nameof(Country.Code)}_
                 {nameof(Country.Population)}_
                 {nameof(Country.IsActive)}
             ".Replace("\n", "").Trim());

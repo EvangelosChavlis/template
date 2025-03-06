@@ -23,6 +23,7 @@ public static class CreateRegionModelMapper
             Name = dto.Name,
             Description = dto.Description,
             AreaKm2 = dto.AreaKm2,
+            Code = dto.Code,
             IsActive = true,
             Version = Guid.NewGuid(),
             State = model,

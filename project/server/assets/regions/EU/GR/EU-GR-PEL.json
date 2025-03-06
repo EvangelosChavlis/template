@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Arcadia",
+      "Code": "EU-GR-PEL-ARC",
+      "Description": "A mountainous region in the central part of the Peloponnese.",
+      "Capital": "Tripoli",
+      "Population": 86000,
+      "AreaKm2": 4419.00
+    },
+    {
+      "Name": "Argolis",
+      "Code": "EU-GR-PEL-ARG",
+      "Description": "A region known for its archaeological sites, including Mycenae and Epidaurus.",
+      "Capital": "Nafplio",
+      "Population": 97000,
+      "AreaKm2": 2154.00
+    },
+    {
+      "Name": "Corinthia",
+      "Code": "EU-GR-PEL-COR",
+      "Description": "A region in northeastern Peloponnese, home to the famous Corinth Canal.",
+      "Capital": "Corinth",
+      "Population": 145000,
+      "AreaKm2": 2290.00
+    },
+    {
+      "Name": "Laconia",
+      "Code": "EU-GR-PEL-LAC",
+      "Description": "A historic region known for Sparta and the Mani Peninsula.",
+      "Capital": "Sparta",
+      "Population": 89000,
+      "AreaKm2": 3636.00
+    },
+    {
+      "Name": "Messenia",
+      "Code": "EU-GR-PEL-MES",
+      "Description": "A region known for its olive oil, beaches, and the ancient city of Messene.",
+      "Capital": "Kalamata",
+      "Population": 160000,
+      "AreaKm2": 2991.00
+    },
+    {
+      "Name": "Elis",
+      "Code": "EU-GR-PEL-ELI",
+      "Description": "A region in western Peloponnese, home to the ancient site of Olympia.",
+      "Capital": "Pyrgos",
+      "Population": 160000,
+      "AreaKm2": 2618.00
+    }
+]  

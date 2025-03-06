@@ -30,6 +30,11 @@ public class Region : BaseEntity
     /// </summary>
     public bool IsActive { get; set; }
 
+    /// <summary>
+    /// Gets or sets the code of the region.
+    /// </summary>
+    public string Code { get; set; }
+
     #region Foreign keys
 
     /// <summary>

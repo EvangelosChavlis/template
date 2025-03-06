@@ -11,7 +11,7 @@ using server.src.Domain.Common.Dtos;
 namespace server.src.Api.Controllers.Geography.Administrative.Neighborhoods;
 
 [ApiController]
-[Route("api/geography/administrative/regions")]
+[Route("api/geography/administrative/neighborhoods")]
 [Authorize(Roles = "Administrator")]
 public class NeighborhoodCommandsController : BaseApiController
 {

@@ -11,9 +11,6 @@ public class TerrainTypeIndexes : IEntityTypeConfiguration<TerrainType>
 {
     public void Configure(EntityTypeBuilder<TerrainType> builder)
     {
-        builder.HasIndex(t => t.Id)
-            .IsUnique();
-
         builder.HasIndex(t 
             => new { 
                 t.Id, 

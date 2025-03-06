@@ -1,0 +1,65 @@
+[
+    {
+        "Name": "Antarctica",
+        "Description": "The southernmost continent, almost entirely covered by ice, with no native human population. It is governed by the Antarctic Treaty System, which regulates international cooperation for scientific research and environmental protection.",
+        "Code": "AN-AQ",
+        "Capital": "No capital",
+        "Population": 0,
+        "AreaKm2": 14000000,
+        "IsActive": true
+    },
+    {
+        "Name": "McMurdo Station",
+        "Description": "The largest research station in Antarctica, located on the southern tip of the Antarctic continent. It serves as the primary base for scientific research in the region, with personnel from many countries.",
+        "Code": "AN-AQ",
+        "Capital": "McMurdo Station",
+        "Population": 1000,
+        "AreaKm2": 0.01,
+        "IsActive": true
+    },
+    {
+        "Name": "South Pole Station",
+        "Description": "A United States scientific research station located at the geographic South Pole. It is one of the most remote and challenging places to work on Earth, supporting a variety of scientific disciplines.",
+        "Code": "AN-AQ",
+        "Capital": "South Pole Station",
+        "Population": 50,
+        "AreaKm2": 0.005,
+        "IsActive": true
+    },
+    {
+        "Name": "Amundsen–Scott South Pole Station",
+        "Description": "A research station at the South Pole operated by the United States and named after explorers Roald Amundsen and Robert Falcon Scott. It supports scientific research in a variety of fields.",
+        "Code": "AN-AQ",
+        "Capital": "South Pole",
+        "Population": 50,
+        "AreaKm2": 0.003,
+        "IsActive": true
+    },
+    {
+        "Name": "Vostok Station",
+        "Description": "A Russian research station located near Lake Vostok, one of the largest subglacial lakes in the world. Vostok Station is known for its extreme isolation and scientific importance.",
+        "Code": "AN-AQ",
+        "Capital": "Vostok Station",
+        "Population": 20,
+        "AreaKm2": 0.02,
+        "IsActive": true
+    },
+    {
+        "Name": "Palmer Station",
+        "Description": "A United States research station located on Anvers Island, off the Antarctic Peninsula. It focuses on research in marine biology, environmental science, and climate change.",
+        "Code": "AN-AQ",
+        "Capital": "Palmer Station",
+        "Population": 40,
+        "AreaKm2": 0.01,
+        "IsActive": true
+    },
+    {
+        "Name": "Esperanza Base",
+        "Description": "An Argentine research station located on the Antarctic Peninsula. It is one of the few stations with a small population of permanent residents and conducts research in biology, geology, and environmental science.",
+        "Code": "AN-AQ",
+        "Capital": "Esperanza Base",
+        "Population": 50,
+        "AreaKm2": 0.02,
+        "IsActive": true
+    }
+]

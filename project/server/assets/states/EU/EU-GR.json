@@ -1,0 +1,114 @@
+[
+  {
+    "Name": "Attica",
+    "Code": "EU-GR-AC",
+    "Description": "A region that includes Athens, the capital city of Greece.",
+    "Capital": "Athens",
+    "Population": 3800000,
+    "AreaKm2": 3800.00
+  },
+  {
+    "Name": "Central Greece",
+    "Code": "EU-GR-CG",
+    "Description": "A region in the central part of mainland Greece.",
+    "Capital": "Livadeia",
+    "Population": 560000,
+    "AreaKm2": 15000.00
+  },
+  {
+    "Name": "Central Macedonia",
+    "Code": "EU-GR-CM",
+    "Description": "A region located in the northern part of Greece.",
+    "Capital": "Thessaloniki",
+    "Population": 2000000,
+    "AreaKm2": 19000.00
+  },
+  {
+    "Name": "Crete",
+    "Code": "EU-GR-CR",
+    "Description": "The largest Greek island, known for its ancient history and beautiful landscapes.",
+    "Capital": "Heraklion",
+    "Population": 650000,
+    "AreaKm2": 8336.00
+  },
+  {
+    "Name": "East Macedonia and Thrace",
+    "Code": "EU-GR-EMT",
+    "Description": "A region located in the northeastern part of Greece, bordering Bulgaria and Turkey.",
+    "Capital": "Komotini",
+    "Population": 600000,
+    "AreaKm2": 14000.00
+  },
+  {
+    "Name": "Epirus",
+    "Code": "EU-GR-EP",
+    "Description": "A region in the northwestern part of Greece, known for its mountains and villages.",
+    "Capital": "Ioannina",
+    "Population": 350000,
+    "AreaKm2": 9600.00
+  },
+  {
+    "Name": "Ionian Islands",
+    "Code": "EU-GR-II",
+    "Description": "A group of islands located in the Ionian Sea, west of mainland Greece.",
+    "Capital": "Corfu",
+    "Population": 200000,
+    "AreaKm2": 2300.00
+  },
+  {
+    "Name": "North Aegean",
+    "Code": "EU-GR-NA",
+    "Description": "A group of islands in the northern part of the Aegean Sea.",
+    "Capital": "Mytilene",
+    "Population": 200000,
+    "AreaKm2": 3000.00
+  },
+  {
+    "Name": "Peloponnese",
+    "Code": "EU-GR-PEL",
+    "Description": "A peninsula in southern Greece known for its archaeological sites.",
+    "Capital": "Tripoli",
+    "Population": 600000,
+    "AreaKm2": 21500.00
+  },
+  {
+    "Name": "South Aegean",
+    "Code": "EU-GR-SA",
+    "Description": "A group of islands in the southern Aegean Sea, including the Cyclades and Dodecanese.",
+    "Capital": "Rhodes",
+    "Population": 400000,
+    "AreaKm2": 5000.00
+  },
+  {
+    "Name": "Sterea Hellas",
+    "Code": "EU-GR-SH",
+    "Description": "A central region of Greece, also known as Central Greece, bordering Attica and the Peloponnese.",
+    "Capital": "Lamia",
+    "Population": 500000,
+    "AreaKm2": 11000.00
+  },
+  {
+    "Name": "Thessaly",
+    "Code": "EU-GR-TH",
+    "Description": "A region located in central Greece, known for its plains and Mount Olympus.",
+    "Capital": "Larissa",
+    "Population": 800000,
+    "AreaKm2": 14100.00
+  },
+  {
+    "Name": "Western Greece",
+    "Code": "EU-GR-WG",
+    "Description": "A region in the western part of mainland Greece, known for its beaches and natural landscapes.",
+    "Capital": "Patras",
+    "Population": 750000,
+    "AreaKm2": 10500.00
+  },
+  {
+    "Name": "Western Macedonia",
+    "Code": "EU-GR-WM",
+    "Description": "A region in the northwestern part of Greece, known for its mountainous terrain.",
+    "Capital": "Kastoria",
+    "Population": 300000,
+    "AreaKm2": 9500.00
+  }
+]

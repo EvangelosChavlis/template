@@ -7,7 +7,8 @@ namespace server.src.Domain.Geography.Administrative.States.Dtos;
 public record ListItemStateDto(
     Guid Id,
     string Name,
-    bool IsActive,
     long Population,
+    string Code,
+    bool IsActive,
     int Count
 );

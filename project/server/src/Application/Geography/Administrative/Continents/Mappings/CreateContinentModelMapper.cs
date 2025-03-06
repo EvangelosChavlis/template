@@ -20,6 +20,7 @@ public static class CreateContinentModelMapper
         {
             Name = dto.Name,
             Description = dto.Description,
+            Code = dto.Code,
             IsActive = true,
             Version = Guid.NewGuid()
         };

@@ -21,6 +21,7 @@ public class ErrorItemStateDtoMapper
             Capital: string.Empty,
             Population: int.MinValue,
             AreaKm2: double.MinValue,
+            Code: string.Empty,
             IsActive: false,
             Country: string.Empty,
             Version: Guid.Empty

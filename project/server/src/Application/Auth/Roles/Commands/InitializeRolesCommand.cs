@@ -7,6 +7,7 @@ using server.src.Application.Auth.Roles.Interfaces;
 using server.src.Application.Common.Interfaces;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Contexts;
 
 namespace server.src.Application.Auth.Roles.Commands;
 
@@ -18,7 +19,7 @@ public class InitializeRolesHandler : IRequestHandler<InitializeRolesCommand, Re
     
     public InitializeRolesHandler(IRoleCommands roleCommands)
     {
-        _roleCommands = roleCommands;
+        _roleCommands = roleCommands;   
     }
 
     public async Task<Response<string>> Handle(InitializeRolesCommand command, CancellationToken token = default)

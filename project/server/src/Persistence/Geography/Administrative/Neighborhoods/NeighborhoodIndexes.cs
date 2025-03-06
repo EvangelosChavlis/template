@@ -11,9 +11,6 @@ public class NeighborhoodIndexes : IEntityTypeConfiguration<Neighborhood>
 {
     public void Configure(EntityTypeBuilder<Neighborhood> builder)
     {
-        builder.HasIndex(n => n.Id)
-            .IsUnique();
-
         builder.HasIndex(n 
             => new { 
                 n.Id, 

@@ -20,8 +20,9 @@ public static class ListItemStateDtoMapper
         this State model) => new(
             Id: model.Id,
             Name: model.Name,
-            IsActive: model.IsActive,
             Population: model.Population,
+            Code: model.Code,
+            IsActive: model.IsActive,
             Count: model.Regions.Count
         );
 }

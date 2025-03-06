@@ -11,9 +11,6 @@ public class UserLogoutIndexes : IEntityTypeConfiguration<UserLogout>
 {
     public void Configure(EntityTypeBuilder<UserLogout> builder)
     {
-        builder.HasIndex(ul => ul.Id)
-            .IsUnique();
-
         builder.HasIndex(ul 
             => new { 
                 ul.Id, 

@@ -11,9 +11,6 @@ public class MoonPhaseIndexes : IEntityTypeConfiguration<MoonPhase>
 {
     public void Configure(EntityTypeBuilder<MoonPhase> builder)
     {
-        builder.HasIndex(m => m.Id)
-            .IsUnique();
-
         builder.HasIndex(m 
             => new { 
                 m.Id, 

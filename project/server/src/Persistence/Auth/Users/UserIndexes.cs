@@ -11,9 +11,6 @@ public class UserIndexes : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.HasIndex(u => u.Id)
-            .IsUnique();
-
         builder.HasIndex(u 
             => new { 
                 u.Id, 

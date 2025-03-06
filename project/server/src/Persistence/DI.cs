@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 // source
 using server.src.Persistence.Common.Contexts;
+using server.src.Persistence.Common.Helpers;
 using server.src.Persistence.Common.Interfaces;
 using server.src.Persistence.Common.Repositories;
 
@@ -25,6 +26,7 @@ public static class DI
 
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IAuditLogHelper, AuditLogHelper>();
         services.AddScoped<ICommonRepository, CommonRepository>();
 
         return services;

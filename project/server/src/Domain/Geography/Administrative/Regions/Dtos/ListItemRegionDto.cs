@@ -7,6 +7,7 @@ namespace server.src.Domain.Geography.Administrative.Regions.Dtos;
 public record ListItemRegionDto(
     Guid Id,
     string Name,
+    string Code,
     double AreaKm2,
     bool IsActive,
     int Count

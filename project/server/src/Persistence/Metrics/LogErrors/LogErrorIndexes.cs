@@ -11,10 +11,6 @@ public class LogErrorIndexes : IEntityTypeConfiguration<LogError>
 {
     public void Configure(EntityTypeBuilder<LogError> builder)
     {
-        builder.HasIndex(e => e.Id)
-            .IsUnique()
-            .HasDatabaseName($"{nameof(LogError)}_{nameof(LogError.Id)}");
-
         builder.HasIndex(e 
             => new { 
                 e.Id, 

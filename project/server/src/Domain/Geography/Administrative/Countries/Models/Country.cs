@@ -23,7 +23,7 @@ public class Country : BaseEntity
     /// <summary>
     /// Gets or sets the ISO 3166-1 alpha-2 country code (e.g., "US", "FR").
     /// </summary>
-    public string IsoCode { get; set; }
+    public string Code { get; set; }
 
     /// <summary>
     /// Gets or sets the official capital city of the country.

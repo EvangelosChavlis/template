@@ -6,6 +6,7 @@ namespace server.src.Domain.Geography.Administrative.Continents.Dtos;
 /// </summary>
 public record UpdateContinentDto(
     string Name,
+    string Code,
     string Description,
     Guid Version
 );

@@ -11,14 +11,12 @@ public class StateIndexes : IEntityTypeConfiguration<State>
 {
     public void Configure(EntityTypeBuilder<State> builder)
     {
-        builder.HasIndex(r => r.Id)
-            .IsUnique();
-
         builder.HasIndex(s 
             => new { 
                 s.Id, 
                 s.Name,
                 s.Population,
+                s.Code,
                 s.IsActive
             })
             .IsUnique()
@@ -27,6 +25,7 @@ public class StateIndexes : IEntityTypeConfiguration<State>
                 {nameof(State.Id)}_
                 {nameof(State.Name)}_
                 {nameof(State.Population)}_
+                {nameof(State.Code)}_
                 {nameof(State.IsActive)}
             ".Replace("\n", "").Trim());
     }

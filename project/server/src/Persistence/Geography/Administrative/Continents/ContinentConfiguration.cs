@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Geography.Administrative.Continents.Extensions;
 using server.src.Domain.Geography.Administrative.Continents.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -25,11 +26,15 @@ public class ContinentConfiguration : IEntityTypeConfiguration<Continent>
 
         builder.Property(c => c.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(ContinentLength.NameLength);
+
+        builder.Property(c => c.Code)
+            .IsRequired()
+            .HasMaxLength(ContinentLength.CodeLength);
 
         builder.Property(c => c.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(ContinentLength.DescriptionLength);
 
         builder.Property(c => c.IsActive)
             .IsRequired();

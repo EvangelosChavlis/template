@@ -6,5 +6,6 @@ namespace server.src.Domain.Geography.Administrative.Continents.Dtos;
 /// </summary>
 public record CreateContinentDto(
     string Name,
-    string Description
+    string Description,
+    string Code
 );

@@ -22,7 +22,7 @@ public static class CreateCountryModelMapper
         {
             Name = dto.Name,
             Description = dto.Description,
-            IsoCode = dto.IsoCode,
+            Code = dto.Code,
             Capital = dto.Capital,
             Population = dto.Population,
             AreaKm2 = dto.AreaKm2,

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Geography.Administrative.States.Extensions;
 using server.src.Domain.Geography.Administrative.States.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -25,21 +26,25 @@ public class StateConfiguration : IEntityTypeConfiguration<State>
 
         builder.Property(s => s.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(StateLength.NameLength);
 
         builder.Property(s => s.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(StateLength.DescriptionLength);
 
         builder.Property(s => s.Capital)
             .IsRequired(false)
-            .HasMaxLength(100);
+            .HasMaxLength(StateLength.CapitalLength);
 
         builder.Property(s => s.Population)
             .IsRequired();
 
         builder.Property(s => s.AreaKm2)
             .IsRequired();
+
+        builder.Property(s => s.Code)
+            .IsRequired()
+            .HasMaxLength(StateLength.CodeLength);
 
         builder.Property(s => s.IsActive)
             .IsRequired();

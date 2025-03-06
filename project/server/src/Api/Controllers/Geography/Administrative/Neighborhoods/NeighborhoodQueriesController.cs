@@ -12,7 +12,7 @@ using server.src.Domain.Geography.Administrative.Neighborhoods.Dtos;
 namespace server.src.Api.Controllers.Geography.Administrative.Neighborhoods;
 
 [ApiController]
-[Route("api/geography/administrative/regions")]
+[Route("api/geography/administrative/neighborhoods")]
 [Authorize(Roles = "Administrator")]
 public class NeighborhoodQueriesController : BaseApiController
 {

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Persistence.Migrations
+namespace Persistence.Migrations.Data
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate_data : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -115,6 +115,7 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Code = table.Column<string>(type: "character varying(2)", maxLength: 2, nullable: false),
                     Description = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     Version = table.Column<Guid>(type: "uuid", nullable: false),
@@ -436,7 +437,7 @@ namespace Persistence.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
-                    IsoCode = table.Column<string>(type: "character varying(2)", maxLength: 2, nullable: false),
+                    Code = table.Column<string>(type: "character varying(5)", maxLength: 5, nullable: false),
                     Capital = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     Population = table.Column<long>(type: "bigint", nullable: false),
                     AreaKm2 = table.Column<double>(type: "double precision", nullable: false),
@@ -617,6 +618,7 @@ namespace Persistence.Migrations
                     Capital = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     Population = table.Column<long>(type: "bigint", nullable: false),
                     AreaKm2 = table.Column<double>(type: "double precision", nullable: false),
+                    Code = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: false),
                     IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     CountryId = table.Column<Guid>(type: "uuid", nullable: false),
                     Version = table.Column<Guid>(type: "uuid", nullable: false),
@@ -720,6 +722,7 @@ namespace Persistence.Migrations
                     Description = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     AreaKm2 = table.Column<double>(type: "double precision", nullable: false),
                     IsActive = table.Column<bool>(type: "boolean", nullable: false),
+                    Code = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
                     StateId = table.Column<Guid>(type: "uuid", nullable: false),
                     Version = table.Column<Guid>(type: "uuid", nullable: false),
                     LockUntil = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
@@ -960,7 +963,7 @@ namespace Persistence.Migrations
                     TerrainTypeId = table.Column<Guid>(type: "uuid", nullable: false),
                     ClimateZoneId = table.Column<Guid>(type: "uuid", nullable: false),
                     NaturalFeatureId = table.Column<Guid>(type: "uuid", nullable: false),
-                    NeighborhoodId = table.Column<Guid>(type: "uuid", nullable: true),
+                    NeighborhoodId = table.Column<Guid>(type: "uuid", nullable: false),
                     Version = table.Column<Guid>(type: "uuid", nullable: false),
                     LockUntil = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     UserLockedId = table.Column<Guid>(type: "uuid", nullable: true),
@@ -988,7 +991,8 @@ namespace Persistence.Migrations
                         column: x => x.NeighborhoodId,
                         principalSchema: "geography_administrative",
                         principalTable: "Neighborhoods",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Locations_TerrainTypes_TerrainTypeId",
                         column: x => x.TerrainTypeId,
@@ -1160,16 +1164,37 @@ namespace Persistence.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                ClimateZone_\r                Id_\r                Name_\r                AvgTemperatureC_\r                AvgPrecipitationMm_\r                IsActive",
+                schema: "geography_natural",
+                table: "ClimateZone",
+                columns: new[] { "Id", "Name", "AvgTemperatureC", "AvgPrecipitationMm", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ClimateZone_LockedByUserId",
                 schema: "geography_natural",
                 table: "ClimateZone",
                 column: "LockedByUserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                Continent_\r                Id_\r                Name_\r                Code_\r                IsActive",
+                schema: "geography_administrative",
+                table: "Continents",
+                columns: new[] { "Id", "Name", "Code", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Continents_UserLockedId",
                 schema: "geography_administrative",
                 table: "Continents",
                 column: "UserLockedId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                Country_\r                Id_\r                Name_\r                Code_\r                Population_\r                IsActive",
+                schema: "geography_administrative",
+                table: "Countries",
+                columns: new[] { "Id", "Name", "Code", "Population", "IsActive" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Countries_ContinentId",
@@ -1182,6 +1207,13 @@ namespace Persistence.Migrations
                 schema: "geography_administrative",
                 table: "Countries",
                 column: "UserLockedId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                District_\r                Id_\r                Name_\r                Population_\r                IsActive",
+                schema: "geography_administrative",
+                table: "Districts",
+                columns: new[] { "Id", "Name", "Population", "IsActive" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Districts_MunicipalityId",
@@ -1206,6 +1238,13 @@ namespace Persistence.Migrations
                 column: "ModuleId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                Forecast_\r                Id_\r                Date_\r                TemperatureC_\r                Humidity",
+                schema: "weather",
+                table: "Forecasts",
+                columns: new[] { "Id", "Date", "TemperatureC", "Humidity" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Forecasts_LocationId",
                 schema: "weather",
                 table: "Forecasts",
@@ -1228,6 +1267,20 @@ namespace Persistence.Migrations
                 schema: "weather",
                 table: "Forecasts",
                 column: "WarningId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                Location_\r                Id_\r                Longitude_\r                Latitude_\r                Altitude_\r                IsActive",
+                schema: "geography_natural",
+                table: "Locations",
+                columns: new[] { "Id", "Longitude", "Latitude", "Altitude", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Location_Id",
+                schema: "geography_natural",
+                table: "Locations",
+                column: "Id",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Locations_ClimateZoneId",
@@ -1266,6 +1319,13 @@ namespace Persistence.Migrations
                 column: "TimezoneId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                LogError_\r                Id_\r                Error_\r                StatusCode_\r                Timestamp",
+                schema: "metrics",
+                table: "LogErrors",
+                columns: new[] { "Id", "Error", "StatusCode", "Timestamp" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LogErrors_UserId",
                 schema: "metrics",
                 table: "LogErrors",
@@ -1282,10 +1342,24 @@ namespace Persistence.Migrations
                 column: "LockedByUserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                MoonPhase_\r                Id_\r                Name_\r                Description",
+                schema: "weather",
+                table: "MoonPhases",
+                columns: new[] { "Id", "Name", "Description" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_MoonPhases_UserLockedId",
                 schema: "weather",
                 table: "MoonPhases",
                 column: "UserLockedId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                Municipality_\r                Id_\r                Name_\r                Population_\r                IsActive",
+                schema: "geography_administrative",
+                table: "Municipalities",
+                columns: new[] { "Id", "Name", "Population", "IsActive" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Municipalities_RegionId",
@@ -1305,6 +1379,13 @@ namespace Persistence.Migrations
                 column: "LockedByUserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                Neighborhood_\r                Id_\r                Name_\r                Zipcode_\r                IsActive",
+                schema: "geography_administrative",
+                table: "Neighborhoods",
+                columns: new[] { "Id", "Name", "Zipcode", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Neighborhoods_DistrictId",
                 schema: "geography_administrative",
                 table: "Neighborhoods",
@@ -1315,6 +1396,13 @@ namespace Persistence.Migrations
                 schema: "geography_administrative",
                 table: "Neighborhoods",
                 column: "UserLockedId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                Observation_\r                Id_\r                Timestamp_\r                TemperatureC_\r                Humidity",
+                schema: "weather",
+                table: "Observations",
+                columns: new[] { "Id", "Timestamp", "TemperatureC", "Humidity" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Observations_LocationId",
@@ -1345,6 +1433,13 @@ namespace Persistence.Migrations
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                Region_\r                Id_\r                Name_\r                AreaKm2_\r                Code_\r                IsActive",
+                schema: "geography_administrative",
+                table: "Regions",
+                columns: new[] { "Id", "Name", "AreaKm2", "Code", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Regions_StateId",
                 schema: "geography_administrative",
                 table: "Regions",
@@ -1357,10 +1452,24 @@ namespace Persistence.Migrations
                 column: "UserLockedId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                Role_\r                Id_\r                Name_\r                Description_\r                IsActive",
+                schema: "auth",
+                table: "Roles",
+                columns: new[] { "Id", "Name", "Description", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Roles_UserLockedId",
                 schema: "auth",
                 table: "Roles",
                 column: "UserLockedId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                State_\r                Id_\r                Name_\r                Population_\r                Code_\r                IsActive",
+                schema: "geography_administrative",
+                table: "States",
+                columns: new[] { "Id", "Name", "Population", "Code", "IsActive" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_States_CountryId",
@@ -1399,16 +1508,37 @@ namespace Persistence.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                TelemetryRecord_\r                Id_\r                Method_\r                StatusCode_\r                ResponseTime_\r                RequestTimestamp",
+                schema: "metrics",
+                table: "TelemetryRecords",
+                columns: new[] { "Id", "Method", "Path", "StatusCode", "ResponseTime", "RequestTimestamp" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TelemetryRecords_UserId",
                 schema: "metrics",
                 table: "TelemetryRecords",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                TerrainType_\r                Id_\r                Name_\r                Description_\r                IsActive",
+                schema: "geography_natural",
+                table: "TerrainTypes",
+                columns: new[] { "Id", "Name", "Description", "IsActive" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TerrainTypes_LockedByUserId",
                 schema: "geography_natural",
                 table: "TerrainTypes",
                 column: "LockedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                Timezone_\r                Id_\r                Name_\r                UtcOffset_\r                IsActive",
+                schema: "geography_natural",
+                table: "TimeZones",
+                columns: new[] { "Id", "Name", "UtcOffset", "IsActive" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_TimeZones_LockedByUserId",
@@ -1441,16 +1571,37 @@ namespace Persistence.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                UserLogin_\r                Id_\r                LoginProvider_\r                ProviderDisplayName_\r                Date",
+                schema: "auth",
+                table: "UserLogins",
+                columns: new[] { "Id", "LoginProvider", "ProviderDisplayName", "Date" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UserLogins_UserId",
                 schema: "auth",
                 table: "UserLogins",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                UserLogout_\r                Id_\r                LoginProvider_\r                ProviderDisplayName_\r                Date",
+                schema: "auth",
+                table: "UserLogouts",
+                columns: new[] { "Id", "LoginProvider", "ProviderDisplayName", "Date" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_UserLogouts_UserId",
                 schema: "auth",
                 table: "UserLogouts",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                UserRole_\r                Id_\r                UserId_\r                RoleId_\r                Date",
+                schema: "auth",
+                table: "UserRoles",
+                columns: new[] { "Id", "UserId", "RoleId", "Date" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_RoleId",
@@ -1465,10 +1616,24 @@ namespace Persistence.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_\r                User_\r                Id_\r                FirstName_\r                LastName_\r                Email_\r                UserName_\r                PhoneNumber_\r                MobilePhoneNumber",
+                schema: "auth",
+                table: "Users",
+                columns: new[] { "Id", "FirstName", "LastName", "Email", "UserName", "PhoneNumber", "MobilePhoneNumber" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Users_UserLockedId",
                 schema: "auth",
                 table: "Users",
                 column: "UserLockedId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_\r                Warning_\r                Id_\r                Name_\r                Description",
+                schema: "weather",
+                table: "Warnings",
+                columns: new[] { "Id", "Name", "Description" },
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Warnings_LockedByUserId",

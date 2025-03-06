@@ -11,10 +11,6 @@ public class ForecastIndexes : IEntityTypeConfiguration<Forecast>
 {
     public void Configure(EntityTypeBuilder<Forecast> builder)
     {
-        builder.HasIndex(f => f.Id)
-            .IsUnique()
-            .HasDatabaseName($"{nameof(Forecast)}_{nameof(Forecast.Id)}");
-
         builder.HasIndex(f 
             => new { 
                 f.Id, 

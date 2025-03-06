@@ -20,7 +20,7 @@ public static class ListItemCountryDtoMapper
         this Country model) => new(
             Id: model.Id,
             Name: model.Name,
-            IsoCode: model.IsoCode,
+            Code: model.Code,
             Population: model.Population,
             IsActive: model.IsActive,
             Count: model.States.Count

@@ -7,7 +7,7 @@ namespace server.src.Domain.Geography.Administrative.Countries.Dtos;
 public record ListItemCountryDto(
     Guid Id,
     string Name,
-    string IsoCode,
+    string Code,
     long Population,
     bool IsActive,
     int Count

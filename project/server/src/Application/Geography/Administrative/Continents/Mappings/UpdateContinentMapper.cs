@@ -19,6 +19,7 @@ public static class UpdateContinentMapper
     public static void UpdateContinentMapping(this UpdateContinentDto dto, Continent model)
     {
         model.Name = dto.Name;
+        model.Code = dto.Code;
         model.IsActive = model.IsActive;
         model.Description = dto.Description;
         model.Version = Guid.NewGuid();

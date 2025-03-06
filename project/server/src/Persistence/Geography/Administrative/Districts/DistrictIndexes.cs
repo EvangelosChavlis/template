@@ -11,9 +11,6 @@ public class DistrictIndexes : IEntityTypeConfiguration<District>
 {
     public void Configure(EntityTypeBuilder<District> builder)
     {
-        builder.HasIndex(d => d.Id)
-            .IsUnique();
-
         builder.HasIndex(d 
             => new { 
                 d.Id, 

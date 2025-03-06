@@ -8,6 +8,7 @@ namespace server.src.Domain.Geography.Administrative.Continents.Dtos;
 public record ItemContinentDto(
     Guid Id,
     string Name,
+    string Code,
     string Description,
     bool IsActive,
     Guid Version

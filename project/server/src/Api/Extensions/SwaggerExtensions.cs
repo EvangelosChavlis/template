@@ -15,17 +15,17 @@ public static class SwaggerExtensions
             c.SwaggerDoc("data", new OpenApiInfo
             {
                 Title = "data API",
-                Version = "data"
+                Version = "v1"
             });
             c.SwaggerDoc("auth", new OpenApiInfo
             {
                 Title = "auth API",
-                Version = "auth"
+                Version = "v1"
             });
             c.SwaggerDoc("weather", new OpenApiInfo
             {
                 Title = "weather API",
-                Version = "weather"
+                Version = "v1"
             });
             c.SwaggerDoc("geography-administrative", new OpenApiInfo
             {
@@ -40,12 +40,12 @@ public static class SwaggerExtensions
             c.SwaggerDoc("metrics", new OpenApiInfo
             {
                 Title = "metrics API",
-                Version = "metrics"
+                Version = "v1"
             });
             c.SwaggerDoc("errors", new OpenApiInfo
             {
                 Title = "errors API",
-                Version = "errors"
+                Version = "v1"
             });
 
             // JWT Token Authentication API Documentation

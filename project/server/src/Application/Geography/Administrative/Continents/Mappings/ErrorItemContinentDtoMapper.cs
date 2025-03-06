@@ -17,6 +17,7 @@ public class ErrorItemContinentDtoMapper
         new (
             Id: Guid.Empty,
             Name: string.Empty,
+            Code: string.Empty,
             Description: string.Empty,
             IsActive: false,
             Version: Guid.Empty 

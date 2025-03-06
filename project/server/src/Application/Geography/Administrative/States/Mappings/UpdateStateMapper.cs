@@ -29,6 +29,7 @@ public static class UpdateStateMapper
         modelState.Capital = dto.Capital;
         modelState.Population = dto.Population;
         modelState.AreaKm2 = dto.AreaKm2;
+        modelState.Code = dto.Code;
         modelState.IsActive = modelState.IsActive;
         modelState.Country = modelCountry;
         modelState.CountryId = modelCountry.Id;

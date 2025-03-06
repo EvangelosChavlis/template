@@ -13,7 +13,8 @@ public static class StateFilters
 
     public static Expression<Func<State, bool>> StateSearchFilter(this string filter)
     {
-        return o => o.Name.Contains(filter ?? "") ||
-            o.Description.Contains(filter ?? "");
+        return s => s.Name.Contains(filter ?? "") ||
+            s.Description.Contains(filter ?? "") ||
+            s.Code.Contains(filter ?? "");
     }
 }

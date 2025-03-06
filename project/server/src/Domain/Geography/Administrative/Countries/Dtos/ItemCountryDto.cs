@@ -8,7 +8,7 @@ public record ItemCountryDto(
     Guid Id,
     string Name,
     string Description,
-    string IsoCode,
+    string Code,
     string Capital,
     long Population,
     double AreaKm2,

@@ -24,6 +24,7 @@ public static class ItemStateDtoMapper
         Capital: model.Capital,
         Population: model.Population,
         AreaKm2: model.AreaKm2,
+        Code: model.Code,
         IsActive: model.IsActive,
         Country: model.Country.Name,
         Version: model.Version

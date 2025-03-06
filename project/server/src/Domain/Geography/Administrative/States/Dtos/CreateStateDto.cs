@@ -10,5 +10,6 @@ public record CreateStateDto(
     string Capital,
     long Population,
     double AreaKm2,
+    string Code,
     Guid CountryId
 );

@@ -9,6 +9,7 @@ using server.src.Application.Common.Interfaces;
 using server.src.Domain.Auth.Roles.Dtos;
 using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Common.Dtos;
+using server.src.Persistence.Common.Contexts;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Roles.Commands;
@@ -19,11 +20,13 @@ public class CreateRoleHandler : IRequestHandler<CreateRoleCommand, Response<str
 {
     private readonly ICommonRepository _commonRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly DataContext _context;
     
-    public CreateRoleHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
+    public CreateRoleHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork, DataContext context)
     {
         _commonRepository = commonRepository;
         _unitOfWork = unitOfWork;
+        _context = context;
     }
 
     public async Task<Response<string>> Handle(CreateRoleCommand command, CancellationToken token = default)

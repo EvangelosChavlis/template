@@ -9,6 +9,7 @@ public record ItemRegionDto(
     string Name,
     string Description,
     double AreaKm2,
+    string Code,
     bool IsActive,
     string State,
     Guid Version

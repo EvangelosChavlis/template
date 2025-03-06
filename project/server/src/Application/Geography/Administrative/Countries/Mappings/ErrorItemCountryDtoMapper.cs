@@ -18,7 +18,7 @@ public class ErrorItemCountryDtoMapper
             Id: Guid.Empty,
             Name: string.Empty,
             Description: string.Empty,
-            IsoCode: string.Empty,
+            Code: string.Empty,
             Capital: string.Empty,
             Population: int.MinValue,
             AreaKm2: double.MinValue,

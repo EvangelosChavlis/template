@@ -26,6 +26,7 @@ public static class UpdateRegionMapper
         modelRegion.Name = dto.Name;
         modelRegion.Description = dto.Description;
         modelRegion.AreaKm2 = dto.AreaKm2;
+        modelRegion.Code = dto.Code;
         modelRegion.IsActive = modelRegion.IsActive;
         modelRegion.State = modelState;
         modelRegion.StateId = modelState.Id;

@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 // Source
-using server.src.Api.Controllers;
 using server.src.Application.Auth.Users.Interfaces;
 using server.src.Domain.Auth.Users.Dtos;
 using server.src.Domain.Common.Dtos;

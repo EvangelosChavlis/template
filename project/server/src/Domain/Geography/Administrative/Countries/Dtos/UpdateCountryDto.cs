@@ -7,7 +7,7 @@ namespace server.src.Domain.Geography.Administrative.Countries.Dtos;
 public record UpdateCountryDto(
     string Name,
     string Description,
-    string IsoCode,
+    string Code,
     string Capital,
     long Population,
     double AreaKm2,

@@ -11,9 +11,6 @@ public class WarningIndexes : IEntityTypeConfiguration<Warning>
 {
     public void Configure(EntityTypeBuilder<Warning> builder)
     {
-        builder.HasIndex(w => w.Id)
-            .IsUnique();
-
         builder.HasIndex(w 
             => new { 
                 w.Id, 

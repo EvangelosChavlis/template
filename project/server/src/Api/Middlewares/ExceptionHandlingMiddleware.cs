@@ -80,7 +80,17 @@ public class ExceptionHandlingMiddleware
 
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = code;
-            await context.Response.WriteAsync(result);
+            // await context.Response.WriteAsync(result);
+
+            try
+            {
+                await context.Response.WriteAsync(result);
+            }
+            catch (ObjectDisposedException ex)
+            {
+                // Log that the response stream was already disposed of
+                _logger.LogWarning("Failed to write to response stream: {Error}", ex.Message);
+            }
         }
         else
         {

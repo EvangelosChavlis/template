@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Geography.Administrative.Regions.Extensions;
 using server.src.Domain.Geography.Administrative.Regions.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -25,14 +26,18 @@ public class RegionConfiguration : IEntityTypeConfiguration<Region>
 
         builder.Property(r => r.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(RegionLength.NameLength);
 
         builder.Property(r => r.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(RegionLength.DescriptionLength);
 
         builder.Property(r => r.AreaKm2)
             .IsRequired();
+
+        builder.Property(r => r.Code)
+            .IsRequired()
+            .HasMaxLength(RegionLength.CodeLength);
 
         builder.Property(r => r.IsActive)
             .IsRequired();

@@ -15,12 +15,27 @@ if ([string]::IsNullOrWhiteSpace($MigrationName)) {
     exit 1
 }
 
-# Adding the migration
-Write-Host "Adding the migration '$MigrationName'..."
-dotnet ef migrations add $MigrationName -s server/src/Api/ -p server/src/Persistence/
+# dotnet ef database drop --context DataContext -s server/src/Api/ -p server/src/Persistence/ -f
+# dotnet ef database drop --context ArchiveContext -s server/src/Api/ -p server/src/Persistence/ -f
 
-# Updating the database
-Write-Host "Updating the database..."
-dotnet ef database update -s server/src/Api/ -p server/src/Persistence/
+# Define migration names correctly
+$MigrationData = "${MigrationName}_data"
+$MigrationArchive = "${MigrationName}_archive"
+
+# Adding the migration for DataContext (saved in Migrations/Data)
+Write-Host "Adding migration $MigrationData for DataContext..."
+dotnet ef migrations add "$MigrationData" --context DataContext -s server/src/Api/ -p server/src/Persistence/ --output-dir Migrations/Data
+
+# Adding the migration for ArchiveContext (saved in Migrations/Archive)
+Write-Host "Adding migration $MigrationArchive for ArchiveContext..."
+dotnet ef migrations add "$MigrationArchive" --context ArchiveContext -s server/src/Api/ -p server/src/Persistence/ --output-dir Migrations/Archive
+
+# Updating the database for DataContext
+Write-Host "Updating the database for DataContext..."
+dotnet ef database update --context DataContext -s server/src/Api/ -p server/src/Persistence/
+
+# Updating the database for ArchiveContext
+Write-Host "Updating the database for ArchiveContext..."
+dotnet ef database update --context ArchiveContext -s server/src/Api/ -p server/src/Persistence/
 
 Write-Host "Database setup completed successfully." -ForegroundColor Green

@@ -1,6 +1,7 @@
 // source
 using server.src.Application.Common.Validators;
 using server.src.Domain.Common.Models;
+using server.src.Domain.Geography.Administrative.States.Extensions;
 using server.src.Domain.Geography.Administrative.States.Models;
 
 namespace server.src.Application.Geography.Administrative.States.Validators;
@@ -14,8 +15,8 @@ public static class StateModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > 100)
-            errors.Add("Name must not exceed 100 characters.");
+        else if (model.Name.Length > StateLength.NameLength)
+            errors.Add($"Name must not exceed {StateLength.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add("Name contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -24,12 +25,22 @@ public static class StateModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > 250)
-            errors.Add("Description must not exceed 250 characters.");
+        else if (model.Description.Length > StateLength.DescriptionLength)
+            errors.Add($"Description must not exceed {StateLength.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add("Description contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
             errors.Add("Description contains non-printable characters.");
+
+        // Validation for Code
+        if (string.IsNullOrWhiteSpace(model.Code))
+            errors.Add("Code is required.");
+        else if (model.Code.Length > StateLength.CodeLength)
+            errors.Add($"Code must not exceed {StateLength.CodeLength} characters.");
+        else if (model.Code.ContainsInjectionCharacters())
+            errors.Add("Code contains invalid characters.");
+        else if (model.Code.ContainsNonPrintableCharacters())
+            errors.Add("Code contains non-printable characters.");
 
         // Validation for Population
         if (model.Population < 0)

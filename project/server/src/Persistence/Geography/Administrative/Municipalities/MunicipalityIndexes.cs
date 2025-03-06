@@ -11,9 +11,6 @@ public class MunicipalityIndexes : IEntityTypeConfiguration<Municipality>
 {
     public void Configure(EntityTypeBuilder<Municipality> builder)
     {
-        builder.HasIndex(m => m.Id)
-            .IsUnique();
-
         builder.HasIndex(m 
             => new { 
                 m.Id, 

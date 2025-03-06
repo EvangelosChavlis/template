@@ -21,7 +21,7 @@ public static class ItemCountryDtoMapper
         Id: model.Id,
         Name: model.Name,
         Description: model.Description,
-        IsoCode: model.IsoCode,
+        Code: model.Code,
         Capital: model.Capital,
         Population: model.Population,
         AreaKm2: model.AreaKm2,

@@ -11,9 +11,6 @@ public class UserLoginIndexes : IEntityTypeConfiguration<UserLogin>
 {
     public void Configure(EntityTypeBuilder<UserLogin> builder)
     {
-        builder.HasIndex(ul => ul.Id)
-            .IsUnique();
-
         builder.HasIndex(ul 
             => new { 
                 ul.Id, 

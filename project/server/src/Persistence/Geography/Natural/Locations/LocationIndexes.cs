@@ -12,7 +12,8 @@ public class LocationIndexes : IEntityTypeConfiguration<Location>
     public void Configure(EntityTypeBuilder<Location> builder)
     {
         builder.HasIndex(l => l.Id)
-            .IsUnique();
+            .IsUnique()
+            .HasDatabaseName($"IX_{nameof(Location)}_{nameof(Location.Id)}");
 
         builder.HasIndex(l 
             => new { 

@@ -19,6 +19,7 @@ public static class ItemContinentDtoMapper
         this Continent model) => new(
             Id: model.Id,
             Name: model.Name,
+            Code: model.Code,
             Description: model.Description,
             IsActive: model.IsActive,
             Version: model.Version

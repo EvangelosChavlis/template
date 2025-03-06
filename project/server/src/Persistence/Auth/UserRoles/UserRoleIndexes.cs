@@ -11,9 +11,6 @@ public class UserRoleIndexes : IEntityTypeConfiguration<UserRole>
 {
     public void Configure(EntityTypeBuilder<UserRole> builder)
     {
-        builder.HasIndex(ur => ur.Id)
-            .IsUnique();
-
         builder.HasIndex(ur 
             => new { 
                 ur.Id, 

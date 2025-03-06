@@ -8,6 +8,7 @@ public record CreateRegionDto(
     string Name,
     string Description,
     double AreaKm2,
+    string Code,
     bool IsActive,
     Guid StateId
 );
