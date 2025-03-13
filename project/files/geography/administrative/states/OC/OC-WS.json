@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Aiga-i-le-Tai",
+      "Code": "OC-WS-AT",
+      "Description": "Located on the western side of Samoa, Aiga-i-le-Tai is known for its beautiful beaches and traditional Samoan villages.",
+      "Capital": "Salelologa",
+      "Population": 20000,
+      "AreaKm2": 400
+    },
+    {
+      "Name": "Apia",
+      "Code": "OC-WS-AP",
+      "Description": "Apia is the capital city and cultural heart of Samoa, located on the island of Upolu. It s known for its historical sites and vibrant local culture.",
+      "Capital": "Apia",
+      "Population": 40000,
+      "AreaKm2": 150
+    },
+    {
+      "Name": "Vaa-o-Fonoti",
+      "Code": "OC-WS-VO",
+      "Description": "A region located on the southern coast of Samoa, Vaa-o-Fonoti is famous for its cultural heritage and scenic landscapes.",
+      "Capital": "Lotofaga",
+      "Population": 15000,
+      "AreaKm2": 350
+    },
+    {
+      "Name": "Tofa Toloa",
+      "Code": "OC-WS-TT",
+      "Description": "A small region of Samoa, known for its agricultural practices, rainforests, and rural way of life.",
+      "Capital": "Savaii",
+      "Population": 10000,
+      "AreaKm2": 500
+    },
+    {
+      "Name": "Savaii",
+      "Code": "OC-WS-SV",
+      "Description": "Savaii is the largest island in Samoa and is known for its volcanic landscapes, pristine beaches, and traditional villages.",
+      "Capital": "Salelologa",
+      "Population": 42000,
+      "AreaKm2": 1500
+    }
+]  

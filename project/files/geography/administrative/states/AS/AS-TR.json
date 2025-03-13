@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Marmara Region",
+      "Code": "AS-TR-MR",
+      "Description": "The most industrialized and developed region, home to Istanbul, Turkey s largest city, and significant economic and cultural hubs.",
+      "Capital": "Istanbul",
+      "Population": 25000000,
+      "AreaKm2": 67134
+    },
+    {
+      "Name": "Aegean Region",
+      "Code": "AS-TR-AE",
+      "Description": "Known for its beautiful coastline, historical sites, and Mediterranean climate, with major cities like Izmir and Aydın.",
+      "Capital": "Izmir",
+      "Population": 9000000,
+      "AreaKm2": 55518
+    },
+    {
+      "Name": "Mediterranean Region",
+      "Code": "AS-TR-ME",
+      "Description": "Famous for its warm climate, tourism hotspots like Antalya, and rich cultural heritage.",
+      "Capital": "Antalya",
+      "Population": 7000000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Black Sea Region",
+      "Code": "AS-TR-BS",
+      "Description": "Known for its lush greenery, hilly landscapes, and rainy climate, this region includes cities like Trabzon and Samsun.",
+      "Capital": "Trabzon",
+      "Population": 4500000,
+      "AreaKm2": 40000
+    },
+    {
+      "Name": "Central Anatolia Region",
+      "Code": "AS-TR-CA",
+      "Description": "Home to the capital, Ankara, and characterized by a dry, continental climate, with vast plains and historical significance.",
+      "Capital": "Ankara",
+      "Population": 8500000,
+      "AreaKm2": 112000
+    },
+    {
+      "Name": "Eastern Anatolia Region",
+      "Code": "AS-TR-EA",
+      "Description": "Known for its mountainous terrain, this region is rich in history and culture, including cities like Erzurum and Van.",
+      "Capital": "Erzurum",
+      "Population": 4000000,
+      "AreaKm2": 160000
+    },
+    {
+      "Name": "Southeastern Anatolia Region",
+      "Code": "AS-TR-SA",
+      "Description": "A region with a mix of Mediterranean and desert climates, known for its agriculture, including cities like Gaziantep and Diyarbakır.",
+      "Capital": "Gaziantep",
+      "Population": 8000000,
+      "AreaKm2": 75000
+    }
+]  

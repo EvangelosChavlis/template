@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Central Federal District",
+      "Code": "AS-RU-CFD",
+      "Description": "Located in the heart of Russia, including Moscow, the capital city, and surrounding areas.",
+      "Capital": "Moscow",
+      "Population": 39000000,
+      "AreaKm2": 657000
+    },
+    {
+      "Name": "Southern Federal District",
+      "Code": "AS-RU-SFD",
+      "Description": "A region known for its warm climate, beaches, and important cities like Rostov-on-Don.",
+      "Capital": "Rostov-on-Don",
+      "Population": 16000000,
+      "AreaKm2": 200000
+    },
+    {
+      "Name": "North Caucasian Federal District",
+      "Code": "AS-RU-NCFD",
+      "Description": "Known for its mountainous terrain and diverse ethnic groups, this region includes republics like Dagestan and Chechnya.",
+      "Capital": "Pyatigorsk",
+      "Population": 10000000,
+      "AreaKm2": 170000
+    },
+    {
+      "Name": "Volga Federal District",
+      "Code": "AS-RU-VFD",
+      "Description": "A large and economically important region along the Volga River, including cities like Nizhny Novgorod and Samara.",
+      "Capital": "Nizhny Novgorod",
+      "Population": 30000000,
+      "AreaKm2": 100000
+    },
+    {
+      "Name": "Ural Federal District",
+      "Code": "AS-RU-UFD",
+      "Description": "The region is home to the Ural Mountains and major industrial cities like Yekaterinburg.",
+      "Capital": "Yekaterinburg",
+      "Population": 13000000,
+      "AreaKm2": 176000
+    },
+    {
+      "Name": "Siberian Federal District",
+      "Code": "AS-RU-SID",
+      "Description": "A vast and sparsely populated region with major cities like Novosibirsk, known for its cold winters and large natural resources.",
+      "Capital": "Novosibirsk",
+      "Population": 18000000,
+      "AreaKm2": 3500000
+    },
+    {
+      "Name": "Far Eastern Federal District",
+      "Code": "AS-RU-FDFD",
+      "Description": "The largest Russian region, encompassing the Pacific coast, including the city of Vladivostok.",
+      "Capital": "Vladivostok",
+      "Population": 6000000,
+      "AreaKm2": 6100000
+    },
+    {
+      "Name": "Northwestern Federal District",
+      "Code": "AS-RU-NWFD",
+      "Description": "A region that includes the city of Saint Petersburg, Russia s second-largest city and a cultural hub.",
+      "Capital": "Saint Petersburg",
+      "Population": 14000000,
+      "AreaKm2": 170000
+    },
+    {
+      "Name": "Crimea Federal District",
+      "Code": "AS-RU-CRD",
+      "Description": "The Crimean Peninsula, annexed by Russia in 2014, known for its beaches, historical sites, and diverse population.",
+      "Capital": "Simferopol",
+      "Population": 2500000,
+      "AreaKm2": 27000
+    }
+]  

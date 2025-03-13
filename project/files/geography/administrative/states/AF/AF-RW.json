@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Kigali",
+      "Code": "AF-RW-KI",
+      "Description": "Kigali is the capital and largest city of Rwanda. It is known for its cleanliness, rapid development, and being the political and economic center of the country.",
+      "Capital": "Kigali",
+      "Population": 1300000,
+      "AreaKm2": 730
+    },
+    {
+      "Name": "Eastern Province",
+      "Code": "AF-RW-EP",
+      "Description": "The Eastern Province of Rwanda is known for its agricultural activities, especially in rice farming, and is one of the most densely populated regions.",
+      "Capital": "Rwamagana",
+      "Population": 2500000,
+      "AreaKm2": 7387
+    },
+    {
+      "Name": "Western Province",
+      "Code": "AF-RW-WP",
+      "Description": "Western Province is known for its beautiful landscapes, including mountains and lakes, such as Lake Kivu. It is also an agricultural hub for the country.",
+      "Capital": "Rubavu",
+      "Population": 2200000,
+      "AreaKm2": 4233
+    },
+    {
+      "Name": "Northern Province",
+      "Code": "AF-RW-NP",
+      "Description": "The Northern Province is known for its mountainous terrain and vibrant agriculture, including tea and coffee farming.",
+      "Capital": "Musanze",
+      "Population": 1300000,
+      "AreaKm2": 4752
+    },
+    {
+      "Name": "Southern Province",
+      "Code": "AF-RW-SP",
+      "Description": "Southern Province is famous for its cultural heritage, including historical sites, and its agricultural activity, particularly in the production of crops like maize and beans.",
+      "Capital": "Nyanza",
+      "Population": 1700000,
+      "AreaKm2": 7407
+    }
+]  

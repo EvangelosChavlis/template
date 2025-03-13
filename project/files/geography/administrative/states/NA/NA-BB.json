@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Christ Church",
+      "Code": "NA-BB-CC",
+      "Description": "A southern parish known for its beaches, nightlife, and the international airport.",
+      "Capital": "Oistins",
+      "Population": 54000,
+      "AreaKm2": 57
+    },
+    {
+      "Name": "Saint Andrew",
+      "Code": "NA-BB-SA",
+      "Description": "A rural parish known for its rugged terrain and scenic views of the east coast.",
+      "Capital": "Belleplaine",
+      "Population": 5200,
+      "AreaKm2": 36
+    },
+    {
+      "Name": "Saint George",
+      "Code": "NA-BB-SG",
+      "Description": "An inland parish with agricultural land and historic sites.",
+      "Capital": "The Glebe",
+      "Population": 19500,
+      "AreaKm2": 44
+    },
+    {
+      "Name": "Saint James",
+      "Code": "NA-BB-SJ",
+      "Description": "A western parish known for luxury resorts, historical sites, and beaches.",
+      "Capital": "Holetown",
+      "Population": 29000,
+      "AreaKm2": 31
+    },
+    {
+      "Name": "Saint John",
+      "Code": "NA-BB-SJN",
+      "Description": "A scenic eastern parish with dramatic cliffs and historic plantations.",
+      "Capital": "Four Roads",
+      "Population": 8900,
+      "AreaKm2": 34
+    },
+    {
+      "Name": "Saint Joseph",
+      "Code": "NA-BB-SJO",
+      "Description": "A small parish known for the Bathsheba surfing area and lush gardens.",
+      "Capital": "Bathsheba",
+      "Population": 6700,
+      "AreaKm2": 26
+    },
+    {
+      "Name": "Saint Lucy",
+      "Code": "NA-BB-SL",
+      "Description": "The northernmost parish, known for its caves, rugged coastline, and fishing villages.",
+      "Capital": "Speightstown",
+      "Population": 9100,
+      "AreaKm2": 36
+    },
+    {
+      "Name": "Saint Michael",
+      "Code": "NA-BB-SM",
+      "Description": "The most populated parish, home to the capital, Bridgetown, and key economic centers.",
+      "Capital": "Bridgetown",
+      "Population": 88700,
+      "AreaKm2": 39
+    },
+    {
+      "Name": "Saint Peter",
+      "Code": "NA-BB-SP",
+      "Description": "A historic parish with luxury resorts and an important trading history.",
+      "Capital": "Speightstown",
+      "Population": 11500,
+      "AreaKm2": 34
+    },
+    {
+      "Name": "Saint Philip",
+      "Code": "NA-BB-SH",
+      "Description": "The largest parish by area, known for its rural setting and beautiful beaches.",
+      "Capital": "Six Roads",
+      "Population": 30200,
+      "AreaKm2": 60
+    },
+    {
+      "Name": "Saint Thomas",
+      "Code": "NA-BB-ST",
+      "Description": "A central parish with rolling hills and the famous Harrison s Cave attraction.",
+      "Capital": "Welchman Hall",
+      "Population": 15300,
+      "AreaKm2": 34
+    }
+]  

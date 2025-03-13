@@ -1,0 +1,266 @@
+[
+    {
+      "Name": "Anhui",
+      "Code": "AS-CN-AH",
+      "Description": "A province in eastern China, known for its rich cultural heritage and historical significance.",
+      "Capital": "Hefei",
+      "Population": 62760000,
+      "AreaKm2": 139600
+    },
+    {
+      "Name": "Beijing",
+      "Code": "AS-CN-BJ",
+      "Description": "The capital city of China, known for its political, cultural, and historical importance.",
+      "Capital": "Beijing",
+      "Population": 21540000,
+      "AreaKm2": 16410
+    },
+    {
+      "Name": "Chongqing",
+      "Code": "AS-CN-CQ",
+      "Description": "A major municipality in southwestern China, known for its mountainous landscape and diverse culture.",
+      "Capital": "Chongqing",
+      "Population": 31500000,
+      "AreaKm2": 82403
+    },
+    {
+      "Name": "Fujian",
+      "Code": "AS-CN-FJ",
+      "Description": "A coastal province known for its economic significance, tea production, and cultural ties with Taiwan.",
+      "Capital": "Fuzhou",
+      "Population": 39410000,
+      "AreaKm2": 121400
+    },
+    {
+      "Name": "Gansu",
+      "Code": "AS-CN-GS",
+      "Description": "A province in north-central China known for its diverse geography and rich cultural history.",
+      "Capital": "Lanzhou",
+      "Population": 26200000,
+      "AreaKm2": 453700
+    },
+    {
+      "Name": "Guangdong",
+      "Code": "AS-CN-GD",
+      "Description": "A coastal province in southern China, known for its economic prosperity, particularly in manufacturing and trade.",
+      "Capital": "Guangzhou",
+      "Population": 113460000,
+      "AreaKm2": 179800
+    },
+    {
+      "Name": "Guangxi",
+      "Code": "AS-CN-GX",
+      "Description": "A region in southern China, known for its diverse ethnic population and picturesque landscapes, such as the Li River.",
+      "Capital": "Nanning",
+      "Population": 49000000,
+      "AreaKm2": 236700
+    },
+    {
+      "Name": "Guizhou",
+      "Code": "AS-CN-GZ",
+      "Description": "A province in southwestern China, known for its mountainous terrain and rich ethnic diversity.",
+      "Capital": "Guiyang",
+      "Population": 36000000,
+      "AreaKm2": 176100
+    },
+    {
+      "Name": "Hainan",
+      "Code": "AS-CN-HIN",
+      "Description": "An island province in southern China, known for its tropical climate, beaches, and tourism industry.",
+      "Capital": "Haikou",
+      "Population": 9200000,
+      "AreaKm2": 33900
+    },
+    {
+      "Name": "Hebei",
+      "Code": "AS-CN-HE",
+      "Description": "A province surrounding Beijing, known for its historical sites and heavy industry.",
+      "Capital": "Shijiazhuang",
+      "Population": 75560000,
+      "AreaKm2": 187700
+    },
+    {
+      "Name": "Heilongjiang",
+      "Code": "AS-CN-HL",
+      "Description": "A province in northeastern China, known for its cold winters, forests, and heavy industries.",
+      "Capital": "Harbin",
+      "Population": 38300000,
+      "AreaKm2": 454800
+    },
+    {
+      "Name": "Henan",
+      "Code": "AS-CN-HEN",
+      "Description": "A central province known for its historical importance as the cradle of Chinese civilization.",
+      "Capital": "Zhengzhou",
+      "Population": 96050000,
+      "AreaKm2": 167000
+    },
+    {
+      "Name": "Hong Kong",
+      "Code": "AS-CN-HK",
+      "Description": "A Special Administrative Region of China, known for its global financial center, vibrant culture, and status as a global trade hub.",
+      "Capital": "Hong Kong",
+      "Population": 7497000,
+      "AreaKm2": 1100
+    },
+    {
+      "Name": "Hubei",
+      "Code": "AS-CN-HB",
+      "Description": "A province in central China, known for its role as a transportation and industrial hub.",
+      "Capital": "Wuhan",
+      "Population": 59170000,
+      "AreaKm2": 185900
+    },
+    {
+      "Name": "Hunan",
+      "Code": "AS-CN-HUN",
+      "Description": "A province in central China, known for its agricultural production, particularly rice and fish.",
+      "Capital": "Changsha",
+      "Population": 68990000,
+      "AreaKm2": 211800
+    },
+    {
+      "Name": "Inner Mongolia",
+      "Code": "AS-CN-NM",
+      "Description": "An autonomous region in northern China, known for its vast steppes, deserts, and ethnic Mongol population.",
+      "Capital": "Hohhot",
+      "Population": 24720000,
+      "AreaKm2": 1183000
+    },
+    {
+      "Name": "Jiangsu",
+      "Code": "AS-CN-JS",
+      "Description": "A coastal province in eastern China, known for its strong economy, including manufacturing and trade.",
+      "Capital": "Nanjing",
+      "Population": 80500000,
+      "AreaKm2": 102600
+    },
+    {
+      "Name": "Jiangxi",
+      "Code": "AS-CN-JX",
+      "Description": "A province in southeastern China, known for its mountainous landscape and economic focus on ceramics and mining.",
+      "Capital": "Nanchang",
+      "Population": 46470000,
+      "AreaKm2": 166900
+    },
+    {
+      "Name": "Jilin",
+      "Code": "AS-CN-JL",
+      "Description": "A province in northeastern China, known for its cold winters, rich history, and economic focus on heavy industry.",
+      "Capital": "Changchun",
+      "Population": 27300000,
+      "AreaKm2": 187400
+    },
+    {
+      "Name": "Liaoning",
+      "Code": "AS-CN-LN",
+      "Description": "A province in northeastern China, known for its industrial base, including shipbuilding and steel production.",
+      "Capital": "Shenyang",
+      "Population": 43700000,
+      "AreaKm2": 145900
+    },
+    {
+      "Name": "Macau",
+      "Code": "AS-CN-MO",
+      "Description": "A Special Administrative Region of China, known for its tourism, casinos, and rich cultural heritage.",
+      "Capital": "Macau",
+      "Population": 680000,
+      "AreaKm2": 30.3
+    },
+    {
+      "Name": "Ningxia",
+      "Code": "AS-CN-NX",
+      "Description": "An autonomous region in north-central China, known for its Muslim Hui population and historical significance.",
+      "Capital": "Yinchuan",
+      "Population": 6900000,
+      "AreaKm2": 66400
+    },
+    {
+      "Name": "Qinghai",
+      "Code": "AS-CN-QH",
+      "Description": "A province in western China, known for its Tibetan culture, mountains, and the Qinghai Lake.",
+      "Capital": "Xining",
+      "Population": 6000000,
+      "AreaKm2": 721000
+    },
+    {
+      "Name": "Shaanxi",
+      "Code": "AS-CN-SAX",
+      "Description": "A province in north-central China, known for its historical significance as the starting point of the Silk Road.",
+      "Capital": "Xi'an",
+      "Population": 38000000,
+      "AreaKm2": 205800
+    },
+    {
+      "Name": "Shandong",
+      "Code": "AS-CN-SD",
+      "Description": "A province in eastern China, known for its agricultural output and industrial strength.",
+      "Capital": "Jinan",
+      "Population": 101500000,
+      "AreaKm2": 157100
+    },
+    {
+      "Name": "Shanghai",
+      "Code": "AS-CN-SH",
+      "Description": "A global financial hub, known for its modern skyline, commerce, and rich cultural heritage.",
+      "Capital": "Shanghai",
+      "Population": 24280000,
+      "AreaKm2": 6340
+    },
+    {
+      "Name": "Shanxi",
+      "Code": "AS-CN-SX",
+      "Description": "A province in northern China, known for its coal mining industry and historical landmarks.",
+      "Capital": "Taiyuan",
+      "Population": 37000000,
+      "AreaKm2": 156700
+    },
+    {
+      "Name": "Sichuan",
+      "Code": "AS-CN-SC",
+      "Description": "A province in southwestern China, known for its cuisine, tea production, and natural beauty.",
+      "Capital": "Chengdu",
+      "Population": 83000000,
+      "AreaKm2": 485000
+    },
+    {
+      "Name": "Tianjin",
+      "Code": "AS-CN-TJ",
+      "Description": "A major port city and municipality, known for its industrial output and economic significance.",
+      "Capital": "Tianjin",
+      "Population": 15620000,
+      "AreaKm2": 11500
+    },
+    {
+      "Name": "Tibet",
+      "Code": "AS-CN-TT",
+      "Description": "An autonomous region in the western part of China, known for its unique Tibetan culture, Buddhism, and the Himalayas.",
+      "Capital": "Lhasa",
+      "Population": 3200000,
+      "AreaKm2": 1200000
+    },
+    {
+      "Name": "Xinjiang",
+      "Code": "AS-CN-XJ",
+      "Description": "An autonomous region in western China, known for its vast deserts, mountain ranges, and ethnic diversity.",
+      "Capital": "Urumqi",
+      "Population": 24800000,
+      "AreaKm2": 1664900
+    },
+    {
+      "Name": "Yunnan",
+      "Code": "AS-CN-YN",
+      "Description": "A province in southwestern China, known for its ethnic diversity, tea production, and natural landscapes.",
+      "Capital": "Kunming",
+      "Population": 48300000,
+      "AreaKm2": 394000
+    },
+    {
+      "Name": "Zhejiang",
+      "Code": "AS-CN-ZJ",
+      "Description": "A coastal province in eastern China, known for its economy, particularly in textiles, electronics, and trade.",
+      "Capital": "Hangzhou",
+      "Population": 56450000,
+      "AreaKm2": 105500
+    }
+]  

@@ -104,9 +104,10 @@ public class CommonRepository : ICommonRepository
     }
 
 
-    public async Task<List<T>> GetResultPickerAsync<T>(
+    public async Task<List<TResult>> GetResultPickerAsync<T, TResult>(
         Expression<Func<T, bool>>[]? filterExpressions = default,
-        Expression<Func<T, T>>? projection = default, 
+        IncludeThenInclude<T>[]? includeThenIncludeExpressions = default,
+        Expression<Func<T, TResult>>? projection = default,
         CancellationToken token = default
     ) where T : class
     {
@@ -122,16 +123,38 @@ public class CommonRepository : ICommonRepository
             }
         }
 
+        // Apply includes and thenIncludes
+        if (includeThenIncludeExpressions is not null)
+        {
+            foreach (var includeThenInclude in includeThenIncludeExpressions)
+            {
+                var includableQuery = query.Include(includeThenInclude.Include);
+
+                if (includeThenInclude.ThenIncludes != null)
+                {
+                    foreach (var thenInclude in includeThenInclude.ThenIncludes)
+                    {
+                        includableQuery = includableQuery.ThenInclude(thenInclude);
+                    }
+                }
+
+                query = includableQuery;
+            }
+        }
+
         // Apply projection
         if (projection is not null)
-            query = query.Select(projection);
+        {
+            var projectedQuery = query.Select(projection);
+            return await projectedQuery.ToListAsync(token);
+        }
 
-        return await query.ToListAsync(token);
+        return await query.Cast<TResult>().ToListAsync(token);
     }
 
     public async Task<T?> GetResultByIdAsync<T>(
-        Expression<Func<T, bool>>[]? filterExpressions = default,
-        Expression<Func<T, object>>[]? includeExpressions = default,
+        Expression<Func<T, bool>>[]? filters = default,
+        Expression<Func<T, object>>[]? includes = default,
         Expression<Func<T, T>>? projection = default,
         CancellationToken token = default
     ) where T : class
@@ -139,9 +162,9 @@ public class CommonRepository : ICommonRepository
         IQueryable<T> query = _context.Set<T>();
 
         // Apply filtering
-        if (filterExpressions is not null)
+        if (filters is not null)
         {
-            foreach (var filterExpression in filterExpressions)
+            foreach (var filterExpression in filters)
             {
                 if (filterExpression is not null)
                     query = query.Where(filterExpression);
@@ -149,9 +172,9 @@ public class CommonRepository : ICommonRepository
         }
 
         // Apply includes
-        if (includeExpressions is not null)
+        if (includes is not null)
         {
-            foreach (var includeExpression in includeExpressions)
+            foreach (var includeExpression in includes)
                 query = query.Include(includeExpression);
         }
         
@@ -161,6 +184,43 @@ public class CommonRepository : ICommonRepository
 
         return await query
             .SingleOrDefaultAsync(token);
+    }
+
+    public async Task<TResult?> GetResultByIdAsync<T, TResult>(
+        Expression<Func<T, bool>>[]? filters = default,
+        Expression<Func<T, object>>[]? includes = default,
+        Expression<Func<T, TResult>>? projection = default,
+        CancellationToken token = default
+    ) where T : class
+    {
+        IQueryable<T> query = _context.Set<T>();
+
+        // Apply filtering
+        if (filters is not null)
+        {
+            foreach (var filterExpression in filters)
+            {
+                if (filterExpression is not null)
+                    query = query.Where(filterExpression);
+            }
+        }
+
+        // Apply includes
+        if (includes is not null)
+        {
+            foreach (var includeExpression in includes)
+                query = query.Include(includeExpression);
+        }
+
+        // Apply projection
+        if (projection is not null)
+        {
+            var projectedQuery = query.Select(projection);
+            return await projectedQuery.Cast<TResult>().SingleOrDefaultAsync(token);
+        }
+
+        return await query.Cast<TResult>().SingleOrDefaultAsync(token);
+        
     }
 
 
@@ -184,15 +244,15 @@ public class CommonRepository : ICommonRepository
     }
 
     public async Task<bool> AnyExistsAsync<T>(
-        Expression<Func<T, bool>>[] filterExpressions,
+        Expression<Func<T, bool>>[]? filters = default,
         CancellationToken token = default
     ) where T : class
     {
         IQueryable<T> query = _context.Set<T>();
 
-        if (filterExpressions is not null)
+        if (filters is not null)
         {
-            foreach (var filterExpression in filterExpressions)
+            foreach (var filterExpression in filters)
             {
                 if (filterExpression is not null)
                     query = query.Where(filterExpression);

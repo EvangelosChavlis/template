@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Eastern Macedonia",
+      "Code": "EU-GR-EMT-EM",
+      "Description": "A region known for its mountainous terrain, rich history, and proximity to the border with Bulgaria.",
+      "Capital": "Kavala",
+      "Population": 250000,
+      "AreaKm2": 6000.00
+    },
+    {
+      "Name": "Western Macedonia",
+      "Code": "EU-GR-EMT-WM",
+      "Description": "A region known for its lakes, forests, and its proximity to the Pindus mountains.",
+      "Capital": "Grevena",
+      "Population": 130000,
+      "AreaKm2": 4000.00
+    },
+    {
+      "Name": "Thrace",
+      "Code": "EU-GR-EMT-THR",
+      "Description": "A region located in the northeastern part of Greece, known for its cultural heritage and historical significance.",
+      "Capital": "Komotini",
+      "Population": 220000,
+      "AreaKm2": 4000.00
+    }
+]

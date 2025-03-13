@@ -1,0 +1,58 @@
+[
+    {
+        "Name": "Pallini",
+        "Description": "The capital of East Attica, a town surrounded by green landscapes and close to the coast.",
+        "AreaKm2": 56.0,
+        "Population": 70000,
+        "Code": "EU-GR-AC-EA-PA"
+    },
+    {
+        "Name": "Paiania",
+        "Description": "A municipality in East Attica, known for its vineyards, suburban character, and cultural sites.",
+        "AreaKm2": 53.2,
+        "Population": 27000,
+        "Code": "EU-GR-AC-EA-PAI"
+    },
+    {
+        "Name": "Markopoulo",
+        "Description": "A town known for its proximity to the Eleftherios Venizelos Airport and its agricultural landscape.",
+        "AreaKm2": 97.4,
+        "Population": 30000,
+        "Code": "EU-GR-AC-EA-MA"
+    },
+    {
+        "Name": "Rafina-Pikermi",
+        "Description": "A coastal municipality, famous for its beautiful beaches and small-town charm.",
+        "AreaKm2": 25.5,
+        "Population": 50000,
+        "Code": "EU-GR-AC-EA-RP"
+    },
+    {
+        "Name": "Spata-Artemida",
+        "Description": "A region that includes Spata, known for its proximity to Athens International Airport, and the coastal area of Artemida.",
+        "AreaKm2": 132.0,
+        "Population": 25000,
+        "Code": "EU-GR-AC-EA-SA"
+    },
+    {
+        "Name": "Kalyvia",
+        "Description": "A town with a rural setting, popular for its outdoor spaces and proximity to the town of Markopoulo.",
+        "AreaKm2": 21.0,
+        "Population": 17000,
+        "Code": "EU-GR-AC-EA-KA"
+    },
+    {
+        "Name": "Lavreotiki",
+        "Description": "A coastal municipality known for the ancient Temple of Poseidon and its beautiful beaches.",
+        "AreaKm2": 211.0,
+        "Population": 20000,
+        "Code": "EU-GR-AC-EA-LA"
+    },
+    {
+        "Name": "Gerakas",
+        "Description": "A suburban area with a mix of residential zones, shopping centers, and green spaces.",
+        "AreaKm2": 10.0,
+        "Population": 35000,
+        "Code": "EU-GR-AC-EA-GE"
+    }
+]

@@ -1,0 +1,91 @@
+[
+    {
+      "Name": "Bujumbura Mairie",
+      "Code": "AF-BI-BM",
+      "Description": "The capital province of Burundi, Bujumbura Mairie is the largest city and the country s political and economic center.",
+      "Capital": "Bujumbura",
+      "Population": 350000,
+      "AreaKm2": 500
+    },
+    {
+      "Name": "Bubanza",
+      "Code": "AF-BI-BZ",
+      "Description": "Located in the western part of Burundi, Bubanza is known for its agricultural production, particularly coffee and bananas.",
+      "Capital": "Bubanza",
+      "Population": 500000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Bururi",
+      "Code": "AF-BI-BR",
+      "Description": "Situated in the southern part of Burundi, Bururi is known for its rich agricultural activities and beautiful landscapes.",
+      "Capital": "Bururi",
+      "Population": 600000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Cankuzo",
+      "Code": "AF-BI-CZ",
+      "Description": "A province in the eastern part of Burundi, Cankuzo is known for its mountainous terrain and agricultural production.",
+      "Capital": "Cankuzo",
+      "Population": 400000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Gitega",
+      "Code": "AF-BI-GT",
+      "Description": "Gitega is located in the central part of Burundi and is an important cultural and historical region of the country.",
+      "Capital": "Gitega",
+      "Population": 400000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Kayanza",
+      "Code": "AF-BI-KA",
+      "Description": "Located in the northern part of Burundi, Kayanza is a significant agricultural region known for its coffee plantations.",
+      "Capital": "Kayanza",
+      "Population": 600000,
+      "AreaKm2": 1600
+    },
+    {
+      "Name": "Kirundo",
+      "Code": "AF-BI-KI",
+      "Description": "Kirundo is located in the northernmost part of Burundi and is an important agricultural region known for its production of maize, rice, and cassava.",
+      "Capital": "Kirundo",
+      "Population": 600000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Makamba",
+      "Code": "AF-BI-MK",
+      "Description": "Makamba is situated in the southern part of Burundi, close to the border with Tanzania. It is known for its agricultural activities, including the production of rice and cassava.",
+      "Capital": "Makamba",
+      "Population": 450000,
+      "AreaKm2": 2300
+    },
+    {
+      "Name": "Muramvya",
+      "Code": "AF-BI-MV",
+      "Description": "Muramvya, located in the central part of the country, is an agricultural region with fertile soil and a focus on crop farming.",
+      "Capital": "Muramvya",
+      "Population": 300000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Mwanza",
+      "Code": "AF-BI-MZ",
+      "Description": "Mwanza, located in the southeastern part of Burundi, is known for its fertile lands and agricultural activities, including livestock farming.",
+      "Capital": "Mwanza",
+      "Population": 400000,
+      "AreaKm2": 1800
+    },
+    {
+      "Name": "Ruyigi",
+      "Code": "AF-BI-RY",
+      "Description": "Ruyigi is located in the eastern part of Burundi and is known for its fertile soil and agricultural production, including crops like cassava and beans.",
+      "Capital": "Ruyigi",
+      "Population": 500000,
+      "AreaKm2": 2000
+    }
+]
+  

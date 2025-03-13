@@ -23,25 +23,60 @@ public class DataCommands : IDataCommands
             .Execute<SeedDataCommand, Response<string>>(command, token);
     }
 
-    public async Task<Response<string>> SeedContinentsAsync(CancellationToken token = default)
+    public async Task<Response<string>> SeedContinentsAsync(string basePath, 
+        CancellationToken token = default)
     {
-        var command = new SeedContinentsCommand();
+        var command = new SeedContinentsCommand(basePath);
         return await _requestExecutor
             .Execute<SeedContinentsCommand, Response<string>>(command, token);
     }
 
-    public async Task<Response<string>> SeedCountriesAsync(CancellationToken token = default)
+    public async Task<Response<string>> SeedCountriesAsync(string basePath,
+        CancellationToken token = default)
     {
-        var command = new SeedCountriesCommand();
+        var command = new SeedCountriesCommand(basePath);
         return await _requestExecutor
             .Execute<SeedCountriesCommand, Response<string>>(command, token);
     }
 
-    public async Task<Response<string>> SeedStatesAsync(CancellationToken token = default)
+    public async Task<Response<string>> SeedStatesAsync(string basePath, 
+        CancellationToken token = default)
     {
-        var command = new SeedStatesCommand();
+        var command = new SeedStatesCommand(basePath);
         return await _requestExecutor
             .Execute<SeedStatesCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedRegionsAsync(string basePath, 
+        CancellationToken token = default)
+    {
+        var command = new SeedRegionsCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedRegionsCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedMunicipalitiesAsync(string basePath,
+        CancellationToken token = default)
+    {
+        var command = new SeedMunicipalitiesCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedMunicipalitiesCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedDistrictsAsync(string basePath,
+        CancellationToken token = default)
+    {
+        var command = new SeedDistrictsCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedDistrictsCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedNeighborhoodAsync(string basePath,
+        CancellationToken token = default)
+    {
+        var command = new SeedNeighborhoodsCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedNeighborhoodsCommand, Response<string>>(command, token);
     }
 
     public async Task<Response<string>> ClearDataAsync(CancellationToken token = default)

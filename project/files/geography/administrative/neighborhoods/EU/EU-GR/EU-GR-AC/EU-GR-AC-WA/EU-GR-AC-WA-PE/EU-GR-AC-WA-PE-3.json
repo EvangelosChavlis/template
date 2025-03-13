@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Anthoupoli",
+        "Description": "A neighborhood in Peristeri known for its residential areas and proximity to green spaces.",
+        "Population": 15000,
+        "AreaKm2": 1.5,
+        "Zipcode": "12133",
+        "Code": "EU-GR-AC-WA-PE-3-AN"
+    },
+    {
+        "Name": "Lofos Axiomatikon",
+        "Description": "A neighborhood with military housing and a strong community presence.",
+        "Population": 12000,
+        "AreaKm2": 1.2,
+        "Zipcode": "12136",
+        "Code": "EU-GR-AC-WA-PE-3-LA"
+    },
+    {
+        "Name": "Nea Zoi",
+        "Description": "A developing neighborhood with modern infrastructure and public spaces.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "12137",
+        "Code": "EU-GR-AC-WA-PE-3-NZ"
+    },
+    {
+        "Name": "Tsallavouta",
+        "Description": "A historic neighborhood in Peristeri with a mix of residential and commercial areas.",
+        "Population": 8000,
+        "AreaKm2": 0.8,
+        "Zipcode": "12138",
+        "Code": "EU-GR-AC-WA-PE-3-TS"
+    }
+]

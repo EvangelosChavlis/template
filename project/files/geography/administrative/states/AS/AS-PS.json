@@ -1,0 +1,18 @@
+[
+    {
+      "Name": "West Bank",
+      "Code": "AS-PS-WB",
+      "Description": "A region located to the west of Jordan River, known for its historic sites, Palestinian cities, and its political importance in the Israeli-Palestinian conflict.",
+      "Capital": "Ramallah",
+      "Population": 3000000,
+      "AreaKm2": 5650
+    },
+    {
+      "Name": "Gaza Strip",
+      "Code": "AS-PS-GS",
+      "Description": "A coastal region on the Mediterranean, densely populated and home to Gaza City, known for its challenging political and humanitarian situation.",
+      "Capital": "Gaza City",
+      "Population": 2000000,
+      "AreaKm2": 365
+    }
+]  

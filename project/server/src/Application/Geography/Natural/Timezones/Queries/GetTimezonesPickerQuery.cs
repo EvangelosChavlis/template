@@ -27,7 +27,7 @@ public class GetTimezonesPickerHandler : IRequestHandler<GetTimezonesPickerQuery
     {
         // Searching Items
         var filters = new Expression<Func<Timezone, bool>>[] { t => t.IsActive };
-        var timezones = await _commonRepository.GetResultPickerAsync(filters, token: token);
+        var timezones = await _commonRepository.GetResultPickerAsync<Timezone, Timezone>(filters, token: token);
 
         // Mapping
         var dto = timezones.Select(w => w.PickerTimezoneDtoMapping()).ToList();

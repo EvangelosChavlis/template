@@ -1,0 +1,114 @@
+[
+    {
+        "Name": "Stockholm",
+        "Code": "EU-SE-AB",
+        "Description": "The capital region, known for its beautiful archipelago, historic sites, and being the political and cultural center of Sweden.",
+        "Capital": "Stockholm",
+        "Population": 2300000,
+        "AreaKm2": 640
+    },
+    {
+        "Name": "Vastra Gotaland",
+        "Code": "EU-SE-VG",
+        "Description": "Located on the western coast, known for Gothenburg, Sweden s second-largest city, and its maritime culture.",
+        "Capital": "Gothenburg",
+        "Population": 1700000,
+        "AreaKm2": 24963
+    },
+    {
+        "Name": "Skane",
+        "Code": "EU-SE-M",
+        "Description": "The southernmost region of Sweden, known for its coastal cities, rural landscapes, and Malmö, one of Sweden s largest cities.",
+        "Capital": "Malmo",
+        "Population": 1300000,
+        "AreaKm2": 11812
+    },
+    {
+        "Name": "Uppsala",
+        "Code": "EU-SE-UC",
+        "Description": "Located just north of Stockholm, known for Uppsala University, the oldest university in Sweden, and its historical significance.",
+        "Capital": "Uppsala",
+        "Population": 380000,
+        "AreaKm2": 6981
+    },
+    {
+        "Name": "Ostergotland",
+        "Code": "EU-SE-E",
+        "Description": "Located in central Sweden, known for its lush forests, lakes, and the historical city of Linköping.",
+        "Capital": "Linkoping",
+        "Population": 450000,
+        "AreaKm2": 9816
+    },
+    {
+        "Name": "Jonkoping",
+        "Code": "EU-SE-F",
+        "Description": "Situated in southern Sweden, known for its scenic lakes, particularly Lake Vättern, and its central role in Swedish commerce.",
+        "Capital": "Jonkoping",
+        "Population": 360000,
+        "AreaKm2": 11616
+    },
+    {
+        "Name": "Kronoberg",
+        "Code": "EU-SE-G",
+        "Description": "Located in the southern part of Sweden, known for its forests, lakes, and peaceful rural landscapes.",
+        "Capital": "Vaxjo",
+        "Population": 200000,
+        "AreaKm2": 5595
+    },
+    {
+        "Name": "Kalmar",
+        "Code": "EU-SE-H",
+        "Description": "Located on the southeastern coast, known for its historical landmarks, including Kalmar Castle, and its natural beauty.",
+        "Capital": "Kalmar",
+        "Population": 240000,
+        "AreaKm2": 11400
+    },
+    {
+        "Name": "Varmland",
+        "Code": "EU-SE-T",
+        "Description": "Located in central Sweden, known for its beautiful forests, lakes, and outdoor recreational activities.",
+        "Capital": "Karlstad",
+        "Population": 280000,
+        "AreaKm2": 17729
+    },
+    {
+        "Name": "Dalarna",
+        "Code": "EU-SE-W",
+        "Description": "Known for its beautiful natural scenery, the region is also famous for traditional Swedish culture, including the Dala horse.",
+        "Capital": "Falun",
+        "Population": 290000,
+        "AreaKm2": 28949
+    },
+    {
+        "Name": "Gavleborg",
+        "Code": "EU-SE-X",
+        "Description": "Located in central Sweden, known for its forested landscapes, Gävle city, and historic sites.",
+        "Capital": "Gävle",
+        "Population": 300000,
+        "AreaKm2": 18219
+    },
+    {
+        "Name": "Vasternorrland",
+        "Code": "EU-SE-Y",
+        "Description": "A northern region known for its wilderness, the High Coast, and its rich industrial history.",
+        "Capital": "Harnosand",
+        "Population": 250000,
+        "AreaKm2": 21793
+    },
+    {
+        "Name": "Jamtland",
+        "Code": "EU-SE-Z",
+        "Description": "Located in the central part of Sweden, famous for its mountain landscapes, outdoor activities, and winter sports.",
+        "Capital": "Östersund",
+        "Population": 130000,
+        "AreaKm2": 49718
+    },
+    {
+        "Name": "Norrbotten",
+        "Code": "EU-SE-BD",
+        "Description": "The northernmost region, known for its Arctic climate, vast wilderness, and the city of Luleå.",
+        "Capital": "Luleå",
+        "Population": 250000,
+        "AreaKm2": 98000
+    }
+]

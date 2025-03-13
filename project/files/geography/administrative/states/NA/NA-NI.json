@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Managua",
+      "Code": "NA-NI-MN",
+      "Description": "The capital region, known for being the political, cultural, and economic center of Nicaragua.",
+      "Capital": "Managua",
+      "Population": 1200000,
+      "AreaKm2": 544
+    },
+    {
+      "Name": "Chinandega",
+      "Code": "NA-NI-CH",
+      "Description": "A region in the northwest known for its agricultural production, including sugarcane and bananas.",
+      "Capital": "Chinandega",
+      "Population": 400000,
+      "AreaKm2": 5090
+    },
+    {
+      "Name": "León",
+      "Code": "NA-NI-LE",
+      "Description": "Known for its colonial architecture, historical significance, and the city of León, a UNESCO World Heritage site.",
+      "Capital": "León",
+      "Population": 500000,
+      "AreaKm2": 8900
+    },
+    {
+      "Name": "Masaya",
+      "Code": "NA-NI-MS",
+      "Description": "Known for its cultural traditions, artisan markets, and the Masaya Volcano National Park.",
+      "Capital": "Masaya",
+      "Population": 200000,
+      "AreaKm2": 1337
+    },
+    {
+      "Name": "Rivas",
+      "Code": "NA-NI-RI",
+      "Description": "A coastal region known for its tourism, beaches like San Juan del Sur, and the beautiful Lake Cocibolca.",
+      "Capital": "Rivas",
+      "Population": 300000,
+      "AreaKm2": 3640
+    },
+    {
+      "Name": "Estelí",
+      "Code": "NA-NI-ES",
+      "Description": "Known for its tobacco production, including world-famous cigars, and its cool, mountainous climate.",
+      "Capital": "Estelí",
+      "Population": 130000,
+      "AreaKm2": 2100
+    },
+    {
+      "Name": "Nueva Segovia",
+      "Code": "NA-NI-NS",
+      "Description": "A northern region known for its coffee plantations, mountainous terrain, and proximity to the Honduran border.",
+      "Capital": "Jinotega",
+      "Population": 220000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Matagalpa",
+      "Code": "NA-NI-MA",
+      "Description": "Known for its coffee production, cool weather, and beautiful mountainous landscapes.",
+      "Capital": "Matagalpa",
+      "Population": 250000,
+      "AreaKm2": 3500
+    },
+    {
+      "Name": "Chontales",
+      "Code": "NA-NI-CHT",
+      "Description": "Known for its cattle ranching and agriculture, particularly its production of rice and sugarcane.",
+      "Capital": "Juigalpa",
+      "Population": 150000,
+      "AreaKm2": 5800
+    },
+    {
+      "Name": "Boaco",
+      "Code": "NA-NI-BO",
+      "Description": "A region in central Nicaragua known for its agricultural activities and the city of Boaco.",
+      "Capital": "Boaco",
+      "Population": 150000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Rio San Juan",
+      "Code": "NA-NI-RSJ",
+      "Description": "Known for its rivers, natural reserves, and the San Juan River, which serves as a major waterway between Nicaragua and Costa Rica.",
+      "Capital": "San Carlos",
+      "Population": 100000,
+      "AreaKm2": 2600
+    }
+]  

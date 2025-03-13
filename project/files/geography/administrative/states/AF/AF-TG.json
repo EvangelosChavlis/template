@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Lome",
+      "Code": "AF-TG-LC",
+      "Description": "Lome is the capital and largest city of Togo, located along the Gulf of Guinea. It is the country s economic, cultural, and administrative center.",
+      "Capital": "Lome",
+      "Population": 837000,
+      "AreaKm2": 90
+    },
+    {
+      "Name": "Sokode",
+      "Code": "AF-TG-SK",
+      "Description": "Sokode is the second-largest city in Togo, located in the northern part of the country. It is an important center for trade and cultural exchange.",
+      "Capital": "Sokode",
+      "Population": 120000,
+      "AreaKm2": 45
+    },
+    {
+      "Name": "Kara",
+      "Code": "AF-TG-KA",
+      "Description": "Kara is a city in the northern part of Togo, known for its historical significance and agricultural activities. It serves as a commercial hub for the region.",
+      "Capital": "Kara",
+      "Population": 100000,
+      "AreaKm2": 35
+    }
+]  

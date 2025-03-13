@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Geography.Administrative.Municipalities.Extensions;
 using server.src.Domain.Geography.Administrative.Municipalities.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -25,14 +26,21 @@ public class MunicipalityConfiguration : IEntityTypeConfiguration<Municipality>
 
         builder.Property(m => m.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(MunicipalityLength.NameLength);
 
         builder.Property(m => m.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(MunicipalityLength.DescriptionLength);
 
         builder.Property(m => m.Population)
             .IsRequired();
+
+        builder.Property(m => m.AreaKm2)
+            .IsRequired();
+
+        builder.Property(r => r.Code)
+            .IsRequired()
+            .HasMaxLength(MunicipalityLength.CodeLength);
 
         builder.Property(m => m.IsActive)
             .IsRequired();

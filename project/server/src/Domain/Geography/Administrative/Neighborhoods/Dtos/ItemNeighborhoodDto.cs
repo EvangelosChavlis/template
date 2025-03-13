@@ -8,7 +8,9 @@ public record ItemNeighborhoodDto(
     string Name,
     string Description,
     long Population,
+    double AreaKm2,
     string Zipcode,
+    string Code,
     bool IsActive,
     string District,
     Guid Version

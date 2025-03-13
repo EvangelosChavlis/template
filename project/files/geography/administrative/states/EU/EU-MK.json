@@ -1,0 +1,58 @@
+[
+  {
+    "Name": "Vardar",
+    "Code": "EU-MK-VR",
+    "Description": "Vardar is a region in the central part of North Macedonia, known for its wine production, historical sites, and the Vardar River.",
+    "Capital": "Skopje",
+    "Population": 700000,
+    "AreaKm2": 3000
+  },
+  {
+    "Name": "Eastern",
+    "Code": "EU-MK-EA",
+    "Description": "Eastern is a region of North Macedonia known for its fertile plains, natural beauty, and small towns.",
+    "Capital": "Štip",
+    "Population": 400000,
+    "AreaKm2": 2300
+  },
+  {
+    "Name": "Southwestern",
+    "Code": "EU-MK-SW",
+    "Description": "Southwestern is a region located near Lake Ohrid, with a rich cultural heritage and beautiful landscapes.",
+    "Capital": "Bitola",
+    "Population": 350000,
+    "AreaKm2": 2000
+  },
+  {
+    "Name": "Pelagonia",
+    "Code": "EU-MK-PE",
+    "Description": "Pelagonia is a fertile region in the southwestern part of North Macedonia, known for its agriculture, especially for growing grains and vegetables.",
+    "Capital": "Prilep",
+    "Population": 200000,
+    "AreaKm2": 1300
+  },
+  {
+    "Name": "Polog",
+    "Code": "EU-MK-PL",
+    "Description": "Polog is a region in the northwestern part of North Macedonia, known for its mix of ethnic groups and proximity to the border with Kosovo and Albania.",
+    "Capital": "Tetovo",
+    "Population": 350000,
+    "AreaKm2": 2100
+  },
+  {
+    "Name": "Northeastern",
+    "Code": "EU-MK-NE",
+    "Description": "Northeastern is a region in North Macedonia, known for its natural landscapes, forests, and rural areas.",
+    "Capital": "Kumanovo",
+    "Population": 250000,
+    "AreaKm2": 2700
+  },
+  {
+    "Name": "Western",
+    "Code": "EU-MK-WE",
+    "Description": "Western is a region known for its mountainous terrain, natural parks, and historical monuments.",
+    "Capital": "Struga",
+    "Population": 300000,
+    "AreaKm2": 1800
+  }
+]

@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Larissa",
+      "Code": "EU-GR-TH-LAR",
+      "Description": "The central and largest region of Thessaly, known for its plains and agricultural production.",
+      "Capital": "Larissa",
+      "Population": 200000,
+      "AreaKm2": 5400.00
+    },
+    {
+      "Name": "Trikala",
+      "Code": "EU-GR-TH-TRI",
+      "Description": "A region known for its historical sites, including Meteora, and its agricultural activity.",
+      "Capital": "Trikala",
+      "Population": 150000,
+      "AreaKm2": 2850.00
+    },
+    {
+      "Name": "Karditsa",
+      "Code": "EU-GR-TH-KAR",
+      "Description": "A region with fertile plains and mountains, often called the agricultural heart of Thessaly.",
+      "Capital": "Karditsa",
+      "Population": 130000,
+      "AreaKm2": 1850.00
+    },
+    {
+      "Name": "Magnesia",
+      "Code": "EU-GR-TH-MAG",
+      "Description": "A coastal region, known for the city of Volos, Mount Pelion, and beautiful beaches.",
+      "Capital": "Volos",
+      "Population": 250000,
+      "AreaKm2": 1500.00
+    },
+    {
+      "Name": "Skiathos",
+      "Code": "EU-GR-TH-SKI",
+      "Description": "A famous island in the northern part of the Aegean Sea, known for its beaches and nightlife.",
+      "Capital": "Skiathos",
+      "Population": 13000,
+      "AreaKm2": 48.00
+    }
+]

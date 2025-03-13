@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Brokopondo",
+      "Code": "SA-SR-BR",
+      "Description": "A region known for its dense forests and natural resources, including gold and timber.",
+      "Capital": "Brokopondo",
+      "Population": 45000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Commewijne",
+      "Code": "SA-SR-CM",
+      "Description": "A coastal region known for its agricultural production, including rice, bananas, and cocoa.",
+      "Capital": "Nieuw Amsterdam",
+      "Population": 70000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Marowijne",
+      "Code": "SA-SR-MW",
+      "Description": "A region with a mix of tropical forests and rivers, located in the eastern part of Suriname, bordering French Guiana.",
+      "Capital": "Moengo",
+      "Population": 35000,
+      "AreaKm2": 14500
+    },
+    {
+      "Name": "Nickerie",
+      "Code": "SA-SR-NI",
+      "Description": "The westernmost region of Suriname, known for its rice production, fishing, and proximity to the Atlantic Ocean.",
+      "Capital": "Nieuw Nickerie",
+      "Population": 85000,
+      "AreaKm2": 3800
+    },
+    {
+      "Name": "Paramaribo",
+      "Code": "SA-SR-PM",
+      "Description": "The capital region of Suriname, which includes the capital city Paramaribo, known for its colonial architecture and vibrant culture.",
+      "Capital": "Paramaribo",
+      "Population": 250000,
+      "AreaKm2": 182
+    },
+    {
+      "Name": "Saramacca",
+      "Code": "SA-SR-SA",
+      "Description": "A central region known for its agriculture, especially rice and fruit production.",
+      "Capital": "Uitvlugt",
+      "Population": 100000,
+      "AreaKm2": 6500
+    },
+    {
+      "Name": "Sipaliwini",
+      "Code": "SA-SR-SI",
+      "Description": "A vast, sparsely populated region known for its rainforests, wildlife, and natural resources, including gold.",
+      "Capital": "Albina",
+      "Population": 35000,
+      "AreaKm2": 160000
+    },
+    {
+      "Name": "Wanica",
+      "Code": "SA-SR-WA",
+      "Description": "A region that encompasses Paramaribo s surrounding areas, known for urban and suburban development.",
+      "Capital": "Lelydorp",
+      "Population": 115000,
+      "AreaKm2": 2600
+    }
+]  

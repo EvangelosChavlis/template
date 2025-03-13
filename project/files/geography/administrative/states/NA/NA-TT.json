@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Port of Spain",
+      "Code": "NA-TT-PS",
+      "Description": "The capital region, known for its vibrant cultural scene, bustling markets, and historical architecture.",
+      "Capital": "Port of Spain",
+      "Population": 370000,
+      "AreaKm2": 22
+    },
+    {
+      "Name": "San Fernando",
+      "Code": "NA-TT-SF",
+      "Description": "A key region in southern Trinidad, known for its industrial importance and lively waterfront areas.",
+      "Capital": "San Fernando",
+      "Population": 120000,
+      "AreaKm2": 55
+    },
+    {
+      "Name": "Tobago",
+      "Code": "NA-TT-TO",
+      "Description": "An island region known for its tropical beaches, diving sites, and rich natural beauty.",
+      "Capital": "Scarborough",
+      "Population": 60000,
+      "AreaKm2": 300
+    },
+    {
+      "Name": "Central Trinidad",
+      "Code": "NA-TT-CT",
+      "Description": "A region with a mix of agricultural and industrial areas, featuring the town of Chaguanas.",
+      "Capital": "Chaguanas",
+      "Population": 200000,
+      "AreaKm2": 120
+    },
+    {
+      "Name": "North Eastern Trinidad",
+      "Code": "NA-TT-NET",
+      "Description": "A region known for its natural landscapes, including beaches and mountain ranges.",
+      "Capital": "Arima",
+      "Population": 95000,
+      "AreaKm2": 115
+    }
+]  

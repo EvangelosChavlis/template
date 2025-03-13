@@ -1,0 +1,98 @@
+[
+    {
+      "Name": "Riyadh",
+      "Code": "AS-SA-RY",
+      "Description": "The capital and largest city of Saudi Arabia, located in the center of the country, known for its modern architecture, shopping, and cultural landmarks.",
+      "Capital": "Riyadh",
+      "Population": 7000000,
+      "AreaKm2": 1750
+    },
+    {
+      "Name": "Mecca",
+      "Code": "AS-SA-MK",
+      "Description": "A holy city in Islam, located in western Saudi Arabia, home to the Masjid al-Haram and the Kaaba, the most sacred site in Islam.",
+      "Capital": "Mecca",
+      "Population": 2000000,
+      "AreaKm2": 850
+    },
+    {
+      "Name": "Medina",
+      "Code": "AS-SA-MD",
+      "Description": "The second holiest city in Islam, located in western Saudi Arabia, home to the Prophet s Mosque, the burial place of Prophet Muhammad.",
+      "Capital": "Medina",
+      "Population": 1500000,
+      "AreaKm2": 590
+    },
+    {
+      "Name": "Eastern Province",
+      "Code": "AS-SA-EP",
+      "Description": "A major region in the eastern part of Saudi Arabia, known for its oil reserves, industrial areas, and the city of Dammam.",
+      "Capital": "Dammam",
+      "Population": 4500000,
+      "AreaKm2": 672
+    },
+    {
+      "Name": "Jizan",
+      "Code": "AS-SA-JZ",
+      "Description": "A coastal region located in the southwest of Saudi Arabia, known for its agriculture, beaches, and proximity to the Red Sea.",
+      "Capital": "Jizan",
+      "Population": 1500000,
+      "AreaKm2": 1190
+    },
+    {
+      "Name": "Asir",
+      "Code": "AS-SA-AS",
+      "Description": "A mountainous region in the southwestern part of Saudi Arabia, known for its cooler climate, forests, and the city of Abha.",
+      "Capital": "Abha",
+      "Population": 2700000,
+      "AreaKm2": 80000
+    },
+    {
+      "Name": "Tabuk",
+      "Code": "AS-SA-TB",
+      "Description": "A region in the northwestern part of Saudi Arabia, known for its archaeological sites and proximity to the Red Sea coast.",
+      "Capital": "Tabuk",
+      "Population": 850000,
+      "AreaKm2": 77000
+    },
+    {
+      "Name": "Hail",
+      "Code": "AS-SA-HL",
+      "Description": "A region located in the north-central part of Saudi Arabia, known for its vast desert landscapes and historical landmarks.",
+      "Capital": "Hail",
+      "Population": 500000,
+      "AreaKm2": 120000
+    },
+    {
+      "Name": "Najran",
+      "Code": "AS-SA-NJ",
+      "Description": "A region located in the southern part of Saudi Arabia, near the border with Yemen, known for its agricultural production and historical sites.",
+      "Capital": "Najran",
+      "Population": 500000,
+      "AreaKm2": 149000
+    },
+    {
+      "Name": "Northern Borders",
+      "Code": "AS-SA-NB",
+      "Description": "A region located in the northernmost part of Saudi Arabia, sharing borders with Jordan, Iraq, and Kuwait, known for its desert landscapes and strategic location.",
+      "Capital": "Arar",
+      "Population": 350000,
+      "AreaKm2": 92000
+    },
+    {
+      "Name": "Qassim",
+      "Code": "AS-SA-QS",
+      "Description": "A region located in the central part of Saudi Arabia, known for its agriculture, particularly date farming, and the city of Buraydah.",
+      "Capital": "Buraydah",
+      "Population": 1500000,
+      "AreaKm2": 50000
+    },
+    {
+      "Name": "Baha",
+      "Code": "AS-SA-BA",
+      "Description": "A region in the southwestern part of Saudi Arabia, known for its mountainous terrain, cooler climate, and historical sites.",
+      "Capital": "Al Baha",
+      "Population": 450000,
+      "AreaKm2": 12000
+    }
+]  

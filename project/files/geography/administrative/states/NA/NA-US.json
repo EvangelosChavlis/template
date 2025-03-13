@@ -1,0 +1,402 @@
+[
+  {
+    "Name": "Alabama",
+    "Code": "NA-US-AL",
+    "Description": "Known for its southern hospitality, rich history, and natural beauty, including the Appalachian Mountains.",
+    "Capital": "Montgomery",
+    "Population": 4903185,
+    "AreaKm2": 52420
+  },
+  {
+    "Name": "Alaska",
+    "Code": "NA-US-AK",
+    "Description": "The largest state, known for its stunning landscapes, glaciers, wildlife, and remote wilderness.",
+    "Capital": "Juneau",
+    "Population": 731391,
+    "AreaKm2": 1717856
+  },
+  {
+    "Name": "Arizona",
+    "Code": "NA-US-AZ",
+    "Description": "Famous for its desert landscapes, the Grand Canyon, and unique Native American culture.",
+    "Capital": "Phoenix",
+    "Population": 7278717,
+    "AreaKm2": 295234
+  },
+  {
+    "Name": "Arkansas",
+    "Code": "NA-US-AR",
+    "Description": "Known for its natural beauty, including mountains, forests, and hot springs.",
+    "Capital": "Little Rock",
+    "Population": 3017804,
+    "AreaKm2": 137732
+  },
+  {
+    "Name": "California",
+    "Code": "NA-US-CA",
+    "Description": "The most populous state, known for its diverse culture, landscapes, and major cities like Los Angeles and San Francisco.",
+    "Capital": "Sacramento",
+    "Population": 39512223,
+    "AreaKm2": 423970
+  },
+  {
+    "Name": "Colorado",
+    "Code": "NA-US-CO",
+    "Description": "Known for its stunning Rocky Mountains, outdoor activities, and vibrant cities like Denver.",
+    "Capital": "Denver",
+    "Population": 5758736,
+    "AreaKm2": 269601
+  },
+  {
+    "Name": "Connecticut",
+    "Code": "NA-US-CT",
+    "Description": "Known for its historical sites, maritime heritage, and proximity to New York City.",
+    "Capital": "Hartford",
+    "Population": 3565287,
+    "AreaKm2": 14357
+  },
+  {
+    "Name": "Delaware",
+    "Code": "NA-US-DE",
+    "Description": "The second smallest state, known for its beaches, tax-free shopping, and corporate-friendly environment.",
+    "Capital": "Dover",
+    "Population": 973764,
+    "AreaKm2": 6446
+  },
+  {
+    "Name": "Florida",
+    "Code": "NA-US-FL",
+    "Description": "Famous for its beaches, theme parks, and warm weather, with Miami being a major cultural hub.",
+    "Capital": "Tallahassee",
+    "Population": 21477737,
+    "AreaKm2": 170312
+  },
+  {
+    "Name": "Georgia",
+    "Code": "NA-US-GA",
+    "Description": "Known for its southern charm, history, and the bustling city of Atlanta.",
+    "Capital": "Atlanta",
+    "Population": 10617423,
+    "AreaKm2": 153910
+  },
+  {
+    "Name": "Hawaii",
+    "Code": "NA-US-HI",
+    "Description": "An archipelago in the Pacific, known for its tropical climate, volcanic landscapes, and unique culture.",
+    "Capital": "Honolulu",
+    "Population": 1415872,
+    "AreaKm2": 28313
+  },
+  {
+    "Name": "Idaho",
+    "Code": "NA-US-ID",
+    "Description": "Famous for its rugged mountains, clear lakes, and outdoor recreational activities.",
+    "Capital": "Boise",
+    "Population": 1787065,
+    "AreaKm2": 216443
+  },
+  {
+    "Name": "Illinois",
+    "Code": "NA-US-IL",
+    "Description": "Known for Chicago, the third-largest city in the US, and its role in agriculture and industry.",
+    "Capital": "Springfield",
+    "Population": 12671821,
+    "AreaKm2": 149998
+  },
+  {
+    "Name": "Indiana",
+    "Code": "NA-US-IN",
+    "Description": "Famous for the Indianapolis 500, agriculture, and its growing tech industry.",
+    "Capital": "Indianapolis",
+    "Population": 6732219,
+    "AreaKm2": 94326
+  },
+  {
+    "Name": "Iowa",
+    "Code": "NA-US-IA",
+    "Description": "Known for its agriculture, especially corn production, and the Iowa State Fair.",
+    "Capital": "Des Moines",
+    "Population": 3155070,
+    "AreaKm2": 145746
+  },
+  {
+    "Name": "Kansas",
+    "Code": "NA-US-KS",
+    "Description": "Known for its vast plains, agriculture, and being a key part of the American heartland.",
+    "Capital": "Topeka",
+    "Population": 2913314,
+    "AreaKm2": 213100
+  },
+  {
+    "Name": "Kentucky",
+    "Code": "NA-US-KY",
+    "Description": "Famous for bourbon, horse racing, and bluegrass music.",
+    "Capital": "Frankfort",
+    "Population": 4467673,
+    "AreaKm2": 104656
+  },
+  {
+    "Name": "Louisiana",
+    "Code": "NA-US-LA",
+    "Description": "Known for its French heritage, vibrant music scene, and the city of New Orleans.",
+    "Capital": "Baton Rouge",
+    "Population": 4648794,
+    "AreaKm2": 135658
+  },
+  {
+    "Name": "Maine",
+    "Code": "NA-US-ME",
+    "Description": "Known for its picturesque coastline, lighthouses, and lobster industry.",
+    "Capital": "Augusta",
+    "Population": 1344212,
+    "AreaKm2": 91633
+  },
+  {
+    "Name": "Maryland",
+    "Code": "NA-US-MD",
+    "Description": "Known for its proximity to Washington, D.C., and its role in American history.",
+    "Capital": "Annapolis",
+    "Population": 6045680,
+    "AreaKm2": 32131
+  },
+  {
+    "Name": "Massachusetts",
+    "Code": "NA-US-MA",
+    "Description": "Famous for its historical significance, top universities, and vibrant cultural scene.",
+    "Capital": "Boston",
+    "Population": 6892503,
+    "AreaKm2": 27336
+  },
+  {
+    "Name": "Michigan",
+    "Code": "NA-US-MI",
+    "Description": "Known for its Great Lakes coastline, auto industry, and vibrant cities like Detroit.",
+    "Capital": "Lansing",
+    "Population": 9986857,
+    "AreaKm2": 250487
+  },
+  {
+    "Name": "Minnesota",
+    "Code": "NA-US-MN",
+    "Description": "Famous for its numerous lakes, forests, and the Twin Cities of Minneapolis and St. Paul.",
+    "Capital": "St. Paul",
+    "Population": 5639632,
+    "AreaKm2": 225163
+  },
+  {
+    "Name": "Mississippi",
+    "Code": "NA-US-MS",
+    "Description": "Known for its rich history, blues music, and Mississippi River.",
+    "Capital": "Jackson",
+    "Population": 2976149,
+    "AreaKm2": 125438
+  },
+  {
+    "Name": "Missouri",
+    "Code": "NA-US-MO",
+    "Description": "Famous for the Gateway Arch, the Ozarks, and its historical importance in the westward expansion.",
+    "Capital": "Jefferson City",
+    "Population": 6137428,
+    "AreaKm2": 180540
+  },
+  {
+    "Name": "Montana",
+    "Code": "NA-US-MT",
+    "Description": "Known for its vast open spaces, Rocky Mountains, and outdoor recreation.",
+    "Capital": "Helena",
+    "Population": 1068778,
+    "AreaKm2": 380831
+  },
+  {
+    "Name": "Nebraska",
+    "Code": "NA-US-NE",
+    "Description": "Famous for its plains, agriculture, and being home to the College World Series.",
+    "Capital": "Lincoln",
+    "Population": 1934408,
+    "AreaKm2": 200330
+  },
+  {
+    "Name": "Nevada",
+    "Code": "NA-US-NV",
+    "Description": "Known for its deserts, casinos, and the entertainment capital of the world, Las Vegas.",
+    "Capital": "Carson City",
+    "Population": 3080156,
+    "AreaKm2": 286380
+  },
+  {
+    "Name": "New Hampshire",
+    "Code": "NA-US-NH",
+    "Description": "Known for its fall foliage, White Mountains, and being the first state to hold a primary in presidential elections.",
+    "Capital": "Concord",
+    "Population": 1359711,
+    "AreaKm2": 24214
+  },
+  {
+    "Name": "New Jersey",
+    "Code": "NA-US-NJ",
+    "Description": "Famous for its beaches, proximity to New York City, and its diverse culture.",
+    "Capital": "Trenton",
+    "Population": 8882190,
+    "AreaKm2": 22591
+  },
+  {
+    "Name": "New Mexico",
+    "Code": "NA-US-NM",
+    "Description": "Known for its desert landscapes, Native American heritage, and the city of Santa Fe.",
+    "Capital": "Santa Fe",
+    "Population": 2096829,
+    "AreaKm2": 314917
+  },
+  {
+    "Name": "New York",
+    "Code": "NA-US-NY",
+    "Description": "Known for its iconic city, New York City, and diverse culture and history.",
+    "Capital": "Albany",
+    "Population": 19453561,
+    "AreaKm2": 141297
+  },
+  {
+    "Name": "North Carolina",
+    "Code": "NA-US-NC",
+    "Description": "Known for its beaches, mountains, and the vibrant city of Charlotte.",
+    "Capital": "Raleigh",
+    "Population": 10488084,
+    "AreaKm2": 139391
+  },
+  {
+    "Name": "North Dakota",
+    "Code": "NA-US-ND",
+    "Description": "Known for its vast plains, oil reserves, and the Badlands National Park.",
+    "Capital": "Bismarck",
+    "Population": 762062,
+    "AreaKm2": 183108
+  },
+  {
+    "Name": "Ohio",
+    "Code": "NA-US-OH",
+    "Description": "Known for its manufacturing history, cities like Cleveland and Cincinnati, and the Rock and Roll Hall of Fame.",
+    "Capital": "Columbus",
+    "Population": 11689100,
+    "AreaKm2": 116098
+  },
+  {
+    "Name": "Oklahoma",
+    "Code": "NA-US-OK",
+    "Description": "Famous for its tornadoes, Native American history, and the city of Oklahoma City.",
+    "Capital": "Oklahoma City",
+    "Population": 3956971,
+    "AreaKm2": 181037
+  },
+  {
+    "Name": "Oregon",
+    "Code": "NA-US-OR",
+    "Description": "Known for its forests, coastline, and progressive culture.",
+    "Capital": "Salem",
+    "Population": 4217737,
+    "AreaKm2": 254799
+  },
+  {
+    "Name": "Pennsylvania",
+    "Code": "NA-US-PA",
+    "Description": "Known for its historical sites, major cities like Philadelphia and Pittsburgh, and its role in America s founding.",
+    "Capital": "Harrisburg",
+    "Population": 12801989,
+    "AreaKm2": 117974
+  },
+  {
+    "Name": "Rhode Island",
+    "Code": "NA-US-RI",
+    "Description": "The smallest state, known for its beaches, maritime heritage, and coastal towns.",
+    "Capital": "Providence",
+    "Population": 1059361,
+    "AreaKm2": 4001
+  },
+  {
+    "Name": "South Carolina",
+    "Code": "NA-US-SC",
+    "Description": "Famous for its Southern hospitality, beaches, and the historic city of Charleston.",
+    "Capital": "Columbia",
+    "Population": 5148714,
+    "AreaKm2": 82933
+  },
+  {
+    "Name": "South Dakota",
+    "Code": "NA-US-SD",
+    "Description": "Known for its national monuments, including Mount Rushmore, and its Native American heritage.",
+    "Capital": "Pierre",
+    "Population": 884659,
+    "AreaKm2": 199729
+  },
+  {
+    "Name": "Tennessee",
+    "Code": "NA-US-TN",
+    "Description": "Famous for its country music, including Nashville, and the Great Smoky Mountains.",
+    "Capital": "Nashville",
+    "Population": 6833174,
+    "AreaKm2": 109153
+  },
+  {
+    "Name": "Texas",
+    "Code": "NA-US-TX",
+    "Description": "The second-largest state, known for its size, diversity, and major cities like Houston and Austin.",
+    "Capital": "Austin",
+    "Population": 28995881,
+    "AreaKm2": 695662
+  },
+  {
+    "Name": "Utah",
+    "Code": "NA-US-UT",
+    "Description": "Known for its national parks, including Zion and Arches, and the Great Salt Lake.",
+    "Capital": "Salt Lake City",
+    "Population": 3205958,
+    "AreaKm2": 219887
+  },
+  {
+    "Name": "Vermont",
+    "Code": "NA-US-VT",
+    "Description": "Famous for its Green Mountains, maple syrup, and small-town charm.",
+    "Capital": "Montpelier",
+    "Population": 623989,
+    "AreaKm2": 24906
+  },
+  {
+    "Name": "Virginia",
+    "Code": "NA-US-VA",
+    "Description": "Known for its history, including Colonial Williamsburg, and major cities like Richmond and Virginia Beach.",
+    "Capital": "Richmond",
+    "Population": 8535519,
+    "AreaKm2": 110787
+  },
+  {
+    "Name": "Washington",
+    "Code": "NA-US-WA",
+    "Description": "Famous for its Pacific coastline, tech industry, and the city of Seattle.",
+    "Capital": "Olympia",
+    "Population": 7693612,
+    "AreaKm2": 184661
+  },
+  {
+    "Name": "West Virginia",
+    "Code": "NA-US-WV",
+    "Description": "Known for its Appalachian Mountains, coal industry, and outdoor recreation.",
+    "Capital": "Charleston",
+    "Population": 1792147,
+    "AreaKm2": 62458
+  },
+  {
+    "Name": "Wisconsin",
+    "Code": "NA-US-WI",
+    "Description": "Known for its dairy industry, including cheese production, and the city of Milwaukee.",
+    "Capital": "Madison",
+    "Population": 5822434,
+    "AreaKm2": 169634
+  },
+  {
+    "Name": "Wyoming",
+    "Code": "NA-US-WY",
+    "Description": "Known for its national parks, including Yellowstone, and wide-open spaces.",
+    "Capital": "Cheyenne",
+    "Population": 578759,
+    "AreaKm2": 253600
+  }
+]

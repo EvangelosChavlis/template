@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Saint George",
+      "Code": "NA-GD-SG",
+      "Description": "The capital region, known for its vibrant port, historical sites, and as the economic and cultural center of Grenada.",
+      "Capital": "St. George's",
+      "Population": 35000,
+      "AreaKm2": 123
+    },
+    {
+      "Name": "Saint Andrew",
+      "Code": "NA-GD-SA",
+      "Description": "Known for its agricultural products, particularly nutmeg and cocoa, and beautiful beaches.",
+      "Capital": "Grenville",
+      "Population": 34000,
+      "AreaKm2": 167
+    },
+    {
+      "Name": "Saint David",
+      "Code": "NA-GD-SD",
+      "Description": "A region characterized by rural landscapes, beaches, and historical sites such as forts and churches.",
+      "Capital": "Victoria",
+      "Population": 19000,
+      "AreaKm2": 91
+    },
+    {
+      "Name": "Saint John",
+      "Code": "NA-GD-SJ",
+      "Description": "A coastal region known for its beaches and fishing industry, as well as its proximity to the capital.",
+      "Capital": "Gouyave",
+      "Population": 20000,
+      "AreaKm2": 93
+    },
+    {
+      "Name": "Saint Mark",
+      "Code": "NA-GD-SM",
+      "Description": "A region with a mix of agriculture and tourism, featuring natural beauty, including waterfalls and beaches.",
+      "Capital": "Victoria",
+      "Population": 12000,
+      "AreaKm2": 48
+    },
+    {
+      "Name": "Saint Patrick",
+      "Code": "NA-GD-SP",
+      "Description": "Famous for its nutmeg plantations and charming villages, this region is also known for its rural beauty.",
+      "Capital": "Sauteurs",
+      "Population": 15000,
+      "AreaKm2": 98
+    }
+]  

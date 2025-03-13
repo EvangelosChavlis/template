@@ -22,7 +22,9 @@ public static class ItemNeighborhoodDtoMapper
         Name: model.Name,
         Description: model.Description,
         Population: model.Population,
+        AreaKm2: model.AreaKm2,
         Zipcode: model.Zipcode,
+        Code: model.Code,
         IsActive: model.IsActive,
         District: model.District.Name,
         Version: model.Version

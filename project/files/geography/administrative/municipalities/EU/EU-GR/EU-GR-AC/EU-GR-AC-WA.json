@@ -1,0 +1,51 @@
+[
+    {
+      "Name": "Agia Varvara",
+      "Description": "A municipality in West Athens known for its cultural heritage and community spirit.",
+      "AreaKm2": 2.42,
+      "Population": 26000,
+      "Code": "EU-GR-AC-WA-AV"
+    },
+    {
+      "Name": "Aigaleo",
+      "Description": "A densely populated municipality with a strong industrial and commercial presence.",
+      "AreaKm2": 6.45,
+      "Population": 69000,
+      "Code": "EU-GR-AC-WA-AI"
+    },
+    {
+      "Name": "Chaidari",
+      "Description": "A municipality in western Athens known for its green spaces and the Daphni Monastery.",
+      "AreaKm2": 22.66,
+      "Population": 46000,
+      "Code": "EU-GR-AC-WA-CH"
+    },
+    {
+        "Name": "Eleonas",
+        "Description": "A suburban area with a mix of light industrial zones and residential communities.",
+        "AreaKm2": 12.0,
+        "Population": 16000,
+        "Code": "EU-GR-AC-WA-EL"
+    },
+    {
+      "Name": "Ilion",
+      "Description": "A residential area in West Athens with parks and modern infrastructure.",
+      "AreaKm2": 9.45,
+      "Population": 85000,
+      "Code": "EU-GR-AC-WA-IL"
+    },
+    {
+      "Name": "Peristeri",
+      "Description": "One of the largest municipalities in Athens, known for its bustling commercial areas.",
+      "AreaKm2": 10.05,
+      "Population": 139000,
+      "Code": "EU-GR-AC-WA-PE"
+    },
+    {
+      "Name": "Petroupoli",
+      "Description": "A municipality at the foothills of Mount Parnitha, offering great natural scenery.",
+      "AreaKm2": 6.59,
+      "Population": 59000,
+      "Code": "EU-GR-AC-WA-PT"
+    }
+]  

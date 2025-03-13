@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Zagreb",
+      "Code": "EU-HR-21",
+      "Description": "Zagreb is the capital and largest city of Croatia, known for its historical architecture, vibrant cultural scene, and as the political, economic, and educational center of the country.",
+      "Capital": "Zagreb",
+      "Population": 800000,
+      "AreaKm2": 641
+    },
+    {
+      "Name": "Split-Dalmatia",
+      "Code": "EU-HR-17",
+      "Description": "Split-Dalmatia is a coastal region known for its Mediterranean climate, beautiful beaches, and the city of Split, which is famous for its historical landmarks, including Diocletian s Palace.",
+      "Capital": "Split",
+      "Population": 450000,
+      "AreaKm2": 4642
+    },
+    {
+      "Name": "Dubrovnik-Neretva",
+      "Code": "EU-HR-19",
+      "Description": "Dubrovnik-Neretva is known for its UNESCO-listed city of Dubrovnik, stunning coastal scenery, and historical sites along the Adriatic Sea.",
+      "Capital": "Dubrovnik",
+      "Population": 130000,
+      "AreaKm2": 2278
+    },
+    {
+      "Name": "Istria",
+      "Code": "EU-HR-18",
+      "Description": "Istria is a peninsula region in the Adriatic Sea, famous for its picturesque coastline, medieval towns, olive oil production, and being a popular tourist destination.",
+      "Capital": "Pula",
+      "Population": 210000,
+      "AreaKm2": 2840
+    },
+    {
+      "Name": "Primorje-Gorski Kotar",
+      "Code": "EU-HR-12",
+      "Description": "Primorje-Gorski Kotar is a region located on the coast of the Adriatic Sea, known for its natural beauty, including the Risnjak National Park and the city of Rijeka.",
+      "Capital": "Rijeka",
+      "Population": 300000,
+      "AreaKm2": 3598
+    },
+    {
+      "Name": "Osijek-Baranja",
+      "Code": "EU-HR-05",
+      "Description": "Osijek-Baranja is an inland region in eastern Croatia, known for its agricultural lands, vineyards, and the city of Osijek, which is rich in history and culture.",
+      "Capital": "Osijek",
+      "Population": 300000,
+      "AreaKm2": 4192
+    },
+    {
+      "Name": "Varaždin",
+      "Code": "EU-HR-04",
+      "Description": "Varaždin is a northern region of Croatia, known for its baroque architecture, historical landmarks, and being a hub for culture and festivals.",
+      "Capital": "Varaždin",
+      "Population": 250000,
+      "AreaKm2": 1751
+    },
+    {
+      "Name": "Zadar",
+      "Code": "EU-HR-14",
+      "Description": "Zadar is a coastal region famous for its historical old town, Roman ruins, and beautiful coastline. It is a popular tourist destination along the Adriatic.",
+      "Capital": "Zadar",
+      "Population": 170000,
+      "AreaKm2": 3742
+    }
+]  

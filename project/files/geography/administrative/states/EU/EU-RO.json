@@ -1,0 +1,162 @@
+[
+    {
+        "Name": "Alba",
+        "Code": "EU-RO-AB",
+        "Description": "A county in the central part of Romania, known for its natural beauty and historic castles.",
+        "Capital": "Alba Iulia",
+        "Population": 300000,
+        "AreaKm2": 6246
+    },
+    {
+        "Name": "Arad",
+        "Code": "EU-RO-AR",
+        "Description": "Located in western Romania, Arad is known for its rich history, including numerous architectural landmarks.",
+        "Capital": "Arad",
+        "Population": 400000,
+        "AreaKm2": 7694
+    },
+    {
+        "Name": "Arges",
+        "Code": "EU-RO-AG",
+        "Description": "A county in southern Romania, home to important historical sites and scenic landscapes.",
+        "Capital": "Pitesti",
+        "Population": 600000,
+        "AreaKm2": 6786
+    },
+    {
+        "Name": "Bacau",
+        "Code": "EU-RO-BC",
+        "Description": "A county in northeastern Romania, known for its natural parks and cultural heritage.",
+        "Capital": "Bacau",
+        "Population": 600000,
+        "AreaKm2": 6625
+    },
+    {
+        "Name": "Bihor",
+        "Code": "EU-RO-BH",
+        "Description": "Located in western Romania, Bihor is known for its natural beauty and the famous city of Oradea.",
+        "Capital": "Oradea",
+        "Population": 580000,
+        "AreaKm2": 7361
+    },
+    {
+        "Name": "Bistrita-Nasaud",
+        "Code": "EU-RO-BN",
+        "Description": "A county in northern Romania, rich in folklore, history, and traditional architecture.",
+        "Capital": "Bistrita",
+        "Population": 300000,
+        "AreaKm2": 5340
+    },
+    {
+        "Name": "Botosani",
+        "Code": "EU-RO-BT",
+        "Description": "Located in northeastern Romania, Botosani is known for its cultural traditions and historical sites.",
+        "Capital": "Botosani",
+        "Population": 400000,
+        "AreaKm2": 4737
+    },
+    {
+        "Name": "Braila",
+        "Code": "EU-RO-BR",
+        "Description": "A county in southeastern Romania, known for its agricultural output and Danube River ports.",
+        "Capital": "Braila",
+        "Population": 300000,
+        "AreaKm2": 4757
+    },
+    {
+        "Name": "Brasov",
+        "Code": "EU-RO-BV",
+        "Description": "Located in central Romania, Brasov is known for its medieval architecture, including the famous Bran Castle.",
+        "Capital": "Brasov",
+        "Population": 600000,
+        "AreaKm2": 5367
+    },
+    {
+        "Name": "Bucuresti",
+        "Code": "EU-RO-BU",
+        "Description": "The capital city of Romania, Bucuresti is the political, economic, and cultural heart of the country.",
+        "Capital": "Bucuresti",
+        "Population": 1800000,
+        "AreaKm2": 228
+    },
+    {
+        "Name": "Buzau",
+        "Code": "EU-RO-BZ",
+        "Description": "A county in southeastern Romania, known for its natural mineral springs and cultural landmarks.",
+        "Capital": "Buzau",
+        "Population": 500000,
+        "AreaKm2": 6012
+    },
+    {
+        "Name": "Calarasi",
+        "Code": "EU-RO-CL",
+        "Description": "Located in the southern part of Romania, Calarasi is known for its fertile land and agriculture.",
+        "Capital": "Calarasi",
+        "Population": 300000,
+        "AreaKm2": 5076
+    },
+    {
+        "Name": "Caras-Severin",
+        "Code": "EU-RO-CS",
+        "Description": "A county in southwestern Romania, Caras-Severin is famous for its natural beauty, including the Carpathian Mountains.",
+        "Capital": "Resita",
+        "Population": 300000,
+        "AreaKm2": 8697
+    },
+    {
+        "Name": "Cluj",
+        "Code": "EU-RO-CJ",
+        "Description": "Located in the northwest, Cluj is known for its cultural and academic significance, including the city of Cluj-Napoca.",
+        "Capital": "Cluj-Napoca",
+        "Population": 700000,
+        "AreaKm2": 6910
+    },
+    {
+        "Name": "Constanta",
+        "Code": "EU-RO-COS",
+        "Description": "A county located on the Black Sea coast, known for its beaches, ports, and cultural heritage.",
+        "Capital": "Constanta",
+        "Population": 600000,
+        "AreaKm2": 7071
+    },
+    {
+        "Name": "Covasna",
+        "Code": "EU-RO-CV",
+        "Description": "A county in central Romania, Covasna is known for its spa resorts and the Szeklerland region.",
+        "Capital": "Sfantu Gheorghe",
+        "Population": 250000,
+        "AreaKm2": 3657
+    },
+    {
+        "Name": "Dambovita",
+        "Code": "EU-RO-DB",
+        "Description": "A county in southern Romania, Dambovita is known for its proximity to Bucharest and rich historical sites.",
+        "Capital": "Targoviste",
+        "Population": 600000,
+        "AreaKm2": 4025
+    },
+    {
+        "Name": "Dolj",
+        "Code": "EU-RO-DJ",
+        "Description": "Located in southwestern Romania, Dolj is known for its agricultural output and the city of Craiova.",
+        "Capital": "Craiova",
+        "Population": 700000,
+        "AreaKm2": 7295
+    },
+    {
+        "Name": "Galati",
+        "Code": "EU-RO-GL",
+        "Description": "A county in southeastern Romania, Galati is a major industrial and port city on the Danube River.",
+        "Capital": "Galati",
+        "Population": 500000,
+        "AreaKm2": 4460
+    },
+    {
+        "Name": "Gorj",
+        "Code": "EU-RO-GJ",
+        "Description": "A county in southwestern Romania, Gorj is known for its mountainous landscapes and cultural landmarks.",
+        "Capital": "Targu Jiu",
+        "Population": 350000,
+        "AreaKm2": 5675
+    }
+]

@@ -26,7 +26,9 @@ public class ClimateZoneIndexes : IEntityTypeConfiguration<ClimateZone>
                 {nameof(ClimateZone.Name)}_
                 {nameof(ClimateZone.AvgTemperatureC)}_
                 {nameof(ClimateZone.AvgPrecipitationMm)}_
-                {nameof(ClimateZone.IsActive)}
-            ".Replace("\n", "").Trim());
+                {nameof(ClimateZone.IsActive)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

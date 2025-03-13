@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Amman",
+      "Code": "AS-JO-AM",
+      "Description": "The capital and largest city of Jordan, known for its historical sites, modern infrastructure, and cultural significance.",
+      "Capital": "Amman",
+      "Population": 4000000,
+      "AreaKm2": 960
+    },
+    {
+      "Name": "Zarqa",
+      "Code": "AS-JO-ZA",
+      "Description": "A city located northeast of Amman, known as an industrial hub with a large population.",
+      "Capital": "Zarqa",
+      "Population": 1000000,
+      "AreaKm2": 40
+    },
+    {
+      "Name": "Irbid",
+      "Code": "AS-JO-IR",
+      "Description": "Located in the northern part of Jordan, Irbid is an important cultural and educational center.",
+      "Capital": "Irbid",
+      "Population": 350000,
+      "AreaKm2": 50
+    },
+    {
+      "Name": "Aqaba",
+      "Code": "AS-JO-AQ",
+      "Description": "Jordan s only coastal city, located on the Red Sea, known for its tourism, beaches, and port.",
+      "Capital": "Aqaba",
+      "Population": 150000,
+      "AreaKm2": 375
+    },
+    {
+      "Name": "Mafraq",
+      "Code": "AS-JO-MF",
+      "Description": "A city in the northern region of Jordan, near the Syrian border, known for its agricultural and strategic importance.",
+      "Capital": "Mafraq",
+      "Population": 250000,
+      "AreaKm2": 50
+    },
+    {
+      "Name": "Maan",
+      "Code": "AS-JO-MN",
+      "Description": "A city in southern Jordan, known for its mining and agricultural industries, as well as its proximity to the desert.",
+      "Capital": "Maan",
+      "Population": 120000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Karak",
+      "Code": "AS-JO-KK",
+      "Description": "A historical city known for the Karak Castle and its ancient ruins, located in central Jordan.",
+      "Capital": "Karak",
+      "Population": 250000,
+      "AreaKm2": 320
+    },
+    {
+      "Name": "Ajloun",
+      "Code": "AS-JO-AJ",
+      "Description": "A city in the north-western part of Jordan, known for its green hills, forests, and historical sites.",
+      "Capital": "Ajloun",
+      "Population": 150000,
+      "AreaKm2": 130
+    },
+    {
+      "Name": "Tafilah",
+      "Code": "AS-JO-TF",
+      "Description": "A city in southern Jordan, located in the mountainous region, known for its agricultural significance and proximity to the Jordan Rift Valley.",
+      "Capital": "Tafilah",
+      "Population": 100000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Balqa",
+      "Code": "AS-JO-BL",
+      "Description": "A governorate located in central Jordan, known for its agricultural land, as well as the popular Dead Sea area.",
+      "Capital": "Salt",
+      "Population": 400000,
+      "AreaKm2": 1400
+    }
+]  

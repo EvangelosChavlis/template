@@ -1,0 +1,58 @@
+[
+  {
+    "Name": "Podgorica",
+    "Code": "EU-ME-PG",
+    "Description": "Podgorica is the capital and largest city of Montenegro. It serves as the political, cultural, and economic center of the country.",
+    "Capital": "Podgorica",
+    "Population": 150977,
+    "AreaKm2": 441
+  },
+  {
+    "Name": "Niksic",
+    "Code": "EU-ME-NK",
+    "Description": "Niksic is the second-largest city in Montenegro, located in the western part of the country. It is known for its industrial base and historical sites.",
+    "Capital": "Niksic",
+    "Population": 73000,
+    "AreaKm2": 1499
+  },
+  {
+    "Name": "Herceg Novi",
+    "Code": "EU-ME-HN",
+    "Description": "Herceg Novi is a coastal city located in the Bay of Kotor. It is a popular tourist destination known for its Mediterranean climate and historical landmarks.",
+    "Capital": "Herceg Novi",
+    "Population": 33500,
+    "AreaKm2": 235
+  },
+  {
+    "Name": "Bijelo Polje",
+    "Code": "EU-ME-BP",
+    "Description": "Bijelo Polje is located in the northern part of Montenegro. It is an important regional center and is known for its cultural heritage.",
+    "Capital": "Bijelo Polje",
+    "Population": 43000,
+    "AreaKm2": 1262
+  },
+  {
+    "Name": "Pljevlja",
+    "Code": "EU-ME-PV",
+    "Description": "Pljevlja is a town located in the northeastern part of Montenegro, known for its coal industry and nearby natural attractions.",
+    "Capital": "Pljevlja",
+    "Population": 29000,
+    "AreaKm2": 1427
+  },
+  {
+    "Name": "Rozaje",
+    "Code": "EU-ME-RZ",
+    "Description": "Rozaje is located in the northeastern part of Montenegro, near the border with Serbia. It is known for its mountainous terrain and cultural diversity.",
+    "Capital": "Rozaje",
+    "Population": 19000,
+    "AreaKm2": 826
+  },
+  {
+    "Name": "Berane",
+    "Code": "EU-ME-BE",
+    "Description": "Berane is situated in the northern part of Montenegro. It is known for its scenic beauty and historical sites, including old monasteries.",
+    "Capital": "Berane",
+    "Population": 13000,
+    "AreaKm2": 978
+  }
+]

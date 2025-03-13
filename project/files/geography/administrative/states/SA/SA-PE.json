@@ -1,0 +1,202 @@
+[
+    {
+      "Name": "Amazonas",
+      "Code": "SA-PE-AM",
+      "Description": "Located in the northern part of Peru, known for its vast rainforests, biodiversity, and indigenous cultures.",
+      "Capital": "Chachapoyas",
+      "Population": 400000,
+      "AreaKm2": 391278
+    },
+    {
+      "Name": "Áncash",
+      "Code": "SA-PE-AN",
+      "Description": "Located in the western highlands, famous for its mountain ranges, including the Huascarán National Park.",
+      "Capital": "Huaraz",
+      "Population": 1100000,
+      "AreaKm2": 35250
+    },
+    {
+      "Name": "Apurímac",
+      "Code": "SA-PE-AP",
+      "Description": "A mountainous region located in the southern Andes, known for its agriculture and traditional communities.",
+      "Capital": "Abancay",
+      "Population": 350000,
+      "AreaKm2": 21900
+    },
+    {
+      "Name": "Arequipa",
+      "Code": "SA-PE-ARE",
+      "Description": "Known for its beautiful colonial architecture, volcanoes, and the Colca Canyon, one of the deepest in the world.",
+      "Capital": "Arequipa",
+      "Population": 1500000,
+      "AreaKm2": 63000
+    },
+    {
+      "Name": "Ayacucho",
+      "Code": "SA-PE-AY",
+      "Description": "A region rich in history, known for its role in Peru s  independence and its beautiful Andean landscapes.",
+      "Capital": "Ayacucho",
+      "Population": 700000,
+      "AreaKm2": 43785
+    },
+    {
+      "Name": "Cajamarca",
+      "Code": "SA-PE-CA",
+      "Description": "Located in the northern Andes, known for its mining industry, colonial architecture, and the famous Inca ruins of Cajamarca.",
+      "Capital": "Cajamarca",
+      "Population": 1500000,
+      "AreaKm2": 33429
+    },
+    {
+      "Name": "Callao",
+      "Code": "SA-PE-CL",
+      "Description": "A coastal region that includes the major port city of Callao, serving as the main port for Lima.",
+      "Capital": "Callao",
+      "Population": 1000000,
+      "AreaKm2": 146
+    },
+    {
+      "Name": "Cusco",
+      "Code": "SA-PE-CUS",
+      "Description": "Known for being the historical capital of the Inca Empire and the gateway to the famous Machu Picchu.",
+      "Capital": "Cusco",
+      "Population": 1300000,
+      "AreaKm2": 71000
+    },
+    {
+      "Name": "Huancavelica",
+      "Code": "SA-PE-HV",
+      "Description": "A mountainous region known for its mineral resources and agricultural production.",
+      "Capital": "Huancavelica",
+      "Population": 400000,
+      "AreaKm2": 22500
+    },
+    {
+      "Name": "Huanuco",
+      "Code": "SA-PE-HU",
+      "Description": "A diverse region that includes mountainous terrain and the central jungle, known for agriculture and tropical fruits.",
+      "Capital": "Huanuco",
+      "Population": 850000,
+      "AreaKm2": 35890
+    },
+    {
+      "Name": "Ica",
+      "Code": "SA-PE-IC",
+      "Description": "A region famous for its desert landscapes, wineries, and the Nazca Lines, an ancient archaeological site.",
+      "Capital": "Ica",
+      "Population": 800000,
+      "AreaKm2": 22480
+    },
+    {
+      "Name": "Junín",
+      "Code": "SA-PE-JU",
+      "Description": "A central region known for its lakes, mountains, and agricultural production, including coffee and dairy products.",
+      "Capital": "Huancayo",
+      "Population": 1300000,
+      "AreaKm2": 46350
+    },
+    {
+      "Name": "La Libertad",
+      "Code": "SA-PE-LL",
+      "Description": "A coastal region known for its beaches, historic ruins, and a key hub for agriculture, including sugar and rice.",
+      "Capital": "Trujillo",
+      "Population": 1800000,
+      "AreaKm2": 25300
+    },
+    {
+      "Name": "Lambayeque",
+      "Code": "SA-PE-LAM",
+      "Description": "Known for its rich archaeological heritage, including the Moche and Sican cultures, as well as its agricultural production.",
+      "Capital": "Chiclayo",
+      "Population": 1100000,
+      "AreaKm2": 14180
+    },
+    {
+      "Name": "Lima",
+      "Code": "SA-PE-LMA",
+      "Description": "The capital region of Peru, which includes Lima, the country s largest city and a cultural, political, and economic center.",
+      "Capital": "Lima",
+      "Population": 10000000,
+      "AreaKm2": 2190
+    },
+    {
+      "Name": "Loreto",
+      "Code": "SA-PE-LO",
+      "Description": "Located in the Amazon rainforest, Loreto is known for its biodiversity and the mighty Amazon River.",
+      "Capital": "Iquitos",
+      "Population": 900000,
+      "AreaKm2": 94430
+    },
+    {
+      "Name": "Madre de Dios",
+      "Code": "SA-PE-MD",
+      "Description": "A region rich in natural resources, especially in terms of its rainforest ecosystems and gold mining.",
+      "Capital": "Puerto Maldonado",
+      "Population": 150000,
+      "AreaKm2": 85820
+    },
+    {
+      "Name": "Moquegua",
+      "Code": "SA-PE-MO",
+      "Description": "Known for its mining industry, especially copper, and its production of fruits like olives and grapes.",
+      "Capital": "Moquegua",
+      "Population": 250000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Pasco",
+      "Code": "SA-PE-PA",
+      "Description": "A region located in the central Andes, known for its mountainous terrain, agriculture, and mining industries.",
+      "Capital": "Oxapampa",
+      "Population": 200000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Piura",
+      "Code": "SA-PE-PI",
+      "Description": "A coastal region known for its beaches, agriculture (especially mangoes), and its proximity to Ecuador.",
+      "Capital": "Piura",
+      "Population": 1800000,
+      "AreaKm2": 35800
+    },
+    {
+      "Name": "Puno",
+      "Code": "SA-PE-PU",
+      "Description": "Famous for the high-altitude Lake Titicaca, Puno is known for its indigenous cultures and agriculture.",
+      "Capital": "Puno",
+      "Population": 1300000,
+      "AreaKm2": 71200
+    },
+    {
+      "Name": "San Martín",
+      "Code": "SA-PE-SM",
+      "Description": "Located in the Amazon Basin, known for its agricultural products, especially coffee and cocoa.",
+      "Capital": "Moyobamba",
+      "Population": 900000,
+      "AreaKm2": 51800
+    },
+    {
+      "Name": "Tacna",
+      "Code": "SA-PE-TA",
+      "Description": "A border region known for its mining industry, especially copper and gold, and its historical significance during the War of the Pacific.",
+      "Capital": "Tacna",
+      "Population": 300000,
+      "AreaKm2": 16000
+    },
+    {
+      "Name": "Tumbes",
+      "Code": "SA-PE-TU",
+      "Description": "A coastal region in the north of Peru, known for its beaches, mangroves, and tropical ecosystems.",
+      "Capital": "Tumbes",
+      "Population": 200000,
+      "AreaKm2": 4500
+    },
+    {
+      "Name": "Ucayali",
+      "Code": "SA-PE-UCA",
+      "Description": "An Amazonian region known for its rivers, forests, and agricultural activities, especially the cultivation of palm oil.",
+      "Capital": "Pucallpa",
+      "Population": 500000,
+      "AreaKm2": 102000
+    }
+]  

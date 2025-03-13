@@ -41,10 +41,14 @@ public class CreateContinentHandler : IRequestHandler<CreateContinentCommand, Re
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<Continent, bool>>[] { t => t.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<Continent, bool>>[] 
+        {
+            c => c.Name!.Equals(command.Dto.Name) || 
+                c.Code!.Equals(command.Dto.Code)
+        };
         var existingContinent = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the continent name already exists in the system
         if (existingContinent is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -54,6 +58,7 @@ public class CreateContinentHandler : IRequestHandler<CreateContinentCommand, Re
                 .WithSuccess(false)
                 .WithData($"Continent with name {existingContinent.Name} already exists.");
         }
+        
 
         // Mapping and Saving Continent
         var continent = command.Dto.CreateContinentModelMapping();
@@ -73,10 +78,10 @@ public class CreateContinentHandler : IRequestHandler<CreateContinentCommand, Re
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
-                .WithMessage("Error creating terrain type.")
+                .WithMessage("Error creating continent.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
-                .WithData("Failed to create terrain type.");
+                .WithData("Failed to create continent.");
         }
             
         // Commit Transaction

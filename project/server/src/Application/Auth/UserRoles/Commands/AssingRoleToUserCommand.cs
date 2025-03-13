@@ -55,7 +55,7 @@ public class AssingRoleToUserHandler : IRequestHandler<AssingRoleToUserCommand, 
         // Searching Item
         var roleFilters = new Expression<Func<Role, bool>>[] { x => x.Id == command.RoleId };
         var roleProjection = RoleProjections.AssignRoleProjection();
-        var role = await _commonRepository.GetResultByIdAsync(
+        var role = await _commonRepository.GetResultByIdAsync<Role>(
             roleFilters,
             projection: roleProjection, 
             token: token
@@ -86,7 +86,7 @@ public class AssingRoleToUserHandler : IRequestHandler<AssingRoleToUserCommand, 
         // Searching Item
         var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == command.UserId };
         var userProjection = UserProjections.AssignUserProjection();
-        var user = await _commonRepository.GetResultByIdAsync(
+        var user = await _commonRepository.GetResultByIdAsync<User>(
             userFilters, 
             projection: userProjection, 
             token: token

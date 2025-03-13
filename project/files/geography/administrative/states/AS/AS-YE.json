@@ -1,0 +1,154 @@
+[
+    {
+      "Name": "Aden",
+      "Code": "AS-YE-AD",
+      "Description": "A historic port city and the temporary capital of Yemen, Aden has been a vital center for trade and culture for centuries.",
+      "Capital": "Aden",
+      "Population": 800000,
+      "AreaKm2": 7600
+    },
+    {
+      "Name": "Al Hudaydah",
+      "Code": "AS-YE-HUD",
+      "Description": "Located on the western coast, Al Hudaydah is a key port and a hub for Yemen s fishing industry.",
+      "Capital": "Al Hudaydah",
+      "Population": 2500000,
+      "AreaKm2": 35700
+    },
+    {
+      "Name": "Al Mahwit",
+      "Code": "AS-YE-MW",
+      "Description": "A mountainous governorate located west of Sanaa, known for its agriculture and traditional Yemeni culture.",
+      "Capital": "Al Mahwit",
+      "Population": 400000,
+      "AreaKm2": 2580
+    },
+    {
+      "Name": "Abyan",
+      "Code": "AS-YE-AB",
+      "Description": "A coastal governorate in the south of Yemen, Abyan is known for its agricultural lands and beaches along the Arabian Sea.",
+      "Capital": "Zinjibar",
+      "Population": 500000,
+      "AreaKm2": 22750
+    },
+    {
+      "Name": "Al Bayda",
+      "Code": "AS-YE-BA",
+      "Description": "A governorate located in the central highlands of Yemen, known for its agriculture and historical significance.",
+      "Capital": "Al Bayda",
+      "Population": 1000000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Al Dhalee",
+      "Code": "AS-YE-DH",
+      "Description": "Located in the southern part of Yemen, Al Dhalee is known for its agriculture and fertile plains.",
+      "Capital": "Al Dhalee",
+      "Population": 800000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Amran",
+      "Code": "AS-YE-AM",
+      "Description": "A governorate located north of Sanaa, Amran is known for its mountains, agriculture, and traditional Yemeni architecture.",
+      "Capital": "Amran",
+      "Population": 600000,
+      "AreaKm2": 15900
+    },
+    {
+      "Name": "Dhamar",
+      "Code": "AS-YE-DM",
+      "Description": "Located to the south of Sanaa, Dhamar is known for its fertile lands and agricultural output.",
+      "Capital": "Dhamar",
+      "Population": 900000,
+      "AreaKm2": 8500
+    },
+    {
+      "Name": "Hadhramaut",
+      "Code": "AS-YE-HD",
+      "Description": "A vast and historically significant region in eastern Yemen, Hadhramaut is known for its rich history, culture, and the desert environment.",
+      "Capital": "Mukalla",
+      "Population": 800000,
+      "AreaKm2": 190000
+    },
+    {
+      "Name": "Hajjah",
+      "Code": "AS-YE-HJ",
+      "Description": "A governorate located in the northern part of Yemen, Hajjah is known for its agricultural activities, particularly wheat and barley production.",
+      "Capital": "Hajjah",
+      "Population": 1500000,
+      "AreaKm2": 12300
+    },
+    {
+      "Name": "Ibb",
+      "Code": "AS-YE-IB",
+      "Description": "A governorate in central Yemen, Ibb is known for its lush green mountains and its agricultural output, particularly in terms of fruits and vegetables.",
+      "Capital": "Ibb",
+      "Population": 2400000,
+      "AreaKm2": 5410
+    },
+    {
+      "Name": "Al Jawf",
+      "Code": "AS-YE-JF",
+      "Description": "Located in the northeastern part of Yemen, Al Jawf is known for its desert landscape and historical sites.",
+      "Capital": "Al-Hazm",
+      "Population": 600000,
+      "AreaKm2": 27400
+    },
+    {
+      "Name": "Lahij",
+      "Code": "AS-YE-LH",
+      "Description": "Lahij is located in southern Yemen and is known for its beaches and agricultural activities, especially in date palm farming.",
+      "Capital": "Lahij",
+      "Population": 800000,
+      "AreaKm2": 11900
+    },
+    {
+      "Name": " Marib",
+      "Code": "AS-YE-MR",
+      "Description": "Located in the east of Yemen,  Marib is known for its historical significance and ancient archaeological sites, along with oil and gas production.",
+      "Capital": " Marib",
+      "Population": 400000,
+      "AreaKm2": 21000
+    },
+    {
+      "Name": "Raymah",
+      "Code": "AS-YE-RM",
+      "Description": "A governorate in western Yemen, Raymah is characterized by its mountainous terrain and agricultural activity.",
+      "Capital": "Raymah",
+      "Population": 600000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Sanaa",
+      "Code": "AS-YE-SN",
+      "Description": "The capital governorate, Sanaa is known for its rich history, ancient architecture, and is the political, cultural, and economic heart of Yemen.",
+      "Capital": "Sanaa",
+      "Population": 2000000,
+      "AreaKm2": 1550
+    },
+    {
+      "Name": "Shabwah",
+      "Code": "AS-YE-SW",
+      "Description": "A governorate in the southeastern part of Yemen, Shabwah is rich in oil resources and desert landscapes.",
+      "Capital": "Ataq",
+      "Population": 600000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Socotra",
+      "Code": "AS-YE-SQ",
+      "Description": "A unique archipelago located in the Arabian Sea, Socotra is famous for its biodiversity and its distinctive flora and fauna.",
+      "Capital": "Hadibo",
+      "Population": 50000,
+      "AreaKm2": 3800
+    },
+    {
+      "Name": "Taiz",
+      "Code": "AS-YE-TZ",
+      "Description": "Taiz is located in the southwestern part of Yemen and is an important cultural and economic center.",
+      "Capital": "Taiz",
+      "Population": 2000000,
+      "AreaKm2": 12000
+    }
+]  

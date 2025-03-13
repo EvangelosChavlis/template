@@ -25,6 +25,9 @@ public static class ItemCountryDtoMapper
         Capital: model.Capital,
         Population: model.Population,
         AreaKm2: model.AreaKm2,
+        PhoneCode: model.PhoneCode,
+        TLD: model.TLD,
+        Currency: model.Currency,
         IsActive: model.IsActive,
         Continent: model.Continent.Name,
         Version: model.Version

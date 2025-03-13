@@ -1,0 +1,122 @@
+[
+    {
+      "Name": "Arica and Parinacota",
+      "Code": "SA-CL-AP",
+      "Description": "A region located in the northernmost part of Chile, known for its beautiful coastline, deserts, and the Andes mountains.",
+      "Capital": "Arica",
+      "Population": 250000,
+      "AreaKm2": 167269
+    },
+    {
+      "Name": "Tarapaca",
+      "Code": "SA-CL-TA",
+      "Description": "Known for its vast deserts, including the Atacama Desert, and its rich mineral resources.",
+      "Capital": "Iquique",
+      "Population": 300000,
+      "AreaKm2": 423359
+    },
+    {
+      "Name": "Antofagasta",
+      "Code": "SA-CL-AN",
+      "Description": "A major mining region in northern Chile, known for its vast mineral resources, particularly copper.",
+      "Capital": "Antofagasta",
+      "Population": 600000,
+      "AreaKm2": 127268
+    },
+    {
+      "Name": "Atacama",
+      "Code": "SA-CL-AT",
+      "Description": "Famous for its desert landscapes, salt flats, and historical sites such as the town of San Pedro de Atacama.",
+      "Capital": "Copiapó",
+      "Population": 300000,
+      "AreaKm2": 751418
+    },
+    {
+      "Name": "Coquimbo",
+      "Code": "SA-CL-CO",
+      "Description": "A coastal region known for its agriculture, vineyards, and beautiful beaches.",
+      "Capital": "La Serena",
+      "Population": 800000,
+      "AreaKm2": 403048
+    },
+    {
+      "Name": "Valparaíso",
+      "Code": "SA-CL-VS",
+      "Description": "One of Chile s most important ports and a UNESCO World Heritage site, known for its colorful hills and historic architecture.",
+      "Capital": "Valparaíso",
+      "Population": 1000000,
+      "AreaKm2": 168256
+    },
+    {
+      "Name": "O Higgins",
+      "Code": "SA-CL-OH",
+      "Description": "A central region of Chile known for its vineyards, agricultural production, and proximity to Santiago.",
+      "Capital": "Rancagua",
+      "Population": 900000,
+      "AreaKm2": 167900
+    },
+    {
+      "Name": "Maule",
+      "Code": "SA-CL-ML",
+      "Description": "A region in central Chile, known for its wine production, beautiful countryside, and historical landmarks.",
+      "Capital": "Talca",
+      "Population": 1000000,
+      "AreaKm2": 300126
+    },
+    {
+      "Name": "Nuble",
+      "Code": "SA-CL-NB",
+      "Description": "A relatively new region in central Chile, known for its agricultural production, particularly fruits and vegetables.",
+      "Capital": "Chillan",
+      "Population": 700000,
+      "AreaKm2": 129654
+    },
+    {
+      "Name": "Biobío",
+      "Code": "SA-CL-BI",
+      "Description": "A region in southern Chile, known for its forestry industry, natural beauty, and the city of Concepción.",
+      "Capital": "Concepción",
+      "Population": 2000000,
+      "AreaKm2": 154801
+    },
+    {
+      "Name": "La Araucania",
+      "Code": "SA-CL-AR",
+      "Description": "Known for its indigenous Mapuche culture, stunning landscapes, and outdoor activities, particularly around Villarrica and Pucon.",
+      "Capital": "Temuco",
+      "Population": 1000000,
+      "AreaKm2": 319231
+    },
+    {
+      "Name": "Los Rios",
+      "Code": "SA-CL-LR",
+      "Description": "A southern region, known for its beautiful lakes, rivers, and forests, as well as the city of Valdivia.",
+      "Capital": "Valdivia",
+      "Population": 800000,
+      "AreaKm2": 180125
+    },
+    {
+      "Name": "Los Lagos",
+      "Code": "SA-CL-LL",
+      "Description": "Famous for its picturesque lakes, forests, and mountains, as well as the city of Puerto Montt.",
+      "Capital": "Puerto Montt",
+      "Population": 900000,
+      "AreaKm2": 489726
+    },
+    {
+      "Name": "Aysen del General Carlos Ibanez del Campo",
+      "Code": "SA-CL-AI",
+      "Description": "Known for its remote, unspoiled natural beauty, glaciers, and fjords, including parts of the Southern Patagonian Ice Field.",
+      "Capital": "Coyhaique",
+      "Population": 100000,
+      "AreaKm2": 1084943
+    },
+    {
+      "Name": "Magallanes y de la Antártica Chilena",
+      "Code": "SA-CL-MA",
+      "Description": "The southernmost region of Chile, known for its vast landscapes, glaciers, and proximity to Antarctica.",
+      "Capital": "Punta Arenas",
+      "Population": 160000,
+      "AreaKm2": 1322918
+    }
+]  

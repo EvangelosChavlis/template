@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Guatemala",
+      "Code": "NA-GT-GT",
+      "Description": "The capital region, known for its historical and cultural significance, with a mix of urban development and colonial architecture.",
+      "Capital": "Guatemala City",
+      "Population": 2500000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Alta Verapaz",
+      "Code": "NA-GT-AV",
+      "Description": "A region known for its lush mountains, coffee plantations, and rich biodiversity.",
+      "Capital": "Cobán",
+      "Population": 400000,
+      "AreaKm2": 8000
+    },
+    {
+      "Name": "Baja Verapaz",
+      "Code": "NA-GT-BV",
+      "Description": "A region with a diverse landscape of forests and mountains, known for agriculture and the Chixoy River.",
+      "Capital": "Salamá",
+      "Population": 200000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Chimaltenango",
+      "Code": "NA-GT-CH",
+      "Description": "Located in the central highlands, known for its volcanic landscape and production of crops like coffee and vegetables.",
+      "Capital": "Chimaltenango",
+      "Population": 160000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Chiquimula",
+      "Code": "NA-GT-CQ",
+      "Description": "A region known for its agricultural production, particularly bananas and corn, with a warm climate and rich cultural heritage.",
+      "Capital": "Chiquimula",
+      "Population": 120000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Escuintla",
+      "Code": "NA-GT-ES",
+      "Description": "A coastal region with an economy driven by agriculture, especially sugar production, as well as tourism with beautiful beaches.",
+      "Capital": "Escuintla",
+      "Population": 250000,
+      "AreaKm2": 3200
+    },
+    {
+      "Name": "Huehuetenango",
+      "Code": "NA-GT-HU",
+      "Description": "Known for its mountainous terrain, coffee plantations, and indigenous culture, this region is one of the highest in the country.",
+      "Capital": "Huehuetenango",
+      "Population": 150000,
+      "AreaKm2": 7000
+    },
+    {
+      "Name": "Izabal",
+      "Code": "NA-GT-IZ",
+      "Description": "A coastal region on the Caribbean side of Guatemala, known for its beautiful lakes, including Lake Izabal, and diverse wildlife.",
+      "Capital": "Puerto Barrios",
+      "Population": 120000,
+      "AreaKm2": 9000
+    },
+    {
+      "Name": "Jalapa",
+      "Code": "NA-GT-JA",
+      "Description": "Located in the eastern part of the country, Jalapa is known for its agriculture, including the production of vegetables and fruits.",
+      "Capital": "Jalapa",
+      "Population": 180000,
+      "AreaKm2": 3500
+    },
+    {
+      "Name": "Jutiapa",
+      "Code": "NA-GT-JU",
+      "Description": "A region known for its agricultural economy, especially corn, beans, and coffee, and proximity to the El Salvador border.",
+      "Capital": "Jutiapa",
+      "Population": 210000,
+      "AreaKm2": 3000
+    }
+]  

@@ -27,6 +27,16 @@ public class District : BaseEntity
     public long Population { get; set; }
 
     /// <summary>
+    /// Gets or sets the area of the district.
+    /// </summary>
+    public double AreaKm2 { get; set; }
+
+    /// <summary>
+    /// Gets or sets the code of the district.
+    /// </summary>
+    public string Code { get; set; }
+
+    /// <summary>
     /// Gets or sets a value indicating whether the district is active.
     /// </summary>
     public bool IsActive { get; set; }

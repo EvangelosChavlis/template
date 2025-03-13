@@ -1,0 +1,37 @@
+[
+    {
+      "Name": "Nea Smyrni",
+      "Description": "A vibrant municipality known for its parks, shopping areas, and cultural activities.",
+      "AreaKm2": 4.0,
+      "Population": 80000,
+      "Code": "EU-GR-AC-SA-NS"
+    },
+    {
+      "Name": "Glyfada",
+      "Description": "A coastal municipality known for its beaches, upscale shopping, and vibrant nightlife.",
+      "AreaKm2": 25.4,
+      "Population": 90000,
+      "Code": "EU-GR-AC-SA-GY"
+    },
+    {
+      "Name": "Alimos",
+      "Description": "A southern suburb by the sea, offering residential areas and waterfront leisure options.",
+      "AreaKm2": 8.3,
+      "Population": 45000,
+      "Code": "EU-GR-AC-SA-AL"
+    },
+    {
+      "Name": "Palaio Faliro",
+      "Description": "A coastal municipality with a mix of residential areas and seaside promenades.",
+      "AreaKm2": 8.0,
+      "Population": 55000,
+      "Code": "EU-GR-AC-SA-PF"
+    },
+    {
+      "Name": "Vari-Voula-Vouliagmeni",
+      "Description": "A large municipality combining several affluent coastal areas known for luxury living and scenic views.",
+      "AreaKm2": 44.9,
+      "Population": 87000,
+      "Code": "EU-GR-AC-SA-VVV"
+    }
+]  

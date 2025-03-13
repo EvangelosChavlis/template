@@ -12,6 +12,14 @@ using server.src.Domain.Common.Dtos;
 using server.src.Persistence.Common.Interfaces;
 using server.src.Application.Geography.Administrative.Continents.Interfaces;
 using server.src.Application.Data.Interfaces;
+using server.src.Domain.Geography.Administrative.Continents.Models;
+using server.src.Domain.Geography.Administrative.Countries.Models;
+using server.src.Domain.Geography.Administrative.States.Models;
+using server.src.Domain.Geography.Administrative.Regions.Models;
+using server.src.Domain.Geography.Administrative.Municipalities.Models;
+using server.src.Domain.Geography.Administrative.Districts.Models;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Data.Commands;
 
@@ -19,6 +27,7 @@ public record SeedDataCommand() : IRequest<Response<string>>;
 
 public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>>
 {
+    private readonly SeedDataSettings _seedDataSettings;
     private readonly ICommonRepository _commonRepository;
     private readonly IRoleCommands _roleCommands;
     private readonly IUserCommands _userCommands;
@@ -31,6 +40,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
     private readonly IContinentCommands _continentCommands;
     
     public SeedDataHandler(
+        SeedDataSettings seedDataSettings,
         ICommonRepository commonRepository, 
         IRoleCommands roleCommands, 
         IUserCommands userCommands, 
@@ -42,6 +52,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
         IDataCommands dataCommands
     )
     {
+        _seedDataSettings = seedDataSettings;
         _commonRepository = commonRepository;
         _roleCommands = roleCommands;
         _userCommands = userCommands;
@@ -59,12 +70,104 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
         var faker = new Faker();
         var random = new Random();
 
-        var continents = await _dataCommands.SeedContinentsAsync(token);
-        var countries = await _dataCommands.SeedCountriesAsync(token);
-        var states = await _dataCommands.SeedStatesAsync(token);
+        var failures = new List<string>();
+        var continentsExist = await _commonRepository.AnyExistsAsync<Continent>(token: token);
+        if(!continentsExist)
+        {
+            var continentsResponse = await _dataCommands.SeedContinentsAsync(_seedDataSettings.ContinentsPath, token);
+            if (!continentsResponse.Success)
+                return new Response<string>()
+                    .WithMessage(continentsResponse.Message!)
+                    .WithSuccess(continentsResponse.Success)
+                    .WithFailures(continentsResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(continentsResponse.Failures);
+        }
 
-        // var a = new SeedCountriesCommand(_continentCommands);
-        // var h = await c.Handle(token);
+        var countriesExist = await _commonRepository.AnyExistsAsync<Country>(token: token);
+        if(!countriesExist)
+        {
+            var countriesResponse = await _dataCommands.SeedCountriesAsync(_seedDataSettings.CountriesPath, token);
+            if (!countriesResponse.Success)
+                return new Response<string>()
+                    .WithMessage(countriesResponse.Message!)
+                    .WithSuccess(countriesResponse.Success)
+                    .WithFailures(countriesResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(countriesResponse.Failures);
+        }
+
+        var statesExist = await _commonRepository.AnyExistsAsync<State>(token: token);
+        if(!statesExist)
+        {
+            var statesResponse = await _dataCommands.SeedStatesAsync(_seedDataSettings.StatesPath, token);
+            if (!statesResponse.Success)
+                return new Response<string>()
+                    .WithMessage(statesResponse.Message!)
+                    .WithSuccess(statesResponse.Success)
+                    .WithFailures(statesResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(statesResponse.Failures);
+        }
+
+        var regionsExist = await _commonRepository.AnyExistsAsync<Region>(token: token);
+        if(!regionsExist)
+        {
+            var regionsResponse = await _dataCommands.SeedRegionsAsync(_seedDataSettings.RegionsPath, token);
+            if (!regionsResponse.Success)
+                return new Response<string>()
+                    .WithMessage(regionsResponse.Message!)
+                    .WithSuccess(regionsResponse.Success)
+                    .WithFailures(regionsResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(regionsResponse.Failures);
+        }
+
+        var municipalitiesExist = await _commonRepository.AnyExistsAsync<Municipality>(token: token);
+        if(!municipalitiesExist)
+        {
+            var municipalitiesResponse = await _dataCommands.SeedMunicipalitiesAsync(_seedDataSettings.MunicipalitiesPath, token);
+            if (!municipalitiesResponse.Success)
+                return new Response<string>()
+                    .WithMessage(municipalitiesResponse.Message!)
+                    .WithSuccess(municipalitiesResponse.Success)
+                    .WithFailures(municipalitiesResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(municipalitiesResponse.Failures);
+        }
+
+        var districtsExist = await _commonRepository.AnyExistsAsync<District>(token: token);
+        if(!districtsExist)
+        {
+            var districtsResponse = await _dataCommands.SeedDistrictsAsync(_seedDataSettings.DistrictsPath, token);
+            if (!districtsResponse.Success)
+                return new Response<string>()
+                    .WithMessage(districtsResponse.Message!)
+                    .WithSuccess(districtsResponse.Success)
+                    .WithFailures(districtsResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(districtsResponse.Failures);
+        }
+
+        var neighborhoodsExist = await _commonRepository.AnyExistsAsync<Neighborhood>(token: token);
+        if(!neighborhoodsExist)
+        {
+            var neighborhoodsResponse = await _dataCommands.SeedNeighborhoodAsync(_seedDataSettings.NeighborhoodsPath, token);
+            if (!neighborhoodsResponse.Success)
+                return new Response<string>()
+                    .WithMessage(neighborhoodsResponse.Message!)
+                    .WithSuccess(neighborhoodsResponse.Success)
+                    .WithFailures(neighborhoodsResponse.Failures)
+                    .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                    .WithData("Data seeding was failed!");
+            failures.AddRange(neighborhoodsResponse.Failures);
+        }
 
         // var roles = new List<CreateRoleDto>()
         // {
@@ -383,6 +486,7 @@ public class SeedDataHandler : IRequestHandler<SeedDataCommand, Response<string>
             .WithMessage("Success in data seeding")
             .WithSuccess(true)
             .WithStatusCode((int)HttpStatusCode.OK)
+            .WithFailures(failures)
             .WithData("Data seeding was successful!");
     }
 

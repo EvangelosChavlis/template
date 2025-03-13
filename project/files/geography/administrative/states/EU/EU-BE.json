@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Brussels-Capital",
+      "Code": "EU-BE-BRU",
+      "Description": "Brussels-Capital is the capital region of Belgium and the seat of the European Union. Known for its historic buildings, cultural institutions, and cosmopolitan atmosphere.",
+      "Capital": "Brussels",
+      "Population": 1200000,
+      "AreaKm2": 161
+    },
+    {
+      "Name": "Antwerp",
+      "Code": "EU-BE-VAN",
+      "Description": "Antwerp is a port city in the Flanders region, known for its diamond district, vibrant arts scene, and historical architecture.",
+      "Capital": "Antwerp",
+      "Population": 520000,
+      "AreaKm2": 204
+    },
+    {
+      "Name": "East Flanders",
+      "Code": "EU-BE-VOV",
+      "Description": "East Flanders is a region located in the north of Belgium, famous for its medieval cities, such as Ghent, and its scenic countryside.",
+      "Capital": "Ghent",
+      "Population": 1400000,
+      "AreaKm2": 2930
+    },
+    {
+      "Name": "Flemish Brabant",
+      "Code": "EU-BE-VBR",
+      "Description": "Flemish Brabant is a province in the central part of Belgium, known for its historical sites, green spaces, and proximity to Brussels.",
+      "Capital": "Leuven",
+      "Population": 400000,
+      "AreaKm2": 2163
+    },
+    {
+      "Name": "Hainaut",
+      "Code": "EU-BE-WHT",
+      "Description": "Hainaut is a province in the Wallonia region of Belgium, known for its industrial heritage, picturesque towns, and nature reserves.",
+      "Capital": "Mons",
+      "Population": 1300000,
+      "AreaKm2": 3800
+    },
+    {
+      "Name": "Liège",
+      "Code": "EU-BE-WLG",
+      "Description": "Liège is a province in Wallonia, known for its industrial history, cultural landmarks, and the vibrant city of Liège itself.",
+      "Capital": "Liège",
+      "Population": 1100000,
+      "AreaKm2": 3800
+    },
+    {
+      "Name": "Luxembourg",
+      "Code": "EU-BE-WLX",
+      "Description": "Luxembourg is a province in the southernmost part of Belgium, known for its rural beauty, medieval castles, and small picturesque towns.",
+      "Capital": "Arlon",
+      "Population": 300000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Namur",
+      "Code": "EU-BE-WNA",
+      "Description": "Namur is a province in the Wallonia region of Belgium, known for its rich history, including the Namur citadel, and its proximity to the Ardennes.",
+      "Capital": "Namur",
+      "Population": 500000,
+      "AreaKm2": 3667
+    },
+    {
+      "Name": "Walloon Brabant",
+      "Code": "EU-BE-WBR",
+      "Description": "Walloon Brabant is a province in Wallonia, known for its beautiful nature reserves, charming towns, and historical monuments.",
+      "Capital": "Wavre",
+      "Population": 380000,
+      "AreaKm2": 1060
+    },
+    {
+      "Name": "West Flanders",
+      "Code": "EU-BE-VWV",
+      "Description": "West Flanders is a coastal province in Flanders, known for its beaches, historical towns, and the city of Bruges, a UNESCO World Heritage Site.",
+      "Capital": "Bruges",
+      "Population": 1200000,
+      "AreaKm2": 3190
+    }
+]  

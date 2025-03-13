@@ -11,6 +11,40 @@ public class RegionIndexes : IEntityTypeConfiguration<Region>
 {
     public void Configure(EntityTypeBuilder<Region> builder)
     {
+        builder.HasIndex(r => r.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(Region)}_
+                {nameof(Region.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
+        builder.HasIndex(r => r.Code)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(Region)}_
+                {nameof(Region.Code)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
+        builder.HasIndex(r 
+            => new { 
+                r.Id,
+                r.Code,
+                r.StateId
+            })
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(Region)}_
+                {nameof(Region.Id)}_
+                {nameof(Region.Code)}_
+                {nameof(Region.StateId)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
         builder.HasIndex(r 
             => new { 
                 r.Id, 
@@ -26,7 +60,9 @@ public class RegionIndexes : IEntityTypeConfiguration<Region>
                 {nameof(Region.Name)}_
                 {nameof(Region.AreaKm2)}_
                 {nameof(Region.Code)}_
-                {nameof(Region.IsActive)}
-            ".Replace("\n", "").Trim());
+                {nameof(Region.IsActive)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

@@ -1,0 +1,67 @@
+[
+    {
+      "Name": "Khartoum",
+      "Code": "AF-SD-KH",
+      "Description": "The capital region, the political and administrative center of Sudan.",
+      "Capital": "Khartoum",
+      "Population": 7500000,
+      "AreaKm2": 22100
+    },
+    {
+      "Name": "Northern",
+      "Code": "AF-SD-ND",
+      "Description": "Region known for the Nile and ancient Nubian history.",
+      "Capital": "Dongola",
+      "Population": 1300000,
+      "AreaKm2": 348000
+    },
+    {
+      "Name": "Red Sea",
+      "Code": "AF-SD-RS",
+      "Description": "A coastal region known for its Red Sea coastline and ports.",
+      "Capital": "Port Sudan",
+      "Population": 1500000,
+      "AreaKm2": 218000
+    },
+    {
+      "Name": "Kordofan",
+      "Code": "AF-SD-KD",
+      "Description": "A central region known for agriculture and pastoralism.",
+      "Capital": "El Obeid",
+      "Population": 4000000,
+      "AreaKm2": 530000
+    },
+    {
+      "Name": "Darfur",
+      "Code": "AF-SD-DF",
+      "Description": "Region known for its complex ethnic diversity and past conflicts.",
+      "Capital": "El Fasher",
+      "Population": 8000000,
+      "AreaKm2": 493180
+    },
+    {
+      "Name": "Blue Nile",
+      "Code": "AF-SD-BN",
+      "Description": "Region located along the Blue Nile River, known for its mountainous terrain.",
+      "Capital": "Damazin",
+      "Population": 1500000,
+      "AreaKm2": 50000
+    },
+    {
+      "Name": "Sennar",
+      "Code": "AF-SD-SN",
+      "Description": "A region known for its agriculture, particularly around the Sennar Dam.",
+      "Capital": "Sennar",
+      "Population": 2000000,
+      "AreaKm2": 53300
+    },
+    {
+      "Name": "Gadarif",
+      "Code": "AF-SD-GD",
+      "Description": "An eastern region with a strong agricultural economy.",
+      "Capital": "Gadarif",
+      "Population": 1800000,
+      "AreaKm2": 64300
+    }
+]
+  

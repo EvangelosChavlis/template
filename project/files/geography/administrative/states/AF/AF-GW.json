@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Bafata",
+      "Code": "AF-GW-BA",
+      "Description": "Bafata is located in central Guinea-Bissau, known for its agricultural production and historic significance.",
+      "Capital": "Bafata",
+      "Population": 225000,
+      "AreaKm2": 5981
+    },
+    {
+      "Name": "Biombo",
+      "Code": "AF-GW-BM",
+      "Description": "Biombo is a coastal region near Bissau, known for its fishing industry and trade.",
+      "Capital": "Quinhamel",
+      "Population": 100000,
+      "AreaKm2": 839
+    },
+    {
+      "Name": "Bolama",
+      "Code": "AF-GW-BO",
+      "Description": "Bolama is an archipelago region with a rich colonial history and a strong fishing industry.",
+      "Capital": "Bolama",
+      "Population": 35000,
+      "AreaKm2": 2624
+    },
+    {
+      "Name": "Cacheu",
+      "Code": "AF-GW-CA",
+      "Description": "Cacheu is located in the northwestern part of the country, known for its historical sites and rice farming.",
+      "Capital": "Cacheu",
+      "Population": 200000,
+      "AreaKm2": 5174
+    },
+    {
+      "Name": "Gabu",
+      "Code": "AF-GW-GA",
+      "Description": "Gabu is the easternmost region of Guinea-Bissau, known for its livestock farming and ethnic diversity.",
+      "Capital": "Gabu",
+      "Population": 215000,
+      "AreaKm2": 9162
+    },
+    {
+      "Name": "Oio",
+      "Code": "AF-GW-OI",
+      "Description": "Oio is the largest region by area, located in the north-central part of the country, known for agriculture and cashew production.",
+      "Capital": "Farim",
+      "Population": 250000,
+      "AreaKm2": 5975
+    },
+    {
+      "Name": "Quinara",
+      "Code": "AF-GW-QU",
+      "Description": "Quinara is a southwestern region known for its lush forests and agricultural activities.",
+      "Capital": "Buba",
+      "Population": 65000,
+      "AreaKm2": 3120
+    },
+    {
+      "Name": "Tombali",
+      "Code": "AF-GW-TO",
+      "Description": "Tombali is located in the southern part of Guinea-Bissau, known for its coastal access and agriculture.",
+      "Capital": "Catio",
+      "Population": 90000,
+      "AreaKm2": 3773
+    }
+]  

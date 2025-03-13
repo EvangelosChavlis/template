@@ -1,0 +1,210 @@
+[
+    {
+      "Name": "Aceh",
+      "Code": "AS-ID-AC",
+      "Description": "A province on the northern tip of Sumatra, known for its rich history, culture, and natural beauty.",
+      "Capital": "Banda Aceh",
+      "Population": 5550000,
+      "AreaKm2": 57335
+    },
+    {
+      "Name": "Bali",
+      "Code": "AS-ID-BA",
+      "Description": "A world-renowned tourist destination known for its beaches, temples, and vibrant culture.",
+      "Capital": "Denpasar",
+      "Population": 4510000,
+      "AreaKm2": 5780
+    },
+    {
+      "Name": "Bangka Belitung Islands",
+      "Code": "AS-ID-BB",
+      "Description": "A province known for its tin production, beautiful beaches, and small islands.",
+      "Capital": "Pangkal Pinang",
+      "Population": 1320000,
+      "AreaKm2": 6795
+    },
+    {
+      "Name": "Banten",
+      "Code": "AS-ID-BT",
+      "Description": "A province on the westernmost part of Java, known for its modernity and historical sites.",
+      "Capital": "Serang",
+      "Population": 12500000,
+      "AreaKm2": 9676
+    },
+    {
+      "Name": "Bengkulu",
+      "Code": "AS-ID-BE",
+      "Description": "A province located on the southwestern coast of Sumatra, known for its natural beauty and rich history.",
+      "Capital": "Bengkulu",
+      "Population": 1900000,
+      "AreaKm2": 19859
+    },
+    {
+      "Name": "Gorontalo",
+      "Code": "AS-ID-GO",
+      "Description": "A province on the island of Sulawesi, known for its marine biodiversity and tranquil atmosphere.",
+      "Capital": "Gorontalo",
+      "Population": 1150000,
+      "AreaKm2": 12440
+    },
+    {
+      "Name": "Jakarta",
+      "Code": "AS-ID-JK",
+      "Description": "The capital and largest city of Indonesia, known for its economic significance and vibrant urban culture.",
+      "Capital": "Jakarta",
+      "Population": 10187595,
+      "AreaKm2": 662
+    },
+    {
+      "Name": "Jambi",
+      "Code": "AS-ID-JA",
+      "Description": "A province on Sumatra, known for its agricultural products and ancient temples.",
+      "Capital": "Jambi",
+      "Population": 3500000,
+      "AreaKm2": 5354
+    },
+    {
+      "Name": "Java",
+      "Code": "AS-ID-JV",
+      "Description": "The most populous island in Indonesia, home to the capital city, Jakarta, and known for its cultural, historical, and economic significance.",
+      "Capital": "Jakarta",
+      "Population": 141000000,
+      "AreaKm2": 138794
+    },
+    {
+      "Name": "Kalimantan",
+      "Code": "AS-ID-KA",
+      "Description": "The Indonesian part of Borneo, known for its rainforests, wildlife, and rich natural resources.",
+      "Capital": "Pontianak",
+      "Population": 14200000,
+      "AreaKm2": 544150
+    },
+    {
+      "Name": "Lampung",
+      "Code": "AS-ID-LA",
+      "Description": "A province on the southern tip of Sumatra, known for its agricultural production and scenic landscapes.",
+      "Capital": "Bandar Lampung",
+      "Population": 8000000,
+      "AreaKm2": 35647
+    },
+    {
+      "Name": "Maluku",
+      "Code": "AS-ID-MA",
+      "Description": "A province made up of numerous islands, known for its history as the Spice Islands and its natural beauty.",
+      "Capital": "Ambon",
+      "Population": 1800000,
+      "AreaKm2": 71248
+    },
+    {
+      "Name": "North Maluku",
+      "Code": "AS-ID-MU",
+      "Description": "A province in eastern Indonesia, known for its islands, natural resources, and maritime history.",
+      "Capital": "Ternate",
+      "Population": 1100000,
+      "AreaKm2": 31913
+    },
+    {
+      "Name": "North Sulawesi",
+      "Code": "AS-ID-SN",
+      "Description": "A province in northern Sulawesi, known for its natural beauty, marine biodiversity, and rich culture.",
+      "Capital": "Manado",
+      "Population": 2500000,
+      "AreaKm2": 15300
+    },
+    {
+      "Name": "North Sumatra",
+      "Code": "AS-ID-SU",
+      "Description": "A province in western Sumatra, known for its ethnic diversity, lakes, and agriculture.",
+      "Capital": "Medan",
+      "Population": 14000000,
+      "AreaKm2": 74681
+    },
+    {
+      "Name": "Papua",
+      "Code": "AS-ID-PA",
+      "Description": "A province in the western part of New Guinea, known for its indigenous cultures, rainforests, and biodiversity.",
+      "Capital": "Jayapura",
+      "Population": 3100000,
+      "AreaKm2": 319036
+    },
+    {
+      "Name": "West Papua",
+      "Code": "AS-ID-PP",
+      "Description": "A province located in the western part of New Guinea, known for its indigenous communities and rugged landscapes.",
+      "Capital": "Manokwari",
+      "Population": 900000,
+      "AreaKm2": 102955
+    },
+    {
+      "Name": "Riau",
+      "Code": "AS-ID-RI",
+      "Description": "A province on the eastern coast of Sumatra, known for its palm oil industry and natural resources.",
+      "Capital": "Pekanbaru",
+      "Population": 6000000,
+      "AreaKm2": 87707
+    },
+    {
+      "Name": "South Kalimantan",
+      "Code": "AS-ID-KS",
+      "Description": "A province in Indonesian Borneo, known for its coal mining industry and rich cultural heritage.",
+      "Capital": "Banjarmasin",
+      "Population": 4000000,
+      "AreaKm2": 37306
+    },
+    {
+      "Name": "South Sulawesi",
+      "Code": "AS-ID-SA",
+      "Description": "A province in southern Sulawesi, known for its vibrant culture, economic growth, and agricultural products.",
+      "Capital": "Makassar",
+      "Population": 8500000,
+      "AreaKm2": 46611
+    },
+    {
+      "Name": "South Sumatra",
+      "Code": "AS-ID-SS",
+      "Description": "A province in Sumatra, known for its natural resources, particularly coal, and its vibrant culture.",
+      "Capital": "Palembang",
+      "Population": 8000000,
+      "AreaKm2": 94513
+    },
+    {
+      "Name": "Southeast Sulawesi",
+      "Code": "AS-ID-SE",
+      "Description": "A province in southeastern Sulawesi, known for its mining industry, biodiversity, and beautiful landscapes.",
+      "Capital": "Kendari",
+      "Population": 2500000,
+      "AreaKm2": 38020
+    },
+    {
+      "Name": "West Java",
+      "Code": "AS-ID-JW",
+      "Description": "A province in western Java, known for its dense population, economic development, and proximity to Jakarta.",
+      "Capital": "Bandung",
+      "Population": 49000000,
+      "AreaKm2": 35377
+    },
+    {
+      "Name": "West Kalimantan",
+      "Code": "AS-ID-KB",
+      "Description": "A province on the Indonesian part of Borneo, known for its rainforests, rivers, and diverse ethnic groups.",
+      "Capital": "Pontianak",
+      "Population": 5000000,
+      "AreaKm2": 146800
+    },
+    {
+      "Name": "West Nusa Tenggara",
+      "Code": "AS-ID-NB",
+      "Description": "A province in the eastern part of Indonesia, known for its tourism, beaches, and rich culture.",
+      "Capital": "Mataram",
+      "Population": 5000000,
+      "AreaKm2": 20300
+    },
+    {
+      "Name": "West Papua",
+      "Code": "AS-ID-WP",
+      "Description": "A province in the western part of New Guinea, known for its indigenous cultures, rugged landscapes, and rich biodiversity.",
+      "Capital": "Manokwari",
+      "Population": 900000,
+      "AreaKm2": 102955
+    }
+]  

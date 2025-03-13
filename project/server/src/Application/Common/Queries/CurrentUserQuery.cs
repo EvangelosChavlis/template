@@ -45,7 +45,7 @@ public class CurrentUserHandler : IRequestHandler<CurrentUserQuery, CurrentUserD
         var includes = new Expression<Func<User, object>>[] { };
         var filters = new Expression<Func<User, bool>>[] { u => u.Id == userId};
         var projection = (Expression<Func<User, User>>)(u => new User { Id = u.Id, UserName = u.UserName });
-        var user = await _commonRepository.GetResultByIdAsync(filters, includes, projection, token);
+        var user = await _commonRepository.GetResultByIdAsync<User>(filters, includes, projection, token);
 
         // Check for existence
         if (user is null)

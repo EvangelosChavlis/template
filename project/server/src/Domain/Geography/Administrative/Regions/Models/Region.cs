@@ -26,14 +26,14 @@ public class Region : BaseEntity
     public double AreaKm2 { get; set; }
 
     /// <summary>
-    /// Gets or sets a value indicating whether the region is active.
-    /// </summary>
-    public bool IsActive { get; set; }
-
-    /// <summary>
     /// Gets or sets the code of the region.
     /// </summary>
     public string Code { get; set; }
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the region is active.
+    /// </summary>
+    public bool IsActive { get; set; }
 
     #region Foreign keys
 

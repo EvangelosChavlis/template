@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Zambezi",
+      "Code": "AF-NA-ZA",
+      "Description": "Located in the northeast, Zambezi is named after the Zambezi River. It is a rich region in wildlife, particularly in the Caprivi Strip.",
+      "Capital": "Katima Mulilo",
+      "Population": 88000,
+      "AreaKm2": 7011
+    },
+    {
+      "Name": "Khomas",
+      "Code": "AF-NA-KH",
+      "Description": "Khomas is home to Namibia s capital, Windhoek. It is the political, economic, and cultural center of the country.",
+      "Capital": "Windhoek",
+      "Population": 400000,
+      "AreaKm2": 20769
+    },
+    {
+      "Name": "Erongo",
+      "Code": "AF-NA-ER",
+      "Description": "Erongo is located along the Atlantic coast, known for its coastal towns such as Swakopmund and Walvis Bay. It also features beautiful beaches and the Namib Desert.",
+      "Capital": "Swakopmund",
+      "Population": 150000,
+      "AreaKm2": 63117
+    },
+    {
+      "Name": "Otjozondjupa",
+      "Code": "AF-NA-OJ",
+      "Description": "Otjozondjupa is a central region of Namibia, home to the capital of the region, Otjiwarongo. It is known for its natural landscapes and wildlife.",
+      "Capital": "Otjiwarongo",
+      "Population": 160000,
+      "AreaKm2": 172726
+    },
+    {
+      "Name": "Hardap",
+      "Code": "AF-NA-HA",
+      "Description": "Hardap is located in the southern part of Namibia, known for its agricultural production, including farming and vineyards. It also contains the Hardap Dam.",
+      "Capital": "Mariental",
+      "Population": 86000,
+      "AreaKm2": 110658
+    },
+    {
+      "Name": "Karas",
+      "Code": "AF-NA-KA",
+      "Description": "Karas is situated in the southernmost part of Namibia and features a diverse landscape, including the Namib Desert and part of the Fish River Canyon.",
+      "Capital": "Keetmanshoop",
+      "Population": 77000,
+      "AreaKm2": 161913
+    },
+    {
+      "Name": "Kunene",
+      "Code": "AF-NA-KU",
+      "Description": "Kunene is located in the northwestern region of Namibia, known for the beautiful Damaraland and the Etosha National Park.",
+      "Capital": "Opuwo",
+      "Population": 70000,
+      "AreaKm2": 115000
+    },
+    {
+      "Name": "Omusati",
+      "Code": "AF-NA-OM",
+      "Description": "Omusati is situated in the northern part of Namibia. It is a rural area with a significant agricultural presence, particularly maize farming.",
+      "Capital": "Outapi",
+      "Population": 230000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Ohangwena",
+      "Code": "AF-NA-OH",
+      "Description": "Ohangwena is a northern region of Namibia, known for its agricultural activities and its proximity to the Angolan border.",
+      "Capital": "Engela",
+      "Population": 400000,
+      "AreaKm2": 9751
+    },
+    {
+      "Name": "Omulunga",
+      "Code": "AF-NA-OL",
+      "Description": "Omulunga is located in the northern part of Namibia. It is an area with a heavy focus on agriculture and traditional living.",
+      "Capital": "Ondangwa",
+      "Population": 200000,
+      "AreaKm2": 20000
+    }
+]  

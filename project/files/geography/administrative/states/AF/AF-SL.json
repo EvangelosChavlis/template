@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Freetown",
+      "Code": "AF-SL-FR",
+      "Description": "Freetown is the capital and largest city of Sierra Leone, known for its historic significance, coastal beaches, and vibrant culture.",
+      "Capital": "Freetown",
+      "Population": 1000000,
+      "AreaKm2": 600
+    },
+    {
+      "Name": "Bo",
+      "Code": "AF-SL-BO",
+      "Description": "Bo is the second-largest city in Sierra Leone, located in the southern part of the country, and serves as a key administrative and commercial hub.",
+      "Capital": "Bo",
+      "Population": 200000,
+      "AreaKm2": 50
+    },
+    {
+      "Name": "Kenema",
+      "Code": "AF-SL-KE",
+      "Description": "Kenema is an important town in eastern Sierra Leone, known for its mining industry, particularly diamonds, and as a gateway to the southern region.",
+      "Capital": "Kenema",
+      "Population": 150000,
+      "AreaKm2": 40
+    }
+]  

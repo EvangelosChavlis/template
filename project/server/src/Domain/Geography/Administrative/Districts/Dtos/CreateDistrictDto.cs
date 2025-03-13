@@ -8,5 +8,7 @@ public record CreateDistrictDto(
     string Name,
     string Description,
     long Population,
+    double AreaKm2,
+    string Code,
     Guid MunicipalityId
 );

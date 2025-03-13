@@ -1,0 +1,251 @@
+[
+    {
+      "Name": "Arusha",
+      "Code": "AF-TZ-AR",
+      "Description": "A major tourist hub near Serengeti and Kilimanjaro.",
+      "Capital": "Arusha",
+      "Population": 2700000,
+      "AreaKm2": 37000
+    },
+    {
+      "Name": "Dar es Salaam",
+      "Code": "AF-TZ-DS",
+      "Description": "Tanzania s largest city and economic center.",
+      "Capital": "Dar es Salaam",
+      "Population": 6300000,
+      "AreaKm2": 1590
+    },
+    {
+      "Name": "Dodoma",
+      "Code": "AF-TZ-DO",
+      "Description": "The capital city and political center of Tanzania.",
+      "Capital": "Dodoma",
+      "Population": 2600000,
+      "AreaKm2": 41311
+    },
+    {
+      "Name": "Geita",
+      "Code": "AF-TZ-GE",
+      "Description": "A gold-rich region in northwestern Tanzania.",
+      "Capital": "Geita",
+      "Population": 2000000,
+      "AreaKm2": 20700
+    },
+    {
+      "Name": "Iringa",
+      "Code": "AF-TZ-IR",
+      "Description": "Known for Ruaha National Park and agriculture.",
+      "Capital": "Iringa",
+      "Population": 940000,
+      "AreaKm2": 35843
+    },
+    {
+      "Name": "Kagera",
+      "Code": "AF-TZ-KA",
+      "Description": "A coffee-growing region bordering Uganda and Rwanda.",
+      "Capital": "Bukoba",
+      "Population": 2600000,
+      "AreaKm2": 35000
+    },
+    {
+      "Name": "Katavi",
+      "Code": "AF-TZ-KT",
+      "Description": "A remote region with vast wilderness areas.",
+      "Capital": "Mpanda",
+      "Population": 570000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Kigoma",
+      "Code": "AF-TZ-KI",
+      "Description": "A region along Lake Tanganyika with fishing and trade.",
+      "Capital": "Kigoma",
+      "Population": 2200000,
+      "AreaKm2": 45066
+    },
+    {
+      "Name": "Kilimanjaro",
+      "Code": "AF-TZ-KL",
+      "Description": "Home to Mount Kilimanjaro, Africa s highest peak.",
+      "Capital": "Moshi",
+      "Population": 1800000,
+      "AreaKm2": 13709
+    },
+    {
+      "Name": "Lindi",
+      "Code": "AF-TZ-LI",
+      "Description": "A coastal region with rich history and natural gas reserves.",
+      "Capital": "Lindi",
+      "Population": 865000,
+      "AreaKm2": 67130
+    },
+    {
+      "Name": "Manyara",
+      "Code": "AF-TZ-MA",
+      "Description": "Known for Tarangire National Park and farming.",
+      "Capital": "Babati",
+      "Population": 1400000,
+      "AreaKm2": 44922
+    },
+    {
+      "Name": "Mara",
+      "Code": "AF-TZ-MR",
+      "Description": "Part of the Serengeti and rich in wildlife.",
+      "Capital": "Musoma",
+      "Population": 2100000,
+      "AreaKm2": 21760
+    },
+    {
+      "Name": "Mbeya",
+      "Code": "AF-TZ-MB",
+      "Description": "A fertile agricultural region in the southwest.",
+      "Capital": "Mbeya",
+      "Population": 2900000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Morogoro",
+      "Code": "AF-TZ-MO",
+      "Description": "A key farming and industrial region.",
+      "Capital": "Morogoro",
+      "Population": 2700000,
+      "AreaKm2": 70799
+    },
+    {
+      "Name": "Mtwara",
+      "Code": "AF-TZ-MT",
+      "Description": "A southern coastal region with cashew farming.",
+      "Capital": "Mtwara",
+      "Population": 1400000,
+      "AreaKm2": 16910
+    },
+    {
+      "Name": "Mwanza",
+      "Code": "AF-TZ-MW",
+      "Description": "A major trade and fishing center on Lake Victoria.",
+      "Capital": "Mwanza",
+      "Population": 3500000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Njombe",
+      "Code": "AF-TZ-NJ",
+      "Description": "A highland region known for tea and timber production.",
+      "Capital": "Njombe",
+      "Population": 730000,
+      "AreaKm2": 21247
+    },
+    {
+      "Name": "Pemba North",
+      "Code": "AF-TZ-PN",
+      "Description": "An island region part of Zanzibar.",
+      "Capital": "Wete",
+      "Population": 220000,
+      "AreaKm2": 574
+    },
+    {
+      "Name": "Pemba South",
+      "Code": "AF-TZ-PS",
+      "Description": "A part of Zanzibar with clove farming.",
+      "Capital": "Chake Chake",
+      "Population": 195000,
+      "AreaKm2": 332
+    },
+    {
+      "Name": "Pwani",
+      "Code": "AF-TZ-PW",
+      "Description": "A coastal region near Dar es Salaam.",
+      "Capital": "Kibaha",
+      "Population": 1200000,
+      "AreaKm2": 32547
+    },
+    {
+      "Name": "Rukwa",
+      "Code": "AF-TZ-RK",
+      "Description": "A remote western region with agriculture.",
+      "Capital": "Sumbawanga",
+      "Population": 1500000,
+      "AreaKm2": 27000
+    },
+    {
+      "Name": "Ruvuma",
+      "Code": "AF-TZ-RV",
+      "Description": "A southern region known for the Selous Game Reserve.",
+      "Capital": "Songea",
+      "Population": 1400000,
+      "AreaKm2": 63536
+    },
+    {
+      "Name": "Shinyanga",
+      "Code": "AF-TZ-SH",
+      "Description": "A region with mining and cotton farming.",
+      "Capital": "Shinyanga",
+      "Population": 1700000,
+      "AreaKm2": 50780
+    },
+    {
+      "Name": "Simiyu",
+      "Code": "AF-TZ-SI",
+      "Description": "A new region formed in 2012, with agriculture and cattle.",
+      "Capital": "Bariadi",
+      "Population": 1600000,
+      "AreaKm2": 23547
+    },
+    {
+      "Name": "Singida",
+      "Code": "AF-TZ-SG",
+      "Description": "A central region with semi-arid climate.",
+      "Capital": "Singida",
+      "Population": 1500000,
+      "AreaKm2": 49741
+    },
+    {
+      "Name": "Songwe",
+      "Code": "AF-TZ-SO",
+      "Description": "A new region formed in 2016 from Mbeya.",
+      "Capital": "Vwawa",
+      "Population": 1200000,
+      "AreaKm2": 27306
+    },
+    {
+      "Name": "Tabora",
+      "Code": "AF-TZ-TA",
+      "Description": "A central region known for tobacco farming.",
+      "Capital": "Tabora",
+      "Population": 2300000,
+      "AreaKm2": 76251
+    },
+    {
+      "Name": "Tanga",
+      "Code": "AF-TZ-TG",
+      "Description": "A coastal region with tea and sisal farming.",
+      "Capital": "Tanga",
+      "Population": 2200000,
+      "AreaKm2": 26808
+    },
+    {
+      "Name": "Zanzibar North",
+      "Code": "AF-TZ-ZN",
+      "Description": "A tourism-heavy part of Zanzibar.",
+      "Capital": "Mkokotoni",
+      "Population": 300000,
+      "AreaKm2": 470
+    },
+    {
+      "Name": "Zanzibar South",
+      "Code": "AF-TZ-ZS",
+      "Description": "Known for beaches and spice farming.",
+      "Capital": "Koani",
+      "Population": 400000,
+      "AreaKm2": 854
+    },
+    {
+      "Name": "Zanzibar West",
+      "Code": "AF-TZ-ZW",
+      "Description": "Includes Stone Town, Zanzibar s historic center.",
+      "Capital": "Zanzibar City",
+      "Population": 800000,
+      "AreaKm2": 230
+    }
+]
+  

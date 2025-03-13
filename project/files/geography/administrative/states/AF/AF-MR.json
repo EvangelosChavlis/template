@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Adrar",
+      "Code": "AF-MR-AD",
+      "Description": "Adrar is a region in the north-central part of Mauritania, characterized by vast desert landscapes, including part of the Sahara.",
+      "Capital": "Atar",
+      "Population": 400000,
+      "AreaKm2": 120000
+    },
+    {
+      "Name": "Assaba",
+      "Code": "AF-MR-AS",
+      "Description": "Assaba is located in the southern part of Mauritania, known for its agricultural activity and large pastoral communities.",
+      "Capital": "Kiffa",
+      "Population": 700000,
+      "AreaKm2": 55000
+    },
+    {
+      "Name": "Brakna",
+      "Code": "AF-MR-BR",
+      "Description": "Brakna is in the southwestern part of Mauritania and is a major agricultural region, producing crops such as millet, maize, and sorghum.",
+      "Capital": "Rosso",
+      "Population": 600000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Gorgol",
+      "Code": "AF-MR-GR",
+      "Description": "Gorgol is located in the southern part of Mauritania and is known for its fertile lands and agriculture, especially rice cultivation.",
+      "Capital": "Kaedi",
+      "Population": 500000,
+      "AreaKm2": 18000
+    },
+    {
+      "Name": "Guidimaka",
+      "Code": "AF-MR-GM",
+      "Description": "Guidimaka is in the southeastern part of Mauritania, known for its pastoralism and rural communities.",
+      "Capital": "Sélibaby",
+      "Population": 400000,
+      "AreaKm2": 18000
+    },
+    {
+      "Name": "Hodh El Gharbi",
+      "Code": "AF-MR-HG",
+      "Description": "Hodh El Gharbi is located in the eastern part of Mauritania and is mainly a desert region with small oases and a nomadic lifestyle.",
+      "Capital": "Aioun",
+      "Population": 200000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Hodh El Chargui",
+      "Code": "AF-MR-HC",
+      "Description": "Hodh El Chargui is in the southeastern region of Mauritania and is also a desert area, home to various nomadic tribes.",
+      "Capital": "Néma",
+      "Population": 250000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Inchiri",
+      "Code": "AF-MR-IN",
+      "Description": "Inchiri is a region in the northwestern part of Mauritania, known for its arid conditions and desert landscapes.",
+      "Capital": "Akjoujt",
+      "Population": 100000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Tagant",
+      "Code": "AF-MR-TG",
+      "Description": "Tagant is located in central Mauritania, characterized by vast desert terrain, and is sparsely populated with nomadic tribes.",
+      "Capital": "Tidjikja",
+      "Population": 150000,
+      "AreaKm2": 73000
+    },
+    {
+      "Name": "Tiris Zemmour",
+      "Code": "AF-MR-TZ",
+      "Description": "Tiris Zemmour is in the northern part of Mauritania, close to the border with Western Sahara, and is largely a desert region.",
+      "Capital": "Zouerate",
+      "Population": 100000,
+      "AreaKm2": 130000
+    },
+    {
+      "Name": "Nouakchott",
+      "Code": "AF-MR-NK",
+      "Description": "Nouakchott is the capital and largest city of Mauritania, located on the Atlantic coast, serving as the country s economic, political, and cultural hub.",
+      "Capital": "Nouakchott",
+      "Population": 1200000,
+      "AreaKm2": 1000
+    }
+]  

@@ -14,11 +14,11 @@ public static class ImportStateModelMapper
     /// preparing it for state entity creation by adding the associated country ID.
     /// </summary>
     /// <param name="dto">The data transfer object containing imported state details.</param>
-    /// <param name="CountryId">The unique identifier of the country the state belongs to.</param>
+    /// <param name="countryId">The unique identifier of the country the state belongs to.</param>
     /// <returns>A new <see cref="CreateStateDto"/> instance populated with data from the provided DTO.</returns>
     public static CreateStateDto ImportStateMapping(
         this ImportStateDto dto, 
-        Guid CountryId
+        Guid countryId
     ) => new (
         Name: dto.Name,
         Description: dto.Description,
@@ -26,6 +26,6 @@ public static class ImportStateModelMapper
         Population: dto.Population,
         AreaKm2: dto.AreaKm2,
         Code: dto.Code,
-        CountryId: CountryId
+        CountryId: countryId
     );
 }

@@ -10,7 +10,6 @@ using server.src.Domain.Common.Dtos;
 using server.src.Domain.Geography.Administrative.Municipalities.Dtos;
 using server.src.Domain.Geography.Administrative.Municipalities.Models;
 using server.src.Domain.Geography.Administrative.Regions.Models;
-using server.src.Domain.Geography.Administrative.States.Models;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Geography.Administrative.Municipalities.Commands;
@@ -43,10 +42,14 @@ public class CreateMunicipalityHandler : IRequestHandler<CreateMunicipalityComma
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<Municipality, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<Municipality, bool>>[] 
+        { 
+            m => m.Name!.Equals(command.Dto.Name) ||
+                m.Code!.Equals(command.Dto.Code)
+        };
         var existingMunicipality = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the municipality already exists in the system
         if (existingMunicipality is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "San Salvador",
+      "Code": "NA-SV-SS",
+      "Description": "The capital and largest city, known for its bustling urban life, historical sites, and economic importance as the heart of the country.",
+      "Capital": "San Salvador",
+      "Population": 1800000,
+      "AreaKm2": 572
+    },
+    {
+      "Name": "Ahuachapan",
+      "Code": "NA-SV-AH",
+      "Description": "A region known for its coffee plantations, beautiful landscapes, and proximity to the Guatemalan border.",
+      "Capital": "Ahuachapan",
+      "Population": 300000,
+      "AreaKm2": 2010
+    },
+    {
+      "Name": "Santa Ana",
+      "Code": "NA-SV-SA",
+      "Description": "This region is famous for its volcano, scenic lakes, and being one of the country’s most productive agricultural areas.",
+      "Capital": "Santa Ana",
+      "Population": 600000,
+      "AreaKm2": 2130
+    },
+    {
+      "Name": "La Libertad",
+      "Code": "NA-SV-LL",
+      "Description": "A coastal region known for its beaches, popular surf spots, and its importance as a tourist destination.",
+      "Capital": "La Libertad",
+      "Population": 350000,
+      "AreaKm2": 1520
+    },
+    {
+      "Name": "Sonsonate",
+      "Code": "NA-SV-SSO",
+      "Description": "A region known for its agricultural products, especially coffee, and beautiful natural landscapes.",
+      "Capital": "Sonsonate",
+      "Population": 450000,
+      "AreaKm2": 1710
+    },
+    {
+      "Name": "San Miguel",
+      "Code": "NA-SV-SM",
+      "Description": "The easternmost department of El Salvador, known for its agricultural production, especially sugarcane and tropical fruits.",
+      "Capital": "San Miguel",
+      "Population": 300000,
+      "AreaKm2": 2480
+    },
+    {
+      "Name": "Morazan",
+      "Code": "NA-SV-MO",
+      "Description": "A rural region known for its forests, hills, and rivers, as well as its historical significance during the Salvadoran Civil War.",
+      "Capital": "San Francisco Gotera",
+      "Population": 200000,
+      "AreaKm2": 1170
+    },
+    {
+      "Name": "Cabanas",
+      "Code": "NA-SV-CA",
+      "Description": "A region known for its mining industry, natural beauty, and important historical and cultural landmarks.",
+      "Capital": "Sensuntepeque",
+      "Population": 150000,
+      "AreaKm2": 1490
+    }
+]  

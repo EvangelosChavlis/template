@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Bangui",
+      "Code": "AF-CF-BG",
+      "Description": "Bangui is the capital and the largest city of the Central African Republic. It serves as the political, economic, and cultural hub of the country.",
+      "Capital": "Bangui",
+      "Population": 734000,
+      "AreaKm2": 1000
+    },
+    {
+      "Name": "Bamingui-Bangoran",
+      "Code": "AF-CF-BB",
+      "Description": "Located in the northeast of the country, this region is known for its natural landscapes and wildlife, including parts of the Bamingui-Bangoran National Park.",
+      "Capital": "Bamingui",
+      "Population": 150000,
+      "AreaKm2": 113500
+    },
+    {
+      "Name": "Bassoko",
+      "Code": "AF-CF-BA",
+      "Description": "Bassoko is a region with a mix of tropical forests and savannas. Agriculture is an important activity in the region.",
+      "Capital": "Bassoko",
+      "Population": 500000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Haute-Kotto",
+      "Code": "AF-CF-HK",
+      "Description": "This region is located in the eastern part of the country and is home to diverse ethnic groups and significant forest resources.",
+      "Capital": "Kotto",
+      "Population": 800000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Mambéré-Kadéï",
+      "Code": "AF-CF-MK",
+      "Description": "Mambéré-Kadéï is located in the southwestern part of the country, known for its agricultural activities, particularly cattle farming.",
+      "Capital": "Berbérati",
+      "Population": 400000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Mbomou",
+      "Code": "AF-CF-MB",
+      "Description": "Mbomou is a region located in the southeastern part of the country, known for its biodiversity and proximity to the Democratic Republic of the Congo border.",
+      "Capital": "Bangassou",
+      "Population": 200000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Nané-Mambéré",
+      "Code": "AF-CF-NM",
+      "Description": "Located in the central region, this area is home to various ethnic groups and abundant wildlife.",
+      "Capital": "Nané",
+      "Population": 350000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Ouaka",
+      "Code": "AF-CF-OA",
+      "Description": "Ouaka is a central region, home to the country s rich biodiversity and agricultural resources. The region is relatively forested.",
+      "Capital": "Bambari",
+      "Population": 700000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Ouham",
+      "Code": "AF-CF-OH",
+      "Description": "Ouham is located in the northwest and is an important region for agriculture, especially cassava and maize.",
+      "Capital": "Bossangoa",
+      "Population": 1000000,
+      "AreaKm2": 35000
+    },
+    {
+      "Name": "Sangha-Mbaere",
+      "Code": "AF-CF-SM",
+      "Description": "Sangha-Mbaéré is located in the southwestern part of the country. The region is known for its tropical rainforests and rich wildlife.",
+      "Capital": "Nola",
+      "Population": 300000,
+      "AreaKm2": 40000
+    }
+]  

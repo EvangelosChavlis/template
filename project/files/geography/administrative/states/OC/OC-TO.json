@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Tongatapu",
+      "Code": "OC-TO-TG",
+      "Description": "Tongatapu is the largest and most populous island of Tonga, and it is the center of the country s political and cultural life. It is home to the capital, Nukualofa.",
+      "Capital": "Nukualofa",
+      "Population": 75000,
+      "AreaKm2": 260
+    },
+    {
+      "Name": "Haapai",
+      "Code": "OC-TO-HP",
+      "Description": "Haapai is a group of islands in Tonga known for its white sandy beaches, clear waters, and a more laid-back, rural atmosphere.",
+      "Capital": "Pangai",
+      "Population": 5000,
+      "AreaKm2": 110
+    },
+    {
+      "Name": "Vavau",
+      "Code": "OC-TO-VV",
+      "Description": "Vavau is an archipelago in northern Tonga, famous for its stunning harbors, tropical islands, and whale watching opportunities.",
+      "Capital": "Neiafu",
+      "Population": 13000,
+      "AreaKm2": 400
+    },
+    {
+      "Name": "Eua",
+      "Code": "OC-TO-EU",
+      "Description": "Eua is a small island located to the south of Tongatapu, known for its mountainous terrain, lush forests, and hiking opportunities.",
+      "Capital": "Neiafu",
+      "Population": 5000,
+      "AreaKm2": 130
+    }
+]  

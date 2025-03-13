@@ -39,7 +39,7 @@ public class GetTelemetryRecordByUserIdHandler :
         // Searching Item
         var userProjection = UserProjections.GetUserProjection();
         var userFilters = new Expression<Func<User, bool>>[] { x => x.Id == query.Id};
-        var user = await _commonRepository.GetResultByIdAsync(
+        var user = await _commonRepository.GetResultByIdAsync<User>(
             userFilters,
             projection: userProjection, 
             token: token

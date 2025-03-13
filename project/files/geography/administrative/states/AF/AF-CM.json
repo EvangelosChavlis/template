@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Centre",
+      "Code": "AF-CM-CE",
+      "Description": "Central region of Cameroon, home to the political capital, Yaounde.",
+      "Capital": "Yaoundé",
+      "Population": 3000000,
+      "AreaKm2": 29000
+    },
+    {
+      "Name": "Littoral",
+      "Code": "AF-CM-LT",
+      "Description": "Coastal region, home to the economic capital, Douala, a key port city.",
+      "Capital": "Douala",
+      "Population": 4000000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "West",
+      "Code": "AF-CM-WT",
+      "Description": "A region known for its highlands, including the famous Mount Cameroon.",
+      "Capital": "Bafoussam",
+      "Population": 1500000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "North West",
+      "Code": "AF-CM-NW",
+      "Description": "A region characterized by its mountainous terrain and vibrant ethnic groups.",
+      "Capital": "Bamenda",
+      "Population": 2000000,
+      "AreaKm2": 17500
+    },
+    {
+      "Name": "South West",
+      "Code": "AF-CM-SW",
+      "Description": "Known for its tropical forests, beaches, and Mount Cameroon.",
+      "Capital": "Buea",
+      "Population": 1400000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Adamawa",
+      "Code": "AF-CM-AD",
+      "Description": "Central highland region known for its ethnic diversity and rich culture.",
+      "Capital": "Ngaoundere",
+      "Population": 1000000,
+      "AreaKm2": 64000
+    },
+    {
+      "Name": "East",
+      "Code": "AF-CM-ES",
+      "Description": "A largely forested region, known for its wildlife and natural resources.",
+      "Capital": "Bertoua",
+      "Population": 700000,
+      "AreaKm2": 106000
+    },
+    {
+      "Name": "North",
+      "Code": "AF-CM-NR",
+      "Description": "The northernmost region, known for its desert-like landscapes and ethnic groups.",
+      "Capital": "Garoua",
+      "Population": 2500000,
+      "AreaKm2": 112000
+    }
+]  

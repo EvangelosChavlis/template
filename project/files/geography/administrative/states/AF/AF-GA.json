@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Estuaire",
+      "Code": "AF-GA-ES",
+      "Description": "Estuaire is located in the central coastal region of Gabon and includes the capital city, Libreville. It is the most economically developed province.",
+      "Capital": "Libreville",
+      "Population": 800000,
+      "AreaKm2": 19000
+    },
+    {
+      "Name": "Haut-Ogooué",
+      "Code": "AF-GA-HO",
+      "Description": "Haut-Ogooué is located in the southeast of Gabon and is known for its mining activities, particularly in manganese and gold.",
+      "Capital": "Franceville",
+      "Population": 200000,
+      "AreaKm2": 35000
+    },
+    {
+      "Name": "Moyen-Ogooué",
+      "Code": "AF-GA-MO",
+      "Description": "Moyen-Ogooué is a central province known for its lush forests, rivers, and agricultural activities, including cocoa and coffee production.",
+      "Capital": "Lambaréné",
+      "Population": 150000,
+      "AreaKm2": 23000
+    },
+    {
+      "Name": "Ngounié",
+      "Code": "AF-GA-NG",
+      "Description": "Ngounié is located in the southern part of Gabon and is known for its diverse wildlife and natural resources, including timber and minerals.",
+      "Capital": "Sodéco",
+      "Population": 100000,
+      "AreaKm2": 36000
+    },
+    {
+      "Name": "Nyanga",
+      "Code": "AF-GA-NY",
+      "Description": "Nyanga is a province in the southwest of Gabon, rich in natural beauty, including beaches, mountains, and rivers.",
+      "Capital": "Tchibanga",
+      "Population": 50000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Ogooué-Ivindo",
+      "Code": "AF-GA-OI",
+      "Description": "Ogooué-Ivindo is located in the northeast of Gabon and is known for its rainforests, wildlife, and the Ivindo River. It is also rich in mineral resources.",
+      "Capital": "Makokou",
+      "Population": 70000,
+      "AreaKm2": 67000
+    },
+    {
+      "Name": "Ogooué-Lolo",
+      "Code": "AF-GA-OL",
+      "Description": "Ogooué-Lolo is located in the southeastern part of Gabon, and its economy is based on agriculture, particularly the production of cacao and rubber.",
+      "Capital": "Koulamoutou",
+      "Population": 80000,
+      "AreaKm2": 42000
+    },
+    {
+      "Name": "Woleu-Ntem",
+      "Code": "AF-GA-WN",
+      "Description": "Woleu-Ntem is located in the northern part of Gabon, bordering Cameroon and Equatorial Guinea. The province has a diverse mix of natural resources.",
+      "Capital": "Oyem",
+      "Population": 120000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Mouila",
+      "Code": "AF-GA-MU",
+      "Description": "Mouila is located in the southern part of Gabon and is known for its agricultural activities, including palm oil production and timber.",
+      "Capital": "Mouila",
+      "Population": 60000,
+      "AreaKm2": 18000
+    }
+]  

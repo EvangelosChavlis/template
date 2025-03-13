@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Berea",
+      "Code": "AF-LS-BE",
+      "Description": "Berea is located in the central region of Lesotho, known for its agriculture and being home to the capital city, Maseru.",
+      "Capital": "Maseru",
+      "Population": 307000,
+      "AreaKm2": 1104
+    },
+    {
+      "Name": "Butha-Buthe",
+      "Code": "AF-LS-BB",
+      "Description": "Butha-Buthe is located in the northern part of Lesotho, known for its mountainous terrain and rural communities.",
+      "Capital": "Butha-Buthe",
+      "Population": 108000,
+      "AreaKm2": 1810
+    },
+    {
+      "Name": "Leribe",
+      "Code": "AF-LS-LE",
+      "Description": "Leribe is located in the northern part of Lesotho, known for its farming and access to South Africa.",
+      "Capital": "Maputsoe",
+      "Population": 288000,
+      "AreaKm2": 2873
+    },
+    {
+      "Name": "Mafeteng",
+      "Code": "AF-LS-MF",
+      "Description": "Mafeteng is located in the southern part of Lesotho, known for its agricultural activities and a mix of rural and urban areas.",
+      "Capital": "Mafeteng",
+      "Population": 139000,
+      "AreaKm2": 1716
+    },
+    {
+      "Name": "Mohale s Hoek",
+      "Code": "AF-LS-MH",
+      "Description": "Mohale s Hoek is located in the southern part of Lesotho, known for its agriculture and its proximity to the Mohale Dam.",
+      "Capital": "Mohale s Hoek",
+      "Population": 114000,
+      "AreaKm2": 2607
+    },
+    {
+      "Name": "Mokhotlong",
+      "Code": "AF-LS-MK",
+      "Description": "Mokhotlong is located in the northeastern part of Lesotho, known for its rugged terrain and agricultural activities.",
+      "Capital": "Mokhotlong",
+      "Population": 67000,
+      "AreaKm2": 3140
+    },
+    {
+      "Name": "Qacha s Nek",
+      "Code": "AF-LS-QN",
+      "Description": "Qacha s Nek is located in the southeastern part of Lesotho, known for its rural lifestyle and agricultural economy.",
+      "Capital": "Qacha s Nek",
+      "Population": 76000,
+      "AreaKm2": 1465
+    },
+    {
+      "Name": "Quthing",
+      "Code": "AF-LS-QT",
+      "Description": "Quthing is located in the southern part of Lesotho, known for its farming and livestock practices.",
+      "Capital": "Quthing",
+      "Population": 120000,
+      "AreaKm2": 2392
+    },
+    {
+      "Name": "Thaba-Tseka",
+      "Code": "AF-LS-TH",
+      "Description": "Thaba-Tseka is located in the central part of Lesotho, known for its mountainous landscapes and rural settlements.",
+      "Capital": "Thaba-Tseka",
+      "Population": 100000,
+      "AreaKm2": 3372
+    }
+]  

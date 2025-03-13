@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Bulawayo",
+      "Code": "AF-ZW-BY",
+      "Description": "The second-largest city in Zimbabwe, known for its industrial and cultural significance.",
+      "Capital": "Bulawayo",
+      "Population": 653337,
+      "AreaKm2": 1564
+    },
+    {
+      "Name": "Harare",
+      "Code": "AF-ZW-HR",
+      "Description": "The capital city and largest urban center of Zimbabwe, known for its political and economic importance.",
+      "Capital": "Harare",
+      "Population": 1589913,
+      "AreaKm2": 960
+    },
+    {
+      "Name": "Manicaland",
+      "Code": "AF-ZW-MCL",
+      "Description": "A province known for its beautiful landscapes, mountains, and agriculture.",
+      "Capital": "Mutare",
+      "Population": 1780000,
+      "AreaKm2": 36645
+    },
+    {
+      "Name": "Mashonaland Central",
+      "Code": "AF-ZW-MC",
+      "Description": "A region known for its farming, particularly tobacco, maize, and cotton.",
+      "Capital": "Bindura",
+      "Population": 1250000,
+      "AreaKm2": 55631
+    },
+    {
+      "Name": "Mashonaland East",
+      "Code": "AF-ZW-ME",
+      "Description": "Known for its rich agricultural land and proximity to the capital city of Harare.",
+      "Capital": "Marondera",
+      "Population": 1200000,
+      "AreaKm2": 24925
+    },
+    {
+      "Name": "Mashonaland West",
+      "Code": "AF-ZW-MW",
+      "Description": "A region characterized by large commercial farms and a mix of both rural and urban settlements.",
+      "Capital": "Chinhoyi",
+      "Population": 1000000,
+      "AreaKm2": 54000
+    },
+    {
+      "Name": "Masvingo",
+      "Code": "AF-ZW-MS",
+      "Description": "Known for the Great Zimbabwe ruins and its significant agricultural output.",
+      "Capital": "Masvingo",
+      "Population": 1500000,
+      "AreaKm2": 56400
+    },
+    {
+      "Name": "Matinga",
+      "Code": "AF-ZW-MT",
+      "Description": "A region with abundant wildlife, part of Zimbabwe major tourist destinations.",
+      "Capital": "Gweru",
+      "Population": 2000000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Midlands",
+      "Code": "AF-ZW-MD",
+      "Description": "A central region, known for its mining and agriculture.",
+      "Capital": "Gweru",
+      "Population": 1600000,
+      "AreaKm2": 54000
+    },
+    {
+      "Name": "Matabeleland North",
+      "Code": "AF-ZW-MBN",
+      "Description": "Known for its natural resources, including gold, and its proximity to the Hwange National Park.",
+      "Capital": "Lupane",
+      "Population": 800000,
+      "AreaKm2": 59500
+    },
+    {
+      "Name": "Matabeleland South",
+      "Code": "AF-ZW-MBS",
+      "Description": "A province rich in natural resources, especially in mining and wildlife.",
+      "Capital": "Gwanda",
+      "Population": 700000,
+      "AreaKm2": 53300
+    }
+]  

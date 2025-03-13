@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Lusaka",
+      "Code": "AF-ZM-LU",
+      "Description": "Lusaka is the capital and largest city of Zambia, serving as the country s political, economic, and cultural center.",
+      "Capital": "Lusaka",
+      "Population": 2400000,
+      "AreaKm2": 360
+    },
+    {
+      "Name": "Kitwe",
+      "Code": "AF-ZM-KI",
+      "Description": "Kitwe is a large city in the Copperbelt region of Zambia, known for its mining industry and as a major urban center in the region.",
+      "Capital": "Kitwe",
+      "Population": 520000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Ndola",
+      "Code": "AF-ZM-ND",
+      "Description": "Ndola is another city in Zambia s Copperbelt region, important for both mining and as a transportation hub.",
+      "Capital": "Ndola",
+      "Population": 470000,
+      "AreaKm2": 160
+    }
+]  

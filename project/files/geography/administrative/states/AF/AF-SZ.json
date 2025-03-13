@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Hhohho",
+      "Code": "AF-SZ-HH",
+      "Description": "Hhohho is located in the northern part of Eswatini and is home to the country s capital, Mbabane. It is known for its natural beauty, including mountains and forests.",
+      "Capital": "Mbabane",
+      "Population": 350000,
+      "AreaKm2": 3800
+    },
+    {
+      "Name": "Lubombo",
+      "Code": "AF-SZ-LB",
+      "Description": "Lubombo is located in the eastern part of Eswatini and is known for its proximity to the Kruger National Park in South Africa. It has a diverse agricultural sector.",
+      "Capital": "Siteki",
+      "Population": 220000,
+      "AreaKm2": 3800
+    },
+    {
+      "Name": "Manzini",
+      "Code": "AF-SZ-MZ",
+      "Description": "Manzini is the central region of Eswatini and serves as the commercial hub of the country. It has a well-developed infrastructure and is important for trade and commerce.",
+      "Capital": "Manzini",
+      "Population": 400000,
+      "AreaKm2": 1600
+    },
+    {
+      "Name": "Shiselweni",
+      "Code": "AF-SZ-SH",
+      "Description": "Shiselweni is located in the southern part of Eswatini and is known for its agriculture, particularly sugarcane farming. It also has some mining activities.",
+      "Capital": "Nhlangano",
+      "Population": 120000,
+      "AreaKm2": 3000
+    }
+]  

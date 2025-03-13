@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Tirana",
+      "Code": "EU-AL-TR",
+      "Description": "Tirana is the capital and largest city of Albania, known for its historical significance and vibrant cultural scene.",
+      "Capital": "Tirana",
+      "Population": 420000,
+      "AreaKm2": 300
+    },
+    {
+      "Name": "Shkodër",
+      "Code": "EU-AL-SK",
+      "Description": "Shkodër is located in the northern part of Albania, known for its rich history, cultural heritage, and proximity to Lake Shkodra.",
+      "Capital": "Shkodër",
+      "Population": 150000,
+      "AreaKm2": 480
+    },
+    {
+      "Name": "Vlorë",
+      "Code": "EU-AL-VL",
+      "Description": "Vlorë is a coastal city in southern Albania, known for its historical significance and its beautiful beaches along the Ionian Sea.",
+      "Capital": "Vlorë",
+      "Population": 115000,
+      "AreaKm2": 470
+    },
+    {
+      "Name": "Durres",
+      "Code": "EU-AL-DU",
+      "Description": "Durres is one of Albania s major port cities on the Adriatic coast, known for its ancient ruins and vibrant waterfront.",
+      "Capital": "Durres",
+      "Population": 200000,
+      "AreaKm2": 340
+    },
+    {
+      "Name": "Elbasan",
+      "Code": "EU-AL-EL",
+      "Description": "Elbasan is an inland city in central Albania, known for its historical landmarks and its role in the region s industrial activities.",
+      "Capital": "Elbasan",
+      "Population": 120000,
+      "AreaKm2": 900
+    },
+    {
+      "Name": "Fier",
+      "Code": "EU-AL-FI",
+      "Description": "Fier is located in southern Albania, famous for its agricultural output, including oil and natural gas extraction.",
+      "Capital": "Fier",
+      "Population": 95000,
+      "AreaKm2": 670
+    },
+    {
+      "Name": "Korce",
+      "Code": "EU-AL-KO",
+      "Description": "Korce is a city in the southeastern part of Albania, known for its cultural life, historical sites, and proximity to the Greek border.",
+      "Capital": "Korce",
+      "Population": 80000,
+      "AreaKm2": 700
+    },
+    {
+      "Name": "Berat",
+      "Code": "EU-AL-BE",
+      "Description": "Berat is a UNESCO World Heritage city known for its well-preserved Ottoman architecture and its scenic location on the Osum River.",
+      "Capital": "Berat",
+      "Population": 70000,
+      "AreaKm2": 370
+    },
+    {
+      "Name": "Gjirokaster",
+      "Code": "EU-AL-GJ",
+      "Description": "Gjirokastër is a historic city in southern Albania, known for its old Ottoman-style houses and a UNESCO World Heritage site.",
+      "Capital": "Gjirokastër",
+      "Population": 45000,
+      "AreaKm2": 1100
+    },
+    {
+      "Name": "Kukes",
+      "Code": "EU-AL-KU",
+      "Description": "Kukes is located in the northeastern part of Albania, known for its mountainous landscape and natural beauty.",
+      "Capital": "Kukes",
+      "Population": 27000,
+      "AreaKm2": 2200
+    }
+]  

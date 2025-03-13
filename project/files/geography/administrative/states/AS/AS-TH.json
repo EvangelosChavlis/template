@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Bangkok Metropolitan Region",
+      "Code": "AS-TH-BK",
+      "Description": "The capital and largest city of Thailand, a bustling metropolis known for its vibrant street life, cultural landmarks, and traffic.",
+      "Capital": "Bangkok",
+      "Population": 10539000,
+      "AreaKm2": 1569
+    },
+    {
+      "Name": "Chiang Mai",
+      "Code": "AS-TH-CM",
+      "Description": "A city in northern Thailand known for its temples, mountainous scenery, and as a cultural hub of the region.",
+      "Capital": "Chiang Mai",
+      "Population": 1300000,
+      "AreaKm2": 202
+    },
+    {
+      "Name": "Phuket",
+      "Code": "AS-TH-PK",
+      "Description": "A famous island destination known for its beautiful beaches, luxury resorts, and vibrant nightlife.",
+      "Capital": "Phuket",
+      "Population": 450000,
+      "AreaKm2": 543
+    },
+    {
+      "Name": "Chonburi",
+      "Code": "AS-TH-CB",
+      "Description": "A province located on the Gulf of Thailand, home to Pattaya, a popular beach city and tourist destination.",
+      "Capital": "Chonburi",
+      "Population": 1500000,
+      "AreaKm2": 4955
+    },
+    {
+      "Name": "Khon Kaen",
+      "Code": "AS-TH-KK",
+      "Description": "Located in northeastern Thailand, known for its universities, temples, and regional economic importance.",
+      "Capital": "Khon Kaen",
+      "Population": 2000000,
+      "AreaKm2": 10327
+    },
+    {
+      "Name": "Nakhon Ratchasima",
+      "Code": "AS-TH-NR",
+      "Description": "A large province in northeastern Thailand, known as Korat, with a blend of history, agriculture, and natural beauty.",
+      "Capital": "Nakhon Ratchasima",
+      "Population": 2000000,
+      "AreaKm2": 20553
+    },
+    {
+      "Name": "Ayutthaya",
+      "Code": "AS-TH-AY",
+      "Description": "A historical city and former capital of Siam, known for its ancient temples and ruins, now a UNESCO World Heritage Site.",
+      "Capital": "Ayutthaya",
+      "Population": 700000,
+      "AreaKm2": 2116
+    },
+    {
+      "Name": "Udon Thani",
+      "Code": "AS-TH-UT",
+      "Description": "A major city in northeastern Thailand, an important center for trade, agriculture, and tourism.",
+      "Capital": "Udon Thani",
+      "Population": 400000,
+      "AreaKm2": 11482
+    },
+    {
+      "Name": "Songkhla",
+      "Code": "AS-TH-SK",
+      "Description": "Located in southern Thailand, Songkhla is known for its beaches, lakes, and as a center of commerce and trade.",
+      "Capital": "Songkhla",
+      "Population": 600000,
+      "AreaKm2": 7892
+    }
+]  

@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "Elefsina",
+        "Description": "The capital of West Attica, known for its rich archaeological history and the Eleusinian Mysteries.",
+        "AreaKm2": 20.0,
+        "Population": 25000,
+        "Code": "EU-GR-AC-WEA-EF"
+    },
+    {
+        "Name": "Aspropyrgos",
+        "Description": "An industrial town with a prominent role in manufacturing and its proximity to major transportation routes.",
+        "AreaKm2": 38.0,
+        "Population": 55000,
+        "Code": "EU-GR-AC-WEA-AS"
+    },
+    {
+        "Name": "Mandra-Eidyllia",
+        "Description": "A municipality with a mix of industrial zones, agricultural areas, and natural parks.",
+        "AreaKm2": 110.0,
+        "Population": 30000,
+        "Code": "EU-GR-AC-WEA-MAE"
+    },
+    {
+        "Name": "Magoula",
+        "Description": "A small town known for its industrial presence and rural surroundings.",
+        "AreaKm2": 15.0,
+        "Population": 12000,
+        "Code": "EU-GR-AC-WEA-MA"
+    },
+    {
+        "Name": "Kytarious",
+        "Description": "A small town in the western part of Attica known for its natural parks and green landscapes.",
+        "AreaKm2": 25.0,
+        "Population": 11000,
+        "Code": "EU-GR-AC-WEA-KY"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Boke",
+      "Code": "AF-GN-BK",
+      "Description": "Boke is located in the western part of Guinea, known for its rich natural resources, including bauxite.",
+      "Capital": "Boke",
+      "Population": 500000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Conakry",
+      "Code": "AF-GN-CO",
+      "Description": "Conakry is the capital city and the largest urban area of Guinea, located on the Atlantic coast.",
+      "Capital": "Conakry",
+      "Population": 2000000,
+      "AreaKm2": 300
+    },
+    {
+      "Name": "Faranah",
+      "Code": "AF-GN-FA",
+      "Description": "Faranah is located in central Guinea and is known for its agriculture and traditional crafts.",
+      "Capital": "Faranah",
+      "Population": 300000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Kankan",
+      "Code": "AF-GN-KK",
+      "Description": "Kankan is located in the eastern part of Guinea and is known for its cultural heritage, including being an important center of the Mandingo culture.",
+      "Capital": "Kankan",
+      "Population": 400000,
+      "AreaKm2": 32000
+    },
+    {
+      "Name": "Kerouane",
+      "Code": "AF-GN-KE",
+      "Description": "Kerouane is in southeastern Guinea, known for its agricultural activities and natural landscapes.",
+      "Capital": "Kerouane",
+      "Population": 200000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Labe",
+      "Code": "AF-GN-LB",
+      "Description": "Labe is located in the central highlands of Guinea, with a focus on cattle breeding and agriculture.",
+      "Capital": "Labe",
+      "Population": 400000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Mamou",
+      "Code": "AF-GN-MM",
+      "Description": "Mamou is located in the central part of Guinea and is an important crossroads for transportation and commerce.",
+      "Capital": "Mamou",
+      "Population": 300000,
+      "AreaKm2": 18000
+    },
+    {
+      "Name": "Nzerekore",
+      "Code": "AF-GN-NZ",
+      "Description": "Nzerekore is located in the southeastern part of Guinea and is known for its diverse ethnic groups and agriculture.",
+      "Capital": "Nzerekore",
+      "Population": 350000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Siguiri",
+      "Code": "AF-GN-SG",
+      "Description": "Siguiri is located in the northeastern part of Guinea, known for its mining activities, particularly gold.",
+      "Capital": "Siguiri",
+      "Population": 200000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Telimele",
+      "Code": "AF-GN-TL",
+      "Description": "Telimele is located in the western part of Guinea, known for its agricultural activities, including rice and maize farming.",
+      "Capital": "Telimele",
+      "Population": 150000,
+      "AreaKm2": 13000
+    }
+]  

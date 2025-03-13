@@ -1,0 +1,106 @@
+[
+    {
+      "Name": "Jerusalem",
+      "Code": "AS-IL-JR",
+      "Description": "The capital city of Israel, and one of the most important cities in the world, known for its religious and historical significance to Judaism, Christianity, and Islam.",
+      "Capital": "Jerusalem",
+      "Population": 950000,
+      "AreaKm2": 125
+    },
+    {
+      "Name": "Tel Aviv-Yafo",
+      "Code": "AS-IL-TA",
+      "Description": "The second-largest city in Israel, known for its modernity, beaches, nightlife, and economic hub, and also the financial center of the country.",
+      "Capital": "Tel Aviv-Yafo",
+      "Population": 451500,
+      "AreaKm2": 52
+    },
+    {
+      "Name": "Haifa",
+      "Code": "AS-IL-HF",
+      "Description": "A major port city in northern Israel, known for its mixed Jewish-Arab population, scenic views, and its thriving industrial sector.",
+      "Capital": "Haifa",
+      "Population": 285000,
+      "AreaKm2": 63
+    },
+    {
+      "Name": "Eilat",
+      "Code": "AS-IL-EI",
+      "Description": "A resort city located on the Red Sea, known for its beaches, coral reefs, and tourism industry, as well as being Israel s southernmost city.",
+      "Capital": "Eilat",
+      "Population": 53000,
+      "AreaKm2": 86
+    },
+    {
+      "Name": "Beersheba",
+      "Code": "AS-IL-BS",
+      "Description": "The largest city in southern Israel, known for its history, high-tech industry, and as a gateway to the Negev desert.",
+      "Capital": "Beersheba",
+      "Population": 214000,
+      "AreaKm2": 117
+    },
+    {
+      "Name": "Nazareth",
+      "Code": "AS-IL-NZ",
+      "Description": "A city in northern Israel, known as the hometown of Jesus, with important Christian historical sites.",
+      "Capital": "Nazareth",
+      "Population": 77000,
+      "AreaKm2": 11
+    },
+    {
+      "Name": "Ashdod",
+      "Code": "AS-IL-AS",
+      "Description": "A port city on the Mediterranean Sea, known for its industry, as well as its proximity to Israel s busiest seaport.",
+      "Capital": "Ashdod",
+      "Population": 250000,
+      "AreaKm2": 47
+    },
+    {
+      "Name": "Netanya",
+      "Code": "AS-IL-NT",
+      "Description": "A coastal city in central Israel, known for its beautiful beaches and thriving tourism industry.",
+      "Capital": "Netanya",
+      "Population": 210000,
+      "AreaKm2": 26
+    },
+    {
+      "Name": "Ashkelon",
+      "Code": "AS-IL-AL",
+      "Description": "A coastal city in southern Israel, known for its archaeological sites and its proximity to the Mediterranean Sea.",
+      "Capital": "Ashkelon",
+      "Population": 130000,
+      "AreaKm2": 47
+    },
+    {
+      "Name": "Petah Tikva",
+      "Code": "AS-IL-PT",
+      "Description": "A city located to the east of Tel Aviv, known for its growing high-tech industry and as a major suburb of the Tel Aviv metropolitan area.",
+      "Capital": "Petah Tikva",
+      "Population": 240000,
+      "AreaKm2": 34
+    },
+    {
+      "Name": "Rishon LeZion",
+      "Code": "AS-IL-RZ",
+      "Description": "A city in central Israel, known for its modern development, beaches, and proximity to Tel Aviv.",
+      "Capital": "Rishon LeZion",
+      "Population": 250000,
+      "AreaKm2": 58
+    },
+    {
+      "Name": "Kiryat Shmona",
+      "Code": "AS-IL-KS",
+      "Description": "A town in northern Israel, located near the Lebanese border, known for its role as a strategic location in the Golan Heights.",
+      "Capital": "Kiryat Shmona",
+      "Population": 23000,
+      "AreaKm2": 14
+    },
+    {
+      "Name": "Tiberias",
+      "Code": "AS-IL-TB",
+      "Description": "A city located on the shores of the Sea of Galilee, known for its historical and religious significance, especially in Christianity.",
+      "Capital": "Tiberias",
+      "Population": 45000,
+      "AreaKm2": 25
+    }
+]  

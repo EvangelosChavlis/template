@@ -24,7 +24,9 @@ public class TimezoneIndexes : IEntityTypeConfiguration<Timezone>
                 {nameof(Timezone.Id)}_
                 {nameof(Timezone.Name)}_
                 {nameof(Timezone.UtcOffset)}_
-                {nameof(Timezone.IsActive)}
-            ".Replace("\n", "").Trim());
+                {nameof(Timezone.IsActive)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

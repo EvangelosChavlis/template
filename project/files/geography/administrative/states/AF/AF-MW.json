@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Central Region",
+      "Code": "AF-MW-CR",
+      "Description": "The Central Region of Malawi is known for its large cities like Lilongwe, the capital, and for being the economic and cultural heart of the country.",
+      "Capital": "Lilongwe",
+      "Population": 4500000,
+      "AreaKm2": 81300
+    },
+    {
+      "Name": "Northern Region",
+      "Code": "AF-MW-NR",
+      "Description": "The Northern Region is known for its stunning landscapes, including the beautiful shores of Lake Malawi and mountainous terrain.",
+      "Capital": "Mzuzu",
+      "Population": 1500000,
+      "AreaKm2": 64000
+    },
+    {
+      "Name": "Southern Region",
+      "Code": "AF-MW-SR",
+      "Description": "The Southern Region of Malawi is known for its agricultural importance, including vast tea and tobacco plantations, and the city of Blantyre.",
+      "Capital": "Blantyre",
+      "Population": 6000000,
+      "AreaKm2": 73400
+    }
+]  

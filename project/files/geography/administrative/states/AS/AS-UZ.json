@@ -1,0 +1,106 @@
+[
+    {
+      "Name": "Andijan",
+      "Code": "AS-UZ-AN",
+      "Description": "Located in the Fergana Valley, Andijan is known for its agricultural and industrial output, particularly cotton production.",
+      "Capital": "Andijan",
+      "Population": 3000000,
+      "AreaKm2": 4280
+    },
+    {
+      "Name": "Bukhara",
+      "Code": "AS-UZ-BU",
+      "Description": "A historical city and province known for its rich cultural heritage, including ancient architectural landmarks along the Silk Road.",
+      "Capital": "Bukhara",
+      "Population": 700000,
+      "AreaKm2": 41000
+    },
+    {
+      "Name": "Jizzakh",
+      "Code": "AS-UZ-JI",
+      "Description": "Located in central Uzbekistan, Jizzakh is known for its agricultural products and industries, as well as its historical significance.",
+      "Capital": "Jizzakh",
+      "Population": 400000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Karakalpakstan",
+      "Code": "AS-UZ-KK",
+      "Description": "A semi-autonomous republic located in the western part of Uzbekistan, known for its unique culture and proximity to the Aral Sea.",
+      "Capital": "Nukus",
+      "Population": 1800000,
+      "AreaKm2": 160000
+    },
+    {
+      "Name": "Kashkadarya",
+      "Code": "AS-UZ-KS",
+      "Description": "Known for its agricultural production, especially cotton, and its scenic landscapes with mountain ranges and deserts.",
+      "Capital": "Karshi",
+      "Population": 3000000,
+      "AreaKm2": 28400
+    },
+    {
+      "Name": "Khorezm",
+      "Code": "AS-UZ-KH",
+      "Description": "Situated in the northwestern part of the country, Khorezm has a rich history and is known for the city of Urgench and the Khiva historical site.",
+      "Capital": "Urgench",
+      "Population": 1800000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Navoi",
+      "Code": "AS-UZ-NA",
+      "Description": "Located in the central part of Uzbekistan, Navoi is an important industrial region, known for its mining and the city of the same name.",
+      "Capital": "Navoi",
+      "Population": 900000,
+      "AreaKm2": 110000
+    },
+    {
+      "Name": "Namangan",
+      "Code": "AS-UZ-NG",
+      "Description": "Located in the Fergana Valley, Namangan is known for its textile industry and vibrant cultural heritage.",
+      "Capital": "Namangan",
+      "Population": 700000,
+      "AreaKm2": 8000
+    },
+    {
+      "Name": "Samarkand",
+      "Code": "AS-UZ-SM",
+      "Description": "A region famous for its historical significance as a major city on the Silk Road, with its capital Samarkand being a UNESCO World Heritage Site.",
+      "Capital": "Samarkand",
+      "Population": 1000000,
+      "AreaKm2": 16500
+    },
+    {
+      "Name": "Sirdarya",
+      "Code": "AS-UZ-SD",
+      "Description": "Sirdarya is known for its agriculture, particularly cotton farming, and is situated in the eastern part of the country near the Syr Darya River.",
+      "Capital": "Gulistan",
+      "Population": 700000,
+      "AreaKm2": 23500
+    },
+    {
+      "Name": "Tashkent",
+      "Code": "AS-UZ-TK",
+      "Description": "The capital region, including the city of Tashkent, which is the largest city in Uzbekistan and an important cultural, political, and economic hub.",
+      "Capital": "Tashkent",
+      "Population": 2500000,
+      "AreaKm2": 1600
+    },
+    {
+      "Name": "Surxondaryo",
+      "Code": "AS-UZ-SX",
+      "Description": "Located in the southern part of Uzbekistan, Surxondaryo is known for its agricultural production and proximity to the border with Tajikistan and Afghanistan.",
+      "Capital": "Termiz",
+      "Population": 2000000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Fergana",
+      "Code": "AS-UZ-FG",
+      "Description": "A fertile and populous region located in the Fergana Valley, known for its agricultural output, particularly cotton, and cultural significance.",
+      "Capital": "Fergana",
+      "Population": 3000000,
+      "AreaKm2": 6000
+    }
+]  

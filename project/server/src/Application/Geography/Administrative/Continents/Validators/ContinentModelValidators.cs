@@ -16,31 +16,39 @@ public static class ContinentModelValidators
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
         else if (model.Name.Length > ContinentLength.NameLength)
-            errors.Add($"Name must not exceed {ContinentLength.NameLength} characters.");
+            errors.Add($"Name {model.Name} must not exceed {ContinentLength.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
-            errors.Add("Name contains invalid characters.");
+            errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
-            errors.Add("Name contains non-printable characters.");
+            errors.Add($"Name {model.Name} contains non-printable characters.");
 
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
         else if (model.Code.Length > ContinentLength.CodeLength)
-            errors.Add($"Code must not exceed {ContinentLength.CodeLength} characters.");
+            errors.Add($"Code {model.Code} must not exceed {ContinentLength.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
-            errors.Add("Code contains invalid characters.");
+            errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())
-            errors.Add("Code contains non-printable characters.");
+            errors.Add($"Code {model.Code} contains non-printable characters.");
 
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
         else if (model.Description.Length > ContinentLength.DescriptionLength)
-            errors.Add($"Description must not exceed {ContinentLength.DescriptionLength} characters.");
+            errors.Add($"Description {model.Description} must not exceed {ContinentLength.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
-            errors.Add("Description contains invalid characters.");
+            errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
-            errors.Add("Description contains non-printable characters.");
+            errors.Add($"Description {model.Description} contains non-printable characters.");
+
+        // Validation for Population
+        if (model.Population < 0)
+            errors.Add("Population cannot be negative.");
+
+        // Validation for AreaKm2
+        if (model.AreaKm2 < 0)
+            errors.Add("Area in square kilometers cannot be negative.");
 
         // Validation for IsActive (boolean)
         if (model.IsActive is not true && model.IsActive is not false)

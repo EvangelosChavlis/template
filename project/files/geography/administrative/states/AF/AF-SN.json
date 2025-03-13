@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Dakar",
+      "Code": "AF-SN-DK",
+      "Description": "Dakar is the capital and largest city of Senegal. It is known for its vibrant culture, historical significance, and coastal beauty.",
+      "Capital": "Dakar",
+      "Population": 1130000,
+      "AreaKm2": 550
+    },
+    {
+      "Name": "Thies",
+      "Code": "AF-SN-TH",
+      "Description": "Thies is the third-largest city in Senegal, located in the western part of the country. It serves as a key commercial and transport hub.",
+      "Capital": "Thies",
+      "Population": 345000,
+      "AreaKm2": 1300
+    },
+    {
+      "Name": "Kaolack",
+      "Code": "AF-SN-KL",
+      "Description": "Kaolack is a city located in central Senegal and is an important regional trade center, particularly for groundnuts.",
+      "Capital": "Kaolack",
+      "Population": 250000,
+      "AreaKm2": 350
+    },
+    {
+      "Name": "Ziguinchor",
+      "Code": "AF-SN-ZG",
+      "Description": "Ziguinchor is located in the southern part of Senegal, near the Casamance River, and is known for its beautiful landscapes and diverse culture.",
+      "Capital": "Ziguinchor",
+      "Population": 200000,
+      "AreaKm2": 850
+    }
+]  

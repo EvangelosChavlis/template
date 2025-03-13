@@ -1,12 +1,16 @@
 // packages
+using System.Linq.Expressions;
 using System.Net;
-using System.Text;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Geography.Administrative.Regions.Interfaces;
+using server.src.Application.Geography.Administrative.Regions.Mappings;
+using server.src.Application.Geography.Administrative.Regions.Validators;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Geography.Administrative.Regions.Dtos;
+using server.src.Domain.Geography.Administrative.Regions.Models;
+using server.src.Domain.Geography.Administrative.States.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Geography.Administrative.Regions.Commands;
 
@@ -15,39 +19,87 @@ public record InitializeRegionsCommand(List<CreateRegionDto> Dto) : IRequest<Res
 
 public class InitializeRegionsHandler : IRequestHandler<InitializeRegionsCommand, Response<string>>
 {
-    private readonly IRegionCommands _regionCommands;
+    private readonly ICommonRepository _commonRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public InitializeRegionsHandler(IRegionCommands regionCommands)
+    public InitializeRegionsHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
     {
-        _regionCommands = regionCommands;
+        _commonRepository = commonRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(InitializeRegionsCommand command, CancellationToken token = default)
     {
-        var success = true;
-        var messageBuilder = new StringBuilder();
+        // Begin Transaction
+        await _unitOfWork.BeginTransactionAsync(token);
 
+        var regions = new List<Region>();
+        var existingCodes = new HashSet<string>();
+
+        var failures = new List<string>();
+        
         foreach (var item in command.Dto)
         {
-            var result = await _regionCommands.CreateRegionAsync(item, token);
-            success &= result.Success;
+            // Dto Validation
+            var dtoValidationResult = item.Validate();
+            if (!dtoValidationResult.IsValid)
+            {
+                failures.Add(string.Join("\n", dtoValidationResult.Errors));
+                continue;
+            }
 
-            messageBuilder.AppendLine(result.Data);
+            // Searching Item
+            var stateFilters = new Expression<Func<State, bool>>[] { s => s.Id == item.StateId };
+            var state = await _commonRepository.GetResultByIdAsync(stateFilters, token: token);
+
+            // Check for existence
+            if (state is null)
+            {
+                failures.Add("State not found.");
+                continue;
+            }
+
+            // Mapping and Saving Region
+            var region = item.CreateRegionModelMapping(state);
+            var modelValidationResult = region.Validate();
+            if (!modelValidationResult.IsValid)
+            {
+                failures.Add(string.Join("\n", modelValidationResult.Errors));
+                continue;
+            }
+
+            if (existingCodes.Contains(region.Code))
+            {
+                failures.Add($"Code {region.Code} already exists in the list of regions.");
+                continue;
+            }
+
+            regions.Add(region);
+            existingCodes.Add(region.Code);
         }
 
-        var message = messageBuilder.ToString().TrimEnd();
+        var result = await _commonRepository.AddRangeAsync(regions, token);
 
-        if (!success)
+        if (!result)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
-                .WithMessage("Error initializing regions.")
+                .WithMessage("Error initializing region.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithSuccess(false)
-                .WithData("Failed to initialize regions.");
+                .WithSuccess(result)
+                .WithFailures(failures)
+                .WithData("Failed to initialize region.");
+        }
+            
+        // Commit Transaction
+        await _unitOfWork.CommitTransactionAsync(token);
 
+        // Initializing object
         return new Response<string>()
             .WithMessage("Success initializing regions.")
             .WithStatusCode((int)HttpStatusCode.OK)
-            .WithSuccess(success)
-            .WithData(message);
+            .WithSuccess(result)
+            .WithFailures(failures)
+            .WithData($"{regions.Count}/{command.Dto.Count} regions inserted successfully!");
     }
 }

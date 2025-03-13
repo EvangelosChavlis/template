@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Abidjan",
+      "Code": "AF-CI-AB",
+      "Description": "The economic capital and largest city, located on the Atlantic coast.",
+      "Capital": "Abidjan",
+      "Population": 5000000,
+      "AreaKm2": 2200
+    },
+    {
+      "Name": "Bouake",
+      "Code": "AF-CI-BO",
+      "Description": "The second-largest city, located in the central region of the country.",
+      "Capital": "Bouake",
+      "Population": 1000000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Dabou",
+      "Code": "AF-CI-DB",
+      "Description": "A city in the southern part of the country, known for its proximity to the coast.",
+      "Capital": "Dabou",
+      "Population": 350000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "San Pedro",
+      "Code": "AF-CI-SP",
+      "Description": "A port city located on the southwestern coast, important for exports.",
+      "Capital": "San Pedro",
+      "Population": 300000,
+      "AreaKm2": 1800
+    },
+    {
+      "Name": "Yamoussoukro",
+      "Code": "AF-CI-YS",
+      "Description": "The political capital of Cote d Ivoire, located in the central region.",
+      "Capital": "Yamoussoukro",
+      "Population": 300000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Western Mountains",
+      "Code": "AF-CI-WM",
+      "Description": "A region known for its highlands and natural beauty, with lush vegetation.",
+      "Capital": "Man",
+      "Population": 1000000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Southwestern",
+      "Code": "AF-CI-SW",
+      "Description": "A region rich in agricultural resources and home to several national parks.",
+      "Capital": "Sassandra",
+      "Population": 800000,
+      "AreaKm2": 19000
+    },
+    {
+      "Name": "Northern",
+      "Code": "AF-CI-NR",
+      "Description": "A vast region known for its savannahs and proximity to Burkina Faso and Mali.",
+      "Capital": "Korhogo",
+      "Population": 1500000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Lagunes",
+      "Code": "AF-CI-LG",
+      "Description": "A region known for its lakes, lagoons, and the commercial importance of Abidjan.",
+      "Capital": "Abidjan",
+      "Population": 5000000,
+      "AreaKm2": 8000
+    },
+    {
+      "Name": "Zanzan",
+      "Code": "AF-CI-ZZ",
+      "Description": "A region in the northeastern part of Cote d Ivoire, known for its agriculture and gold mining.",
+      "Capital": "Bondoukou",
+      "Population": 800000,
+      "AreaKm2": 22000
+    }
+]  

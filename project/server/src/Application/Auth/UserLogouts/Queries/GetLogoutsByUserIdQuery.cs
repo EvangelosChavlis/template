@@ -35,7 +35,7 @@ public class GetLogoutsByUserIdHandler : IRequestHandler<GetLogoutsByUserIdQuery
         var userIncludes = new Expression<Func<User, object>>[] { };
         var userFilters = new Expression<Func<User, bool>>[] { u => u.Id == query.Id};
         var userProjection = UserProjections.GetUserProjection();
-        var user = await _commonRepository.GetResultByIdAsync(userFilters, userIncludes, userProjection, token);
+        var user = await _commonRepository.GetResultByIdAsync<User>(userFilters, userIncludes, userProjection, token);
 
         // Check for existence
         if (user is null)

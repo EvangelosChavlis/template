@@ -27,7 +27,7 @@ public class GetMoonPhasesPickerHandler : IRequestHandler<GetMoonPhasesPickerQue
     {
         // Searching Items
         var filters = new Expression<Func<MoonPhase, bool>>[] { w => w.IsActive };
-        var moonphases = await _commonRepository.GetResultPickerAsync(filters, token: token);
+        var moonphases = await _commonRepository.GetResultPickerAsync<MoonPhase, MoonPhase>(filters, token: token);
 
         // Mapping
         var dto = moonphases.Select(m => m.PickerMoonPhaseDtoMapping()).ToList();

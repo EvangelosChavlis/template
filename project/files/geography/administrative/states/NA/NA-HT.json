@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Ouest",
+      "Code": "NA-HT-OU",
+      "Description": "The western region of Haiti, home to the capital city, Port-au-Prince, known for its economic and cultural importance.",
+      "Capital": "Port-au-Prince",
+      "Population": 3000000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Artibonite",
+      "Code": "NA-HT-AR",
+      "Description": "A region known for its agricultural production, particularly rice and sugarcane, with a mix of urban and rural areas.",
+      "Capital": "Gonaïves",
+      "Population": 1500000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Nord",
+      "Code": "NA-HT-ND",
+      "Description": "A northern region with a rich history, including the historic site of Cap-Haïtien, and beautiful beaches along the coast.",
+      "Capital": "Cap-Haïtien",
+      "Population": 1500000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Sud",
+      "Code": "NA-HT-SD",
+      "Description": "A region in the southern part of Haiti, known for its agricultural production and tourist destinations like Jacmel.",
+      "Capital": "Les Cayes",
+      "Population": 600000,
+      "AreaKm2": 3200
+    },
+    {
+      "Name": "Nippes",
+      "Code": "NA-HT-NI",
+      "Description": "A small region in the southwest, with a focus on agriculture and fishing, offering scenic landscapes and coastal villages.",
+      "Capital": "Miragoâne",
+      "Population": 400000,
+      "AreaKm2": 1200
+    },
+    {
+      "Name": "Sud-Est",
+      "Code": "NA-HT-SE",
+      "Description": "Located on the southeastern tip of Haiti, known for its tropical climate, beautiful beaches, and the historical town of Jacmel.",
+      "Capital": "Jacmel",
+      "Population": 350000,
+      "AreaKm2": 1800
+    },
+    {
+      "Name": "GrandAnse",
+      "Code": "NA-HT-GA",
+      "Description": "A region in the southwest, characterized by its mountainous terrain, agriculture, and natural beauty.",
+      "Capital": "Jérémie",
+      "Population": 500000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Centre",
+      "Code": "NA-HT-CE",
+      "Description": "A central region with fertile land, known for its production of coffee, bananas, and other crops.",
+      "Capital": "Hinche",
+      "Population": 600000,
+      "AreaKm2": 2200
+    },
+    {
+      "Name": "Nord-Est",
+      "Code": "NA-HT-NE",
+      "Description": "The northeastern region of Haiti, with a mix of coastal and mountainous terrain, home to historical sites and agricultural production.",
+      "Capital": "Fort-Liberte",
+      "Population": 400000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Nord-Ouest",
+      "Code": "NA-HT-NO",
+      "Description": "The northwest region, known for its rural landscape, agricultural activities, and coastal beauty, including the iconic Labadee beach.",
+      "Capital": "Port-de-Paix",
+      "Population": 500000,
+      "AreaKm2": 3200
+    }
+]  

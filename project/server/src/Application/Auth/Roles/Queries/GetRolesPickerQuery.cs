@@ -29,7 +29,11 @@ public class GetRolesPickerHandler : IRequestHandler<GetRolesPickerQuery, Respon
         // Searching Items
         var filters = new Expression<Func<Role, bool>>[] { r => r.IsActive == true };
         var projection = RoleProjections.GetRolesPickerProjection();
-        var roles = await _commonRepository.GetResultPickerAsync(filters, projection, token);
+        var roles = await _commonRepository.GetResultPickerAsync(
+            filters, 
+            projection: projection, 
+            token: token
+        );
 
         // Mapping
         var dto = roles.Select(r => r.PickerRoleDtoMapping()).ToList();

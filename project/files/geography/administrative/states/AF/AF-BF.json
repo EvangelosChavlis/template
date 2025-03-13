@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Boucle du Mouhoun",
+      "Code": "AF-BF-BM",
+      "Description": "Located in the western part of Burkina Faso, this region is known for its diverse landscapes and agriculture, including farming and livestock rearing.",
+      "Capital": "Dédougou",
+      "Population": 900000,
+      "AreaKm2": 19000
+    },
+    {
+      "Name": "Centre",
+      "Code": "AF-BF-C",
+      "Description": "The central region of Burkina Faso, home to the capital city, Ouagadougou. It is the political, economic, and cultural heart of the country.",
+      "Capital": "Ouagadougou",
+      "Population": 2500000,
+      "AreaKm2": 10000
+    },
+    {
+      "Name": "Centre-Est",
+      "Code": "AF-BF-CE",
+      "Description": "This region is located in the eastern part of the country and is known for its agricultural activities, especially cotton farming.",
+      "Capital": "Tenkodogo",
+      "Population": 1300000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Centre-Nord",
+      "Code": "AF-BF-CN",
+      "Description": "Located in the north-central part of Burkina Faso, this region faces challenges due to its arid climate but is known for small-scale farming.",
+      "Capital": "Koudougou",
+      "Population": 1000000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Centre-Ouest",
+      "Code": "AF-BF-CO",
+      "Description": "This region, located in the western part of the country, is known for its agricultural output, including the production of maize and millet.",
+      "Capital": "Réo",
+      "Population": 1100000,
+      "AreaKm2": 14000
+    },
+    {
+      "Name": "Centre-Sud",
+      "Code": "AF-BF-CS",
+      "Description": "Situated in the southern part of Burkina Faso, this region has a mix of farming and cattle rearing, with a strong emphasis on cotton and corn.",
+      "Capital": "Manga",
+      "Population": 1200000,
+      "AreaKm2": 13000
+    },
+    {
+      "Name": "Est",
+      "Code": "AF-BF-E",
+      "Description": "Located in the eastern part of Burkina Faso, this region is known for its wildlife and national parks, as well as being a significant area for the cotton industry.",
+      "Capital": "Fada N'Gourma",
+      "Population": 600000,
+      "AreaKm2": 21000
+    },
+    {
+      "Name": "Hauts-Bassins",
+      "Code": "AF-BF-HB",
+      "Description": "This western region is known for its agricultural production, including cotton, and is also a significant economic zone for Burkina Faso.",
+      "Capital": "Bobo-Dioulasso",
+      "Population": 1600000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Nord",
+      "Code": "AF-BF-N",
+      "Description": "Located in the northern part of the country, this region is primarily known for its desert landscape, with economic activities such as agriculture and livestock.",
+      "Capital": "Ouahigouya",
+      "Population": 800000,
+      "AreaKm2": 23000
+    },
+    {
+      "Name": "Sahel",
+      "Code": "AF-BF-S",
+      "Description": "The Sahel region, located in the northernmost part of Burkina Faso, is characterized by a semi-arid climate and a primary focus on livestock and small-scale farming.",
+      "Capital": "Dori",
+      "Population": 700000,
+      "AreaKm2": 85000
+    },
+    {
+      "Name": "Sud-Ouest",
+      "Code": "AF-BF-SO",
+      "Description": "Located in the southwestern part of the country, Sud-Ouest is known for its agricultural production, including crops like corn and millet.",
+      "Capital": "Gaoua",
+      "Population": 600000,
+      "AreaKm2": 12000
+    }
+]  

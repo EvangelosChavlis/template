@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Northern Region",
+    "Code": "EU-MT-NR",
+    "Description": "The Northern Region of Malta encompasses the island s  scenic coastal areas, including beaches and resorts, and is known for its tourism and natural beauty.",
+    "Capital": "Mellieħa",
+    "Population": 67000,
+    "AreaKm2": 126
+  },
+  {
+    "Name": "Southern Region",
+    "Code": "EU-MT-SR",
+    "Description": "The Southern Region is characterized by traditional villages, historical sites, and a slower pace of life, offering a more rural feel compared to other parts of Malta.",
+    "Capital": "Haz-Zebbug",
+    "Population": 120000,
+    "AreaKm2": 114
+  },
+  {
+    "Name": "Valletta",
+    "Code": "EU-MT-VA",
+    "Description": "Valletta is the capital city of Malta, known for its rich history, cultural landmarks, and UNESCO World Heritage Sites. It is a hub for both tourism and government.",
+    "Capital": "Valletta",
+    "Population": 6000,
+    "AreaKm2": 0.8
+  },
+  {
+    "Name": "Gozo",
+    "Code": "EU-MT-GO",
+    "Description": "Gozo is the second-largest island of Malta, known for its peaceful atmosphere, scenic landscapes, ancient temples, and beautiful coastline.",
+    "Capital": "Victoria",
+    "Population": 37000,
+    "AreaKm2": 67
+  },
+  {
+    "Name": "Central Region",
+    "Code": "EU-MT-CR",
+    "Description": "The Central Region of Malta includes bustling towns and neighborhoods with a mix of urban and residential areas, and is home to many schools and business districts.",
+    "Capital": "Birkirkara",
+    "Population": 110000,
+    "AreaKm2": 23
+  }
+]

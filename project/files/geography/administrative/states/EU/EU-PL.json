@@ -1,0 +1,130 @@
+[
+    {
+        "Name": "Lower Silesian",
+        "Code": "EU-PL-DS",
+        "Description": "Located in southwestern Poland, known for Wrocław, medieval castles, and mountain ranges.",
+        "Capital": "Wroclaw",
+        "Population": 2900000,
+        "AreaKm2": 19946
+    },
+    {
+        "Name": "Kuyavian-Pomeranian",
+        "Code": "EU-PL-KP",
+        "Description": "A central-northern region with historic cities like Bydgoszcz and Toruń, known for medieval architecture.",
+        "Capital": "Bydgoszcz / Toruń",
+        "Population": 2000000,
+        "AreaKm2": 17971
+    },
+    {
+        "Name": "Lublin",
+        "Code": "EU-PL-LU",
+        "Description": "An eastern region known for its cultural heritage, historic castles, and picturesque landscapes.",
+        "Capital": "Lublin",
+        "Population": 2100000,
+        "AreaKm2": 25122
+    },
+    {
+        "Name": "Lubusz",
+        "Code": "EU-PL-LB",
+        "Description": "A western region with beautiful forests, national parks, and a mix of German-Polish heritage.",
+        "Capital": "Gorzow Wielkopolski / Zielona Gora",
+        "Population": 1000000,
+        "AreaKm2": 13987
+    },
+    {
+        "Name": "Lodz",
+        "Code": "EU-PL-LD",
+        "Description": "Located in central Poland, Lodz is an industrial and cultural hub with vibrant arts and film scenes.",
+        "Capital": "Lodz",
+        "Population": 2400000,
+        "AreaKm2": 18219
+    },
+    {
+        "Name": "Lesser Poland",
+        "Code": "EU-PL-MA",
+        "Description": "Home to Kraków, the Tatra Mountains, and UNESCO-listed sites, rich in history and culture.",
+        "Capital": "Kraków",
+        "Population": 3400000,
+        "AreaKm2": 15108
+    },
+    {
+        "Name": "Masovian",
+        "Code": "EU-PL-MZ",
+        "Description": "Poland’s largest and most populous region, home to the capital city, Warsaw.",
+        "Capital": "Warsaw",
+        "Population": 5400000,
+        "AreaKm2": 35558
+    },
+    {
+        "Name": "Opole",
+        "Code": "EU-PL-OP",
+        "Description": "The smallest Polish voivodeship, known for its multicultural heritage and German influence.",
+        "Capital": "Opole",
+        "Population": 980000,
+        "AreaKm2": 9412
+    },
+    {
+        "Name": "Podkarpackie",
+        "Code": "EU-PL-PK",
+        "Description": "Located in southeastern Poland, featuring the Carpathian Mountains and Bieszczady National Park.",
+        "Capital": "Rzeszow",
+        "Population": 2100000,
+        "AreaKm2": 17844
+    },
+    {
+        "Name": "Podlaskie",
+        "Code": "EU-PL-PD",
+        "Description": "A northeastern region rich in natural beauty, forests, and diverse cultures, including Belarusian influences.",
+        "Capital": "Bialystok",
+        "Population": 1200000,
+        "AreaKm2": 20187
+    },
+    {
+        "Name": "Pomeranian",
+        "Code": "EU-PL-PM",
+        "Description": "Home to the Baltic coast, historic Gdańsk, and major seaports.",
+        "Capital": "Gdańsk",
+        "Population": 2300000,
+        "AreaKm2": 18310
+    },
+    {
+        "Name": "Silesian",
+        "Code": "EU-PL-SL",
+        "Description": "A highly urbanized and industrialized region with Katowice as its center.",
+        "Capital": "Katowice",
+        "Population": 4500000,
+        "AreaKm2": 12333
+    },
+    {
+        "Name": "Swietokrzyskie",
+        "Code": "EU-PL-SK",
+        "Description": "A central-southern region known for its Holy Cross Mountains and historic sites.",
+        "Capital": "Kielce",
+        "Population": 1200000,
+        "AreaKm2": 11710
+    },
+    {
+        "Name": "Warmian-Masurian",
+        "Code": "EU-PL-WN",
+        "Description": "A northeastern region famous for its thousands of lakes and untouched nature.",
+        "Capital": "Olsztyn",
+        "Population": 1400000,
+        "AreaKm2": 24173
+    },
+    {
+        "Name": "Greater Poland",
+        "Code": "EU-PL-WP",
+        "Description": "The historic heartland of Poland, home to the city of Poznań and many medieval landmarks.",
+        "Capital": "Poznań",
+        "Population": 3500000,
+        "AreaKm2": 29826
+    },
+    {
+        "Name": "West Pomeranian",
+        "Code": "EU-PL-ZP",
+        "Description": "A coastal region with major ports, sandy beaches, and historic Szczecin.",
+        "Capital": "Szczecin",
+        "Population": 1700000,
+        "AreaKm2": 22892
+    }
+]

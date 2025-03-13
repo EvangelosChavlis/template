@@ -10,6 +10,8 @@ public record ItemContinentDto(
     string Name,
     string Code,
     string Description,
+    long Population,
+    double AreaKm2,
     bool IsActive,
     Guid Version
 );

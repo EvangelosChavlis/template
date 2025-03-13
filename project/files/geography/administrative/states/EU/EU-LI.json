@@ -1,0 +1,66 @@
+[
+    {
+        "Name": "Balzers",
+        "Code": "EU-LI-BA",
+        "Description": "Balzers is a small town located in the southern part of Liechtenstein, known for its medieval castle, the Balzers Castle, and scenic views of the Alps.",
+        "Capital": "Balzers",
+        "Population": 4000,
+        "AreaKm2": 30
+  },
+  {
+        "Name": "Eschen",
+        "Code": "EU-LI-ES",
+        "Description": "Eschen is a municipality located in the western part of Liechtenstein, known for its residential areas, schools, and proximity to the Swiss border.",
+        "Capital": "Eschen",
+        "Population": 6000,
+        "AreaKm2": 20
+  },
+  {
+        "Name": "Gamprin",
+        "Code": "EU-LI-GA",
+        "Description": "Gamprin is a region in Liechtenstein with a mix of residential and agricultural land. It is known for its peaceful, rural setting and small community feel.",
+        "Capital": "Gamprin",
+        "Population": 3000,
+        "AreaKm2": 10
+  },
+  {
+        "Name": "Mauren",
+        "Code": "EU-LI-MA",
+        "Description": "Mauren is a town located in the northern part of Liechtenstein, known for its proximity to the capital and scenic landscape, with a growing population.",
+        "Capital": "Mauren",
+        "Population": 7000,
+        "AreaKm2": 15
+  },
+  {
+        "Name": "Schaan",
+        "Code": "EU-LI-SC",
+        "Description": "Schaan is the largest municipality and the economic hub of Liechtenstein, housing many of the country s businesses and industries. It is also the location of the Liechtenstein National Library.",
+        "Capital": "Schaan",
+        "Population": 11000,
+        "AreaKm2": 25
+  },
+  {
+        "Name": "Schellenberg",
+        "Code": "EU-LI-SH",
+        "Description": "Schellenberg is a small village located in the central region of Liechtenstein, known for its charming atmosphere and historical landmarks.",
+        "Capital": "Schellenberg",
+        "Population": 800,
+        "AreaKm2": 5
+  },
+  {
+        "Name": "Vaduz",
+        "Code": "EU-LI-VD",
+        "Description": "Vaduz is the capital city of Liechtenstein, known for its modern architecture, the Liechtenstein Castle, and its role as the political and cultural center of the country.",
+        "Capital": "Vaduz",
+        "Population": 5000,
+        "AreaKm2": 7
+  },
+  {
+        "Name": "Balzers and surrounding",
+        "Code": "EU-LI-BAL",
+        "Description": "The region around Balzers offers picturesque views of the Alps and is home to several important historical sites, including the medieval Balzers Castle.",
+        "Capital": "Balzers",
+        "Population": 4000,
+        "AreaKm2": 35
+  }  
+]

@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Castries",
+      "Code": "NA-LC-CA",
+      "Description": "The capital region, known for its harbor, markets, and the vibrant capital city of Castries.",
+      "Capital": "Castries",
+      "Population": 200000,
+      "AreaKm2": 332
+    },
+    {
+      "Name": "Soufriere",
+      "Code": "NA-LC-SO",
+      "Description": "Famous for its volcanic mountains, hot springs, and the iconic Pitons, Soufrière is a major tourist destination.",
+      "Capital": "Soufriere",
+      "Population": 25000,
+      "AreaKm2": 116
+    },
+    {
+      "Name": "Vieux Fort",
+      "Code": "NA-LC-VF",
+      "Description": "A region located in the south, known for its commercial port, international airport, and proximity to the southern coast.",
+      "Capital": "Vieux Fort",
+      "Population": 15000,
+      "AreaKm2": 80
+    }
+]  

@@ -1,0 +1,31 @@
+[
+    {
+      "Name": "1st District",
+      "Description": "A central district within Peristeri, known for its commercial and residential areas.",
+      "Population": 25000,
+      "AreaKm2": 4.5,
+      "Code": "EU-GR-AC-WA-PE-1"
+    },
+    {
+      "Name": "2nd District",
+      "Description": "This district offers a mix of residential buildings and local businesses.",
+      "Population": 30000,
+      "AreaKm2": 5.2,
+      "Code": "EU-GR-AC-WA-PE-2"
+    },
+    {
+      "Name": "3rd District",
+      "Description": "A quieter, mainly residential area with parks and green spaces.",
+      "Population": 20000,
+      "AreaKm2": 3.8,
+      "Code": "EU-GR-AC-WA-PE-3"
+    },
+    {
+      "Name": "4th District",
+      "Description": "This district is characterized by its well-established schools and community centers.",
+      "Population": 27000,
+      "AreaKm2": 4.0,
+      "Code": "EU-GR-AC-WA-PE-4"
+    }
+]
+  

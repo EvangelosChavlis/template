@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Barima-Waini",
+      "Code": "SA-GY-BW",
+      "Description": "Located in the northernmost part of Guyana, known for its coastal and forested areas.",
+      "Capital": "Mabaruma",
+      "Population": 90000,
+      "AreaKm2": 22785
+    },
+    {
+      "Name": "Cuyuni-Mazaruni",
+      "Code": "SA-GY-CM",
+      "Description": "A region rich in gold mining and known for its large unspoiled rainforests.",
+      "Capital": "Bartica",
+      "Population": 20000,
+      "AreaKm2": 20220
+    },
+    {
+      "Name": "Demerara-Mahaica",
+      "Code": "SA-GY-DM",
+      "Description": "Located along the Atlantic coast, including the capital city, Georgetown.",
+      "Capital": "Georgetown",
+      "Population": 350000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Essequibo Islands-West Demerara",
+      "Code": "SA-GY-EW",
+      "Description": "Located on the southwestern side of the Demerara River, known for agricultural production and coastal towns.",
+      "Capital": "Vreed en Hoop",
+      "Population": 120000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Mahaica-Berbice",
+      "Code": "SA-GY-MB",
+      "Description": "A region with a mixture of coastal plains and agricultural land, home to both rural and urban areas.",
+      "Capital": "Fort Wellington",
+      "Population": 250000,
+      "AreaKm2": 4690
+    },
+    {
+      "Name": "Pomeroon-Supenaam",
+      "Code": "SA-GY-PS",
+      "Description": "Located in the southwestern coastal area, known for its rivers and agricultural activities.",
+      "Capital": "Anna Regina",
+      "Population": 100000,
+      "AreaKm2": 4414
+    },
+    {
+      "Name": "Upper Demerara-Berbice",
+      "Code": "SA-GY-UD",
+      "Description": "A region rich in natural resources, especially known for its mining and forested areas.",
+      "Capital": "Linden",
+      "Population": 100000,
+      "AreaKm2": 16000
+    },
+    {
+      "Name": "Upper Takutu-Upper Essequibo",
+      "Code": "SA-GY-UT",
+      "Description": "Located in the southernmost part of Guyana, known for its indigenous communities and large tracts of rainforests.",
+      "Capital": "Lethem",
+      "Population": 50000,
+      "AreaKm2": 24500
+    }
+]  

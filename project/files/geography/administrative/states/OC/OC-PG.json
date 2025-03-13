@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Central",
+      "Code": "OC-PG-CE",
+      "Description": "A region located in the southern part of Papua New Guinea, known for its agricultural lands and the capital Port Moresby.",
+      "Capital": "Port Moresby",
+      "Population": 500000,
+      "AreaKm2": 23000
+    },
+    {
+      "Name": "Gulf",
+      "Code": "OC-PG-GO",
+      "Description": "A coastal region in the southern part of the country, known for its rivers and extensive wetlands.",
+      "Capital": "Kerema",
+      "Population": 200000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Madang",
+      "Code": "OC-PG-MG",
+      "Description": "A coastal province known for its beautiful beaches, volcanic islands, and rich marine life.",
+      "Capital": "Madang",
+      "Population": 400000,
+      "AreaKm2": 29000
+    },
+    {
+      "Name": "Manus",
+      "Code": "OC-PG-MN",
+      "Description": "An island province known for its tropical rainforests, coral reefs, and rich cultural heritage.",
+      "Capital": "Lorengau",
+      "Population": 50000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Morobe",
+      "Code": "OC-PG-MB",
+      "Description": "A province located on the northern coast, home to the city of Lae and various agricultural products.",
+      "Capital": "Lae",
+      "Population": 700000,
+      "AreaKm2": 34000
+    },
+    {
+      "Name": "New Ireland",
+      "Code": "OC-PG-NI",
+      "Description": "An island province known for its cultural diversity, beautiful beaches, and the provincial capital of Kavieng.",
+      "Capital": "Kavieng",
+      "Population": 200000,
+      "AreaKm2": 9000
+    },
+    {
+      "Name": "North Solomon",
+      "Code": "OC-PG-NS",
+      "Description": "A province consisting of several islands known for their strategic location and World War II historical sites.",
+      "Capital": "Buka",
+      "Population": 150000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Southern Highlands",
+      "Code": "OC-PG-SH",
+      "Description": "A mountainous region rich in natural resources, including oil and gas, as well as a center for the country s cultural traditions.",
+      "Capital": "Mendi",
+      "Population": 400000,
+      "AreaKm2": 32000
+    },
+    {
+      "Name": "Western",
+      "Code": "OC-PG-WE",
+      "Description": "A province located in the far western part of Papua New Guinea, known for its rugged terrain and dense rainforests.",
+      "Capital": "Daru",
+      "Population": 300000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Western Highlands",
+      "Code": "OC-PG-WH",
+      "Description": "A province located in the central highlands, known for its agriculture and the city of Mount Hagen.",
+      "Capital": "Mount Hagen",
+      "Population": 500000,
+      "AreaKm2": 16000
+    }
+]  

@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Belgrade",
+        "Code": "EU-RS-BE",
+        "Description": "The capital region, known for its vibrant cultural scene, historical landmarks, and the confluence of the Danube and Sava rivers.",
+        "Capital": "Belgrade",
+        "Population": 1300000,
+        "AreaKm2": 359.96
+    },
+    {
+        "Name": "Vojvodina",
+        "Code": "EU-RS-VO",
+        "Description": "A northern province, known for its agricultural lands, diverse ethnic groups, and historical towns.",
+        "Capital": "Novi Sad",
+        "Population": 2500000,
+        "AreaKm2": 2280
+    },
+    {
+        "Name": "Central Serbia",
+        "Code": "EU-RS-CS",
+        "Description": "The largest region of Serbia, featuring a mix of mountainous landscapes, fertile plains, and key historical sites.",
+        "Capital": "Kragujevac",
+        "Population": 4000000,
+        "AreaKm2": 3410
+    },
+    {
+        "Name": "Sumadija and Western Serbia",
+        "Code": "EU-RS-SW",
+        "Description": "A region rich in forests, mountains, and traditional Serbian culture, home to the ancient city of Kragujevac.",
+        "Capital": "Kragujevac",
+        "Population": 1700000,
+        "AreaKm2": 9182
+    },
+    {
+        "Name": "Southern and Eastern Serbia",
+        "Code": "EU-RS-SE",
+        "Description": "Known for its mountainous terrain, including parts of the Rhodope and Carpathian mountains, and historical monasteries.",
+        "Capital": "Nis",
+        "Population": 1600000,
+        "AreaKm2": 1450
+    }
+]

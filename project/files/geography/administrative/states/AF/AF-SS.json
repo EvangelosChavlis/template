@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Juba",
+      "Code": "AF-SS-JB",
+      "Description": "Juba is the capital and largest city of South Sudan, known as a political and economic hub, located on the banks of the White Nile.",
+      "Capital": "Juba",
+      "Population": 500000,
+      "AreaKm2": 52
+    },
+    {
+      "Name": "Malakal",
+      "Code": "AF-SS-ML",
+      "Description": "Malakal is a city in the Upper Nile state of South Sudan, located along the Sobat River, known for its strategic location and role as a market town.",
+      "Capital": "Malakal",
+      "Population": 200000,
+      "AreaKm2": 30
+    },
+    {
+      "Name": "Wau",
+      "Code": "AF-SS-WA",
+      "Description": "Wau is a major city in the Bahr el Ghazal region of South Sudan, known for its agricultural activities and as a commercial center in the region.",
+      "Capital": "Wau",
+      "Population": 300000,
+      "AreaKm2": 60
+    }
+]  

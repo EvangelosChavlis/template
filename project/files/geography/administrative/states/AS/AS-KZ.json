@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Almaty",
+      "Code": "AS-KZ-AL",
+      "Description": "Former capital and largest city of Kazakhstan, known for its scenic surroundings and vibrant cultural scene.",
+      "Capital": "Almaty",
+      "Population": 1900000,
+      "AreaKm2": 682
+    },
+    {
+      "Name": "Astana (Nur-Sultan)",
+      "Code": "AS-KZ-AS",
+      "Description": "The capital city of Kazakhstan, known for its modern architecture and political significance.",
+      "Capital": "Astana",
+      "Population": 1150000,
+      "AreaKm2": 722
+    },
+    {
+      "Name": "Shymkent",
+      "Code": "AS-KZ-SH",
+      "Description": "The third-largest city in Kazakhstan, known for its historical sites and proximity to the Uzbekistan border.",
+      "Capital": "Shymkent",
+      "Population": 1000000,
+      "AreaKm2": 117
+    },
+    {
+      "Name": "Karaganda",
+      "Code": "AS-KZ-KA",
+      "Description": "A large industrial city located in central Kazakhstan, known for its coal mining and heavy industry.",
+      "Capital": "Karaganda",
+      "Population": 500000,
+      "AreaKm2": 528
+    },
+    {
+      "Name": "Aktobe",
+      "Code": "AS-KZ-AK",
+      "Description": "An important city in western Kazakhstan, known for its oil and gas industry.",
+      "Capital": "Aktobe",
+      "Population": 400000,
+      "AreaKm2": 300
+    },
+    {
+      "Name": "Pavlodar",
+      "Code": "AS-KZ-PA",
+      "Description": "Located in northeastern Kazakhstan, Pavlodar is an industrial hub for metallurgy and power generation.",
+      "Capital": "Pavlodar",
+      "Population": 350000,
+      "AreaKm2": 500
+    },
+    {
+      "Name": "Ust-Kamenogorsk",
+      "Code": "AS-KZ-UK",
+      "Description": "A city in eastern Kazakhstan, known for its metallurgy industry and proximity to the Russian border.",
+      "Capital": "Ust-Kamenogorsk",
+      "Population": 350000,
+      "AreaKm2": 250
+    },
+    {
+      "Name": "Semey",
+      "Code": "AS-KZ-SE",
+      "Description": "A historic city in eastern Kazakhstan, known for its cultural heritage and role in Soviet-era nuclear testing.",
+      "Capital": "Semey",
+      "Population": 300000,
+      "AreaKm2": 300
+    },
+    {
+      "Name": "Kyzylorda",
+      "Code": "AS-KZ-KY",
+      "Description": "A city in southern Kazakhstan, known for its agricultural significance and proximity to the Aral Sea.",
+      "Capital": "Kyzylorda",
+      "Population": 250000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Atyrau",
+      "Code": "AS-KZ-AT",
+      "Description": "A city in western Kazakhstan, known for its oil industry and access to the Caspian Sea.",
+      "Capital": "Atyrau",
+      "Population": 300000,
+      "AreaKm2": 600
+    }
+]  

@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Ali Sabieh",
+      "Code": "AF-DJ-AS",
+      "Description": "Ali Sabieh is a region in the southeastern part of Djibouti, known for its desert landscapes and proximity to the border with Somalia. It serves as an important regional hub.",
+      "Capital": "Ali Sabieh",
+      "Population": 100000,
+      "AreaKm2": 2111
+    },
+    {
+      "Name": "Dikhil",
+      "Code": "AF-DJ-DK",
+      "Description": "Dikhil is located in the southwestern part of Djibouti and is known for its rural landscapes and desert terrain. It has a relatively small population.",
+      "Capital": "Dikhil",
+      "Population": 25000,
+      "AreaKm2": 3318
+    },
+    {
+      "Name": "Djibouti",
+      "Code": "AF-DJ-DJ",
+      "Description": "The capital city of Djibouti, located in the eastern part of the country along the coast of the Red Sea. It is the largest and most populous city and serves as the country s economic and political center.",
+      "Capital": "Djibouti City",
+      "Population": 600000,
+      "AreaKm2": 232
+    },
+    {
+      "Name": "Obock",
+      "Code": "AF-DJ-OB",
+      "Description": "Obock is a region located in the northern part of Djibouti, near the Bab el-Mandeb Strait. It is sparsely populated and known for its coastal landscapes and proximity to Yemen.",
+      "Capital": "Obock",
+      "Population": 50000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Tadjourah",
+      "Code": "AF-DJ-TD",
+      "Description": "Tadjourah is located in the northwestern part of Djibouti, along the Gulf of Tadjourah. The region is known for its beautiful coastline and historical significance.",
+      "Capital": "Tadjourah",
+      "Population": 70000,
+      "AreaKm2": 2024
+    }
+]  

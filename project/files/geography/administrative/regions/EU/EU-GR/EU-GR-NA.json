@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Lesbos",
+      "Code": "EU-GR-NA-LES",
+      "Description": "The largest island in the North Aegean, known for its ancient ruins and beautiful beaches.",
+      "Capital": "Mytilene",
+      "Population": 86000,
+      "AreaKm2": 1630.00
+    },
+    {
+      "Name": "Chios",
+      "Code": "EU-GR-NA-CHI",
+      "Description": "An island famous for its medieval villages, mastic production, and unique architecture.",
+      "Capital": "Chios",
+      "Population": 120000,
+      "AreaKm2": 842.00
+    },
+    {
+      "Name": "Samos",
+      "Code": "EU-GR-NA-SAM",
+      "Description": "An island known for its ancient history, including the Temple of Hera, and its lush vineyards.",
+      "Capital": "Vathy",
+      "Population": 32000,
+      "AreaKm2": 475.00
+    },
+    {
+      "Name": "Ikaria",
+      "Code": "EU-GR-NA-IKA",
+      "Description": "An island famous for the longevity of its residents and its rugged, mountainous terrain.",
+      "Capital": "Agios Kirykos",
+      "Population": 8000,
+      "AreaKm2": 255.00
+    },
+    {
+      "Name": "Lemnos",
+      "Code": "EU-GR-NA-LEM",
+      "Description": "An island known for its pristine beaches, ancient ruins, and agricultural products like olive oil.",
+      "Capital": "Myrina",
+      "Population": 20000,
+      "AreaKm2": 476.00
+    },
+    {
+      "Name": "Mount Athos",
+      "Code": "EU-GR-NA-MAU",
+      "Description": "An autonomous monastic state on a peninsula, home to numerous ancient monasteries and a UNESCO World Heritage site.",
+      "Capital": "Dafni",
+      "Population": 2000,
+      "AreaKm2": 335.00
+    }
+]

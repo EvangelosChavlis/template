@@ -1,0 +1,146 @@
+[
+    {
+        "Name": "Zurich",
+        "Code": "EU-CH-ZH",
+        "Description": "The financial and cultural hub of Switzerland, known for its historic Old Town and proximity to Lake Zurich.",
+        "Capital": "Zurich",
+        "Population": 440000,
+        "AreaKm2": 172
+    },
+    {
+        "Name": "Bern",
+        "Code": "EU-CH-BE",
+        "Description": "The capital of Switzerland, with a medieval old town and a center of Swiss politics and governance.",
+        "Capital": "Bern",
+        "Population": 130000,
+        "AreaKm2": 515
+    },
+    {
+        "Name": "Geneva",
+        "Code": "EU-CH-GE",
+        "Description": "Known for its international organizations, including the UN and Red Cross, as well as its scenic location along Lake Geneva.",
+        "Capital": "Geneva",
+        "Population": 200000,
+        "AreaKm2": 282
+    },
+    {
+        "Name": "Vaud",
+        "Code": "EU-CH-VD",
+        "Description": "Located on the western shore of Lake Geneva, famous for its vineyards, historical towns, and as the location of Lausanne.",
+        "Capital": "Lausanne",
+        "Population": 800000,
+        "AreaKm2": 3213
+    },
+    {
+        "Name": "Lucerne",
+        "Code": "EU-CH-LU",
+        "Description": "A region with a rich cultural heritage, known for its picturesque lakeside city of Lucerne, surrounded by mountains.",
+        "Capital": "Lucerne",
+        "Population": 400000,
+        "AreaKm2": 1492
+    },
+    {
+        "Name": "Aargau",
+        "Code": "EU-CH-AG",
+        "Description": "Known for its medieval towns, castles, and rolling hills, it is located in the central part of Switzerland.",
+        "Capital": "Aarau",
+        "Population": 700000,
+        "AreaKm2": 1400
+    },
+    {
+        "Name": "St. Gallen",
+        "Code": "EU-CH-SG",
+        "Description": "Located in the eastern part of Switzerland, known for its historic abbey and the beautiful Appenzell Alps.",
+        "Capital": "St. Gallen",
+        "Population": 500000,
+        "AreaKm2": 2050
+    },
+    {
+        "Name": "Ticino",
+        "Code": "EU-CH-TI",
+        "Description": "The Italian-speaking region of Switzerland, famous for its Mediterranean climate, mountains, and lakes, including Lake Lugano.",
+        "Capital": "Bellinzona",
+        "Population": 350000,
+        "AreaKm2": 2812
+    },
+    {
+        "Name": "Graubünden",
+        "Code": "EU-CH-GR",
+        "Description": "Known for its alpine beauty and outdoor activities, it is home to famous resorts like St. Moritz and Davos.",
+        "Capital": "Chur",
+        "Population": 200000,
+        "AreaKm2": 7105
+    },
+    {
+        "Name": "Thurgau",
+        "Code": "EU-CH-TG",
+        "Description": "Located along the shores of Lake Constance, known for its apple orchards and quaint towns.",
+        "Capital": "Frauenfeld",
+        "Population": 280000,
+        "AreaKm2": 991
+    },
+    {
+        "Name": "Solothurn",
+        "Code": "EU-CH-SO",
+        "Description": "A region with a rich Baroque heritage, known for the city of Solothurn, which features many historic buildings and churches.",
+        "Capital": "Solothurn",
+        "Population": 270000,
+        "AreaKm2": 791
+    },
+    {
+        "Name": "Basel-Landschaft",
+        "Code": "EU-CH-BL",
+        "Description": "A region located to the north of Switzerland, known for its proximity to France and Germany, and its historic towns and nature.",
+        "Capital": "Liestal",
+        "Population": 300000,
+        "AreaKm2": 518
+    },
+    {
+        "Name": "Basel-Stadt",
+        "Code": "EU-CH-BS",
+        "Description": "Known for the city of Basel, a cultural and economic center, home to many international pharmaceutical companies.",
+        "Capital": "Basel",
+        "Population": 180000,
+        "AreaKm2": 37
+    },
+    {
+        "Name": "Obwalden",
+        "Code": "EU-CH-OW",
+        "Description": "A small central region known for its beautiful alpine scenery and traditional Swiss villages.",
+        "Capital": "Sarnen",
+        "Population": 37000,
+        "AreaKm2": 493
+    },
+    {
+        "Name": "Nidwalden",
+        "Code": "EU-CH-NW",
+        "Description": "A mountainous region with scenic views, famous for the lake of Lucerne and Mount Pilatus.",
+        "Capital": "Stans",
+        "Population": 43000,
+        "AreaKm2": 276
+    },
+    {
+        "Name": "Uri",
+        "Code": "EU-CH-UR",
+        "Description": "A mountainous region with historic towns, known for the Gotthard Pass and as the birthplace of the Swiss Confederation.",
+        "Capital": "Altdorf",
+        "Population": 36000,
+        "AreaKm2": 1076
+    },
+    {
+        "Name": "Appenzell Innerrhoden",
+        "Code": "EU-CH-AI",
+        "Description": "Known for its well-preserved traditions and its location in the foothills of the Alps, it has a strong sense of local identity.",
+        "Capital": "Appenzell",
+        "Population": 16000,
+        "AreaKm2": 173
+    },
+    {
+        "Name": "Appenzell Ausserrhoden",
+        "Code": "EU-CH-AR",
+        "Description": "The region surrounding Appenzell, famous for its picturesque villages, dairy farming, and hiking trails.",
+        "Capital": "Herisau",
+        "Population": 160000,
+        "AreaKm2": 243
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Rhodes",
+      "Code": "EU-GR-SA-RHO",
+      "Description": "The largest island in the Dodecanese, famous for its medieval architecture and ancient ruins.",
+      "Capital": "Rhodes",
+      "Population": 115000,
+      "AreaKm2": 1400.00
+    },
+    {
+      "Name": "Kos",
+      "Code": "EU-GR-SA-KOS",
+      "Description": "An island known for its sandy beaches, ancient ruins, and the birthplace of Hippocrates.",
+      "Capital": "Kos Town",
+      "Population": 35000,
+      "AreaKm2": 290.00
+    },
+    {
+      "Name": "Santorini",
+      "Code": "EU-GR-SA-SAN",
+      "Description": "A famous volcanic island known for its stunning sunsets, whitewashed buildings, and crystal-clear waters.",
+      "Capital": "Fira",
+      "Population": 15000,
+      "AreaKm2": 73.00
+    },
+    {
+      "Name": "Mykonos",
+      "Code": "EU-GR-SA-MYK",
+      "Description": "A popular island known for its vibrant nightlife, luxurious resorts, and beautiful beaches.",
+      "Capital": "Mykonos Town",
+      "Population": 10000,
+      "AreaKm2": 85.00
+    },
+    {
+      "Name": "Naxos",
+      "Code": "EU-GR-SA-NAX",
+      "Description": "The largest island in the Cyclades, known for its rich history, ancient temples, and agricultural products.",
+      "Capital": "Naxos Town",
+      "Population": 19000,
+      "AreaKm2": 430.00
+    },
+    {
+      "Name": "Paros",
+      "Code": "EU-GR-SA-PAR",
+      "Description": "An island known for its picturesque villages, beautiful beaches, and marble production.",
+      "Capital": "Parikia",
+      "Population": 13000,
+      "AreaKm2": 196.00
+    },
+    {
+      "Name": "Ios",
+      "Code": "EU-GR-SA-IOS",
+      "Description": "An island famous for its party atmosphere, stunning beaches, and ancient ruins.",
+      "Capital": "Chora",
+      "Population": 2000,
+      "AreaKm2": 109.00
+    }
+]

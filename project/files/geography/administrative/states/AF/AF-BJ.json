@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Atlantique",
+      "Code": "AF-BJ-ATL",
+      "Description": "Located in the southern part of Benin, this region is home to the nation s largest city, Cotonou, and serves as the economic hub of the country.",
+      "Capital": "Cotonou",
+      "Population": 2130000,
+      "AreaKm2": 4660
+    },
+    {
+      "Name": "Borgou",
+      "Code": "AF-BJ-BO",
+      "Description": "A northern region of Benin known for its agricultural activities, particularly in the production of maize, cotton, and livestock.",
+      "Capital": "Parakou",
+      "Population": 1500000,
+      "AreaKm2": 26500
+    },
+    {
+      "Name": "Alibori",
+      "Code": "AF-BJ-AL",
+      "Description": "A region in the northeastern part of Benin, Alibori is an agricultural area, with an emphasis on cotton and livestock farming.",
+      "Capital": "Kandi",
+      "Population": 800000,
+      "AreaKm2": 25100
+    },
+    {
+      "Name": "Mono",
+      "Code": "AF-BJ-MO",
+      "Description": "This region, located in the southwestern part of the country, is known for its beautiful beaches and agricultural products like cashews and cotton.",
+      "Capital": "Lokossa",
+      "Population": 600000,
+      "AreaKm2": 3700
+    },
+    {
+      "Name": "Couffo",
+      "Code": "AF-BJ-CO",
+      "Description": "Couffo is a southern region characterized by agriculture and is known for its cotton production.",
+      "Capital": "Djidja",
+      "Population": 600000,
+      "AreaKm2": 5500
+    },
+    {
+      "Name": "Zou",
+      "Code": "AF-BJ-ZO",
+      "Description": "Zou is a central region in Benin, known for its rich cultural heritage and agricultural products such as cotton, maize, and yams.",
+      "Capital": "Abomey",
+      "Population": 1000000,
+      "AreaKm2": 14000
+    },
+    {
+      "Name": "Collines",
+      "Code": "AF-BJ-CL",
+      "Description": "Located in the center of Benin, Collines is known for its hilly terrain and agricultural activities, especially in the production of maize and yams.",
+      "Capital": "Dassa-Zoumè",
+      "Population": 450000,
+      "AreaKm2": 6000
+    },
+    {
+      "Name": "Donga",
+      "Code": "AF-BJ-DO",
+      "Description": "A northern region of Benin, Donga is known for its agriculture, especially in the production of yams, cassava, and maize.",
+      "Capital": "Natitingou",
+      "Population": 350000,
+      "AreaKm2": 19000
+    },
+    {
+      "Name": "Atacora",
+      "Code": "AF-BJ-AT",
+      "Description": "Located in the northwest, Atacora is an area rich in forests and wildlife, as well as home to various ethnic groups.",
+      "Capital": "Porto-Novo",
+      "Population": 800000,
+      "AreaKm2": 18000
+    }
+]  

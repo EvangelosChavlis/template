@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Agalega Islands",
+      "Code": "AF-MU-AG",
+      "Description": "The Agalega Islands are located in the Indian Ocean, north of Mauritius. They are known for their natural beauty, with a sparse population.",
+      "Capital": "Agalega",
+      "Population": 300,
+      "AreaKm2": 26
+    },
+    {
+      "Name": "Rodrigues Island",
+      "Code": "AF-MU-RI",
+      "Description": "Rodrigues Island is an autonomous outer island of Mauritius, known for its rugged landscape, beaches, and birdlife.",
+      "Capital": "Port Mathurin",
+      "Population": 40000,
+      "AreaKm2": 108
+    },
+    {
+      "Name": "Flacq",
+      "Code": "AF-MU-FL",
+      "Description": "Flacq is located on the eastern part of Mauritius. It is known for its beautiful beaches and as a popular tourist destination.",
+      "Capital": "Centre de Flacq",
+      "Population": 200000,
+      "AreaKm2": 174
+    },
+    {
+      "Name": "Grand Port",
+      "Code": "AF-MU-GP",
+      "Description": "Grand Port is located in the southeastern part of Mauritius, historically significant for its role in the island s development and its natural surroundings.",
+      "Capital": "Mahebourg",
+      "Population": 150000,
+      "AreaKm2": 244
+    },
+    {
+      "Name": "Moka",
+      "Code": "AF-MU-MO",
+      "Description": "Moka is a central region of Mauritius, known for its agricultural landscape and proximity to the capital, Port Louis.",
+      "Capital": "Moka",
+      "Population": 100000,
+      "AreaKm2": 130
+    },
+    {
+      "Name": "Pamplemousses",
+      "Code": "AF-MU-PA",
+      "Description": "Pamplemousses is located in the northern part of Mauritius. It is home to the famous Pamplemousses Botanical Garden and various tourist attractions.",
+      "Capital": "Pamplemousses",
+      "Population": 200000,
+      "AreaKm2": 132
+    },
+    {
+      "Name": "Plaines Wilhems",
+      "Code": "AF-MU-PW",
+      "Description": "Plaines Wilhems is located in the central part of Mauritius and is the island s most populous region, with many urban developments.",
+      "Capital": "Quatre Bornes",
+      "Population": 300000,
+      "AreaKm2": 193
+    },
+    {
+      "Name": "Port Louis",
+      "Code": "AF-MU-PL",
+      "Description": "Port Louis is the capital city and the main port of Mauritius, located in the west of the island. It is the country s political, economic, and cultural center.",
+      "Capital": "Port Louis",
+      "Population": 150000,
+      "AreaKm2": 42
+    },
+    {
+      "Name": "Rivière du Rempart",
+      "Code": "AF-MU-RR",
+      "Description": "Rivière du Rempart is a region located on the northeastern part of Mauritius. It features picturesque coastal landscapes and is known for tourism.",
+      "Capital": "Triolet",
+      "Population": 100000,
+      "AreaKm2": 172
+    },
+    {
+      "Name": "Savanne",
+      "Code": "AF-MU-SA",
+      "Description": "Savanne is located in the southern part of Mauritius. It is known for its rugged terrain, beaches, and natural reserves.",
+      "Capital": "Souillac",
+      "Population": 100000,
+      "AreaKm2": 229
+    }
+]  

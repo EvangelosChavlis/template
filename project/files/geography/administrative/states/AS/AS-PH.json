@@ -1,0 +1,130 @@
+[
+    {
+      "Name": "Ilocos Region",
+      "Code": "AS-PH-IL",
+      "Description": "Located in the northwestern part of the Philippines, known for its historical landmarks, beautiful beaches, and natural resources.",
+      "Capital": "Lingayen",
+      "Population": 5000000,
+      "AreaKm2": 13930
+    },
+    {
+      "Name": "Cagayan Valley",
+      "Code": "AS-PH-CAV",
+      "Description": "A region in the northeastern part of the Philippines, known for its agriculture, especially rice, corn, and tobacco.",
+      "Capital": "Tuguegarao",
+      "Population": 3500000,
+      "AreaKm2": 26748
+    },
+    {
+      "Name": "Central Luzon",
+      "Code": "AS-PH-CL",
+      "Description": "The largest region in Luzon, known for its vast agricultural land and proximity to the national capital region.",
+      "Capital": "City of San Fernando",
+      "Population": 11300000,
+      "AreaKm2": 22300
+    },
+    {
+      "Name": "CALABARZON",
+      "Code": "AS-PH-CAL",
+      "Description": "A region in Southern Luzon, known for its growing industries, educational institutions, and natural tourist destinations.",
+      "Capital": "Calamba",
+      "Population": 14000000,
+      "AreaKm2": 17100
+    },
+    {
+      "Name": "Mimaropa",
+      "Code": "AS-PH-MI",
+      "Description": "An island group in the southwestern part of the Philippines, known for its beautiful islands, beaches, and marine biodiversity.",
+      "Capital": "Calapan",
+      "Population": 3000000,
+      "AreaKm2": 18943
+    },
+    {
+      "Name": "Bicol Region",
+      "Code": "AS-PH-BI",
+      "Description": "A region located in the southernmost part of Luzon, known for its active volcanoes, picturesque landscapes, and local delicacies.",
+      "Capital": "Legazpi",
+      "Population": 6000000,
+      "AreaKm2": 18500
+    },
+    {
+      "Name": "Western Visayas",
+      "Code": "AS-PH-WV",
+      "Description": "An island region in the central Philippines, famous for its beautiful beaches, historic sites, and vibrant festivals.",
+      "Capital": "Iloilo City",
+      "Population": 8000000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Central Visayas",
+      "Code": "AS-PH-CV",
+      "Description": "A region in the central Philippines, known for its tourist destinations like Cebu, Bohol, and Siquijor.",
+      "Capital": "Cebu City",
+      "Population": 7000000,
+      "AreaKm2": 14107
+    },
+    {
+      "Name": "Eastern Visayas",
+      "Code": "AS-PH-EV",
+      "Description": "A region in the eastern part of the Philippines, known for its natural resources, pristine beaches, and cultural heritage.",
+      "Capital": "Tacloban",
+      "Population": 4000000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Zamboanga Peninsula",
+      "Code": "AS-PH-ZP",
+      "Description": "A region in the western part of Mindanao, known for its cultural diversity, beautiful coastlines, and rich resources.",
+      "Capital": "Zamboanga City",
+      "Population": 3000000,
+      "AreaKm2": 14000
+    },
+    {
+      "Name": "Northern Mindanao",
+      "Code": "AS-PH-NM",
+      "Description": "A region in the northern part of Mindanao, known for its agriculture, natural resources, and various tourist attractions.",
+      "Capital": "Cagayan de Oro",
+      "Population": 5000000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Davao Region",
+      "Code": "AS-PH-DA",
+      "Description": "A region in the southeastern part of Mindanao, famous for its rich culture, natural landscapes, and as the home of Mount Apo.",
+      "Capital": "Davao City",
+      "Population": 5000000,
+      "AreaKm2": 20300
+    },
+    {
+      "Name": "Soccsksargen",
+      "Code": "AS-PH-SK",
+      "Description": "A region in the southwestern part of Mindanao, known for its agriculture and diverse culture.",
+      "Capital": "Koronadal",
+      "Population": 3000000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Caraga",
+      "Code": "AS-PH-CA",
+      "Description": "A region in the northeastern part of Mindanao, known for its natural resources, scenic beauty, and indigenous cultures.",
+      "Capital": "Butuan",
+      "Population": 2000000,
+      "AreaKm2": 20300
+    },
+    {
+      "Name": "Autonomous Region in Muslim Mindanao",
+      "Code": "AS-PH-ARMM",
+      "Description": "An autonomous region in the southern part of Mindanao, known for its rich cultural heritage and Muslim population.",
+      "Capital": "Cotabato City",
+      "Population": 4000000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "National Capital Region",
+      "Code": "AS-PH-NCR",
+      "Description": "The capital region of the Philippines, encompassing Metro Manila, the political, economic, and cultural center of the country.",
+      "Capital": "Quezon City",
+      "Population": 13000000,
+      "AreaKm2": 636
+    }
+]  

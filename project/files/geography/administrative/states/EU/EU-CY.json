@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Nicosia",
+      "Code": "EU-CY-01",
+      "Description": "Nicosia is the capital of Cyprus and the last divided capital in Europe. Known for its historical architecture, cultural sites, and as the political and economic center of the country.",
+      "Capital": "Nicosia",
+      "Population": 330000,
+      "AreaKm2": 111
+    },
+    {
+      "Name": "Limassol",
+      "Code": "EU-CY-02",
+      "Description": "Limassol is Cyprus second-largest city, a major port, and a hub for trade and tourism. Known for its beaches, festivals, and modern urban development.",
+      "Capital": "Limassol",
+      "Population": 240000,
+      "AreaKm2": 528
+    },
+    {
+      "Name": "Larnaca",
+      "Code": "EU-CY-03",
+      "Description": "Larnaca is a coastal city known for its historical landmarks, including ancient ruins and churches. It is also home to the island’s main international airport.",
+      "Capital": "Larnaca",
+      "Population": 150000,
+      "AreaKm2": 543
+    },
+    {
+      "Name": "Famagusta",
+      "Code": "EU-CY-04",
+      "Description": "Famagusta is an eastern coastal region of Cyprus, famous for its ancient walled city, historical sites, and beautiful beaches. It is partially occupied by the Turkish Republic of Northern Cyprus.",
+      "Capital": "Famagusta",
+      "Population": 42000,
+      "AreaKm2": 143
+    },
+    {
+      "Name": "Paphos",
+      "Code": "EU-CY-05",
+      "Description": "Paphos is a historic city on the southwestern coast of Cyprus, known for its ancient archaeological sites, including the Tombs of the Kings and Paphos Archaeological Park.",
+      "Capital": "Paphos",
+      "Population": 35000,
+      "AreaKm2": 140
+    },
+    {
+      "Name": "Kyrenia",
+      "Code": "EU-CY-06",
+      "Description": "Kyrenia is a picturesque coastal town in Northern Cyprus, known for its harbor, medieval castle, and scenic views along the Mediterranean coast.",
+      "Capital": "Kyrenia",
+      "Population": 26000,
+      "AreaKm2": 61
+    },
+    {
+      "Name": "Morphou",
+      "Code": "EU-CY-07",
+      "Description": "Morphou is a district located in the northwestern part of Cyprus, which is mainly known for its agricultural and rural areas. It is under the Turkish Republic of Northern Cyprus administration.",
+      "Capital": "Morphou",
+      "Population": 15000,
+      "AreaKm2": 225
+    },
+    {
+      "Name": "Karpas",
+      "Code": "EU-CY-08",
+      "Description": "Karpas is a remote and picturesque region on the northeastern tip of Cyprus. It is known for its natural beauty, including pristine beaches and mountainous terrain.",
+      "Capital": "Karpas",
+      "Population": 7000,
+      "AreaKm2": 180
+    },
+    {
+      "Name": "Akhna",
+      "Code": "EU-CY-09",
+      "Description": "Akhna is located in the southeastern part of Cyprus and is a rural area with a mix of agriculture and some light industry. It is under the administration of the Turkish Republic of Northern Cyprus.",
+      "Capital": "Akhna",
+      "Population": 12000,
+      "AreaKm2": 85
+    }
+]  

@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Central Athens",
+      "Code": "EU-GR-AC-CA",
+      "Description": "The central area of Athens, encompassing the city s historic and administrative heart.",
+      "Capital": "Athens",
+      "Population": 1000000,
+      "AreaKm2": 87.0
+    },
+    {
+      "Name": "North Athens",
+      "Code": "EU-GR-AC-NA",
+      "Description": "The northern suburbs of Athens, known for residential areas and commercial centers.",
+      "Capital": "Marousi",
+      "Population": 590000,
+      "AreaKm2": 138.8
+    },
+    {
+      "Name": "West Athens",
+      "Code": "EU-GR-AC-WA",
+      "Description": "The western suburbs of Athens, characterized by industrial zones and residential neighborhoods.",
+      "Capital": "Peristeri",
+      "Population": 490000,
+      "AreaKm2": 66.8
+    },
+    {
+      "Name": "South Athens",
+      "Code": "EU-GR-AC-SA",
+      "Description": "The southern suburbs of Athens, featuring coastal areas and modern developments.",
+      "Capital": "Nea Smyrni",
+      "Population": 530000,
+      "AreaKm2": 68.9
+    },
+    {
+      "Name": "East Attica",
+      "Code": "EU-GR-AC-EA",
+      "Description": "The eastern part of Attica, including coastal towns and rural landscapes.",
+      "Capital": "Pallini",
+      "Population": 500000,
+      "AreaKm2": 1513.0
+    },
+    {
+      "Name": "West Attica",
+      "Code": "EU-GR-AC-WEA",
+      "Description": "The western part of Attica, known for its industrial areas and natural parks.",
+      "Capital": "Elefsina",
+      "Population": 160000,
+      "AreaKm2": 1465.0
+    },
+    {
+      "Name": "Piraeus",
+      "Code": "EU-GR-AC-PI",
+      "Description": "The port city of Athens, serving as the main gateway to the Greek islands.",
+      "Capital": "Piraeus",
+      "Population": 450000,
+      "AreaKm2": 50.4
+    },
+    {
+      "Name": "Islands",
+      "Code": "EU-GR-AC-IS",
+      "Description": "The islands of the Saronic Gulf, administratively part of the Attica region.",
+      "Capital": "Aegina",
+      "Population": 70000,
+      "AreaKm2": 929.0
+    }
+]  

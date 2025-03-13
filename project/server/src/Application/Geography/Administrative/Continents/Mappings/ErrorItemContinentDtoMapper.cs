@@ -19,6 +19,8 @@ public class ErrorItemContinentDtoMapper
             Name: string.Empty,
             Code: string.Empty,
             Description: string.Empty,
+            Population: long.MinValue,
+            AreaKm2: double.MinValue,
             IsActive: false,
             Version: Guid.Empty 
         );

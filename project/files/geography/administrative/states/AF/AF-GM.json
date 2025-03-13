@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Banjul",
+      "Code": "AF-GM-BJ",
+      "Description": "Banjul is the capital city of The Gambia, located on the banks of the Gambia River. It is the country s administrative and commercial center.",
+      "Capital": "Banjul",
+      "Population": 300000,
+      "AreaKm2": 12
+    },
+    {
+      "Name": "Western Division",
+      "Code": "AF-GM-WD",
+      "Description": "The Western Division surrounds Banjul and is home to many of The Gambia s urban and agricultural areas.",
+      "Capital": "Brikama",
+      "Population": 600000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Lower River Division",
+      "Code": "AF-GM-LR",
+      "Description": "The Lower River Division is located along the Gambia River and is known for its farming and fishing activities.",
+      "Capital": "Mansa Konko",
+      "Population": 100000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Central River Division",
+      "Code": "AF-GM-CR",
+      "Description": "The Central River Division is located in the center of the country and is known for its agricultural activities, particularly rice cultivation.",
+      "Capital": "Janjanbureh",
+      "Population": 120000,
+      "AreaKm2": 3500
+    },
+    {
+      "Name": "Upper River Division",
+      "Code": "AF-GM-UR",
+      "Description": "The Upper River Division is located in the eastern part of the country, and its economy is based on agriculture, especially groundnuts and millet.",
+      "Capital": "Basse Santa Su",
+      "Population": 90000,
+      "AreaKm2": 6000
+    },
+    {
+      "Name": "North Bank Division",
+      "Code": "AF-GM-NB",
+      "Description": "The North Bank Division is located in the northern part of The Gambia, and its economy is largely based on agriculture and trade.",
+      "Capital": "Kerewan",
+      "Population": 100000,
+      "AreaKm2": 2500
+    }
+]  

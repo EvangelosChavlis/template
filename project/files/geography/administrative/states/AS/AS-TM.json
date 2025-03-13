@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Ahal Province",
+      "Code": "AS-TM-AH",
+      "Description": "Located in the central part of Turkmenistan, this region is home to the capital city, Ashgabat. It has a mix of desert and mountainous terrain.",
+      "Capital": "Ashgabat",
+      "Population": 1200000,
+      "AreaKm2": 94700
+    },
+    {
+      "Name": "Balkan Province",
+      "Code": "AS-TM-BK",
+      "Description": "Bordering the Caspian Sea, this region is known for its natural beauty, including beaches and mountains.",
+      "Capital": "Turkmenbashy",
+      "Population": 700000,
+      "AreaKm2": 71000
+    },
+    {
+      "Name": "Dashoguz Province",
+      "Code": "AS-TM-DA",
+      "Description": "Located in the northern part of Turkmenistan, this region has a largely desert landscape and is important for agriculture.",
+      "Capital": "Dashoguz",
+      "Population": 900000,
+      "AreaKm2": 73000
+    },
+    {
+      "Name": "Lebap Province",
+      "Code": "AS-TM-LB",
+      "Description": "Located in the eastern part of the country, this province is known for its historical sites, including ancient ruins and the Amu Darya river.",
+      "Capital": "Turkmenabat",
+      "Population": 1000000,
+      "AreaKm2": 79000
+    },
+    {
+      "Name": "Mary Province",
+      "Code": "AS-TM-MR",
+      "Description": "Situated in the southeastern part of Turkmenistan, this region is known for its agriculture, particularly cotton, and historical significance.",
+      "Capital": "Mary",
+      "Population": 900000,
+      "AreaKm2": 93000
+    }
+]  

@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Agios Antonios",
+        "Description": "A central neighborhood in Peristeri, known for its lively streets, shops, and residential areas.",
+        "Population": 12000,
+        "AreaKm2": 1.3,
+        "Zipcode": "12134",
+        "Code": "EU-GR-AC-WA-PE-1-AA"
+    },
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A residential neighborhood with a strong community presence and local businesses.",
+        "Population": 10000,
+        "AreaKm2": 1.1,
+        "Zipcode": "12135",
+        "Code": "EU-GR-AC-WA-PE-1-AN"
+    },
+    {
+        "Name": "Peristeri Center",
+        "Description": "The commercial heart of Peristeri, with shopping streets, restaurants, and cultural venues.",
+        "Population": 15000,
+        "AreaKm2": 2.0,
+        "Zipcode": "12140",
+        "Code": "EU-GR-AC-WA-PE-1-PC"
+    },
+    {
+        "Name": "Kokkinia",
+        "Description": "A vibrant, mixed-use neighborhood with residential areas and local markets.",
+        "Population": 11000,
+        "AreaKm2": 1.4,
+        "Zipcode": "12141",
+        "Code": "EU-GR-AC-WA-PE-1-KO"
+    },
+    {
+        "Name": "Stavros",
+        "Description": "A residential area known for its quiet streets and proximity to parks and schools.",
+        "Population": 9000,
+        "AreaKm2": 1.2,
+        "Zipcode": "12142",
+        "Code": "EU-GR-AC-WA-PE-1-SS"
+    }
+]

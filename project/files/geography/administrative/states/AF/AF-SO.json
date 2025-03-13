@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Banadir",
+      "Code": "AF-SO-BD",
+      "Description": "The region surrounding the capital city, Mogadishu, and includes important coastal areas.",
+      "Capital": "Mogadishu",
+      "Population": 3000000,
+      "AreaKm2": 160
+    },
+    {
+      "Name": "Awdal",
+      "Code": "AF-SO-AW",
+      "Description": "A region in the northwest, known for its agricultural production and proximity to the Red Sea.",
+      "Capital": "Zeila",
+      "Population": 500000,
+      "AreaKm2": 26000
+    },
+    {
+      "Name": "Bari",
+      "Code": "AF-SO-BA",
+      "Description": "Located in the northeastern part of Somalia, known for its coastline along the Gulf of Aden.",
+      "Capital": "Bosaso",
+      "Population": 1000000,
+      "AreaKm2": 67000
+    },
+    {
+      "Name": "Galguduud",
+      "Code": "AF-SO-GL",
+      "Description": "A central region known for its dry climate and the strategic town of Dhusamareb.",
+      "Capital": "Dhusamareb",
+      "Population": 600000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Hiran",
+      "Code": "AF-SO-HI",
+      "Description": "A region in central Somalia, known for its agricultural and livestock activities.",
+      "Capital": "Belet Weyne",
+      "Population": 800000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Jubaland",
+      "Code": "AF-SO-JL",
+      "Description": "A southern region with a strategic location near Kenya, known for its ports and pastoralism.",
+      "Capital": "Kismayo",
+      "Population": 500000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Mudug",
+      "Code": "AF-SO-MD",
+      "Description": "A region in central Somalia, with diverse landscapes from desert to coastal areas.",
+      "Capital": "Gaalkacyo",
+      "Population": 700000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Sool",
+      "Code": "AF-SO-SO",
+      "Description": "A region in the northern part of Somalia, known for its mountainous terrain and disputes with Somaliland.",
+      "Capital": "Laascaanood",
+      "Population": 500000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Togdheer",
+      "Code": "AF-SO-TG",
+      "Description": "A region in the northwest, known for its agricultural production, especially crops and livestock.",
+      "Capital": "Borama",
+      "Population": 700000,
+      "AreaKm2": 18000
+    },
+    {
+      "Name": "Woqooyi Galbeed",
+      "Code": "AF-SO-WG",
+      "Description": "Located in the northwestern part of Somalia, with the capital in Hargeisa, part of Somaliland.",
+      "Capital": "Hargeisa",
+      "Population": 1000000,
+      "AreaKm2": 18000
+    }
+]  

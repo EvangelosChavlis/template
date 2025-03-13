@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Kabul",
+      "Code": "AS-AF-KBL",
+      "Description": "The capital and largest city of Afghanistan, a major center of commerce, culture, and government.",
+      "Capital": "Kabul",
+      "Population": 4750000,
+      "AreaKm2": 275
+    },
+    {
+      "Name": "Kandahar",
+      "Code": "AS-AF-KDH",
+      "Description": "A major city in southern Afghanistan, historically important and a center for trade, agriculture, and culture.",
+      "Capital": "Kandahar",
+      "Population": 650000,
+      "AreaKm2": 255
+    },
+    {
+      "Name": "Herat",
+      "Code": "AS-AF-HRT",
+      "Description": "A major city in western Afghanistan, known for its rich cultural history and as a key trade route with Iran.",
+      "Capital": "Herat",
+      "Population": 500000,
+      "AreaKm2": 250
+    },
+    {
+      "Name": "Mazar-i-Sharif",
+      "Code": "AS-AF-MZR",
+      "Description": "A city in northern Afghanistan, known for its historical significance and the Shrine of Hazrat Ali.",
+      "Capital": "Mazar-i-Sharif",
+      "Population": 400000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Jalalabad",
+      "Code": "AS-AF-JBD",
+      "Description": "A city in eastern Afghanistan, a key trade hub near the border with Pakistan, and surrounded by beautiful landscapes.",
+      "Capital": "Jalalabad",
+      "Population": 300000,
+      "AreaKm2": 330
+    },
+    {
+      "Name": "Bamyan",
+      "Code": "AS-AF-BMN",
+      "Description": "A city in central Afghanistan, known for its historical Buddhist sites, including the famous Bamyan Buddhas.",
+      "Capital": "Bamyan",
+      "Population": 100000,
+      "AreaKm2": 110
+    },
+    {
+      "Name": "Logar",
+      "Code": "AS-AF-LGR",
+      "Description": "A province south of Kabul, known for its agricultural activities, especially in fruits and vegetables.",
+      "Capital": "Pul-e-Alam",
+      "Population": 400000,
+      "AreaKm2": 3792
+    },
+    {
+      "Name": "Nangarhar",
+      "Code": "AS-AF-NGR",
+      "Description": "A province in eastern Afghanistan, important for trade with Pakistan and known for its agricultural production.",
+      "Capital": "Jalalabad",
+      "Population": 1500000,
+      "AreaKm2": 7565
+    },
+    {
+      "Name": "Faryab",
+      "Code": "AS-AF-FAY",
+      "Description": "A northern province known for its diverse ethnic groups, including Uzbeks and Tajiks, and its agriculture.",
+      "Capital": "Maymana",
+      "Population": 600000,
+      "AreaKm2": 20602
+    },
+    {
+      "Name": "Badakhshan",
+      "Code": "AS-AF-BDN",
+      "Description": "A northeastern province known for its rugged terrain, beautiful mountains, and significant natural resources.",
+      "Capital": "Faizabad",
+      "Population": 900000,
+      "AreaKm2": 44351
+    }
+]

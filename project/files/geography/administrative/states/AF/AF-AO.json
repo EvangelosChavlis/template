@@ -1,0 +1,106 @@
+[
+    {
+      "Name": "Luanda",
+      "Code": "AF-AO-LU",
+      "Description": "The capital region, known for its coastal location, port, and urban development.",
+      "Capital": "Luanda",
+      "Population": 8000000,
+      "AreaKm2": 2200
+    },
+    {
+      "Name": "Benguela",
+      "Code": "AF-AO-BE",
+      "Description": "A coastal region known for its beaches, colonial architecture, and vibrant culture.",
+      "Capital": "Benguela",
+      "Population": 2300000,
+      "AreaKm2": 31983
+    },
+    {
+      "Name": "Cabinda",
+      "Code": "AF-AO-CA",
+      "Description": "An exclave region known for its oil resources and tropical forests.",
+      "Capital": "Cabinda",
+      "Population": 700000,
+      "AreaKm2": 7790
+    },
+    {
+      "Name": "Huambo",
+      "Code": "AF-AO-HU",
+      "Description": "A region in central Angola known for its agricultural activities and scenic landscapes.",
+      "Capital": "Huambo",
+      "Population": 2500000,
+      "AreaKm2": 33514
+    },
+    {
+      "Name": "Huila",
+      "Code": "AF-AO-HUL",
+      "Description": "A region with a diverse geography, including mountains, forests, and savannas.",
+      "Capital": "Lubango",
+      "Population": 2200000,
+      "AreaKm2": 67483
+    },
+    {
+      "Name": "Kwanza Norte",
+      "Code": "AF-AO-KN",
+      "Description": "Known for its natural beauty and proximity to Luanda.",
+      "Capital": "Ndalatando",
+      "Population": 1000000,
+      "AreaKm2": 24121
+    },
+    {
+      "Name": "Kwanza Sul",
+      "Code": "AF-AO-KS",
+      "Description": "A coastal region known for its agriculture and proximity to Luanda.",
+      "Capital": "Sumbe",
+      "Population": 1200000,
+      "AreaKm2": 55191
+    },
+    {
+      "Name": "Malanje",
+      "Code": "AF-AO-MA",
+      "Description": "Located in the north-central part of the country, known for its forests and agriculture.",
+      "Capital": "Malanje",
+      "Population": 1400000,
+      "AreaKm2": 97342
+    },
+    {
+      "Name": "Moxico",
+      "Code": "AF-AO-MX",
+      "Description": "A region with rich biodiversity and vast natural resources.",
+      "Capital": "Luena",
+      "Population": 1000000,
+      "AreaKm2": 223023
+    },
+    {
+      "Name": "Uíge",
+      "Code": "AF-AO-UI",
+      "Description": "Known for its agricultural production, including coffee and tobacco.",
+      "Capital": "Uíge",
+      "Population": 1700000,
+      "AreaKm2": 58106
+    },
+    {
+      "Name": "Zaire",
+      "Code": "AF-AO-ZA",
+      "Description": "Located in the northwest, this region is known for its oil and mineral resources.",
+      "Capital": "Mbanza Congo",
+      "Population": 700000,
+      "AreaKm2": 39502
+    },
+    {
+      "Name": "Lunda Norte",
+      "Code": "AF-AO-LN",
+      "Description": "Known for its mineral wealth, including diamonds.",
+      "Capital": "Dundo",
+      "Population": 900000,
+      "AreaKm2": 103000
+    },
+    {
+      "Name": "Lunda Sul",
+      "Code": "AF-AO-LS",
+      "Description": "A mineral-rich region, particularly known for diamonds.",
+      "Capital": "Saurimo",
+      "Population": 700000,
+      "AreaKm2": 77500
+    }
+]  

@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Arta",
+      "Code": "EU-GR-EP-ART",
+      "Description": "A region known for its historical landmarks, including the ancient city of Ambrakia and the famous Arta Bridge.",
+      "Capital": "Arta",
+      "Population": 25000,
+      "AreaKm2": 1160.00
+    },
+    {
+      "Name": "Ioannina",
+      "Code": "EU-GR-EP-IOA",
+      "Description": "A region known for its beautiful landscapes, the city of Ioannina, and the stunning Lake Pamvotis.",
+      "Capital": "Ioannina",
+      "Population": 130000,
+      "AreaKm2": 2500.00
+    },
+    {
+      "Name": "Thesprotia",
+      "Code": "EU-GR-EP-THR",
+      "Description": "A coastal region known for its beautiful beaches, the ancient site of Dodona, and the port of Igoumenitsa.",
+      "Capital": "Igoumenitsa",
+      "Population": 40000,
+      "AreaKm2": 1000.00
+    },
+    {
+      "Name": "Preveza",
+      "Code": "EU-GR-EP-PRE",
+      "Description": "A region known for its stunning beaches, the ancient city of Nikopolis, and its proximity to the Ionian Sea.",
+      "Capital": "Preveza",
+      "Population": 25000,
+      "AreaKm2": 600.00
+    }
+]

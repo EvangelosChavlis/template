@@ -42,10 +42,14 @@ public class CreateStateHandler : IRequestHandler<CreateStateCommand, Response<s
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<State, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<State, bool>>[] 
+        { 
+            s => s.Name!.Equals(command.Dto.Name) ||
+                s.Code == command.Dto.Code
+        };
         var existingState = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the state already exists in the system
         if (existingState is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

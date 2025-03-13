@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "Piraeus",
+        "Description": "The capital city and the most prominent municipality in this region, known for its port and maritime industry.",
+        "AreaKm2": 38.0,
+        "Population": 175000,
+        "Code": "EU-GR-AC-PI-PI"
+    },
+    {
+        "Name": "Korydallos",
+        "Description": "A residential municipality located near Piraeus, characterized by its urban environment and residential neighborhoods.",
+        "AreaKm2": 10.1,
+        "Population": 130000,
+        "Code": "EU-GR-AC-PI-KO"
+    },
+    {
+        "Name": "Nikaias-Agios Ioannis Rentis",
+        "Description": "A municipality located to the north of Piraeus, known for its industrial zones and residential areas.",
+        "AreaKm2": 7.3,
+        "Population": 135000,
+        "Code": "EU-GR-AC-PI-NA"
+    },
+    {
+        "Name": "Keratsini-Drapetsona",
+        "Description": "A municipality formed by merging Keratsini and Drapetsona, it focuses on port activities and local development.",
+        "AreaKm2": 12.0,
+        "Population": 115000,
+        "Code": "EU-GR-AC-PI-KD"
+    },
+    {
+        "Name": "Perama",
+        "Description": "A port-related municipality known for its industrial areas and proximity to the commercial port of Piraeus.",
+        "AreaKm2": 22.0,
+        "Population": 29000,
+        "Code": "EU-GR-AC-PI-PE"
+    }
+]

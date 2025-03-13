@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Yerevan",
+      "Code": "AS-AM-YVN",
+      "Description": "The capital and largest city of Armenia, a cultural and economic hub with rich history.",
+      "Capital": "Yerevan",
+      "Population": 1075800,
+      "AreaKm2": 223
+    },
+    {
+      "Name": "Gyumri",
+      "Code": "AS-AM-GYR",
+      "Description": "A major city in northern Armenia, known for its historical significance and as an important cultural center.",
+      "Capital": "Gyumri",
+      "Population": 120000,
+      "AreaKm2": 170
+    },
+    {
+      "Name": "Vanadzor",
+      "Code": "AS-AM-VZR",
+      "Description": "A city in northern Armenia, known for its industrial and cultural significance.",
+      "Capital": "Vanadzor",
+      "Population": 85000,
+      "AreaKm2": 124
+    },
+    {
+      "Name": "Vagharshapat",
+      "Code": "AS-AM-VGT",
+      "Description": "An ancient city and religious center, known for being the seat of the Armenian Apostolic Church.",
+      "Capital": "Vagharshapat",
+      "Population": 50000,
+      "AreaKm2": 45
+    },
+    {
+      "Name": "Kapan",
+      "Code": "AS-AM-KPN",
+      "Description": "A city in the southern part of Armenia, known for its mining industry and proximity to the Iranian border.",
+      "Capital": "Kapan",
+      "Population": 45000,
+      "AreaKm2": 60
+    },
+    {
+      "Name": "Armavir",
+      "Code": "AS-AM-ARV",
+      "Description": "A city in western Armenia, known for its agricultural production and historical landmarks.",
+      "Capital": "Armavir",
+      "Population": 40000,
+      "AreaKm2": 55
+    },
+    {
+      "Name": "Ararat",
+      "Code": "AS-AM-ART",
+      "Description": "A region in Armenia, home to the legendary Mount Ararat, with agricultural land and historical sites.",
+      "Capital": "Artashat",
+      "Population": 300000,
+      "AreaKm2": 1400
+    },
+    {
+      "Name": "Gegharkunik",
+      "Code": "AS-AM-GNK",
+      "Description": "A region known for its mountainous terrain, beautiful lakes, and proximity to Lake Sevan.",
+      "Capital": "Gavar",
+      "Population": 250000,
+      "AreaKm2": 5263
+    },
+    {
+      "Name": "Lori",
+      "Code": "AS-AM-LOR",
+      "Description": "A northern region known for its natural beauty, including forests, rivers, and historical landmarks.",
+      "Capital": "Vanadzor",
+      "Population": 250000,
+      "AreaKm2": 3747
+    },
+    {
+      "Name": "Syunik",
+      "Code": "AS-AM-SYN",
+      "Description": "A southern region, known for its mountainous landscapes and its border with Azerbaijan and Iran.",
+      "Capital": "Kapan",
+      "Population": 150000,
+      "AreaKm2": 4510
+    }
+]  

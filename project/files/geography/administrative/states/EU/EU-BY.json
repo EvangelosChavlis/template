@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Minsk",
+      "Code": "EU-BY-01",
+      "Description": "Minsk is the capital and largest city of Belarus, known for its Soviet-era architecture, cultural institutions, and vibrant city life.",
+      "Capital": "Minsk",
+      "Population": 2000000,
+      "AreaKm2": 305
+    },
+    {
+      "Name": "Brest",
+      "Code": "EU-BY-02",
+      "Description": "Brest is located in the western part of Belarus and is famous for its historical sites, including the Brest Fortress, a symbol of Soviet resistance during World War II.",
+      "Capital": "Brest",
+      "Population": 350000,
+      "AreaKm2": 32760
+    },
+    {
+      "Name": "Gomel",
+      "Code": "EU-BY-03",
+      "Description": "Gomel is the second-largest city in Belarus, known for its historical landmarks, parks, and proximity to the Ukrainian border.",
+      "Capital": "Gomel",
+      "Population": 500000,
+      "AreaKm2": 40000
+    },
+    {
+      "Name": "Grodno",
+      "Code": "EU-BY-04",
+      "Description": "Grodno is a city in western Belarus, known for its well-preserved medieval architecture, including churches, castles, and historical buildings.",
+      "Capital": "Grodno",
+      "Population": 370000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Mogilev",
+      "Code": "EU-BY-06",
+      "Description": "Mogilev is located in the eastern part of Belarus and is an important industrial and cultural center, with several museums and historical landmarks.",
+      "Capital": "Mogilev",
+      "Population": 380000,
+      "AreaKm2": 29000
+    },
+    {
+      "Name": "Vitebsk",
+      "Code": "EU-BY-05",
+      "Description": "Vitebsk is a city in northeastern Belarus, known for its rich cultural heritage and as the birthplace of the famous artist Marc Chagall.",
+      "Capital": "Vitebsk",
+      "Population": 350000,
+      "AreaKm2": 40000
+    }
+]  

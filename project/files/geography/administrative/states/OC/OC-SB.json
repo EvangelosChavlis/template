@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Central Province",
+      "Code": "OC-SB-CP",
+      "Description": "A group of islands in the central part of the Solomon Islands, including the main island of Guadalcanal and the capital, Honiara.",
+      "Capital": "Honiara",
+      "Population": 200000,
+      "AreaKm2": 5300
+    },
+    {
+      "Name": "Choiseul Province",
+      "Code": "OC-SB-CH",
+      "Description": "Known for its rich cultural heritage and forests, Choiseul is located to the west of Guadalcanal, famous for its natural beauty.",
+      "Capital": "Taro",
+      "Population": 30000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Malaita Province",
+      "Code": "OC-SB-MA",
+      "Description": "The most populous province of the Solomon Islands, known for its strong cultural traditions and bustling markets.",
+      "Capital": "Auki",
+      "Population": 100000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Makira-Ulawa Province",
+      "Code": "OC-SB-MU",
+      "Description": "Located in the southeastern part of the Solomon Islands, this province is known for its beautiful coral reefs and rich biodiversity.",
+      "Capital": "Kirakira",
+      "Population": 23000,
+      "AreaKm2": 2100
+    },
+    {
+      "Name": "Temotu Province",
+      "Code": "OC-SB-TP",
+      "Description": "The easternmost province of the Solomon Islands, consisting of several islands, including the Santa Cruz Islands, with beautiful beaches and rich culture.",
+      "Capital": "Lata",
+      "Population": 25000,
+      "AreaKm2": 1700
+    },
+    {
+      "Name": "Western Province",
+      "Code": "OC-SB-WP",
+      "Description": "Located on the western side of the Solomon Islands, famous for its beaches, diving spots, and natural scenery.",
+      "Capital": "Gizo",
+      "Population": 30000,
+      "AreaKm2": 4000
+    }
+]  

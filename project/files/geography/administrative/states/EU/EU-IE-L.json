@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Leinster",
+    "Code": "EU-IE-L",
+    "Description": "Leinster is the easternmost province, including Dublin, Ireland's capital and largest city. It is the political and cultural heart of the country.",
+    "Capital": "Dublin",
+    "Population": 2600000,
+    "AreaKm2": 18900
+  },
+  {
+    "Name": "Munster",
+    "Code": "EU-IE-M",
+    "Description": "Munster is a southwestern province known for its scenic landscapes, historic cities like Cork, and its coastal charm.",
+    "Capital": "Cork",
+    "Population": 1300000,
+    "AreaKm2": 24000
+  },
+  {
+    "Name": "Connacht",
+    "Code": "EU-IE-C",
+    "Description": "Connacht is located on the western coast of Ireland, known for its rugged landscapes, historic sites, and the vibrant city of Galway.",
+    "Capital": "Galway",
+    "Population": 550000,
+    "AreaKm2": 18000
+  },
+  {
+    "Name": "Ulster",
+    "Code": "EU-IE-U",
+    "Description": "Ulster is the northernmost province, with a blend of Irish and Northern Irish culture. It contains the city of Belfast in Northern Ireland and Derry in the Republic of Ireland.",
+    "Capital": "Omagh",
+    "Population": 2800000,
+    "AreaKm2": 24000
+  }
+]

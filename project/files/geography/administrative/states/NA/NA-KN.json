@@ -1,0 +1,18 @@
+[
+    {
+      "Name": "Saint Kitts",
+      "Code": "NA-KN-KN",
+      "Description": "The larger of the two islands, known for its lush landscapes, beaches, and the capital city of Basseterre.",
+      "Capital": "Basseterre",
+      "Population": 35000,
+      "AreaKm2": 168
+    },
+    {
+      "Name": "Nevis",
+      "Code": "NA-KN-NE",
+      "Description": "Known for its mountainous terrain, hot springs, and historical sites. The island is quieter and less developed than Saint Kitts.",
+      "Capital": "Charlestown",
+      "Population": 12000,
+      "AreaKm2": 93
+    }
+]  

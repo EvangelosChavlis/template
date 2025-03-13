@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Agadez",
+      "Code": "AF-NE-AG",
+      "Description": "Agadez is located in the northern part of Niger. It is known for its historical significance, including being a key stop on the Trans-Saharan trade route.",
+      "Capital": "Agadez",
+      "Population": 418000,
+      "AreaKm2": 667000
+    },
+    {
+      "Name": "Diffa",
+      "Code": "AF-NE-DI",
+      "Description": "Diffa is located in the southeastern part of Niger, close to Lake Chad. It is known for its agricultural activities, particularly in the region sflood plains.",
+      "Capital": "Diffa",
+      "Population": 734000,
+      "AreaKm2": 180000
+    },
+    {
+      "Name": "Dosso",
+      "Code": "AF-NE-DO",
+      "Description": "Dosso is situated in the southwestern part of Niger, known for its agricultural land and being the center of various trade routes.",
+      "Capital": "Dosso",
+      "Population": 750000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Maradi",
+      "Code": "AF-NE-MA",
+      "Description": "Maradi is located in the southern part of Niger, close to the border with Nigeria. It is an important commercial center and has a significant agricultural presence.",
+      "Capital": "Maradi",
+      "Population": 2000000,
+      "AreaKm2": 68000
+    },
+    {
+      "Name": "Tahoua",
+      "Code": "AF-NE-TA",
+      "Description": "Tahoua is located in the western part of Niger. It is known for its agricultural activities, including livestock farming and the production of crops like millet and sorghum.",
+      "Capital": "Tahoua",
+      "Population": 1000000,
+      "AreaKm2": 112000
+    },
+    {
+      "Name": "Tillaberi",
+      "Code": "AF-NE-TI",
+      "Description": "Tillaberi is located in the southwestern part of Niger, near the border with Mali. The region is rich in agricultural production, particularly in the cultivation of crops like cotton and millet.",
+      "Capital": "Tillaberi",
+      "Population": 1100000,
+      "AreaKm2": 87000
+    },
+    {
+      "Name": "Zinder",
+      "Code": "AF-NE-ZI",
+      "Description": "Zinder is located in the southeastern part of Niger and is the second-largest city in the country. It is a major commercial and agricultural hub.",
+      "Capital": "Zinder",
+      "Population": 2200000,
+      "AreaKm2": 72000
+    },
+    {
+      "Name": "Niamey",
+      "Code": "AF-NE-NI",
+      "Description": "Niamey is the capital and largest city of Niger, located in the southwestern part of the country. It serves as the political, economic, and cultural center of Niger.",
+      "Capital": "Niamey",
+      "Population": 1100000,
+      "AreaKm2": 505
+    }
+]  

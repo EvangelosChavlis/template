@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Muscat",
+      "Code": "AS-OM-MC",
+      "Description": "The capital city of Oman, known for its modern architecture, cultural landmarks, and scenic coastal views.",
+      "Capital": "Muscat",
+      "Population": 1500000,
+      "AreaKm2": 3500
+    },
+    {
+      "Name": "Dhofar",
+      "Code": "AS-OM-DF",
+      "Description": "A southern region known for its lush greenery, mountainous terrain, and the monsoon season.",
+      "Capital": "Salalah",
+      "Population": 300000,
+      "AreaKm2": 9930
+    },
+    {
+      "Name": "Al Batinah North",
+      "Code": "AS-OM-ABN",
+      "Description": "A coastal region known for its fertile plains, agriculture, and proximity to the capital.",
+      "Capital": "Sohar",
+      "Population": 400000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Al Batinah South",
+      "Code": "AS-OM-ABS",
+      "Description": "A southern part of the Al Batinah region, with similar agricultural prominence and a mix of coastal and inland geography.",
+      "Capital": "Wilayat of Rustaq",
+      "Population": 350000,
+      "AreaKm2": 12500
+    },
+    {
+      "Name": "Al Dakhiliyah",
+      "Code": "AS-OM-AD",
+      "Description": "An inland region famous for its historical sites, traditional markets, and mountainous landscapes.",
+      "Capital": "Nizwa",
+      "Population": 350000,
+      "AreaKm2": 11800
+    },
+    {
+      "Name": "Al Sharqiyah North",
+      "Code": "AS-OM-ASN",
+      "Description": "A region located along the eastern coastline, known for its fishing industry, beaches, and natural reserves.",
+      "Capital": "Ibra",
+      "Population": 200000,
+      "AreaKm2": 16000
+    },
+    {
+      "Name": "Al Sharqiyah South",
+      "Code": "AS-OM-ASS",
+      "Description": "The southern counterpart to Al Sharqiyah North, with a mix of agriculture, tourism, and coastal culture.",
+      "Capital": "Sur",
+      "Population": 180000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Musandam",
+      "Code": "AS-OM-MU",
+      "Description": "A geographically isolated region located on the northernmost tip of Oman, known for its stunning fjords and mountainous landscape.",
+      "Capital": "Khasab",
+      "Population": 37000,
+      "AreaKm2": 1800
+    }
+]  

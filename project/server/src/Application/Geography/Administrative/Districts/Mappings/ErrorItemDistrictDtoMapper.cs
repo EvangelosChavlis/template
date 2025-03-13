@@ -19,6 +19,8 @@ public class ErrorItemDistrictDtoMapper
             Name: string.Empty,
             Description: string.Empty,
             Population: long.MinValue,
+            AreaKm2: double.MinValue,
+            Code: string.Empty,
             IsActive: false,
             Municipality: string.Empty,
             Version: Guid.Empty

@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Baku",
+      "Code": "AS-AZ-BA",
+      "Description": "The capital and largest city of Azerbaijan, located on the Caspian Sea, known for its modern architecture and rich cultural history.",
+      "Capital": "Baku",
+      "Population": 2204000,
+      "AreaKm2": 214
+    },
+    {
+      "Name": "Ganja",
+      "Code": "AS-AZ-GJ",
+      "Description": "A major city in western Azerbaijan, known for its historical landmarks and as a cultural and industrial center.",
+      "Capital": "Ganja",
+      "Population": 330000,
+      "AreaKm2": 113
+    },
+    {
+      "Name": "Mingachevir",
+      "Code": "AS-AZ-MG",
+      "Description": "A city located on the Kura River, known for its large hydroelectric power plant and industrial significance.",
+      "Capital": "Mingachevir",
+      "Population": 100000,
+      "AreaKm2": 40
+    },
+    {
+      "Name": "Lankaran",
+      "Code": "AS-AZ-LK",
+      "Description": "A city located near the Caspian Sea, known for its mild climate, tea plantations, and natural beauty.",
+      "Capital": "Lankaran",
+      "Population": 100000,
+      "AreaKm2": 35
+    },
+    {
+      "Name": "Sumgayit",
+      "Code": "AS-AZ-SG",
+      "Description": "An industrial city near Baku, known for its chemical and manufacturing industries.",
+      "Capital": "Sumgayit",
+      "Population": 350000,
+      "AreaKm2": 83
+    },
+    {
+      "Name": "Shirvan",
+      "Code": "AS-AZ-SV",
+      "Description": "A city in central Azerbaijan, known for its agricultural production and historical sites.",
+      "Capital": "Shirvan",
+      "Population": 150000,
+      "AreaKm2": 80
+    },
+    {
+      "Name": "Barda",
+      "Code": "AS-AZ-BD",
+      "Description": "A town in the central part of Azerbaijan, historically known as the site of an ancient settlement.",
+      "Capital": "Barda",
+      "Population": 10000,
+      "AreaKm2": 20
+    },
+    {
+      "Name": "Guba",
+      "Code": "AS-AZ-GBA",
+      "Description": "A city in northeastern Azerbaijan, known for its scenic beauty, historic sites, and agricultural products.",
+      "Capital": "Guba",
+      "Population": 44000,
+      "AreaKm2": 72
+    },
+    {
+      "Name": "Tovuz",
+      "Code": "AS-AZ-TZ",
+      "Description": "A region located in the western part of Azerbaijan, known for its agricultural production, including wine and fruit.",
+      "Capital": "Tovuz",
+      "Population": 200000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Khachmaz",
+      "Code": "AS-AZ-KHM",
+      "Description": "A region located in the northeastern part of Azerbaijan, known for its agriculture and historical sites.",
+      "Capital": "Khachmaz",
+      "Population": 130000,
+      "AreaKm2": 1050
+    },
+    {
+      "Name": "Zagatala",
+      "Code": "AS-AZ-ZG",
+      "Description": "A region in the northwestern part of Azerbaijan, known for its mountainous terrain, scenic beauty, and historical significance.",
+      "Capital": "Zagatala",
+      "Population": 40000,
+      "AreaKm2": 2100
+    }
+]  

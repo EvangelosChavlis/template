@@ -1,0 +1,106 @@
+[
+    {
+      "Name": "Kingston",
+      "Code": "NA-JM-KI",
+      "Description": "The capital and largest city of Jamaica, known for its vibrant cultural scene and as the country s political and economic center.",
+      "Capital": "Kingston",
+      "Population": 670000,
+      "AreaKm2": 480
+    },
+    {
+      "Name": "Clarendon",
+      "Code": "NA-JM-CL",
+      "Description": "A region known for its agriculture, particularly sugarcane and bananas, and its scenic landscapes.",
+      "Capital": "May Pen",
+      "Population": 250000,
+      "AreaKm2": 1200
+    },
+    {
+      "Name": "Manchester",
+      "Code": "NA-JM-MA",
+      "Description": "A landlocked region in the southern part of the island, known for its cool climate and agriculture, including citrus fruits and coffee.",
+      "Capital": "Mandeville",
+      "Population": 200000,
+      "AreaKm2": 800
+    },
+    {
+      "Name": "St. Elizabeth",
+      "Code": "NA-JM-SE",
+      "Description": "A rural region known for its extensive agricultural activities, particularly sugar and bananas, and its beaches.",
+      "Capital": "Black River",
+      "Population": 180000,
+      "AreaKm2": 1900
+    },
+    {
+      "Name": "St. James",
+      "Code": "NA-JM-SJ",
+      "Description": "A popular tourist region, home to Montego Bay, known for its beaches, resorts, and vibrant nightlife.",
+      "Capital": "Montego Bay",
+      "Population": 600000,
+      "AreaKm2": 600
+    },
+    {
+      "Name": "Trelawny",
+      "Code": "NA-JM-TR",
+      "Description": "A region known for its beaches, resorts, and historic sites, as well as agriculture including sugarcane and bananas.",
+      "Capital": "Falmouth",
+      "Population": 100000,
+      "AreaKm2": 900
+    },
+    {
+      "Name": "Hanover",
+      "Code": "NA-JM-HO",
+      "Description": "A coastal region known for its beaches and the historic town of Lucea.",
+      "Capital": "Lucea",
+      "Population": 70000,
+      "AreaKm2": 450
+    },
+    {
+      "Name": "Westmoreland",
+      "Code": "NA-JM-WE",
+      "Description": "A southern coastal region known for its agricultural production, particularly sugar, and its beach towns.",
+      "Capital": "Savanna-la-Mar",
+      "Population": 150000,
+      "AreaKm2": 700
+    },
+    {
+      "Name": "St. Ann",
+      "Code": "NA-JM-SA",
+      "Description": "A region known for its beaches, particularly in Ocho Rios, and the famous Dunn s River Falls.",
+      "Capital": "St. Ann's Bay",
+      "Population": 300000,
+      "AreaKm2": 1200
+    },
+    {
+      "Name": "St. Mary",
+      "Code": "NA-JM-SM",
+      "Description": "A northeastern region known for its lush vegetation, waterfalls, and as a historical area with sugar estates.",
+      "Capital": "Port Maria",
+      "Population": 120000,
+      "AreaKm2": 610
+    },
+    {
+      "Name": "Portland",
+      "Code": "NA-JM-PO",
+      "Description": "A region known for its beautiful beaches, lush vegetation, and ecotourism opportunities.",
+      "Capital": "Port Antonio",
+      "Population": 85000,
+      "AreaKm2": 800
+    },
+    {
+      "Name": "St. Thomas",
+      "Code": "NA-JM-ST",
+      "Description": "A region known for its natural beauty, including rivers and beaches, and a more laid-back atmosphere compared to other areas.",
+      "Capital": "Morant Bay",
+      "Population": 100000,
+      "AreaKm2": 900
+    },
+    {
+      "Name": "St. Kitts",
+      "Code": "NA-JM-SK",
+      "Description": "A region that is part of the popular St. Kitts and Nevis federation, with beautiful beaches and a rich history.",
+      "Capital": "Basseterre",
+      "Population": 42000,
+      "AreaKm2": 168
+    }
+]  

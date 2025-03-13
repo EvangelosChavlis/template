@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Male",
+      "Code": "AS-MV-MV",
+      "Description": "The capital city of Maldives, known for its bustling markets, vibrant culture, and stunning nearby resorts.",
+      "Capital": "Male",
+      "Population": 133000,
+      "AreaKm2": 9.27
+    },
+    {
+      "Name": "Addu Atoll",
+      "Code": "AS-MV-AA",
+      "Description": "The southernmost atoll in the Maldives, known for its beautiful coral reefs, lagoons, and tropical beaches.",
+      "Capital": "Hithadhoo",
+      "Population": 30000,
+      "AreaKm2": 215.3
+    },
+    {
+      "Name": "Baa Atoll",
+      "Code": "AS-MV-BA",
+      "Description": "A UNESCO Biosphere Reserve known for its exceptional marine biodiversity, including manta rays and whale sharks.",
+      "Capital": "Eydhafushi",
+      "Population": 11000,
+      "AreaKm2": 624.72
+    },
+    {
+      "Name": "Raa Atoll",
+      "Code": "AS-MV-RA",
+      "Description": "An atoll in the northern Maldives, famous for its peaceful environment and crystal-clear waters perfect for diving and snorkeling.",
+      "Capital": "Ungoofaaru",
+      "Population": 10000,
+      "AreaKm2": 632.89
+    },
+    {
+      "Name": "Noonu Atoll",
+      "Code": "AS-MV-NA",
+      "Description": "Known for its stunning uninhabited islands, Noonu Atoll offers secluded resorts and pristine beaches.",
+      "Capital": "Manadhoo",
+      "Population": 8000,
+      "AreaKm2": 568.78
+    },
+    {
+      "Name": "Laccadive Islands",
+      "Code": "AS-MV-LI",
+      "Description": "Located in the Indian Ocean, these islands are known for their exceptional coral reefs, perfect for marine adventures.",
+      "Capital": "Thulhaadhoo",
+      "Population": 4500,
+      "AreaKm2": 185.73
+    }
+]  

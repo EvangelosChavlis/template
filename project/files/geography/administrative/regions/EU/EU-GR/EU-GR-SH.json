@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Fthiotis",
+      "Code": "EU-GR-SH-FTI",
+      "Description": "A region in central Greece, known for its diverse landscapes, including mountains, plains, and coastal areas.",
+      "Capital": "Lamia",
+      "Population": 150000,
+      "AreaKm2": 3100.00
+    },
+    {
+      "Name": "Viotia",
+      "Code": "EU-GR-SH-VIO",
+      "Description": "A region known for its historical significance, including the ancient city of Thebes.",
+      "Capital": "Livadeia",
+      "Population": 120000,
+      "AreaKm2": 2230.00
+    },
+    {
+      "Name": "Evrytania",
+      "Code": "EU-GR-SH-EVR",
+      "Description": "A mountainous region, famous for its natural beauty, rivers, and outdoor activities.",
+      "Capital": "Karpenisi",
+      "Population": 35000,
+      "AreaKm2": 1400.00
+    },
+    {
+      "Name": "Euboea",
+      "Code": "EU-GR-SH-EUB",
+      "Description": "An island region, the second largest in Greece, known for its beaches, forests, and traditional villages.",
+      "Capital": "Chalkida",
+      "Population": 220000,
+      "AreaKm2": 3690.00
+    },
+    {
+      "Name": "Phocis",
+      "Code": "EU-GR-SH-PHO",
+      "Description": "A region rich in archaeological sites, including the ancient sanctuary of Delphi.",
+      "Capital": "Amfissa",
+      "Population": 45000,
+      "AreaKm2": 2290.00
+    }
+]

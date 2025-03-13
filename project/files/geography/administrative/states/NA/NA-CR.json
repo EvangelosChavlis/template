@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Alajuela",
+      "Code": "NA-CR-A",
+      "Description": "A province known for its lush landscapes, including coffee plantations and the Arenal Volcano.",
+      "Capital": "Alajuela",
+      "Population": 1000000,
+      "AreaKm2": 9600
+    },
+    {
+      "Name": "Cartago",
+      "Code": "NA-CR-C",
+      "Description": "A province rich in history and culture, home to the sacred Basilica of Our Lady of the Angels and the Irazú Volcano.",
+      "Capital": "Cartago",
+      "Population": 500000,
+      "AreaKm2": 3545
+    },
+    {
+      "Name": "Guanacaste",
+      "Code": "NA-CR-G",
+      "Description": "A coastal province known for its beautiful beaches, dry tropical forests, and national parks.",
+      "Capital": "Liberia",
+      "Population": 350000,
+      "AreaKm2": 10316
+    },
+    {
+      "Name": "Heredia",
+      "Code": "NA-CR-H",
+      "Description": "A province known for its coffee-growing regions and being home to the Costa Rican National University.",
+      "Capital": "Heredia",
+      "Population": 470000,
+      "AreaKm2": 2830
+    },
+    {
+      "Name": "Limon",
+      "Code": "NA-CR-L",
+      "Description": "A Caribbean province known for its Afro-Caribbean culture, tropical rainforests, and rich biodiversity.",
+      "Capital": "Limon",
+      "Population": 400000,
+      "AreaKm2": 9300
+    },
+    {
+      "Name": "Puntarenas",
+      "Code": "NA-CR-P",
+      "Description": "A province with a large coastal area, famous for its beaches, including those in the Nicoya Peninsula.",
+      "Capital": "Puntarenas",
+      "Population": 500000,
+      "AreaKm2": 11225
+    },
+    {
+      "Name": "San Jose",
+      "Code": "NA-CR-SJ",
+      "Description": "The capital province, the political and cultural heart of Costa Rica, and home to the nation s capital, San José.",
+      "Capital": "San Jose",
+      "Population": 1800000,
+      "AreaKm2": 4592
+    }
+]  

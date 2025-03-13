@@ -1,0 +1,106 @@
+[
+    {
+      "Name": "Mexico City",
+      "Code": "NA-MX-DF",
+      "Description": "The capital and largest city of Mexico, known for its rich history, cultural landmarks, and economic significance.",
+      "Capital": "Mexico City",
+      "Population": 9000000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Baja California",
+      "Code": "NA-MX-BC",
+      "Description": "A northern region known for its coastal cities like Tijuana, its vineyards, and proximity to the United States.",
+      "Capital": "Mexicali",
+      "Population": 3769020,
+      "AreaKm2": 71000
+    },
+    {
+      "Name": "Chihuahua",
+      "Code": "NA-MX-CH",
+      "Description": "A region known for its vast desert landscapes, the Copper Canyon, and the city of Chihuahua.",
+      "Capital": "Chihuahua City",
+      "Population": 3800487,
+      "AreaKm2": 247455
+    },
+    {
+      "Name": "Jalisco",
+      "Code": "NA-MX-JA",
+      "Description": "Famous for its tequila production, the city of Guadalajara, and its rich cultural heritage.",
+      "Capital": "Guadalajara",
+      "Population": 8140000,
+      "AreaKm2": 78399
+    },
+    {
+      "Name": "Nuevo León",
+      "Code": "NA-MX-NL",
+      "Description": "Known for its industrialization, the city of Monterrey, and its proximity to the United States.",
+      "Capital": "Monterrey",
+      "Population": 5700000,
+      "AreaKm2": 64000
+    },
+    {
+      "Name": "Yucatan",
+      "Code": "NA-MX-YU",
+      "Description": "A region known for its Mayan heritage, ancient ruins like Chichen Itza, and its coastal resorts.",
+      "Capital": "Merida",
+      "Population": 2140000,
+      "AreaKm2": 39500
+    },
+    {
+      "Name": "Guanajuato",
+      "Code": "NA-MX-GT",
+      "Description": "A region rich in history, known for its colonial architecture, silver mines, and the city of León.",
+      "Capital": "Guanajuato City",
+      "Population": 1800000,
+      "AreaKm2": 30600
+    },
+    {
+      "Name": "Oaxaca",
+      "Code": "NA-MX-OA",
+      "Description": "Known for its indigenous cultures, food, and the historic city of Oaxaca, a UNESCO World Heritage site.",
+      "Capital": "Oaxaca City",
+      "Population": 4100000,
+      "AreaKm2": 93700
+    },
+    {
+      "Name": "Puebla",
+      "Code": "NA-MX-PB",
+      "Description": "A central region with beautiful colonial towns, historical sites, and the city of Puebla, famous for its culinary heritage.",
+      "Capital": "Puebla City",
+      "Population": 6800000,
+      "AreaKm2": 34400
+    },
+    {
+      "Name": "Veracruz",
+      "Code": "NA-MX-VE",
+      "Description": "A coastal region known for its port, cultural heritage, and the city of Veracruz.",
+      "Capital": "Xalapa",
+      "Population": 8300000,
+      "AreaKm2": 72000
+    },
+    {
+      "Name": "Quintana Roo",
+      "Code": "NA-MX-QR",
+      "Description": "Famous for its tropical beaches and resorts, including Cancun and the Riviera Maya.",
+      "Capital": "Chetumal",
+      "Population": 5000000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Sonora",
+      "Code": "NA-MX-SON",
+      "Description": "A northern region known for its desert landscapes, the city of Hermosillo, and a strong agricultural sector.",
+      "Capital": "Hermosillo",
+      "Population": 2900000,
+      "AreaKm2": 179355
+    },
+    {
+      "Name": "Sinaloa",
+      "Code": "NA-MX-SIN",
+      "Description": "A coastal region known for its agriculture, seafood, and the city of Mazatlán.",
+      "Capital": "Culiacán Rosales",
+      "Population": 3500000,
+      "AreaKm2": 58000
+    }
+]  

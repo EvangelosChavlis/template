@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Brazzaville",
+      "Code": "AF-CO-BZ",
+      "Description": "Brazzaville is the capital and largest city of the Republic of the Congo, located on the western bank of the Congo River. It is an economic and administrative hub of the country.",
+      "Capital": "Brazzaville",
+      "Population": 1430000,
+      "AreaKm2": 266
+    },
+    {
+      "Name": "Cuvette",
+      "Code": "AF-CO-CV",
+      "Description": "Cuvette is a region in northern Congo, known for its forested areas and rich biodiversity. It is sparsely populated and is an important part of the Congo Basin.",
+      "Capital": "Oyo",
+      "Population": 300000,
+      "AreaKm2": 62510
+    },
+    {
+      "Name": "Kouilou",
+      "Code": "AF-CO-KO",
+      "Description": "Kouilou is a coastal region of the Republic of the Congo, featuring lush landscapes, a rich cultural heritage, and economic importance due to its oil resources.",
+      "Capital": "Point-Noire",
+      "Population": 800000,
+      "AreaKm2": 28700
+    },
+    {
+      "Name": "Likouala",
+      "Code": "AF-CO-LK",
+      "Description": "Likouala is located in the northern part of the Republic of the Congo, bordered by the Central African Republic and the Republic of the Congo. It has a significant portion of rainforest.",
+      "Capital": "Impfondo",
+      "Population": 500000,
+      "AreaKm2": 151500
+    },
+    {
+      "Name": "Niari",
+      "Code": "AF-CO-NI",
+      "Description": "Niari is a region located in the southwestern part of the country, characterized by fertile land, agriculture, and the important city of Dolisie.",
+      "Capital": "Dolisie",
+      "Population": 350000,
+      "AreaKm2": 32700
+    },
+    {
+      "Name": "Plateaux",
+      "Code": "AF-CO-PL",
+      "Description": "Plateaux is a region located in the central part of the country, rich in natural resources and known for its mountainous terrain and forests.",
+      "Capital": "Brazzaville",
+      "Population": 400000,
+      "AreaKm2": 37000
+    },
+    {
+      "Name": "Pool",
+      "Code": "AF-CO-PO",
+      "Description": "Pool is a region located near Brazzaville. It is known for its natural beauty, wildlife, and historical significance in the context of the Congo civil wars.",
+      "Capital": "Kinkala",
+      "Population": 300000,
+      "AreaKm2": 25000
+    }
+]  

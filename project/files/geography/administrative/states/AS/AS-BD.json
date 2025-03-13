@@ -1,0 +1,67 @@
+[
+    {
+      "Name": "Barishal",
+      "Code": "AS-BD-BR",
+      "Description": "Located in the southern part of Bangladesh, known for its rivers, fertile land, and the Bay of Bengal coast.",
+      "Capital": "Barishal",
+      "Population": 8000000,
+      "AreaKm2": 13613
+    },
+    {
+      "Name": "Chattogram",
+      "Code": "AS-BD-CH",
+      "Description": "A coastal division in southeastern Bangladesh, known for its port city, Chattogram, and beautiful beaches.",
+      "Capital": "Chattogram",
+      "Population": 32000000,
+      "AreaKm2": 34156
+    },
+    {
+      "Name": "Dhaka",
+      "Code": "AS-BD-DK",
+      "Description": "The central division of Bangladesh, home to the capital city Dhaka, the political and economic heart of the country.",
+      "Capital": "Dhaka",
+      "Population": 38000000,
+      "AreaKm2": 20620
+    },
+    {
+      "Name": "Khulna",
+      "Code": "AS-BD-KH",
+      "Description": "Located in the southwestern part of Bangladesh, known for the Sundarbans mangrove forest and the largest tiger population.",
+      "Capital": "Khulna",
+      "Population": 15000000,
+      "AreaKm2": 22136
+    },
+    {
+      "Name": "Mymensingh",
+      "Code": "AS-BD-MM",
+      "Description": "A northern division, known for its agricultural lands and rich cultural history.",
+      "Capital": "Mymensingh",
+      "Population": 5000000,
+      "AreaKm2": 4351
+    },
+    {
+      "Name": "Rajshahi",
+      "Code": "AS-BD-RJ",
+      "Description": "Located in the northwestern part of Bangladesh, known for its historical sites and agricultural products, particularly mangoes.",
+      "Capital": "Rajshahi",
+      "Population": 25000000,
+      "AreaKm2": 18106
+    },
+    {
+      "Name": "Rangpur",
+      "Code": "AS-BD-RP",
+      "Description": "A northwestern division, known for its rural landscapes and vibrant agricultural economy.",
+      "Capital": "Rangpur",
+      "Population": 20000000,
+      "AreaKm2": 16911
+    },
+    {
+      "Name": "Sylhet",
+      "Code": "AS-BD-SY",
+      "Description": "Located in the northeastern part of Bangladesh, known for its tea gardens, natural beauty, and significant diaspora abroad.",
+      "Capital": "Sylhet",
+      "Population": 5000000,
+      "AreaKm2": 3856
+    }
+]
+  

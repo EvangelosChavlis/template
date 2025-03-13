@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Andorra la Vella",
+      "Code": "EU-AD-AV",
+      "Description": "Andorra la Vella is the capital of Andorra, known for its picturesque setting in the Pyrenees and as a popular shopping and tourist destination.",
+      "Capital": "Andorra la Vella",
+      "Population": 22000,
+      "AreaKm2": 12
+    },
+    {
+      "Name": "Escaldes-Engordany",
+      "Code": "EU-AD-EE",
+      "Description": "Escaldes-Engordany is located near Andorra la Vella, famous for its thermal springs and vibrant urban development.",
+      "Capital": "Escaldes-Engordany",
+      "Population": 14000,
+      "AreaKm2": 10
+    },
+    {
+      "Name": "Encamp",
+      "Code": "EU-AD-EC",
+      "Description": "Encamp is a town in Andorra known for its ski resorts and being a gateway to the Grandvalira ski area.",
+      "Capital": "Encamp",
+      "Population": 13000,
+      "AreaKm2": 20
+    },
+    {
+      "Name": "Sant Julià de Lòria",
+      "Code": "EU-AD-SJ",
+      "Description": "Sant Julià de Lòria is known for its green valleys and as a location for various cultural and sporting events.",
+      "Capital": "Sant Julià de Lòria",
+      "Population": 8000,
+      "AreaKm2": 35
+    },
+    {
+      "Name": "La Massana",
+      "Code": "EU-AD-LM",
+      "Description": "La Massana is a region in Andorra known for its scenic beauty and as a hub for winter sports activities.",
+      "Capital": "La Massana",
+      "Population": 7000,
+      "AreaKm2": 23
+    },
+    {
+      "Name": "Ordino",
+      "Code": "EU-AD-OR",
+      "Description": "Ordino is a charming and mountainous town, known for its traditional Andorran architecture and outdoor activities.",
+      "Capital": "Ordino",
+      "Population": 4000,
+      "AreaKm2": 85
+    }
+]  

@@ -1,0 +1,19 @@
+[
+    {
+      "Name": "Sao Tome",
+      "Code": "AF-ST-ST",
+      "Description": "Sao Tome is the capital and largest city of Sao Tome and Principe. It is known for its picturesque landscapes, cocoa plantations, and rich colonial architecture.",
+      "Capital": "Sao Tome",
+      "Population": 700000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Principe",
+      "Code": "AF-ST-PR",
+      "Description": "Príncipe is the smaller of the two main islands that make up Sao Tome and Principe. It is known for its lush tropical rainforests and unique wildlife.",
+      "Capital": "Santa Clara",
+      "Population": 80000,
+      "AreaKm2": 142
+    }
+  ]
+  

@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Achaea",
+      "Code": "EU-GR-WG-ACR",
+      "Description": "A region known for its rich history and archaeological sites, including the ancient city of Olympia.",
+      "Capital": "Patras",
+      "Population": 300000,
+      "AreaKm2": 3400.00
+    },
+    {
+      "Name": "Ilia",
+      "Code": "EU-GR-WG-ILI",
+      "Description": "A region famous for its beaches, ancient Olympia, and scenic countryside.",
+      "Capital": "Pyrgos",
+      "Population": 140000,
+      "AreaKm2": 2550.00
+    },
+    {
+      "Name": "Aetolia-Acarnania",
+      "Code": "EU-GR-WG-AET",
+      "Description": "A region known for its lakes, rivers, and natural beauty, as well as its historic towns.",
+      "Capital": "Messolonghi",
+      "Population": 220000,
+      "AreaKm2": 5800.00
+    }
+]

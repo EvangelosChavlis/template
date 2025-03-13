@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Abu Dhabi",
+      "Code": "AS-AE-AZ",
+      "Description": "The capital and largest emirate, located in the west of the UAE. It is known for its modern architecture, luxury shopping, and rich cultural heritage.",
+      "Capital": "Abu Dhabi",
+      "Population": 2300000,
+      "AreaKm2": 67300
+    },
+    {
+      "Name": "Dubai",
+      "Code": "AS-AE-DB",
+      "Description": "The most populous emirate, known for its futuristic skyline, luxury hotels, shopping malls, and iconic landmarks such as the Burj Khalifa.",
+      "Capital": "Dubai",
+      "Population": 3300000,
+      "AreaKm2": 4114
+    },
+    {
+      "Name": "Sharjah",
+      "Code": "AS-AE-SH",
+      "Description": "Located adjacent to Dubai, Sharjah is known for its arts, culture, and heritage, with a variety of museums, art galleries, and historic sites.",
+      "Capital": "Sharjah",
+      "Population": 1400000,
+      "AreaKm2": 2350
+    },
+    {
+      "Name": "Ajman",
+      "Code": "AS-AE-AJ",
+      "Description": "A small emirate known for its beaches and developing tourism sector.",
+      "Capital": "Ajman",
+      "Population": 500000,
+      "AreaKm2": 259
+    },
+    {
+      "Name": "Umm Al-Quwain",
+      "Code": "AS-AE-UQ",
+      "Description": "The smallest emirate, known for its quiet and laid-back atmosphere, beaches, and historical attractions.",
+      "Capital": "Umm Al-Quwain",
+      "Population": 75000,
+      "AreaKm2": 777
+    },
+    {
+      "Name": "Fujairah",
+      "Code": "AS-AE-FJ",
+      "Description": "Located on the eastern coast along the Gulf of Oman, Fujairah is known for its mountainous terrain and beaches.",
+      "Capital": "Fujairah",
+      "Population": 256000,
+      "AreaKm2": 1160
+    },
+    {
+      "Name": "Ras Al Khaimah",
+      "Code": "AS-AE-RA",
+      "Description": "Located in the northern part of the UAE, Ras Al Khaimah is known for its scenic mountains, deserts, and historical forts.",
+      "Capital": "Ras Al Khaimah",
+      "Population": 300000,
+      "AreaKm2": 1684
+    }
+]  

@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Helsinki",
+      "Code": "EU-EE-01",
+      "Description": "Helsinki is the capital region, offering a blend of modern culture, historical landmarks, and coastal beauty.",
+      "Capital": "Tallinn",
+      "Population": 440000,
+      "AreaKm2": 922
+    },
+    {
+      "Name": "Northern Estonia",
+      "Code": "EU-EE-02",
+      "Description": "Northern Estonia features beautiful coastlines, including the Baltic Sea and the famous Lahemaa National Park.",
+      "Capital": "Tallinn",
+      "Population": 1500000,
+      "AreaKm2": 12340
+    },
+    {
+      "Name": "Western Estonia",
+      "Code": "EU-EE-03",
+      "Description": "Western Estonia is known for its pristine nature, picturesque islands, and historical landmarks.",
+      "Capital": "Pärnu",
+      "Population": 350000,
+      "AreaKm2": 7240
+    },
+    {
+      "Name": "Eastern Estonia",
+      "Code": "EU-EE-04",
+      "Description": "Eastern Estonia is rich in natural resources and historical sites, with a focus on its timber industry and vast forests.",
+      "Capital": "Tartu",
+      "Population": 600000,
+      "AreaKm2": 21000
+    },
+    {
+      "Name": "Southern Estonia",
+      "Code": "EU-EE-05",
+      "Description": "Southern Estonia is known for its picturesque landscapes, beautiful lakes, and calm atmosphere.",
+      "Capital": "Valga",
+      "Population": 700000,
+      "AreaKm2": 11500
+    }
+]  

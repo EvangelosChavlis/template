@@ -21,6 +21,8 @@ public static class CreateContinentModelMapper
             Name = dto.Name,
             Description = dto.Description,
             Code = dto.Code,
+            AreaKm2 = dto.AreaKm2,
+            Population = dto.Population,
             IsActive = true,
             Version = Guid.NewGuid()
         };

@@ -16,32 +16,62 @@ public static class UpdateCountryValidators
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
         else if (dto.Name.Length > CountryLength.NameLength)
-            errors.Add($"Name must not exceed {CountryLength.NameLength} characters.");
+            errors.Add($"Name {dto.Name} must not exceed {CountryLength.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
-            errors.Add("Name contains invalid characters.");
+            errors.Add($"Name {dto.Name} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
-            errors.Add("Name contains non-printable characters.");
+            errors.Add($"Name {dto.Name} contains non-printable characters.");
 
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
         else if (dto.Description.Length > CountryLength.DescriptionLength)
-            errors.Add($"Description must not exceed {CountryLength.DescriptionLength} characters.");
+            errors.Add($"Description {dto.Description} must not exceed {CountryLength.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
-            errors.Add("Description contains invalid characters.");
+            errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
-            errors.Add("Description contains non-printable characters.");
+            errors.Add($"Description {dto.Description} contains non-printable characters.");
 
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Code is required.");
         else if (dto.Code.Length > CountryLength.CodeLength)
-            errors.Add($"Code must not exceed {CountryLength.CodeLength} characters.");
+            errors.Add($"Code {dto.Code} must not exceed {CountryLength.CodeLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
-            errors.Add("Code contains invalid characters.");
+            errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Code.ContainsNonPrintableCharacters())
-            errors.Add("Code contains non-printable characters.");
+            errors.Add($"Code {dto.Code} contains non-printable characters.");
             
+        // Validation for PhoneCode
+        if (string.IsNullOrWhiteSpace(dto.PhoneCode))
+            errors.Add("PhoneCode is required.");
+        else if (dto.PhoneCode.Length > CountryLength.PhoneCodeLength)
+            errors.Add($"PhoneCode {dto.PhoneCode} must not exceed {CountryLength.PhoneCodeLength} characters.");
+        else if (dto.PhoneCode.ContainsInjectionCharacters())
+            errors.Add($"PhoneCode {dto.PhoneCode} contains invalid characters.");
+        else if (dto.Code.ContainsNonPrintableCharacters())
+            errors.Add($"PhoneCode {dto.PhoneCode} contains non-printable characters.");
+
+        // Validation for TLD
+        if (string.IsNullOrWhiteSpace(dto.TLD))
+            errors.Add("TLD is required.");
+        else if (dto.TLD.Length > CountryLength.TLDLength)
+            errors.Add($"TLD {dto.TLD} must not exceed {CountryLength.TLDLength} characters.");
+        else if (dto.TLD.ContainsInjectionCharacters())
+            errors.Add($"TLD {dto.TLD} contains invalid characters.");
+        else if (dto.Code.ContainsNonPrintableCharacters())
+            errors.Add($"TLD {dto.TLD} contains non-printable characters.");
+
+        // Validation for Currency
+        if (string.IsNullOrWhiteSpace(dto.Currency))
+            errors.Add("Currency is required.");
+        else if (dto.TLD.Length > CountryLength.TLDLength)
+            errors.Add($"Currency {dto.Currency} must not exceed {CountryLength.CurrencyLength} characters.");
+        else if (dto.TLD.ContainsInjectionCharacters())
+            errors.Add($"Currency {dto.Currency} contains invalid characters.");
+        else if (dto.Code.ContainsNonPrintableCharacters())
+            errors.Add($"Currency {dto.Currency} contains non-printable characters.");
+
         // Validation for Population
         if (dto.Population < 0)
             errors.Add("Population cannot be negative.");

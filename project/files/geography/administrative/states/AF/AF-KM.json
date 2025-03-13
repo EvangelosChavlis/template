@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Grande Comore",
+      "Code": "AF-KM-GC",
+      "Description": "Grande Comore is the largest island of the Comoros archipelago and is home to the capital city, Moroni. The island is known for its volcanic landscape and rich biodiversity.",
+      "Capital": "Moroni",
+      "Population": 300000,
+      "AreaKm2": 1141
+    },
+    {
+      "Name": "Anjouan",
+      "Code": "AF-KM-AJ",
+      "Description": "Anjouan is the second-largest island in the Comoros archipelago, known for its lush vegetation, mountainous terrain, and scenic landscapes.",
+      "Capital": "Mutsamudu",
+      "Population": 270000,
+      "AreaKm2": 424
+    },
+    {
+      "Name": "Moheli",
+      "Code": "AF-KM-MH",
+      "Description": "Moheli is the smallest of the three main islands of the Comoros and is known for its beautiful beaches, coral reefs, and marine life.",
+      "Capital": "Fomboni",
+      "Population": 100000,
+      "AreaKm2": 211
+    }
+]  

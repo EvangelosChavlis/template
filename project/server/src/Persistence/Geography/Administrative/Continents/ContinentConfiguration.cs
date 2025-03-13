@@ -36,6 +36,12 @@ public class ContinentConfiguration : IEntityTypeConfiguration<Continent>
             .IsRequired(false)
             .HasMaxLength(ContinentLength.DescriptionLength);
 
+        builder.Property(c => c.AreaKm2)
+            .IsRequired();
+
+        builder.Property(c => c.Population)
+            .IsRequired();
+
         builder.Property(c => c.IsActive)
             .IsRequired();
 

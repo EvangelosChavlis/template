@@ -11,6 +11,15 @@ public class UserLoginIndexes : IEntityTypeConfiguration<UserLogin>
 {
     public void Configure(EntityTypeBuilder<UserLogin> builder)
     {
+        builder.HasIndex(ul => ul.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(UserLogin)}_
+                {nameof(UserLogin.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
         builder.HasIndex(ul 
             => new { 
                 ul.Id, 
@@ -24,7 +33,9 @@ public class UserLoginIndexes : IEntityTypeConfiguration<UserLogin>
                 {nameof(UserLogin.Id)}_
                 {nameof(UserLogin.LoginProvider)}_
                 {nameof(UserLogin.ProviderDisplayName)}_
-                {nameof(UserLogin.Date)}
-            ".Replace("\n", "").Trim());
+                {nameof(UserLogin.Date)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

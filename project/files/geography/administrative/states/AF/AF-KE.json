@@ -1,0 +1,83 @@
+[
+    {
+      "Name": "Baringo",
+      "Code": "AF-KE-BA",
+      "Description": "Home to Lake Baringo and a rich variety of wildlife.",
+      "Capital": "Kabarnet",
+      "Population": 666000,
+      "AreaKm2": 11075
+    },
+    {
+      "Name": "Bomet",
+      "Code": "AF-KE-BM",
+      "Description": "A key agricultural region known for tea farming.",
+      "Capital": "Bomet",
+      "Population": 875000,
+      "AreaKm2": 1997
+    },
+    {
+      "Name": "Bungoma",
+      "Code": "AF-KE-BG",
+      "Description": "A vibrant county with a strong agricultural economy.",
+      "Capital": "Bungoma",
+      "Population": 1670000,
+      "AreaKm2": 3032
+    },
+    {
+      "Name": "Busia",
+      "Code": "AF-KE-BS",
+      "Description": "A border county with Uganda, known for trade and fishing.",
+      "Capital": "Busia",
+      "Population": 893000,
+      "AreaKm2": 1695
+    },
+    {
+      "Name": "Elgeyo Marakwet",
+      "Code": "AF-KE-EM",
+      "Description": "Famous for its high-altitude training camps for athletes.",
+      "Capital": "Iten",
+      "Population": 454000,
+      "AreaKm2": 3032
+    },
+    {
+      "Name": "Embu",
+      "Code": "AF-KE-EB",
+      "Description": "Known for coffee and tea farming.",
+      "Capital": "Embu",
+      "Population": 608000,
+      "AreaKm2": 2556
+    },
+    {
+      "Name": "Garissa",
+      "Code": "AF-KE-GA",
+      "Description": "A semi-arid region with a large Somali community.",
+      "Capital": "Garissa",
+      "Population": 841000,
+      "AreaKm2": 44535
+    },
+    {
+      "Name": "Homa Bay",
+      "Code": "AF-KE-HB",
+      "Description": "Located on the shores of Lake Victoria, known for fishing.",
+      "Capital": "Homa Bay",
+      "Population": 1131000,
+      "AreaKm2": 3155
+    },
+    {
+      "Name": "Isiolo",
+      "Code": "AF-KE-IS",
+      "Description": "A gateway to Northern Kenya, rich in wildlife.",
+      "Capital": "Isiolo",
+      "Population": 268000,
+      "AreaKm2": 25336
+    },
+    {
+      "Name": "Kajiado",
+      "Code": "AF-KE-KJ",
+      "Description": "A rapidly growing county with Nairobi s suburban expansion.",
+      "Capital": "Kajiado",
+      "Population": 1117000,
+      "AreaKm2": 21292
+    }
+]
+  

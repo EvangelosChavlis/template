@@ -23,6 +23,8 @@ public static class CreateDistrictModelMapper
             Name = dto.Name,
             Description = dto.Description,
             Population = dto.Population,
+            AreaKm2 = dto.AreaKm2,
+            Code = dto.Code,
             IsActive = true,
             Version = Guid.NewGuid(),
             Municipality = model,

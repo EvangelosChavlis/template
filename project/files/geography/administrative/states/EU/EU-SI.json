@@ -1,0 +1,50 @@
+[
+    {
+        "Name": "Pomurska",
+        "Code": "EU-SI-PM",
+        "Description": "The northeastern region, known for its rich agricultural land, including fields and vineyards, as well as the Mura River.",
+        "Capital": "Murska Sobota",
+        "Population": 120000,
+        "AreaKm2": 1370.32
+    },
+    {
+        "Name": "Podravska",
+        "Code": "EU-SI-PD",
+        "Description": "A region in eastern Slovenia, known for its wine production, as well as the city of Maribor, Slovenia s second-largest city.",
+        "Capital": "Maribor",
+        "Population": 600000,
+        "AreaKm2": 1634.77
+    },
+    {
+        "Name": "Osrednjeslovenska",
+        "Code": "EU-SI-OS",
+        "Description": "The central region, known for Ljubljana, Slovenia s capital, as well as nearby forests and hiking destinations.",
+        "Capital": "Ljubljana",
+        "Population": 600000,
+        "AreaKm2": 2201.86
+    },
+    {
+        "Name": "Zasavska",
+        "Code": "EU-SI-ZA",
+        "Description": "A small region in central Slovenia, known for its industrial heritage, particularly coal mining, and the town of Trbovlje.",
+        "Capital": "Trbovlje",
+        "Population": 100000,
+        "AreaKm2": 254.22
+    },
+    {
+        "Name": "Jugovzhodna Slovenija",
+        "Code": "EU-SI-JV",
+        "Description": "The southeastern region, known for its natural beauty and historical sites.",
+        "Capital": "Novo Mesto",
+        "Population": 150000,
+        "AreaKm2": 1574.34
+    },
+    {
+        "Name": "Primorsko-notranjska",
+        "Code": "EU-SI-PN",
+        "Description": "A coastal region, known for its Adriatic Sea coastline, including towns like Koper, Piran, and the Karst Plateau.",
+        "Capital": "Koper",
+        "Population": 300000,
+        "AreaKm2": 2355.83
+    }
+]

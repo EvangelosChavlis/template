@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Central Division",
+      "Code": "OC-FJ-CD",
+      "Description": "The central region of Fiji, which includes the capital city, Suva, and is the political, economic, and cultural heart of the nation.",
+      "Capital": "Suva",
+      "Population": 500000,
+      "AreaKm2": 1900
+    },
+    {
+      "Name": "Western Division",
+      "Code": "OC-FJ-WD",
+      "Description": "This region is known for its major tourist destinations, including Nadi and the Mamanuca Islands, with beautiful beaches and resorts.",
+      "Capital": "Nadi",
+      "Population": 400000,
+      "AreaKm2": 5200
+    },
+    {
+      "Name": "Northern Division",
+      "Code": "OC-FJ-ND",
+      "Description": "A tropical region with beautiful islands and less developed infrastructure, it includes the famous islands of Vanua Levu and Taveuni.",
+      "Capital": "Labasa",
+      "Population": 150000,
+      "AreaKm2": 6000
+    },
+    {
+      "Name": "Eastern Division",
+      "Code": "OC-FJ-ED",
+      "Description": "The eastern region of Fiji includes the Lau and Kadavu groups, with a more traditional and rural lifestyle.",
+      "Capital": "Levuka",
+      "Population": 50000,
+      "AreaKm2": 2200
+    }
+]  

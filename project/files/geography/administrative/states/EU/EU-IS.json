@@ -1,0 +1,58 @@
+[
+    {
+        "Name": "Capital Region",
+        "Code": "EU-IS-RE",
+        "Description": "The Capital Region includes the capital city, Reykjavik, and is the cultural, economic, and political center of Iceland.",
+        "Capital": "Reykjavik",
+        "Population": 230000,
+        "AreaKm2": 2437
+  },
+  {
+        "Name": "Southern Peninsula",
+        "Code": "EU-IS-SS",
+        "Description": "The Southern Peninsula is known for its volcanic landscape, beaches, and proximity to Reykjavik. It also includes the Keflavik International Airport.",
+        "Capital": "Reykjanesbaer",
+        "Population": 20000,
+        "AreaKm2": 1350
+  },
+  {
+        "Name": "West Iceland",
+        "Code": "EU-IS-VI",
+        "Description": "West Iceland is a region rich in natural beauty, including mountains, glaciers, and fjords, with popular tourist destinations such as Snæfellsjökull National Park.",
+        "Capital": "Borgarnes",
+        "Population": 10000,
+        "AreaKm2": 22000
+  },
+  {
+        "Name": "Westfjords",
+        "Code": "EU-IS-WF",
+        "Description": "The Westfjords is a remote, sparsely populated region, known for its dramatic cliffs, wildlife, and spectacular fjords.",
+        "Capital": "Ísafjörður",
+        "Population": 7000,
+        "AreaKm2": 9700
+  },
+  {
+        "Name": "Northern Iceland",
+        "Code": "EU-IS-NI",
+        "Description": "Northern Iceland is characterized by volcanic landscapes, thermal lakes, and the famous whale-watching destinations like Húsavík.",
+        "Capital": "Akureyri",
+        "Population": 20000,
+        "AreaKm2": 38000
+  },
+  {
+        "Name": "Eastern Iceland",
+        "Code": "EU-IS-EI",
+        "Description": "Eastern Iceland is known for its coastal beauty, fjords, and the tranquil town of Egilsstaðir.",
+        "Capital": "Egilsstaðir",
+        "Population": 3000,
+        "AreaKm2": 22000
+  },
+  {
+        "Name": "Southern Iceland",
+        "Code": "EU-IS-SI",
+        "Description": "Southern Iceland is famous for its glaciers, waterfalls, and black sand beaches, including the popular tourist spots like Vik and Skaftafell National Park.",
+        "Capital": "Selfoss",
+        "Population": 15000,
+        "AreaKm2": 25000
+  }  
+]

@@ -1,0 +1,138 @@
+[
+    {
+      "Name": "Baghdad",
+      "Code": "AS-IQ-BG",
+      "Description": "The capital city and largest city of Iraq, known for its rich history, cultural heritage, and significant political and economic importance.",
+      "Capital": "Baghdad",
+      "Population": 8870000,
+      "AreaKm2": 204
+    },
+    {
+      "Name": "Basra",
+      "Code": "AS-IQ-BS",
+      "Description": "A major port city in southern Iraq, known for its oil industry, trade, and historical significance.",
+      "Capital": "Basra",
+      "Population": 2290000,
+      "AreaKm2": 195
+    },
+    {
+      "Name": "Erbil",
+      "Code": "AS-IQ-ER",
+      "Description": "The capital of the Kurdistan Region of Iraq, known for its ancient history, the Erbil Citadel, and its thriving economy.",
+      "Capital": "Erbil",
+      "Population": 1500000,
+      "AreaKm2": 298
+    },
+    {
+      "Name": "Mosul",
+      "Code": "AS-IQ-MO",
+      "Description": "A historically important city in northern Iraq, known for its rich cultural and architectural history, as well as its recent struggles during conflicts.",
+      "Capital": "Mosul",
+      "Population": 1500000,
+      "AreaKm2": 180
+    },
+    {
+      "Name": "Sulaymaniyah",
+      "Code": "AS-IQ-SU",
+      "Description": "A city in the Kurdistan Region of Iraq, known for its scenic mountain landscapes, culture, and history.",
+      "Capital": "Sulaymaniyah",
+      "Population": 938000,
+      "AreaKm2": 178
+    },
+    {
+      "Name": "Najaf",
+      "Code": "AS-IQ-NJ",
+      "Description": "A city in southern Iraq, considered one of the holiest cities for Shia Muslims, known for the shrine of Imam Ali.",
+      "Capital": "Najaf",
+      "Population": 670000,
+      "AreaKm2": 30
+    },
+    {
+      "Name": "Karbala",
+      "Code": "AS-IQ-KA",
+      "Description": "A city in central Iraq, known for its religious significance and the location of the Battle of Karbala, which holds great importance for Shia Muslims.",
+      "Capital": "Karbala",
+      "Population": 600000,
+      "AreaKm2": 25
+    },
+    {
+      "Name": "Dohuk",
+      "Code": "AS-IQ-DH",
+      "Description": "A city in the Kurdistan Region of Iraq, known for its natural beauty, including mountains and rivers.",
+      "Capital": "Dohuk",
+      "Population": 370000,
+      "AreaKm2": 47
+    },
+    {
+      "Name": "Anbar",
+      "Code": "AS-IQ-AN",
+      "Description": "A large province in western Iraq, known for its desert landscape and strategic military significance.",
+      "Capital": "Ramadi",
+      "Population": 1700000,
+      "AreaKm2": 138000
+    },
+    {
+      "Name": "Nineveh",
+      "Code": "AS-IQ-NN",
+      "Description": "A province in northern Iraq, home to the ancient Assyrian city of Nineveh, and modern-day Mosul.",
+      "Capital": "Mosul",
+      "Population": 3600000,
+      "AreaKm2": 37637
+    },
+    {
+      "Name": "Dhi Qar",
+      "Code": "AS-IQ-DQ",
+      "Description": "A southern province in Iraq, known for its archaeological sites, including the ancient Sumerian city of Ur.",
+      "Capital": "Nasiriyah",
+      "Population": 1500000,
+      "AreaKm2": 11900
+    },
+    {
+      "Name": "Babil",
+      "Code": "AS-IQ-BA",
+      "Description": "A central province, home to the ancient city of Babylon, one of the most famous archaeological sites in the world.",
+      "Capital": "Hillah",
+      "Population": 1700000,
+      "AreaKm2": 5800
+    },
+    {
+      "Name": "Salah ad Din",
+      "Code": "AS-IQ-SA",
+      "Description": "A province in northern Iraq, known for its historical significance and as the location of the former Iraqi stronghold of Tikrit.",
+      "Capital": "Tikrit",
+      "Population": 1300000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Muthanna",
+      "Code": "AS-IQ-MU",
+      "Description": "A province in southern Iraq, known for its agricultural resources and desert landscapes.",
+      "Capital": "Samawah",
+      "Population": 600000,
+      "AreaKm2": 5166
+    },
+    {
+      "Name": "Wasit",
+      "Code": "AS-IQ-WA",
+      "Description": "A province in eastern Iraq, known for its fertile plains and proximity to the Tigris River.",
+      "Capital": "Kut",
+      "Population": 800000,
+      "AreaKm2": 17900
+    },
+    {
+      "Name": "Kirkuk",
+      "Code": "AS-IQ-KK",
+      "Description": "A city in northern Iraq, known for its strategic location and its importance as a center of the oil industry.",
+      "Capital": "Kirkuk",
+      "Population": 1000000,
+      "AreaKm2": 9500
+    },
+    {
+      "Name": "Al-Qadisiyyah",
+      "Code": "AS-IQ-QA",
+      "Description": "A province in central Iraq, known for its historical sites and important role during the Iran-Iraq War.",
+      "Capital": "Diwaniya",
+      "Population": 1100000,
+      "AreaKm2": 7564
+    }
+]  

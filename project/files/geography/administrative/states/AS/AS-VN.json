@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Hanoi",
+      "Code": "AS-VN-HN",
+      "Description": "The capital city of Vietnam, known for its ancient architecture, vibrant culture, and as a center of history and politics.",
+      "Capital": "Hanoi",
+      "Population": 8000000,
+      "AreaKm2": 332
+    },
+    {
+      "Name": "Ho Chi Minh City",
+      "Code": "AS-VN-HCM",
+      "Description": "Also known as Saigon, it is the largest city in Vietnam, an economic hub, and a vibrant center of commerce and culture.",
+      "Capital": "Ho Chi Minh City",
+      "Population": 9000000,
+      "AreaKm2": 2095
+    },
+    {
+      "Name": "Da Nang",
+      "Code": "AS-VN-DN",
+      "Description": "A coastal city known for its beaches, resorts, and proximity to historical sites like the ancient town of Hoi An.",
+      "Capital": "Da Nang",
+      "Population": 1000000,
+      "AreaKm2": 1285
+    },
+    {
+      "Name": "Hai Phong",
+      "Code": "AS-VN-HP",
+      "Description": "A major port city in northern Vietnam, known for its industrial economy and as a gateway to the Red River Delta.",
+      "Capital": "Hai Phong",
+      "Population": 2000000,
+      "AreaKm2": 1553
+    },
+    {
+      "Name": "Can Tho",
+      "Code": "AS-VN-CT",
+      "Description": "A city in the Mekong Delta, known for its floating markets, riverside life, and agricultural significance.",
+      "Capital": "Can Tho",
+      "Population": 1300000,
+      "AreaKm2": 1404
+    },
+    {
+      "Name": "Nghe An",
+      "Code": "AS-VN-NA",
+      "Description": "A province in northern Vietnam, known for its beautiful landscapes, cultural sites, and rich history.",
+      "Capital": "Vinh",
+      "Population": 3000000,
+      "AreaKm2": 16509
+    },
+    {
+      "Name": "Binh Duong",
+      "Code": "AS-VN-BD",
+      "Description": "A province near Ho Chi Minh City, known for its rapid industrial growth and role as a manufacturing center.",
+      "Capital": "Thu Dau Mot",
+      "Population": 2000000,
+      "AreaKm2": 4237
+    },
+    {
+      "Name": "Quang Ninh",
+      "Code": "AS-VN-QN",
+      "Description": "A province in northeastern Vietnam, famous for Ha Long Bay, a UNESCO World Heritage site known for its stunning seascapes.",
+      "Capital": "Ha Long",
+      "Population": 1200000,
+      "AreaKm2": 6011
+    },
+    {
+      "Name": "Tien Giang",
+      "Code": "AS-VN-TG",
+      "Description": "A province in the Mekong Delta, known for its river-based agriculture and scenic landscapes.",
+      "Capital": "My Tho",
+      "Population": 2000000,
+      "AreaKm2": 2516
+    }
+]  

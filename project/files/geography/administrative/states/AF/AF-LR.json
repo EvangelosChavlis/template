@@ -1,0 +1,98 @@
+[
+    {
+      "Name": "Bong",
+      "Code": "AF-LR-BN",
+      "Description": "Bong is located in the central region of Liberia, known for its agriculture, particularly rubber production, and its mining industry.",
+      "Capital": "Gbarnga",
+      "Population": 336000,
+      "AreaKm2": 6223
+    },
+    {
+      "Name": "Grand Bassa",
+      "Code": "AF-LR-GB",
+      "Description": "Grand Bassa is located in the coastal region of Liberia, known for its timber and mining industries, and being home to the port city of Buchanan.",
+      "Capital": "Buchanan",
+      "Population": 224000,
+      "AreaKm2": 3867
+    },
+    {
+      "Name": "Grand Cape Mount",
+      "Code": "AF-LR-GC",
+      "Description": "Grand Cape Mount is located in the western part of Liberia, known for its agricultural activities, including rubber and cocoa production.",
+      "Capital": "Sinje",
+      "Population": 212000,
+      "AreaKm2": 3870
+    },
+    {
+      "Name": "Grand Gedeh",
+      "Code": "AF-LR-GG",
+      "Description": "Grand Gedeh is located in the southeastern part of Liberia, known for its agricultural production, including cassava and rice.",
+      "Capital": "Zwedru",
+      "Population": 153000,
+      "AreaKm2": 9985
+    },
+    {
+      "Name": "Lofa",
+      "Code": "AF-LR-LF",
+      "Description": "Lofa is located in the northwestern part of Liberia, known for its rich agricultural land, including rice, cassava, and other crops.",
+      "Capital": "Voinjama",
+      "Population": 311000,
+      "AreaKm2": 9389
+    },
+    {
+      "Name": "Margibi",
+      "Code": "AF-LR-MG",
+      "Description": "Margibi is located in the central region of Liberia, known for its agricultural production, especially rubber and oil palm.",
+      "Capital": "Kakata",
+      "Population": 275000,
+      "AreaKm2": 4851
+    },
+    {
+      "Name": "Maryland",
+      "Code": "AF-LR-MD",
+      "Description": "Maryland is located in the southeastern part of Liberia, with a focus on agriculture and natural resources.",
+      "Capital": "Harper",
+      "Population": 154000,
+      "AreaKm2": 4069
+    },
+    {
+      "Name": "Montserrado",
+      "Code": "AF-LR-MO",
+      "Description": "Montserrado is the most populous region of Liberia and includes the capital city, Monrovia, which is the economic and political center of the country.",
+      "Capital": "Monrovia",
+      "Population": 1130000,
+      "AreaKm2": 3966
+    },
+    {
+      "Name": "Nimba",
+      "Code": "AF-LR-NI",
+      "Description": "Nimba is located in the northeastern part of Liberia, known for its rich natural resources, including iron ore and timber, and its agricultural activities.",
+      "Capital": "Sanniquellie",
+      "Population": 462000,
+      "AreaKm2": 11103
+    },
+    {
+      "Name": "River Cess",
+      "Code": "AF-LR-RC",
+      "Description": "River Cess is located in the southeastern part of Liberia, known for its coastal settlements and agricultural activities, including rice farming.",
+      "Capital": "River Cess",
+      "Population": 128000,
+      "AreaKm2": 5427
+    },
+    {
+      "Name": "River Gee",
+      "Code": "AF-LR-RG",
+      "Description": "River Gee is located in the southeastern part of Liberia, known for its agricultural production, particularly cassava and rice.",
+      "Capital": "Fish Town",
+      "Population": 114000,
+      "AreaKm2": 3923
+    },
+    {
+      "Name": "Sinoe",
+      "Code": "AF-LR-SI",
+      "Description": "Sinoe is located in the southeastern part of Liberia, known for its agricultural activities and natural resources, including timber and minerals.",
+      "Capital": "Greenville",
+      "Population": 108000,
+      "AreaKm2": 7335
+    }
+]  

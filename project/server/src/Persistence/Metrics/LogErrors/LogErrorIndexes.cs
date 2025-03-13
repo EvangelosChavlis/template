@@ -24,7 +24,9 @@ public class LogErrorIndexes : IEntityTypeConfiguration<LogError>
                 {nameof(LogError.Id)}_
                 {nameof(LogError.Error)}_
                 {nameof(LogError.StatusCode)}_
-                {nameof(LogError.Timestamp)}
-            ".Replace("\n", "").Trim());
+                {nameof(LogError.Timestamp)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Boeotia",
+      "Code": "EU-GR-CG-BOE",
+      "Description": "A region known for its rich history, including the ancient city of Thebes.",
+      "Capital": "Livadeia",
+      "Population": 120000,
+      "AreaKm2": 3055.00
+    },
+    {
+      "Name": "Phthiotis",
+      "Code": "EU-GR-CG-PHT",
+      "Description": "A region located near the gulf of Maliakos, known for its historical importance.",
+      "Capital": "Lamia",
+      "Population": 160000,
+      "AreaKm2": 3056.00
+    },
+    {
+      "Name": "Fokida",
+      "Code": "EU-GR-CG-FOK",
+      "Description": "A region located near the Gulf of Corinth, known for its archaeological sites and natural landscapes.",
+      "Capital": "Amfissa",
+      "Population": 55000,
+      "AreaKm2": 2067.00
+    }
+]

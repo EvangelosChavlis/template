@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Kingstown",
+      "Code": "NA-VC-KG",
+      "Description": "The capital region, known for its vibrant port, colonial architecture, and the bustling capital city of Kingstown.",
+      "Capital": "Kingstown",
+      "Population": 15000,
+      "AreaKm2": 26
+    },
+    {
+      "Name": "Saint George",
+      "Code": "NA-VC-SG",
+      "Description": "A region that includes the capital city, known for its beautiful beaches, harbor, and the island s  administrative center.",
+      "Capital": "Kingstown",
+      "Population": 25000,
+      "AreaKm2": 100
+    },
+    {
+      "Name": "Grenadines",
+      "Code": "NA-VC-GR",
+      "Description": "A group of islands located south of Saint Vincent, famous for their stunning natural beauty, including pristine beaches and clear waters.",
+      "Capital": "Union Island",
+      "Population": 2000,
+      "AreaKm2": 55
+    }
+]  

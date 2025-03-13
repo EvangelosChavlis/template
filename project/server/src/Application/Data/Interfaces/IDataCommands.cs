@@ -15,12 +15,27 @@ public interface IDataCommands
     /// <returns>A task that represents the asynchronous operation. The task result contains a CommandResponse with a status message.</returns>
     Task<Response<string>> SeedDataAsync(CancellationToken token = default);
 
-    Task<Response<string>> SeedContinentsAsync(CancellationToken token = default);
+    Task<Response<string>> SeedContinentsAsync(string basePath, 
+        CancellationToken token = default);
 
-    Task<Response<string>> SeedCountriesAsync(CancellationToken token = default);
+    Task<Response<string>> SeedCountriesAsync(string basePath,
+        CancellationToken token = default);
 
-    Task<Response<string>> SeedStatesAsync(CancellationToken token = default);
+    Task<Response<string>> SeedStatesAsync(string basePath, 
+        CancellationToken token = default);
 
+    Task<Response<string>> SeedRegionsAsync(string basePath, 
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedMunicipalitiesAsync(string basePath,
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedDistrictsAsync(string basePath,
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedNeighborhoodAsync(string basePath,
+        CancellationToken token = default);
+    
     /// <summary>
     /// Clears all data from the system's database or storage.
     /// </summary>

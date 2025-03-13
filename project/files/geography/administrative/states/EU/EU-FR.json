@@ -1,0 +1,106 @@
+[
+    {
+        "Name": "Ile-de-France",
+        "Code": "EU-FR-IDF",
+        "Description": "The capital region, home to Paris, known for its historical landmarks, cultural institutions, and economic importance.",
+        "Capital": "Paris",
+        "Population": 12160000,
+        "AreaKm2": 12011
+  },
+  {
+        "Name": "Provence-Alpes-Cote d Azur",
+        "Code": "EU-FR-PAC",
+        "Description": "A southern region known for its Mediterranean coastline, lavender fields, and tourist destinations like Nice and Marseille.",
+        "Capital": "Marseille",
+        "Population": 5000000,
+        "AreaKm2": 31400
+  },
+  {
+        "Name": "Auvergne-Rhone-Alpes",
+        "Code": "EU-FR-ARA",
+        "Description": "A mountainous region featuring the Alps, known for outdoor sports, the city of Lyon, and a thriving wine industry.",
+        "Capital": "Lyon",
+        "Population": 8000000,
+        "AreaKm2": 69700
+  },
+  {
+        "Name": "Brittany",
+        "Code": "EU-FR-BRE",
+        "Description": "A region located in the northwest of France, known for its Celtic heritage, rugged coastline, and unique culture.",
+        "Capital": "Rennes",
+        "Population": 3300000,
+        "AreaKm2": 27350
+  },
+  {
+        "Name": "Normandy",
+        "Code": "EU-FR-NOR",
+        "Description": "A historic region known for its D-Day beaches, Camembert cheese, and scenic countryside.",
+        "Capital": "Rouen",
+        "Population": 3300000,
+        "AreaKm2": 29906
+  },
+  {
+        "Name": "Grand Est",
+        "Code": "EU-FR-GES",
+        "Description": "A northeastern region known for its wine, including the Champagne region, and historical cities like Strasbourg and Metz.",
+        "Capital": "Strasbourg",
+        "Population": 5700000,
+        "AreaKm2": 57400
+  },
+  {
+        "Name": "Hauts-de-France",
+        "Code": "EU-FR-HDF",
+        "Description": "A northern region, bordering Belgium, known for its industrial history, the city of Lille, and World War I memorials.",
+        "Capital": "Lille",
+        "Population": 6000000,
+        "AreaKm2": 31810
+  },
+  {
+        "Name": "Occitanie",
+        "Code": "EU-FR-OCC",
+        "Description": "A southern region known for its Mediterranean coastline, the Pyrenees mountains, and cities like Toulouse and Montpellier.",
+        "Capital": "Toulouse",
+        "Population": 5900000,
+        "AreaKm2": 72724
+  },
+  {
+        "Name": "Nouvelle-Aquitaine",
+        "Code": "EU-FR-NAQ",
+        "Description": "A southwestern region, known for its vineyards, including Bordeaux, and its long Atlantic coastline.",
+        "Capital": "Bordeaux",
+        "Population": 6000000,
+        "AreaKm2": 84000
+  },
+  {
+        "Name": "Pays de la Loire",
+        "Code": "EU-FR-PLI",
+        "Description": "A region on the western coast, known for its maritime culture, Nantes, and the Loire Valley s castles.",
+        "Capital": "Nantes",
+        "Population": 3700000,
+        "AreaKm2": 32000
+  },
+  {
+        "Name": "Centre-Val de Loire",
+        "Code": "EU-FR-CVL",
+        "Description": "A central region famous for its châteaux, including Château de Chambord, and its location along the Loire River.",
+        "Capital": "Orléans",
+        "Population": 2600000,
+        "AreaKm2": 39100
+  },
+  {
+        "Name": "Corsica",
+        "Code": "EU-FR-COR",
+        "Description": "An island region in the Mediterranean known for its mountainous terrain, Mediterranean beaches, and unique culture.",
+        "Capital": "Ajaccio",
+        "Population": 330000,
+        "AreaKm2": 8680
+  },
+  {
+        "Name": "Bourgogne-Franche-Comté",
+        "Code": "EU-FR-BFC",
+        "Description": "A region famous for its wine, Dijon mustard, and rich historical heritage, including castles and medieval towns.",
+        "Capital": "Dijon",
+        "Population": 2800000,
+        "AreaKm2": 47600
+  }
+]

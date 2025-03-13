@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Kuala Lumpur",
+      "Code": "AS-MY-KL",
+      "Description": "The capital city of Malaysia, known for its modern skyline, shopping districts, and cultural landmarks.",
+      "Capital": "Kuala Lumpur",
+      "Population": 1800000,
+      "AreaKm2": 243
+    },
+    {
+      "Name": "Penang",
+      "Code": "AS-MY-PG",
+      "Description": "An island state in Malaysia, known for its rich history, colonial architecture, and vibrant street food culture.",
+      "Capital": "George Town",
+      "Population": 1700000,
+      "AreaKm2": 1045
+    },
+    {
+      "Name": "Selangor",
+      "Code": "AS-MY-SG",
+      "Description": "A central state surrounding Kuala Lumpur, known for its urban developments, industrial areas, and recreational parks.",
+      "Capital": "Shah Alam",
+      "Population": 6500000,
+      "AreaKm2": 810
+    },
+    {
+      "Name": "Johor",
+      "Code": "AS-MY-JR",
+      "Description": "A southern state in Malaysia, known for its large ports, beaches, and the popular tourist destination of Desaru.",
+      "Capital": "Johor Bahru",
+      "Population": 3800000,
+      "AreaKm2": 1916
+    },
+    {
+      "Name": "Sabah",
+      "Code": "AS-MY-SB",
+      "Description": "A state on the island of Borneo, known for its natural beauty, including Mount Kinabalu and diverse wildlife.",
+      "Capital": "Kota Kinabalu",
+      "Population": 3900000,
+      "AreaKm2": 73671
+    },
+    {
+      "Name": "Sarawak",
+      "Code": "AS-MY-SK",
+      "Description": "A large state on the island of Borneo, known for its rainforests, rivers, and indigenous cultures.",
+      "Capital": "Kuching",
+      "Population": 2900000,
+      "AreaKm2": 124450
+    },
+    {
+      "Name": "Perak",
+      "Code": "AS-MY-PR",
+      "Description": "A state in the northern part of Peninsular Malaysia, known for its mining history, limestone hills, and heritage sites.",
+      "Capital": "Ipoh",
+      "Population": 2300000,
+      "AreaKm2": 2100
+    },
+    {
+      "Name": "Melaka",
+      "Code": "AS-MY-ML",
+      "Description": "A historical state in Malaysia, known for its Portuguese and Dutch colonial architecture, and UNESCO-listed heritage sites.",
+      "Capital": "Melaka",
+      "Population": 900000,
+      "AreaKm2": 1640
+    }
+]  

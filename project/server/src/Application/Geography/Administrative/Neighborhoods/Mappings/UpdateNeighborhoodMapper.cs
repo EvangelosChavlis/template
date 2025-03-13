@@ -26,6 +26,9 @@ public static class UpdateNeighborhoodMapper
         modelNeighborhood.Name = dto.Name;
         modelNeighborhood.Description = dto.Description;
         modelNeighborhood.Population = dto.Population;
+        modelNeighborhood.AreaKm2 = dto.AreaKm2;
+        modelNeighborhood.Zipcode = dto.Zipcode;
+        modelNeighborhood.Code = dto.Code; 
         modelNeighborhood.IsActive = modelNeighborhood.IsActive;
         modelNeighborhood.District = modelDistrict;
         modelNeighborhood.DistrictId = modelDistrict.Id;

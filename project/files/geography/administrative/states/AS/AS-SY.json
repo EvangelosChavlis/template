@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Damascus",
+      "Code": "AS-SY-DM",
+      "Description": "The capital and largest city of Syria, known for its rich history, ancient monuments, and being one of the oldest continuously inhabited cities in the world.",
+      "Capital": "Damascus",
+      "Population": 1800000,
+      "AreaKm2": 105
+    },
+    {
+      "Name": "Aleppo",
+      "Code": "AS-SY-AP",
+      "Description": "A major city in northern Syria, historically significant for its culture, trade, and role in the medieval period.",
+      "Capital": "Aleppo",
+      "Population": 2100000,
+      "AreaKm2": 191
+    },
+    {
+      "Name": "Homs",
+      "Code": "AS-SY-HO",
+      "Description": "A central Syrian city, historically known for its role in agriculture and industry, with significant ancient and modern landmarks.",
+      "Capital": "Homs",
+      "Population": 800000,
+      "AreaKm2": 420
+    },
+    {
+      "Name": "Latakia",
+      "Code": "AS-SY-LA",
+      "Description": "A coastal city and governorate in Syria, known for its beaches, resorts, and historical sites.",
+      "Capital": "Latakia",
+      "Population": 500000,
+      "AreaKm2": 2200
+    },
+    {
+      "Name": "Tartus",
+      "Code": "AS-SY-TR",
+      "Description": "A city on Syria s Mediterranean coast, known for its historical landmarks and port activities.",
+      "Capital": "Tartus",
+      "Population": 200000,
+      "AreaKm2": 185
+    },
+    {
+      "Name": "Daraa",
+      "Code": "AS-SY-DR",
+      "Description": "A city in southern Syria, historically significant as the birthplace of the Syrian civil unrest in 2011.",
+      "Capital": "Daraa",
+      "Population": 400000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Raqqa",
+      "Code": "AS-SY-RA",
+      "Description": "A city in northern Syria, once an important historical and administrative center.",
+      "Capital": "Raqqa",
+      "Population": 400000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Deir ez-Zor",
+      "Code": "AS-SY-DZ",
+      "Description": "Located in eastern Syria, the city is known for its oil industry and strategic location along the Euphrates River.",
+      "Capital": "Deir ez-Zor",
+      "Population": 250000,
+      "AreaKm2": 3300
+    },
+    {
+      "Name": "Hasakah",
+      "Code": "AS-SY-HS",
+      "Description": "A city in northeastern Syria, historically known for its agricultural production and diverse ethnic groups.",
+      "Capital": "Hasakah",
+      "Population": 300000,
+      "AreaKm2": 2300
+    },
+    {
+      "Name": "Qamishli",
+      "Code": "AS-SY-QA",
+      "Description": "A city in northeastern Syria, home to a large Kurdish population and a center of trade.",
+      "Capital": "Qamishli",
+      "Population": 200000,
+      "AreaKm2": 1300
+    }
+]  

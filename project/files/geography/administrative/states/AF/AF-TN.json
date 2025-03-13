@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Tunis",
+      "Code": "AF-TN-TU",
+      "Description": "Tunis is the capital and largest city of Tunisia, located on the Mediterranean coast. It is the country s political, economic, and cultural center.",
+      "Capital": "Tunis",
+      "Population": 1150000,
+      "AreaKm2": 212
+    },
+    {
+      "Name": "Sfax",
+      "Code": "AF-TN-SF",
+      "Description": "Sfax is Tunisia s second-largest city and a major economic hub, particularly known for its port and its role in the olive oil industry.",
+      "Capital": "Sfax",
+      "Population": 330000,
+      "AreaKm2": 140
+    },
+    {
+      "Name": "Sousse",
+      "Code": "AF-TN-SU",
+      "Description": "Sousse is a coastal city in Tunisia, known for its historic medina, beaches, and as a popular tourist destination.",
+      "Capital": "Sousse",
+      "Population": 173000,
+      "AreaKm2": 90
+    }
+]  

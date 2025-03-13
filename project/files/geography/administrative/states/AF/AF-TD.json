@@ -1,0 +1,114 @@
+[
+    {
+      "Name": "Chari-Baguirmi",
+      "Code": "AF-TD-CB",
+      "Description": "Chari-Baguirmi is located in the central part of Chad and is one of the country s key agricultural areas, with fertile land for farming and livestock.",
+      "Capital": "N'Djamena",
+      "Population": 950000,
+      "AreaKm2": 27000
+    },
+    {
+      "Name": "Guéra",
+      "Code": "AF-TD-GE",
+      "Description": "Guéra is located in central Chad and is known for its desert and semi-desert landscapes. The region also has some agricultural activity, especially in irrigated areas.",
+      "Capital": "Moussoro",
+      "Population": 700000,
+      "AreaKm2": 40000
+    },
+    {
+      "Name": "Hadjer-Lamis",
+      "Code": "AF-TD-HL",
+      "Description": "Hadjer-Lamis is located in the central part of Chad, with a diverse landscape that includes both arid and fertile areas.",
+      "Capital": "Am Timan",
+      "Population": 650000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Kanem",
+      "Code": "AF-TD-KN",
+      "Description": "Kanem is located in the western part of Chad and is known for its arid climate and desert landscape, as well as its proximity to Lake Chad.",
+      "Capital": "Mao",
+      "Population": 450000,
+      "AreaKm2": 77000
+    },
+    {
+      "Name": "Lac",
+      "Code": "AF-TD-LC",
+      "Description": "Lac is a region located near Lake Chad, which plays a vital role in the region seconomy and environment. It is an area with rich aquatic resources and agricultural activity.",
+      "Capital": "Bol",
+      "Population": 300000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Logone Occidental",
+      "Code": "AF-TD-LO",
+      "Description": "Logone Occidental is located in the southern part of Chad. The region has a more tropical climate and is heavily involved in agriculture and livestock farming.",
+      "Capital": "Doba",
+      "Population": 600000,
+      "AreaKm2": 29000
+    },
+    {
+      "Name": "Logone Oriental",
+      "Code": "AF-TD-LR",
+      "Description": "Logone Oriental is located in the southern part of Chad and shares similarities with its western counterpart in terms of agriculture, particularly cotton and maize production.",
+      "Capital": "Moundou",
+      "Population": 650000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Mandoul",
+      "Code": "AF-TD-MD",
+      "Description": "Mandoul is located in the southern part of Chad and is a region known for its agricultural potential, particularly crops like cotton, corn, and millet.",
+      "Capital": "Kélo",
+      "Population": 350000,
+      "AreaKm2": 19000
+    },
+    {
+      "Name": "Moyen-Chari",
+      "Code": "AF-TD-MC",
+      "Description": "Moyen-Chari is a region located in the central-south of Chad. It is an agricultural region, and it also has a significant presence of livestock farming.",
+      "Capital": "Sarh",
+      "Population": 800000,
+      "AreaKm2": 48000
+    },
+    {
+      "Name": "Ouaddaï",
+      "Code": "AF-TD-OD",
+      "Description": "Ouaddaï is located in the eastern part of Chad, known for its dry desert climate and its proximity to Sudan. Agriculture and livestock are important in this region.",
+      "Capital": "Abéché",
+      "Population": 550000,
+      "AreaKm2": 125000
+    },
+    {
+      "Name": "Salamat",
+      "Code": "AF-TD-SL",
+      "Description": "Salamat is located in the southeastern part of Chad and has a variety of landscapes, including savannas and forests. It is known for agriculture, including cotton and maize.",
+      "Capital": "Am Timan",
+      "Population": 480000,
+      "AreaKm2": 36000
+    },
+    {
+      "Name": "Sila",
+      "Code": "AF-TD-SI",
+      "Description": "Sila is located in the eastern part of Chad, known for its desert landscapes and its proximity to the border with Sudan. The region has agricultural potential in some areas.",
+      "Capital": "Biltine",
+      "Population": 380000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Tandjilé",
+      "Code": "AF-TD-TA",
+      "Description": "Tandjilé is located in the southwestern part of Chad. It is a region that relies heavily on agriculture and has a more tropical climate.",
+      "Capital": "Laï",
+      "Population": 200000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Tchad",
+      "Code": "AF-TD-TE",
+      "Description": "The Tchad region covers the central part of the country and is involved in various economic activities, especially livestock farming and agriculture.",
+      "Capital": "N'Djamena",
+      "Population": 1000000,
+      "AreaKm2": 60000
+    }
+]  

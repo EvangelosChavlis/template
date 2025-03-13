@@ -21,6 +21,8 @@ public static class ItemContinentDtoMapper
             Name: model.Name,
             Code: model.Code,
             Description: model.Description,
+            Population: model.Population,
+            AreaKm2: model.AreaKm2,
             IsActive: model.IsActive,
             Version: model.Version
         );

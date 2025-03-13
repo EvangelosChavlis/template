@@ -1,0 +1,44 @@
+[
+    {
+      "Name": "Marousi",
+      "Description": "A major suburb in North Athens, known for its business centers, retail hubs, and residential areas.",
+      "AreaKm2": 41.0,
+      "Population": 75000,
+      "Code": "EU-GR-AC-NA-MA"
+    },
+    {
+      "Name": "Kifisia",
+      "Description": "An affluent northern suburb known for its green spaces, luxurious homes, and shopping areas.",
+      "AreaKm2": 40.8,
+      "Population": 70000,
+      "Code": "EU-GR-AC-NA-KI"
+    },
+    {
+      "Name": "Pefki",
+      "Description": "A residential area known for its parks, quiet atmosphere, and family-friendly environment.",
+      "AreaKm2": 4.5,
+      "Population": 27000,
+      "Code": "EU-GR-AC-NA-PE"
+    },
+    {
+      "Name": "Nea Erythrea",
+      "Description": "A quiet suburban municipality known for its residential areas and local amenities.",
+      "AreaKm2": 5.2,
+      "Population": 25000,
+      "Code": "EU-GR-AC-NA-NE"
+    },
+    {
+      "Name": "Vrilissia",
+      "Description": "A peaceful suburb with green spaces, residential buildings, and a friendly community.",
+      "AreaKm2": 7.6,
+      "Population": 26000,
+      "Code": "EU-GR-AC-NA-VR"
+    },
+    {
+      "Name": "Chalandri",
+      "Description": "A lively northern suburb with a mix of residential and commercial areas, known for its cafes and shops.",
+      "AreaKm2": 10.6,
+      "Population": 85000,
+      "Code": "EU-GR-AC-NA-CH"
+    }
+]  

@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Taipei",
+      "Code": "AS-TW-TP",
+      "Description": "The capital and largest city of Taiwan, known for its modern architecture, vibrant cultural scene, and the famous Taipei 101 skyscraper.",
+      "Capital": "Taipei",
+      "Population": 2646200,
+      "AreaKm2": 271.8
+    },
+    {
+      "Name": "Kaohsiung",
+      "Code": "AS-TW-KH",
+      "Description": "A major port city in southern Taiwan, known for its bustling harbor, modern infrastructure, and lively arts scene.",
+      "Capital": "Kaohsiung",
+      "Population": 2771000,
+      "AreaKm2": 2956.5
+    },
+    {
+      "Name": "Taichung",
+      "Code": "AS-TW-TC",
+      "Description": "A central city in Taiwan, known for its parks, museums, and strong cultural heritage, it is the third-largest city in Taiwan.",
+      "Capital": "Taichung",
+      "Population": 2820000,
+      "AreaKm2": 221.6
+    },
+    {
+      "Name": "Tainan",
+      "Code": "AS-TW-TN",
+      "Description": "The oldest city in Taiwan, rich in history and culture, with many historic temples, forts, and monuments.",
+      "Capital": "Tainan",
+      "Population": 1880000,
+      "AreaKm2": 2192.2
+    },
+    {
+      "Name": "Keelung",
+      "Code": "AS-TW-KL",
+      "Description": "A port city in northern Taiwan, known for its fishing industry, scenic harbor, and coastal parks.",
+      "Capital": "Keelung",
+      "Population": 370000,
+      "AreaKm2": 132.7
+    },
+    {
+      "Name": "Hsinchu",
+      "Code": "AS-TW-HC",
+      "Description": "A city known as Taiwan s Silicon Valley, Hsinchu is home to many high-tech companies and a prominent research and development hub.",
+      "Capital": "Hsinchu",
+      "Population": 450000,
+      "AreaKm2": 104.2
+    },
+    {
+      "Name": "Chiayi",
+      "Code": "AS-TW-CY",
+      "Description": "A city in southern Taiwan, known for its agricultural products, scenic parks, and proximity to famous tourist sites like Alishan.",
+      "Capital": "Chiayi",
+      "Population": 270000,
+      "AreaKm2": 60.6
+    },
+    {
+      "Name": "Miaoli",
+      "Code": "AS-TW-ML",
+      "Description": "Located in the western part of Taiwan, Miaoli is known for its rural landscapes, indigenous cultures, and scenic mountain views.",
+      "Capital": "Miaoli",
+      "Population": 550000,
+      "AreaKm2": 1820.2
+    },
+    {
+      "Name": "Pingtung",
+      "Code": "AS-TW-PT",
+      "Description": "A southern region in Taiwan, known for its agricultural products, beaches, and the Kenting National Park.",
+      "Capital": "Pingtung",
+      "Population": 850000,
+      "AreaKm2": 2772.8
+    },
+    {
+      "Name": "Yilan",
+      "Code": "AS-TW-YL",
+      "Description": "A county in northeastern Taiwan, known for its natural hot springs, scenic coastlines, and the famous Taroko Gorge.",
+      "Capital": "Yilan",
+      "Population": 400000,
+      "AreaKm2": 2145.7
+    }
+]  

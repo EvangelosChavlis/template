@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Sofia City",
+      "Code": "EU-BG-22",
+      "Description": "The capital city of Bulgaria, Sofia, is known for its historical landmarks, vibrant culture, and as the political, economic, and cultural center of the country.",
+      "Capital": "Sofia",
+      "Population": 1300000,
+      "AreaKm2": 1346
+    },
+    {
+      "Name": "Plovdiv",
+      "Code": "EU-BG-01",
+      "Description": "Plovdiv is one of the oldest cities in Europe, known for its well-preserved Roman theater, vibrant cultural scene, and historical significance.",
+      "Capital": "Plovdiv",
+      "Population": 350000,
+      "AreaKm2": 101
+    },
+    {
+      "Name": "Varna",
+      "Code": "EU-BG-12",
+      "Description": "Varna is a major port city located on the Black Sea, known for its beaches, resorts, and historical attractions, as well as being a center for maritime industry and culture.",
+      "Capital": "Varna",
+      "Population": 335000,
+      "AreaKm2": 238
+    },
+    {
+      "Name": "Burgas",
+      "Code": "EU-BG-08",
+      "Description": "Burgas is a major port city on the Black Sea, known for its beaches, natural parks, and as an important center for trade and tourism.",
+      "Capital": "Burgas",
+      "Population": 210000,
+      "AreaKm2": 258
+    },
+    {
+      "Name": "Ruse",
+      "Code": "EU-BG-06",
+      "Description": "Ruse is a city located on the Danube River, known for its classical architecture, proximity to Romania, and its role in Bulgarian industry and trade.",
+      "Capital": "Ruse",
+      "Population": 150000,
+      "AreaKm2": 238
+    },
+    {
+      "Name": "Stara Zagora",
+      "Code": "EU-BG-23",
+      "Description": "Stara Zagora is an ancient city with a rich history, known for its well-preserved Roman ruins and as a center for industry and culture in southern Bulgaria.",
+      "Capital": "Stara Zagora",
+      "Population": 150000,
+      "AreaKm2": 270
+    },
+    {
+      "Name": "Pleven",
+      "Code": "EU-BG-10",
+      "Description": "Pleven is a city known for its historical significance, particularly the Battle of Pleven, and its role in agriculture and industry in northern Bulgaria.",
+      "Capital": "Pleven",
+      "Population": 100000,
+      "AreaKm2": 431
+    },
+    {
+      "Name": "Sliven",
+      "Code": "EU-BG-18",
+      "Description": "Sliven is a city in southeastern Bulgaria, known for its textile industry, natural beauty, and as the birthplace of Bulgaria s national hero Hristo Botev.",
+      "Capital": "Sliven",
+      "Population": 90000,
+      "AreaKm2": 820
+    }
+]  

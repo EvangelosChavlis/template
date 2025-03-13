@@ -21,7 +21,9 @@ public static class ItemMunicipalityDtoMapper
         Id: model.Id,
         Name: model.Name,
         Description: model.Description,
+        AreaKm2: model.AreaKm2,
         Population: model.Population,
+        Code: model.Code,
         IsActive: model.IsActive,
         Region: model.Region.Name,
         Version: model.Version

@@ -1,0 +1,98 @@
+[
+    {
+      "Name": "Pinar del Rio",
+      "Code": "NA-CU-PR",
+      "Description": "A western province known for its tobacco plantations, mountainous landscapes, and the Viñales Valley.",
+      "Capital": "Pinar del Rio",
+      "Population": 800000,
+      "AreaKm2": 10500
+    },
+    {
+      "Name": "Havana",
+      "Code": "NA-CU-HAV",
+      "Description": "The capital province, home to the capital city Havana, a cultural and historical hub with colonial architecture.",
+      "Capital": "Havana",
+      "Population": 2100000,
+      "AreaKm2": 732
+    },
+    {
+      "Name": "Matanzas",
+      "Code": "NA-CU-MAT",
+      "Description": "A province known for its beaches, the Varadero resort, and its historical significance in Cuba s revolution.",
+      "Capital": "Matanzas",
+      "Population": 700000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Cienfuegos",
+      "Code": "NA-CU-CIF",
+      "Description": "A coastal province known for its colonial architecture and the Bay of Cienfuegos.",
+      "Capital": "Cienfuegos",
+      "Population": 400000,
+      "AreaKm2": 4200
+    },
+    {
+      "Name": "Villa Clara",
+      "Code": "NA-CU-VC",
+      "Description": "A province with a significant agricultural industry, particularly sugarcane, and historical sites related to Cuba s revolutionary past.",
+      "Capital": "Santa Clara",
+      "Population": 800000,
+      "AreaKm2": 8500
+    },
+    {
+      "Name": "Ciego de Avila",
+      "Code": "NA-CU-CA",
+      "Description": "A province located centrally, known for its agricultural production, especially in sugar and tobacco.",
+      "Capital": "Ciego de Avila",
+      "Population": 400000,
+      "AreaKm2": 6000
+    },
+    {
+      "Name": "Camaguey",
+      "Code": "NA-CU-CM",
+      "Description": "A province rich in cultural heritage, including the historical city of Camagüey, with winding streets and colonial buildings.",
+      "Capital": "Camaguey",
+      "Population": 700000,
+      "AreaKm2": 16000
+    },
+    {
+      "Name": "Las Tunas",
+      "Code": "NA-CU-LT",
+      "Description": "A province known for its natural beauty, including vast plains and forests, as well as its sugarcane fields.",
+      "Capital": "Las Tunas",
+      "Population": 500000,
+      "AreaKm2": 6700
+    },
+    {
+      "Name": "Holguin",
+      "Code": "NA-CU-HOL",
+      "Description": "A province in eastern Cuba, famous for its stunning beaches and the town of Holguin, known as the City of Parks.",
+      "Capital": "Holguin",
+      "Population": 800000,
+      "AreaKm2": 9300
+    },
+    {
+      "Name": "Santiago de Cuba",
+      "Code": "NA-CU-SC",
+      "Description": "A province with significant historical importance, being the site of key battles in the Cuban Revolution and a hub of Afro-Cuban culture.",
+      "Capital": "Santiago de Cuba",
+      "Population": 1100000,
+      "AreaKm2": 6200
+    },
+    {
+      "Name": "Granma",
+      "Code": "NA-CU-GR",
+      "Description": "A province with historical importance due to its connection to the Cuban Revolution, and home to the Granma National Park.",
+      "Capital": "Bayamo",
+      "Population": 600000,
+      "AreaKm2": 8000
+    },
+    {
+      "Name": "Guantanamo",
+      "Code": "NA-CU-GT",
+      "Description": "The easternmost province of Cuba, known for its military base and scenic coastlines, including the famous Baracoa.",
+      "Capital": "Guantanamo",
+      "Population": 500000,
+      "AreaKm2": 8500
+    }
+]  

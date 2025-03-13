@@ -1,0 +1,98 @@
+[
+    {
+      "Name": "Addis Ababa",
+      "Code": "AF-ET-AA",
+      "Description": "The capital city of Ethiopia, serving as the economic and political center.",
+      "Capital": "Addis Ababa",
+      "Population": 5270000,
+      "AreaKm2": 527
+    },
+    {
+      "Name": "Afar Region",
+      "Code": "AF-ET-AF",
+      "Description": "A region in northeastern Ethiopia, known for its desert landscapes and the Danakil Depression.",
+      "Capital": "Semera",
+      "Population": 1850000,
+      "AreaKm2": 72000
+    },
+    {
+      "Name": "Amhara Region",
+      "Code": "AF-ET-AM",
+      "Description": "A region known for its historical sites, including Lalibela and Bahir Dar.",
+      "Capital": "Bahir Dar",
+      "Population": 22200000,
+      "AreaKm2": 154000
+    },
+    {
+      "Name": "Benishangul-Gumuz Region",
+      "Code": "AF-ET-BG",
+      "Description": "A region in western Ethiopia, home to diverse ethnic groups and the Grand Ethiopian Renaissance Dam.",
+      "Capital": "Asosa",
+      "Population": 1200000,
+      "AreaKm2": 50000
+    },
+    {
+      "Name": "Dire Dawa",
+      "Code": "AF-ET-DD",
+      "Description": "A chartered city known for its railway connections and diverse culture.",
+      "Capital": "Dire Dawa",
+      "Population": 500000,
+      "AreaKm2": 1213
+    },
+    {
+      "Name": "Gambela Region",
+      "Code": "AF-ET-GA",
+      "Description": "A region in western Ethiopia, home to the Nuer and Anuak people.",
+      "Capital": "Gambela",
+      "Population": 430000,
+      "AreaKm2": 29000
+    },
+    {
+      "Name": "Harari Region",
+      "Code": "AF-ET-HA",
+      "Description": "A small region with a rich Islamic heritage and the historic city of Harar.",
+      "Capital": "Harar",
+      "Population": 250000,
+      "AreaKm2": 334
+    },
+    {
+      "Name": "Oromia Region",
+      "Code": "AF-ET-OR",
+      "Description": "The largest region in Ethiopia, known for agriculture and diverse ethnic groups.",
+      "Capital": "Adama",
+      "Population": 35000000,
+      "AreaKm2": 284537
+    },
+    {
+      "Name": "Sidama Region",
+      "Code": "AF-ET-SI",
+      "Description": "A region known for its coffee production and lush landscapes.",
+      "Capital": "Hawassa",
+      "Population": 3200000,
+      "AreaKm2": 10000
+    },
+    {
+      "Name": "Somali Region",
+      "Code": "AF-ET-SO",
+      "Description": "A region in eastern Ethiopia, inhabited mostly by ethnic Somalis.",
+      "Capital": "Jigjiga",
+      "Population": 6500000,
+      "AreaKm2": 328872
+    },
+    {
+      "Name": "Southern Nations, Nationalities, and Peoples Region (SNNPR)",
+      "Code": "AF-ET-SN",
+      "Description": "A culturally diverse region in southern Ethiopia.",
+      "Capital": "Hawassa",
+      "Population": 20000000,
+      "AreaKm2": 112343
+    },
+    {
+      "Name": "Tigray Region",
+      "Code": "AF-ET-TI",
+      "Description": "A northern region known for its historical sites, including Aksum.",
+      "Capital": "Mekelle",
+      "Population": 7000000,
+      "AreaKm2": 50000
+    }
+]  

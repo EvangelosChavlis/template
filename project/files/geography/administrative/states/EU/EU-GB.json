@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "England",
+        "Code": "EU-GB-ENG",
+        "Description": "The largest and most populous country in the UK, known for its rich history, iconic landmarks, and cultural contributions.",
+        "Capital": "London",
+        "Population": 56000000,
+        "AreaKm2": 130395
+    },
+    {
+        "Name": "Scotland",
+        "Code": "EU-GB-SCT",
+        "Description": "A country to the north of England, known for its scenic landscapes, historic castles, and cultural heritage.",
+        "Capital": "Edinburgh",
+        "Population": 5300000,
+        "AreaKm2": 77933
+    },
+    {
+        "Name": "Wales",
+        "Code": "EU-GB-WLS",
+        "Description": "A country to the west of England, known for its mountainous terrain, coastal villages, and Celtic culture.",
+        "Capital": "Cardiff",
+        "Population": 3100000,
+        "AreaKm2": 20779
+    },
+    {
+        "Name": "Northern Ireland",
+        "Code": "EU-GB-NIR",
+        "Description": "Located on the island of Ireland, Northern Ireland is known for its rich political history, natural beauty, and vibrant cultural scene.",
+        "Capital": "Belfast",
+        "Population": 1800000,
+        "AreaKm2": 14130
+    }
+]

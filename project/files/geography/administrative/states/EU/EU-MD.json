@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Chisinau",
+    "Code": "EU-MD-CH",
+    "Description": "Chisinau is the capital and largest city of Moldova, the center of political, economic, and cultural life. It s known for its green parks and wide boulevards.",
+    "Capital": "Chisinau",
+    "Population": 700000,
+    "AreaKm2": 120
+  },
+  {
+    "Name": "Balti",
+    "Code": "EU-MD-BL",
+    "Description": "Balti is the second-largest city in Moldova, located in the northern part of the country. It is an industrial center and plays an important role in Moldova s economy.",
+    "Capital": "Balti",
+    "Population": 150000,
+    "AreaKm2": 40
+  },
+  {
+    "Name": "Tiraspol",
+    "Code": "EU-MD-TI",
+    "Description": "Tiraspol is the capital of the self-declared Transnistria region, known for its Soviet-style architecture and political status as part of the unrecognized breakaway state.",
+    "Capital": "Tiraspol",
+    "Population": 130000,
+    "AreaKm2": 40
+  },
+  {
+    "Name": "Cahul",
+    "Code": "EU-MD-CA",
+    "Description": "Cahul is a city located in the south of Moldova, known for its proximity to the Danube River and its role as an important cultural and educational center.",
+    "Capital": "Cahul",
+    "Population": 34000,
+    "AreaKm2": 15
+  },
+  {
+    "Name": "Bender",
+    "Code": "EU-MD-BE",
+    "Description": "Bender is a city in the breakaway region of Transnistria. It is known for its historical fortress and its industrial base, particularly in machinery and chemical production.",
+    "Capital": "Bender",
+    "Population": 100000,
+    "AreaKm2": 35
+  }
+]

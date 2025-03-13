@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Bandar Seri Begawan",
+      "Code": "AS-BN-BS",
+      "Description": "The capital city of Brunei, located on the north coast of the island of Borneo, known for its rich culture, royal palaces, and impressive architecture.",
+      "Capital": "Bandar Seri Begawan",
+      "Population": 100364,
+      "AreaKm2": 100
+    },
+    {
+      "Name": "Belait",
+      "Code": "AS-BN-BL",
+      "Description": "A district in the western part of Brunei, known for its oil and gas industry, as well as natural attractions like parks and beaches.",
+      "Capital": "Kuala Belait",
+      "Population": 64000,
+      "AreaKm2": 2765
+    },
+    {
+      "Name": "Tutong",
+      "Code": "AS-BN-TT",
+      "Description": "A district located in central Brunei, known for its scenic landscapes, traditional villages, and agricultural activities.",
+      "Capital": "Tutong",
+      "Population": 49800,
+      "AreaKm2": 1155
+    },
+    {
+      "Name": "Temburong",
+      "Code": "AS-BN-TE",
+      "Description": "A district in the eastern part of Brunei, known for its lush rainforests, wildlife, and unique geographical location, separated from the rest of Brunei by Malaysia.",
+      "Capital": "Bangar",
+      "Population": 8900,
+      "AreaKm2": 1345
+    }
+]  

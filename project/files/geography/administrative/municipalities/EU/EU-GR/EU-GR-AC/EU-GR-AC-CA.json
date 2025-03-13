@@ -1,0 +1,30 @@
+[
+    {
+      "Name": "Athens",
+      "Description": "The capital and largest city of Greece, known for its ancient history and vibrant cultural life.",
+      "AreaKm2": 38.96,
+      "Population": 665000,
+      "Code": "EU-GR-AC-CA-AT"
+    },
+    {
+      "Name": "Kallithea",
+      "Description": "A central municipality known for its commercial hubs and proximity to the sea.",
+      "AreaKm2": 5.08,
+      "Population": 100000,
+      "Code": "EU-GR-AC-CA-KA"
+    },
+    {
+      "Name": "Psyrrí",
+      "Description": "A historic and vibrant district known for its alternative culture, nightclubs, and cafes.",
+      "AreaKm2": 1.01,
+      "Population": 25000,
+      "Code": "EU-GR-AC-CA-PS"
+    },
+    {
+      "Name": "Kolonaki",
+      "Description": "A posh and fashionable district known for high-end shopping, cafes, and elegant apartments.",
+      "AreaKm2": 1.00,
+      "Population": 25000,
+      "Code": "EU-GR-AC-CA-KO"
+    }
+]  

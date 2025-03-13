@@ -1,0 +1,134 @@
+[
+    {
+        "Name": "Argentina",
+        "Description": "A large country in South America, known for its rich cultural heritage, diverse landscapes, and tango music.",
+        "Code": "SA-AR",
+        "Capital": "Buenos Aires",
+        "Population": 45195777,
+        "AreaKm2": 2780400,
+        "PhoneCode": "+54",
+        "TLD": ".ar",
+        "Currency": "ARS"
+    },
+    {
+        "Name": "Bolivia",
+        "Description": "A landlocked country in South America known for its diverse geography, including the Andes mountains and the Salar de Uyuni.",
+        "Code": "SA-BO",
+        "Capital": "Sucre",
+        "Population": 11673021,
+        "AreaKm2": 1098581,
+        "PhoneCode": "+591",
+        "TLD": ".bo",
+        "Currency": "BOB"
+    },
+    {
+        "Name": "Brazil",
+        "Description": "The largest country in South America, famous for its football culture, Amazon rainforest, and vibrant cities like Rio de Janeiro.",
+        "Code": "SA-BR",
+        "Capital": "Brasilia",
+        "Population": 213993437,
+        "AreaKm2": 8515767,
+        "PhoneCode": "+55",
+        "TLD": ".br",
+        "Currency": "BRL"
+    },
+    {
+        "Name": "Chile",
+        "Description": "A long, narrow country stretching along the western edge of South America, known for its diverse climate and stunning natural beauty.",
+        "Code": "SA-CL",
+        "Capital": "Santiago",
+        "Population": 19116209,
+        "AreaKm2": 756102,
+        "PhoneCode": "+56",
+        "TLD": ".cl",
+        "Currency": "CLP"
+    },
+    {
+        "Name": "Colombia",
+        "Description": "Located in the north of South America, Colombia is known for its coffee, beautiful landscapes, and rich cultural history.",
+        "Code": "SA-CO",
+        "Capital": "Bogota",
+        "Population": 50882891,
+        "AreaKm2": 1141748,
+        "PhoneCode": "+57",
+        "TLD": ".co",
+        "Currency": "COP"
+    },
+    {
+        "Name": "Ecuador",
+        "Description": "A small country straddling the equator, known for its diverse ecosystems, including the Galápagos Islands and the Andes mountains.",
+        "Code": "SA-EC",
+        "Capital": "Quito",
+        "Population": 17643060,
+        "AreaKm2": 283561,
+        "PhoneCode": "+593",
+        "TLD": ".ec",
+        "Currency": "USD"
+    },
+    {
+        "Name": "Guyana",
+        "Description": "A small country on the northeast coast of South America, known for its rainforest and rich history.",
+        "Code": "SA-GY",
+        "Capital": "Georgetown",
+        "Population": 786552,
+        "AreaKm2": 214969,
+        "PhoneCode": "+592",
+        "TLD": ".gy",
+        "Currency": "GYD"
+    },
+    {
+        "Name": "Paraguay",
+        "Description": "A landlocked country in central South America, known for its history and natural resources.",
+        "Code": "SA-PY",
+        "Capital": "Asuncion",
+        "Population": 7132530,
+        "AreaKm2": 406752,
+        "PhoneCode": "+595",
+        "TLD": ".py",
+        "Currency": "PYG"
+    },
+    {
+        "Name": "Peru",
+        "Description": "A country in western South America, famous for its rich ancient culture, including the Inca civilization, and the city of Machu Picchu.",
+        "Code": "SA-PE",
+        "Capital": "Lima",
+        "Population": 32971846,
+        "AreaKm2": 1285216,
+        "PhoneCode": "+51",
+        "TLD": ".pe",
+        "Currency": "PEN"
+    },
+    {
+        "Name": "Suriname",
+        "Description": "A small country on the northeastern coast of South America, known for its tropical rainforests and Dutch colonial architecture.",
+        "Code": "SA-SR",
+        "Capital": "Paramaribo",
+        "Population": 618040,
+        "AreaKm2": 163820,
+        "PhoneCode": "+597",
+        "TLD": ".sr",
+        "Currency": "SRD"
+    },
+    {
+        "Name": "Uruguay",
+        "Description": "A small country in the southern part of South America, known for its high quality of life and beautiful beaches.",
+        "Code": "SA-UY",
+        "Capital": "Montevideo",
+        "Population": 3477000,
+        "AreaKm2": 176215,
+        "PhoneCode": "+598",
+        "TLD": ".uy",
+        "Currency": "UYU"
+    },
+    {
+        "Name": "Venezuela",
+        "Description": "A country in the northern part of South America, known for its oil reserves, political history, and stunning Angel Falls.",
+        "Code": "SA-VE",
+        "Capital": "Caracas",
+        "Population": 28435943,
+        "AreaKm2": 916445,
+        "PhoneCode": "+58",
+        "TLD": ".ve",
+        "Currency": "VES"
+    }
+]

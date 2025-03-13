@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Geography.Administrative.Districts.Extensions;
 using server.src.Domain.Geography.Administrative.Districts.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -25,14 +26,21 @@ public class DistrictConfiguration : IEntityTypeConfiguration<District>
 
         builder.Property(d => d.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(DistrictLength.NameLength);
 
         builder.Property(d => d.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(DistrictLength.DescriptionLength);
 
         builder.Property(d => d.Population)
             .IsRequired();
+
+        builder.Property(d => d.AreaKm2)
+            .IsRequired();
+
+        builder.Property(d => d.Code)
+            .IsRequired()
+            .HasMaxLength(DistrictLength.CodeLength);
 
         builder.Property(d => d.IsActive)
             .IsRequired();

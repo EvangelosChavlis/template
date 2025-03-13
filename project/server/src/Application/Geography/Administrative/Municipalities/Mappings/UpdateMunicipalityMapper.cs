@@ -26,6 +26,8 @@ public static class UpdateMunicipalityMapper
         modelMunicipality.Name = dto.Name;
         modelMunicipality.Description = dto.Description;
         modelMunicipality.Population = dto.Population;
+        modelMunicipality.AreaKm2 = dto.AreaKm2;
+        modelMunicipality.Code = dto.Code;
         modelMunicipality.IsActive = modelMunicipality.IsActive;
         modelMunicipality.Region = modelRegion;
         modelMunicipality.RegionId = modelRegion.Id;

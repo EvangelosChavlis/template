@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Shefa",
+      "Code": "OC-VU-SH",
+      "Description": "The central province of Vanuatu, home to the capital Port Vila, with beautiful beaches, mountains, and cultural heritage.",
+      "Capital": "Port Vila",
+      "Population": 45000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Sanma",
+      "Code": "OC-VU-SA",
+      "Description": "Known for its tropical forests, waterfalls, and natural beauty, Sanma is located in the northern part of Vanuatu.",
+      "Capital": "Luganville",
+      "Population": 40000,
+      "AreaKm2": 1700
+    },
+    {
+      "Name": "Penama",
+      "Code": "OC-VU-PE",
+      "Description": "A smaller province in the central region of Vanuatu, famous for its volcanic landscapes and scenic beaches.",
+      "Capital": "Santo",
+      "Population": 20000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "Malampa",
+      "Code": "OC-VU-MA",
+      "Description": "Located in the western part of Vanuatu, Malampa is known for its traditional villages, wildlife, and outdoor activities.",
+      "Capital": "Lamap",
+      "Population": 25000,
+      "AreaKm2": 1200
+    },
+    {
+      "Name": "Tafea",
+      "Code": "OC-VU-TA",
+      "Description": "A southern province of Vanuatu, Tafea is known for its volcanic islands, beautiful coastlines, and diverse culture.",
+      "Capital": "Isangel",
+      "Population": 20000,
+      "AreaKm2": 1000
+    },
+    {
+      "Name": "Torba",
+      "Code": "OC-VU-TO",
+      "Description": "The northernmost province of Vanuatu, Torba is known for its natural environment, unspoiled beaches, and coral reefs.",
+      "Capital": "Sola",
+      "Population": 5000,
+      "AreaKm2": 800
+    }
+]  

@@ -10,6 +10,8 @@ public record ItemDistrictDto(
     string Name,
     string Description,
     long Population,
+    double AreaKm2,
+    string Code,
     bool IsActive,
     string Municipality,
     Guid Version

@@ -1,0 +1,131 @@
+[
+    {
+      "Name": "New Providence",
+      "Code": "NA-BS-NP",
+      "Description": "The most populous island and economic hub, home to the capital city, Nassau.",
+      "Capital": "Nassau",
+      "Population": 274400,
+      "AreaKm2": 207
+    },
+    {
+      "Name": "Grand Bahama",
+      "Code": "NA-BS-GB",
+      "Description": "A major tourist and industrial center, known for Freeport and its natural parks.",
+      "Capital": "Freeport",
+      "Population": 51800,
+      "AreaKm2": 1373
+    },
+    {
+      "Name": "Abaco Islands",
+      "Code": "NA-BS-AB",
+      "Description": "A group of islands and cays popular for boating, fishing, and tourism.",
+      "Capital": "Marsh Harbour",
+      "Population": 17000,
+      "AreaKm2": 1738
+    },
+    {
+      "Name": "Andros",
+      "Code": "NA-BS-AN",
+      "Description": "The largest island, known for its blue holes, marine biodiversity, and eco-tourism.",
+      "Capital": "Nicholl’s Town",
+      "Population": 7900,
+      "AreaKm2": 5957
+    },
+    {
+      "Name": "Eleuthera",
+      "Code": "NA-BS-EL",
+      "Description": "A long and narrow island famous for its pink sand beaches and historical settlements.",
+      "Capital": "Governor’s Harbour",
+      "Population": 11000,
+      "AreaKm2": 518
+    },
+    {
+      "Name": "Exuma",
+      "Code": "NA-BS-EX",
+      "Description": "A chain of 365 cays known for crystal-clear waters, luxury resorts, and marine life.",
+      "Capital": "George Town",
+      "Population": 7300,
+      "AreaKm2": 250
+    },
+    {
+      "Name": "Berry Islands",
+      "Code": "NA-BS-BY",
+      "Description": "A small cluster of cays known for exclusive resorts and deep-sea fishing.",
+      "Capital": "Bullock’s Harbour",
+      "Population": 800,
+      "AreaKm2": 78
+    },
+    {
+      "Name": "Bimini",
+      "Code": "NA-BS-BI",
+      "Description": "The westernmost district, closest to Florida, known for fishing and historical sites.",
+      "Capital": "Alice Town",
+      "Population": 2000,
+      "AreaKm2": 23
+    },
+    {
+      "Name": "Cat Island",
+      "Code": "NA-BS-CI",
+      "Description": "A sparsely populated island known for Mount Alvernia, the highest point in The Bahamas.",
+      "Capital": "Arthur’s Town",
+      "Population": 1500,
+      "AreaKm2": 389
+    },
+    {
+      "Name": "San Salvador",
+      "Code": "NA-BS-SS",
+      "Description": "Believed to be the first landfall of Christopher Columbus in the New World.",
+      "Capital": "Cockburn Town",
+      "Population": 900,
+      "AreaKm2": 163
+    },
+    {
+      "Name": "Acklins",
+      "Code": "NA-BS-AC",
+      "Description": "A remote island known for its pristine natural environment and bonefishing.",
+      "Capital": "Snug Corner",
+      "Population": 500,
+      "AreaKm2": 389
+    },
+    {
+      "Name": "Crooked Island",
+      "Code": "NA-BS-CRO",
+      "Description": "A quiet island with historical ruins and unspoiled beaches.",
+      "Capital": "Colonel Hill",
+      "Population": 300,
+      "AreaKm2": 257
+    },
+    {
+      "Name": "Inagua",
+      "Code": "NA-BS-IN",
+      "Description": "A nature lover s paradise, home to the Inagua National Park and flamingo populations.",
+      "Capital": "Matthew Town",
+      "Population": 900,
+      "AreaKm2": 1558
+    },
+    {
+      "Name": "Long Island",
+      "Code": "NA-BS-LI",
+      "Description": "Famous for Dean s Blue Hole, one of the world s deepest blue holes.",
+      "Capital": "Clarence Town",
+      "Population": 3000,
+      "AreaKm2": 596
+    },
+    {
+      "Name": "Mayaguana",
+      "Code": "NA-BS-MY",
+      "Description": "A remote island with a small population, offering untouched beaches and nature.",
+      "Capital": "Abraham’s Bay",
+      "Population": 300,
+      "AreaKm2": 280
+    },
+    {
+      "Name": "Ragged Island",
+      "Code": "NA-BS-RI",
+      "Description": "A small island with a tiny population, known for its salt ponds and fishing.",
+      "Capital": "Duncan Town",
+      "Population": 50,
+      "AreaKm2": 23
+    }
+  ]
+  

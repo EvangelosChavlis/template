@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Saint George",
+      "Code": "NA-DM-SG",
+      "Description": "The capital region, which includes the capital city Roseau. Known for its vibrant markets, historical sites, and coastal beauty.",
+      "Capital": "Roseau",
+      "Population": 29000,
+      "AreaKm2": 65
+    },
+    {
+      "Name": "Saint Andrew",
+      "Code": "NA-DM-SA",
+      "Description": "Located in the northeastern part of the island, known for its natural beauty, including waterfalls and lush rainforests.",
+      "Capital": "Grenville",
+      "Population": 12000,
+      "AreaKm2": 140
+    },
+    {
+      "Name": "Saint David",
+      "Code": "NA-DM-SD",
+      "Description": "A coastal region known for its beautiful beaches, including the famous Batibou Beach.",
+      "Capital": "La Plaine",
+      "Population": 9000,
+      "AreaKm2": 75
+    },
+    {
+      "Name": "Saint John",
+      "Code": "NA-DM-SJ",
+      "Description": "A region known for its farming community and stunning rural landscapes.",
+      "Capital": "Portsmouth",
+      "Population": 7000,
+      "AreaKm2": 90
+    },
+    {
+      "Name": "Saint Joseph",
+      "Code": "NA-DM-SJOS",
+      "Description": "This region is home to many historical sites and is known for the dense forests and hiking trails.",
+      "Capital": "Morne Jaune",
+      "Population": 8000,
+      "AreaKm2": 60
+    },
+    {
+      "Name": "Saint Luke",
+      "Code": "NA-DM-SL",
+      "Description": "A small region famous for its wildlife and agricultural activities.",
+      "Capital": "Penville",
+      "Population": 5000,
+      "AreaKm2": 45
+    },
+    {
+      "Name": "Saint Mark",
+      "Code": "NA-DM-SM",
+      "Description": "A coastal region known for its peaceful environment and picturesque beaches.",
+      "Capital": "Portsmouth",
+      "Population": 6000,
+      "AreaKm2": 80
+    },
+    {
+      "Name": "Saint Patrick",
+      "Code": "NA-DM-SP",
+      "Description": "This region is known for its mountains and rivers and is a popular spot for hiking and exploring nature.",
+      "Capital": "Borne",
+      "Population": 12000,
+      "AreaKm2": 150
+    }
+]  

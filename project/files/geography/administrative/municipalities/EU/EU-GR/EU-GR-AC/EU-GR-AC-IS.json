@@ -1,0 +1,58 @@
+[
+    {
+        "Name": "Aegina",
+        "Description": "The largest island in the Saronic Gulf and the administrative capital of the Islands region.",
+        "AreaKm2": 87.0,
+        "Population": 13000,
+        "Code": "EU-GR-AC-IS-AE"
+    },
+    {
+        "Name": "Agistri",
+        "Description": "A small island known for its natural beauty and beaches, located close to Aegina.",
+        "AreaKm2": 13.4,
+        "Population": 2000,
+        "Code": "EU-GR-AC-IS-AG"
+    },
+    {
+        "Name": "Kythira",
+        "Description": "A scenic island located south of the Peloponnese, famous for its natural beauty and beaches.",
+        "AreaKm2": 279.0,
+        "Population": 4000,
+        "Code": "EU-GR-AC-IS-KY"
+    },
+    {
+        "Name": "Poros",
+        "Description": "A small island famous for its scenic beauty, located near the Peloponnese.",
+        "AreaKm2": 31.2,
+        "Population": 12000,
+        "Code": "EU-GR-AC-IS-PO"
+    },
+    {
+        "Name": "Salamina",
+        "Description": "An island municipality near the port city, known for its historical significance and maritime importance.",
+        "AreaKm2": 95.6,
+        "Population": 38000,
+        "Code": "EU-GR-AC-IS-SA"
+    },
+    {
+        "Name": "Spetses",
+        "Description": "An island with a rich naval history, famous for its charming old town and picturesque views.",
+        "AreaKm2": 27.0,
+        "Population": 7000,
+        "Code": "EU-GR-AC-IS-SP"
+    },
+    {
+        "Name": "Hydra",
+        "Description": "A historical island known for its well-preserved architecture and lack of motor vehicles.",
+        "AreaKm2": 50.0,
+        "Population": 2000,
+        "Code": "EU-GR-AC-IS-HY"
+    },
+    {
+        "Name": "Trojzen-Mehano",
+        "Description": "A scenic area known for its villages and beautiful coastal landscapes, part of the greater Troizinia region.",
+        "AreaKm2": 120.0,
+        "Population": 7000,
+        "Code": "EU-GR-AC-IS-TRM"
+    }
+]

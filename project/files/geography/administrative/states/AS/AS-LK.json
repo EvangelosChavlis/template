@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Western Province",
+      "Code": "AS-LK-WP",
+      "Description": "The most developed province in Sri Lanka, home to the capital city Colombo, a bustling commercial and cultural hub.",
+      "Capital": "Colombo",
+      "Population": 6200000,
+      "AreaKm2": 3694
+    },
+    {
+      "Name": "Central Province",
+      "Code": "AS-LK-CP",
+      "Description": "A region known for its scenic hill country, tea plantations, and historical sites such as Kandy, a UNESCO World Heritage Site.",
+      "Capital": "Kandy",
+      "Population": 2600000,
+      "AreaKm2": 5522
+    },
+    {
+      "Name": "Southern Province",
+      "Code": "AS-LK-SP",
+      "Description": "A coastal region famous for its beautiful beaches, vibrant tourism industry, and historical towns like Galle.",
+      "Capital": "Galle",
+      "Population": 2800000,
+      "AreaKm2": 5280
+    },
+    {
+      "Name": "Eastern Province",
+      "Code": "AS-LK-EP",
+      "Description": "A culturally diverse province with a mix of Tamil, Muslim, and Sinhala communities, featuring natural beauty and coastal towns like Trincomalee.",
+      "Capital": "Trincomalee",
+      "Population": 1500000,
+      "AreaKm2": 10629
+    },
+    {
+      "Name": "Northern Province",
+      "Code": "AS-LK-NP",
+      "Description": "A region with a rich Tamil heritage, featuring ancient temples, historical monuments, and towns such as Jaffna.",
+      "Capital": "Jaffna",
+      "Population": 1000000,
+      "AreaKm2": 6690
+    },
+    {
+      "Name": "Uva Province",
+      "Code": "AS-LK-UP",
+      "Description": "Known for its picturesque landscapes, tea gardens, and the town of Badulla, this province is a popular tourist destination.",
+      "Capital": "Badulla",
+      "Population": 1100000,
+      "AreaKm2": 5824
+    },
+    {
+      "Name": "North Western Province",
+      "Code": "AS-LK-NWP",
+      "Description": "A province known for its agriculture, including rice, coconut, and other crops, with the town of Kurunegala as its capital.",
+      "Capital": "Kurunegala",
+      "Population": 2500000,
+      "AreaKm2": 3997
+    },
+    {
+      "Name": "North Central Province",
+      "Code": "AS-LK-NCP",
+      "Description": "A historically significant region, home to ancient ruins and cultural landmarks, such as Anuradhapura and Polonnaruwa.",
+      "Capital": "Anuradhapura",
+      "Population": 1200000,
+      "AreaKm2": 10750
+    }
+]  

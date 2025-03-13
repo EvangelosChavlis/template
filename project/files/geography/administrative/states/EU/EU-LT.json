@@ -1,0 +1,82 @@
+[
+  {
+    "Name": "Alytus",
+    "Code": "EU-LT-AL",
+    "Description": "Alytus is a city and the administrative center of Alytus County, known for its green spaces, rivers, and cultural heritage.",
+    "Capital": "Alytus",
+    "Population": 57000,
+    "AreaKm2": 92
+  },
+  {
+    "Name": "Kaunas",
+    "Code": "EU-LT-KA",
+    "Description": "Kaunas is the second-largest city in Lithuania and is a key cultural and economic center, with a vibrant old town and rich history.",
+    "Capital": "Kaunas",
+    "Population": 280000,
+    "AreaKm2": 157
+  },
+  {
+    "Name": "Klaipeda",
+    "Code": "EU-LT-KL",
+    "Description": "Klaipeda is a port city located on the Baltic Sea, known for its maritime industry, cultural landmarks, and picturesque coastline.",
+    "Capital": "Klaipeda",
+    "Population": 150000,
+    "AreaKm2": 98
+  },
+  {
+    "Name": "Marijampole",
+    "Code": "EU-LT-MJ",
+    "Description": "Marijampolė is a city in southern Lithuania, known for its agricultural industry and historical significance during the interwar period.",
+    "Capital": "Marijampolė",
+    "Population": 50000,
+    "AreaKm2": 55
+  },
+  {
+    "Name": "Panevėžys",
+    "Code": "EU-LT-PN",
+    "Description": "Panevėžys is the fifth-largest city in Lithuania, recognized for its industrial development, vibrant cultural scene, and historical landmarks.",
+    "Capital": "Panevėžys",
+    "Population": 90000,
+    "AreaKm2": 71
+  },
+  {
+    "Name": "Šiauliai",
+    "Code": "EU-LT-SH",
+    "Description": "Šiauliai is a city in northern Lithuania, known for its historical significance and the famous Hill of Crosses, a popular pilgrimage site.",
+    "Capital": "Šiauliai",
+    "Population": 130000,
+    "AreaKm2": 61
+  },
+  {
+    "Name": "Tauragė",
+    "Code": "EU-LT-TA",
+    "Description": "Tauragė is a city in western Lithuania, known for its industrial development and its strategic location along major transportation routes.",
+    "Capital": "Tauragė",
+    "Population": 25000,
+    "AreaKm2": 64
+  },
+  {
+    "Name": "Utena",
+    "Code": "EU-LT-UT",
+    "Description": "Utena is a city in northeastern Lithuania, known for its scenic lakes, natural landscapes, and the Utena Regional Museum.",
+    "Capital": "Utena",
+    "Population": 27000,
+    "AreaKm2": 64
+  },
+  {
+    "Name": "Vilnius",
+    "Code": "EU-LT-VL",
+    "Description": "Vilnius is the capital city of Lithuania, renowned for its baroque architecture, vibrant cultural life, and historical significance.",
+    "Capital": "Vilnius",
+    "Population": 580000,
+    "AreaKm2": 401
+  },
+  {
+    "Name": "Zarasai",
+    "Code": "EU-LT-ZR",
+    "Description": "Zarasai is a town in northeastern Lithuania, famous for its picturesque lakes, hiking trails, and historical sites.",
+    "Capital": "Zarasai",
+    "Population": 21000,
+    "AreaKm2": 53
+  }
+]

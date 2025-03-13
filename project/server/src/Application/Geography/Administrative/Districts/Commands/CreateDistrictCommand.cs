@@ -10,7 +10,6 @@ using server.src.Domain.Common.Dtos;
 using server.src.Domain.Geography.Administrative.Districts.Dtos;
 using server.src.Domain.Geography.Administrative.Districts.Models;
 using server.src.Domain.Geography.Administrative.Municipalities.Models;
-using server.src.Domain.Geography.Administrative.States.Models;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Geography.Administrative.Districts.Commands;
@@ -43,10 +42,14 @@ public class CreateDistrictHandler : IRequestHandler<CreateDistrictCommand, Resp
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<District, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<District, bool>>[] 
+        { 
+            d => d.Name!.Equals(command.Dto.Name) ||
+                d.Code!.Equals(command.Dto.Code)
+        };
         var existingDistrict = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the district already exists in the system
         if (existingDistrict is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

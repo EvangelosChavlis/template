@@ -93,11 +93,15 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Role_Id");
+
                     b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "Name", "Description", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Role_\r                Id_\r                Name_\r                Description_\r                IsActive");
+                        .HasDatabaseName("IX_Role_Id_Name_Description_IsActive");
 
                     b.ToTable("Roles", "auth");
                 });
@@ -156,11 +160,15 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_UserLogin_Id");
+
                     b.HasIndex("UserId");
 
                     b.HasIndex("Id", "LoginProvider", "ProviderDisplayName", "Date")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                UserLogin_\r                Id_\r                LoginProvider_\r                ProviderDisplayName_\r                Date");
+                        .HasDatabaseName("IX_UserLogin_Id_LoginProvider_ProviderDisplayName_Date");
 
                     b.ToTable("UserLogins", "auth");
                 });
@@ -193,11 +201,15 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_UserLogout_Id");
+
                     b.HasIndex("UserId");
 
                     b.HasIndex("Id", "LoginProvider", "ProviderDisplayName", "Date")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                UserLogout_\r                Id_\r                LoginProvider_\r                ProviderDisplayName_\r                Date");
+                        .HasDatabaseName("IX_UserLogout_Id_LoginProvider_ProviderDisplayName_Date");
 
                     b.ToTable("UserLogouts", "auth");
                 });
@@ -219,13 +231,17 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_UserRole_Id");
+
                     b.HasIndex("RoleId");
 
                     b.HasIndex("UserId");
 
                     b.HasIndex("Id", "UserId", "RoleId", "Date")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                UserRole_\r                Id_\r                UserId_\r                RoleId_\r                Date");
+                        .HasDatabaseName("IX_UserRole_Id_UserId_RoleId_Date");
 
                     b.ToTable("UserRoles", "auth");
                 });
@@ -365,11 +381,15 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_User_Id");
+
                     b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "FirstName", "LastName", "Email", "UserName", "PhoneNumber", "MobilePhoneNumber")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                User_\r                Id_\r                FirstName_\r                LastName_\r                Email_\r                UserName_\r                PhoneNumber_\r                MobilePhoneNumber");
+                        .HasDatabaseName("IX_User_Id_FirstName_LastName_Email_UserName_PhoneNumber_MobilePhoneNumber");
 
                     b.ToTable("Users", "auth");
                 });
@@ -556,66 +576,13 @@ namespace Persistence.Migrations.Data
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<double>("AreaKm2")
+                        .HasColumnType("double precision");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasMaxLength(2)
                         .HasColumnType("character varying(2)");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
-                    b.Property<DateTime?>("LockUntil")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.Property<Guid?>("TenantId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("UserLockedId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("Version")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserLockedId");
-
-                    b.HasIndex("Id", "Name", "Code", "IsActive")
-                        .IsUnique()
-                        .HasDatabaseName("IX_\r                Continent_\r                Id_\r                Name_\r                Code_\r                IsActive");
-
-                    b.ToTable("Continents", "geography_administrative");
-                });
-
-            modelBuilder.Entity("server.src.Domain.Geography.Administrative.Countries.Models.Country", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<double>("AreaKm2")
-                        .HasColumnType("double precision");
-
-                    b.Property<string>("Capital")
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(5)
-                        .HasColumnType("character varying(5)");
-
-                    b.Property<Guid>("ContinentId")
-                        .HasColumnType("uuid");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -646,13 +613,111 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContinentId");
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Continent_Code");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Continent_Id");
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Continent_Id_Code");
+
+                    b.HasIndex("Id", "Name", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Continent_Id_Name_Code_IsActive");
+
+                    b.ToTable("Continents", "geography_administrative");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Geography.Administrative.Countries.Models.Country", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<double>("AreaKm2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Capital")
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
+                    b.Property<Guid>("ContinentId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("PhoneCode")
+                        .IsRequired()
+                        .HasMaxLength(7)
+                        .HasColumnType("character varying(7)");
+
+                    b.Property<long>("Population")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("TLD")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Country_Code");
+
+                    b.HasIndex("ContinentId");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Country_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Code", "ContinentId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Country_Id_Code_ContinentId");
+
                     b.HasIndex("Id", "Name", "Code", "Population", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Country_\r                Id_\r                Name_\r                Code_\r                Population_\r                IsActive");
+                        .HasDatabaseName("IX_Country_Id_Name_Code_Population_IsActive");
 
                     b.ToTable("Countries", "geography_administrative");
                 });
@@ -662,6 +727,14 @@ namespace Persistence.Migrations.Data
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<double>("AreaKm2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -695,13 +768,25 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_District_Code");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_District_Id");
+
                     b.HasIndex("MunicipalityId");
 
                     b.HasIndex("UserLockedId");
 
-                    b.HasIndex("Id", "Name", "Population", "IsActive")
+                    b.HasIndex("Id", "Code", "MunicipalityId")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                District_\r                Id_\r                Name_\r                Population_\r                IsActive");
+                        .HasDatabaseName("IX_District_Id_Code_MunicipalityId");
+
+                    b.HasIndex("Id", "Name", "Population", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_District_Id_Name_Population_Code_IsActive");
 
                     b.ToTable("Districts", "geography_administrative");
                 });
@@ -711,6 +796,14 @@ namespace Persistence.Migrations.Data
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<double>("AreaKm2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("character varying(30)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -744,13 +837,25 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Municipality_Code");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Municipality_Id");
+
                     b.HasIndex("RegionId");
 
                     b.HasIndex("UserLockedId");
 
-                    b.HasIndex("Id", "Name", "Population", "IsActive")
+                    b.HasIndex("Id", "Code", "RegionId")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Municipality_\r                Id_\r                Name_\r                Population_\r                IsActive");
+                        .HasDatabaseName("IX_Municipality_Id_Code_RegionId");
+
+                    b.HasIndex("Id", "Name", "Population", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Municipality_Id_Name_Population_Code_IsActive");
 
                     b.ToTable("Municipalities", "geography_administrative");
                 });
@@ -760,6 +865,14 @@ namespace Persistence.Migrations.Data
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<double>("AreaKm2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(45)
+                        .HasColumnType("character varying(45)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -793,17 +906,30 @@ namespace Persistence.Migrations.Data
 
                     b.Property<string>("Zipcode")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Neighborhood_Code");
+
                     b.HasIndex("DistrictId");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Neighborhood_Id");
 
                     b.HasIndex("UserLockedId");
 
-                    b.HasIndex("Id", "Name", "Zipcode", "IsActive")
+                    b.HasIndex("Id", "Code", "DistrictId")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Neighborhood_\r                Id_\r                Name_\r                Zipcode_\r                IsActive");
+                        .HasDatabaseName("IX_Neighborhood_Id_Code_DistrictId");
+
+                    b.HasIndex("Id", "Name", "Zipcode", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Neighborhood_Id_Name_Zipcode_Code_IsActive");
 
                     b.ToTable("Neighborhoods", "geography_administrative");
                 });
@@ -851,13 +977,25 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Region_Code");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Region_Id");
+
                     b.HasIndex("StateId");
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Code", "StateId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Region_Id_Code_StateId");
+
                     b.HasIndex("Id", "Name", "AreaKm2", "Code", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Region_\r                Id_\r                Name_\r                AreaKm2_\r                Code_\r                IsActive");
+                        .HasDatabaseName("IX_Region_Id_Name_AreaKm2_Code_IsActive");
 
                     b.ToTable("Regions", "geography_administrative");
                 });
@@ -912,13 +1050,25 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_State_Code");
+
                     b.HasIndex("CountryId");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_State_Id");
 
                     b.HasIndex("UserLockedId");
 
+                    b.HasIndex("Id", "Code", "CountryId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_State_Id_Code_CountryId");
+
                     b.HasIndex("Id", "Name", "Population", "Code", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                State_\r                Id_\r                Name_\r                Population_\r                Code_\r                IsActive");
+                        .HasDatabaseName("IX_State_Id_Name_Population_Code_IsActive");
 
                     b.ToTable("States", "geography_administrative");
                 });
@@ -969,7 +1119,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Name", "AvgTemperatureC", "AvgPrecipitationMm", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                ClimateZone_\r                Id_\r                Name_\r                AvgTemperatureC_\r                AvgPrecipitationMm_\r                IsActive");
+                        .HasDatabaseName("IX_ClimateZone_Id_Name_AvgTemperatureC_AvgPrecipitationMm_IsActive");
 
                     b.ToTable("ClimateZone", "geography_natural");
                 });
@@ -1042,7 +1192,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Longitude", "Latitude", "Altitude", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Location_\r                Id_\r                Longitude_\r                Latitude_\r                Altitude_\r                IsActive");
+                        .HasDatabaseName("IX_Location_Id_Longitude_Latitude_Altitude_IsActive");
 
                     b.ToTable("Locations", "geography_natural");
                 });
@@ -1126,7 +1276,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Name", "Description", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                TerrainType_\r                Id_\r                Name_\r                Description_\r                IsActive");
+                        .HasDatabaseName("IX_TerrainType_Id_Name_Description_IsActive");
 
                     b.ToTable("TerrainTypes", "geography_natural");
                 });
@@ -1179,7 +1329,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Name", "UtcOffset", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Timezone_\r                Id_\r                Name_\r                UtcOffset_\r                IsActive");
+                        .HasDatabaseName("IX_Timezone_Id_Name_UtcOffset_IsActive");
 
                     b.ToTable("TimeZones", "geography_natural");
                 });
@@ -1280,7 +1430,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Error", "StatusCode", "Timestamp")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                LogError_\r                Id_\r                Error_\r                StatusCode_\r                Timestamp");
+                        .HasDatabaseName("IX_LogError_Id_Error_StatusCode_Timestamp");
 
                     b.ToTable("LogErrors", "metrics");
                 });
@@ -1378,7 +1528,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Method", "Path", "StatusCode", "ResponseTime", "RequestTimestamp")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                TelemetryRecord_\r                Id_\r                Method_\r                StatusCode_\r                ResponseTime_\r                RequestTimestamp");
+                        .HasDatabaseName("IX_TelemetryRecord_Id_Method_StatusCode_ResponseTime_RequestTimestamp");
 
                     b.ToTable("TelemetryRecords", "metrics");
                 });
@@ -1494,6 +1644,10 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Forecast_Id");
+
                     b.HasIndex("LocationId");
 
                     b.HasIndex("MoonPhaseId");
@@ -1504,7 +1658,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Date", "TemperatureC", "Humidity")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Forecast_\r                Id_\r                Date_\r                TemperatureC_\r                Humidity");
+                        .HasDatabaseName("IX_Forecast_Id_Date_TemperatureC_Humidity");
 
                     b.ToTable("Forecasts", "weather");
                 });
@@ -1557,11 +1711,15 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_MoonPhase_Id");
+
                     b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "Name", "Description")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                MoonPhase_\r                Id_\r                Name_\r                Description");
+                        .HasDatabaseName("IX_MoonPhase_Id_Name_Description");
 
                     b.ToTable("MoonPhases", "weather");
                 });
@@ -1631,6 +1789,10 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Observation_Id");
+
                     b.HasIndex("LocationId");
 
                     b.HasIndex("MoonPhaseId");
@@ -1639,7 +1801,7 @@ namespace Persistence.Migrations.Data
 
                     b.HasIndex("Id", "Timestamp", "TemperatureC", "Humidity")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Observation_\r                Id_\r                Timestamp_\r                TemperatureC_\r                Humidity");
+                        .HasDatabaseName("IX_Observation_Id_Timestamp_TemperatureC_Humidity");
 
                     b.ToTable("Observations", "weather");
                 });
@@ -1685,11 +1847,15 @@ namespace Persistence.Migrations.Data
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Warning_Id");
+
                     b.HasIndex("LockedByUserId");
 
                     b.HasIndex("Id", "Name", "Description")
                         .IsUnique()
-                        .HasDatabaseName("IX_\r                Warning_\r                Id_\r                Name_\r                Description");
+                        .HasDatabaseName("IX_Warning_Id_Name_Description");
 
                     b.ToTable("Warnings", "weather");
                 });

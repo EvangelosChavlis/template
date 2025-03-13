@@ -11,6 +11,15 @@ public class RoleIndexes : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
+        builder.HasIndex(r => r.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(Role)}_
+                {nameof(Role.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
         builder.HasIndex(r 
             => new { 
                 r.Id, 
@@ -24,7 +33,9 @@ public class RoleIndexes : IEntityTypeConfiguration<Role>
                 {nameof(Role.Id)}_
                 {nameof(Role.Name)}_
                 {nameof(Role.Description)}_
-                {nameof(Role.IsActive)}
-            ".Replace("\n", "").Trim());
+                {nameof(Role.IsActive)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

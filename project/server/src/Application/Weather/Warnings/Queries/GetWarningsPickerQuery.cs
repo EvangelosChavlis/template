@@ -27,7 +27,7 @@ public class GetWarningsPickerHandler : IRequestHandler<GetWarningsPickerQuery, 
     {
         // Searching Items
         var filters = new Expression<Func<Warning, bool>>[] { w => w.IsActive };
-        var warnings = await _commonRepository.GetResultPickerAsync(filters, token: token);
+        var warnings = await _commonRepository.GetResultPickerAsync<Warning, Warning>(filters, token: token);
 
         // Mapping
         var dto = warnings.Select(w => w.PickerWarningDtoMapping()).ToList();

@@ -11,6 +11,15 @@ public class UserRoleIndexes : IEntityTypeConfiguration<UserRole>
 {
     public void Configure(EntityTypeBuilder<UserRole> builder)
     {
+        builder.HasIndex(ur => ur.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(UserRole)}_
+                {nameof(UserRole.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
         builder.HasIndex(ur 
             => new { 
                 ur.Id, 
@@ -24,7 +33,10 @@ public class UserRoleIndexes : IEntityTypeConfiguration<UserRole>
                 {nameof(UserRole.Id)}_
                 {nameof(UserRole.UserId)}_
                 {nameof(UserRole.RoleId)}_
-                {nameof(UserRole.Date)}
-            ".Replace("\n", "").Trim());
+                {nameof(UserRole.Date)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
     }
 }

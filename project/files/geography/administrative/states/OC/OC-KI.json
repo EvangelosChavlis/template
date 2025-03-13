@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "South Tarawa",
+      "Code": "OC-KI-ST",
+      "Description": "South Tarawa is the capital and the most populous region of Kiribati. It serves as the political, cultural, and economic hub of the country.",
+      "Capital": "Bairiki",
+      "Population": 55000,
+      "AreaKm2": 30
+    },
+    {
+      "Name": "North Tarawa",
+      "Code": "OC-KI-NT",
+      "Description": "North Tarawa is part of the Tarawa atoll and is less developed compared to South Tarawa. It is known for its pristine environment and traditional lifestyle.",
+      "Capital": "Betio",
+      "Population": 15000,
+      "AreaKm2": 50
+    },
+    {
+      "Name": "Phoenix Islands",
+      "Code": "OC-KI-PI",
+      "Description": "The Phoenix Islands are a group of islands in the central Pacific Ocean, known for their coral reefs and protected marine areas.",
+      "Capital": "Kanton",
+      "Population": 500,
+      "AreaKm2": 800
+    },
+    {
+      "Name": "Line Islands",
+      "Code": "OC-KI-LI",
+      "Description": "The Line Islands are an isolated group of islands stretching across the Pacific, famous for their biodiversity and unspoiled natural beauty.",
+      "Capital": "Caroline Island",
+      "Population": 1000,
+      "AreaKm2": 330
+    }
+]  

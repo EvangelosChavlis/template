@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Capital Region",
+      "Code": "EU-DK-84",
+      "Description": "The Capital Region encompasses the Danish capital, Copenhagen, and its surrounding areas, known for vibrant culture, historic sites, and a strong economy.",
+      "Capital": "Copenhagen",
+      "Population": 2000000,
+      "AreaKm2": 2335
+    },
+    {
+      "Name": "Central Jutland",
+      "Code": "EU-DK-82",
+      "Description": "Central Jutland is known for its rich history, picturesque villages, and large agricultural landscape. It also has a strong maritime influence.",
+      "Capital": "Aarhus",
+      "Population": 1300000,
+      "AreaKm2": 13982
+    },
+    {
+      "Name": "North Jutland",
+      "Code": "EU-DK-81",
+      "Description": "North Jutland is known for its coastal beauty, rugged landscapes, and vibrant cities like Aalborg. It has a significant cultural and industrial heritage.",
+      "Capital": "Aalborg",
+      "Population": 600000,
+      "AreaKm2": 7591
+    },
+    {
+      "Name": "Zealand",
+      "Code": "EU-DK-85",
+      "Description": "Zealand is the island where Copenhagen is located, and it s known for its historical significance, stunning beaches, and fertile farmland.",
+      "Capital": "Roskilde",
+      "Population": 830000,
+      "AreaKm2": 7068
+    },
+    {
+      "Name": "Southern Denmark",
+      "Code": "EU-DK-83",
+      "Description": "Southern Denmark is known for its coastal charm, maritime culture, and cities like Odense, which is the birthplace of Hans Christian Andersen.",
+      "Capital": "Odense",
+      "Population": 1200000,
+      "AreaKm2": 11927
+    }
+]  

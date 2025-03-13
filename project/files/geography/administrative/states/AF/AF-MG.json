@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Antananarivo",
+      "Code": "AF-MG-ANT",
+      "Description": "The capital region, home to Antananarivo, the political and economic heart of Madagascar.",
+      "Capital": "Antananarivo",
+      "Population": 3000000,
+      "AreaKm2": 27000
+    },
+    {
+      "Name": "Fianarantsoa",
+      "Code": "AF-MG-FI",
+      "Description": "Known for its scenic landscapes, tea plantations, and historical importance.",
+      "Capital": "Fianarantsoa",
+      "Population": 1300000,
+      "AreaKm2": 54000
+    },
+    {
+      "Name": "Toamasina",
+      "Code": "AF-MG-TA",
+      "Description": "A coastal region known for its port city, Toamasina, which is the main harbor of Madagascar.",
+      "Capital": "Toamasina",
+      "Population": 2000000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Mahajanga",
+      "Code": "AF-MG-MA",
+      "Description": "Located on the northwest coast, known for its rich natural resources and maritime activities.",
+      "Capital": "Mahajanga",
+      "Population": 1000000,
+      "AreaKm2": 46000
+    },
+    {
+      "Name": "Toliara",
+      "Code": "AF-MG-TO",
+      "Description": "A region in the southwestern part of Madagascar, known for its biodiversity and beautiful beaches.",
+      "Capital": "Toliara",
+      "Population": 700000,
+      "AreaKm2": 50000
+    },
+    {
+      "Name": "Antsiranana",
+      "Code": "AF-MG-AN",
+      "Description": "A region in the northernmost part of Madagascar, known for its diverse ecosystems and marine life.",
+      "Capital": "Antsiranana",
+      "Population": 500000,
+      "AreaKm2": 23000
+    },
+    {
+      "Name": "Vakinankaratra",
+      "Code": "AF-MG-VK",
+      "Description": "Located in the central highlands, known for its agriculture, particularly in coffee and vegetables.",
+      "Capital": "Antsirabe",
+      "Population": 1000000,
+      "AreaKm2": 18000
+    },
+    {
+      "Name": "Atsinanana",
+      "Code": "AF-MG-AT",
+      "Description": "A region on the eastern side of Madagascar, known for its lush rainforests and wildlife.",
+      "Capital": "Brickaville",
+      "Population": 800000,
+      "AreaKm2": 32000
+    },
+    {
+      "Name": "Androy",
+      "Code": "AF-MG-AD",
+      "Description": "A southern region known for its arid landscapes and distinct cultural heritage.",
+      "Capital": "Ambovombe",
+      "Population": 400000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Menabe",
+      "Code": "AF-MG-ME",
+      "Description": "A western region known for its savannah, unique wildlife, and the famous Avenue of the Baobabs.",
+      "Capital": "Morondava",
+      "Population": 400000,
+      "AreaKm2": 38000
+    }
+]  

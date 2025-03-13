@@ -29,7 +29,9 @@ public class TelemetryRecordIndexes : IEntityTypeConfiguration<TelemetryRecord>
                 {nameof(TelemetryRecord.Method)}_
                 {nameof(TelemetryRecord.StatusCode)}_
                 {nameof(TelemetryRecord.ResponseTime)}_
-                {nameof(TelemetryRecord.RequestTimestamp)}
-            ".Replace("\n", "").Trim());
+                {nameof(TelemetryRecord.RequestTimestamp)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

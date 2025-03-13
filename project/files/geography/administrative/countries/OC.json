@@ -1,0 +1,134 @@
+[
+    {
+        "Name": "Australia",
+        "Description": "The largest country in Oceania, known for its unique wildlife, stunning beaches, and the iconic Great Barrier Reef.",
+        "Code": "OC-AU",
+        "Capital": "Canberra",
+        "Population": 25687041,
+        "AreaKm2": 7692024,
+        "PhoneCode": "+61",
+        "TLD": ".au",
+        "Currency": "AUD"
+    },
+    {
+        "Name": "Papua New Guinea",
+        "Description": "A country located in Oceania, known for its diverse cultures, languages, and natural landscapes including rainforests and mountains.",
+        "Code": "OC-PG",
+        "Capital": "Port Moresby",
+        "Population": 8947027,
+        "AreaKm2": 462840,
+        "PhoneCode": "+675",
+        "TLD": ".pg",
+        "Currency": "PGK"
+    },
+    {
+        "Name": "New Zealand",
+        "Description": "A country comprising two main islands, known for its picturesque landscapes, Maori culture, and famous films like The Lord of the Rings.",
+        "Code": "OC-NZ",
+        "Capital": "Wellington",
+        "Population": 5084300,
+        "AreaKm2": 268021,
+        "PhoneCode": "+64",
+        "TLD": ".nz",
+        "Currency": "NZD"
+    },
+    {
+        "Name": "Fiji",
+        "Description": "An island nation in the South Pacific, known for its beautiful beaches, coral reefs, and vibrant indigenous culture.",
+        "Code": "OC-FJ",
+        "Capital": "Suva",
+        "Population": 896444,
+        "AreaKm2": 18274,
+        "PhoneCode": "+679",
+        "TLD": ".fj",
+        "Currency": "FJD"
+    },
+    {
+        "Name": "Solomon Islands",
+        "Description": "An island nation in the Pacific Ocean, known for its history during World War II and its rich marine biodiversity.",
+        "Code": "OC-SB",
+        "Capital": "Honiara",
+        "Population": 686878,
+        "AreaKm2": 28896,
+        "PhoneCode": "+677",
+        "TLD": ".sb",
+        "Currency": "SBD"
+    },
+    {
+        "Name": "Vanuatu",
+        "Description": "An island nation in the Pacific Ocean, known for its volcanic islands, unique cultures, and pristine beaches.",
+        "Code": "OC-VU",
+        "Capital": "Port Vila",
+        "Population": 307150,
+        "AreaKm2": 12189,
+        "PhoneCode": "+678",
+        "TLD": ".vu",
+        "Currency": "VUV"
+    },
+    {
+        "Name": "Samoa",
+        "Description": "An island nation in the South Pacific, known for its tropical climate, beautiful beaches, and strong Polynesian culture.",
+        "Code": "OC-WS",
+        "Capital": "Apia",
+        "Population": 199000,
+        "AreaKm2": 2831,
+        "PhoneCode": "+685",
+        "TLD": ".ws",
+        "Currency": "WST"
+    },
+    {
+        "Name": "Tonga",
+        "Description": "An island kingdom in the South Pacific, known for its Polynesian culture and beautiful coral reefs.",
+        "Code": "OC-TO",
+        "Capital": "Nuku alofa",
+        "Population": 105697,
+        "AreaKm2": 748,
+        "PhoneCode": "+676",
+        "TLD": ".to",
+        "Currency": "TOP"
+    },
+    {
+        "Name": "Kiribati",
+        "Description": "A nation consisting of 33 islands in the Pacific, known for its low-lying atolls and being one of the most affected by climate change.",
+        "Code": "OC-KI",
+        "Capital": "Tarawa",
+        "Population": 119446,
+        "AreaKm2": 811,
+        "PhoneCode": "+686",
+        "TLD": ".ki",
+        "Currency": "AUD"
+    },
+    {
+        "Name": "Marshall Islands",
+        "Description": "A country consisting of a chain of islands in the Pacific Ocean, known for its historical significance during World War II and nuclear testing.",
+        "Code": "OC-MH",
+        "Capital": "Majuro",
+        "Population": 59194,
+        "AreaKm2": 181,
+        "PhoneCode": "+692",
+        "TLD": ".mh",
+        "Currency": "USD"
+    },
+    {
+        "Name": "Palau",
+        "Description": "A small island nation in the Pacific, known for its pristine coral reefs and clear blue waters.",
+        "Code": "OC-PW",
+        "Capital": "Ngerulmud",
+        "Population": 18000,
+        "AreaKm2": 459,
+        "PhoneCode": "+680",
+        "TLD": ".pw",
+        "Currency": "USD"
+    },
+    {
+        "Name": "Nauru",
+        "Description": "The third smallest country in the world, located in the Pacific, known for its phosphate mining and unique landscape.",
+        "Code": "OC-NR",
+        "Capital": "Yaren",
+        "Population": 10834,
+        "AreaKm2": 21,
+        "PhoneCode": "+674",
+        "TLD": ".nr",
+        "Currency": "AUD"
+    }
+]

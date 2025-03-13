@@ -7,5 +7,7 @@ namespace server.src.Domain.Geography.Administrative.Continents.Dtos;
 public record CreateContinentDto(
     string Name,
     string Description,
-    string Code
+    string Code,
+    long Population,
+    double AreaKm2
 );

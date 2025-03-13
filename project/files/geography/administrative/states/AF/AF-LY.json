@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Ajdabiya",
+      "Code": "AF-LY-AJ",
+      "Description": "Ajdabiya is a city in northeastern Libya, known for its role as a major junction for transportation and commerce between the eastern and western parts of the country.",
+      "Capital": "Ajdabiya",
+      "Population": 150000,
+      "AreaKm2": 13300
+    },
+    {
+      "Name": "Al Jabal al Akhdar",
+      "Code": "AF-LY-AK",
+      "Description": "Al Jabal al Akhdar is a mountain range in northeastern Libya, with fertile lands and a Mediterranean climate, making it a key agricultural area.",
+      "Capital": "Bayda",
+      "Population": 420000,
+      "AreaKm2": 41000
+    },
+    {
+      "Name": "Al Kufrah",
+      "Code": "AF-LY-KF",
+      "Description": "Al Kufrah is a desert region in southeastern Libya, known for its role in the oil industry and as a key area for oasis towns.",
+      "Capital": "Kufrah",
+      "Population": 130000,
+      "AreaKm2": 722000
+    },
+    {
+      "Name": "Benghazi",
+      "Code": "AF-LY-BE",
+      "Description": "Benghazi is the second-largest city in Libya, located in the northeastern part of the country, known for its historical significance and economic importance.",
+      "Capital": "Benghazi",
+      "Population": 630000,
+      "AreaKm2": 15300
+    },
+    {
+      "Name": "Derna",
+      "Code": "AF-LY-DE",
+      "Description": "Derna is a coastal city in northeastern Libya, known for its scenic views, historical ruins, and strategic location along the Mediterranean.",
+      "Capital": "Derna",
+      "Population": 100000,
+      "AreaKm2": 3500
+    },
+    {
+      "Name": "Fezzan",
+      "Code": "AF-LY-FZ",
+      "Description": "Fezzan is a large desert region in the southwestern part of Libya, known for its vast desert landscapes, ancient ruins, and strategic location near the border with Chad and Niger.",
+      "Capital": "Sebha",
+      "Population": 300000,
+      "AreaKm2": 237000
+    },
+    {
+      "Name": "Jufra",
+      "Code": "AF-LY-JU",
+      "Description": "Jufra is a desert region in central Libya, known for its historical sites and oil reserves.",
+      "Capital": "Hun",
+      "Population": 30000,
+      "AreaKm2": 147000
+    },
+    {
+      "Name": "Murzuq",
+      "Code": "AF-LY-MZ",
+      "Description": "Murzuq is a region in southwestern Libya, known for its historical importance and desert landscapes.",
+      "Capital": "Murzuq",
+      "Population": 30000,
+      "AreaKm2": 106000
+    },
+    {
+      "Name": "Tripoli",
+      "Code": "AF-LY-TR",
+      "Description": "Tripoli is the capital and largest city of Libya, located in the northwest, known as the country s political, economic, and cultural center.",
+      "Capital": "Tripoli",
+      "Population": 1150000,
+      "AreaKm2": 400
+    },
+    {
+      "Name": "Zliten",
+      "Code": "AF-LY-ZL",
+      "Description": "Zliten is a coastal city in northwestern Libya, known for its agricultural importance and proximity to Tripoli.",
+      "Capital": "Zliten",
+      "Population": 150000,
+      "AreaKm2": 1040
+    }
+]  

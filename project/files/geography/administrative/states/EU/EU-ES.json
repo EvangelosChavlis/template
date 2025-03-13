@@ -1,0 +1,114 @@
+[
+    {
+        "Name": "Andalusia",
+        "Code": "EU-ES-AN",
+        "Description": "Located in the southern part of Spain, known for its beautiful beaches, historic cities like Seville, and vibrant culture.",
+        "Capital": "Seville",
+        "Population": 8400000,
+        "AreaKm2": 8769
+    },
+    {
+        "Name": "Catalonia",
+        "Code": "EU-ES-CT",
+        "Description": "A northeastern region known for its rich culture, architecture by Gaudí, and the city of Barcelona.",
+        "Capital": "Barcelona",
+        "Population": 7600000,
+        "AreaKm2": 32114
+    },
+    {
+        "Name": "Madrid",
+        "Code": "EU-ES-MD",
+        "Description": "The capital region, which includes Madrid, Spain s political and cultural heart, known for its art museums and vibrant nightlife.",
+        "Capital": "Madrid",
+        "Population": 6700000,
+        "AreaKm2": 8028
+    },
+    {
+        "Name": "Valencia",
+        "Code": "EU-ES-VC",
+        "Description": "On the eastern coast, known for its beaches, the City of Arts and Sciences, and its delicious paella.",
+        "Capital": "Valencia",
+        "Population": 5000000,
+        "AreaKm2": 23166
+    },
+    {
+        "Name": "Castile and León",
+        "Code": "EU-ES-CL",
+        "Description": "Located in the northwest, famous for its medieval castles, charming towns, and historic landmarks.",
+        "Capital": "Valladolid",
+        "Population": 2400000,
+        "AreaKm2": 94038
+    },
+    {
+        "Name": "Basque Country",
+        "Code": "EU-ES-PV",
+        "Description": "Known for its unique language, culture, cuisine (especially pintxos), and the coastal city of Bilbao.",
+        "Capital": "Vitoria-Gasteiz",
+        "Population": 2200000,
+        "AreaKm2": 7234
+    },
+    {
+        "Name": "Galicia",
+        "Code": "EU-ES-GA",
+        "Description": "Located in the northwest, famous for its lush greenery, beautiful coastline, and the city of Santiago de Compostela.",
+        "Capital": "Santiago de Compostela",
+        "Population": 2700000,
+        "AreaKm2": 29574
+    },
+    {
+        "Name": "Castilla-La Mancha",
+        "Code": "EU-ES-CM",
+        "Description": "Located in central Spain, known for its windmills, medieval towns, and its association with Don Quixote.",
+        "Capital": "Toledo",
+        "Population": 2000000,
+        "AreaKm2": 79823
+    },
+    {
+        "Name": "Aragon",
+        "Code": "EU-ES-AR",
+        "Description": "Located in northeastern Spain, known for its Pyrenean mountain range and historic cities like Zaragoza.",
+        "Capital": "Zaragoza",
+        "Population": 1300000,
+        "AreaKm2": 47719
+    },
+    {
+        "Name": "Canary Islands",
+        "Code": "EU-ES-CN",
+        "Description": "An archipelago off the northwest coast of Africa, known for its volcanic landscapes, beaches, and tourism.",
+        "Capital": "Las Palmas de Gran Canaria",
+        "Population": 2200000,
+        "AreaKm2": 7437
+    },
+    {
+        "Name": "Balearic Islands",
+        "Code": "EU-ES-IB",
+        "Description": "Located in the Mediterranean, famous for islands like Mallorca, Ibiza, and Menorca, known for their stunning beaches.",
+        "Capital": "Palma de Mallorca",
+        "Population": 1200000,
+        "AreaKm2": 5014
+    },
+    {
+        "Name": "Murcia",
+        "Code": "EU-ES-MC",
+        "Description": "Located in southeastern Spain, known for its Mediterranean climate, beaches, and the city of Murcia.",
+        "Capital": "Murcia",
+        "Population": 1500000,
+        "AreaKm2": 11307
+    },
+    {
+        "Name": "Extremadura",
+        "Code": "EU-ES-EX",
+        "Description": "Located in the southwest, known for its natural parks, historical towns, and Roman ruins.",
+        "Capital": "Mérida",
+        "Population": 1000000,
+        "AreaKm2": 41634
+    },
+    {
+        "Name": "La Rioja",
+        "Code": "EU-ES-LO",
+        "Description": "Located in the north, known for its wine production, particularly the Rioja wine, and its picturesque landscapes.",
+        "Capital": "Logroño",
+        "Population": 300000,
+        "AreaKm2": 5045
+    }
+]

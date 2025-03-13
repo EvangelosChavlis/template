@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Chania",
+      "Code": "EU-GR-CR-CHA",
+      "Description": "A region known for its Venetian architecture, beautiful beaches, and the Samaria Gorge.",
+      "Capital": "Chania",
+      "Population": 150000,
+      "AreaKm2": 2371.00
+    },
+    {
+      "Name": "Rethymno",
+      "Code": "EU-GR-CR-RET",
+      "Description": "A region famous for its well-preserved Renaissance architecture and beautiful coastline.",
+      "Capital": "Rethymno",
+      "Population": 120000,
+      "AreaKm2": 1450.00
+    },
+    {
+      "Name": "Heraklion",
+      "Code": "EU-GR-CR-HER",
+      "Description": "The most populous region in Crete, home to the ancient palace of Knossos and the capital city of Heraklion.",
+      "Capital": "Heraklion",
+      "Population": 320000,
+      "AreaKm2": 2600.00
+    },
+    {
+      "Name": "Lasithi",
+      "Code": "EU-GR-CR-LAS",
+      "Description": "A region in the eastern part of Crete, known for its beaches, caves, and the Lassithi Plateau.",
+      "Capital": "Agios Nikolaos",
+      "Population": 120000,
+      "AreaKm2": 1300.00
+    }
+]

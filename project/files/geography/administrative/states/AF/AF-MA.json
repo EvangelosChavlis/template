@@ -1,0 +1,90 @@
+[
+    {
+      "Name": "Rabat-Sale-Kenitra",
+      "Code": "AF-MA-RSK",
+      "Description": "The region surrounding the capital Rabat, known for its rich history and coastal landscapes.",
+      "Capital": "Rabat",
+      "Population": 4200000,
+      "AreaKm2": 18112
+    },
+    {
+      "Name": "Casablanca-Settat",
+      "Code": "AF-MA-CS",
+      "Description": "Morocco s economic hub, home to the largest city, Casablanca, and major industrial centers.",
+      "Capital": "Casablanca",
+      "Population": 6000000,
+      "AreaKm2": 19550
+    },
+    {
+      "Name": "Marrakech-Safi",
+      "Code": "AF-MA-MS",
+      "Description": "Famous for the historic city of Marrakech and its scenic landscapes.",
+      "Capital": "Marrakech",
+      "Population": 4500000,
+      "AreaKm2": 30985
+    },
+    {
+      "Name": "Fes-Meknes",
+      "Code": "AF-MA-FM",
+      "Description": "Home to the ancient cities of Fes and Meknes, known for their medieval history.",
+      "Capital": "Fes",
+      "Population": 4200000,
+      "AreaKm2": 10930
+    },
+    {
+      "Name": "Beni Mellal-Khenifra",
+      "Code": "AF-MA-BMK",
+      "Description": "Known for its beautiful mountain landscapes and agricultural activities.",
+      "Capital": "Beni Mellal",
+      "Population": 2000000,
+      "AreaKm2": 28190
+    },
+    {
+      "Name": "Draa-Tafilalet",
+      "Code": "AF-MA-DT",
+      "Description": "A region known for its desert landscapes, including the Sahara and the Draa Valley.",
+      "Capital": "Errachidia",
+      "Population": 1500000,
+      "AreaKm2": 32212
+    },
+    {
+      "Name": "Oriental",
+      "Code": "AF-MA-OR",
+      "Description": "A region with a rich history and diverse culture, known for its Mediterranean coastline.",
+      "Capital": "Oujda",
+      "Population": 2200000,
+      "AreaKm2": 88131
+    },
+    {
+      "Name": "Souss-Massa",
+      "Code": "AF-MA-SM",
+      "Description": "Located along the southern coast, famous for its beaches and agriculture.",
+      "Capital": "Agadir",
+      "Population": 3000000,
+      "AreaKm2": 28543
+    },
+    {
+      "Name": "Guelmim-Oued Noun",
+      "Code": "AF-MA-GON",
+      "Description": "A region in southern Morocco, known for its desert landscapes and nomadic traditions.",
+      "Capital": "Guelmim",
+      "Population": 600000,
+      "AreaKm2": 93680
+    },
+    {
+      "Name": "Laayoune-Sakia El Hamra",
+      "Code": "AF-MA-LSH",
+      "Description": "The largest region in the Western Sahara, known for its desert and coastal environment.",
+      "Capital": "Laâyoune",
+      "Population": 300000,
+      "AreaKm2": 140000
+    },
+    {
+      "Name": "Dakhla-Oued Ed-Dahab",
+      "Code": "AF-MA-DOD",
+      "Description": "A coastal region in the far south of Morocco, known for its beaches and fishing industry.",
+      "Capital": "Dakhla",
+      "Population": 150000,
+      "AreaKm2": 57000
+    }
+]

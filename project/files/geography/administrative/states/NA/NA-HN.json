@@ -1,0 +1,114 @@
+[
+    {
+      "Name": "Atlantida",
+      "Code": "NA-HN-AT",
+      "Description": "A coastal region known for its beautiful beaches, national parks, and the Garífuna culture.",
+      "Capital": "La Ceiba",
+      "Population": 300000,
+      "AreaKm2": 3200
+    },
+    {
+      "Name": "Choluteca",
+      "Code": "NA-HN-CH",
+      "Description": "Located in the south of the country, this region is known for its agricultural production and warm climate.",
+      "Capital": "Choluteca",
+      "Population": 400000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Colon",
+      "Code": "NA-HN-CO",
+      "Description": "A region located on the Caribbean coast, famous for its natural resources and proximity to the border with Nicaragua.",
+      "Capital": "Trujillo",
+      "Population": 200000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Cortes",
+      "Code": "NA-HN-CR",
+      "Description": "The most industrialized region of Honduras, with its capital city San Pedro Sula being the country s second-largest city.",
+      "Capital": "San Pedro Sula",
+      "Population": 1200000,
+      "AreaKm2": 13000
+    },
+    {
+      "Name": "El Paraiso",
+      "Code": "NA-HN-EP",
+      "Description": "Known for its agricultural industry, particularly coffee and sugar, and its proximity to Nicaragua.",
+      "Capital": "La Paz",
+      "Population": 600000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Francisco Morazán",
+      "Code": "NA-HN-FM",
+      "Description": "This region contains the capital city, Tegucigalpa, the political and economic center of Honduras.",
+      "Capital": "Tegucigalpa",
+      "Population": 1200000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Gracias a Dios",
+      "Code": "NA-HN-GD",
+      "Description": "A remote and less developed region known for its indigenous communities, lush forests, and coastal areas.",
+      "Capital": "La Ceiba",
+      "Population": 100000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Intibucá",
+      "Code": "NA-HN-IN",
+      "Description": "A small, mountainous region in the central part of Honduras, known for its indigenous cultures and handicrafts.",
+      "Capital": "La Villa de San Antonio",
+      "Population": 150000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Islas de la Bahía",
+      "Code": "NA-HN-IB",
+      "Description": "A famous island region located in the Caribbean Sea, known for its tourism, including Roatán, Utila, and Guanaja.",
+      "Capital": "Roatán",
+      "Population": 50000,
+      "AreaKm2": 1000
+    },
+    {
+      "Name": "Lempira",
+      "Code": "NA-HN-LE",
+      "Description": "Located in the western part of the country, known for its mountainous terrain and indigenous cultures.",
+      "Capital": "Gracias",
+      "Population": 300000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Ocotepeque",
+      "Code": "NA-HN-OC",
+      "Description": "A border region with Guatemala, known for its natural beauty, mountains, and farming communities.",
+      "Capital": "Ocotepeque",
+      "Population": 150000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Olancho",
+      "Code": "NA-HN-OL",
+      "Description": "The largest region in Honduras by area, known for its extensive forests, rivers, and agricultural activities.",
+      "Capital": "Juticalpa",
+      "Population": 600000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Santa Barbara",
+      "Code": "NA-HN-SB",
+      "Description": "A region known for its agricultural activities, particularly coffee production, and its mountainous terrain.",
+      "Capital": "Santa Barbara",
+      "Population": 300000,
+      "AreaKm2": 3000
+    },
+    {
+      "Name": "Valle",
+      "Code": "NA-HN-VA",
+      "Description": "A small region known for its agricultural output, particularly sugarcane and livestock farming.",
+      "Capital": "Nacaome",
+      "Population": 200000,
+      "AreaKm2": 2000
+    }
+]  

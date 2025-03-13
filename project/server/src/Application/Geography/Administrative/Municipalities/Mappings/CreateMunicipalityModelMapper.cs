@@ -22,7 +22,9 @@ public static class CreateMunicipalityModelMapper
         {
             Name = dto.Name,
             Description = dto.Description,
+            AreaKm2 = dto.AreaKm2,
             Population = dto.Population,
+            Code = dto.Code,
             IsActive = true,
             Version = Guid.NewGuid(),
             Region = model,

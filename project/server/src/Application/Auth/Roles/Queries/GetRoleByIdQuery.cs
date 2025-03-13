@@ -51,7 +51,7 @@ public class GetRoleByIdHandler : IRequestHandler<GetRoleByIdQuery, Response<Ite
         var includes = new Expression<Func<Role, object>>[] { };
         var filters = new Expression<Func<Role, bool>>[] { x => x.Id == query.Id};
         var projection = RoleProjections.GetRoleByIdProjection();
-        var role = await _commonRepository.GetResultByIdAsync(filters, includes, 
+        var role = await _commonRepository.GetResultByIdAsync<Role>(filters, includes, 
             projection, token);
 
         // Check for existence

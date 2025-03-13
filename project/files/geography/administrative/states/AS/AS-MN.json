@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Ulaanbaatar",
+      "Code": "AS-MN-UB",
+      "Description": "The capital city of Mongolia, known for its vibrant culture, modern development, and historical landmarks.",
+      "Capital": "Ulaanbaatar",
+      "Population": 1500000,
+      "AreaKm2": 4700
+    },
+    {
+      "Name": "Darkhan-Uul",
+      "Code": "AS-MN-DU",
+      "Description": "An industrial city in northern Mongolia, surrounded by rich natural resources and beautiful landscapes.",
+      "Capital": "Darkhan",
+      "Population": 107000,
+      "AreaKm2": 5200
+    },
+    {
+      "Name": "Orkhon",
+      "Code": "AS-MN-OK",
+      "Description": "Known for its historical sites, Orkhon is home to ancient monuments and the Orkhon Valley, a UNESCO World Heritage site.",
+      "Capital": "Erdene",
+      "Population": 80000,
+      "AreaKm2": 17600
+    },
+    {
+      "Name": "Khovsgol",
+      "Code": "AS-MN-KH",
+      "Description": "A scenic region located in the north, famous for Khovsgol Lake, one of the largest freshwater lakes in Asia.",
+      "Capital": "Mörön",
+      "Population": 120000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Bayan-Olgii",
+      "Code": "AS-MN-BO",
+      "Description": "A remote region in the western part of Mongolia, known for its mountainous terrain and diverse ethnic groups.",
+      "Capital": "Olgii",
+      "Population": 100000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Dornod",
+      "Code": "AS-MN-DO",
+      "Description": "A region located in eastern Mongolia, known for its vast steppes, agriculture, and proximity to the Russian border.",
+      "Capital": "Choybalsan",
+      "Population": 90000,
+      "AreaKm2": 121000
+    },
+    {
+      "Name": "Tov",
+      "Code": "AS-MN-TV",
+      "Description": "Located near Ulaanbaatar, Tov is an administrative region with a growing urban and suburban population.",
+      "Capital": "Zuunmod",
+      "Population": 300000,
+      "AreaKm2": 5700
+    }
+]  

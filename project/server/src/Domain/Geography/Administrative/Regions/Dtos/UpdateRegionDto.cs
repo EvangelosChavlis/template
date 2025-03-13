@@ -2,7 +2,7 @@ namespace server.src.Domain.Geography.Administrative.Regions.Dtos;
 
 /// <summary>
 /// DTO for updating an existing region. Used to encapsulate 
-/// the data for updating a region's details.
+/// the data for updating a region s details.
 /// </summary>
 public record UpdateRegionDto(
     string Name,

@@ -1,0 +1,162 @@
+[
+    {
+        "Name": "Aveiro",
+        "Code": "EU-PT-01",
+        "Description": "Located in central Portugal, known for its coastal cities and scenic lagoon landscapes.",
+        "Capital": "Aveiro",
+        "Population": 700000,
+        "AreaKm2": 2820
+    },
+    {
+        "Name": "Beja",
+        "Code": "EU-PT-02",
+        "Description": "Situated in the southern part of the country, famous for its rural landscape and agricultural richness.",
+        "Capital": "Beja",
+        "Population": 150000,
+        "AreaKm2": 11318
+    },
+    {
+        "Name": "Braga",
+        "Code": "EU-PT-03",
+        "Description": "Known for its historic significance, religious sites, and as a hub for tourism in northern Portugal.",
+        "Capital": "Braga",
+        "Population": 800000,
+        "AreaKm2": 2671
+    },
+    {
+        "Name": "Bragança",
+        "Code": "EU-PT-04",
+        "Description": "A northern region, known for its mountainous landscapes and medieval history.",
+        "Capital": "Bragança",
+        "Population": 160000,
+        "AreaKm2": 6720
+    },
+    {
+        "Name": "Castelo Branco",
+        "Code": "EU-PT-05",
+        "Description": "A region in central Portugal, known for its historical towns and beautiful countryside.",
+        "Capital": "Castelo Branco",
+        "Population": 210000,
+        "AreaKm2": 6420
+    },
+    {
+        "Name": "Coimbra",
+        "Code": "EU-PT-06",
+        "Description": "Famous for its prestigious university and historical architecture.",
+        "Capital": "Coimbra",
+        "Population": 450000,
+        "AreaKm2": 3394
+    },
+    {
+        "Name": "Évora",
+        "Code": "EU-PT-07",
+        "Description": "A city and region in the Alentejo known for its well-preserved Roman and medieval landmarks.",
+        "Capital": "Évora",
+        "Population": 170000,
+        "AreaKm2": 5910
+    },
+    {
+        "Name": "Faro",
+        "Code": "EU-PT-08",
+        "Description": "Located in the Algarve, known for its stunning beaches, vibrant nightlife, and cultural sites.",
+        "Capital": "Faro",
+        "Population": 400000,
+        "AreaKm2": 4660
+    },
+    {
+        "Name": "Guarda",
+        "Code": "EU-PT-09",
+        "Description": "A mountainous region known for its natural parks, traditional villages, and historic landmarks.",
+        "Capital": "Guarda",
+        "Population": 160000,
+        "AreaKm2": 4715
+    },
+    {
+        "Name": "Leiria",
+        "Code": "EU-PT-10",
+        "Description": "Known for its historic towns, castles, and proximity to the Atlantic coast.",
+        "Capital": "Leiria",
+        "Population": 450000,
+        "AreaKm2": 3510
+    },
+    {
+        "Name": "Lisbon",
+        "Code": "EU-PT-11",
+        "Description": "The capital city and its surrounding region, known for its cultural richness, nightlife, and historic sites.",
+        "Capital": "Lisbon",
+        "Population": 2800000,
+        "AreaKm2": 2910
+    },
+    {
+        "Name": "Madeira",
+        "Code": "EU-PT-12",
+        "Description": "An archipelago off the northwest coast of Africa, famous for its subtropical climate and beautiful landscapes.",
+        "Capital": "Funchal",
+        "Population": 270000,
+        "AreaKm2": 801
+    },
+    {
+        "Name": "Montijo",
+        "Code": "EU-PT-13",
+        "Description": "A city and municipality near Lisbon, known for its proximity to the river Tagus and a mix of urban and rural life.",
+        "Capital": "Montijo",
+        "Population": 100000,
+        "AreaKm2": 172
+    },
+    {
+        "Name": "Portalegre",
+        "Code": "EU-PT-14",
+        "Description": "A region in the Alentejo known for its rolling hills, olive groves, and traditional villages.",
+        "Capital": "Portalegre",
+        "Population": 120000,
+        "AreaKm2": 1462
+    },
+    {
+        "Name": "Porto",
+        "Code": "EU-PT-15",
+        "Description": "The second-largest city in Portugal, famous for its wine production and stunning riverside landscapes.",
+        "Capital": "Porto",
+        "Population": 1700000,
+        "AreaKm2": 2356
+    },
+    {
+        "Name": "Santarem",
+        "Code": "EU-PT-16",
+        "Description": "A central region, known for its agricultural heritage and historical towns.",
+        "Capital": "Santarém",
+        "Population": 300000,
+        "AreaKm2": 3275
+    },
+    {
+        "Name": "Setubal",
+        "Code": "EU-PT-17",
+        "Description": "Located on the Atlantic coast, famous for its seafood and the nearby Arrábida Natural Park.",
+        "Capital": "Setubal",
+        "Population": 500000,
+        "AreaKm2": 1710
+    },
+    {
+        "Name": "Viana do Castelo",
+        "Code": "EU-PT-18",
+        "Description": "A northern region with stunning coastal views and a rich maritime history.",
+        "Capital": "Viana do Castelo",
+        "Population": 200000,
+        "AreaKm2": 2320
+    },
+    {
+        "Name": "Vila Real",
+        "Code": "EU-PT-19",
+        "Description": "A mountainous region in northern Portugal, known for its vineyards and scenic beauty.",
+        "Capital": "Vila Real",
+        "Population": 200000,
+        "AreaKm2": 4454
+    },
+    {
+        "Name": "Viseu",
+        "Code": "EU-PT-20",
+        "Description": "Known for its historic old town and surrounding vineyards in the Dão wine region.",
+        "Capital": "Viseu",
+        "Population": 250000,
+        "AreaKm2": 4503
+    }
+]

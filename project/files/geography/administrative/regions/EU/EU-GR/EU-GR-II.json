@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Corfu",
+      "Code": "EU-GR-II-COR",
+      "Description": "The largest of the Ionian Islands, known for its Venetian architecture and lush landscapes.",
+      "Capital": "Corfu",
+      "Population": 100000,
+      "AreaKm2": 592.00
+    },
+    {
+      "Name": "Kefalonia",
+      "Code": "EU-GR-II-KEF",
+      "Description": "An island famous for its rugged mountains, beautiful beaches, and the Melissani Cave.",
+      "Capital": "Argostoli",
+      "Population": 35000,
+      "AreaKm2": 781.00
+    },
+    {
+      "Name": "Zakynthos",
+      "Code": "EU-GR-II-ZAK",
+      "Description": "Known for its stunning beaches, including the famous Navagio Beach, and the endangered caretta-caretta turtles.",
+      "Capital": "Zakynthos",
+      "Population": 40000,
+      "AreaKm2": 406.00
+    },
+    {
+      "Name": "Lefkada",
+      "Code": "EU-GR-II-LEF",
+      "Description": "A popular island known for its pristine beaches, including Porto Katsiki, and the town of Lefkada.",
+      "Capital": "Lefkada",
+      "Population": 23000,
+      "AreaKm2": 302.00
+    },
+    {
+      "Name": "Ithaca",
+      "Code": "EU-GR-II-ITH",
+      "Description": "A small island known for its scenic beauty and its connection to the legendary hero Odysseus.",
+      "Capital": "Vathi",
+      "Population": 3000,
+      "AreaKm2": 96.00
+    },
+    {
+      "Name": "Paxos",
+      "Code": "EU-GR-II-PAX",
+      "Description": "A small, tranquil island known for its picturesque villages and crystal-clear waters.",
+      "Capital": "Gaios",
+      "Population": 2500,
+      "AreaKm2": 20.00
+    }
+]

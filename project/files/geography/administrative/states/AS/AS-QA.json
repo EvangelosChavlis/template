@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Doha",
+      "Code": "AS-QA-DO",
+      "Description": "The capital and largest city of Qatar, known for its modern architecture, shopping malls, and cultural attractions.",
+      "Capital": "Doha",
+      "Population": 956000,
+      "AreaKm2": 132
+    },
+    {
+      "Name": "Al Rayyan",
+      "Code": "AS-QA-RY",
+      "Description": "A region located just west of Doha, known for its educational institutions, sports facilities, and natural parks.",
+      "Capital": "Al Rayyan",
+      "Population": 450000,
+      "AreaKm2": 290
+    },
+    {
+      "Name": "Al Wakrah",
+      "Code": "AS-QA-WK",
+      "Description": "A coastal city south of Doha, known for its fishing heritage, beaches, and modern developments.",
+      "Capital": "Al Wakrah",
+      "Population": 70000,
+      "AreaKm2": 175
+    },
+    {
+      "Name": "Al Khor",
+      "Code": "AS-QA-KH",
+      "Description": "A city located in the northern part of Qatar, known for its port, rich history, and proximity to the Al Thakira mangroves.",
+      "Capital": "Al Khor",
+      "Population": 50000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Umm Salal",
+      "Code": "AS-QA-US",
+      "Description": "A municipality located north of Doha, known for its archaeological sites and suburban residential developments.",
+      "Capital": "Umm Salal",
+      "Population": 80000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Al Daayen",
+      "Code": "AS-QA-DA",
+      "Description": "A region in the northeastern part of Qatar, with a mix of coastal and desert landscapes, and growing urban developments.",
+      "Capital": "Al Daayen",
+      "Population": 40000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Al Shamal",
+      "Code": "AS-QA-SH",
+      "Description": "A region located in the northernmost part of Qatar, known for its natural reserves, beaches, and cultural landmarks.",
+      "Capital": "Al Shamal",
+      "Population": 20000,
+      "AreaKm2": 250
+    }
+]  

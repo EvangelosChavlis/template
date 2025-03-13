@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Alberta",
+      "Code": "NA-CA-AB",
+      "Description": "A province known for its oil sands, vast prairies, and the Rocky Mountains.",
+      "Capital": "Edmonton",
+      "Population": 4390000,
+      "AreaKm2": 661848
+    },
+    {
+      "Name": "British Columbia",
+      "Code": "NA-CA-BC",
+      "Description": "A coastal province famous for its mountainous terrain, forests, and Pacific coastline.",
+      "Capital": "Victoria",
+      "Population": 5110917,
+      "AreaKm2": 944735
+    },
+    {
+      "Name": "Manitoba",
+      "Code": "NA-CA-MB",
+      "Description": "Known for its prairies, lakes, and forests, and the city of Winnipeg as its cultural hub.",
+      "Capital": "Winnipeg",
+      "Population": 1380000,
+      "AreaKm2": 649950
+    },
+    {
+      "Name": "New Brunswick",
+      "Code": "NA-CA-NB",
+      "Description": "A maritime province known for its coastal beauty, forests, and Acadian culture.",
+      "Capital": "Fredericton",
+      "Population": 746000,
+      "AreaKm2": 72908
+    },
+    {
+      "Name": "Newfoundland and Labrador",
+      "Code": "NA-CA-NL",
+      "Description": "The easternmost province, with rugged coastlines, fishing villages, and rich cultural heritage.",
+      "Capital": "St. John s",
+      "Population": 514536,
+      "AreaKm2": 405212
+    },
+    {
+      "Name": "Nova Scotia",
+      "Code": "NA-CA-NS",
+      "Description": "A maritime province known for its coastal landscapes, history, and vibrant communities.",
+      "Capital": "Halifax",
+      "Population": 992055,
+      "AreaKm2": 55280
+    },
+    {
+      "Name": "Ontario",
+      "Code": "NA-CA-ON",
+      "Description": "The most populous province, home to Canada s largest city, Toronto, and the national capital, Ottawa.",
+      "Capital": "Toronto",
+      "Population": 13930000,
+      "AreaKm2": 1076395
+    },
+    {
+      "Name": "Prince Edward Island",
+      "Code": "NA-CA-PE",
+      "Description": "The smallest province, known for its red sand beaches, green landscapes, and Anne of Green Gables.",
+      "Capital": "Charlottetown",
+      "Population": 158717,
+      "AreaKm2": 5660
+    },
+    {
+      "Name": "Quebec",
+      "Code": "NA-CA-QC",
+      "Description": "A French-speaking province known for its vibrant culture, historic architecture, and diverse landscapes.",
+      "Capital": "Quebec City",
+      "Population": 8570000,
+      "AreaKm2": 1542056
+    },
+    {
+      "Name": "Saskatchewan",
+      "Code": "NA-CA-SK",
+      "Description": "Known for its wide-open spaces, wheat fields, and natural beauty in both forests and prairies.",
+      "Capital": "Regina",
+      "Population": 1160000,
+      "AreaKm2": 651036
+    }
+]  

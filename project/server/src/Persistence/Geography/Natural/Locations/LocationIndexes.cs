@@ -30,7 +30,9 @@ public class LocationIndexes : IEntityTypeConfiguration<Location>
                 {nameof(Location.Longitude)}_
                 {nameof(Location.Latitude)}_
                 {nameof(Location.Altitude)}_
-                {nameof(Location.IsActive)}
-            ".Replace("\n", "").Trim());
+                {nameof(Location.IsActive)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

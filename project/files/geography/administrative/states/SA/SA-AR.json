@@ -1,0 +1,186 @@
+[
+    {
+      "Name": "Buenos Aires",
+      "Code": "SA-AR-B",
+      "Description": "The largest province, home to the capital city, Buenos Aires, known for its cultural vibrancy, agriculture, and coastlines.",
+      "Capital": "La Plata",
+      "Population": 17300000,
+      "AreaKm2": 307571
+    },
+    {
+      "Name": "Catamarca",
+      "Code": "SA-AR-K",
+      "Description": "Known for its mountainous terrain, mining resources, and historical sites.",
+      "Capital": "San Fernando del Valle de Catamarca",
+      "Population": 367000,
+      "AreaKm2": 102602
+    },
+    {
+      "Name": "Chaco",
+      "Code": "SA-AR-H",
+      "Description": "Located in the northeast, known for its forests, agriculture, and indigenous cultures.",
+      "Capital": "Resistencia",
+      "Population": 1200000,
+      "AreaKm2": 99695
+    },
+    {
+      "Name": "Chubut",
+      "Code": "SA-AR-U",
+      "Description": "Famous for its Patagonian landscapes, coastal areas, and natural reserves.",
+      "Capital": "Rawson",
+      "Population": 618000,
+      "AreaKm2": 224686
+    },
+    {
+      "Name": "Córdoba",
+      "Code": "SA-AR-X",
+      "Description": "Known for its colonial architecture, historical sites, and the central plains.",
+      "Capital": "Córdoba",
+      "Population": 3575000,
+      "AreaKm2": 165321
+    },
+    {
+      "Name": "Corrientes",
+      "Code": "SA-AR-W",
+      "Description": "Known for its wetlands, rivers, and vibrant folk culture.",
+      "Capital": "Corrientes",
+      "Population": 999000,
+      "AreaKm2": 88829
+    },
+    {
+      "Name": "Entre Ríos",
+      "Code": "SA-AR-E",
+      "Description": "Known for its rivers, agricultural production, and thermal tourism.",
+      "Capital": "Paraná",
+      "Population": 1300000,
+      "AreaKm2": 78163
+    },
+    {
+      "Name": "Formosa",
+      "Code": "SA-AR-P",
+      "Description": "A sparsely populated province known for its wetlands and biodiversity.",
+      "Capital": "Formosa",
+      "Population": 600000,
+      "AreaKm2": 72266
+    },
+    {
+      "Name": "Jujuy",
+      "Code": "SA-AR-Y",
+      "Description": "Located in the northwest, known for its Andean mountains and indigenous culture.",
+      "Capital": "San Salvador de Jujuy",
+      "Population": 700000,
+      "AreaKm2": 53098
+    },
+    {
+      "Name": "La Pampa",
+      "Code": "SA-AR-L",
+      "Description": "Famous for its agricultural land and vast plains.",
+      "Capital": "Santa Rosa",
+      "Population": 350000,
+      "AreaKm2": 143440
+    },
+    {
+      "Name": "La Rioja",
+      "Code": "SA-AR-F",
+      "Description": "Known for its vineyards and arid landscapes.",
+      "Capital": "La Rioja",
+      "Population": 380000,
+      "AreaKm2": 89733
+    },
+    {
+      "Name": "Mendoza",
+      "Code": "SA-AR-M",
+      "Description": "Famous for its wine production and the Andes mountains.",
+      "Capital": "Mendoza",
+      "Population": 2000000,
+      "AreaKm2": 148827
+    },
+    {
+      "Name": "Misiones",
+      "Code": "SA-AR-N",
+      "Description": "Known for the Iguazu Falls, tropical forests, and biodiversity.",
+      "Capital": "Posadas",
+      "Population": 1300000,
+      "AreaKm2": 29712
+    },
+    {
+      "Name": "Neuquen",
+      "Code": "SA-AR-Q",
+      "Description": "Known for its Patagonian region, oil reserves, and natural parks.",
+      "Capital": "Neuquen",
+      "Population": 650000,
+      "AreaKm2": 94078
+    },
+    {
+      "Name": "Rio Negro",
+      "Code": "SA-AR-R",
+      "Description": "Famous for its agricultural production, including fruit orchards and vineyards.",
+      "Capital": "Viedma",
+      "Population": 750000,
+      "AreaKm2": 203013
+    },
+    {
+      "Name": "Salta",
+      "Code": "SA-AR-A",
+      "Description": "Known for its rich colonial history, natural landscapes, and culture.",
+      "Capital": "Salta",
+      "Population": 1600000,
+      "AreaKm2": 155488
+    },
+    {
+      "Name": "San Juan",
+      "Code": "SA-AR-J",
+      "Description": "Known for its wine production, desert landscapes, and mining industry.",
+      "Capital": "San Juan",
+      "Population": 700000,
+      "AreaKm2": 89042
+    },
+    {
+      "Name": "San Luis",
+      "Code": "SA-AR-D",
+      "Description": "Known for its mountains, forests, and cultural landmarks.",
+      "Capital": "San Luis",
+      "Population": 500000,
+      "AreaKm2": 76722
+    },
+    {
+      "Name": "Santa Cruz",
+      "Code": "SA-AR-Z",
+      "Description": "A Patagonian province known for its glaciers, wildlife, and natural reserves.",
+      "Capital": "Río Gallegos",
+      "Population": 330000,
+      "AreaKm2": 243943
+    },
+    {
+      "Name": "Santa Fe",
+      "Code": "SA-AR-S",
+      "Description": "Known for its agricultural industry, the Paraná River, and its major cities, including Rosario.",
+      "Capital": "Santa Fe",
+      "Population": 3500000,
+      "AreaKm2": 133007
+    },
+    {
+      "Name": "Santiago del Estero",
+      "Code": "SA-AR-G",
+      "Description": "One of Argentina s oldest provinces, known for its historical significance and agriculture.",
+      "Capital": "Santiago del Estero",
+      "Population": 800000,
+      "AreaKm2": 136351
+    },
+    {
+      "Name": "Tierra del Fuego",
+      "Code": "SA-AR-V",
+      "Description": "The southernmost province, known for its cold climate, glaciers, and maritime culture.",
+      "Capital": "Ushuaia",
+      "Population": 170000,
+      "AreaKm2": 21203
+    },
+    {
+      "Name": "Tucuman",
+      "Code": "SA-AR-T",
+      "Description": "The smallest province, known for its sugarcane production and Andean foothills.",
+      "Capital": "San Miguel de Tucuman",
+      "Population": 1750000,
+      "AreaKm2": 22524
+    }
+]  

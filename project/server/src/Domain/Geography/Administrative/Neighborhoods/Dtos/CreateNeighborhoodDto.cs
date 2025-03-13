@@ -7,7 +7,8 @@ public record CreateNeighborhoodDto(
     string Name,
     string Description,
     long Population,
+    double AreaKm2,
     string Zipcode,
-    bool IsActive,
+    string Code,
     Guid DistrictId
 );

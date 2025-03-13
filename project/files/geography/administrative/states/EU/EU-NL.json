@@ -1,0 +1,90 @@
+[
+  {
+    "Name": "Groningen",
+    "Code": "EU-NL-GR",
+    "Description": "Groningen is a province in the northern part of the Netherlands, known for its rich history, vibrant student culture, and beautiful landscapes.",
+    "Capital": "Groningen",
+    "Population": 585000,
+    "AreaKm2": 2364
+  },
+  {
+    "Name": "Friesland",
+    "Code": "EU-NL-FR",
+    "Description": "Friesland is a province in the northern Netherlands, famous for its unique Frisian culture and language, as well as its scenic lakes and waterways.",
+    "Capital": "Leeuwarden",
+    "Population": 650000,
+    "AreaKm2": 5910
+  },
+  {
+    "Name": "Drenthe",
+    "Code": "EU-NL-DR",
+    "Description": "Drenthe is a province in the northeastern Netherlands, known for its forests, heathlands, and prehistoric dolmens.",
+    "Capital": "Assen",
+    "Population": 490000,
+    "AreaKm2": 3500
+  },
+  {
+    "Name": "Overijssel",
+    "Code": "EU-NL-OV",
+    "Description": "Overijssel is a province in the eastern Netherlands, known for its picturesque towns, vast nature reserves, and historical landmarks.",
+    "Capital": "Zwolle",
+    "Population": 1200000,
+    "AreaKm2": 3348
+  },
+  {
+    "Name": "Flevoland",
+    "Code": "EU-NL-FL",
+    "Description": "Flevoland is the newest province in the Netherlands, created by reclaiming land from the sea. It s known for its modern infrastructure and agriculture.",
+    "Capital": "Lelystad",
+    "Population": 420000,
+    "AreaKm2": 2416
+  },
+  {
+    "Name": "Utrecht",
+    "Code": "EU-NL-UT",
+    "Description": "Utrecht is a province in the central Netherlands, famous for its historical center, canals, and being a hub for education and business.",
+    "Capital": "Utrecht",
+    "Population": 1400000,
+    "AreaKm2": 1349
+  },
+  {
+    "Name": "North Holland",
+    "Code": "EU-NL-NH",
+    "Description": "North Holland is a province in the western Netherlands, home to Amsterdam, the capital of the country, and a hub for culture, business, and tourism.",
+    "Capital": "Haarlem",
+    "Population": 2800000,
+    "AreaKm2": 4116
+  },
+  {
+    "Name": "South Holland",
+    "Code": "EU-NL-ZH",
+    "Description": "South Holland is a province in the western Netherlands, known for its major cities like Rotterdam and The Hague, as well as its coastal areas.",
+    "Capital": "The Hague",
+    "Population": 3700000,
+    "AreaKm2": 2832
+  },
+  {
+    "Name": "Zeeland",
+    "Code": "EU-NL-ZE",
+    "Description": "Zeeland is a province in the southwestern Netherlands, known for its coastal beauty, seafood, and the Delta Works water management project.",
+    "Capital": "Middelburg",
+    "Population": 380000,
+    "AreaKm2": 1700
+  },
+  {
+    "Name": "North Brabant",
+    "Code": "EU-NL-NB",
+    "Description": "North Brabant is a province in the southern Netherlands, known for its carnival celebrations, vibrant cities like Eindhoven, and its green countryside.",
+    "Capital": "Den Bosch",
+    "Population": 2500000,
+    "AreaKm2": 5080
+  },
+  {
+    "Name": "Limburg",
+    "Code": "EU-NL-LI",
+    "Description": "Limburg is a province in the southeastern Netherlands, known for its rolling hills, Dutch-Maastricht dialect, and being a center for culture and tourism.",
+    "Capital": "Maastricht",
+    "Population": 1200000,
+    "AreaKm2": 2200
+  }
+]

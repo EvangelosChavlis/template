@@ -1,0 +1,170 @@
+[
+    {
+      "Name": "Amazonas",
+      "Code": "SA-VE-AM",
+      "Description": "A large and sparsely populated region, mostly covered by the Amazon rainforest, known for its indigenous communities and biodiversity.",
+      "Capital": "Puerto Ayacucho",
+      "Population": 200000,
+      "AreaKm2": 176000
+    },
+    {
+      "Name": "Anzoategui",
+      "Code": "SA-VE-AN",
+      "Description": "A region known for its oil industry, beautiful beaches, and the nearby Mochima National Park.",
+      "Capital": "Barcelona",
+      "Population": 1600000,
+      "AreaKm2": 43600
+    },
+    {
+      "Name": "Apure",
+      "Code": "SA-VE-AP",
+      "Description": "A region located in the western plains of Venezuela, known for its agriculture and cattle ranching.",
+      "Capital": "San Fernando de Apure",
+      "Population": 500000,
+      "AreaKm2": 75000
+    },
+    {
+      "Name": "Aragua",
+      "Code": "SA-VE-AR",
+      "Description": "A region known for its mountainous terrain, agricultural production, and proximity to the capital city, Caracas.",
+      "Capital": "Maracay",
+      "Population": 1600000,
+      "AreaKm2": 7000
+    },
+    {
+      "Name": "Barinas",
+      "Code": "SA-VE-BA",
+      "Description": "A region known for its agriculture, including rice, sugar, and livestock, and the birthplace of many prominent Venezuelan figures.",
+      "Capital": "Barinas",
+      "Population": 900000,
+      "AreaKm2": 35000
+    },
+    {
+      "Name": "Bolivar",
+      "Code": "SA-VE-BO",
+      "Description": "A vast region rich in natural resources, known for its mining industry and the famous Angel Falls.",
+      "Capital": "Ciudad Bolivar",
+      "Population": 1700000,
+      "AreaKm2": 240000
+    },
+    {
+      "Name": "Carabobo",
+      "Code": "SA-VE-CA",
+      "Description": "A central region that includes the country s industrial heartland, with significant manufacturing and agricultural production.",
+      "Capital": "Valencia",
+      "Population": 2000000,
+      "AreaKm2": 4600
+    },
+    {
+      "Name": "Cojedes",
+      "Code": "SA-VE-CO",
+      "Description": "A region known for its agricultural production and its role in the development of Venezuela’s agricultural sector.",
+      "Capital": "San Carlos",
+      "Population": 350000,
+      "AreaKm2": 14000
+    },
+    {
+      "Name": "Delta Amacuro",
+      "Code": "SA-VE-DA",
+      "Description": "A coastal region characterized by rivers and wetlands, home to various indigenous tribes and rich in biodiversity.",
+      "Capital": "Tucupita",
+      "Population": 250000,
+      "AreaKm2": 40000
+    },
+    {
+      "Name": "Falcon",
+      "Code": "SA-VE-FA",
+      "Description": "A coastal region known for its beaches, historical significance, and the capital city of Coro.",
+      "Capital": "Coro",
+      "Population": 950000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Guarico",
+      "Code": "SA-VE-GU",
+      "Description": "A region in the central plains, known for its extensive agriculture, particularly in rice and livestock.",
+      "Capital": "San Juan de los Morros",
+      "Population": 900000,
+      "AreaKm2": 63000
+    },
+    {
+      "Name": "Lara",
+      "Code": "SA-VE-LA",
+      "Description": "A region known for its agricultural production, particularly coffee and sugar, as well as the city of Barquisimeto.",
+      "Capital": "Barquisimeto",
+      "Population": 2000000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Miranda",
+      "Code": "SA-VE-MI",
+      "Description": "A region located around Caracas, known for its suburban areas and mountainous landscapes.",
+      "Capital": "Los Teques",
+      "Population": 3000000,
+      "AreaKm2": 7200
+    },
+    {
+      "Name": "Monagas",
+      "Code": "SA-VE-MO",
+      "Description": "A region known for its oil industry and the capital city of Maturín.",
+      "Capital": "Maturín",
+      "Population": 1000000,
+      "AreaKm2": 29000
+    },
+    {
+      "Name": "Nueva Esparta",
+      "Code": "SA-VE-NE",
+      "Description": "A region consisting of islands in the Caribbean, known for its tourism industry and the beaches of Margarita Island.",
+      "Capital": "La Asunción",
+      "Population": 500000,
+      "AreaKm2": 1000
+    },
+    {
+      "Name": "Portuguesa",
+      "Code": "SA-VE-PO",
+      "Description": "A region known for its agricultural production, particularly in sugarcane and rice, and its rural landscapes.",
+      "Capital": "Guanare",
+      "Population": 900000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Sucre",
+      "Code": "SA-VE-SU",
+      "Description": "A coastal region known for its beaches, seafood, and the city of Cumaná.",
+      "Capital": "Cumaná",
+      "Population": 1000000,
+      "AreaKm2": 27000
+    },
+    {
+      "Name": "Tachira",
+      "Code": "SA-VE-TA",
+      "Description": "A region located on the border with Colombia, known for its mountainous terrain and coffee production.",
+      "Capital": "San Cristobal",
+      "Population": 1300000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Trujillo",
+      "Code": "SA-VE-TR",
+      "Description": "A region known for its coffee and sugarcane production, as well as its historical significance in Venezuela s independence.",
+      "Capital": "Valera",
+      "Population": 700000,
+      "AreaKm2": 7000
+    },
+    {
+      "Name": "Yaracuy",
+      "Code": "SA-VE-YA",
+      "Description": "A region located in the western part of Venezuela, known for its agriculture, particularly rice and sugarcane.",
+      "Capital": "San Felipe",
+      "Population": 800000,
+      "AreaKm2": 7500
+    },
+    {
+      "Name": "Zulia",
+      "Code": "SA-VE-ZU",
+      "Description": "A region located on the western border with Colombia, known for its oil production and proximity to Lake Maracaibo.",
+      "Capital": "Maracaibo",
+      "Population": 4000000,
+      "AreaKm2": 64000
+    }
+]  

@@ -1,0 +1,122 @@
+[
+    {
+      "Name": "Auckland",
+      "Code": "OC-NZ-AK",
+      "Description": "A major urban region, Auckland is known for its diverse culture, large harbor, and being New Zealand s largest city.",
+      "Capital": "Auckland",
+      "Population": 1700000,
+      "AreaKm2": 1086
+    },
+    {
+      "Name": "Bay of Plenty",
+      "Code": "OC-NZ-BO",
+      "Description": "A coastal region known for its beautiful beaches, warm climate, and the city of Tauranga.",
+      "Capital": "Whakatane",
+      "Population": 300000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Canterbury",
+      "Code": "OC-NZ-CA",
+      "Description": "A region centered around Christchurch, known for its agricultural industries and the Southern Alps.",
+      "Capital": "Christchurch",
+      "Population": 600000,
+      "AreaKm2": 45000
+    },
+    {
+      "Name": "Gisborne",
+      "Code": "OC-NZ-GI",
+      "Description": "A rural region on the North Island, known for its vineyards, agriculture, and being the first city to see the sunrise.",
+      "Capital": "Gisborne",
+      "Population": 50000,
+      "AreaKm2": 8300
+    },
+    {
+      "Name": "Hawke s Bay",
+      "Code": "OC-NZ-HB",
+      "Description": "A region on the east coast, famous for its wine production, agriculture, and coastal scenery.",
+      "Capital": "Napier",
+      "Population": 160000,
+      "AreaKm2": 14000
+    },
+    {
+      "Name": "Manawatu-Wanganui",
+      "Code": "OC-NZ-MW",
+      "Description": "A central region known for its agriculture, particularly dairy and sheep farming.",
+      "Capital": "Palmerston North",
+      "Population": 230000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Marlborough",
+      "Code": "OC-NZ-MB",
+      "Description": "Famous for its wine production, especially Sauvignon Blanc, and its stunning Marlborough Sounds.",
+      "Capital": "Blenheim",
+      "Population": 50000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Nelson",
+      "Code": "OC-NZ-NE",
+      "Description": "A small region known for its sunny climate, outdoor lifestyle, and being the center of New Zealand s arts and crafts.",
+      "Capital": "Nelson",
+      "Population": 50000,
+      "AreaKm2": 4500
+    },
+    {
+      "Name": "Northland",
+      "Code": "OC-NZ-NL",
+      "Description": "A coastal region with beautiful beaches and a rich history, including the location of the Waitangi Treaty Grounds.",
+      "Capital": "Whangarei",
+      "Population": 180000,
+      "AreaKm2": 13000
+    },
+    {
+      "Name": "Otago",
+      "Code": "OC-NZ-OT",
+      "Description": "A southern region known for its spectacular landscapes, including mountains, lakes, and the city of Dunedin.",
+      "Capital": "Dunedin",
+      "Population": 210000,
+      "AreaKm2": 31000
+    },
+    {
+      "Name": "Southland",
+      "Code": "OC-NZ-SL",
+      "Description": "A rural, southernmost region known for its outdoor recreation, rugged coastline, and farming.",
+      "Capital": "Invercargill",
+      "Population": 100000,
+      "AreaKm2": 32000
+    },
+    {
+      "Name": "Taranaki",
+      "Code": "OC-NZ-TA",
+      "Description": "Known for the majestic Mount Taranaki, the region is famous for its dairy industry and vibrant arts scene.",
+      "Capital": "New Plymouth",
+      "Population": 100000,
+      "AreaKm2": 7250
+    },
+    {
+      "Name": "Waikato",
+      "Code": "OC-NZ-WK",
+      "Description": "A large region with a focus on agriculture, known for its dairy farms and the Hobbiton movie set.",
+      "Capital": "Hamilton",
+      "Population": 400000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Wellington",
+      "Code": "OC-NZ-WG",
+      "Description": "The capital city region of New Zealand, known for its vibrant arts scene, government institutions, and stunning harbor views.",
+      "Capital": "Wellington",
+      "Population": 450000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "West Coast",
+      "Code": "OC-NZ-WC",
+      "Description": "A remote region known for its rugged coastline, rainforests, and the famous Franz Josef Glacier.",
+      "Capital": "Greymouth",
+      "Population": 35000,
+      "AreaKm2": 23000
+    }
+]  

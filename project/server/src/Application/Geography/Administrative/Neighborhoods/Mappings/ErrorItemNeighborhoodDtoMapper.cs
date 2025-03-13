@@ -19,7 +19,9 @@ public class ErrorItemNeighborhoodDtoMapper
             Name: string.Empty,
             Description: string.Empty,
             Population: long.MinValue,
+            AreaKm2: long.MinValue,
             Zipcode: string.Empty,
+            Code: string.Empty,
             IsActive: false,
             District: string.Empty,
             Version: Guid.Empty

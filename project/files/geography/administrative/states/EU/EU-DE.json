@@ -1,0 +1,130 @@
+[
+  {
+    "Name": "Baden-Wurttemberg",
+    "Code": "EU-DE-BW",
+    "Description": "A southwestern region of Germany, known for its diverse landscapes, including the Black Forest and the Swabian Jura, as well as its rich cultural heritage.",
+    "Capital": "Stuttgart",
+    "Population": 11000000,
+    "AreaKm2": 35751
+  },
+  {
+    "Name": "Bavaria",
+    "Code": "EU-DE-BY",
+    "Description": "One of Germany s largest and most well-known states, famous for its Alps, castles, beer culture, and the annual Oktoberfest in Munich.",
+    "Capital": "Munich",
+    "Population": 13000000,
+    "AreaKm2": 70550
+  },
+  {
+    "Name": "Berlin",
+    "Code": "EU-DE-BE",
+    "Description": "The capital and largest city of Germany, known for its rich history, modern architecture, and vibrant cultural scene, including landmarks such as the Brandenburg Gate.",
+    "Capital": "Berlin",
+    "Population": 3700000,
+    "AreaKm2": 891
+  },
+  {
+    "Name": "Brandenburg",
+    "Code": "EU-DE-BB",
+    "Description": "A state surrounding Berlin, known for its natural landscapes, including forests, lakes, and the Spreewald, as well as historical sites.",
+    "Capital": "Potsdam",
+    "Population": 2500000,
+    "AreaKm2": 29487
+  },
+  {
+    "Name": "Bremen",
+    "Code": "EU-DE-BR",
+    "Description": "A small state in northwest Germany, comprising the cities of Bremen and Bremerhaven, known for its maritime history and the famous Bremen Town Musicians fairy tale.",
+    "Capital": "Bremen",
+    "Population": 680000,
+    "AreaKm2": 419
+  },
+  {
+    "Name": "Hamburg",
+    "Code": "EU-DE-HH",
+    "Description": "Germany s second-largest city and a major port, known for its maritime heritage, vibrant music and art scene, and historical landmarks.",
+    "Capital": "Hamburg",
+    "Population": 1800000,
+    "AreaKm2": 755
+  },
+  {
+    "Name": "Hesse",
+    "Code": "EU-DE-HE",
+    "Description": "A central state in Germany, known for its financial center in Frankfurt, as well as its scenic regions such as the Taunus Mountains and the Rhine River.",
+    "Capital": "Wiesbaden",
+    "Population": 6200000,
+    "AreaKm2": 21115
+  },
+  {
+    "Name": "Lower Saxony",
+    "Code": "EU-DE-NI",
+    "Description": "A northern state known for its vast agricultural lands, the North Sea coastline, and cities such as Hanover and Göttingen.",
+    "Capital": "Hanover",
+    "Population": 8000000,
+    "AreaKm2": 47600
+  },
+  {
+    "Name": "Mecklenburg-Vorpommern",
+    "Code": "EU-DE-MV",
+    "Description": "A northeastern state known for its Baltic Sea coastline, islands, and natural parks, as well as historical sites and resort towns.",
+    "Capital": "Schwerin",
+    "Population": 1600000,
+    "AreaKm2": 23180
+  },
+  {
+    "Name": "North Rhine-Westphalia",
+    "Code": "EU-DE-NW",
+    "Description": "The most populous state in Germany, known for its industrial cities, such as Cologne and Düsseldorf, as well as cultural landmarks and the Rhine River.",
+    "Capital": "Düsseldorf",
+    "Population": 18000000,
+    "AreaKm2": 34000
+  },
+  {
+    "Name": "Rhineland-Palatinate",
+    "Code": "EU-DE-RP",
+    "Description": "A western state famous for its wine production in regions like the Moselle and the Rhineland, as well as its castles and historical sites.",
+    "Capital": "Mainz",
+    "Population": 4200000,
+    "AreaKm2": 19800
+  },
+  {
+    "Name": "Saarland",
+    "Code": "EU-DE-SL",
+    "Description": "A small state in western Germany, known for its industrial history, proximity to France, and scenic landscapes.",
+    "Capital": "Saarbrücken",
+    "Population": 1000000,
+    "AreaKm2": 2570
+  },
+  {
+    "Name": "Saxony",
+    "Code": "EU-DE-SN",
+    "Description": "A state in eastern Germany, known for its cultural heritage, including the cities of Dresden and Leipzig, as well as its scenic mountain ranges.",
+    "Capital": "Dresden",
+    "Population": 4700000,
+    "AreaKm2": 18400
+  },
+  {
+    "Name": "Saxony-Anhalt",
+    "Code": "EU-DE-ST",
+    "Description": "A state in central Germany known for its medieval castles, UNESCO World Heritage sites, and natural parks such as the Harz Mountains.",
+    "Capital": "Magdeburg",
+    "Population": 2200000,
+    "AreaKm2": 20400
+  },
+  {
+    "Name": "Schleswig-Holstein",
+    "Code": "EU-DE-SH",
+    "Description": "A state located on the Baltic and North Sea coastlines, known for its maritime heritage, picturesque coastal towns, and islands.",
+    "Capital": "Kiel",
+    "Population": 2900000,
+    "AreaKm2": 15800
+  },
+  {
+    "Name": "Thuringia",
+    "Code": "EU-DE-TH",
+    "Description": "A state in central Germany, famous for its forested landscapes, medieval towns, and cultural history, including figures like Goethe and Schiller.",
+    "Capital": "Erfurt",
+    "Population": 2100000,
+    "AreaKm2": 16100
+  }
+]

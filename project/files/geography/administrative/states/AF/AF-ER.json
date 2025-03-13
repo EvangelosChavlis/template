@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Anseba",
+      "Code": "AF-ER-AS",
+      "Description": "Anseba is located in the central part of Eritrea. It is known for its agricultural activities, particularly the cultivation of cereals and vegetables.",
+      "Capital": "Keren",
+      "Population": 350000,
+      "AreaKm2": 13400
+    },
+    {
+      "Name": "Debub",
+      "Code": "AF-ER-DU",
+      "Description": "Debub is located in the southern part of Eritrea. It includes the port city of Massawa and is a major economic region due to its proximity to the Red Sea.",
+      "Capital": "Mendefera",
+      "Population": 500000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Gash-Barka",
+      "Code": "AF-ER-GB",
+      "Description": "Gash-Barka is situated in the western part of Eritrea. It is a diverse region known for its agriculture, especially the cultivation of crops like sorghum and maize.",
+      "Capital": "Barentu",
+      "Population": 650000,
+      "AreaKm2": 30300
+    },
+    {
+      "Name": "Maekel",
+      "Code": "AF-ER-MA",
+      "Description": "Maekel is the central region of Eritrea, home to the capital city, Asmara. It is the political and cultural heart of the country.",
+      "Capital": "Asmara",
+      "Population": 800000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Northern Red Sea",
+      "Code": "AF-ER-NR",
+      "Description": "Northern Red Sea is located along the eastern coast of Eritrea, along the Red Sea. It is an important region for fishing and has several islands, including the Dahlak Archipelago.",
+      "Capital": "Teseney",
+      "Population": 200000,
+      "AreaKm2": 23000
+    },
+    {
+      "Name": "Southern Red Sea",
+      "Code": "AF-ER-SR",
+      "Description": "Southern Red Sea is the southeastern region of Eritrea. It is home to various coastal towns and is important for its maritime economy.",
+      "Capital": "Assab",
+      "Population": 250000,
+      "AreaKm2": 18000
+    }
+]  

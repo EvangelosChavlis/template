@@ -1,0 +1,82 @@
+[
+    {
+        "Name": "Aizkraukle",
+        "Code": "EU-LV-AK",
+        "Description": "Aizkraukle is known for its picturesque landscapes and historical sites. It s a regional hub for the surrounding rural areas.",
+        "Capital": "Aizkraukle",
+        "Population": 25000,
+        "AreaKm2": 1710
+  },
+  {
+        "Name": "Jurmala",
+        "Code": "EU-LV-JU",
+        "Description": "Jurmala is famous for its sandy beaches, health resorts, and beautiful wooden architecture. It’s a popular tourist destination near Riga.",
+        "Capital": "Jurmala",
+        "Population": 57000,
+        "AreaKm2": 100
+  },
+  {
+        "Name": "Jelgava",
+        "Code": "EU-LV-JE",
+        "Description": "Jelgava is a city with a rich historical background, known for its 18th-century architecture and the famous Jelgava Palace.",
+        "Capital": "Jelgava",
+        "Population": 57000,
+        "AreaKm2": 60
+  },
+  {
+        "Name": "Liepaja",
+        "Code": "EU-LV-LI",
+        "Description": "Liepaja is a port city with a long history, famous for its beautiful beaches, music scene, and the unique Liepaja Sound of its historic organ.",
+        "Capital": "Liepaja",
+        "Population": 78000,
+        "AreaKm2": 60
+  },
+  {
+        "Name": "Ludza",
+        "Code": "EU-LV-LU",
+        "Description": "Ludza is known for its rich medieval history, particularly the Ludza Castle, and is one of the oldest towns in Latvia.",
+        "Capital": "Ludza",
+        "Population": 32000,
+        "AreaKm2": 2541
+  },
+  {
+        "Name": "Ventspils",
+        "Code": "EU-LV-VE",
+        "Description": "Ventspils is a bustling port city known for its modern infrastructure, shipping industry, and its beautiful beaches and parks.",
+        "Capital": "Ventspils",
+        "Population": 35000,
+        "AreaKm2": 60
+  },
+  {
+        "Name": "Riga",
+        "Code": "EU-LV-RI",
+        "Description": "Riga is the capital and largest city of Latvia, known for its historic Old Town, Art Nouveau architecture, and vibrant cultural scene.",
+        "Capital": "Riga",
+        "Population": 632614,
+        "AreaKm2": 304
+  },
+  {
+        "Name": "Kurzeme",
+        "Code": "EU-LV-KU",
+        "Description": "Kurzeme is a region in the western part of Latvia, known for its coastal landscapes, forests, and cultural heritage.",
+        "Capital": "Liepaja",
+        "Population": 500000,
+        "AreaKm2": 25000
+  },
+  {
+        "Name": "Zemgale",
+        "Code": "EU-LV-ZE",
+        "Description": "Zemgale is a central region in Latvia known for its agriculture, fertile lands, and many small towns with rich cultural histories.",
+        "Capital": "Jelgava",
+        "Population": 300000,
+        "AreaKm2": 22000
+  },
+  {
+        "Name": "Vidzeme",
+        "Code": "EU-LV-VD",
+        "Description": "Vidzeme is a region in the north of Latvia, known for its forests, rivers, and medieval towns, including the historic city of Cesis.",
+        "Capital": "Valmiera",
+        "Population": 500000,
+        "AreaKm2": 28000
+  }  
+]

@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Seoul Capital Area",
+      "Code": "AS-KR-SCA",
+      "Description": "The metropolitan area surrounding Seoul, the capital city, which is the political, economic, and cultural heart of South Korea.",
+      "Capital": "Seoul",
+      "Population": 25000000,
+      "AreaKm2": 1150
+    },
+    {
+      "Name": "Gyeonggi Province",
+      "Code": "AS-KR-GP",
+      "Description": "Surrounding Seoul, Gyeonggi is South Korea s most populous province, home to key cities like Suwon and Incheon.",
+      "Capital": "Suwon",
+      "Population": 13000000,
+      "AreaKm2": 10180
+    },
+    {
+      "Name": "Busan",
+      "Code": "AS-KR-BU",
+      "Description": "South Korea s second-largest city, located on the southeastern coast, known for its beaches, ports, and seafood.",
+      "Capital": "Busan",
+      "Population": 3500000,
+      "AreaKm2": 770
+    },
+    {
+      "Name": "Daegu",
+      "Code": "AS-KR-DG",
+      "Description": "An inland city in southeastern South Korea, known for its textile industry and historical landmarks.",
+      "Capital": "Daegu",
+      "Population": 2500000,
+      "AreaKm2": 883
+    },
+    {
+      "Name": "Incheon",
+      "Code": "AS-KR-IC",
+      "Description": "A major port city near Seoul, Incheon is known for its international airport and growing economy.",
+      "Capital": "Incheon",
+      "Population": 3000000,
+      "AreaKm2": 1020
+    },
+    {
+      "Name": "Gwangju",
+      "Code": "AS-KR-GJ",
+      "Description": "A southwestern city known for its democratic history and arts scene.",
+      "Capital": "Gwangju",
+      "Population": 1500000,
+      "AreaKm2": 501
+    },
+    {
+      "Name": "Daejeon",
+      "Code": "AS-KR-DJ",
+      "Description": "A central city known for its high-tech industry and research institutions.",
+      "Capital": "Daejeon",
+      "Population": 1500000,
+      "AreaKm2": 540
+    },
+    {
+      "Name": "Ulsan",
+      "Code": "AS-KR-US",
+      "Description": "A major industrial city, home to Hyundai s largest automotive and shipbuilding facilities.",
+      "Capital": "Ulsan",
+      "Population": 1150000,
+      "AreaKm2": 1069
+    },
+    {
+      "Name": "Jeju Province",
+      "Code": "AS-KR-JP",
+      "Description": "A popular tourist destination known for its volcanic landscapes, beaches, and unique culture.",
+      "Capital": "Jeju",
+      "Population": 670000,
+      "AreaKm2": 1846
+    }
+]  

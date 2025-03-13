@@ -14,6 +14,8 @@ public static class DI
 {
     public static IServiceCollection RegisterData(this IServiceCollection services)
     {   
+        services.AddHttpClient();
+        
         var assembly = Assembly.GetExecutingAssembly();
      
         // Register all IRequestHandler<TRequest, TResponse> implementations dynamically

@@ -1,0 +1,138 @@
+[
+    {
+      "Name": "Alto Paraguay",
+      "Code": "SA-PY-AL",
+      "Description": "Located in the western part of Paraguay, known for its vast forests, rivers, and wildlife.",
+      "Capital": "Fuerte Olimpo",
+      "Population": 9000,
+      "AreaKm2": 70250
+    },
+    {
+      "Name": "Alto Parana",
+      "Code": "SA-PY-AP",
+      "Description": "Located in the eastern part of Paraguay, known for its agricultural activities and proximity to the Paraná River.",
+      "Capital": "Ciudad del Este",
+      "Population": 800000,
+      "AreaKm2": 17635
+    },
+    {
+      "Name": "Asuncion",
+      "Code": "SA-PY-AS",
+      "Description": "The capital and largest city of Paraguay, known for its urban development and cultural significance.",
+      "Capital": "Asuncion",
+      "Population": 525000,
+      "AreaKm2": 117
+    },
+    {
+      "Name": "Boqueron",
+      "Code": "SA-PY-BO",
+      "Description": "Located in the western region, known for its agricultural activities and vast plains.",
+      "Capital": "Filadelfia",
+      "Population": 17000,
+      "AreaKm2": 72000
+    },
+    {
+      "Name": "Caaguazu",
+      "Code": "SA-PY-CG",
+      "Description": "Located in the central part of the country, known for its agriculture, especially corn and soybeans.",
+      "Capital": "Coronel Oviedo",
+      "Population": 500000,
+      "AreaKm2": 19811
+    },
+    {
+      "Name": "Caazapá",
+      "Code": "SA-PY-CA",
+      "Description": "Known for its rolling hills and agricultural activities, particularly the cultivation of crops like soybeans.",
+      "Capital": "Caazapá",
+      "Population": 120000,
+      "AreaKm2": 9063
+    },
+    {
+      "Name": "Canindeyú",
+      "Code": "SA-PY-CN",
+      "Description": "Located in the northeastern region, famous for its agriculture, particularly soybean production.",
+      "Capital": "Salto del Guairá",
+      "Population": 150000,
+      "AreaKm2": 15500
+    },
+    {
+      "Name": "Central",
+      "Code": "SA-PY-CE",
+      "Description": "The most populous region of Paraguay, with the capital city of Asunción and its metropolitan area.",
+      "Capital": "Areguá",
+      "Population": 3000000,
+      "AreaKm2": 2480
+    },
+    {
+      "Name": "Concepción",
+      "Code": "SA-PY-CO",
+      "Description": "Located in the northern part of Paraguay, with fertile land and large cattle ranching industries.",
+      "Capital": "Concepción",
+      "Population": 200000,
+      "AreaKm2": 30000
+    },
+    {
+      "Name": "Cordillera",
+      "Code": "SA-PY-CD",
+      "Description": "Known for its mountainous terrain and agricultural activities, particularly the cultivation of crops like tobacco.",
+      "Capital": "Eusebio Ayala",
+      "Population": 250000,
+      "AreaKm2": 10800
+    },
+    {
+      "Name": "Guairá",
+      "Code": "SA-PY-GU",
+      "Description": "Located in the southeastern region of Paraguay, known for its agriculture and rural communities.",
+      "Capital": "Villarrica",
+      "Population": 250000,
+      "AreaKm2": 6350
+    },
+    {
+      "Name": "Itapúa",
+      "Code": "SA-PY-IT",
+      "Description": "Known for its large scale agricultural production, especially soybeans and corn.",
+      "Capital": "Encarnación",
+      "Population": 400000,
+      "AreaKm2": 16000
+    },
+    {
+      "Name": "Misiones",
+      "Code": "SA-PY-MS",
+      "Description": "Located in the southeastern region, known for its agriculture and natural beauty.",
+      "Capital": "San Juan Bautista",
+      "Population": 100000,
+      "AreaKm2": 10000
+    },
+    {
+      "Name": "Ñeembucú",
+      "Code": "SA-PY-NE",
+      "Description": "A flat region located near the border with Argentina, known for its wetlands and agriculture.",
+      "Capital": "Villa Rica",
+      "Population": 200000,
+      "AreaKm2": 8200
+    },
+    {
+      "Name": "Paraguarí",
+      "Code": "SA-PY-PY",
+      "Description": "A region known for its agriculture, especially the cultivation of crops like soybeans, maize, and tobacco.",
+      "Capital": "Paraguarí",
+      "Population": 200000,
+      "AreaKm2": 7900
+    },
+    {
+      "Name": "Presidente Hayes",
+      "Code": "SA-PY-PH",
+      "Description": "Located in the western part of the country, known for its cattle ranching and agricultural industries.",
+      "Capital": "Villa Hayes",
+      "Population": 120000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "San Pedro",
+      "Code": "SA-PY-SP",
+      "Description": "Located in the central part of Paraguay, known for its agricultural production, particularly soybeans.",
+      "Capital": "San Pedro",
+      "Population": 300000,
+      "AreaKm2": 26990
+    }
+]  

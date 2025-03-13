@@ -30,6 +30,9 @@ public static class UpdateCountryMapper
         modelCountry.Capital = dto.Capital;
         modelCountry.Population = dto.Population;
         modelCountry.AreaKm2 = dto.AreaKm2;
+        modelCountry.PhoneCode = dto.PhoneCode;
+        modelCountry.TLD = dto.TLD;
+        modelCountry.Currency = dto.Currency;
         modelCountry.IsActive = modelCountry.IsActive;
         modelCountry.Continent = modelContinent;
         modelCountry.ContinentId = modelContinent.Id;

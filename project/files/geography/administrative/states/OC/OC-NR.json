@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Yaren",
+      "Code": "OC-NR-YA",
+      "Description": "Yaren is the de facto capital of Nauru and serves as the center of government and administration. It is located on the southern coast of the island.",
+      "Capital": "Yaren",
+      "Population": 1000,
+      "AreaKm2": 21
+    },
+    {
+      "Name": "Aiwo",
+      "Code": "OC-NR-AI",
+      "Description": "Aiwo is a coastal district in the northern part of Nauru, known for its port and government offices.",
+      "Capital": "Aiwo",
+      "Population": 400,
+      "AreaKm2": 4
+    },
+    {
+      "Name": "Anabar",
+      "Code": "OC-NR-AN",
+      "Description": "Anabar is located in the northern part of Nauru, with a primary focus on the phosphate mining industry.",
+      "Capital": "Anabar",
+      "Population": 300,
+      "AreaKm2": 4
+    },
+    {
+      "Name": "Boe",
+      "Code": "OC-NR-BO",
+      "Description": "Boe is a district in the western part of Nauru, with residential and administrative functions.",
+      "Capital": "Boe",
+      "Population": 300,
+      "AreaKm2": 4
+    },
+    {
+      "Name": "Denigomodu",
+      "Code": "OC-NR-DE",
+      "Description": "Denigomodu is one of Nauru s central districts, with a mix of residential areas and economic activities.",
+      "Capital": "Denigomodu",
+      "Population": 300,
+      "AreaKm2": 5
+    },
+    {
+      "Name": "Ewa",
+      "Code": "OC-NR-EW",
+      "Description": "Ewa is a district located in the southeastern part of Nauru, largely residential with a focus on agriculture and fishing.",
+      "Capital": "Ewa",
+      "Population": 200,
+      "AreaKm2": 5
+    },
+    {
+      "Name": "Ijuw",
+      "Code": "OC-NR-IJ",
+      "Description": "Ijuw is a district located in the southwestern part of Nauru, with a focus on agriculture and small-scale industries.",
+      "Capital": "Ijuw",
+      "Population": 150,
+      "AreaKm2": 3
+    },
+    {
+      "Name": "Meneng",
+      "Code": "OC-NR-ME",
+      "Description": "Meneng is located in the western part of Nauru, with a mixture of residential areas and agricultural development.",
+      "Capital": "Meneng",
+      "Population": 200,
+      "AreaKm2": 4
+    },
+    {
+      "Name": "Nauru",
+      "Code": "OC-NR-NA",
+      "Description": "Nauru is the entire island nation and is administratively divided into districts, with Nauru s government, infrastructure, and phosphate mining located throughout.",
+      "Capital": "Yaren",
+      "Population": 10000,
+      "AreaKm2": 21
+    }
+]  

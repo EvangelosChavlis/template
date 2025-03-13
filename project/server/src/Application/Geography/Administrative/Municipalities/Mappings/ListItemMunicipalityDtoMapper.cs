@@ -21,6 +21,7 @@ public static class ListItemMunicipalityDtoMapper
             Id: model.Id,
             Name: model.Name,
             Population: model.Population,
+            Code: model.Code,
             IsActive: model.IsActive,
             Count: model.Districts.Count
         );

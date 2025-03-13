@@ -41,6 +41,21 @@ public class Country : BaseEntity
     public double AreaKm2 { get; set; }
 
     /// <summary>
+    /// Gets or sets the primary calling code for the country.
+    /// </summary>
+    public string PhoneCode { get; set; }
+
+    /// <summary>
+    /// Gets or sets the top-level domain (TLD) commonly used for the country.
+    /// </summary>
+    public string TLD { get; set; }
+
+    /// <summary>
+    /// Gets or sets the official currency used in the country.
+    /// </summary>
+    public string Currency { get; set; }
+
+    /// <summary>
     /// Gets or sets a value indicating whether the country is active.
     /// </summary>
     public bool IsActive { get; set; }

@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Santo Domingo",
+      "Code": "NA-DO-SD",
+      "Description": "The capital region and largest city in the Dominican Republic, known for its rich history, colonial architecture, and vibrant cultural scene.",
+      "Capital": "Santo Domingo",
+      "Population": 3000000,
+      "AreaKm2": 104
+    },
+    {
+      "Name": "Puerto Plata",
+      "Code": "NA-DO-PP",
+      "Description": "A coastal region known for its stunning beaches, historical attractions, and popular resort areas.",
+      "Capital": "Puerto Plata",
+      "Population": 400000,
+      "AreaKm2": 2530
+    },
+    {
+      "Name": "La Vega",
+      "Code": "NA-DO-LV",
+      "Description": "Famous for its mountainous terrain and annual carnival, La Vega is also known for its agricultural industry.",
+      "Capital": "La Vega",
+      "Population": 200000,
+      "AreaKm2": 2440
+    },
+    {
+      "Name": "Santiago",
+      "Code": "NA-DO-SA",
+      "Description": "The second-largest city in the country, known for its industrial growth and cultural significance as the heart of the Cibao region.",
+      "Capital": "Santiago de los Caballeros",
+      "Population": 1000000,
+      "AreaKm2": 2150
+    },
+    {
+      "Name": "San Cristóbal",
+      "Code": "NA-DO-SC",
+      "Description": "A region known for its agricultural products and historical landmarks, including the famous San Cristóbal Castle.",
+      "Capital": "San Cristóbal",
+      "Population": 600000,
+      "AreaKm2": 1290
+    },
+    {
+      "Name": "San Juan",
+      "Code": "NA-DO-SJ",
+      "Description": "A rural region, known for its tobacco production, and is considered one of the country’s breadbaskets.",
+      "Capital": "San Juan de la Maguana",
+      "Population": 350000,
+      "AreaKm2": 2460
+    },
+    {
+      "Name": "Montecristi",
+      "Code": "NA-DO-MC",
+      "Description": "A coastal province known for its beaches, natural beauty, and the popular Morro de Montecristi.",
+      "Capital": "San Fernando de Montecristi",
+      "Population": 120000,
+      "AreaKm2": 1180
+    },
+    {
+      "Name": "Barahona",
+      "Code": "NA-DO-BA",
+      "Description": "A region known for its breathtaking beaches, rivers, and diverse ecosystems, often referred to as the soul of the Caribbean.",
+      "Capital": "Barahona",
+      "Population": 150000,
+      "AreaKm2": 2390
+    }
+]  

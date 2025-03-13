@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Bioko Norte",
+      "Code": "AF-GQ-BN",
+      "Description": "Bioko Norte is a region in the northern part of Bioko Island, which includes the country s capital, Malabo. It is the most urbanized region and the center of economic and political activity.",
+      "Capital": "Malabo",
+      "Population": 300000,
+      "AreaKm2": 1126
+    },
+    {
+      "Name": "Bioko Sur",
+      "Code": "AF-GQ-BS",
+      "Description": "Bioko Sur is located in the southern part of Bioko Island, known for its tropical climate and mountainous terrain. The region is sparsely populated compared to the northern part.",
+      "Capital": "Luba",
+      "Population": 50000,
+      "AreaKm2": 701
+    },
+    {
+      "Name": "Centro Sur",
+      "Code": "AF-GQ-CS",
+      "Description": "Centro Sur is a region on the mainland of Equatorial Guinea, known for its agricultural activities and small villages. It is an important area for the country s local economy.",
+      "Capital": "Bata",
+      "Population": 200000,
+      "AreaKm2": 1393
+    },
+    {
+      "Name": "Litoral",
+      "Code": "AF-GQ-LI",
+      "Description": "Litoral is a coastal region that includes the city of Bata and the surrounding areas. It is known for its port activities and significant role in the country s commerce and industry.",
+      "Capital": "Bata",
+      "Population": 600000,
+      "AreaKm2": 1470
+    },
+    {
+      "Name": "Woleu-Ntem",
+      "Code": "AF-GQ-WN",
+      "Description": "Woleu-Ntem is located in the northern part of mainland Equatorial Guinea. The region is rich in natural resources, including timber and minerals, and is sparsely populated.",
+      "Capital": "Mongomo",
+      "Population": 150000,
+      "AreaKm2": 2218
+    }
+]  

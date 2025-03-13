@@ -26,10 +26,20 @@ public class Neighborhood : BaseEntity
     public long Population { get; set; }
 
     /// <summary>
+    /// Gets or sets the area of the neighborhood.
+    /// </summary>
+    public double AreaKm2 { get; set; }
+
+    /// <summary>
     /// Gets or sets the ZIP code of the neighborhood, 
     /// which helps in identifying postal areas.
     /// </summary>
     public string Zipcode { get; set; }
+
+    /// <summary>
+    /// Gets or sets the area of the neighborhood.
+    /// </summary>
+    public string Code { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether the neighborhood is active.

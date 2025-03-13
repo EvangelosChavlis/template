@@ -1,0 +1,202 @@
+[
+    {
+      "Name": "Kinshasa",
+      "Code": "AF-CD-KN",
+      "Description": "The capital and largest city of the DRC, a major political and economic hub.",
+      "Capital": "Kinshasa",
+      "Population": 17000000,
+      "AreaKm2": 9965
+    },
+    {
+      "Name": "Bas-Uele",
+      "Code": "AF-CD-BU",
+      "Description": "A northern province known for its forests and wildlife.",
+      "Capital": "Buta",
+      "Population": 900000,
+      "AreaKm2": 148331
+    },
+    {
+      "Name": "Haut-Uele",
+      "Code": "AF-CD-HU",
+      "Description": "A resource-rich province in the northeast.",
+      "Capital": "Isiro",
+      "Population": 2000000,
+      "AreaKm2": 89041
+    },
+    {
+      "Name": "Ituri",
+      "Code": "AF-CD-IT",
+      "Description": "An eastern province with significant mining activities.",
+      "Capital": "Bunia",
+      "Population": 5000000,
+      "AreaKm2": 65658
+    },
+    {
+      "Name": "Tshopo",
+      "Code": "AF-CD-TS",
+      "Description": "Home to the Congo River and Kisangani city.",
+      "Capital": "Kisangani",
+      "Population": 2500000,
+      "AreaKm2": 199567
+    },
+    {
+      "Name": "Haut-Lomami",
+      "Code": "AF-CD-HL",
+      "Description": "A central province known for agriculture and mining.",
+      "Capital": "Kamina",
+      "Population": 2100000,
+      "AreaKm2": 108204
+    },
+    {
+      "Name": "Lomami",
+      "Code": "AF-CD-LM",
+      "Description": "A province with a strong agricultural sector.",
+      "Capital": "Kabinda",
+      "Population": 1500000,
+      "AreaKm2": 56526
+    },
+    {
+      "Name": "Kasai",
+      "Code": "AF-CD-KS",
+      "Description": "A diamond-rich province in the south-central region.",
+      "Capital": "Tshikapa",
+      "Population": 3500000,
+      "AreaKm2": 95307
+    },
+    {
+      "Name": "Kasai-Central",
+      "Code": "AF-CD-KC",
+      "Description": "A politically significant province with historical importance.",
+      "Capital": "Kananga",
+      "Population": 5600000,
+      "AreaKm2": 59581
+    },
+    {
+      "Name": "Kasai-Oriental",
+      "Code": "AF-CD-KO",
+      "Description": "An important mining and trade region.",
+      "Capital": "Mbuji-Mayi",
+      "Population": 5000000,
+      "AreaKm2": 95407
+    },
+    {
+      "Name": "Sankuru",
+      "Code": "AF-CD-SA",
+      "Description": "A forested province with traditional communities.",
+      "Capital": "Lodja",
+      "Population": 2600000,
+      "AreaKm2": 105000
+    },
+    {
+      "Name": "Maniema",
+      "Code": "AF-CD-MA",
+      "Description": "A remote region with natural resources.",
+      "Capital": "Kindu",
+      "Population": 2500000,
+      "AreaKm2": 132520
+    },
+    {
+      "Name": "South Kivu",
+      "Code": "AF-CD-SK",
+      "Description": "An eastern province bordering Rwanda and Burundi.",
+      "Capital": "Bukavu",
+      "Population": 5600000,
+      "AreaKm2": 65870
+    },
+    {
+      "Name": "North Kivu",
+      "Code": "AF-CD-NK",
+      "Description": "A conflict-prone region with significant natural wealth.",
+      "Capital": "Goma",
+      "Population": 8000000,
+      "AreaKm2": 59183
+    },
+    {
+      "Name": "Tanganyika",
+      "Code": "AF-CD-TG",
+      "Description": "Located along Lake Tanganyika, known for fishing and mining.",
+      "Capital": "Kalemie",
+      "Population": 3400000,
+      "AreaKm2": 134940
+    },
+    {
+      "Name": "Haut-Katanga",
+      "Code": "AF-CD-HK",
+      "Description": "A major economic hub with mining and industry.",
+      "Capital": "Lubumbashi",
+      "Population": 7000000,
+      "AreaKm2": 132425
+    },
+    {
+      "Name": "Lualaba",
+      "Code": "AF-CD-LL",
+      "Description": "A leading province in copper and cobalt mining.",
+      "Capital": "Kolwezi",
+      "Population": 3000000,
+      "AreaKm2": 121308
+    },
+    {
+      "Name": "Kwilu",
+      "Code": "AF-CD-KW",
+      "Description": "An agricultural province in the west.",
+      "Capital": "Bandundu",
+      "Population": 5500000,
+      "AreaKm2": 78307
+    },
+    {
+      "Name": "Kwango",
+      "Code": "AF-CD-KG",
+      "Description": "Known for livestock farming and small-scale agriculture.",
+      "Capital": "Kenge",
+      "Population": 2100000,
+      "AreaKm2": 89883
+    },
+    {
+      "Name": "Mai-Ndombe",
+      "Code": "AF-CD-MN",
+      "Description": "A forested region with logging and fishing industries.",
+      "Capital": "Inongo",
+      "Population": 1800000,
+      "AreaKm2": 127465
+    },
+    {
+      "Name": "Tshuapa",
+      "Code": "AF-CD-TP",
+      "Description": "A remote rainforest province with biodiversity.",
+      "Capital": "Boende",
+      "Population": 1700000,
+      "AreaKm2": 132940
+    },
+    {
+      "Name": "Mongala",
+      "Code": "AF-CD-MO",
+      "Description": "An agricultural province with river access.",
+      "Capital": "Lisala",
+      "Population": 1600000,
+      "AreaKm2": 58061
+    },
+    {
+      "Name": "Nord-Ubangi",
+      "Code": "AF-CD-NU",
+      "Description": "A border region with the Central African Republic.",
+      "Capital": "Gbadolite",
+      "Population": 1200000,
+      "AreaKm2": 56500
+    },
+    {
+      "Name": "Sud-Ubangi",
+      "Code": "AF-CD-SU",
+      "Description": "A riverine province with trade connections.",
+      "Capital": "Gemena",
+      "Population": 2500000,
+      "AreaKm2": 51515
+    },
+    {
+      "Name": "Equateur",
+      "Code": "AF-CD-EQ",
+      "Description": "A province dominated by rainforest and rivers.",
+      "Capital": "Mbandaka",
+      "Population": 2500000,
+      "AreaKm2": 103902
+    }
+]  

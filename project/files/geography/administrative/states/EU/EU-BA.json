@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Federation of Bosnia and Herzegovina",
+      "Code": "EU-BA-FBIH",
+      "Description": "The Federation of Bosnia and Herzegovina is one of the two entities of Bosnia and Herzegovina, known for its diverse culture, beautiful landscapes, and cities like Sarajevo and Mostar.",
+      "Capital": "Sarajevo",
+      "Population": 2200000,
+      "AreaKm2": 2560
+    },
+    {
+      "Name": "Republika Srpska",
+      "Code": "EU-BA-RS",
+      "Description": "Republika Srpska is the other entity of Bosnia and Herzegovina, known for its mountainous terrain, historical towns like Banja Luka, and its predominantly Serbian population.",
+      "Capital": "Banja Luka",
+      "Population": 1500000,
+      "AreaKm2": 24900
+    },
+    {
+      "Name": "Brcko District",
+      "Code": "EU-BA-BRC",
+      "Description": "Brcko District is a self-governing administrative unit in Bosnia and Herzegovina, strategically located along the Sava River, with a unique political status as a neutral region between the two entities.",
+      "Capital": "Brcko",
+      "Population": 85000,
+      "AreaKm2": 493
+    }
+]  

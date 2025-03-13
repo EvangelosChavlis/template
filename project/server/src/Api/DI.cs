@@ -54,6 +54,9 @@ public static class DI
             });
         });
 
+        services.Configure<SeedDataSettings>(builtConfiguration.GetSection("SeedData"));
+        services.AddSingleton(sp => sp.GetRequiredService<IOptions<SeedDataSettings>>().Value);
+
         services.Configure<JwtSettings>(builtConfiguration.GetSection("Jwt"));
         services.AddSingleton(sp => sp.GetRequiredService<IOptions<JwtSettings>>().Value);
 

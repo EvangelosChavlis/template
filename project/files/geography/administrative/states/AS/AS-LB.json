@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Beirut",
+      "Code": "AS-LB-BE",
+      "Description": "The capital and largest city of Lebanon, known for its vibrant culture, historic sites, and cosmopolitan atmosphere.",
+      "Capital": "Beirut",
+      "Population": 2000000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Mount Lebanon",
+      "Code": "AS-LB-ML",
+      "Description": "A mountainous region surrounding Beirut, known for its natural beauty, ski resorts, and historical towns.",
+      "Capital": "Baabda",
+      "Population": 700000,
+      "AreaKm2": 1500
+    },
+    {
+      "Name": "North Governorate",
+      "Code": "AS-LB-NG",
+      "Description": "A northern region of Lebanon, known for its historic sites, including the ancient city of Tripoli and the Qadisha Valley.",
+      "Capital": "Tripoli",
+      "Population": 600000,
+      "AreaKm2": 1000
+    },
+    {
+      "Name": "South Governorate",
+      "Code": "AS-LB-SG",
+      "Description": "A southern region of Lebanon, known for its rich history, including ancient ruins and the city of Sidon.",
+      "Capital": "Sidon",
+      "Population": 700000,
+      "AreaKm2": 2000
+    },
+    {
+      "Name": "Beqaa Valley",
+      "Code": "AS-LB-BV",
+      "Description": "A fertile region in eastern Lebanon, known for its agriculture, vineyards, and the ancient ruins of Baalbek.",
+      "Capital": "Zahle",
+      "Population": 500000,
+      "AreaKm2": 4000
+    },
+    {
+      "Name": "Nabatieh",
+      "Code": "AS-LB-NA",
+      "Description": "A southern region of Lebanon, known for its agricultural land, the city of Nabatieh, and proximity to the Israeli border.",
+      "Capital": "Nabatieh",
+      "Population": 250000,
+      "AreaKm2": 1200
+    }
+]  

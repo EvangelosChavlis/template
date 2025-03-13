@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Central Hungary",
+    "Code": "EU-HU-CE",
+    "Description": "Central Hungary is the heart of the country, with the capital Budapest being the cultural, political, and economic center of Hungary.",
+    "Capital": "Budapest",
+    "Population": 3500000,
+    "AreaKm2": 7816
+  },
+  {
+    "Name": "Western Transdanubia",
+    "Code": "EU-HU-VA",
+    "Description": "This region lies on the western side of Hungary, known for its historical towns, natural reserves, and proximity to Austria and Slovakia.",
+    "Capital": "Győr",
+    "Population": 1200000,
+    "AreaKm2": 7200
+  },
+  {
+    "Name": "Pannonian Plain",
+    "Code": "EU-HU-SD",
+    "Description": "The Southern Great Plain region is known for its vast flatlands, agricultural production, and cultural landmarks.",
+    "Capital": "Szeged",
+    "Population": 1400000,
+    "AreaKm2": 10400
+  },
+  {
+    "Name": "Northern Hungary",
+    "Code": "EU-HU-NI",
+    "Description": "Northern Hungary is famous for its mountainous landscapes, including the Bükk and Mátra mountains, and historical cities such as Eger.",
+    "Capital": "Miskolc",
+    "Population": 1500000,
+    "AreaKm2": 12700
+  },
+  {
+    "Name": "Northern Great Plain",
+    "Code": "EU-HU-NK",
+    "Description": "This region is located to the northeast of Hungary, known for its agricultural activities and large rural areas.",
+    "Capital": "Debrecen",
+    "Population": 1300000,
+    "AreaKm2": 13800
+  },
+  {
+    "Name": "Southern Transdanubia",
+    "Code": "EU-HU-DU",
+    "Description": "This region in southern Hungary is known for its natural beauty, including the Lake Balaton area and its thermal baths.",
+    "Capital": "Pecs",
+    "Population": 1000000,
+    "AreaKm2": 7550
+  }
+]

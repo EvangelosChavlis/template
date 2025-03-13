@@ -1,0 +1,90 @@
+[
+  {
+    "Name": "Oslo",
+    "Code": "EU-NO-OS",
+    "Description": "Oslo is the capital region of Norway, known for its modern architecture, rich cultural scene, and vibrant waterfront.",
+    "Capital": "Oslo",
+    "Population": 1000000,
+    "AreaKm2": 454
+  },
+  {
+    "Name": "Viken",
+    "Code": "EU-NO-VK",
+    "Description": "Viken is a region surrounding Oslo, known for its lakes, forests, and proximity to the Norwegian coast.",
+    "Capital": "Drammen",
+    "Population": 1300000,
+    "AreaKm2": 19000
+  },
+  {
+    "Name": "Vestfold og Telemark",
+    "Code": "EU-NO-VT",
+    "Description": "Vestfold og Telemark is a coastal region with a mix of rugged landscapes, historical towns, and beautiful fjords.",
+    "Capital": "Skien",
+    "Population": 420000,
+    "AreaKm2": 1730
+  },
+  {
+    "Name": "Agder",
+    "Code": "EU-NO-AG",
+    "Description": "Agder is a coastal region in the southern part of Norway, known for its beautiful archipelagos and outdoor recreational activities.",
+    "Capital": "Kristiansand",
+    "Population": 600000,
+    "AreaKm2": 15000
+  },
+  {
+    "Name": "Rogaland",
+    "Code": "EU-NO-RO",
+    "Description": "Rogaland is a region known for its rich cultural heritage, coastal beauty, and the famous Preikestolen rock formation.",
+    "Capital": "Stavanger",
+    "Population": 650000,
+    "AreaKm2": 9300
+  },
+  {
+    "Name": "Hordaland",
+    "Code": "EU-NO-HO",
+    "Description": "Hordaland is a coastal region known for the scenic fjords and Bergen, the second-largest city in Norway.",
+    "Capital": "Bergen",
+    "Population": 500000,
+    "AreaKm2": 15000
+  },
+  {
+    "Name": "Sogn og Fjordane",
+    "Code": "EU-NO-SF",
+    "Description": "Sogn og Fjordane is a picturesque region known for its dramatic fjords and mountainous landscapes.",
+    "Capital": "Leikanger",
+    "Population": 100000,
+    "AreaKm2": 18000
+  },
+  {
+    "Name": "Møre og Romsdal",
+    "Code": "EU-NO-MR",
+    "Description": "Møre og Romsdal is known for its rugged coastlines, islands, and impressive mountains.",
+    "Capital": "Molde",
+    "Population": 260000,
+    "AreaKm2": 19000
+  },
+  {
+    "Name": "Trøndelag",
+    "Code": "EU-NO-TR",
+    "Description": "Trøndelag is a central region known for its rich Viking history, agriculture, and cultural heritage.",
+    "Capital": "Trondheim",
+    "Population": 460000,
+    "AreaKm2": 16000
+  },
+  {
+    "Name": "Nordland",
+    "Code": "EU-NO-ND",
+    "Description": "Nordland is a northern region known for its stunning natural beauty, including the Lofoten Islands and Arctic landscapes.",
+    "Capital": "Bodo",
+    "Population": 240000,
+    "AreaKm2": 38000
+  },
+  {
+    "Name": "Troms og Finnmark",
+    "Code": "EU-NO-TF",
+    "Description": "Troms og Finnmark is the northernmost region of Norway, known for its Arctic wilderness, northern lights, and indigenous Sami culture.",
+    "Capital": "Troms",
+    "Population": 250000,
+    "AreaKm2": 74000
+  }
+]

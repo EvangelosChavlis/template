@@ -2,7 +2,6 @@
 using server.src.Domain.Geography.Administrative.Districts.Dtos;
 using server.src.Domain.Geography.Administrative.Districts.Models;
 using server.src.Domain.Geography.Administrative.Municipalities.Models;
-using server.src.Domain.Geography.Administrative.States.Models;
 
 namespace server.src.Application.Geography.Administrative.Districts.Mappings;
 
@@ -27,6 +26,8 @@ public static class UpdateDistrictMapper
         modelDistrict.Name = dto.Name;
         modelDistrict.Description = dto.Description;
         modelDistrict.Population = dto.Population;
+        modelDistrict.AreaKm2 = dto.AreaKm2;
+        modelDistrict.Code = dto.Code;
         modelDistrict.IsActive = modelDistrict.IsActive;
         modelDistrict.Municipality = modelMunicipality;
         modelDistrict.MunicipalityId = modelMunicipality.Id;

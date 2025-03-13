@@ -11,6 +11,15 @@ public class UserIndexes : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
+        builder.HasIndex(ur => ur.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(User)}_
+                {nameof(User.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
         builder.HasIndex(u 
             => new { 
                 u.Id, 
@@ -30,7 +39,9 @@ public class UserIndexes : IEntityTypeConfiguration<User>
                 {nameof(User.Email)}_
                 {nameof(User.UserName)}_
                 {nameof(User.PhoneNumber)}_
-                {nameof(User.MobilePhoneNumber)}
-            ".Replace("\n", "").Trim());
+                {nameof(User.MobilePhoneNumber)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

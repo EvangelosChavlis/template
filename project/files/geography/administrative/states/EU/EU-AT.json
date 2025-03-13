@@ -1,0 +1,75 @@
+[
+    {
+      "Name": "Vienna",
+      "Code": "EU-AT-09",
+      "Description": "Vienna is the capital and largest city of Austria, known for its imperial palaces, classical music heritage, and vibrant cultural scene.",
+      "Capital": "Vienna",
+      "Population": 1900000,
+      "AreaKm2": 414
+    },
+    {
+      "Name": "Lower Austria",
+      "Code": "EU-AT-03",
+      "Description": "Lower Austria is the largest state by area and surrounds Vienna. It is known for its vineyards, rural landscapes, and historical sites.",
+      "Capital": "Sankt Pölten",
+      "Population": 1700000,
+      "AreaKm2": 1928
+    },
+    {
+      "Name": "Upper Austria",
+      "Code": "EU-AT-04",
+      "Description": "Upper Austria is known for its beautiful lakes and mountains, as well as its industrial and economic importance in Austria.",
+      "Capital": "Linz",
+      "Population": 1500000,
+      "AreaKm2": 11938
+    },
+    {
+      "Name": "Styria",
+      "Code": "EU-AT-06",
+      "Description": "Styria is famous for its natural beauty, wine production, and historic towns. It is often called the green heart of Austria.",
+      "Capital": "Graz",
+      "Population": 1300000,
+      "AreaKm2": 16401
+    },
+    {
+      "Name": "Tyrol",
+      "Code": "EU-AT-07",
+      "Description": "Tyrol is renowned for its stunning alpine scenery and as a major destination for skiing and outdoor sports.",
+      "Capital": "Innsbruck",
+      "Population": 750000,
+      "AreaKm2": 12547
+    },
+    {
+      "Name": "Carinthia",
+      "Code": "EU-AT-02",
+      "Description": "Carinthia is known for its lakes, mountains, and Mediterranean climate, making it a popular holiday destination.",
+      "Capital": "Klagenfurt",
+      "Population": 600000,
+      "AreaKm2": 10500
+    },
+    {
+      "Name": "Salzburg",
+      "Code": "EU-AT-05",
+      "Description": "Salzburg is famous for its baroque architecture, alpine surroundings, and as the birthplace of composer Wolfgang Amadeus Mozart.",
+      "Capital": "Salzburg",
+      "Population": 500000,
+      "AreaKm2": 6562
+    },
+    {
+      "Name": "Vorarlberg",
+      "Code": "EU-AT-08",
+      "Description": "Vorarlberg is the westernmost state of Austria, known for its modern architecture and proximity to Switzerland and Germany.",
+      "Capital": "Bregenz",
+      "Population": 380000,
+      "AreaKm2": 2600
+    },
+    {
+      "Name": "Burgenland",
+      "Code": "EU-AT-01",
+      "Description": "Burgenland is known for its wine production, fertile plains, and historical castles.",
+      "Capital": "Eisenstadt",
+      "Population": 300000,
+      "AreaKm2": 3966
+    }
+  ]
+  

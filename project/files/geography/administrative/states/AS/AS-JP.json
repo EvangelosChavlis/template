@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Hokkaido",
+      "Code": "AS-JP-HK",
+      "Description": "The northernmost island of Japan, known for its cold winters, skiing resorts, and natural beauty.",
+      "Capital": "Sapporo",
+      "Population": 5000000,
+      "AreaKm2": 83424
+    },
+    {
+      "Name": "Tohoku",
+      "Code": "AS-JP-TH",
+      "Description": "A region in the northeastern part of Japan, known for its mountains, hot springs, and rural landscapes.",
+      "Capital": "Sendai",
+      "Population": 9000000,
+      "AreaKm2": 67241
+    },
+    {
+      "Name": "Kanto",
+      "Code": "AS-JP-KT",
+      "Description": "The region around Tokyo, the economic and political center of Japan, including Kanagawa, Chiba, and Saitama.",
+      "Capital": "Tokyo",
+      "Population": 43000000,
+      "AreaKm2": 30525
+    },
+    {
+      "Name": "Chubu",
+      "Code": "AS-JP-CH",
+      "Description": "Central Japan, known for its mountains, lakes, and the city of Nagoya, a hub for Japan s automotive industry.",
+      "Capital": "Nagoya",
+      "Population": 22000000,
+      "AreaKm2": 71968
+    },
+    {
+      "Name": "Kinki (Kansai)",
+      "Code": "AS-JP-KK",
+      "Description": "A region in the western part of Japan, including cities like Osaka, Kyoto, and Kobe, known for its culture and history.",
+      "Capital": "Osaka",
+      "Population": 22000000,
+      "AreaKm2": 18698
+    },
+    {
+      "Name": "Chugoku",
+      "Code": "AS-JP-CG",
+      "Description": "A region in the western part of Japan, known for its scenic beauty, including the island of Miyajima and historical sites.",
+      "Capital": "Hiroshima",
+      "Population": 7400000,
+      "AreaKm2": 37047
+    },
+    {
+      "Name": "Shikoku",
+      "Code": "AS-JP-SK",
+      "Description": "The smallest of Japan s four main islands, known for its temples, mountains, and rural landscapes.",
+      "Capital": "Takamatsu",
+      "Population": 3800000,
+      "AreaKm2": 18767
+    },
+    {
+      "Name": "Kyushu",
+      "Code": "AS-JP-KY",
+      "Description": "The southernmost main island of Japan, known for its active volcanoes, hot springs, and historical cities like Nagasaki.",
+      "Capital": "Fukuoka",
+      "Population": 13000000,
+      "AreaKm2": 36175
+    },
+    {
+      "Name": "Okinawa",
+      "Code": "AS-JP-OK",
+      "Description": "A group of islands in the southernmost part of Japan, known for their tropical climate, beaches, and distinct culture.",
+      "Capital": "Naha",
+      "Population": 1500000,
+      "AreaKm2": 2286
+    }
+]  

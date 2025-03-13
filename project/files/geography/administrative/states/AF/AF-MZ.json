@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Maputo",
+      "Code": "AF-MZ-MP",
+      "Description": "The capital region, located in the southern part of the country, known for its coastal beauty and urban development.",
+      "Capital": "Maputo",
+      "Population": 1100000,
+      "AreaKm2": 3467
+    },
+    {
+      "Name": "Gaza",
+      "Code": "AF-MZ-GZ",
+      "Description": "A southern province known for its agricultural activities and the Limpopo River.",
+      "Capital": "Xai-Xai",
+      "Population": 1500000,
+      "AreaKm2": 73563
+    },
+    {
+      "Name": "Inhambane",
+      "Code": "AF-MZ-IB",
+      "Description": "A coastal province with beautiful beaches, known for tourism and agriculture.",
+      "Capital": "Inhambane",
+      "Population": 1500000,
+      "AreaKm2": 68491
+    },
+    {
+      "Name": "Sofala",
+      "Code": "AF-MZ-SF",
+      "Description": "Located on the central coast, known for its diverse ecosystems, agriculture, and fishing.",
+      "Capital": "Beira",
+      "Population": 2000000,
+      "AreaKm2": 67099
+    },
+    {
+      "Name": "Manica",
+      "Code": "AF-MZ-MA",
+      "Description": "A province known for its mountains, agriculture, and proximity to Zimbabwe.",
+      "Capital": "Chimoio",
+      "Population": 1600000,
+      "AreaKm2": 61191
+    },
+    {
+      "Name": "Tete",
+      "Code": "AF-MZ-TE",
+      "Description": "A province known for its coal resources and located along the Zambezi River.",
+      "Capital": "Tete",
+      "Population": 1300000,
+      "AreaKm2": 108019
+    },
+    {
+      "Name": "Zambezia",
+      "Code": "AF-MZ-ZA",
+      "Description": "A coastal province with rich agricultural land and the Zambezi River running through it.",
+      "Capital": "Quelimane",
+      "Population": 4000000,
+      "AreaKm2": 107147
+    },
+    {
+      "Name": "Nampula",
+      "Code": "AF-MZ-NA",
+      "Description": "The most populous province, known for its agriculture, mining, and being a key transport hub.",
+      "Capital": "Nampula",
+      "Population": 5500000,
+      "AreaKm2": 80000
+    },
+    {
+      "Name": "Cabo Delgado",
+      "Code": "AF-MZ-CD",
+      "Description": "A northern province known for its beautiful coastline, rich natural resources, and oil fields.",
+      "Capital": "Pemba",
+      "Population": 2200000,
+      "AreaKm2": 82309
+    },
+    {
+      "Name": "Niassa",
+      "Code": "AF-MZ-NI",
+      "Description": "Located in the northwest, it is known for its lakes, national parks, and biodiversity.",
+      "Capital": "Lichinga",
+      "Population": 1500000,
+      "AreaKm2": 129000
+    }
+]  

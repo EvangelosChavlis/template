@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Santiago",
+      "Code": "AF-CV-SG",
+      "Description": "The largest and most populous island in Cape Verde, Santiago is home to the capital city, Praia, and is the country s economic and cultural hub.",
+      "Capital": "Praia",
+      "Population": 500000,
+      "AreaKm2": 991
+    },
+    {
+      "Name": "São Vicente",
+      "Code": "AF-CV-SV",
+      "Description": "São Vicente is known for its vibrant culture, and the city of Mindelo, a port city, is known for its music and festivals.",
+      "Capital": "Mindelo",
+      "Population": 80000,
+      "AreaKm2": 226
+    },
+    {
+      "Name": "Santa Luzia",
+      "Code": "AF-CV-SL",
+      "Description": "Santa Luzia is an uninhabited island located to the northeast of São Vicente. It is part of the Cabo Verdean National Park.",
+      "Capital": "No Capital (Uninhabited)",
+      "Population": 0,
+      "AreaKm2": 35
+    },
+    {
+      "Name": "Sal",
+      "Code": "AF-CV-SA",
+      "Description": "Sal is one of Cape Verde s most popular tourist destinations, known for its beautiful beaches and resorts, making it a key part of the country s tourism industry.",
+      "Capital": "Espargos",
+      "Population": 30000,
+      "AreaKm2": 216
+    },
+    {
+      "Name": "Boa Vista",
+      "Code": "AF-CV-BV",
+      "Description": "Boa Vista is famous for its extensive sandy beaches and dunes. It is one of the main tourist islands in Cape Verde.",
+      "Capital": "Sal Rei",
+      "Population": 15000,
+      "AreaKm2": 620
+    },
+    {
+      "Name": "Fogo",
+      "Code": "AF-CV-FO",
+      "Description": "Fogo is home to an active volcano, Pico do Fogo. The island has fertile soil and is known for its coffee and wine production.",
+      "Capital": "São Filipe",
+      "Population": 35000,
+      "AreaKm2": 476
+    },
+    {
+      "Name": "Brava",
+      "Code": "AF-CV-BR",
+      "Description": "Brava is the smallest inhabited island of Cape Verde, known for its mountainous terrain and lush vegetation.",
+      "Capital": "Nova Sintra",
+      "Population": 6000,
+      "AreaKm2": 67
+    }
+]  

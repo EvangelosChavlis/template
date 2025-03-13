@@ -1,0 +1,66 @@
+[
+    {
+        "Name": "Bratislava",
+        "Code": "EU-SK-BR",
+        "Description": "The capital region, known for its medieval Old Town, the iconic Bratislava Castle, and vibrant cultural and political life.",
+        "Capital": "Bratislava",
+        "Population": 437000,
+        "AreaKm2": 367.58
+    },
+    {
+        "Name": "Trnava",
+        "Code": "EU-SK-TA",
+        "Description": "A historical region known for its well-preserved medieval architecture, vineyards, and the town of Trnava, often called the Slovak Rome.",
+        "Capital": "Trnava",
+        "Population": 550000,
+        "AreaKm2": 413.45
+    },
+    {
+        "Name": "Nitra",
+        "Code": "EU-SK-NI",
+        "Description": "This region is known for its agricultural significance, historical castles, and the town of Nitra, one of the oldest cities in Slovakia.",
+        "Capital": "Nitra",
+        "Population": 700000,
+        "AreaKm2": 628.74
+    },
+    {
+        "Name": "Žilina",
+        "Code": "EU-SK-ZI",
+        "Description": "Located in the northwestern part of Slovakia, it is known for its proximity to the Tatra Mountains, as well as the city of Žilina.",
+        "Capital": "Žilina",
+        "Population": 650000,
+        "AreaKm2": 410.79
+    },
+    {
+        "Name": "Presov",
+        "Code": "EU-SK-PR",
+        "Description": "A region in eastern Slovakia, known for its historical towns, including the city of Prešov, and beautiful natural landscapes like the High Tatras.",
+        "Capital": "Presov",
+        "Population": 800000,
+        "AreaKm2": 4241.89
+    },
+    {
+        "Name": "Kosice",
+        "Code": "EU-SK-KO",
+        "Description": "The easternmost region, known for the vibrant city of Kosice, a major cultural and economic hub in Slovakia.",
+        "Capital": "Kosice",
+        "Population": 800000,
+        "AreaKm2": 6760.67
+    },
+    {
+        "Name": "Banska Bystrica",
+        "Code": "EU-SK-BB",
+        "Description": "Located in central Slovakia, known for its mountainous landscape, mining heritage, and the city of Banská Bystrica.",
+        "Capital": "Banska Bystrica",
+        "Population": 800000,
+        "AreaKm2": 6940.85
+    },
+    {
+        "Name": "Trencin",
+        "Code": "EU-SK-TC",
+        "Description": "A region in the west of Slovakia, famous for its medieval castles, including the Trenčín Castle, and proximity to the Czech Republic.",
+        "Capital": "Trencin",
+        "Population": 600000,
+        "AreaKm2": 4214.96
+    }
+]

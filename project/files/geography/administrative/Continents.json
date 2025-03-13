@@ -1,0 +1,51 @@
+[
+  {
+    "Name": "Africa",
+    "Description": "Second largest continent, rich in culture and biodiversity.",
+    "Code": "AF",
+    "AreaKm2": 30370000,
+    "Population": 1411778724
+  },
+  {
+    "Name": "Asia",
+    "Description": "Largest continent, home to many ancient civilizations.",
+    "Code": "AS",
+    "AreaKm2": 44579000,
+    "Population": 4600000000
+  },
+  {
+    "Name": "Europe",
+    "Description": "Diverse continent with a rich history and economic influence.",
+    "Code": "EU",
+    "AreaKm2": 10180000,
+    "Population": 747636026
+  },
+  {
+    "Name": "North America",
+    "Description": "Includes Canada, USA, and Mexico, known for its diversity.",
+    "Code": "NA",
+    "AreaKm2": 24709000,
+    "Population": 579024000
+  },
+  {
+    "Name": "South America",
+    "Description": "Known for the Amazon rainforest and diverse cultures.",
+    "Code": "SA",
+    "AreaKm2": 17840000,
+    "Population": 430759766
+  },
+  {
+    "Name": "Oceania",
+    "Description": "A region that includes Australia, New Zealand, and the Pacific islands.",
+    "Code": "OC",
+    "AreaKm2": 8500000,
+    "Population": 42900000
+  },
+  {
+    "Name": "Antarctica",
+    "Description": "Icy continent with no permanent residents, focused on research.",
+    "Code": "AN",
+    "AreaKm2": 14000000,
+    "Population": 1100
+  }
+]

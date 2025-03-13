@@ -1,0 +1,146 @@
+[
+    {
+      "Name": "Artigas",
+      "Code": "SA-UY-AR",
+      "Description": "A northern region known for its agricultural production, including rice, sugar, and cattle farming.",
+      "Capital": "Artigas",
+      "Population": 73000,
+      "AreaKm2": 10100
+    },
+    {
+      "Name": "Canelones",
+      "Code": "SA-UY-CA",
+      "Description": "A region located near Montevideo, known for its vineyards, dairy farms, and tourism.",
+      "Capital": "Canelones",
+      "Population": 530000,
+      "AreaKm2": 4780
+    },
+    {
+      "Name": "Cerro Largo",
+      "Code": "SA-UY-CL",
+      "Description": "A region known for its agricultural production, including crops like rice and tobacco, and cattle ranching.",
+      "Capital": "Melo",
+      "Population": 85000,
+      "AreaKm2": 14900
+    },
+    {
+      "Name": "Colonia",
+      "Code": "SA-UY-CO",
+      "Description": "A southern coastal region known for its tourism, agriculture, and the historic city of Colonia del Sacramento.",
+      "Capital": "Colonia del Sacramento",
+      "Population": 150000,
+      "AreaKm2": 6000
+    },
+    {
+      "Name": "Durazno",
+      "Code": "SA-UY-DU",
+      "Description": "A central region, primarily focused on livestock farming and agriculture, including corn and soybeans.",
+      "Capital": "Durazno",
+      "Population": 57000,
+      "AreaKm2": 19400
+    },
+    {
+      "Name": "Flores",
+      "Code": "SA-UY-FL",
+      "Description": "A region known for its natural beauty, with many parks, forests, and lakes, as well as agriculture.",
+      "Capital": "Trinidad",
+      "Population": 35000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Florida",
+      "Code": "SA-UY-FD",
+      "Description": "A region known for its agricultural industry, particularly for cattle farming and crops such as rice and wheat.",
+      "Capital": "Florida",
+      "Population": 100000,
+      "AreaKm2": 10000
+    },
+    {
+      "Name": "Lavalleja",
+      "Code": "SA-UY-LA",
+      "Description": "A central region with a focus on agriculture, known for its rich natural landscapes and tourism.",
+      "Capital": "Maldonado",
+      "Population": 100000,
+      "AreaKm2": 10000
+    },
+    {
+      "Name": "Montevideo",
+      "Code": "SA-UY-MO",
+      "Description": "The capital region, home to the largest city in Uruguay, known for its culture, architecture, and coastal attractions.",
+      "Capital": "Montevideo",
+      "Population": 1400000,
+      "AreaKm2": 530
+    },
+    {
+      "Name": "Paysandu",
+      "Code": "SA-UY-PA",
+      "Description": "A region in the west, known for its agriculture, particularly rice, and its proximity to the Uruguay River.",
+      "Capital": "Paysandu",
+      "Population": 120000,
+      "AreaKm2": 13000
+    },
+    {
+      "Name": "Rio Negro",
+      "Code": "SA-UY-RN",
+      "Description": "A region known for its agriculture and cattle farming, located along the Uruguay River.",
+      "Capital": "Young",
+      "Population": 100000,
+      "AreaKm2": 9700
+    },
+    {
+      "Name": "Rivera",
+      "Code": "SA-UY-RV",
+      "Description": "A region located in the northern part of Uruguay, known for its agricultural production and being a border city with Brazil.",
+      "Capital": "Rivera",
+      "Population": 100000,
+      "AreaKm2": 9000
+    },
+    {
+      "Name": "Rocha",
+      "Code": "SA-UY-RO",
+      "Description": "A coastal region known for its beaches, tourism, and natural reserves.",
+      "Capital": "Rocha",
+      "Population": 150000,
+      "AreaKm2": 9000
+    },
+    {
+      "Name": "Salto",
+      "Code": "SA-UY-SA",
+      "Description": "A region known for its large agricultural output, especially in rice, and for being a key location for tourism with hot springs.",
+      "Capital": "Salto",
+      "Population": 120000,
+      "AreaKm2": 14700
+    },
+    {
+      "Name": "San Jose",
+      "Code": "SA-UY-SJ",
+      "Description": "A region known for its agriculture and proximity to the capital Montevideo, with a variety of farming activities.",
+      "Capital": "San Jose de Mayo",
+      "Population": 100000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Soriano",
+      "Code": "SA-UY-SO",
+      "Description": "A region with strong agricultural production, especially crops like rice and wheat, and located along the Uruguay River.",
+      "Capital": "Mercedes",
+      "Population": 100000,
+      "AreaKm2": 14500
+    },
+    {
+      "Name": "Tacuarembo",
+      "Code": "SA-UY-TA",
+      "Description": "A region with a focus on agriculture, particularly cattle farming, and home to many rural landscapes and national parks.",
+      "Capital": "Tacuarembo",
+      "Population": 100000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Treinta y Tres",
+      "Code": "SA-UY-TT",
+      "Description": "A region with a mix of agricultural activities and natural reserves, known for its forests and rivers.",
+      "Capital": "Treinta y Tres",
+      "Population": 50000,
+      "AreaKm2": 6600
+    }
+]  

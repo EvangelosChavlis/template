@@ -8,7 +8,9 @@ public record ItemMunicipalityDto(
     Guid Id,
     string Name,
     string Description,
+    double AreaKm2,
     long Population,
+    string Code,
     bool IsActive,
     string Region,
     Guid Version

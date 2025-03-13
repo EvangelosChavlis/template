@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Majuro Atoll",
+      "Code": "OC-MH-MA",
+      "Description": "Majuro Atoll is the capital and largest atoll of the Marshall Islands, home to the country s political, economic, and cultural activities.",
+      "Capital": "Majuro",
+      "Population": 27000,
+      "AreaKm2": 295
+    },
+    {
+      "Name": "Kwajalein Atoll",
+      "Code": "OC-MH-KA",
+      "Description": "Kwajalein Atoll is known for its large US military base and its location in the central Pacific. It is one of the largest atolls in the world.",
+      "Capital": "Ebeye",
+      "Population": 12000,
+      "AreaKm2": 1010
+    },
+    {
+      "Name": "Bikini Atoll",
+      "Code": "OC-MH-BA",
+      "Description": "Bikini Atoll is a UNESCO World Heritage site and a former nuclear test site, with historical significance in the Pacific region.",
+      "Capital": "Bikini Island",
+      "Population": 0,
+      "AreaKm2": 23
+    },
+    {
+      "Name": "Enewetak Atoll",
+      "Code": "OC-MH-EA",
+      "Description": "Enewetak Atoll is known for its nuclear testing history, particularly during the mid-20th century. It is largely uninhabited today.",
+      "Capital": "Enewetak",
+      "Population": 0,
+      "AreaKm2": 227
+    }
+]  

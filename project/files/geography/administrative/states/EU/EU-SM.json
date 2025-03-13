@@ -1,0 +1,74 @@
+[
+    {
+        "Name": "Acquaviva",
+        "Code": "EU-SM-AQ",
+        "Description": "One of the nine municipalities of San Marino, known for its medieval history and scenic views.",
+        "Capital": "Acquaviva",
+        "Population": 4500,
+        "AreaKm2": 7.8
+    },
+    {
+        "Name": "Chiesanuova",
+        "Code": "EU-SM-CH",
+        "Description": "A municipality located in the northern part of San Marino, offering rural charm and historical significance.",
+        "Capital": "Chiesanuova",
+        "Population": 1600,
+        "AreaKm2": 10.9
+    },
+    {
+        "Name": "Domagnano",
+        "Code": "EU-SM-DO",
+        "Description": "A municipality known for its countryside landscape and traditional culture.",
+        "Capital": "Domagnano",
+        "Population": 3300,
+        "AreaKm2": 6.1
+    },
+    {
+        "Name": "Faetano",
+        "Code": "EU-SM-FA",
+        "Description": "A small municipality in the southern part of San Marino, with a historical connection to early settlements.",
+        "Capital": "Faetano",
+        "Population": 1100,
+        "AreaKm2": 3.7
+    },
+    {
+        "Name": "Fiorentino",
+        "Code": "EU-SM-FI",
+        "Description": "Known for its charming countryside and medieval fortifications.",
+        "Capital": "Fiorentino",
+        "Population": 2300,
+        "AreaKm2": 6.0
+    },
+    {
+        "Name": "Montegiardino",
+        "Code": "EU-SM-MG",
+        "Description": "A small municipality with a rich historical background and picturesque surroundings.",
+        "Capital": "Montegiardino",
+        "Population": 1200,
+        "AreaKm2": 3.5
+    },
+    {
+        "Name": "San Marino",
+        "Code": "EU-SM-SM",
+        "Description": "The capital municipality of San Marino, housing the government and cultural landmarks.",
+        "Capital": "San Marino",
+        "Population": 4000,
+        "AreaKm2": 6.0
+    },
+    {
+        "Name": "Serravalle",
+        "Code": "EU-SM-SE",
+        "Description": "The largest municipality of San Marino, known for its modern urbanization and industrial zone.",
+        "Capital": "Serravalle",
+        "Population": 11000,
+        "AreaKm2": 32.0
+    },
+    {
+        "Name": "Borgo Maggiore",
+        "Code": "EU-SM-BM",
+        "Description": "One of the main municipalities, known for its historical landmarks and proximity to Mount Titano.",
+        "Capital": "Borgo Maggiore",
+        "Population": 5000,
+        "AreaKm2": 10.0
+    }
+]

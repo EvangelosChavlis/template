@@ -27,7 +27,7 @@ public class GetTerrainTypesPickerHandler : IRequestHandler<GetTerrainTypesPicke
     {
         // Searching Items
         var filters = new Expression<Func<TerrainType, bool>>[] { t => t.IsActive };
-        var terrainTypes = await _commonRepository.GetResultPickerAsync(filters, token: token);
+        var terrainTypes = await _commonRepository.GetResultPickerAsync<TerrainType, TerrainType>(filters, token: token);
 
         // Mapping
         var dto = terrainTypes.Select(w => w.PickerTerrainTypeDtoMapping()).ToList();

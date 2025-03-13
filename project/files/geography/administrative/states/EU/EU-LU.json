@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Grevenmacher",
+    "Code": "EU-LU-GR",
+    "Description": "Grevenmacher is a region in eastern Luxembourg, known for its wine-growing areas, rolling hills, and picturesque Moselle river valley.",
+    "Capital": "Grevenmacher",
+    "Population": 18000,
+    "AreaKm2": 273
+  },
+  {
+    "Name": "Luxembourg City",
+    "Code": "EU-LU-LU",
+    "Description": "Luxembourg City is the capital of Luxembourg, a financial hub with a rich history, medieval fortifications, and modern architecture.",
+    "Capital": "Luxembourg City",
+    "Population": 115000,
+    "AreaKm2": 51
+  },
+  {
+    "Name": "Clervaux",
+    "Code": "EU-LU-CL",
+    "Description": "Clervaux is a town in the Ardennes, known for its historical castle, charming streets, and scenic natural beauty.",
+    "Capital": "Clervaux",
+    "Population": 10000,
+    "AreaKm2": 107
+  },
+  {
+    "Name": "Ettelbruck",
+    "Code": "EU-LU-ET",
+    "Description": "Ettelbruck is located in the northern part of Luxembourg, known for its market town atmosphere, proximity to nature, and cultural significance.",
+    "Capital": "Ettelbruck",
+    "Population": 19000,
+    "AreaKm2": 52
+  },
+  {
+    "Name": "Diekirch",
+    "Code": "EU-LU-DI",
+    "Description": "Diekirch is a town in the north of Luxembourg, famous for its historical landmarks, museums, and scenic surroundings.",
+    "Capital": "Diekirch",
+    "Population": 6500,
+    "AreaKm2": 66
+  },
+  {
+    "Name": "Wiltz",
+    "Code": "EU-LU-WI",
+    "Description": "Wiltz is located in the north-western part of Luxembourg, surrounded by hills and forests, and is known for its history and nature.",
+    "Capital": "Wiltz",
+    "Population": 10000,
+    "AreaKm2": 132
+  }
+]

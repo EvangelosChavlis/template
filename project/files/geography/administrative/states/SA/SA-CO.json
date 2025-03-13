@@ -1,0 +1,250 @@
+[
+    {
+      "Name": "Amazonas",
+      "Code": "SA-CO-AM",
+      "Description": "A region located in the southeastern part of Colombia, known for its rich biodiversity and the Amazon rainforest.",
+      "Capital": "Leticia",
+      "Population": 830000,
+      "AreaKm2": 109665
+    },
+    {
+      "Name": "Antioquia",
+      "Code": "SA-CO-AN",
+      "Description": "A major region in the northwest, known for its coffee production, beautiful landscapes, and the city of Medellín.",
+      "Capital": "Medellin",
+      "Population": 7000000,
+      "AreaKm2": 633070
+    },
+    {
+      "Name": "Atlantico",
+      "Code": "SA-CO-AT",
+      "Description": "A coastal region on the Caribbean, known for its beaches, culture, and the city of Barranquilla.",
+      "Capital": "Barranquilla",
+      "Population": 2300000,
+      "AreaKm2": 3367
+    },
+    {
+      "Name": "Bogotá D.C.",
+      "Code": "SA-CO-DC",
+      "Description": "The capital district of Colombia, located at the heart of the country, known for its historical and cultural landmarks.",
+      "Capital": "Bogotá",
+      "Population": 8000000,
+      "AreaKm2": 1588
+    },
+    {
+      "Name": "Bolivar",
+      "Code": "SA-CO-BO",
+      "Description": "A region located along Colombia s Caribbean coast, known for its historical city of Cartagena and beautiful coastal landscapes.",
+      "Capital": "Cartagena",
+      "Population": 2300000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Boyaca",
+      "Code": "SA-CO-BOY",
+      "Description": "A region located in the Andean highlands, known for its colonial towns, rich history, and the Boyacá Bridge.",
+      "Capital": "Tunja",
+      "Population": 1300000,
+      "AreaKm2": 23298
+    },
+    {
+      "Name": "Caldas",
+      "Code": "SA-CO-CA",
+      "Description": "Located in the coffee-growing region of Colombia, known for its lush landscapes and the city of Manizales.",
+      "Capital": "Manizales",
+      "Population": 800000,
+      "AreaKm2": 7885
+    },
+    {
+      "Name": "Caqueta",
+      "Code": "SA-CO-CAQ",
+      "Description": "A region in the southern part of Colombia, known for its Amazonian landscapes and diverse ecosystems.",
+      "Capital": "Florencia",
+      "Population": 400000,
+      "AreaKm2": 88919
+    },
+    {
+      "Name": "Casanare",
+      "Code": "SA-CO-CAS",
+      "Description": "A region located in the eastern plains, known for its agricultural activities and natural resources.",
+      "Capital": "Yopal",
+      "Population": 400000,
+      "AreaKm2": 44356
+    },
+    {
+      "Name": "Cauca",
+      "Code": "SA-CO-CAU",
+      "Description": "Located in the southwestern part of Colombia, known for its mountainous terrain, indigenous cultures, and the city of Popayán.",
+      "Capital": "Popayán",
+      "Population": 1500000,
+      "AreaKm2": 29518
+    },
+    {
+      "Name": "Cesar",
+      "Code": "SA-CO-CES",
+      "Description": "A region located in the northern part of Colombia, known for its agriculture and mining industry.",
+      "Capital": "Valledupar",
+      "Population": 1200000,
+      "AreaKm2": 22788
+    },
+    {
+      "Name": "Choco",
+      "Code": "SA-CO-CHO",
+      "Description": "Located in the Pacific coastal region, known for its biodiversity, rainforests, and Afro-Colombian culture.",
+      "Capital": "Quibdo",
+      "Population": 500000,
+      "AreaKm2": 46332
+    },
+    {
+      "Name": "Cordoba",
+      "Code": "SA-CO-COR",
+      "Description": "A region located in the north, known for its beaches, mountains, and the city of Montería.",
+      "Capital": "Monteria",
+      "Population": 2000000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Guainia",
+      "Code": "SA-CO-GUI",
+      "Description": "A remote region located in the eastern part of Colombia, known for its rivers and part of the Amazon rainforest.",
+      "Capital": "Inirida",
+      "Population": 50000,
+      "AreaKm2": 73024
+    },
+    {
+      "Name": "Guaviare",
+      "Code": "SA-CO-GUV",
+      "Description": "A region known for its rivers, jungle landscapes, and diverse wildlife.",
+      "Capital": "San José del Guaviare",
+      "Population": 100000,
+      "AreaKm2": 53299
+    },
+    {
+      "Name": "Huila",
+      "Code": "SA-CO-HUI",
+      "Description": "Located in the southern part of Colombia, known for its coffee production and the San Agustín archaeological park.",
+      "Capital": "Neiva",
+      "Population": 1300000,
+      "AreaKm2": 19519
+    },
+    {
+      "Name": "La Guajira",
+      "Code": "SA-CO-GUA",
+      "Description": "A coastal region known for its desert landscapes, indigenous Wayuu culture, and the city of Riohacha.",
+      "Capital": "Riohacha",
+      "Population": 900000,
+      "AreaKm2": 20250
+    },
+    {
+      "Name": "Magdalena",
+      "Code": "SA-CO-MAG",
+      "Description": "A region on the Caribbean coast, known for its beautiful beaches and the city of Santa Marta.",
+      "Capital": "Santa Marta",
+      "Population": 1300000,
+      "AreaKm2": 22911
+    },
+    {
+      "Name": "Meta",
+      "Code": "SA-CO-MET",
+      "Description": "A region located in the eastern plains of Colombia, known for its vast agricultural fields and natural beauty.",
+      "Capital": "Villavicencio",
+      "Population": 700000,
+      "AreaKm2": 85148
+    },
+    {
+      "Name": "Narino",
+      "Code": "SA-CO-NAR",
+      "Description": "Located in the southwestern part of Colombia, known for its mountainous terrain, coffee plantations, and indigenous cultures.",
+      "Capital": "Pasto",
+      "Population": 1800000,
+      "AreaKm2": 33019
+    },
+    {
+      "Name": "Norte de Santander",
+      "Code": "SA-CO-NOR",
+      "Description": "A border region with Venezuela, known for its mountains, cultural diversity, and the city of Cúcuta.",
+      "Capital": "Cucuta",
+      "Population": 1300000,
+      "AreaKm2": 21905
+    },
+    {
+      "Name": "Putumayo",
+      "Code": "SA-CO-PUT",
+      "Description": "Located in the southern part of Colombia, known for its rainforest, rivers, and indigenous cultures.",
+      "Capital": "Mocoa",
+      "Population": 400000,
+      "AreaKm2": 23208
+    },
+    {
+      "Name": "Quindío",
+      "Code": "SA-CO-QUI",
+      "Description": "A region in the coffee-growing area of Colombia, famous for its picturesque towns, coffee farms, and cultural heritage.",
+      "Capital": "Armenia",
+      "Population": 600000,
+      "AreaKm2": 11802
+    },
+    {
+      "Name": "Risaralda",
+      "Code": "SA-CO-RIS",
+      "Description": "A region in the coffee zone of Colombia, known for its beautiful landscape and the city of Pereira.",
+      "Capital": "Pereira",
+      "Population": 900000,
+      "AreaKm2": 4002
+    },
+    {
+      "Name": "San Andrés y Providencia",
+      "Code": "SA-CO-SAP",
+      "Description": "An archipelago in the Caribbean, known for its white-sand beaches, coral reefs, and vibrant cultural heritage.",
+      "Capital": "San Andrés",
+      "Population": 70000,
+      "AreaKm2": 52
+    },
+    {
+      "Name": "Santander",
+      "Code": "SA-CO-SAN",
+      "Description": "A region known for its rugged mountains, the Chicamocha Canyon, and the cities of Bucaramanga and San Gil.",
+      "Capital": "Bucaramanga",
+      "Population": 2300000,
+      "AreaKm2": 30844
+    },
+    {
+      "Name": "Sucre",
+      "Code": "SA-CO-SUC",
+      "Description": "Located on the Caribbean coast, known for its beaches, colonial architecture, and the city of Sincelejo.",
+      "Capital": "Sincelejo",
+      "Population": 800000,
+      "AreaKm2": 25750
+    },
+    {
+      "Name": "Tolima",
+      "Code": "SA-CO-TOL",
+      "Description": "A region located in the central part of Colombia, known for its agricultural products and the city of Ibagué.",
+      "Capital": "Ibagué",
+      "Population": 1500000,
+      "AreaKm2": 23822
+    },
+    {
+      "Name": "Valle del Cauca",
+      "Code": "SA-CO-VAL",
+      "Description": "A region located on the Pacific coast, known for its agriculture, tourism, and the city of Cali.",
+      "Capital": "Cali",
+      "Population": 2500000,
+      "AreaKm2": 22470
+    },
+    {
+      "Name": "Vaupes",
+      "Code": "SA-CO-VAP",
+      "Description": "A small region located in the Amazon rainforest, known for its indigenous cultures and natural beauty.",
+      "Capital": "Mitu",
+      "Population": 40000,
+      "AreaKm2": 54427
+    },
+    {
+      "Name": "Vichada",
+      "Code": "SA-CO-VIC",
+      "Description": "A region located in the eastern plains, known for its vast tropical forests and wildlife.",
+      "Capital": "Puerto Carreño",
+      "Population": 100000,
+      "AreaKm2": 236318
+    }
+]  

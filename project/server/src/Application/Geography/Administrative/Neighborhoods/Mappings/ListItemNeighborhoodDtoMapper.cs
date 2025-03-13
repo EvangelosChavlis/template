@@ -21,6 +21,7 @@ public static class ListItemNeighborhoodDtoMapper
             Id: model.Id,
             Name: model.Name,
             Zipcode: model.Zipcode,
+            Code: model.Code,
             IsActive: model.IsActive,
             Count: model.Locations.Count
         );

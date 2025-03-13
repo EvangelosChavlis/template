@@ -1,0 +1,202 @@
+[
+    {
+      "Name": "Acre",
+      "Code": "SA-BR-AC",
+      "Description": "A state located in the westernmost part of Brazil, known for its lush rainforests, rivers, and indigenous communities.",
+      "Capital": "Rio Branco",
+      "Population": 900000,
+      "AreaKm2": 164123
+    },
+    {
+      "Name": "Alagoas",
+      "Code": "SA-BR-AL",
+      "Description": "Famous for its beautiful beaches, colonial architecture, and rich Afro-Brazilian culture.",
+      "Capital": "Maceió",
+      "Population": 3300000,
+      "AreaKm2": 27767
+    },
+    {
+      "Name": "Amazonas",
+      "Code": "SA-BR-AM",
+      "Description": "The largest state in Brazil, known for the vast Amazon rainforest, the Amazon River, and its biodiversity.",
+      "Capital": "Manaus",
+      "Population": 4100000,
+      "AreaKm2": 1559159
+    },
+    {
+      "Name": "Bahia",
+      "Code": "SA-BR-BA",
+      "Description": "Known for its vibrant culture, historic cities like Salvador, and beautiful beaches along the Atlantic coast.",
+      "Capital": "Salvador",
+      "Population": 15000000,
+      "AreaKm2": 564733
+    },
+    {
+      "Name": "Ceará",
+      "Code": "SA-BR-CE",
+      "Description": "Known for its stunning beaches, a rich cultural heritage, and the vibrant city of Fortaleza.",
+      "Capital": "Fortaleza",
+      "Population": 9000000,
+      "AreaKm2": 148920
+    },
+    {
+      "Name": "Espirito Santo",
+      "Code": "SA-BR-ES",
+      "Description": "A coastal state known for its beautiful beaches, mountains, and a thriving port city, Vitória.",
+      "Capital": "Vitoria",
+      "Population": 4000000,
+      "AreaKm2": 46095
+    },
+    {
+      "Name": "Goias",
+      "Code": "SA-BR-GO",
+      "Description": "Located in the heart of Brazil, Goias is known for its agriculture, cattle farming, and beautiful nature reserves.",
+      "Capital": "Goiania",
+      "Population": 7000000,
+      "AreaKm2": 340111
+    },
+    {
+      "Name": "Maranhao",
+      "Code": "SA-BR-MA",
+      "Description": "Known for its unique sand dunes, historical heritage, and the Amazon rainforest s transition into the Brazilian coast.",
+      "Capital": "Sao Luis",
+      "Population": 7000000,
+      "AreaKm2": 331983
+    },
+    {
+      "Name": "Mato Grosso",
+      "Code": "SA-BR-MT",
+      "Description": "Known for its vast agricultural land, the Pantanal wetlands, and a diverse array of wildlife.",
+      "Capital": "Cuiabá",
+      "Population": 3200000,
+      "AreaKm2": 903357
+    },
+    {
+      "Name": "Mato Grosso do Sul",
+      "Code": "SA-BR-MS",
+      "Description": "Located in the southwestern part of Brazil, famous for its rich biodiversity and the Pantanal wetlands.",
+      "Capital": "Campo Grande",
+      "Population": 2800000,
+      "AreaKm2": 357145
+    },
+    {
+      "Name": "Minas Gerais",
+      "Code": "SA-BR-MG",
+      "Description": "One of Brazil s richest states, known for its history, culture, colonial architecture, and its role in Brazil s gold rush.",
+      "Capital": "Belo Horizonte",
+      "Population": 21000000,
+      "AreaKm2": 586528
+    },
+    {
+      "Name": "Para",
+      "Code": "SA-BR-PA",
+      "Description": "Located in the northern part of Brazil, known for the Amazon River, rainforest, and rich mineral resources.",
+      "Capital": "Belem",
+      "Population": 8500000,
+      "AreaKm2": 1247954
+    },
+    {
+      "Name": "Paraiba",
+      "Code": "SA-BR-PB",
+      "Description": "Known for its beautiful beaches, vibrant music scene, and historical cities like João Pessoa.",
+      "Capital": "Joao Pessoa",
+      "Population": 4000000,
+      "AreaKm2": 56585
+    },
+    {
+      "Name": "Parana",
+      "Code": "SA-BR-PR",
+      "Description": "Known for its strong industrial base, rich natural resources, and natural parks like Iguaçu Falls.",
+      "Capital": "Curitiba",
+      "Population": 11500000,
+      "AreaKm2": 199314
+    },
+    {
+      "Name": "Pernambuco",
+      "Code": "SA-BR-PE",
+      "Description": "A coastal state famous for its cultural richness, historical cities like Recife, and beautiful beaches.",
+      "Capital": "Recife",
+      "Population": 9000000,
+      "AreaKm2": 98311
+    },
+    {
+      "Name": "Piauí",
+      "Code": "SA-BR-PI",
+      "Description": "Known for its picturesque landscapes, including chapadas and rivers, and the city of Teresina.",
+      "Capital": "Teresina",
+      "Population": 3200000,
+      "AreaKm2": 251577
+    },
+    {
+      "Name": "Rio de Janeiro",
+      "Code": "SA-BR-RJ",
+      "Description": "One of the most famous states in Brazil, known for its iconic beaches, carnival, and the city of Rio de Janeiro.",
+      "Capital": "Rio de Janeiro",
+      "Population": 17000000,
+      "AreaKm2": 43780
+    },
+    {
+      "Name": "Rio Grande do Norte",
+      "Code": "SA-BR-RN",
+      "Description": "A northeastern state with stunning beaches, dunes, and the historic city of Natal.",
+      "Capital": "Natal",
+      "Population": 3500000,
+      "AreaKm2": 52811
+    },
+    {
+      "Name": "Rio Grande do Sul",
+      "Code": "SA-BR-RS",
+      "Description": "Known for its gaucho culture, southern cuisine, and scenic landscapes.",
+      "Capital": "Porto Alegre",
+      "Population": 11000000,
+      "AreaKm2": 281748
+    },
+    {
+      "Name": "Rondonia",
+      "Code": "SA-BR-RO",
+      "Description": "A state located in the northern region of Brazil, known for its biodiversity and forests.",
+      "Capital": "Porto Velho",
+      "Population": 1700000,
+      "AreaKm2": 237590
+    },
+    {
+      "Name": "Roraima",
+      "Code": "SA-BR-RR",
+      "Description": "A northern state with rich indigenous culture, lush forests, and access to the Amazon River.",
+      "Capital": "Boa Vista",
+      "Population": 500000,
+      "AreaKm2": 224300
+    },
+    {
+      "Name": "Santa Catarina",
+      "Code": "SA-BR-SC",
+      "Description": "Famous for its beautiful beaches, German-influenced culture, and the city of Florianópolis.",
+      "Capital": "Florianopolis",
+      "Population": 7000000,
+      "AreaKm2": 95736
+    },
+    {
+      "Name": "Sao Paulo",
+      "Code": "SA-BR-SP",
+      "Description": "The most populous state in Brazil, known for its massive economic influence, vibrant culture, and São Paulo city.",
+      "Capital": "Sao Paulo",
+      "Population": 46000000,
+      "AreaKm2": 248209
+    },
+    {
+      "Name": "Sergipe",
+      "Code": "SA-BR-SE",
+      "Description": "The smallest state in Brazil, known for its coastal beauty, historical cities, and rich culture.",
+      "Capital": "Aracaju",
+      "Population": 2300000,
+      "AreaKm2": 21915
+    },
+    {
+      "Name": "Tocantins",
+      "Code": "SA-BR-TO",
+      "Description": "Known for its diverse ecosystems, rivers, and natural parks.",
+      "Capital": "Palmas",
+      "Population": 1500000,
+      "AreaKm2": 277620
+    }
+]  

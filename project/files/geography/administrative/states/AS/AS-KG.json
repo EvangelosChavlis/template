@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Bishkek",
+      "Code": "AS-KG-BI",
+      "Description": "The capital city of Kyrgyzstan, known for its Soviet-era architecture, cultural landmarks, and surrounding natural beauty.",
+      "Capital": "Bishkek",
+      "Population": 1000000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Osh",
+      "Code": "AS-KG-OS",
+      "Description": "The second-largest city in Kyrgyzstan, located in the south, known for its rich history, markets, and cultural significance.",
+      "Capital": "Osh",
+      "Population": 300000,
+      "AreaKm2": 150
+    },
+    {
+      "Name": "Chui",
+      "Code": "AS-KG-CH",
+      "Description": "A province located in the north of Kyrgyzstan, known for its agricultural production and proximity to Kazakhstan.",
+      "Capital": "Bishkek",
+      "Population": 500000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Jalal-Abad",
+      "Code": "AS-KG-JA",
+      "Description": "A region in the south of Kyrgyzstan, known for its agriculture, including cotton and fruits, as well as its scenic mountains.",
+      "Capital": "Jalal-Abad",
+      "Population": 700000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Issyk-Kul",
+      "Code": "AS-KG-IK",
+      "Description": "A region centered around Issyk-Kul Lake, known for its tourism, resorts, and stunning landscapes.",
+      "Capital": "Karakol",
+      "Population": 400000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Naryn",
+      "Code": "AS-KG-NA",
+      "Description": "A mountainous region in central Kyrgyzstan, known for its traditional nomadic culture and vast natural landscapes.",
+      "Capital": "Naryn",
+      "Population": 200000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Batken",
+      "Code": "AS-KG-BA",
+      "Description": "A province in the southwest of Kyrgyzstan, bordered by Uzbekistan and Tajikistan, known for its mountainous terrain and agriculture.",
+      "Capital": "Batken",
+      "Population": 200000,
+      "AreaKm2": 15000
+    }
+]  

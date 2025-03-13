@@ -7,7 +7,9 @@ public record UpdateNeighborhoodDto(
     string Name,
     string Description,
     long Population,
+    long AreaKm2,
     string Zipcode,
+    string Code,
     Guid DistrictId,
     Guid Version
 );

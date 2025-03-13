@@ -26,6 +26,16 @@ public class Municipality : BaseEntity
     public long Population { get; set; }
 
     /// <summary>
+    /// Gets or sets the area of the municipality in square kilometers.
+    /// </summary>
+    public double AreaKm2 { get; set; }
+
+    /// <summary>
+    /// Gets or sets the code of the municipality.
+    /// </summary>
+    public string Code { get; set; }
+
+    /// <summary>
     /// Gets or sets a value indicating whether the municipality is active.
     /// </summary>
     public bool IsActive { get; set; }

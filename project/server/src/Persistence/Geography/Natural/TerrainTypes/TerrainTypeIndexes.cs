@@ -24,7 +24,9 @@ public class TerrainTypeIndexes : IEntityTypeConfiguration<TerrainType>
                 {nameof(TerrainType.Id)}_
                 {nameof(TerrainType.Name)}_
                 {nameof(TerrainType.Description)}_
-                {nameof(TerrainType.IsActive)}
-            ".Replace("\n", "").Trim());
+                {nameof(TerrainType.IsActive)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }

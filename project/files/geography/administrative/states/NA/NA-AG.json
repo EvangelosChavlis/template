@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Saint George",
+      "Code": "NA-AG-SG",
+      "Description": "A parish on the island of Antigua, known for its residential communities and agricultural activities.",
+      "Capital": "Pigotts",
+      "Population": 7100,
+      "AreaKm2": 38
+    },
+    {
+      "Name": "Saint John",
+      "Code": "NA-AG-SJ",
+      "Description": "Home to the capital city, St. John s, and the main commercial and governmental hub of the country.",
+      "Capital": "St. John s",
+      "Population": 51000,
+      "AreaKm2": 75
+    },
+    {
+      "Name": "Saint Mary",
+      "Code": "NA-AG-SM",
+      "Description": "A region on Antigua’s western coast, known for its beaches and tourism-driven economy.",
+      "Capital": "Bolands",
+      "Population": 7500,
+      "AreaKm2": 63
+    },
+    {
+      "Name": "Saint Paul",
+      "Code": "NA-AG-SP",
+      "Description": "Home to English Harbour and Nelson’s Dockyard, a historic area with a strong maritime history.",
+      "Capital": "Liberta",
+      "Population": 9000,
+      "AreaKm2": 47
+    },
+    {
+      "Name": "Saint Peter",
+      "Code": "NA-AG-STP",
+      "Description": "Known for the town of Parham and its historical significance as one of Antigua’s early settlements.",
+      "Capital": "Parham",
+      "Population": 5500,
+      "AreaKm2": 38
+    },
+    {
+      "Name": "Saint Philip",
+      "Code": "NA-AG-SPL",
+      "Description": "A less populated parish in the eastern part of Antigua, featuring scenic coastal areas.",
+      "Capital": "Freetown",
+      "Population": 3600,
+      "AreaKm2": 42
+    },
+    {
+      "Name": "Barbuda",
+      "Code": "NA-AG-BA",
+      "Description": "A separate island north of Antigua, known for its untouched beaches and unique ecosystem.",
+      "Capital": "Codrington",
+      "Population": 1800,
+      "AreaKm2": 161
+    }
+]  

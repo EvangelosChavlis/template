@@ -8,6 +8,8 @@ public record UpdateDistrictDto(
     string Name,
     string Description,
     long Population,
+    double AreaKm2,
+    string Code,
     Guid MunicipalityId,
     Guid Version
 );

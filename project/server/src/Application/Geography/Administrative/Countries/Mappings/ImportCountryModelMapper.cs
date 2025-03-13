@@ -14,11 +14,11 @@ public static class ImportCountryModelMapper
     /// preparing it for country entity creation by adding the associated continent ID.
     /// </summary>
     /// <param name="dto">The data transfer object containing imported country details.</param>
-    /// <param name="ContinentId">The unique identifier of the continent the country belongs to.</param>
+    /// <param name="continentId">The unique identifier of the continent the country belongs to.</param>
     /// <returns>A new <see cref="CreateCountryDto"/> instance populated with data from the provided DTO.</returns>
     public static CreateCountryDto ImportCountryMapping(
         this ImportCountryDto dto, 
-        Guid ContinentId
+        Guid continentId
     ) => new (
         Name: dto.Name,
         Description: dto.Description,
@@ -26,6 +26,8 @@ public static class ImportCountryModelMapper
         Capital: dto.Capital,
         Population: dto.Population,
         AreaKm2: dto.AreaKm2,
-        IsActive: true,
-        ContinentId: ContinentId);
+        PhoneCode: dto.PhoneCode,
+        TLD: dto.TLD,
+        Currency: dto.Currency,
+        ContinentId: continentId);
 }

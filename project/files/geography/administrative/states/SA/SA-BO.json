@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Chuquisaca",
+      "Code": "SA-BO-H",
+      "Description": "Known for its colonial history, beautiful landscapes, and the capital, Sucre, which was once the constitutional capital of Bolivia.",
+      "Capital": "Sucre",
+      "Population": 500000,
+      "AreaKm2": 50502
+    },
+    {
+      "Name": "La Paz",
+      "Code": "SA-BO-L",
+      "Description": "Famous for being the highest capital city in the world, La Paz offers a blend of Andean culture, modernity, and breathtaking landscapes.",
+      "Capital": "La Paz",
+      "Population": 3000000,
+      "AreaKm2": 133985
+    },
+    {
+      "Name": "Santa Cruz",
+      "Code": "SA-BO-S",
+      "Description": "The economic hub of Bolivia, Santa Cruz is known for its agricultural production, thriving businesses, and tropical climate.",
+      "Capital": "Santa Cruz de la Sierra",
+      "Population": 3000000,
+      "AreaKm2": 370621
+    },
+    {
+      "Name": "Cochabamba",
+      "Code": "SA-BO-C",
+      "Description": "Located in the central part of the country, Cochabamba is known for its beautiful valley, cultural heritage, and agriculture.",
+      "Capital": "Cochabamba",
+      "Population": 2000000,
+      "AreaKm2": 55726
+    },
+    {
+      "Name": "Oruro",
+      "Code": "SA-BO-O",
+      "Description": "Known for its rich mining industry and the famous Oruro Carnival, which is a UNESCO cultural heritage event.",
+      "Capital": "Oruro",
+      "Population": 500000,
+      "AreaKm2": 53000
+    },
+    {
+      "Name": "Potosí",
+      "Code": "SA-BO-P",
+      "Description": "Famous for its mining history, especially the silver mines of Cerro Rico, which contributed to Spain s wealth during colonial times.",
+      "Capital": "Potosí",
+      "Population": 800000,
+      "AreaKm2": 118218
+    },
+    {
+      "Name": "Tarija",
+      "Code": "SA-BO-T",
+      "Description": "Known for its wine production, Tarija is located in the southern part of Bolivia, with a Mediterranean-like climate.",
+      "Capital": "Tarija",
+      "Population": 600000,
+      "AreaKm2": 37417
+    },
+    {
+      "Name": "Beni",
+      "Code": "SA-BO-B",
+      "Description": "A lowland region known for its vast wetlands, wildlife, and the capital city, Trinidad.",
+      "Capital": "Trinidad",
+      "Population": 500000,
+      "AreaKm2": 213564
+    },
+    {
+      "Name": "Pando",
+      "Code": "SA-BO-N",
+      "Description": "Located in the northern part of Bolivia, Pando is known for its Amazon rainforest and biodiversity.",
+      "Capital": "Cobija",
+      "Population": 200000,
+      "AreaKm2": 63111
+    }
+]  

@@ -1,0 +1,18 @@
+[
+    {
+      "Name": "Kastoria",
+      "Code": "EU-GR-WM-KAS",
+      "Description": "A region known for its picturesque lake and mountainous terrain, famous for its fur trade.",
+      "Capital": "Kastoria",
+      "Population": 60000,
+      "AreaKm2": 1250.00
+    },
+    {
+      "Name": "Florina",
+      "Code": "EU-GR-WM-FLO",
+      "Description": "A region located in the northern part of Western Macedonia, known for its natural beauty and history.",
+      "Capital": "Florina",
+      "Population": 55000,
+      "AreaKm2": 1220.00
+    }
+]

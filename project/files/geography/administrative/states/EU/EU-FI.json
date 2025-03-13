@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Uusimaa",
+      "Code": "EU-FI-01",
+      "Description": "Uusimaa is the capital region, home to Helsinki, the largest city in Finland, known for its vibrant culture and modern infrastructure.",
+      "Capital": "Helsinki",
+      "Population": 1600000,
+      "AreaKm2": 9650
+    },
+    {
+      "Name": "Southern Finland",
+      "Code": "EU-FI-02",
+      "Description": "Southern Finland features beautiful lakes, charming towns, and a lively cultural scene.",
+      "Capital": "Tampere",
+      "Population": 800000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Western Finland",
+      "Code": "EU-FI-03",
+      "Description": "Western Finland is known for its coastal beauty, archipelagos, and a focus on maritime industries.",
+      "Capital": "Turku",
+      "Population": 700000,
+      "AreaKm2": 24000
+    },
+    {
+      "Name": "Eastern Finland",
+      "Code": "EU-FI-04",
+      "Description": "Eastern Finland offers picturesque forests, lakes, and a quieter lifestyle, with a focus on nature and tourism.",
+      "Capital": "Joensuu",
+      "Population": 500000,
+      "AreaKm2": 31000
+    },
+    {
+      "Name": "Northern Finland",
+      "Code": "EU-FI-05",
+      "Description": "Northern Finland is known for its vast wilderness, northern lights, and strong cultural ties to the indigenous Sámi people.",
+      "Capital": "Rovaniemi",
+      "Population": 200000,
+      "AreaKm2": 45000
+    }
+]  

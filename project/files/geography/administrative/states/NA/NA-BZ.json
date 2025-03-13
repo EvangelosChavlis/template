@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Belize District",
+      "Code": "NA-BZ-BZ",
+      "Description": "Home to the largest city, Belize City, and the main commercial and cultural hub.",
+      "Capital": "Belize City",
+      "Population": 124000,
+      "AreaKm2": 4307
+    },
+    {
+      "Name": "Cayo District",
+      "Code": "NA-BZ-CY",
+      "Description": "Known for its ecotourism, Mayan ruins, and the capital city, Belmopan.",
+      "Capital": "Belmopan",
+      "Population": 97300,
+      "AreaKm2": 5180
+    },
+    {
+      "Name": "Corozal District",
+      "Code": "NA-BZ-CZ",
+      "Description": "A northern district with strong ties to Mexico, known for its beaches and Free Zone.",
+      "Capital": "Corozal Town",
+      "Population": 48000,
+      "AreaKm2": 1860
+    },
+    {
+      "Name": "Orange Walk District",
+      "Code": "NA-BZ-OW",
+      "Description": "A sugar-producing region with rich Mayan heritage, including the Lamanai ruins.",
+      "Capital": "Orange Walk Town",
+      "Population": 48000,
+      "AreaKm2": 4627
+    },
+    {
+      "Name": "Stann Creek District",
+      "Code": "NA-BZ-SC",
+      "Description": "Known for its Garifuna culture, tourism, and coastal towns like Dangriga and Placencia.",
+      "Capital": "Dangriga",
+      "Population": 45000,
+      "AreaKm2": 2390
+    },
+    {
+      "Name": "Toledo District",
+      "Code": "NA-BZ-TD",
+      "Description": "The southernmost and least developed district, rich in rainforest and indigenous Maya culture.",
+      "Capital": "Punta Gorda",
+      "Population": 38000,
+      "AreaKm2": 4400
+    }
+]  

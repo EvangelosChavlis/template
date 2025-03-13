@@ -10,7 +10,6 @@ using server.src.Domain.Common.Dtos;
 using server.src.Domain.Geography.Administrative.Districts.Models;
 using server.src.Domain.Geography.Administrative.Neighborhoods.Dtos;
 using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
-using server.src.Domain.Geography.Administrative.States.Models;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Geography.Administrative.Neighborhoods.Commands;
@@ -43,10 +42,14 @@ public class CreateNeighborhoodHandler : IRequestHandler<CreateNeighborhoodComma
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<Neighborhood, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<Neighborhood, bool>>[] 
+        { 
+            n => n.Name!.Equals(command.Dto.Name) ||
+                n.Code!.Equals(command.Dto.Code)
+        };
         var existingNeighborhood = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the neighborhood already exists in the system
         if (existingNeighborhood is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

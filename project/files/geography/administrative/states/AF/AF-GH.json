@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Greater Accra",
+      "Code": "AF-GH-GA",
+      "Description": "The capital region, home to the nation s capital, Accra, and the heart of the country s economy and culture.",
+      "Capital": "Accra",
+      "Population": 5000000,
+      "AreaKm2": 3245
+    },
+    {
+      "Name": "Ashanti",
+      "Code": "AF-GH-AS",
+      "Description": "Located in the central region of the country, known for its rich history, culture, and the Ashanti Kingdom.",
+      "Capital": "Kumasi",
+      "Population": 5000000,
+      "AreaKm2": 24149
+    },
+    {
+      "Name": "Western",
+      "Code": "AF-GH-WE",
+      "Description": "Known for its gold-rich lands, coastal beauty, and the capital city, Sekondi-Takoradi.",
+      "Capital": "Sekondi-Takoradi",
+      "Population": 3000000,
+      "AreaKm2": 23892
+    },
+    {
+      "Name": "Central",
+      "Code": "AF-GH-CE",
+      "Description": "A region located on the southern coast, known for its historic forts, beautiful beaches, and agriculture.",
+      "Capital": "Cape Coast",
+      "Population": 2500000,
+      "AreaKm2": 9882
+    },
+    {
+      "Name": "Volta",
+      "Code": "AF-GH-VO",
+      "Description": "A region located in the eastern part of Ghana, known for its mountainous terrain and cultural diversity.",
+      "Capital": "Ho",
+      "Population": 2200000,
+      "AreaKm2": 17947
+    },
+    {
+      "Name": "Eastern",
+      "Code": "AF-GH-EE",
+      "Description": "Located in the southeastern part of Ghana, known for its agricultural activities, forests, and historical sites.",
+      "Capital": "Koforidua",
+      "Population": 2500000,
+      "AreaKm2": 19309
+    },
+    {
+      "Name": "Northern",
+      "Code": "AF-GH-NO",
+      "Description": "A region in the northern part of Ghana, known for its vast savannah, wildlife, and historical heritage.",
+      "Capital": "Tamale",
+      "Population": 2200000,
+      "AreaKm2": 70313
+    },
+    {
+      "Name": "Upper West",
+      "Code": "AF-GH-UW",
+      "Description": "A region in the northwest, known for its rich agricultural lands and traditional culture.",
+      "Capital": "Wa",
+      "Population": 800000,
+      "AreaKm2": 18154
+    },
+    {
+      "Name": "Upper East",
+      "Code": "AF-GH-UE",
+      "Description": "Located in the northeastern part of the country, known for its cultural heritage and being close to the borders with Burkina Faso.",
+      "Capital": "Bolgatanga",
+      "Population": 1200000,
+      "AreaKm2": 8742
+    }
+]  

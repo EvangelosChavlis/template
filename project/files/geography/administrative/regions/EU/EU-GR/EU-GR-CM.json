@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Thessaloniki",
+      "Code": "EU-GR-CM-THS",
+      "Description": "The largest and most populous region in Central Macedonia, known for its vibrant cultural and historical significance.",
+      "Capital": "Thessaloniki",
+      "Population": 1000000,
+      "AreaKm2": 1125.00
+    },
+    {
+      "Name": "Halkidiki",
+      "Code": "EU-GR-CM-HAL",
+      "Description": "A region known for its three peninsulas, beautiful beaches, and Mount Athos.",
+      "Capital": "Poligiros",
+      "Population": 100000,
+      "AreaKm2": 2900.00
+    },
+    {
+      "Name": "Kilkis",
+      "Code": "EU-GR-CM-KIL",
+      "Description": "A region known for its agricultural economy and proximity to the border with North Macedonia.",
+      "Capital": "Kilkis",
+      "Population": 150000,
+      "AreaKm2": 1825.00
+    },
+    {
+      "Name": "Pella",
+      "Code": "EU-GR-CM-PEL",
+      "Description": "A region rich in history, home to the ancient city of Pella, the birthplace of Alexander the Great.",
+      "Capital": "Edessa",
+      "Population": 150000,
+      "AreaKm2": 2350.00
+    },
+    {
+      "Name": "Serres",
+      "Code": "EU-GR-CM-SER",
+      "Description": "A historical region known for its natural beauty and fertile plains.",
+      "Capital": "Serres",
+      "Population": 150000,
+      "AreaKm2": 3070.00
+    },
+    {
+      "Name": "Drama",
+      "Code": "EU-GR-CM-DRA",
+      "Description": "A region in northeastern Central Macedonia, known for its mountainous terrain and rich history.",
+      "Capital": "Drama",
+      "Population": 100000,
+      "AreaKm2": 1845.00
+    }
+]

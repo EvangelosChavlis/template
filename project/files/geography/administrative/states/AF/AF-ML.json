@@ -1,0 +1,74 @@
+[
+    {
+      "Name": "Bamako",
+      "Code": "AF-ML-BK",
+      "Description": "Bamako is the capital and largest city of Mali. It serves as the administrative, cultural, and economic hub of the country.",
+      "Capital": "Bamako",
+      "Population": 2300000,
+      "AreaKm2": 2500
+    },
+    {
+      "Name": "Kayes",
+      "Code": "AF-ML-KY",
+      "Description": "Kayes is the westernmost region of Mali, known for its gold mines and agricultural production, especially cotton and millet.",
+      "Capital": "Kayes",
+      "Population": 1300000,
+      "AreaKm2": 60000
+    },
+    {
+      "Name": "Ségou",
+      "Code": "AF-ML-SG",
+      "Description": "Ségou is located in the central part of Mali, recognized for its historical significance and the Niger River passing through it.",
+      "Capital": "Ségou",
+      "Population": 1600000,
+      "AreaKm2": 54000
+    },
+    {
+      "Name": "Koulikoro",
+      "Code": "AF-ML-KO",
+      "Description": "Koulikoro is located in the western part of Mali and plays an important role in the transportation and agricultural sectors.",
+      "Capital": "Koulikoro",
+      "Population": 900000,
+      "AreaKm2": 28000
+    },
+    {
+      "Name": "Tombouctou",
+      "Code": "AF-ML-TO",
+      "Description": "Tombouctou (Timbuktu) is famous for its historical significance as a center of learning and trade, particularly during the medieval period.",
+      "Capital": "Tombouctou",
+      "Population": 700000,
+      "AreaKm2": 300000
+    },
+    {
+      "Name": "Gao",
+      "Code": "AF-ML-GA",
+      "Description": "Gao is located in the northern part of Mali and is known for its desert landscapes and historical trading posts.",
+      "Capital": "Gao",
+      "Population": 600000,
+      "AreaKm2": 150000
+    },
+    {
+      "Name": "Kidal",
+      "Code": "AF-ML-KD",
+      "Description": "Kidal is in the northeastern part of Mali and is known for its desert terrain, nomadic Tuareg culture, and political significance.",
+      "Capital": "Kidal",
+      "Population": 150000,
+      "AreaKm2": 150000
+    },
+    {
+      "Name": "Mopti",
+      "Code": "AF-ML-MP",
+      "Description": "Mopti is in central Mali and serves as a trade and transportation hub, known for its proximity to the Niger River and its diverse ethnic communities.",
+      "Capital": "Mopti",
+      "Population": 1100000,
+      "AreaKm2": 70000
+    },
+    {
+      "Name": "Sikasso",
+      "Code": "AF-ML-SK",
+      "Description": "Sikasso is the southernmost region of Mali, known for its fertile lands, agriculture (especially cotton), and vibrant local markets.",
+      "Capital": "Sikasso",
+      "Population": 1400000,
+      "AreaKm2": 30000
+    }
+]  

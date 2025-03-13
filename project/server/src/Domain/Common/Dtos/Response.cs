@@ -27,6 +27,11 @@ public class Response<T>
     /// </summary>
     public string? Message { get; set; }
 
+    /// <summary>
+    /// Gets or sets a collection of failure reasons when the command is unsuccessful.
+    /// </summary>
+    public List<string> Failures { get; set; } = [];
+
 
     /// <summary>
     /// Assigns the provided data to the response and returns the updated instance.
@@ -69,6 +74,17 @@ public class Response<T>
     public Response<T> WithMessage(string message)
     {
         Message = message;
+        return this;
+    }
+
+    /// <summary>
+    /// Assigns failure reasons to the response and returns the updated instance.
+    /// </summary>
+    /// <param name="failures">A collection of failure reasons.</param>
+    /// <returns>The updated <see cref="Response{T}"/> instance.</returns>
+    public Response<T> WithFailures(List<string> failures)
+    {
+        Failures = failures;
         return this;
     }
 }

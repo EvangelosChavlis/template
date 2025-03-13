@@ -1,0 +1,122 @@
+[
+    {
+      "Name": "Azuay",
+      "Code": "SA-EC-AZ",
+      "Description": "Located in the southern part of Ecuador, known for its mountainous landscapes and the city of Cuenca.",
+      "Capital": "Cuenca",
+      "Population": 700000,
+      "AreaKm2": 8000
+    },
+    {
+      "Name": "Bolivar",
+      "Code": "SA-EC-BO",
+      "Description": "A central region of Ecuador, known for its Andean highlands and rural areas.",
+      "Capital": "Guaranda",
+      "Population": 200000,
+      "AreaKm2": 4320
+    },
+    {
+      "Name": "Canar",
+      "Code": "SA-EC-CAN",
+      "Description": "Located in the southern part of Ecuador, known for its agricultural production and the Inca ruins of Ingapirca.",
+      "Capital": "Azogues",
+      "Population": 200000,
+      "AreaKm2": 3975
+    },
+    {
+      "Name": "Carchi",
+      "Code": "SA-EC-CA",
+      "Description": "A region located in the northern part of Ecuador, bordering Colombia, known for its Andean landscapes and agricultural activities.",
+      "Capital": "Tulcan",
+      "Population": 200000,
+      "AreaKm2": 3914
+    },
+    {
+      "Name": "Chimborazo",
+      "Code": "SA-EC-CH",
+      "Description": "A region in central Ecuador, known for the Chimborazo volcano, the highest point in the country.",
+      "Capital": "Riobamba",
+      "Population": 400000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Cotoepe",
+      "Code": "SA-EC-CU",
+      "Description": "A coastal region, known for its beautiful beaches and vibrant cities.",
+      "Capital": "Guayaquil",
+      "Population": 2000000,
+      "AreaKm2": 44000
+    },
+    {
+      "Name": "Imbabura",
+      "Code": "SA-EC-IM",
+      "Description": "Located in the northern Andes, known for its indigenous culture and the beautiful Lake San Pablo.",
+      "Capital": "Ibarra",
+      "Population": 350000,
+      "AreaKm2": 4500
+    },
+    {
+      "Name": "Loja",
+      "Code": "SA-EC-LO",
+      "Description": "A region in the southern part of Ecuador, known for its cultural richness and proximity to the border with Peru.",
+      "Capital": "Loja",
+      "Population": 500000,
+      "AreaKm2": 10000
+    },
+    {
+      "Name": "Los Rios",
+      "Code": "SA-EC-LR",
+      "Description": "Located in the coastal region, known for its rivers and agriculture.",
+      "Capital": "Babahoyo",
+      "Population": 700000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Manabi",
+      "Code": "SA-EC-MA",
+      "Description": "A coastal region, known for its beaches, seafood, and the city of Portoviejo.",
+      "Capital": "Portoviejo",
+      "Population": 1500000,
+      "AreaKm2": 19000
+    },
+    {
+      "Name": "Morona Santiago",
+      "Code": "SA-EC-MO",
+      "Description": "Located in the southeastern part of Ecuador, known for its Amazonian landscapes and indigenous cultures.",
+      "Capital": "Macas",
+      "Population": 200000,
+      "AreaKm2": 25000
+    },
+    {
+      "Name": "Napo",
+      "Code": "SA-EC-NA",
+      "Description": "A region located in the Amazon rainforest, known for its biodiversity and the city of Tena.",
+      "Capital": "Tena",
+      "Population": 200000,
+      "AreaKm2": 12000
+    },
+    {
+      "Name": "Pichincha",
+      "Code": "SA-EC-PI",
+      "Description": "Located in central Ecuador, home to the capital city, Quito, known for its historical sites and natural beauty.",
+      "Capital": "Quito",
+      "Population": 2200000,
+      "AreaKm2": 10480
+    },
+    {
+      "Name": "Tungurahua",
+      "Code": "SA-EC-TU",
+      "Description": "Located in central Ecuador, known for the Tungurahua volcano and the popular town of Baños.",
+      "Capital": "Ambato",
+      "Population": 400000,
+      "AreaKm2": 3300
+    },
+    {
+      "Name": "Zamora-Chinchipe",
+      "Code": "SA-EC-ZC",
+      "Description": "A region in the southeastern part of Ecuador, known for its tropical forests, biodiversity, and mineral resources.",
+      "Capital": "Zamora",
+      "Population": 100000,
+      "AreaKm2": 22000
+    }
+]  

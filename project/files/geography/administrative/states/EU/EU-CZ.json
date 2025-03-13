@@ -1,0 +1,98 @@
+[
+    {
+      "Name": "Prague",
+      "Code": "EU-CZ-PR",
+      "Description": "Prague, the capital and largest city of the Czech Republic, is known for its medieval Old Town, Gothic architecture, and vibrant cultural scene.",
+      "Capital": "Prague",
+      "Population": 1300,
+      "AreaKm2": 496
+    },
+    {
+      "Name": "South Bohemian",
+      "Code": "EU-CZ-SS",
+      "Description": "South Bohemian region, famous for its beautiful landscapes, including ponds, castles, and the UNESCO World Heritage site Český Krumlov.",
+      "Capital": "České Budějovice",
+      "Population": 650000,
+      "AreaKm2": 10558
+    },
+    {
+      "Name": "South Moravian",
+      "Code": "EU-CZ-SM",
+      "Description": "South Moravian region, known for its wine-making traditions, beautiful towns like Brno, and the Moravian Karst cave system.",
+      "Capital": "Brno",
+      "Population": 1200000,
+      "AreaKm2": 6741
+    },
+    {
+      "Name": "Plzeň",
+      "Code": "EU-CZ-PL",
+      "Description": "Plzeň, known worldwide as the birthplace of Pilsner beer, features historical sites and beautiful old buildings.",
+      "Capital": "Plzeň",
+      "Population": 170000,
+      "AreaKm2": 7216
+    },
+    {
+      "Name": "Karlovy Vary",
+      "Code": "EU-CZ-KV",
+      "Description": "Karlovy Vary is famous for its thermal spas, picturesque town center, and the annual international film festival.",
+      "Capital": "Karlovy Vary",
+      "Population": 50000,
+      "AreaKm2": 3318
+    },
+    {
+      "Name": "Ústí nad Labem",
+      "Code": "EU-CZ-UL",
+      "Description": "Ústí nad Labem is an industrial region located along the Elbe River, known for its natural beauty and proximity to the Ore Mountains.",
+      "Capital": "Ústí nad Labem",
+      "Population": 300000,
+      "AreaKm2": 5148
+    },
+    {
+      "Name": "Liberec",
+      "Code": "EU-CZ-LI",
+      "Description": "Liberec is situated in the northern part of the Czech Republic, known for its ski resorts and the stunning Ještěd Tower.",
+      "Capital": "Liberec",
+      "Population": 450000,
+      "AreaKm2": 1634
+    },
+    {
+      "Name": "Hradec Králové",
+      "Code": "EU-CZ-HK",
+      "Description": "Hradec Králové is a historical city, known for its baroque architecture and being an important administrative and cultural center.",
+      "Capital": "Hradec Králové",
+      "Population": 95000,
+      "AreaKm2": 4552
+    },
+    {
+      "Name": "Pardubice",
+      "Code": "EU-CZ-PD",
+      "Description": "Pardubice, a region known for its horse racing traditions, rich history, and stunning architecture.",
+      "Capital": "Pardubice",
+      "Population": 900000,
+      "AreaKm2": 4515
+    },
+    {
+      "Name": "Vysočina",
+      "Code": "EU-CZ-VY",
+      "Description": "Vysočina is a picturesque region, known for its forests, lakes, and traditional villages, making it an ideal place for outdoor activities.",
+      "Capital": "Jihlava",
+      "Population": 600000,
+      "AreaKm2": 6885
+    },
+    {
+      "Name": "Zlin",
+      "Code": "EU-CZ-ZL",
+      "Description": "Zlín is known for its unique functionalist architecture, with many buildings designed by the famous architect Tomáš Baťa.",
+      "Capital": "Zlín",
+      "Population": 800000,
+      "AreaKm2": 3961
+    },
+    {
+      "Name": "Moravian-Silesian",
+      "Code": "EU-CZ-MS",
+      "Description": "Moravian-Silesian region is an industrial hub with a rich history, home to the city of Ostrava and surrounded by forests and mountains.",
+      "Capital": "Ostrava",
+      "Population": 1300000,
+      "AreaKm2": 5412
+    }
+]  

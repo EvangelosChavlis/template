@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Kathmandu Valley",
+      "Code": "AS-NP-KV",
+      "Description": "The capital region of Nepal, home to the capital city Kathmandu, and known for its rich history, ancient temples, and vibrant culture.",
+      "Capital": "Kathmandu",
+      "Population": 2500000,
+      "AreaKm2": 648
+    },
+    {
+      "Name": "Bagmati",
+      "Code": "AS-NP-BG",
+      "Description": "A province encompassing Kathmandu and surrounding areas, it includes cultural, religious, and natural landmarks.",
+      "Capital": "Hetauda",
+      "Population": 2400000,
+      "AreaKm2": 20700
+    },
+    {
+      "Name": "Lumbini",
+      "Code": "AS-NP-LB",
+      "Description": "The birthplace of Buddha, this region is famous for its spiritual significance and many Buddhist monasteries.",
+      "Capital": "Lumbini",
+      "Population": 1000000,
+      "AreaKm2": 2273
+    },
+    {
+      "Name": "Gandaki",
+      "Code": "AS-NP-GD",
+      "Description": "A central region of Nepal, home to the famous Annapurna mountain range and scenic trekking routes.",
+      "Capital": "Pokhara",
+      "Population": 2000000,
+      "AreaKm2": 22400
+    },
+    {
+      "Name": "Province No. 1",
+      "Code": "AS-NP-P1",
+      "Description": "A region in eastern Nepal, known for its diverse landscapes, including the eastern Himalayas and the Sagarmatha National Park.",
+      "Capital": "Biratnagar",
+      "Population": 5500000,
+      "AreaKm2": 2518
+    },
+    {
+      "Name": "Province No. 2",
+      "Code": "AS-NP-P2",
+      "Description": "A region in southeastern Nepal, known for its agricultural land, ethnic diversity, and cultural heritage.",
+      "Capital": "Janakpur",
+      "Population": 6000000,
+      "AreaKm2": 9756
+    },
+    {
+      "Name": "Karnali",
+      "Code": "AS-NP-KA",
+      "Description": "A mountainous region in mid-western Nepal, known for its rivers, valleys, and trekking routes.",
+      "Capital": "Birendranagar",
+      "Population": 1800000,
+      "AreaKm2": 25900
+    },
+    {
+      "Name": "Sudurpashchim",
+      "Code": "AS-NP-SP",
+      "Description": "The far western region of Nepal, characterized by diverse ethnic communities and beautiful natural landscapes.",
+      "Capital": "Dhangadhi",
+      "Population": 4000000,
+      "AreaKm2": 19000
+    }
+]  

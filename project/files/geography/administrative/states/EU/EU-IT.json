@@ -1,0 +1,154 @@
+[
+  {
+    "Name": "Abruzzo",
+    "Code": "EU-IT-AB",
+    "Description": "Abruzzo is known for its beautiful mountainous landscapes, medieval towns, and beaches along the Adriatic coast.",
+    "Capital": "L Aquila",
+    "Population": 1311580,
+    "AreaKm2": 10790
+  },
+  {
+    "Name": "Basilicata",
+    "Code": "EU-IT-BA",
+    "Description": "Basilicata is a largely mountainous region, known for its charming towns, such as Matera, which is famous for its ancient cave dwellings.",
+    "Capital": "Potenza",
+    "Population": 574500,
+    "AreaKm2": 10000
+  },
+  {
+    "Name": "Calabria",
+    "Code": "EU-IT-CA",
+    "Description": "Calabria is located at the tip of the Italian Peninsula, known for its stunning coastlines, ancient ruins, and mountainous terrain.",
+    "Capital": "Catanzaro",
+    "Population": 1950000,
+    "AreaKm2": 15000
+  },
+  {
+    "Name": "Campania",
+    "Code": "EU-IT-CP",
+    "Description": "Campania is home to Naples, the Amalfi Coast, and the archaeological site of Pompeii. It boasts a rich history, culture, and delicious cuisine.",
+    "Capital": "Naples",
+    "Population": 5800000,
+    "AreaKm2": 13000
+  },
+  {
+    "Name": "Emilia-Romagna",
+    "Code": "EU-IT-ER",
+    "Description": "Emilia-Romagna is famous for its food (like Parma ham and Parmesan cheese), historic cities like Bologna, and the scenic Apennine Mountains.",
+    "Capital": "Bologna",
+    "Population": 4500000,
+    "AreaKm2": 22500
+  },
+  {
+    "Name": "Friuli Venezia Giulia",
+    "Code": "EU-IT-FV",
+    "Description": "Friuli Venezia Giulia is located in northeastern Italy, known for its beautiful mountains, coastal areas, and cultural heritage.",
+    "Capital": "Trieste",
+    "Population": 1200000,
+    "AreaKm2": 8000
+  },
+  {
+    "Name": "Lazio",
+    "Code": "EU-IT-LZ",
+    "Description": "Lazio is home to the capital city of Rome, Italy’s political and cultural heart, known for its ancient history and landmarks like the Colosseum.",
+    "Capital": "Rome",
+    "Population": 6000000,
+    "AreaKm2": 17000
+  },
+  {
+    "Name": "Liguria",
+    "Code": "EU-IT-LG",
+    "Description": "Liguria is a coastal region, known for its Mediterranean climate, beautiful seaside towns such as Genoa, and the iconic Cinque Terre.",
+    "Capital": "Genoa",
+    "Population": 1500000,
+    "AreaKm2": 5000
+  },
+  {
+    "Name": "Lombardy",
+    "Code": "EU-IT-LM",
+    "Description": "Lombardy is one of the most economically developed regions, with Milan being a global fashion and finance hub.",
+    "Capital": "Milan",
+    "Population": 10000000,
+    "AreaKm2": 23800
+  },
+  {
+    "Name": "Marche",
+    "Code": "EU-IT-MA",
+    "Description": "Marche is a picturesque region known for its rolling hills, medieval towns, and beautiful Adriatic coastline.",
+    "Capital": "Ancona",
+    "Population": 1500000,
+    "AreaKm2": 9000
+  },
+  {
+    "Name": "Molise",
+    "Code": "EU-IT-MO",
+    "Description": "Molise is a small, mountainous region with historic towns and a quieter pace of life compared to Italy’s larger regions.",
+    "Capital": "Campobasso",
+    "Population": 300000,
+    "AreaKm2": 4000
+  },
+  {
+    "Name": "Piedmont",
+    "Code": "EU-IT-PI",
+    "Description": "Piedmont is a region known for its wines, the Alps, and its capital, Turin, which is an important cultural and industrial hub.",
+    "Capital": "Turin",
+    "Population": 4300000,
+    "AreaKm2": 25000
+  },
+  {
+    "Name": "Apulia",
+    "Code": "EU-IT-AP",
+    "Description": "Apulia is located in the southeastern part of Italy, known for its olive trees, beautiful beaches, and historic sites such as the city of Lecce.",
+    "Capital": "Bari",
+    "Population": 4000000,
+    "AreaKm2": 19000
+  },
+  {
+    "Name": "Sardinia",
+    "Code": "EU-IT-SR",
+    "Description": "Sardinia is a large island known for its stunning beaches, rugged mountains, and unique culture, including its famous cuisine and festivals.",
+    "Capital": "Cagliari",
+    "Population": 1650000,
+    "AreaKm2": 24000
+  },
+  {
+    "Name": "Sicily",
+    "Code": "EU-IT-SI",
+    "Description": "Sicily is the largest Mediterranean island, known for its ancient ruins, beaches, and vibrant culture. The city of Palermo is its capital.",
+    "Capital": "Palermo",
+    "Population": 5000000,
+    "AreaKm2": 25000
+  },
+  {
+    "Name": "Tuscany",
+    "Code": "EU-IT-TU",
+    "Description": "Tuscany is famous for its picturesque countryside, historic cities like Florence and Pisa, and its wine-producing regions.",
+    "Capital": "Florence",
+    "Population": 3700000,
+    "AreaKm2": 23000
+  },
+  {
+    "Name": "Trentino-South Tyrol",
+    "Code": "EU-IT-TY",
+    "Description": "Trentino-South Tyrol is located in the Alps and is known for its outdoor activities, beautiful mountains, and German-speaking population.",
+    "Capital": "Trento",
+    "Population": 1050000,
+    "AreaKm2": 7000
+  },
+  {
+    "Name": "Umbria",
+    "Code": "EU-IT-UM",
+    "Description": "Umbria is known as the green heart of Italy, famous for its charming medieval towns, rolling hills, and scenic landscapes.",
+    "Capital": "Perugia",
+    "Population": 900000,
+    "AreaKm2": 8400
+  },
+  {
+    "Name": "Veneto",
+    "Code": "EU-IT-VE",
+    "Description": "Veneto is a region in northeastern Italy, known for its iconic city of Venice, along with Verona and the Dolomites.",
+    "Capital": "Venice",
+    "Population": 4900000,
+    "AreaKm2": 18000
+  }
+]

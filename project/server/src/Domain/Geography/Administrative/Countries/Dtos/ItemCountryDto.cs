@@ -12,6 +12,9 @@ public record ItemCountryDto(
     string Capital,
     long Population,
     double AreaKm2,
+    string PhoneCode,
+    string TLD,
+    string Currency,
     bool IsActive,
     string Continent,
     Guid Version

@@ -1,0 +1,26 @@
+[
+    {
+      "Name": "Victoria",
+      "Code": "AF-SC-VI",
+      "Description": "Victoria is the capital and largest city of Seychelles, located on Mahé Island. It is known for its colonial architecture, markets, and as a hub for tourism.",
+      "Capital": "Victoria",
+      "Population": 25000,
+      "AreaKm2": 20
+    },
+    {
+      "Name": "Beau Vallon",
+      "Code": "AF-SC-BV",
+      "Description": "Beau Vallon is a popular coastal area in Seychelles, known for its beautiful beach, resorts, and water sports activities.",
+      "Capital": "Beau Vallon",
+      "Population": 2000,
+      "AreaKm2": 10
+    },
+    {
+      "Name": "Anse Royale",
+      "Code": "AF-SC-AR",
+      "Description": "Anse Royale is a picturesque area on Mahé Island, known for its beach, clear waters, and popular tourist attractions.",
+      "Capital": "Anse Royale",
+      "Population": 3000,
+      "AreaKm2": 15
+    }
+]  

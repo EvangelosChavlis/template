@@ -47,6 +47,18 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
         builder.Property(c => c.AreaKm2)
             .IsRequired();
 
+        builder.Property(c => c.PhoneCode)
+            .IsRequired()
+            .HasMaxLength(CountryLength.PhoneCodeLength);
+
+        builder.Property(c => c.TLD)
+            .IsRequired()
+            .HasMaxLength(CountryLength.TLDLength);
+
+        builder.Property(c => c.Currency)
+            .IsRequired()
+            .HasMaxLength(CountryLength.CurrencyLength);
+
         builder.Property(c => c.IsActive)
             .IsRequired();
 

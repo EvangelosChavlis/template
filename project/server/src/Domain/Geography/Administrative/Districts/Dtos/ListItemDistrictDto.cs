@@ -8,6 +8,7 @@ public record ListItemDistrictDto(
     Guid Id,
     string Name,
     long Population,
+    string Code,
     bool IsActive,
     int Count
 );

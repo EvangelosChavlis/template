@@ -1,0 +1,106 @@
+[
+    {
+      "Name": "Algiers",
+      "Code": "AF-DZ-AL",
+      "Description": "The capital region, known for its vibrant culture and historical significance.",
+      "Capital": "Algiers",
+      "Population": 3500000,
+      "AreaKm2": 1186
+    },
+    {
+      "Name": "Oran",
+      "Code": "AF-DZ-OR",
+      "Description": "A coastal region known for its Mediterranean beaches and historical sites.",
+      "Capital": "Oran",
+      "Population": 1500000,
+      "AreaKm2": 982
+    },
+    {
+      "Name": "Constantine",
+      "Code": "AF-DZ-CO",
+      "Description": "Known for its historical architecture and mountainous terrain.",
+      "Capital": "Constantine",
+      "Population": 4500000,
+      "AreaKm2": 20630
+    },
+    {
+      "Name": "Tizi Ouzou",
+      "Code": "AF-DZ-TO",
+      "Description": "A region known for its beautiful mountains and Kabyle culture.",
+      "Capital": "Tizi Ouzou",
+      "Population": 1500000,
+      "AreaKm2": 3716
+    },
+    {
+      "Name": "Sétif",
+      "Code": "AF-DZ-SE",
+      "Description": "A region known for its agriculture and historical Roman ruins.",
+      "Capital": "Sétif",
+      "Population": 1600000,
+      "AreaKm2": 22878
+    },
+    {
+      "Name": "Batna",
+      "Code": "AF-DZ-BA",
+      "Description": "A mountainous region known for its Roman ruins and Berber culture.",
+      "Capital": "Batna",
+      "Population": 1200000,
+      "AreaKm2": 12884
+    },
+    {
+      "Name": "Blida",
+      "Code": "AF-DZ-BL",
+      "Description": "Known for its agricultural activities and proximity to Algiers.",
+      "Capital": "Blida",
+      "Population": 1000000,
+      "AreaKm2": 1626
+    },
+    {
+      "Name": "Skikda",
+      "Code": "AF-DZ-SK",
+      "Description": "A coastal region known for its port and industries.",
+      "Capital": "Skikda",
+      "Population": 700000,
+      "AreaKm2": 3675
+    },
+    {
+      "Name": "Médéa",
+      "Code": "AF-DZ-MD",
+      "Description": "A region with diverse agricultural and industrial production.",
+      "Capital": "Médéa",
+      "Population": 800000,
+      "AreaKm2": 10147
+    },
+    {
+      "Name": "El Oued",
+      "Code": "AF-DZ-EO",
+      "Description": "A desert region known for its oases and ancient history.",
+      "Capital": "El Oued",
+      "Population": 500000,
+      "AreaKm2": 87325
+    },
+    {
+      "Name": "Béchar",
+      "Code": "AF-DZ-BC",
+      "Description": "A region in the southwest, known for its desert landscapes.",
+      "Capital": "Béchar",
+      "Population": 600000,
+      "AreaKm2": 56857
+    },
+    {
+      "Name": "Ouargla",
+      "Code": "AF-DZ-OG",
+      "Description": "Known for its vast desert landscapes and oil resources.",
+      "Capital": "Ouargla",
+      "Population": 600000,
+      "AreaKm2": 19024
+    },
+    {
+      "Name": "Tamanrasset",
+      "Code": "AF-DZ-TM",
+      "Description": "Located in the southernmost part of Algeria, known for its Sahara desert.",
+      "Capital": "Tamanrasset",
+      "Population": 300000,
+      "AreaKm2": 55706
+    }
+]  

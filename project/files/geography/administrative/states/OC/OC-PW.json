@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Koror",
+      "Code": "OC-PW-KR",
+      "Description": "Koror is the most populous state and former capital of Palau, known for its urban development, commercial center, and tourist attractions.",
+      "Capital": "Ngerulmud",
+      "Population": 12000,
+      "AreaKm2": 20
+    },
+    {
+      "Name": "Babeldaob",
+      "Code": "OC-PW-BB",
+      "Description": "Babeldaob is the largest island in Palau, with the national capital Ngerulmud located in the state of Melekeok.",
+      "Capital": "Ngerulmud",
+      "Population": 1500,
+      "AreaKm2": 331
+    },
+    {
+      "Name": "Peleliu",
+      "Code": "OC-PW-PL",
+      "Description": "Peleliu is a small island in Palau, known for its World War II history, including the Battle of Peleliu, which is a significant historical site.",
+      "Capital": "Peleliu",
+      "Population": 500,
+      "AreaKm2": 13
+    },
+    {
+      "Name": "Angaur",
+      "Code": "OC-PW-AN",
+      "Description": "Angaur is a small island state in Palau, famous for its phosphate mining history and its natural beauty.",
+      "Capital": "Angaur",
+      "Population": 200,
+      "AreaKm2": 8
+    }
+]  

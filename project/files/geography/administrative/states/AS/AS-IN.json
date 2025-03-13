@@ -1,0 +1,227 @@
+[
+    {
+      "Name": "Andhra Pradesh",
+      "Code": "AS-IN-AP",
+      "Description": "A state in southeastern India known for its rich history, cultural diversity, and thriving agricultural economy.",
+      "Capital": "Amaravati",
+      "Population": 49386799,
+      "AreaKm2": 162968
+    },
+    {
+      "Name": "Arunachal Pradesh",
+      "Code": "AS-IN-AR",
+      "Description": "A state in northeastern India, known for its scenic beauty, biodiversity, and ethnic diversity.",
+      "Capital": "Itanagar",
+      "Population": 1382611,
+      "AreaKm2": 83743
+    },
+    {
+      "Name": "Assam",
+      "Code": "AS-IN-AS",
+      "Description": "A state in northeastern India known for its tea plantations, rich culture, and diverse ethnic groups.",
+      "Capital": "Dispur",
+      "Population": 31400000,
+      "AreaKm2": 78438
+    },
+    {
+      "Name": "Bihar",
+      "Code": "AS-IN-BR",
+      "Description": "A state in eastern India known for its historical significance, particularly as the center of ancient India’s political and cultural life.",
+      "Capital": "Patna",
+      "Population": 104099452,
+      "AreaKm2": 94163
+    },
+    {
+      "Name": "Chhattisgarh",
+      "Code": "AS-IN-CT",
+      "Description": "A state in central India, known for its mineral resources and rich tribal culture.",
+      "Capital": "Raipur",
+      "Population": 25545198,
+      "AreaKm2": 135191
+    },
+    {
+      "Name": "Goa",
+      "Code": "AS-IN-GA",
+      "Description": "A coastal state in western India known for its beaches, Portuguese colonial architecture, and tourism.",
+      "Capital": "Panaji",
+      "Population": 1458545,
+      "AreaKm2": 3702
+    },
+    {
+      "Name": "Gujarat",
+      "Code": "AS-IN-GJ",
+      "Description": "A state in western India known for its vibrant culture, historical landmarks, and booming economy.",
+      "Capital": "Gandhinagar",
+      "Population": 60439692,
+      "AreaKm2": 196024
+    },
+    {
+      "Name": "Haryana",
+      "Code": "AS-IN-HR",
+      "Description": "A state in northern India known for its strong agricultural economy and proximity to Delhi.",
+      "Capital": "Chandigarh",
+      "Population": 25350081,
+      "AreaKm2": 44212
+    },
+    {
+      "Name": "Himachal Pradesh",
+      "Code": "AS-IN-HP",
+      "Description": "A state in northern India known for its mountainous terrain, religious sites, and tourism.",
+      "Capital": "Shimla",
+      "Population": 6864602,
+      "AreaKm2": 55673
+    },
+    {
+      "Name": "Jharkhand",
+      "Code": "AS-IN-JH",
+      "Description": "A state in eastern India known for its mineral resources, forests, and tribal culture.",
+      "Capital": "Ranchi",
+      "Population": 32966000,
+      "AreaKm2": 79714
+    },
+    {
+      "Name": "Karnataka",
+      "Code": "AS-IN-KA",
+      "Description": "A state in southwestern India, known for its IT industry, historical landmarks, and diverse culture.",
+      "Capital": "Bangalore",
+      "Population": 61095297,
+      "AreaKm2": 191791
+    },
+    {
+      "Name": "Kerala",
+      "Code": "AS-IN-KL",
+      "Description": "A coastal state in southwestern India, known for its scenic beauty, tourism, and progressive social indicators.",
+      "Capital": "Thiruvananthapuram",
+      "Population": 34800000,
+      "AreaKm2": 38863
+    },
+    {
+      "Name": "Madhya Pradesh",
+      "Code": "AS-IN-MP",
+      "Description": "A state in central India known for its historical monuments, temples, and rich cultural heritage.",
+      "Capital": "Bhopal",
+      "Population": 72626809,
+      "AreaKm2": 308350
+    },
+    {
+      "Name": "Maharashtra",
+      "Code": "AS-IN-MH",
+      "Description": "A state in western India known for its bustling cities, particularly Mumbai, and its diverse economy.",
+      "Capital": "Mumbai",
+      "Population": 112374333,
+      "AreaKm2": 307713
+    },
+    {
+      "Name": "Manipur",
+      "Code": "AS-IN-MN",
+      "Description": "A state in northeastern India, known for its ethnic diversity, rich culture, and picturesque landscapes.",
+      "Capital": "Imphal",
+      "Population": 2867937,
+      "AreaKm2": 22327
+    },
+    {
+      "Name": "Meghalaya",
+      "Code": "AS-IN-ML",
+      "Description": "A state in northeastern India, known for its mountainous terrain, lush green landscapes, and tribal culture.",
+      "Capital": "Shillong",
+      "Population": 2964000,
+      "AreaKm2": 22429
+    },
+    {
+      "Name": "Mizoram",
+      "Code": "AS-IN-MZ",
+      "Description": "A state in northeastern India, known for its mountainous terrain, forests, and vibrant ethnic culture.",
+      "Capital": "Aizawl",
+      "Population": 1090000,
+      "AreaKm2": 21081
+    },
+    {
+      "Name": "Nagaland",
+      "Code": "AS-IN-NL",
+      "Description": "A state in northeastern India, known for its tribal communities and scenic beauty.",
+      "Capital": "Kohima",
+      "Population": 1980602,
+      "AreaKm2": 16579
+    },
+    {
+      "Name": "Odisha",
+      "Code": "AS-IN-OR",
+      "Description": "A state on the eastern coast of India, known for its beaches, temples, and rich cultural heritage.",
+      "Capital": "Bhubaneswar",
+      "Population": 41974218,
+      "AreaKm2": 155707
+    },
+    {
+      "Name": "Punjab",
+      "Code": "AS-IN-PB",
+      "Description": "A state in northern India known for its agriculture, especially wheat and rice, and vibrant culture.",
+      "Capital": "Chandigarh",
+      "Population": 27704236,
+      "AreaKm2": 50362
+    },
+    {
+      "Name": "Rajasthan",
+      "Code": "AS-IN-RJ",
+      "Description": "A state in northwestern India known for its deserts, palaces, and vibrant culture.",
+      "Capital": "Jaipur",
+      "Population": 68548437,
+      "AreaKm2": 342239
+    },
+    {
+      "Name": "Sikkim",
+      "Code": "AS-IN-SK",
+      "Description": "A state in northeastern India, known for its mountainous terrain, including Mount Kanchenjunga, and Buddhist culture.",
+      "Capital": "Gangtok",
+      "Population": 610577,
+      "AreaKm2": 7096
+    },
+    {
+      "Name": "Tamil Nadu",
+      "Code": "AS-IN-TN",
+      "Description": "A state in southern India known for its temples, classical music, and cultural heritage.",
+      "Capital": "Chennai",
+      "Population": 72147030,
+      "AreaKm2": 130058
+    },
+    {
+      "Name": "Telangana",
+      "Code": "AS-IN-TG",
+      "Description": "A state in southern India, known for its rapidly growing IT industry and rich cultural history.",
+      "Capital": "Hyderabad",
+      "Population": 39590000,
+      "AreaKm2": 112077
+    },
+    {
+      "Name": "Tripura",
+      "Code": "AS-IN-TR",
+      "Description": "A state in northeastern India, known for its rich history, culture, and diverse communities.",
+      "Capital": "Agartala",
+      "Population": 3671030,
+      "AreaKm2": 10491
+    },
+    {
+      "Name": "Uttar Pradesh",
+      "Code": "AS-IN-UP",
+      "Description": "A state in northern India, known for its historical and religious significance, particularly in places like Varanasi and Agra.",
+      "Capital": "Lucknow",
+      "Population": 199812341,
+      "AreaKm2": 243286
+    },
+    {
+      "Name": "Uttarakhand",
+      "Code": "AS-IN-UK",
+      "Description": "A state in northern India known for its natural beauty, pilgrimage sites, and the Himalayan range.",
+      "Capital": "Dehradun",
+      "Population": 10086292,
+      "AreaKm2": 53483
+    },
+    {
+      "Name": "West Bengal",
+      "Code": "AS-IN-WB",
+      "Description": "A state in eastern India, known for its cultural diversity, historical sites, and the city of Kolkata.",
+      "Capital": "Kolkata",
+      "Population": 91276115,
+      "AreaKm2": 88752
+    }
+]
+  

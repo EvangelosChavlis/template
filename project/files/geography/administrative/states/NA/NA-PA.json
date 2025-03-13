@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Panama",
+      "Code": "NA-PA-PA",
+      "Description": "The capital region, which includes the city of Panama, known for its economic activity, financial center, and the Panama Canal.",
+      "Capital": "Panama City",
+      "Population": 1500000,
+      "AreaKm2": 1550
+    },
+    {
+      "Name": "Cocle",
+      "Code": "NA-PA-CL",
+      "Description": "Known for its agricultural production, including sugar, rice, and cattle. It is home to beautiful beaches and mountain areas.",
+      "Capital": "Penonome",
+      "Population": 300000,
+      "AreaKm2": 4740
+    },
+    {
+      "Name": "Colon",
+      "Code": "NA-PA-CO",
+      "Description": "Located on the Caribbean coast, this region is known for its port city of Colón and the nearby Panamá Canal ports.",
+      "Capital": "Colon City",
+      "Population": 250000,
+      "AreaKm2": 5000
+    },
+    {
+      "Name": "Chiriqui",
+      "Code": "NA-PA-CH",
+      "Description": "Known for its cool mountain climate, agriculture, and tourism, especially the Boquete area.",
+      "Capital": "David",
+      "Population": 400000,
+      "AreaKm2": 6500
+    },
+    {
+      "Name": "Veraguas",
+      "Code": "NA-PA-VE",
+      "Description": "A region known for its agricultural activities, including rice, cattle, and banana production.",
+      "Capital": "Santiago",
+      "Population": 300000,
+      "AreaKm2": 11000
+    },
+    {
+      "Name": "Bocas del Toro",
+      "Code": "NA-PA-BT",
+      "Description": "An island region known for its tourism, beautiful beaches, and the Bocas del Toro archipelago.",
+      "Capital": "Bocas Town",
+      "Population": 100000,
+      "AreaKm2": 3700
+    },
+    {
+      "Name": "Herrera",
+      "Code": "NA-PA-HE",
+      "Description": "Known for its agriculture, especially sugarcane, and the region’s significant historical heritage.",
+      "Capital": "Chitre",
+      "Population": 150000,
+      "AreaKm2": 3510
+    },
+    {
+      "Name": "Los Santos",
+      "Code": "NA-PA-LS",
+      "Description": "Famous for its agriculture, particularly its production of sugar and rice. It is home to the Azuero Peninsula.",
+      "Capital": "Las Tablas",
+      "Population": 100000,
+      "AreaKm2": 4500
+    },
+    {
+      "Name": "Panama Oeste",
+      "Code": "NA-PA-PO",
+      "Description": "A growing suburban region surrounding the capital city, known for its residential areas and growing urbanization.",
+      "Capital": "La Chorrera",
+      "Population": 400000,
+      "AreaKm2": 4800
+    },
+    {
+      "Name": "Embera-Wounaan",
+      "Code": "NA-PA-EW",
+      "Description": "A region mainly inhabited by indigenous Embera and Wounaan peoples, known for its natural reserves and river systems.",
+      "Capital": "Yaviza",
+      "Population": 30000,
+      "AreaKm2": 4400
+    }
+]  

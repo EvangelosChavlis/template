@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Australian Capital Territory",
+      "Code": "OC-AU-ACT",
+      "Description": "A small region that houses the capital of Australia, Canberra, known for its political and administrative significance.",
+      "Capital": "Canberra",
+      "Population": 400000,
+      "AreaKm2": 2300
+    },
+    {
+      "Name": "New South Wales",
+      "Code": "OC-AU-NSW",
+      "Description": "A southeastern state known for its vibrant city of Sydney, beaches, and the Blue Mountains.",
+      "Capital": "Sydney",
+      "Population": 8000000,
+      "AreaKm2": 800000
+    },
+    {
+      "Name": "Victoria",
+      "Code": "OC-AU-VIC",
+      "Description": "A state in the southeastern part of Australia, famous for the city of Melbourne and the Great Ocean Road.",
+      "Capital": "Melbourne",
+      "Population": 6000000,
+      "AreaKm2": 227000
+    },
+    {
+      "Name": "Queensland",
+      "Code": "OC-AU-QLD",
+      "Description": "A state known for its tropical climate, Great Barrier Reef, and cities like Brisbane and Cairns.",
+      "Capital": "Brisbane",
+      "Population": 5000000,
+      "AreaKm2": 1700000
+    },
+    {
+      "Name": "South Australia",
+      "Code": "OC-AU-SA",
+      "Description": "A state famous for its wine regions, rugged outback, and the coastal city of Adelaide.",
+      "Capital": "Adelaide",
+      "Population": 1700000,
+      "AreaKm2": 1000000
+    },
+    {
+      "Name": "Western Australia",
+      "Code": "OC-AU-WA",
+      "Description": "The largest state in Australia, known for its vast deserts, coastal regions, and the city of Perth.",
+      "Capital": "Perth",
+      "Population": 3000000,
+      "AreaKm2": 2500000
+    },
+    {
+      "Name": "Tasmania",
+      "Code": "OC-AU-TAS",
+      "Description": "An island state known for its wilderness areas, pristine beaches, and the city of Hobart.",
+      "Capital": "Hobart",
+      "Population": 500000,
+      "AreaKm2": 68000
+    },
+    {
+      "Name": "Northern Territory",
+      "Code": "OC-AU-NT",
+      "Description": "A sparsely populated region famous for its red deserts, Kakadu National Park, and the iconic Uluru.",
+      "Capital": "Darwin",
+      "Population": 250000,
+      "AreaKm2": 1340000
+    }
+]  

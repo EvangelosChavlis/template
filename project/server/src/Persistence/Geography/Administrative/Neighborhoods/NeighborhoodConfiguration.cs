@@ -1,6 +1,8 @@
 // packages
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Extensions;
+
 
 // source
 using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
@@ -25,14 +27,25 @@ public class NeighborhoodConfiguration : IEntityTypeConfiguration<Neighborhood>
 
         builder.Property(n => n.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(NeighborhoodLength.NameLength);
 
         builder.Property(n => n.Description)
             .IsRequired(false)
-            .HasMaxLength(500);
+            .HasMaxLength(NeighborhoodLength.DescriptionLength);
 
         builder.Property(n => n.Population)
             .IsRequired();
+
+        builder.Property(n => n.AreaKm2)
+            .IsRequired();
+
+        builder.Property(n => n.Zipcode)
+            .IsRequired()
+            .HasMaxLength(NeighborhoodLength.ZipCodeLength);
+
+        builder.Property(n => n.Code)
+            .IsRequired()
+            .HasMaxLength(NeighborhoodLength.CodeLength);
 
         builder.Property(n => n.IsActive)
             .IsRequired();

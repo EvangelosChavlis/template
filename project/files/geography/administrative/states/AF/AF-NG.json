@@ -1,0 +1,210 @@
+[
+    {
+      "Name": "Abia",
+      "Code": "AF-NG-AB",
+      "Description": "Located in southeastern Nigeria, known for its commerce and industry.",
+      "Capital": "Umuahia",
+      "Population": 3800000,
+      "AreaKm2": 6320
+    },
+    {
+      "Name": "Adamawa",
+      "Code": "AF-NG-AD",
+      "Description": "A northeastern state with diverse cultures and the Mandara mountains.",
+      "Capital": "Yola",
+      "Population": 4500000,
+      "AreaKm2": 36917
+    },
+    {
+      "Name": "Akwa Ibom",
+      "Code": "AF-NG-AK",
+      "Description": "Known for its oil resources and beautiful coastal landscapes.",
+      "Capital": "Uyo",
+      "Population": 5500000,
+      "AreaKm2": 7081
+    },
+    {
+      "Name": "Anambra",
+      "Code": "AF-NG-AN",
+      "Description": "A commercial hub in southeastern Nigeria with a rich Igbo heritage.",
+      "Capital": "Awka",
+      "Population": 5600000,
+      "AreaKm2": 4844
+    },
+    {
+      "Name": "Bauchi",
+      "Code": "AF-NG-BA",
+      "Description": "Known for its game reserves and historical sites.",
+      "Capital": "Bauchi",
+      "Population": 6600000,
+      "AreaKm2": 45837
+    },
+    {
+      "Name": "Bayelsa",
+      "Code": "AF-NG-BY",
+      "Description": "A major oil-producing state in the Niger Delta region.",
+      "Capital": "Yenagoa",
+      "Population": 2200000,
+      "AreaKm2": 10773
+    },
+    {
+      "Name": "Benue",
+      "Code": "AF-NG-BE",
+      "Description": "Known as the Food Basket of the Nation for its agricultural produce.",
+      "Capital": "Makurdi",
+      "Population": 5700000,
+      "AreaKm2": 34059
+    },
+    {
+      "Name": "Borno",
+      "Code": "AF-NG-BO",
+      "Description": "A large state in northeastern Nigeria, home to Lake Chad and Kanuri culture.",
+      "Capital": "Maiduguri",
+      "Population": 6000000,
+      "AreaKm2": 70098
+    },
+    {
+      "Name": "Cross River",
+      "Code": "AF-NG-CR",
+      "Description": "Known for its rich biodiversity and the famous Calabar Carnival.",
+      "Capital": "Calabar",
+      "Population": 3900000,
+      "AreaKm2": 20156
+    },
+    {
+      "Name": "Delta",
+      "Code": "AF-NG-DE",
+      "Description": "A key oil-producing state with a diverse ethnic population.",
+      "Capital": "Asaba",
+      "Population": 5000000,
+      "AreaKm2": 17698
+    },
+    {
+      "Name": "Ebonyi",
+      "Code": "AF-NG-EB",
+      "Description": "A southeastern state known for agriculture and salt mining.",
+      "Capital": "Abakaliki",
+      "Population": 3000000,
+      "AreaKm2": 5670
+    },
+    {
+      "Name": "Edo",
+      "Code": "AF-NG-ED",
+      "Description": "Home to the historic Benin Kingdom and rich cultural heritage.",
+      "Capital": "Benin City",
+      "Population": 4000000,
+      "AreaKm2": 17802
+    },
+    {
+      "Name": "Ekiti",
+      "Code": "AF-NG-EK",
+      "Description": "A southwestern state known for education and agriculture.",
+      "Capital": "Ado-Ekiti",
+      "Population": 2800000,
+      "AreaKm2": 6353
+    },
+    {
+      "Name": "Enugu",
+      "Code": "AF-NG-EN",
+      "Description": "A former coal-mining region with strong Igbo traditions.",
+      "Capital": "Enugu",
+      "Population": 3600000,
+      "AreaKm2": 7161
+    },
+    {
+      "Name": "Gombe",
+      "Code": "AF-NG-GO",
+      "Description": "A northeastern state with agricultural and commercial significance.",
+      "Capital": "Gombe",
+      "Population": 3600000,
+      "AreaKm2": 18768
+    },
+    {
+      "Name": "Imo",
+      "Code": "AF-NG-IM",
+      "Description": "A southeastern state known for commerce and industry.",
+      "Capital": "Owerri",
+      "Population": 4700000,
+      "AreaKm2": 5530
+    },
+    {
+      "Name": "Jigawa",
+      "Code": "AF-NG-JI",
+      "Description": "A northern state with a strong agricultural base.",
+      "Capital": "Dutse",
+      "Population": 5800000,
+      "AreaKm2": 23154
+    },
+    {
+      "Name": "Kaduna",
+      "Code": "AF-NG-KD",
+      "Description": "A major northern state with economic and educational significance.",
+      "Capital": "Kaduna",
+      "Population": 8600000,
+      "AreaKm2": 46053
+    },
+    {
+      "Name": "Kano",
+      "Code": "AF-NG-KN",
+      "Description": "The most populous state in Nigeria, known for its ancient trading routes.",
+      "Capital": "Kano",
+      "Population": 15000000,
+      "AreaKm2": 20131
+    },
+    {
+      "Name": "Lagos",
+      "Code": "AF-NG-LA",
+      "Description": "The economic hub of Nigeria, known for its commercial and cultural significance.",
+      "Capital": "Ikeja",
+      "Population": 21000000,
+      "AreaKm2": 3345
+    },
+    {
+      "Name": "Ogun",
+      "Code": "AF-NG-OG",
+      "Description": "An industrial state in southwestern Nigeria.",
+      "Capital": "Abeokuta",
+      "Population": 5500000,
+      "AreaKm2": 16762
+    },
+    {
+      "Name": "Ondo",
+      "Code": "AF-NG-ON",
+      "Description": "A southwestern state known for cocoa farming.",
+      "Capital": "Akure",
+      "Population": 4500000,
+      "AreaKm2": 15500
+    },
+    {
+      "Name": "Oyo",
+      "Code": "AF-NG-OY",
+      "Description": "A historically significant Yoruba state, home to Ibadan.",
+      "Capital": "Ibadan",
+      "Population": 7900000,
+      "AreaKm2": 28454
+    },
+    {
+      "Name": "Rivers",
+      "Code": "AF-NG-RV",
+      "Description": "A key oil-producing state in the Niger Delta.",
+      "Capital": "Port Harcourt",
+      "Population": 7000000,
+      "AreaKm2": 11077
+    },
+    {
+      "Name": "Sokoto",
+      "Code": "AF-NG-SO",
+      "Description": "A historic state known for its Islamic heritage.",
+      "Capital": "Sokoto",
+      "Population": 5000000,
+      "AreaKm2": 25573
+    },
+    {
+      "Name": "Zamfara",
+      "Code": "AF-NG-ZA",
+      "Description": "A state in northwestern Nigeria, known for agriculture.",
+      "Capital": "Gusau",
+      "Population": 4300000,
+      "AreaKm2": 39762
+    }
+]  

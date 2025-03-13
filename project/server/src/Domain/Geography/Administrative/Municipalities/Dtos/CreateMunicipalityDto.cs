@@ -7,6 +7,8 @@ namespace server.src.Domain.Geography.Administrative.Municipalities.Dtos;
 public record CreateMunicipalityDto(
     string Name,
     string Description,
+    double AreaKm2,
     long Population,
+    string Code,
     Guid RegionId
 );

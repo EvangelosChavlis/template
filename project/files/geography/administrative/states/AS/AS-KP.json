@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Pyongyang",
+      "Code": "AS-KP-PY",
+      "Description": "The capital and largest city of North Korea, known for its monumental architecture, government buildings, and political significance.",
+      "Capital": "Pyongyang",
+      "Population": 3200000,
+      "AreaKm2": 305
+    },
+    {
+      "Name": "South Pyongan",
+      "Code": "AS-KP-SP",
+      "Description": "A province located south of Pyongyang, known for its industrial areas and historical sites.",
+      "Capital": "Pyonchon",
+      "Population": 3000000,
+      "AreaKm2": 11934
+    },
+    {
+      "Name": "North Pyongan",
+      "Code": "AS-KP-NP",
+      "Description": "A northern province of North Korea, known for its mountainous terrain and proximity to the border with China.",
+      "Capital": "Sinuiju",
+      "Population": 2500000,
+      "AreaKm2": 13310
+    },
+    {
+      "Name": "Chagang",
+      "Code": "AS-KP-CH",
+      "Description": "A province located in the northwestern part of North Korea, known for its forests and remote mountainous areas.",
+      "Capital": "Hyesan",
+      "Population": 1100000,
+      "AreaKm2": 17849
+    },
+    {
+      "Name": "Ryanggang",
+      "Code": "AS-KP-RY",
+      "Description": "A province in the northern part of the country, bordering China, with a significant focus on agriculture and mining.",
+      "Capital": "Kanggye",
+      "Population": 1300000,
+      "AreaKm2": 19816
+    },
+    {
+      "Name": "Hamgyong",
+      "Code": "AS-KP-HM",
+      "Description": "A region in the northeastern part of North Korea, with a coastline along the Sea of Japan (East Sea) and known for its natural resources.",
+      "Capital": "Chongjin",
+      "Population": 2700000,
+      "AreaKm2": 41909
+    },
+    {
+      "Name": "Kangwon",
+      "Code": "AS-KP-KW",
+      "Description": "A province located in the eastern part of North Korea, known for its mountainous landscapes and scenic beauty.",
+      "Capital": "Wonsan",
+      "Population": 1600000,
+      "AreaKm2": 22109
+    },
+    {
+      "Name": "South Hamgyong",
+      "Code": "AS-KP-SH",
+      "Description": "A province in the southeastern region of North Korea, which is industrially significant with many factories.",
+      "Capital": "Hunchun",
+      "Population": 2300000,
+      "AreaKm2": 22352
+    }
+]  

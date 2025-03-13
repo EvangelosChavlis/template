@@ -1,0 +1,82 @@
+[
+    {
+      "Name": "Vientiane",
+      "Code": "AS-LA-VI",
+      "Description": "The capital and largest city of Laos, located along the Mekong River, known for its colonial architecture and Buddhist temples.",
+      "Capital": "Vientiane",
+      "Population": 700000,
+      "AreaKm2": 300
+    },
+    {
+      "Name": "Savannakhet",
+      "Code": "AS-LA-SV",
+      "Description": "A province in southern Laos, known for its diverse landscape, historical sites, and as an important trade route.",
+      "Capital": "Savannakhet",
+      "Population": 400000,
+      "AreaKm2": 22000
+    },
+    {
+      "Name": "Champasak",
+      "Code": "AS-LA-CH",
+      "Description": "A province in southern Laos, known for the UNESCO World Heritage Site, the Wat Phu temple complex, and the Bolaven Plateau.",
+      "Capital": "Pakse",
+      "Population": 300000,
+      "AreaKm2": 20000
+    },
+    {
+      "Name": "Luang Prabang",
+      "Code": "AS-LA-LP",
+      "Description": "A historic city and province in northern Laos, known for its well-preserved temples and colonial architecture.",
+      "Capital": "Luang Prabang",
+      "Population": 200000,
+      "AreaKm2": 16000
+    },
+    {
+      "Name": "Xieng Khouang",
+      "Code": "AS-LA-XK",
+      "Description": "A province in northeastern Laos, known for its archaeological sites, including the Plain of Jars.",
+      "Capital": "Phonsavan",
+      "Population": 200000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Houaphanh",
+      "Code": "AS-LA-HP",
+      "Description": "A province in eastern Laos, bordered by Vietnam, known for its mountainous terrain and ethnic diversity.",
+      "Capital": "Xam Neua",
+      "Population": 150000,
+      "AreaKm2": 18000
+    },
+    {
+      "Name": "Bokeo",
+      "Code": "AS-LA-BO",
+      "Description": "A province in northern Laos, known for its natural beauty, wildlife reserves, and proximity to the Golden Triangle.",
+      "Capital": "Houayxai",
+      "Population": 100000,
+      "AreaKm2": 6000
+    },
+    {
+      "Name": "Attapeu",
+      "Code": "AS-LA-AT",
+      "Description": "A southern province of Laos, known for its natural beauty, including waterfalls and forests.",
+      "Capital": "Attapeu",
+      "Population": 100000,
+      "AreaKm2": 14000
+    },
+    {
+      "Name": "Vientiane Province",
+      "Code": "AS-LA-VP",
+      "Description": "A province surrounding the capital, Vientiane, featuring agricultural land and rural communities.",
+      "Capital": "Muang Vientiane",
+      "Population": 400000,
+      "AreaKm2": 15000
+    },
+    {
+      "Name": "Sekong",
+      "Code": "AS-LA-SE",
+      "Description": "A province in southern Laos, known for its rich biodiversity and being one of the least developed regions of the country.",
+      "Capital": "Sekong",
+      "Population": 100000,
+      "AreaKm2": 9000
+    }
+]  

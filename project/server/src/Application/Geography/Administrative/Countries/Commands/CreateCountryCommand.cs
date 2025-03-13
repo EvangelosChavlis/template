@@ -42,10 +42,14 @@ public class CreateCountryHandler : IRequestHandler<CreateCountryCommand, Respon
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<Country, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<Country, bool>>[] 
+        { 
+            c => c.Name!.Equals(command.Dto.Name) || 
+                c.Code!.Equals(command.Dto.Code)
+        };
         var existingCountry = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the country already exists in the system
         if (existingCountry is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -89,10 +93,10 @@ public class CreateCountryHandler : IRequestHandler<CreateCountryCommand, Respon
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
-                .WithMessage("Error creating terrain type.")
+                .WithMessage("Error creating country.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
-                .WithData("Failed to create terrain type.");
+                .WithData("Failed to create country.");
         }
             
         // Commit Transaction

@@ -8,6 +8,7 @@ public record ListItemMunicipalityDto(
     Guid Id,
     string Name,
     long Population,
+    string Code,
     bool IsActive,
     int Count
 );

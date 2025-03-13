@@ -1,0 +1,67 @@
+[
+    {
+      "Name": "Manama",
+      "Code": "AS-BH-MN",
+      "Description": "The capital and largest city of Bahrain, located on the island of Bahrain, known for its modern skyline, financial district, and rich cultural heritage.",
+      "Capital": "Manama",
+      "Population": 157000,
+      "AreaKm2": 29
+    },
+    {
+      "Name": "Muharraq",
+      "Code": "AS-BH-MH",
+      "Description": "A historic city on the northeastern tip of Bahrain Island, known for its cultural significance, pearling history, and traditional architecture.",
+      "Capital": "Muharraq",
+      "Population": 150000,
+      "AreaKm2": 15
+    },
+    {
+      "Name": "Riffa",
+      "Code": "AS-BH-RF",
+      "Description": "A city located in the southern part of Bahrain, known for its historical landmarks, sports facilities, and residential areas.",
+      "Capital": "Riffa",
+      "Population": 120000,
+      "AreaKm2": 18
+    },
+    {
+      "Name": "Aali",
+      "Code": "AS-BH-AA",
+      "Description": "A town in the central part of Bahrain, known for its ancient burial mounds and pottery production.",
+      "Capital": "Aali",
+      "Population": 24000,
+      "AreaKm2": 8
+    },
+    {
+      "Name": "Sitra",
+      "Code": "AS-BH-ST",
+      "Description": "An island and region located to the south of Bahrain Island, known for its industrial activities and fishing industry.",
+      "Capital": "Sitra",
+      "Population": 45000,
+      "AreaKm2": 53
+    },
+    {
+      "Name": "Hamad Town",
+      "Code": "AS-BH-HT",
+      "Description": "A residential town located in the western part of Bahrain, known for its modern infrastructure and family-friendly environment.",
+      "Capital": "Hamad Town",
+      "Population": 100000,
+      "AreaKm2": 12
+    },
+    {
+      "Name": "Isa Town",
+      "Code": "AS-BH-IT",
+      "Description": "A town located in the central region of Bahrain, known for its educational institutions and residential developments.",
+      "Capital": "Isa Town",
+      "Population": 110000,
+      "AreaKm2": 14
+    },
+    {
+      "Name": "Jidhafs",
+      "Code": "AS-BH-JD",
+      "Description": "A town in Bahrain, located near Manama, known for its growing residential developments and proximity to the capital.",
+      "Capital": "Jidhafs",
+      "Population": 35000,
+      "AreaKm2": 7
+    }
+]
+  

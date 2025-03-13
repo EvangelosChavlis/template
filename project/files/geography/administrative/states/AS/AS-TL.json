@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Dili",
+      "Code": "AS-TL-DI",
+      "Description": "The capital and largest city of Timor-Leste, located on the northern coast, known for its colonial architecture and vibrant culture.",
+      "Capital": "Dili",
+      "Population": 234000,
+      "AreaKm2": 277
+    },
+    {
+      "Name": "Baucau",
+      "Code": "AS-TL-BA",
+      "Description": "The second-largest city in Timor-Leste, located on the northern coast, known for its historical significance and beautiful beaches.",
+      "Capital": "Baucau",
+      "Population": 70000,
+      "AreaKm2": 49.6
+    },
+    {
+      "Name": "Maliana",
+      "Code": "AS-TL-MA",
+      "Description": "A town located in the western part of Timor-Leste, known for its mountainous terrain and agricultural economy.",
+      "Capital": "Maliana",
+      "Population": 20000,
+      "AreaKm2": 41.3
+    },
+    {
+      "Name": "Suai",
+      "Code": "AS-TL-SU",
+      "Description": "A town in the southwestern part of Timor-Leste, known for its fishing industry and proximity to the border with Indonesia.",
+      "Capital": "Suai",
+      "Population": 30000,
+      "AreaKm2": 58.2
+    },
+    {
+      "Name": "Lospalos",
+      "Code": "AS-TL-LO",
+      "Description": "Located in the eastern part of Timor-Leste, known for its agricultural activities and as a center for the eastern region of the country.",
+      "Capital": "Lospalos",
+      "Population": 25000,
+      "AreaKm2": 52.4
+    }
+]  

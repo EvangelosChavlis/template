@@ -15,8 +15,19 @@ if ([string]::IsNullOrWhiteSpace($MigrationName)) {
     exit 1
 }
 
-# dotnet ef database drop --context DataContext -s server/src/Api/ -p server/src/Persistence/ -f
-# dotnet ef database drop --context ArchiveContext -s server/src/Api/ -p server/src/Persistence/ -f
+# Define the folder path for migrations
+$MigrationsFolderPath = "server/src/Persistence/Migrations"
+
+# Delete the Migrations folder if it exists
+if (Test-Path $MigrationsFolderPath) {
+    Write-Host "Deleting the Migrations folder..."
+    Remove-Item -Path $MigrationsFolderPath -Recurse -Force
+} else {
+    Write-Host "Migrations folder does not exist."
+}
+
+dotnet ef database drop --context DataContext -s server/src/Api/ -p server/src/Persistence/ -f
+dotnet ef database drop --context ArchiveContext -s server/src/Api/ -p server/src/Persistence/ -f
 
 # Define migration names correctly
 $MigrationData = "${MigrationName}_data"

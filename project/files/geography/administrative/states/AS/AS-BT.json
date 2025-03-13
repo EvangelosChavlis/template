@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Thimphu",
+      "Code": "AS-BT-TH",
+      "Description": "The capital and largest city of Bhutan, located in the western part of the country, known for its blend of traditional Bhutanese culture and modern influences.",
+      "Capital": "Thimphu",
+      "Population": 114551,
+      "AreaKm2": 26
+    },
+    {
+      "Name": "Phuntsholing",
+      "Code": "AS-BT-PH",
+      "Description": "A town located on the southern border with India, serving as an important commercial hub and gateway to Bhutan.",
+      "Capital": "Phuntsholing",
+      "Population": 26400,
+      "AreaKm2": 15
+    },
+    {
+      "Name": "Paro",
+      "Code": "AS-BT-PR",
+      "Description": "A valley town in western Bhutan, known for its historic monasteries, including the iconic Tiger s Nest, and its role as an important cultural and tourism destination.",
+      "Capital": "Paro",
+      "Population": 25000,
+      "AreaKm2": 1
+    },
+    {
+      "Name": "Punakha",
+      "Code": "AS-BT-PU",
+      "Description": "A town located in central Bhutan, famous for its historical significance and stunning landscapes, including the Punakha Dzong.",
+      "Capital": "Punakha",
+      "Population": 22000,
+      "AreaKm2": 4
+    },
+    {
+      "Name": "Wangdue Phodrang",
+      "Code": "AS-BT-WP",
+      "Description": "A district in central Bhutan, known for its scenic beauty and important landmarks, including the Wangdue Phodrang Dzong.",
+      "Capital": "Wangdue Phodrang",
+      "Population": 15000,
+      "AreaKm2": 12
+    },
+    {
+      "Name": "Trashigang",
+      "Code": "AS-BT-TG",
+      "Description": "A town in eastern Bhutan, known as the largest town in the eastern region, with a growing economy and cultural significance.",
+      "Capital": "Trashigang",
+      "Population": 13000,
+      "AreaKm2": 7
+    },
+    {
+      "Name": "Samdrup Jongkhar",
+      "Code": "AS-BT-SJ",
+      "Description": "A border town located in the southeastern part of Bhutan, serving as a key point of entry for trade with India.",
+      "Capital": "Samdrup Jongkhar",
+      "Population": 11000,
+      "AreaKm2": 6
+    },
+    {
+      "Name": "Lhuntse",
+      "Code": "AS-BT-LH",
+      "Description": "A remote district in northeastern Bhutan, known for its traditional culture, natural beauty, and rural landscapes.",
+      "Capital": "Lhuntse",
+      "Population": 15000,
+      "AreaKm2": 22
+    }
+]  

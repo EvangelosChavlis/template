@@ -34,12 +34,14 @@ public interface ICommonRepository
     /// </summary>
     /// <typeparam name="T">The type of the entity being queried.</typeparam>
     /// <param name="filterExpressions">Optional filter conditions.</param>
+    /// <param name="includeThenIncludeExpressions">Optional related entity includes with nested includes.</param>
     /// <param name="projection">Optional projection to transform the result.</param>
     /// <param name="token">Cancellation token.</param>
     /// <returns>A list of matching entities.</returns>
-    Task<List<T>> GetResultPickerAsync<T>(
+    Task<List<TResult>> GetResultPickerAsync<T, TResult>(
         Expression<Func<T, bool>>[]? filterExpressions = default,
-        Expression<Func<T, T>>? projection = default, 
+        IncludeThenInclude<T>[]? includeThenIncludeExpressions = default,
+        Expression<Func<T, TResult>>? projection = default,
         CancellationToken token = default
     ) where T : class;
 
@@ -47,15 +49,22 @@ public interface ICommonRepository
     /// Retrieves a single entity based on filtering criteria, including optional related entities and projections.
     /// </summary>
     /// <typeparam name="T">The type of the entity being queried.</typeparam>
-    /// <param name="filterExpressions">Optional filter conditions.</param>
-    /// <param name="includeExpressions">Optional related entity includes.</param>
+    /// <param name="filters">Optional filter conditions.</param>
+    /// <param name="includes">Optional related entity includes.</param>
     /// <param name="projection">Optional projection to shape the returned result.</param>
     /// <param name="token">Cancellation token.</param>
     /// <returns>The matching entity or null if not found.</returns>
     Task<T?> GetResultByIdAsync<T>(
-        Expression<Func<T, bool>>[]? filterExpressions = default,
-        Expression<Func<T, object>>[]? includeExpressions = default,
+        Expression<Func<T, bool>>[]? filters = default,
+        Expression<Func<T, object>>[]? includes = default,
         Expression<Func<T, T>>? projection = default,
+        CancellationToken token = default
+    ) where T : class;
+
+    Task<TResult?> GetResultByIdAsync<T, TResult>(
+        Expression<Func<T, bool>>[]? filters = default,
+        Expression<Func<T, object>>[]? includes = default,
+        Expression<Func<T, TResult>>? projection = default,
         CancellationToken token = default
     ) where T : class;
 
@@ -75,11 +84,11 @@ public interface ICommonRepository
     /// Determines whether any entity matches the specified filter criteria.
     /// </summary>
     /// <typeparam name="T">The type of the entity being queried.</typeparam>
-    /// <param name="filterExpressions">Optional filter conditions.</param>
+    /// <param name="filters">Optional filter conditions.</param>
     /// <param name="token">Cancellation token.</param>
     /// <returns>True if at least one matching entity exists; otherwise, false.</returns>
     Task<bool> AnyExistsAsync<T>(
-        Expression<Func<T, bool>>[] filterExpressions,
+        Expression<Func<T, bool>>[]? filters = default,
         CancellationToken token = default
     ) where T : class;
 

@@ -22,6 +22,9 @@ public class ErrorItemCountryDtoMapper
             Capital: string.Empty,
             Population: int.MinValue,
             AreaKm2: double.MinValue,
+            PhoneCode: string.Empty,
+            TLD: string.Empty,
+            Currency: string.Empty,
             IsActive: false,
             Continent: string.Empty,
             Version: Guid.Empty

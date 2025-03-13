@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Dushanbe",
+      "Code": "AS-TJ-DU",
+      "Description": "The capital city of Tajikistan, known for its beautiful parks, Soviet-era architecture, and vibrant cultural life.",
+      "Capital": "Dushanbe",
+      "Population": 863400,
+      "AreaKm2": 163
+    },
+    {
+      "Name": "Khujand",
+      "Code": "AS-TJ-KH",
+      "Description": "The second-largest city in Tajikistan, located in the northern part of the country, known for its historic Silk Road significance and bustling bazaars.",
+      "Capital": "Khujand",
+      "Population": 174000,
+      "AreaKm2": 37.4
+    },
+    {
+      "Name": "Kulob",
+      "Code": "AS-TJ-KL",
+      "Description": "A city in the southern part of Tajikistan, known for its agricultural importance and proximity to the Pamir Mountains.",
+      "Capital": "Kulob",
+      "Population": 180000,
+      "AreaKm2": 45
+    },
+    {
+      "Name": "Bokhtar",
+      "Code": "AS-TJ-BT",
+      "Description": "Located in the southwestern part of Tajikistan, Bokhtar is an important economic hub in the Khatlon region, known for its agriculture and trade.",
+      "Capital": "Bokhtar",
+      "Population": 133000,
+      "AreaKm2": 70.3
+    },
+    {
+      "Name": "Isfara",
+      "Code": "AS-TJ-IF",
+      "Description": "A town located in the northern part of Tajikistan, close to the Kyrgyzstan border, known for its scenic mountain views and agricultural activities.",
+      "Capital": "Isfara",
+      "Population": 53000,
+      "AreaKm2": 30.5
+    },
+    {
+      "Name": "Khorugh",
+      "Code": "AS-TJ-KO",
+      "Description": "A town located in the Pamir Mountains in the eastern part of Tajikistan, known for its stunning natural beauty and as a gateway to the Pamir region.",
+      "Capital": "Khorugh",
+      "Population": 27000,
+      "AreaKm2": 17.2
+    }
+]  

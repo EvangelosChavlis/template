@@ -1,0 +1,146 @@
+[
+    {
+      "Name": "Phnom Penh",
+      "Code": "AS-KH-PP",
+      "Description": "The capital and largest city of Cambodia, known for its historical landmarks, such as the Royal Palace and the Killing Fields, and its vibrant culture.",
+      "Capital": "Phnom Penh",
+      "Population": 2083000,
+      "AreaKm2": 678.46
+    },
+    {
+      "Name": "Battambang",
+      "Code": "AS-KH-BB",
+      "Description": "A province in western Cambodia known for its colonial architecture, historical sites, and picturesque countryside.",
+      "Capital": "Battambang",
+      "Population": 1490000,
+      "AreaKm2": 11343
+    },
+    {
+      "Name": "Siem Reap",
+      "Code": "AS-KH-SR",
+      "Description": "Famous for the Angkor Archaeological Park, home to the ancient temples of Angkor Wat and other UNESCO World Heritage sites.",
+      "Capital": "Siem Reap",
+      "Population": 1040000,
+      "AreaKm2": 10605
+    },
+    {
+      "Name": "Kampong Cham",
+      "Code": "AS-KH-KC",
+      "Description": "A province in eastern Cambodia, known for its agriculture, including rubber and rice farming, and its scenic riverside views.",
+      "Capital": "Kampong Cham",
+      "Population": 1300000,
+      "AreaKm2": 9972
+    },
+    {
+      "Name": "Kampong Speu",
+      "Code": "AS-KH-KS",
+      "Description": "A province located to the southwest of Phnom Penh, known for its agricultural production, including palm sugar and other crops.",
+      "Capital": "Kampong Speu",
+      "Population": 729000,
+      "AreaKm2": 7104
+    },
+    {
+      "Name": "Kandal",
+      "Code": "AS-KH-KD",
+      "Description": "A province surrounding Phnom Penh, known for its proximity to the capital, agriculture, and fishing industries.",
+      "Capital": "Takhmao",
+      "Population": 1140000,
+      "AreaKm2": 3577
+    },
+    {
+      "Name": "Preah Sihanouk",
+      "Code": "AS-KH-PS",
+      "Description": "A coastal province on the Gulf of Thailand, known for its beaches, resorts, and the port city of Sihanoukville.",
+      "Capital": "Sihanoukville",
+      "Population": 268000,
+      "AreaKm2": 4200
+    },
+    {
+      "Name": "Takeo",
+      "Code": "AS-KH-TA",
+      "Description": "A southern province of Cambodia, known for its temples, historical sites, and its proximity to Vietnam.",
+      "Capital": "Takeo",
+      "Population": 1090000,
+      "AreaKm2": 2992
+    },
+    {
+      "Name": "Koh Kong",
+      "Code": "AS-KH-KK",
+      "Description": "A coastal province in southwestern Cambodia, known for its natural reserves, rivers, and the Cardamom Mountains.",
+      "Capital": "Koh Kong",
+      "Population": 150000,
+      "AreaKm2": 11817
+    },
+    {
+      "Name": "Mondulkiri",
+      "Code": "AS-KH-MK",
+      "Description": "A northeastern province known for its forests, waterfalls, and indigenous Bunong people, as well as its wildlife sanctuary.",
+      "Capital": "Sen Monorom",
+      "Population": 127000,
+      "AreaKm2": 14354
+    },
+    {
+      "Name": "Ratanakiri",
+      "Code": "AS-KH-RK",
+      "Description": "A province located in the northeast, known for its rich biodiversity, natural parks, and the indigenous communities living there.",
+      "Capital": "Banlung",
+      "Population": 146000,
+      "AreaKm2": 10847
+    },
+    {
+      "Name": "Stung Treng",
+      "Code": "AS-KH-ST",
+      "Description": "A province in the northeastern part of Cambodia, known for its natural resources, including rivers, forests, and wildlife.",
+      "Capital": "Stung Treng",
+      "Population": 170000,
+      "AreaKm2": 11627
+    },
+    {
+      "Name": "Kratié",
+      "Code": "AS-KH-KT",
+      "Description": "Located in the northeastern part of Cambodia, known for its Mekong River views and endangered freshwater dolphins.",
+      "Capital": "Kratié",
+      "Population": 300000,
+      "AreaKm2": 11634
+    },
+    {
+      "Name": "Prey Veng",
+      "Code": "AS-KH-PV",
+      "Description": "A province in southeastern Cambodia, known for its fertile rice fields and agricultural economy.",
+      "Capital": "Prey Veng",
+      "Population": 710000,
+      "AreaKm2": 5636
+    },
+    {
+      "Name": "Svay Rieng",
+      "Code": "AS-KH-SVR",
+      "Description": "A province in southeastern Cambodia, known for its agricultural production and proximity to Vietnam.",
+      "Capital": "Svay Rieng",
+      "Population": 535000,
+      "AreaKm2": 3013
+    },
+    {
+      "Name": "Banteay Meanchey",
+      "Code": "AS-KH-BM",
+      "Description": "A province located in the northwest, known for its historical and cultural heritage, including Angkorian ruins.",
+      "Capital": "Serei Saophoan",
+      "Population": 719000,
+      "AreaKm2": 6608
+    },
+    {
+      "Name": "Oddar Meanchey",
+      "Code": "AS-KH-OM",
+      "Description": "A province in the northwest, known for its mountainous terrain and the natural beauty of the area.",
+      "Capital": "Samraong",
+      "Population": 207000,
+      "AreaKm2": 6126
+    },
+    {
+      "Name": "Pailin",
+      "Code": "AS-KH-PA",
+      "Description": "A province in western Cambodia, known for its gem mining and scenic hills.",
+      "Capital": "Pailin",
+      "Population": 143000,
+      "AreaKm2": 1975
+    }
+]  

@@ -1,0 +1,42 @@
+[
+    {
+      "Name": "Central Singapore",
+      "Code": "AS-SG-CS",
+      "Description": "The central region of Singapore, known for its business and financial districts, landmarks like Marina Bay Sands, and vibrant cultural hubs.",
+      "Capital": "Singapore",
+      "Population": 2500000,
+      "AreaKm2": 170
+    },
+    {
+      "Name": "North Singapore",
+      "Code": "AS-SG-NS",
+      "Description": "A region known for its residential communities, parks, and educational institutions. It includes areas such as Woodlands and Yishun.",
+      "Capital": "Singapore",
+      "Population": 900000,
+      "AreaKm2": 75
+    },
+    {
+      "Name": "West Singapore",
+      "Code": "AS-SG-WS",
+      "Description": "A region that includes both residential and industrial areas, as well as nature reserves like Bukit Timah and Jurong Lake Gardens.",
+      "Capital": "Singapore",
+      "Population": 800000,
+      "AreaKm2": 85
+    },
+    {
+      "Name": "East Singapore",
+      "Code": "AS-SG-ES",
+      "Description": "A region known for its coastal areas, recreational parks like East Coast Park, and iconic landmarks such as Changi Airport.",
+      "Capital": "Singapore",
+      "Population": 700000,
+      "AreaKm2": 65
+    },
+    {
+      "Name": "Northeast Singapore",
+      "Code": "AS-SG-NES",
+      "Description": "A region known for its mix of residential areas, recreational facilities, and green spaces. It includes areas such as Sengkang and Punggol.",
+      "Capital": "Singapore",
+      "Population": 500000,
+      "AreaKm2": 45
+    }
+]  

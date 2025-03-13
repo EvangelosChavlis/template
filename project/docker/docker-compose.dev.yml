@@ -14,6 +14,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - webnet
+    restart: always
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -27,9 +28,27 @@ services:
       - postgres
     networks:
       - webnet
+    restart: always
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    environment:
+      ADMIN_USER: admin
+      ADMIN_PASSWORD: yourStrongPassword123
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - webnet
+    restart: always
+
 
 volumes:
   postgres_data:
+  portainer_data:
 
 networks:
   webnet:

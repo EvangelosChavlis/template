@@ -1,0 +1,82 @@
+[
+  {
+    "Name": "Tbilisi",
+    "Code": "EU-GE-TB",
+    "Description": "The capital city and the cultural, economic, and political center of Georgia, known for its historical sites, including Narikala Fortress and Rustaveli Avenue.",
+    "Capital": "Tbilisi",
+    "Population": 1148000,
+    "AreaKm2": 726
+  },
+  {
+    "Name": "Adjara",
+    "Code": "EU-GE-ADJ",
+    "Description": "A coastal region on the Black Sea, known for its tourism, Batumi, and a mix of seaside and mountainous landscapes.",
+    "Capital": "Batumi",
+    "Population": 350000,
+    "AreaKm2": 3000
+  },
+  {
+    "Name": "Imereti",
+    "Code": "EU-GE-IME",
+    "Description": "A central region of Georgia, known for its fertile lands, vineyards, and historical towns such as Kutaisi.",
+    "Capital": "Kutaisi",
+    "Population": 600000,
+    "AreaKm2": 6800
+  },
+  {
+    "Name": "Kakheti",
+    "Code": "EU-GE-KAK",
+    "Description": "The eastern region, famous for its wine production, vineyards, and the Alazani River Valley.",
+    "Capital": "Telavi",
+    "Population": 400000,
+    "AreaKm2": 5000
+  },
+  {
+    "Name": "Kvemo Kartli",
+    "Code": "EU-GE-KVK",
+    "Description": "A region located south of Tbilisi, known for its diverse landscapes, including plains, forests, and rivers.",
+    "Capital": "Rustavi",
+    "Population": 600000,
+    "AreaKm2": 5000
+  },
+  {
+    "Name": "Mtskheta-Mtianeti",
+    "Code": "EU-GE-MTS",
+    "Description": "A mountainous region, home to Mtskheta, an ancient city and UNESCO World Heritage site, and stunning landscapes of the Caucasus mountains.",
+    "Capital": "Mtskheta",
+    "Population": 150000,
+    "AreaKm2": 4000
+  },
+  {
+    "Name": "Racha-Lechkhumi and Kvemo Svaneti",
+    "Code": "EU-GE-RLK",
+    "Description": "A region known for its mountainous terrain, rivers, and traditional culture, with Svaneti being a key tourist destination.",
+    "Capital": "Ambrolauri",
+    "Population": 100000,
+    "AreaKm2": 7000
+  },
+  {
+    "Name": "Samegrelo-Zemo Svaneti",
+    "Code": "EU-GE-SZG",
+    "Description": "A region in western Georgia known for its Black Sea coast, as well as Svaneti, and its unique cultural heritage.",
+    "Capital": "Zugdidi",
+    "Population": 400000,
+    "AreaKm2": 6400
+  },
+  {
+    "Name": "Samtskhe-Javakheti",
+    "Code": "EU-GE-SJ",
+    "Description": "A region in southern Georgia, famous for its diverse ethnic groups, churches, and picturesque landscapes.",
+    "Capital": "Akhaltsikhe",
+    "Population": 200000,
+    "AreaKm2": 7000
+  },
+  {
+    "Name": "Shida Kartli",
+    "Code": "EU-GE-SKA",
+    "Description": "Located in central Georgia, this region is rich in history, with ancient ruins and historical sites such as Uplistsikhe.",
+    "Capital": "Gori",
+    "Population": 200000,
+    "AreaKm2": 3800
+  }
+]

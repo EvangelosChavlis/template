@@ -1,0 +1,218 @@
+[
+  {
+    "Name": "Alexandria",
+    "Code": "AF-EG-AL",
+    "Description": "A major port city on the Mediterranean, known for its historical landmarks and commerce.",
+    "Capital": "Alexandria",
+    "Population": 5200000,
+    "AreaKm2": 2679
+  },
+  {
+    "Name": "Aswan",
+    "Code": "AF-EG-AS",
+    "Description": "A southern governorate known for the Aswan Dam and Nubian heritage.",
+    "Capital": "Aswan",
+    "Population": 1500000,
+    "AreaKm2": 62726
+  },
+  {
+    "Name": "Asyut",
+    "Code": "AF-EG-AT",
+    "Description": "A central governorate with a strong agricultural economy.",
+    "Capital": "Asyut",
+    "Population": 4200000,
+    "AreaKm2": 25926
+  },
+  {
+    "Name": "Beheira",
+    "Code": "AF-EG-BH",
+    "Description": "An important agricultural region in the Nile Delta.",
+    "Capital": "Damanhur",
+    "Population": 6600000,
+    "AreaKm2": 9826
+  },
+  {
+    "Name": "Beni Suef",
+    "Code": "AF-EG-BS",
+    "Description": "Known for its cement industry and agricultural production.",
+    "Capital": "Beni Suef",
+    "Population": 3200000,
+    "AreaKm2": 10954
+  },
+  {
+    "Name": "Cairo",
+    "Code": "AF-EG-CA",
+    "Description": "The capital of Egypt, the largest city in Africa, and a major cultural hub.",
+    "Capital": "Cairo",
+    "Population": 9900000,
+    "AreaKm2": 606
+  },
+  {
+    "Name": "Dakahlia",
+    "Code": "AF-EG-DK",
+    "Description": "A densely populated governorate in the Nile Delta.",
+    "Capital": "Mansoura",
+    "Population": 6200000,
+    "AreaKm2": 3538
+  },
+  {
+    "Name": "Damietta",
+    "Code": "AF-EG-DT",
+    "Description": "A coastal governorate known for furniture manufacturing and fishing.",
+    "Capital": "Damietta",
+    "Population": 1500000,
+    "AreaKm2": 1031
+  },
+  {
+    "Name": "Faiyum",
+    "Code": "AF-EG-FY",
+    "Description": "Home to the Qarun Lake and famous for its ancient history.",
+    "Capital": "Faiyum",
+    "Population": 3500000,
+    "AreaKm2": 6068
+  },
+  {
+    "Name": "Gharbia",
+    "Code": "AF-EG-GH",
+    "Description": "An industrial and agricultural hub in the Nile Delta.",
+    "Capital": "Tanta",
+    "Population": 5300000,
+    "AreaKm2": 1942
+  },
+  {
+    "Name": "Giza",
+    "Code": "AF-EG-GZ",
+    "Description": "Home to the famous Pyramids and Sphinx.",
+    "Capital": "Giza",
+    "Population": 9000000,
+    "AreaKm2": 85153
+  },
+  {
+    "Name": "Ismailia",
+    "Code": "AF-EG-IS",
+    "Description": "Located along the Suez Canal, an important trade and transport region.",
+    "Capital": "Ismailia",
+    "Population": 1400000,
+    "AreaKm2": 5067
+  },
+  {
+    "Name": "Kafr El Sheikh",
+    "Code": "AF-EG-KS",
+    "Description": "An agricultural region in the northern Nile Delta.",
+    "Capital": "Kafr El Sheikh",
+    "Population": 3500000,
+    "AreaKm2": 3748
+  },
+  {
+    "Name": "Luxor",
+    "Code": "AF-EG-LX",
+    "Description": "A historic governorate, home to Karnak and the Valley of the Kings.",
+    "Capital": "Luxor",
+    "Population": 1300000,
+    "AreaKm2": 2959
+  },
+  {
+    "Name": "Matruh",
+    "Code": "AF-EG-MT",
+    "Description": "A vast governorate with coastal resorts and desert landscapes.",
+    "Capital": "Marsa Matruh",
+    "Population": 520000,
+    "AreaKm2": 212112
+  },
+  {
+    "Name": "Minya",
+    "Code": "AF-EG-MN",
+    "Description": "A key agricultural region with significant Pharaonic and Coptic sites.",
+    "Capital": "Minya",
+    "Population": 6000000,
+    "AreaKm2": 32279
+  },
+  {
+    "Name": "Monufia",
+    "Code": "AF-EG-MF",
+    "Description": "An industrial and agricultural region near Cairo.",
+    "Capital": "Shibin El Kom",
+    "Population": 4000000,
+    "AreaKm2": 2499
+  },
+  {
+    "Name": "New Valley",
+    "Code": "AF-EG-NV",
+    "Description": "A sparsely populated governorate in western Egypt.",
+    "Capital": "Kharga",
+    "Population": 250000,
+    "AreaKm2": 440098
+  },
+  {
+    "Name": "North Sinai",
+    "Code": "AF-EG-NS",
+    "Description": "A strategic region bordering Israel and Gaza.",
+    "Capital": "Arish",
+    "Population": 450000,
+    "AreaKm2": 27564
+  },
+  {
+    "Name": "Port Said",
+    "Code": "AF-EG-PS",
+    "Description": "A port city on the Suez Canal with a free trade zone.",
+    "Capital": "Port Said",
+    "Population": 750000,
+    "AreaKm2": 1344
+  },
+  {
+    "Name": "Qalyubia",
+    "Code": "AF-EG-QL",
+    "Description": "Part of Greater Cairo, known for its agriculture and industry.",
+    "Capital": "Banha",
+    "Population": 6200000,
+    "AreaKm2": 1124
+  },
+  {
+    "Name": "Qena",
+    "Code": "AF-EG-QN",
+    "Description": "Home to ancient temples and sugarcane production.",
+    "Capital": "Qena",
+    "Population": 3200000,
+    "AreaKm2": 17998
+  },
+  {
+    "Name": "Red Sea",
+    "Code": "AF-EG-RS",
+    "Description": "A coastal region with tourism hotspots like Hurghada.",
+    "Capital": "Hurghada",
+    "Population": 395000,
+    "AreaKm2": 119099
+  },
+  {
+    "Name": "Sharqia",
+    "Code": "AF-EG-SH",
+    "Description": "One of Egypt most populous regions, with a strong agricultural base.",
+    "Capital": "Zagazig",
+    "Population": 7600000,
+    "AreaKm2": 4911
+  },
+  {
+    "Name": "Sohag",
+    "Code": "AF-EG-SO",
+    "Description": "A historic governorate with Pharaonic and Coptic sites.",
+    "Capital": "Sohag",
+    "Population": 5300000,
+    "AreaKm2": 11022
+  },
+  {
+    "Name": "South Sinai",
+    "Code": "AF-EG-SS",
+    "Description": "A tourism hub with Mount Sinai and Sharm El-Sheikh.",
+    "Capital": "El Tor",
+    "Population": 110000,
+    "AreaKm2": 33140
+  },
+  {
+    "Name": "Suez",
+    "Code": "AF-EG-SZ",
+    "Description": "A key trade city at the southern end of the Suez Canal.",
+    "Capital": "Suez",
+    "Population": 750000,
+    "AreaKm2": 9002
+  }
+]

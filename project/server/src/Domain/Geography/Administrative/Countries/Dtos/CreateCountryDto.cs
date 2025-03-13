@@ -11,6 +11,8 @@ public record CreateCountryDto(
     string Capital,
     long Population,
     double AreaKm2,
-    bool IsActive,
+    string PhoneCode,
+    string TLD,
+    string Currency,
     Guid ContinentId
 );

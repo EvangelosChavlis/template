@@ -1,0 +1,75 @@
+[
+    {
+      "Name": "Eastern Cape",
+      "Code": "AF-ZA-EC",
+      "Description": "Known for its beaches, wildlife, and historical significance.",
+      "Capital": "Bhisho",
+      "Population": 6700000,
+      "AreaKm2": 168966
+    },
+    {
+      "Name": "Free State",
+      "Code": "AF-ZA-FS",
+      "Description": "An agricultural hub with vast open plains.",
+      "Capital": "Bloemfontein",
+      "Population": 2900000,
+      "AreaKm2": 129825
+    },
+    {
+      "Name": "Gauteng",
+      "Code": "AF-ZA-GP",
+      "Description": "The economic hub of South Africa, home to Johannesburg and Pretoria.",
+      "Capital": "Johannesburg",
+      "Population": 15800000,
+      "AreaKm2": 18178
+    },
+    {
+      "Name": "KwaZulu-Natal",
+      "Code": "AF-ZA-KZN",
+      "Description": "A coastal region with a mix of mountains, beaches, and cultural heritage.",
+      "Capital": "Pietermaritzburg",
+      "Population": 11700000,
+      "AreaKm2": 94361
+    },
+    {
+      "Name": "Limpopo",
+      "Code": "AF-ZA-LP",
+      "Description": "Bordering Zimbabwe and Mozambique, known for wildlife and agriculture.",
+      "Capital": "Polokwane",
+      "Population": 5900000,
+      "AreaKm2": 125755
+    },
+    {
+      "Name": "Mpumalanga",
+      "Code": "AF-ZA-MP",
+      "Description": "Home to Kruger National Park and scenic landscapes.",
+      "Capital": "Mbombela",
+      "Population": 4700000,
+      "AreaKm2": 76495
+    },
+    {
+      "Name": "North West",
+      "Code": "AF-ZA-NW",
+      "Description": "Rich in mining and natural reserves.",
+      "Capital": "Mahikeng",
+      "Population": 4100000,
+      "AreaKm2": 104882
+    },
+    {
+      "Name": "Northern Cape",
+      "Code": "AF-ZA-NC",
+      "Description": "The largest province by land area but sparsely populated.",
+      "Capital": "Kimberley",
+      "Population": 1300000,
+      "AreaKm2": 372889
+    },
+    {
+      "Name": "Western Cape",
+      "Code": "AF-ZA-WC",
+      "Description": "Famous for Cape Town, wine regions, and coastal beauty.",
+      "Capital": "Cape Town",
+      "Population": 7500000,
+      "AreaKm2": 129462
+    }
+]
+  

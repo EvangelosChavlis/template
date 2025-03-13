@@ -1,0 +1,154 @@
+[
+    {
+        "Name": "Kyiv",
+        "Code": "EU-UA-KY",
+        "Description": "The capital of Ukraine, an important cultural, political, and economic center, known for its historical landmarks and vibrant arts scene.",
+        "Capital": "Kyiv",
+        "Population": 2804000,
+        "AreaKm2": 839
+    },
+    {
+        "Name": "Lviv",
+        "Code": "EU-UA-LV",
+        "Description": "Located in western Ukraine, Lviv is known for its rich cultural history, beautiful architecture, and vibrant student life.",
+        "Capital": "Lviv",
+        "Population": 720000,
+        "AreaKm2": 182
+    },
+    {
+        "Name": "Odesa",
+        "Code": "EU-UA-OD",
+        "Description": "A major port city on the Black Sea, Odesa is known for its beaches, 19th-century architecture, and multicultural atmosphere.",
+        "Capital": "Odesa",
+        "Population": 1000000,
+        "AreaKm2": 237
+    },
+    {
+        "Name": "Kharkiv",
+        "Code": "EU-UA-KH",
+        "Description": "The second-largest city in Ukraine, known for its industrial base, universities, and architectural landmarks.",
+        "Capital": "Kharkiv",
+        "Population": 1430000,
+        "AreaKm2": 350
+    },
+    {
+        "Name": "Dnipro",
+        "Code": "EU-UA-DN",
+        "Description": "An industrial city located along the Dnieper River, Dnipro is known for its steel production and historical significance.",
+        "Capital": "Dnipro",
+        "Population": 1000000,
+        "AreaKm2": 405
+    },
+    {
+        "Name": "Donetsk",
+        "Code": "EU-UA-DO",
+        "Description": "A major city in the eastern part of Ukraine, Donetsk has been historically important for heavy industry and coal mining.",
+        "Capital": "Donetsk",
+        "Population": 950000,
+        "AreaKm2": 358
+    },
+    {
+        "Name": "Zaporizhzhia",
+        "Code": "EU-UA-ZP",
+        "Description": "Known for the Zaporizhzhia hydroelectric station and its history tied to the Cossacks, this city lies on the Dnieper River.",
+        "Capital": "Zaporizhzhia",
+        "Population": 750000,
+        "AreaKm2": 331
+    },
+    {
+        "Name": "Kryvyi Rih",
+        "Code": "EU-UA-KR",
+        "Description": "An important industrial city in southern Ukraine, Kryvyi Rih is known for its iron ore mining and metallurgy.",
+        "Capital": "Kryvyi Rih",
+        "Population": 630000,
+        "AreaKm2": 430
+    },
+    {
+        "Name": "Mykolaiv",
+        "Code": "EU-UA-MK",
+        "Description": "Located on the Black Sea, Mykolaiv is an important shipbuilding city and naval base.",
+        "Capital": "Mykolaiv",
+        "Population": 500000,
+        "AreaKm2": 260
+    },
+    {
+        "Name": "Kherson",
+        "Code": "EU-UA-KS",
+        "Description": "A port city on the Black Sea, Kherson is known for its agricultural production, particularly grain and vegetables.",
+        "Capital": "Kherson",
+        "Population": 300000,
+        "AreaKm2": 283
+    },
+    {
+        "Name": "Vinnytsia",
+        "Code": "EU-UA-VM",
+        "Description": "Known for its historic architecture and cultural significance, Vinnytsia is located in central Ukraine.",
+        "Capital": "Vinnytsia",
+        "Population": 370000,
+        "AreaKm2": 113
+    },
+    {
+        "Name": "Cherkasy",
+        "Code": "EU-UA-CK",
+        "Description": "Located along the Dnieper River, Cherkasy is known for its natural beauty and agricultural landscape.",
+        "Capital": "Cherkasy",
+        "Population": 290000,
+        "AreaKm2": 198
+    },
+    {
+        "Name": "Chernihiv",
+        "Code": "EU-UA-CH",
+        "Description": "One of the oldest cities in Ukraine, Chernihiv is known for its historic churches and architectural landmarks.",
+        "Capital": "Chernihiv",
+        "Population": 290000,
+        "AreaKm2": 79
+    },
+    {
+        "Name": "Poltava",
+        "Code": "EU-UA-PL",
+        "Description": "A historic city located in central Ukraine, Poltava is known for its cultural heritage and role in Ukrainian history.",
+        "Capital": "Poltava",
+        "Population": 300000,
+        "AreaKm2": 145
+    },
+    {
+        "Name": "Sumy",
+        "Code": "EU-UA-SM",
+        "Description": "Located near the Russian border, Sumy is known for its educational institutions and agricultural production.",
+        "Capital": "Sumy",
+        "Population": 270000,
+        "AreaKm2": 165
+    },
+    {
+        "Name": "Chernivtsi",
+        "Code": "EU-UA-CT",
+        "Description": "A city with a diverse cultural heritage, Chernivtsi is known for its historic architecture and beautiful landscapes.",
+        "Capital": "Chernivtsi",
+        "Population": 270000,
+        "AreaKm2": 153
+    },
+    {
+        "Name": "Rivne",
+        "Code": "EU-UA-RV",
+        "Description": "Rivne is located in the western part of Ukraine, known for its green spaces and being a major transport hub.",
+        "Capital": "Rivne",
+        "Population": 240000,
+        "AreaKm2": 81
+    },
+    {
+        "Name": "Ternopil",
+        "Code": "EU-UA-TP",
+        "Description": "A city known for its educational institutions and historic architecture, located in the western part of Ukraine.",
+        "Capital": "Ternopil",
+        "Population": 230000,
+        "AreaKm2": 169
+    },
+    {
+        "Name": "Khmelnytskyi",
+        "Code": "EU-UA-KM",
+        "Description": "Located in central Ukraine, Khmelnytskyi is known for its cultural heritage and economic significance.",
+        "Capital": "Khmelnytskyi",
+        "Population": 270000,
+        "AreaKm2": 643
+    }
+]

@@ -42,10 +42,14 @@ public class CreateRegionHandler : IRequestHandler<CreateRegionCommand, Response
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<Region, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<Region, bool>>[] 
+        { 
+            r => r.Name!.Equals(command.Dto.Name) ||
+                r.Code!.Equals(command.Dto.Code)
+        };
         var existingRegion = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the region already exists in the system
         if (existingRegion is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

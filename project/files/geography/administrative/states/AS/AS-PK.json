@@ -1,0 +1,58 @@
+[
+    {
+      "Name": "Balochistan",
+      "Code": "AS-PK-BA",
+      "Description": "The largest province by area, known for its rugged mountains, deserts, and coastline along the Arabian Sea.",
+      "Capital": "Quetta",
+      "Population": 12000000,
+      "AreaKm2": 347190
+    },
+    {
+      "Name": "Khyber Pakhtunkhwa",
+      "Code": "AS-PK-KP",
+      "Description": "A province in the north-west of Pakistan, known for its mountainous terrain and cultural significance.",
+      "Capital": "Peshawar",
+      "Population": 35000000,
+      "AreaKm2": 101741
+    },
+    {
+      "Name": "Punjab",
+      "Code": "AS-PK-PB",
+      "Description": "The most populous province in Pakistan, known for its agricultural output and cultural richness.",
+      "Capital": "Lahore",
+      "Population": 110000000,
+      "AreaKm2": 205344
+    },
+    {
+      "Name": "Sindh",
+      "Code": "AS-PK-SD",
+      "Description": "A province in the southeastern part of Pakistan, known for its historical cities and cultural diversity.",
+      "Capital": "Karachi",
+      "Population": 47000000,
+      "AreaKm2": 140914
+    },
+    {
+      "Name": "Azad Jammu and Kashmir",
+      "Code": "AS-PK-AJ",
+      "Description": "A self-governing administrative region in the northern part of Pakistan, known for its mountainous landscapes and natural beauty.",
+      "Capital": "Muzaffarabad",
+      "Population": 4000000,
+      "AreaKm2": 13297
+    },
+    {
+      "Name": "Gilgit-Baltistan",
+      "Code": "AS-PK-GB",
+      "Description": "A mountainous region known for its stunning natural beauty, including the Karakoram mountain range.",
+      "Capital": "Gilgit",
+      "Population": 2100000,
+      "AreaKm2": 72496
+    },
+    {
+      "Name": "Islamabad Capital Territory",
+      "Code": "AS-PK-IS",
+      "Description": "The capital region of Pakistan, known for its modern architecture and natural surroundings.",
+      "Capital": "Islamabad",
+      "Population": 2000000,
+      "AreaKm2": 906
+    }
+]  

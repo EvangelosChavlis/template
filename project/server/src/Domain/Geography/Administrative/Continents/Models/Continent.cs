@@ -26,6 +26,16 @@ public class Continent : BaseEntity
     public string Description { get; set; }
 
     /// <summary>
+    /// Gets or sets the total population of the continent.
+    /// </summary>
+    public long Population { get; set; }
+
+    /// <summary>
+    /// Gets or sets the total area of the continent in square kilometers.
+    /// </summary>
+    public double AreaKm2 { get; set; }
+
+    /// <summary>
     /// Gets or sets a value indicating whether the continent is active.
     /// </summary>
     public bool IsActive { get; set; }

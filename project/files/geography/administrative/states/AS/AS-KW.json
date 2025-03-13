@@ -1,0 +1,50 @@
+[
+    {
+      "Name": "Kuwait City",
+      "Code": "AS-KW-KW",
+      "Description": "The capital and largest city of Kuwait, known for its modern skyline, cultural landmarks, and bustling port.",
+      "Capital": "Kuwait City",
+      "Population": 800000,
+      "AreaKm2": 200
+    },
+    {
+      "Name": "Hawalli",
+      "Code": "AS-KW-HA",
+      "Description": "A governorate located near Kuwait City, known for its commercial and residential areas.",
+      "Capital": "Hawalli",
+      "Population": 400000,
+      "AreaKm2": 50
+    },
+    {
+      "Name": "Al Farwaniyah",
+      "Code": "AS-KW-AL",
+      "Description": "A densely populated governorate that includes residential areas, shopping districts, and a major international airport.",
+      "Capital": "Al Farwaniyah",
+      "Population": 600000,
+      "AreaKm2": 150
+    },
+    {
+      "Name": "Mubarak Al Kabeer",
+      "Code": "AS-KW-MK",
+      "Description": "A governorate that includes several residential areas and cultural sites.",
+      "Capital": "Mubarak Al Kabeer",
+      "Population": 200000,
+      "AreaKm2": 75
+    },
+    {
+      "Name": "Al Jahra",
+      "Code": "AS-KW-AJ",
+      "Description": "A region known for its agriculture and desert landscapes, as well as its proximity to the borders with Iraq and Saudi Arabia.",
+      "Capital": "Al Jahra",
+      "Population": 300000,
+      "AreaKm2": 1000
+    },
+    {
+      "Name": "Ahmadi",
+      "Code": "AS-KW-AH",
+      "Description": "A governorate located in the southern part of Kuwait, known for its oil industry and industrial zones.",
+      "Capital": "Ahmadi",
+      "Population": 350000,
+      "AreaKm2": 500
+    }
+]  

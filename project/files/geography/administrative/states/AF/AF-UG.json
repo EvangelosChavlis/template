@@ -1,0 +1,34 @@
+[
+    {
+      "Name": "Central Region",
+      "Code": "AF-UG-CR",
+      "Description": "The most populous region, home to the capital, Kampala.",
+      "Capital": "Kampala",
+      "Population": 10400000,
+      "AreaKm2": 10600
+    },
+    {
+      "Name": "Eastern Region",
+      "Code": "AF-UG-ER",
+      "Description": "Known for its agricultural output and historical sites.",
+      "Capital": "Jinja",
+      "Population": 6500000,
+      "AreaKm2": 27500
+    },
+    {
+      "Name": "Northern Region",
+      "Code": "AF-UG-NR",
+      "Description": "A region recovering from conflict, rich in cultural heritage.",
+      "Capital": "Gulu",
+      "Population": 5500000,
+      "AreaKm2": 72770
+    },
+    {
+      "Name": "Western Region",
+      "Code": "AF-UG-WR",
+      "Description": "Known for its beautiful landscapes, including the Rwenzori Mountains.",
+      "Capital": "Mbarara",
+      "Population": 5200000,
+      "AreaKm2": 36300
+    }
+]  

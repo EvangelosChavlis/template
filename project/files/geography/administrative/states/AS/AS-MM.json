@@ -1,0 +1,66 @@
+[
+    {
+      "Name": "Yangon",
+      "Code": "AS-MM-YG",
+      "Description": "The largest city and commercial hub of Myanmar, known for its colonial architecture and the iconic Shwedagon Pagoda.",
+      "Capital": "Yangon",
+      "Population": 5400000,
+      "AreaKm2": 598
+    },
+    {
+      "Name": "Mandalay",
+      "Code": "AS-MM-MD",
+      "Description": "A historic city located in central Myanmar, known for its royal palaces, ancient temples, and cultural heritage.",
+      "Capital": "Mandalay",
+      "Population": 1500000,
+      "AreaKm2": 290
+    },
+    {
+      "Name": "Naypyidaw",
+      "Code": "AS-MM-NP",
+      "Description": "The administrative capital of Myanmar, known for its wide roads, government buildings, and planned city design.",
+      "Capital": "Naypyidaw",
+      "Population": 925000,
+      "AreaKm2": 4200
+    },
+    {
+      "Name": "Sagaing",
+      "Code": "AS-MM-SG",
+      "Description": "A city in the Sagaing Region, known for its beautiful hilltop temples, monasteries, and the Irrawaddy River.",
+      "Capital": "Sagaing",
+      "Population": 1000000,
+      "AreaKm2": 23000
+    },
+    {
+      "Name": "Shan",
+      "Code": "AS-MM-SH",
+      "Description": "A region known for its scenic mountains, hill tribes, and the famous Inle Lake, which is a UNESCO Biosphere Reserve.",
+      "Capital": "Taunggyi",
+      "Population": 5700000,
+      "AreaKm2": 155000
+    },
+    {
+      "Name": "Kachin",
+      "Code": "AS-MM-KC",
+      "Description": "A northern state of Myanmar, known for its natural beauty, including snow-capped mountains, forests, and the headwaters of the Irrawaddy River.",
+      "Capital": "Myitkyina",
+      "Population": 1600000,
+      "AreaKm2": 89000
+    },
+    {
+      "Name": "Chin",
+      "Code": "AS-MM-CH",
+      "Description": "A hilly region in western Myanmar, known for its remote villages, traditional cultures, and natural beauty.",
+      "Capital": "Hakha",
+      "Population": 500000,
+      "AreaKm2": 36000
+    },
+    {
+      "Name": "Rakhine",
+      "Code": "AS-MM-RA",
+      "Description": "A coastal region with beautiful beaches, the Rakhine Mountains, and rich cultural heritage.",
+      "Capital": "Sittwe",
+      "Population": 3000000,
+      "AreaKm2": 36000
+    }
+]  

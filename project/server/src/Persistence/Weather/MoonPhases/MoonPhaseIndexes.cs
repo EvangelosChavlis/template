@@ -11,6 +11,15 @@ public class MoonPhaseIndexes : IEntityTypeConfiguration<MoonPhase>
 {
     public void Configure(EntityTypeBuilder<MoonPhase> builder)
     {
+        builder.HasIndex(m => m.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(MoonPhase)}_
+                {nameof(MoonPhase.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
         builder.HasIndex(m 
             => new { 
                 m.Id, 
@@ -22,7 +31,9 @@ public class MoonPhaseIndexes : IEntityTypeConfiguration<MoonPhase>
                 {nameof(MoonPhase)}_
                 {nameof(MoonPhase.Id)}_
                 {nameof(MoonPhase.Name)}_
-                {nameof(MoonPhase.Description)}
-            ".Replace("\n", "").Trim());
+                {nameof(MoonPhase.Description)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
     }
 }
