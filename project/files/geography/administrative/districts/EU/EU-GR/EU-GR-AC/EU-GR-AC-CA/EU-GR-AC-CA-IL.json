@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Central Ilioupoli",
+    "Description": "The central area of Ilioupoli, characterized by residential developments, local amenities, and green spaces.",
+    "Population": 40000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-CA-IL-1"
+  },
+  {
+    "Name": "Southern Ilioupoli",
+    "Description": "A quieter, more suburban area with a focus on residential living and access to parks and natural areas.",
+    "Population": 30000,
+    "AreaKm2": 2.0,
+    "Code": "EU-GR-AC-CA-IL-2"
+  }
+]

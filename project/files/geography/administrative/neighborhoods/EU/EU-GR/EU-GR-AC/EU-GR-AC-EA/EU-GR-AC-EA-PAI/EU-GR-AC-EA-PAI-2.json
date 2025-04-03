@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Glyka Nera Center",
+        "Description": "A bustling area with shops, cafes, and residential buildings, attracting families and young professionals.",
+        "Population": 5000,
+        "AreaKm2": 6.0,
+        "Zipcode": "15354",
+        "Code": "EU-GR-AC-EA-PAI-2-GNC"
+    },
+    {
+        "Name": "Ano Glyka Nera",
+        "Description": "A quiet residential neighborhood offering scenic views and modern housing developments.",
+        "Population": 4000,
+        "AreaKm2": 5.0,
+        "Zipcode": "15355",
+        "Code": "EU-GR-AC-EA-PAI-2-AGN"
+    }
+]

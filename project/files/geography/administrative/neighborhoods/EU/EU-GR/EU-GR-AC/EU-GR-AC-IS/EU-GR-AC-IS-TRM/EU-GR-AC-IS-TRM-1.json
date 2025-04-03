@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Trojzen Village",
+    "Description": "The central village area, home to local shops, restaurants, and historic buildings.",
+    "Population": 1500,
+    "AreaKm2": 10.0,
+    "Zipcode": "18020",
+    "Code": "EU-GR-AC-IS-TRM-1-TV"
+  },
+  {
+    "Name": "Coastal Area",
+    "Description": "A serene coastal area with beachside properties and a peaceful environment.",
+    "Population": 1000,
+    "AreaKm2": 15.0,
+    "Zipcode": "18021",
+    "Code": "EU-GR-AC-IS-TRM-1-CA"
+  }
+]

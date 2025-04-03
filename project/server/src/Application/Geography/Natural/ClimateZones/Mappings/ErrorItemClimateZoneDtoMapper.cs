@@ -18,6 +18,7 @@ public class ErrorItemClimateZoneDtoMapper
             Id: Guid.Empty,
             Name: string.Empty,
             Description: string.Empty,
+            Code: string.Empty,
             AvgTemperatureC: double.MinValue,
             AvgPrecipitationMm: double.MinValue,
             IsActive: false,

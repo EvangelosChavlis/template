@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Vasilissis Sofias",
+        "Description": "A quiet residential area known for its suburban houses, parks, and schools.",
+        "Population": 800,
+        "AreaKm2": 0.8,
+        "Zipcode": "12360",
+        "Code": "EU-GR-AC-WA-EL-4-VS"
+    },
+    {
+        "Name": "Eleonas Park",
+        "Description": "A family-friendly area with green spaces, recreational areas, and local markets.",
+        "Population": 900,
+        "AreaKm2": 0.9,
+        "Zipcode": "12361",
+        "Code": "EU-GR-AC-WA-EL-4-EP"
+    },
+    {
+        "Name": "Kato Eleonas East",
+        "Description": "A mostly residential neighborhood with quiet streets, small shops, and local cafés.",
+        "Population": 950,
+        "AreaKm2": 1.0,
+        "Zipcode": "12362",
+        "Code": "EU-GR-AC-WA-EL-4-KEE"
+    }
+]

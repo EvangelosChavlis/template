@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Korydallos",
+        "Description": "A diverse neighborhood with a mix of residential, commercial, and recreational spaces, offering a blend of suburban and urban living.",
+        "Population": 5500,
+        "AreaKm2": 0.9,
+        "Zipcode": "12255",
+        "Code": "EU-GR-AC-WA-AI-5-KO"
+    },
+    {
+        "Name": "Peristeri Border",
+        "Description": "A transitioning area where residential developments meet commercial zones, providing easy access to neighboring municipalities.",
+        "Population": 4700,
+        "AreaKm2": 0.8,
+        "Zipcode": "12256",
+        "Code": "EU-GR-AC-WA-AI-5-PB"
+    },
+    {
+        "Name": "Industrial Zone",
+        "Description": "An area focused on industrial activity, with factories and warehouses, as well as proximity to major transport links.",
+        "Population": 6000,
+        "AreaKm2": 1.2,
+        "Zipcode": "12257",
+        "Code": "EU-GR-AC-WA-AI-5-IZ"
+    }
+]

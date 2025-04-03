@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Central Aliartos",
+    "Description": "The commercial and administrative center of the town.",
+    "Population": 2500,
+    "AreaKm2": 40.0,
+    "Zipcode": "32001",
+    "Code": "EU-GR-CG-BOE-ALI-1-CA"
+  },
+  {
+    "Name": "Agios Nikolaos",
+    "Description": "A residential area with traditional houses and local amenities.",
+    "Population": 2000,
+    "AreaKm2": 30.0,
+    "Zipcode": "32002",
+    "Code": "EU-GR-CG-BOE-ALI-1-AN"
+  }
+]

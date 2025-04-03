@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Pefki Center",
+    "Description": "The heart of Pefki, featuring parks, local shops, and residential areas.",
+    "Population": 12000,
+    "AreaKm2": 2.0,
+    "Code": "EU-GR-AC-NA-PE-1"
+  },
+  {
+    "Name": "Northern Pefki",
+    "Description": "A quieter, suburban area with more open space, perfect for families.",
+    "Population": 10000,
+    "AreaKm2": 2.5,
+    "Code": "EU-GR-AC-NA-PE-2"
+  }
+]

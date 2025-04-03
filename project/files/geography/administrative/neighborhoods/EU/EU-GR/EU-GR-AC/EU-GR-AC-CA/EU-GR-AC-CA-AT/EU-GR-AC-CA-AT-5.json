@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Plaka",
+        "Description": "The old historical neighborhood of Athens, located under the Acropolis, known for its picturesque streets, traditional tavernas, and rich history.",
+        "Population": 9000,
+        "AreaKm2": 0.7,
+        "Zipcode": "10558",
+        "Code": "EU-GR-AC-CA-AT-5-PL"
+    },
+    {
+        "Name": "Monastiraki",
+        "Description": "A lively neighborhood famous for its flea market, vibrant nightlife, and central location near historical landmarks such as the Ancient Agora and Hadrian s Library.",
+        "Population": 12000,
+        "AreaKm2": 1.0,
+        "Zipcode": "10555",
+        "Code": "EU-GR-AC-CA-AT-5-MO"
+    },
+    {
+        "Name": "Syntagma",
+        "Description": "The heart of Athens, known for its grand square, the Greek Parliament, and being a major commercial and political center.",
+        "Population": 10000,
+        "AreaKm2": 0.5,
+        "Zipcode": "10563",
+        "Code": "EU-GR-AC-CA-AT-5-SY"
+    },
+    {
+        "Name": "Kolonaki",
+        "Description": "An upscale neighborhood known for its luxury shopping, stylish cafes, and vibrant cultural life. It is considered one of the wealthiest areas in Athens.",
+        "Population": 13000,
+        "AreaKm2": 1.2,
+        "Zipcode": "10673",
+        "Code": "EU-GR-AC-CA-AT-5-KO"
+    },
+    {
+        "Name": "Psiri",
+        "Description": "A trendy neighborhood with a mix of nightlife, artistic spaces, and a blend of traditional and modern architecture.",
+        "Population": 8000,
+        "AreaKm2": 0.9,
+        "Zipcode": "10554",
+        "Code": "EU-GR-AC-CA-AT-5-PS"
+    }
+]

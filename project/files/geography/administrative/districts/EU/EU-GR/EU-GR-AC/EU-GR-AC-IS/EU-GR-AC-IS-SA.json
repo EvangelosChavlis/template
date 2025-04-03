@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Salamina Town",
+    "Description": "The main town of the island, known for its bustling port and historical landmarks.",
+    "Population": 15000,
+    "AreaKm2": 20.0,
+    "Code": "EU-GR-AC-IS-SA-1"
+  },
+  {
+    "Name": "Peristeria",
+    "Description": "A residential and agricultural area on the island, with a calm atmosphere and green spaces.",
+    "Population": 8000,
+    "AreaKm2": 25.0,
+    "Code": "EU-GR-AC-IS-SA-2"
+  },
+  {
+    "Name": "Kaminia",
+    "Description": "A coastal area with a mix of local industry, fishing villages, and scenic beaches.",
+    "Population": 7000,
+    "AreaKm2": 15.0,
+    "Code": "EU-GR-AC-IS-SA-3"
+  },
+  {
+    "Name": "Aianteio",
+    "Description": "A historic site known for its ancient ruins and proximity to natural parks and beaches.",
+    "Population": 6000,
+    "AreaKm2": 15.6,
+    "Code": "EU-GR-AC-IS-SA-4"
+  }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "A central district with a blend of residential areas, shops, and cultural sites.",
+        "Population": 12000,
+        "AreaKm2": 4.5,
+        "Code": "EU-GR-AC-WA-CH-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A primarily residential area with several schools, parks, and local businesses.",
+        "Population": 10000,
+        "AreaKm2": 4.8,
+        "Code": "EU-GR-AC-WA-CH-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "Known for its green spaces, including the Daphni Monastery and nearby parks.",
+        "Population": 8000,
+        "AreaKm2": 5.2,
+        "Code": "EU-GR-AC-WA-CH-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A quieter residential area, ideal for families, with easy access to nature and amenities.",
+        "Population": 7000,
+        "AreaKm2": 4.3,
+        "Code": "EU-GR-AC-WA-CH-4"
+    }
+]

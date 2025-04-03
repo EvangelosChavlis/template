@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Village Area",
+    "Description": "A small, peaceful residential area with a few traditional houses and lush greenery.",
+    "Population": 200,
+    "AreaKm2": 3.0,
+    "Zipcode": "18044",
+    "Code": "EU-GR-AC-IS-HY-3-VA"
+  },
+  {
+    "Name": "Coastal Area",
+    "Description": "A tranquil coastal area with small cottages and a calm atmosphere.",
+    "Population": 100,
+    "AreaKm2": 1.0,
+    "Zipcode": "18045",
+    "Code": "EU-GR-AC-IS-HY-3-CA"
+  }
+]

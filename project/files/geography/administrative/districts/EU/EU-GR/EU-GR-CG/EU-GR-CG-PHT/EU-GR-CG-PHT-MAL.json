@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Malesina Town",
+    "Description": "The central town known for its agricultural activities, local businesses, and proximity to the Gulf of Maliakos.",
+    "Population": 5000,
+    "AreaKm2": 40.0,
+    "Code": "EU-GR-CG-PHT-MAL-1"
+  },
+  {
+    "Name": "Agricultural Area",
+    "Description": "The rural and agricultural zone surrounding Malesina, known for its farms and open landscapes.",
+    "Population": 5000,
+    "AreaKm2": 80.0,
+    "Code": "EU-GR-CG-PHT-MAL-2"
+  }
+]

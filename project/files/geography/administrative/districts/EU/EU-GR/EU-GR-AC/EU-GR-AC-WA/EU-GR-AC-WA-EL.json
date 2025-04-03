@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "A mixed-use area combining light industrial zones with residential blocks and local shops.",
+        "Population": 4500,
+        "AreaKm2": 4.0,
+        "Code": "EU-GR-AC-WA-EL-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A predominantly residential district with parks, schools, and a growing commercial area.",
+        "Population": 4000,
+        "AreaKm2": 3.5,
+        "Code": "EU-GR-AC-WA-EL-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A quieter district with family homes, local businesses, and proximity to green spaces.",
+        "Population": 3500,
+        "AreaKm2": 3.0,
+        "Code": "EU-GR-AC-WA-EL-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "An industrial zone with warehouses, light manufacturing, and small-scale commercial operations.",
+        "Population": 2000,
+        "AreaKm2": 1.5,
+        "Code": "EU-GR-AC-WA-EL-4"
+    }
+]

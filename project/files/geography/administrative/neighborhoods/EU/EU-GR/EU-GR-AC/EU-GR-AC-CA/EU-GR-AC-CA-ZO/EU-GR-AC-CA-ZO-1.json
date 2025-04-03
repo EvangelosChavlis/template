@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "University Area",
+    "Description": "A student-heavy area with affordable housing, cafes, and shops serving the university community.",
+    "Population": 15000,
+    "AreaKm2": 1.0,
+    "Zipcode": "15772",
+    "Code": "EU-GR-AC-CA-ZO-1-UA"
+  },
+  {
+    "Name": "Zografou Center",
+    "Description": "The commercial and cultural hub of Zografou, offering local amenities and public services.",
+    "Population": 12000,
+    "AreaKm2": 0.7,
+    "Zipcode": "15773",
+    "Code": "EU-GR-AC-CA-ZO-1-ZC"
+  }
+]

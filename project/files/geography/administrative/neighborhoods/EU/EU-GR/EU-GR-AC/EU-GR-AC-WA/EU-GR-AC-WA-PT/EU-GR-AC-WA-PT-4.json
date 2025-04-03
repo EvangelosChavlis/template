@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Nea Petroupoli",
+        "Description": "A rapidly growing neighborhood with new residential developments and expanding infrastructure.",
+        "Population": 7500,
+        "AreaKm2": 0.9,
+        "Zipcode": "13243",
+        "Code": "EU-GR-AC-WA-PT-4-NP"
+    },
+    {
+        "Name": "Panorama",
+        "Description": "A hillside neighborhood offering stunning city views and a peaceful environment.",
+        "Population": 7200,
+        "AreaKm2": 0.85,
+        "Zipcode": "13244",
+        "Code": "EU-GR-AC-WA-PT-4-PA"
+    },
+    {
+        "Name": "Alsos Petroupolis",
+        "Description": "A green neighborhood near the famous Petroupoli Grove, known for its parks and walking paths.",
+        "Population": 6800,
+        "AreaKm2": 0.8,
+        "Zipcode": "13245",
+        "Code": "EU-GR-AC-WA-PT-4-AP"
+    },
+    {
+        "Name": "Ano Ilioupoli",
+        "Description": "A residential area with a mix of modern apartments and traditional houses, close to schools and sports facilities.",
+        "Population": 6600,
+        "AreaKm2": 0.75,
+        "Zipcode": "13246",
+        "Code": "EU-GR-AC-WA-PT-4-AI"
+    }
+]

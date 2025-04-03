@@ -10,10 +10,11 @@ using server.src.Domain.Common.Dtos;
 using server.src.Domain.Geography.Natural.ClimateZones.Models;
 using server.src.Domain.Geography.Natural.Locations.Dtos;
 using server.src.Domain.Geography.Natural.Locations.Models;
-using server.src.Domain.Geography.Natural.TerrainTypes.Models;
+using server.src.Domain.Geography.Natural.SurfaceTypes.Models;
 using server.src.Domain.Geography.Natural.Timezones.Models;
 using server.src.Domain.Geography.Natural.Locations.Extensions;
 using server.src.Persistence.Common.Interfaces;
+using server.src.Domain.Geography.Natural.NaturalFeatures.Models;
 
 namespace server.src.Application.Geography.Natural.Locations.Commands;
 
@@ -48,7 +49,8 @@ public class CreateLocationHandler : IRequestHandler<CreateLocationCommand, Resp
         var filters = new Expression<Func<Location, bool>>[] {
             l => l.Latitude == command.Dto.Latitude &&
             l.Longitude == command.Dto.Longitude &&
-            l.Altitude == command.Dto.Altitude
+            l.Altitude == command.Dto.Altitude &&
+            l.Depth == command.Dto.Depth
         };
         var existingLocation = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
@@ -81,18 +83,18 @@ public class CreateLocationHandler : IRequestHandler<CreateLocationCommand, Resp
         }
 
         // Searching Item
-        var terrainTypeFilters = new Expression<Func<TerrainType, bool>>[] { t => t.Id == command.Dto.TerrainTypeId };
-        var terrainType = await _commonRepository.GetResultByIdAsync(terrainTypeFilters, token: token);
+        var surfaceTypeFilters = new Expression<Func<SurfaceType, bool>>[] { s => s.Id == command.Dto.SurfaceTypeId };
+        var surfaceType = await _commonRepository.GetResultByIdAsync(surfaceTypeFilters, token: token);
 
         // Check for existence
-        if (terrainType is null)
+        if (surfaceType is null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error creating location.")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData("Terrain type not found.");
+                .WithData("Surface Type not found.");
         }
 
         // Searching Item
@@ -110,10 +112,26 @@ public class CreateLocationHandler : IRequestHandler<CreateLocationCommand, Resp
                 .WithData("Timezone not found.");
         }
 
+        // Searching Item
+        var naturalFeatureFilters = new Expression<Func<NaturalFeature, bool>>[] { nf => nf.Id == command.Dto.TimezoneId };
+        var naturalFeature = await _commonRepository.GetResultByIdAsync(naturalFeatureFilters, token: token);
+
+        // Check for existence
+        if (naturalFeature is null)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error creating location.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(false)
+                .WithData("Natural feature not found.");
+        }
+
         // Mapping and Saving Location
         var location = command.Dto.CreateLocationModelMapping(
             climateZone,
-            terrainType,
+            naturalFeature,
+            surfaceType,
             timezone
         );
         var modelValidationResult = location.Validate();

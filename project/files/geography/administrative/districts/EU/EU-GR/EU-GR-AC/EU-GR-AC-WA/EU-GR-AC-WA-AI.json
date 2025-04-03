@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "A commercial and industrial district, with a mix of residential areas and businesses.",
+        "Population": 18000,
+        "AreaKm2": 1.5,
+        "Code": "EU-GR-AC-WA-AI-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A predominantly residential area with a growing number of local shops and services.",
+        "Population": 16000,
+        "AreaKm2": 1.3,
+        "Code": "EU-GR-AC-WA-AI-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A mixed-use district with a focus on small industries and residential housing.",
+        "Population": 15000,
+        "AreaKm2": 1.2,
+        "Code": "EU-GR-AC-WA-AI-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "An area known for its proximity to public transport links, providing easy access to other parts of Athens.",
+        "Population": 14000,
+        "AreaKm2": 1.1,
+        "Code": "EU-GR-AC-WA-AI-4"
+    },
+    {
+        "Name": "5th District",
+        "Description": "A quieter district, mainly residential, with schools and green spaces.",
+        "Population": 13000,
+        "AreaKm2": 0.9,
+        "Code": "EU-GR-AC-WA-AI-5"
+    }
+]

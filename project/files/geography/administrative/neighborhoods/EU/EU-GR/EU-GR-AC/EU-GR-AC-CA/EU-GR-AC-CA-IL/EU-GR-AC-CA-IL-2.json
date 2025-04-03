@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Karea",
+        "Description": "A tranquil residential neighborhood popular with families, known for its parks and quiet streets.",
+        "Population": 15000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16347",
+        "Code": "EU-GR-AC-CA-IL-1-KA"
+    },
+    {
+        "Name": "Voula",
+        "Description": "A suburban area with a mix of traditional and modern housing, offering a relaxed lifestyle near nature reserves.",
+        "Population": 15000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16348",
+        "Code": "EU-GR-AC-CA-IL-1-VO"
+    }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Shipyard District",
+    "Description": "An area known for its boat-building industry and maritime activities.",
+    "Population": 1000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18024",
+    "Code": "EU-GR-AC-IS-PO-3-SD"
+  },
+  {
+    "Name": "Residential Zone",
+    "Description": "A quieter residential area with homes and local businesses.",
+    "Population": 1000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18025",
+    "Code": "EU-GR-AC-IS-PO-3-RZ"
+  }
+]

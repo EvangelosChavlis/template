@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A quiet residential area with tree-lined streets and family homes, close to parks and green spaces.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16123",
+        "Code": "EU-GR-AC-CA-KE-2-AN"
+    },
+    {
+        "Name": "Hymettus Hills",
+        "Description": "A neighborhood known for its proximity to the mountain, with scenic views, nature trails, and outdoor activities.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16124",
+        "Code": "EU-GR-AC-CA-KE-2-HH"
+    }
+]

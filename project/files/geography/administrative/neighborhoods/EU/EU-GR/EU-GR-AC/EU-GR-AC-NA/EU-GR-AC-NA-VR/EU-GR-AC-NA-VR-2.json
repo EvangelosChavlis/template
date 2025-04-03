@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Vrilissia Hills",
+        "Description": "A residential area located on higher ground with larger homes and scenic views.",
+        "Population": 7000,
+        "AreaKm2": 2.3,
+        "Zipcode": "15237",
+        "Code": "EU-GR-AC-NA-VR-2-VH"
+    },
+    {
+        "Name": "Vrilissia Gardens",
+        "Description": "A peaceful, family-oriented neighborhood with extensive green spaces and modern homes.",
+        "Population": 7000,
+        "AreaKm2": 2.3,
+        "Zipcode": "15238",
+        "Code": "EU-GR-AC-NA-VR-2-VG"
+    }
+]

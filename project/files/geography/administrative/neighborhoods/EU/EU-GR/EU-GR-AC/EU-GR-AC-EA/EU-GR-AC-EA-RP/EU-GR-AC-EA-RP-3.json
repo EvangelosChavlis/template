@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Marikes Beach",
+        "Description": "A popular beach area with seaside cafes and a relaxed vibe.",
+        "Population": 6000,
+        "AreaKm2": 3.5,
+        "Zipcode": "19015",
+        "Code": "EU-GR-AC-EA-RP-3-MB"
+    },
+    {
+        "Name": "Agios Spyridonas",
+        "Description": "A peaceful neighborhood with beachfront houses and a small marina.",
+        "Population": 4000,
+        "AreaKm2": 2.5,
+        "Zipcode": "19016",
+        "Code": "EU-GR-AC-EA-RP-3-AS"
+    }
+]

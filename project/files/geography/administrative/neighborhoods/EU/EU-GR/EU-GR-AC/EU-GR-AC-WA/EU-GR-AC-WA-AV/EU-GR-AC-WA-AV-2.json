@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Perifereiaki",
+        "Description": "A residential area with proximity to the main highway, offering easy access to other parts of Athens.",
+        "Population": 4000,
+        "AreaKm2": 0.6,
+        "Zipcode": "12354",
+        "Code": "EU-GR-AC-WA-AV-2-PE"
+    },
+    {
+        "Name": "Pefkakia",
+        "Description": "A neighborhood known for its tree-lined streets, green spaces, and family-friendly atmosphere.",
+        "Population": 3500,
+        "AreaKm2": 0.7,
+        "Zipcode": "12355",
+        "Code": "EU-GR-AC-WA-AV-2-PEF"
+    },
+    {
+        "Name": "Nea Agia Varvara",
+        "Description": "A more modern residential area with newer buildings and local shops.",
+        "Population": 3000,
+        "AreaKm2": 0.5,
+        "Zipcode": "12356",
+        "Code": "EU-GR-AC-WA-AV-2-NAV"
+    }
+]

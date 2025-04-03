@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Port Area",
+    "Description": "The bustling port area filled with cafes, shops, and restaurants.",
+    "Population": 3000,
+    "AreaKm2": 1.0,
+    "Zipcode": "18010",
+    "Code": "EU-GR-AC-IS-AE-1-PA"
+  },
+  {
+    "Name": "Kryoneri",
+    "Description": "A residential neighborhood known for its tranquil streets and local charm.",
+    "Population": 4000,
+    "AreaKm2": 2.5,
+    "Zipcode": "18011",
+    "Code": "EU-GR-AC-IS-AE-1-KR"
+  }
+]

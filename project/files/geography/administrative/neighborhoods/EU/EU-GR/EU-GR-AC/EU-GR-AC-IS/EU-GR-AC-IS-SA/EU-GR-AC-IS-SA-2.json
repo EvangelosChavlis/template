@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Agricultural Zone",
+    "Description": "A peaceful area with farmlands and local produce markets.",
+    "Population": 4000,
+    "AreaKm2": 12.0,
+    "Zipcode": "18902",
+    "Code": "EU-GR-AC-IS-SA-2-AZ"
+  },
+  {
+    "Name": "Residential Area",
+    "Description": "A quieter area with family homes, schools, and local amenities.",
+    "Population": 4000,
+    "AreaKm2": 13.0,
+    "Zipcode": "18903",
+    "Code": "EU-GR-AC-IS-SA-2-RA"
+  }
+]

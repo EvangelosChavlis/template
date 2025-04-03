@@ -20,6 +20,11 @@ public class NaturalFeature : BaseEntity
     public string Description { get; set; }
 
     /// <summary>
+    /// Gets or sets a unique code representing the natural feature.
+    /// </summary>
+    public string Code { get; set; }
+
+    /// <summary>
     /// Gets or sets the status indicating if the natural feature is active (enabled for assignment or usage).
     /// </summary>
     public bool IsActive { get; set; }

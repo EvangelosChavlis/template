@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Seaside Elefsina",
+    "Description": "A waterfront area with restaurants, parks, and port facilities.",
+    "Population": 3000,
+    "AreaKm2": 4.0,
+    "Zipcode": "19204",
+    "Code": "EU-GR-AC-WEA-EF-3-SE"
+  },
+  {
+    "Name": "Industrial Zone",
+    "Description": "A sector dedicated to manufacturing and industrial activities.",
+    "Population": 2000,
+    "AreaKm2": 3.0,
+    "Zipcode": "19205",
+    "Code": "EU-GR-AC-WEA-EF-3-IZ"
+  }
+]

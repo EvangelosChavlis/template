@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Town Center",
+    "Description": "The heart of Malesina with shops, local markets, and community services.",
+    "Population": 2500,
+    "AreaKm2": 15.0,
+    "Zipcode": "35350",
+    "Code": "EU-GR-CG-PHT-MAL-1-TC"
+  },
+  {
+    "Name": "Gulf View",
+    "Description": "A neighborhood along the coast with beautiful views of the Gulf of Maliakos, popular for its scenic landscapes.",
+    "Population": 1500,
+    "AreaKm2": 10.0,
+    "Zipcode": "35351",
+    "Code": "EU-GR-CG-PHT-MAL-1-GV"
+  }
+]

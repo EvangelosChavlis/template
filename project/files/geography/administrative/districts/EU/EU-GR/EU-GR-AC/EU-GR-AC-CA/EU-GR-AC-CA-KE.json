@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Central Kesariani",
+    "Description": "The central area of Kesariani, featuring a mix of residential neighborhoods and local businesses.",
+    "Population": 15000,
+    "AreaKm2": 2.0,
+    "Code": "EU-GR-AC-CA-KE-1"
+  },
+  {
+    "Name": "Southern Kesariani",
+    "Description": "A more residential district offering a quiet suburban atmosphere and easy access to the natural surroundings of Mount Hymettus.",
+    "Population": 20000,
+    "AreaKm2": 2.0,
+    "Code": "EU-GR-AC-CA-KE-2"
+  }
+]

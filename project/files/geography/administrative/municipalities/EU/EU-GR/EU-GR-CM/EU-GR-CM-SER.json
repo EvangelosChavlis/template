@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Serres",
+    "Code": "EU-GR-CM-SER-SER",
+    "Description": "The capital of Serres, known for its rich history, fertile plains, and proximity to the mountains.",
+    "Population": 150000,
+    "AreaKm2": 3070.0
+  },
+  {
+    "Name": "Nigrita",
+    "Code": "EU-GR-CM-SER-NIG",
+    "Description": "A municipality known for its agricultural importance and historical sites.",
+    "Population": 25000,
+    "AreaKm2": 150.0
+  },
+  {
+    "Name": "Neapolis",
+    "Code": "EU-GR-CM-SER-NEA",
+    "Description": "A town known for its archaeological significance and vibrant local culture.",
+    "Population": 15000,
+    "AreaKm2": 120.0
+  },
+  {
+    "Name": "Sidirokastro",
+    "Code": "EU-GR-CM-SER-SID",
+    "Description": "A municipality located near the Bulgarian border, known for its historical landmarks and natural landscapes.",
+    "Population": 13000,
+    "AreaKm2": 200.0
+  },
+  {
+    "Name": "Dohani",
+    "Code": "EU-GR-CM-SER-DOH",
+    "Description": "A rural municipality known for its fertile land and agricultural output.",
+    "Population": 8000,
+    "AreaKm2": 100.0
+  },
+  {
+    "Name": "Kallithea",
+    "Code": "EU-GR-CM-SER-KAL",
+    "Description": "A village known for its scenic surroundings and agricultural heritage.",
+    "Population": 5000,
+    "AreaKm2": 80.0
+  }
+]

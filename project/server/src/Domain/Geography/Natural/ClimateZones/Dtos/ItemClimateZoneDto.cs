@@ -8,6 +8,7 @@ namespace server.src.Domain.Geography.Natural.ClimateZones.Dtos;
 public record ItemClimateZoneDto(
     Guid Id,
     string Name,
+    string Code,
     string Description,
     double AvgTemperatureC,
     double AvgPrecipitationMm,

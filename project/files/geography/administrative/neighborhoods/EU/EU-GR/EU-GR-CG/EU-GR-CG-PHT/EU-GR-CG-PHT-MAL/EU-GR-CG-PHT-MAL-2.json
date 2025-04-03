@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Koutouki",
+    "Description": "A rural settlement known for its olive groves and farming activities.",
+    "Population": 2000,
+    "AreaKm2": 25.0,
+    "Zipcode": "35360",
+    "Code": "EU-GR-CG-PHT-MAL-2-KO"
+  },
+  {
+    "Name": "Makrigialos",
+    "Description": "A farming village surrounded by farmland and vineyards, producing local produce.",
+    "Population": 3000,
+    "AreaKm2": 50.0,
+    "Zipcode": "35370",
+    "Code": "EU-GR-CG-PHT-MAL-2-MA"
+  }
+]

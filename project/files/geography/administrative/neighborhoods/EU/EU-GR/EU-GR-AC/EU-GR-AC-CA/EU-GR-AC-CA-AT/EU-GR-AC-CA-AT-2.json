@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Kallimarmaro",
+        "Description": "A historical neighborhood known for the Panathenaic Stadium, the site of the first modern Olympic Games.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "11635",
+        "Code": "EU-GR-AC-CA-AT-2-KA"
+    },
+    {
+        "Name": "Pagrati",
+        "Description": "A lively residential neighborhood with a mix of traditional Greek culture and modern amenities, offering cafes, restaurants, and green spaces.",
+        "Population": 20000,
+        "AreaKm2": 1.5,
+        "Zipcode": "11635",
+        "Code": "EU-GR-AC-CA-AT-2-PA"
+    },
+    {
+        "Name": "Exarchia",
+        "Description": "A famous district known for its vibrant street art, alternative culture, and activism, attracting both locals and tourists.",
+        "Population": 15000,
+        "AreaKm2": 1.3,
+        "Zipcode": "10680",
+        "Code": "EU-GR-AC-CA-AT-2-EX"
+    },
+    {
+        "Name": "Kolonaki",
+        "Description": "An upscale neighborhood known for its high-end shops, cafes, and cultural institutions like the Benaki Museum.",
+        "Population": 12000,
+        "AreaKm2": 1.2,
+        "Zipcode": "10673",
+        "Code": "EU-GR-AC-CA-AT-2-KO"
+    },
+    {
+        "Name": "Lycabettus",
+        "Description": "A scenic hill neighborhood that offers breathtaking views of Athens, a popular spot for both locals and tourists.",
+        "Population": 8000,
+        "AreaKm2": 0.8,
+        "Zipcode": "10676",
+        "Code": "EU-GR-AC-CA-AT-2-LY"
+    }
+]

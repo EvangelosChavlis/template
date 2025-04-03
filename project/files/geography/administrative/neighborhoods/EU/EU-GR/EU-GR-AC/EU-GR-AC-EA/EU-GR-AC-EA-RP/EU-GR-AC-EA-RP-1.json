@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Port of Rafina",
+    "Description": "A bustling area with ferry connections to the Aegean islands, seafood restaurants, and tourist facilities.",
+    "Population": 8000,
+    "AreaKm2": 3.5,
+    "Zipcode": "19009",
+    "Code": "EU-GR-AC-EA-RP-1-PR"
+  },
+  {
+    "Name": "Nea Rafina",
+    "Description": "A modern residential neighborhood with parks, schools, and local businesses.",
+    "Population": 12000,
+    "AreaKm2": 4.5,
+    "Zipcode": "19010",
+    "Code": "EU-GR-AC-EA-RP-1-NR"
+  },
+  {
+    "Name": "Kallitechnoupoli",
+    "Description": "A hilly residential area with scenic views, known for its artistic community and green spaces.",
+    "Population": 5000,
+    "AreaKm2": 2.0,
+    "Zipcode": "19011",
+    "Code": "EU-GR-AC-EA-RP-1-KA"
+  }
+]

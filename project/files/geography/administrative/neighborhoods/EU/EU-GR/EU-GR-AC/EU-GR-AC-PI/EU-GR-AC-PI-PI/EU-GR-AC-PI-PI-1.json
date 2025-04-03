@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Piraeus Port Area",
+    "Description": "A busy area focused on port activities, with a large number of shops, restaurants, and maritime services.",
+    "Population": 30000,
+    "AreaKm2": 3.2,
+    "Zipcode": "18531",
+    "Code": "EU-GR-AC-PI-PI-1-PA"
+  },
+  {
+    "Name": "Kastella",
+    "Description": "A picturesque neighborhood with traditional Greek houses and stunning views of the port.",
+    "Population": 15000,
+    "AreaKm2": 1.5,
+    "Zipcode": "18535",
+    "Code": "EU-GR-AC-PI-PI-1-KA"
+  },
+  {
+    "Name": "Piraeus City Center",
+    "Description": "A commercial hub with shopping centers, offices, and local businesses.",
+    "Population": 30000,
+    "AreaKm2": 2.5,
+    "Zipcode": "18536",
+    "Code": "EU-GR-AC-PI-PI-1-PCC"
+  }
+]

@@ -20,9 +20,11 @@ public static class ItemLocationDtoMapper
             Longitude: model.Longitude,
             Latitude: model.Latitude,
             Altitude: model.Altitude,
+            Depth: model.Depth,
             IsActive: model.IsActive,
             Timezone: model.Timezone.Name,
-            TerrainType: model.TerrainType.Name,
+            NaturalFeature: model.NaturalFeature.Name,
+            SurfaceType: model.SurfaceType.Name,
             ClimateZone: model.ClimateZone.Name,
             Version: model.Version
         );

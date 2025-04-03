@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Harbor Area",
+    "Description": "The bustling harbor area where ferries dock, surrounded by cafes, shops, and historic buildings.",
+    "Population": 800,
+    "AreaKm2": 2.0,
+    "Zipcode": "18040",
+    "Code": "EU-GR-AC-IS-HY-1-HA"
+  },
+  {
+    "Name": "Old Town",
+    "Description": "The historic center of Hydra with traditional stone buildings, narrow streets, and cultural landmarks.",
+    "Population": 700,
+    "AreaKm2": 3.0,
+    "Zipcode": "18041",
+    "Code": "EU-GR-AC-IS-HY-1-OT"
+  }
+]

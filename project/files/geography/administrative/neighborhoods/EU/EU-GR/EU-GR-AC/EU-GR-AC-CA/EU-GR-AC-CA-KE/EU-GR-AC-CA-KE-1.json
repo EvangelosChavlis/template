@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Kesariani Center",
+        "Description": "The heart of Kesariani, with main roads, shops, and residential areas, offering easy access to public transportation.",
+        "Population": 8000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16121",
+        "Code": "EU-GR-AC-CA-KE-1-KC"
+    },
+    {
+        "Name": "Pine Forest",
+        "Description": "A neighborhood known for its green areas, parks, and proximity to the foothills of Mount Hymettus.",
+        "Population": 7000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16122",
+        "Code": "EU-GR-AC-CA-KE-1-PF"
+    }
+]

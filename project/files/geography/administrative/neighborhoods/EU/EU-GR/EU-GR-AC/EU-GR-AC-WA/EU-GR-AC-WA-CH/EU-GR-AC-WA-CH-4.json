@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kato Chaidari",
+        "Description": "A predominantly residential area with a mix of modern and older housing, known for its close-knit community.",
+        "Population": 3500,
+        "AreaKm2": 2.0,
+        "Zipcode": "12470",
+        "Code": "EU-GR-AC-WA-CH-4-KC"
+    },
+    {
+        "Name": "Dafni Monastery Area",
+        "Description": "A historic neighborhood surrounding the famous Daphni Monastery, offering both religious and cultural heritage.",
+        "Population": 2500,
+        "AreaKm2": 1.7,
+        "Zipcode": "12471",
+        "Code": "EU-GR-AC-WA-CH-4-DM"
+    },
+    {
+        "Name": "Peristeri Border",
+        "Description": "A developing area that acts as a boundary between Chaidari and Peristeri, featuring a mix of residential homes and businesses.",
+        "Population": 2000,
+        "AreaKm2": 1.2,
+        "Zipcode": "12472",
+        "Code": "EU-GR-AC-WA-CH-4-PB"
+    }
+]

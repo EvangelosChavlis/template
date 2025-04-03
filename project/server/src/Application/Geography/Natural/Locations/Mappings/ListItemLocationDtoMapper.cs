@@ -19,6 +19,7 @@ public static class ListItemLocationDtoMapper
             Longitude: model.Longitude,
             Latitude: model.Latitude,
             Altitude: model.Altitude,
+            Depth: model.Depth,
             IsActive: model.IsActive
         );
 }

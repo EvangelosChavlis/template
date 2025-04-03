@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Spetses Town",
+    "Description": "The main town of Spetses, known for its historic architecture, charming streets, and proximity to the port.",
+    "Population": 4000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-IS-SP-1"
+  },
+  {
+    "Name": "Agios Mamas",
+    "Description": "A residential area named after the local church, with a mix of local homes and green spaces.",
+    "Population": 1000,
+    "AreaKm2": 5.0,
+    "Code": "EU-GR-AC-IS-SP-2"
+  },
+  {
+    "Name": "Pita",
+    "Description": "A coastal area known for its beaches, luxury villas, and scenic views.",
+    "Population": 1000,
+    "AreaKm2": 6.0,
+    "Code": "EU-GR-AC-IS-SP-3"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Dafni",
+    "Description": "A residential area with easy access to the center of Athens, known for its green spaces and calm environment.",
+    "Population": 35000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-CA-DA-1"
+  },
+  {
+    "Name": "Ymittos",
+    "Description": "An area close to Mount Ymittos, with natural beauty and suburban character, offering both green spaces and residential zones.",
+    "Population": 45000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-CA-DA-2"
+  }
+]

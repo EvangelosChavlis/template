@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kato Chaidari",
+        "Description": "A bustling area known for its vibrant streets, local shops, and residential buildings.",
+        "Population": 5000,
+        "AreaKm2": 2.0,
+        "Zipcode": "12461",
+        "Code": "EU-GR-AC-WA-CH-1-KC"
+    },
+    {
+        "Name": "Daphni Monastery Area",
+        "Description": "A historic neighborhood centered around the famous Daphni Monastery, offering peaceful surroundings.",
+        "Population": 2500,
+        "AreaKm2": 1.5,
+        "Zipcode": "12462",
+        "Code": "EU-GR-AC-WA-CH-1-DM"
+    },
+    {
+        "Name": "Chaidari Square",
+        "Description": "The heart of the district, home to various cafes, restaurants, and local shops.",
+        "Population": 2000,
+        "AreaKm2": 1.0,
+        "Zipcode": "12463",
+        "Code": "EU-GR-AC-WA-CH-1-CS"
+    }
+]

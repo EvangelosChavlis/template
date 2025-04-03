@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Trojzen",
+    "Description": "A picturesque village known for its historical landmarks and scenic coastal views.",
+    "Population": 3500,
+    "AreaKm2": 60.0,
+    "Code": "EU-GR-AC-IS-TRM-1"
+  },
+  {
+    "Name": "Mehano",
+    "Description": "A tranquil village located in the hills, offering stunning views of the surrounding landscapes and coastline.",
+    "Population": 3500,
+    "AreaKm2": 60.0,
+    "Code": "EU-GR-AC-IS-TRM-2"
+  }
+]

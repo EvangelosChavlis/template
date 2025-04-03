@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Gerakas Center",
+    "Description": "The main district with commercial areas, public services, and residential buildings.",
+    "Population": 15000,
+    "AreaKm2": 4.0,
+    "Code": "EU-GR-AC-EA-GE-1"
+  },
+  {
+    "Name": "Anthousa",
+    "Description": "A quieter suburban district with open green areas and family homes.",
+    "Population": 10000,
+    "AreaKm2": 3.0,
+    "Code": "EU-GR-AC-EA-GE-2"
+  },
+  {
+    "Name": "Southeast Gerakas",
+    "Description": "A developing area with parks, schools, and residential complexes.",
+    "Population": 10000,
+    "AreaKm2": 3.0,
+    "Code": "EU-GR-AC-EA-GE-3"
+  }
+]

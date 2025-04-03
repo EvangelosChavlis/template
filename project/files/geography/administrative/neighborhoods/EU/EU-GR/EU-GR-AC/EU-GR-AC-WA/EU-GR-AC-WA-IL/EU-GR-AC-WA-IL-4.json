@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Peristeri Gate",
+        "Description": "A quieter neighborhood known for its residential areas, local parks, and family-friendly atmosphere.",
+        "Population": 4500,
+        "AreaKm2": 0.5,
+        "Zipcode": "13130",
+        "Code": "EU-GR-AC-WA-IL-4-PG"
+    },
+    {
+        "Name": "Agios Georgios",
+        "Description": "A calm residential neighborhood with easy access to schools, local businesses, and green spaces.",
+        "Population": 4000,
+        "AreaKm2": 0.4,
+        "Zipcode": "13131",
+        "Code": "EU-GR-AC-WA-IL-4-AG"
+    },
+    {
+        "Name": "Anavissos",
+        "Description": "A suburban-style neighborhood offering quiet streets, parks, and a close-knit community feel.",
+        "Population": 3500,
+        "AreaKm2": 0.5,
+        "Zipcode": "13132",
+        "Code": "EU-GR-AC-WA-IL-4-AN"
+    }
+]

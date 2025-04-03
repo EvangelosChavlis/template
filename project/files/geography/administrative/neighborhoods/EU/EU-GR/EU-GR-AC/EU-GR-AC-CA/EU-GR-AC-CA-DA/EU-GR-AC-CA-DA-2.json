@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Ymittos Center",
+        "Description": "The central area of Ymittos, known for its local shops, cafes, and residential streets.",
+        "Population": 12000,
+        "AreaKm2": 1.5,
+        "Zipcode": "17237",
+        "Code": "EU-GR-AC-CA-DA-2-YC"
+    },
+    {
+        "Name": "Ano Ymittos",
+        "Description": "A hillside neighborhood that offers panoramic views of Athens, a more peaceful area with fewer commercial spaces.",
+        "Population": 15000,
+        "AreaKm2": 1.0,
+        "Zipcode": "17238",
+        "Code": "EU-GR-AC-CA-DA-2-AY"
+    },
+    {
+        "Name": "Agios Ioannis Ymittos",
+        "Description": "A tranquil residential neighborhood located near the foot of Mount Ymittos, known for its scenic parks and suburban feel.",
+        "Population": 8000,
+        "AreaKm2": 1.0,
+        "Zipcode": "17239",
+        "Code": "EU-GR-AC-CA-DA-2-AIY"
+    }
+]

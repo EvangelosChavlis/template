@@ -19,11 +19,12 @@ public static class ItemTimezoneDtoMapper
         this Timezone model) => new(
             Id: model.Id,
             Name: model.Name,
+            Description: model.Description,
+            Code: model.Code,
             UtcOffset: model.UtcOffset,
+            DstOffset: model.DstOffset,
             SupportsDaylightSaving: model.SupportsDaylightSaving,
             IsActive: model.IsActive,
-            Description: model.Description,
-            DstOffset: model.DstOffset,
             Version: model.Version
         );
 }

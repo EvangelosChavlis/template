@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Old Lamia",
+    "Description": "The historic center of the city, featuring ancient ruins, traditional buildings, and museums.",
+    "Population": 30000,
+    "AreaKm2": 30.0,
+    "Zipcode": "35100",
+    "Code": "EU-GR-CG-PHT-LAM-1-OL"
+  },
+  {
+    "Name": "Nea Lamia",
+    "Description": "A more modern area of the city, with residential neighborhoods, shopping districts, and office spaces.",
+    "Population": 40000,
+    "AreaKm2": 50.0,
+    "Zipcode": "35101",
+    "Code": "EU-GR-CG-PHT-LAM-1-NL"
+  },
+  {
+    "Name": "Lamia Park",
+    "Description": "A residential area with green spaces and parks, offering a quieter atmosphere within the city.",
+    "Population": 30000,
+    "AreaKm2": 40.0,
+    "Zipcode": "35102",
+    "Code": "EU-GR-CG-PHT-LAM-1-LP"
+  }
+]

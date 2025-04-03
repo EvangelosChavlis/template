@@ -1,0 +1,177 @@
+[
+  {
+    "Name": "Mountainous",
+    "Description": "Regions characterized by high elevation, steep slopes, and rugged terrain.",
+    "Code": "MNT"
+  },
+  {
+    "Name": "Coastal",
+    "Description": "Areas adjacent to oceans, seas, or large lakes, often featuring beaches, cliffs, or estuaries.",
+    "Code": "CST"
+  },
+  {
+    "Name": "Desert",
+    "Description": "Arid regions with little rainfall, sparse vegetation, and extreme temperature variations.",
+    "Code": "DST"
+  },
+  {
+    "Name": "Urban",
+    "Description": "Densely populated areas dominated by buildings, roads, and human-made infrastructure.",
+    "Code": "URB"
+  },
+  {
+    "Name": "Forest",
+    "Description": "Land covered primarily with trees and undergrowth, supporting diverse wildlife.",
+    "Code": "FOR"
+  },
+  {
+    "Name": "Grassland",
+    "Description": "Expansive regions dominated by grasses with few trees, often used for agriculture or grazing.",
+    "Code": "GRS"
+  },
+  {
+    "Name": "Wetland",
+    "Description": "Ecosystems where water covers the soil, such as swamps, marshes, and bogs.",
+    "Code": "WTL"
+  },
+  {
+    "Name": "Tundra",
+    "Description": "Cold, treeless landscapes with permafrost, found in polar regions or high altitudes.",
+    "Code": "TND"
+  },
+  {
+    "Name": "Savanna",
+    "Description": "Tropical grasslands with scattered trees, found in warm climates with distinct wet and dry seasons.",
+    "Code": "SVN"
+  },
+  {
+    "Name": "Volcanic",
+    "Description": "Regions shaped by volcanic activity, featuring lava fields, craters, and geothermal features.",
+    "Code": "VOL"
+  },
+  {
+    "Name": "Polar",
+    "Description": "Ice-covered landscapes found in Arctic and Antarctic regions, with extreme cold conditions.",
+    "Code": "POL"
+  },
+  {
+    "Name": "Steppe",
+    "Description": "Semi-arid grasslands with moderate rainfall, often found between deserts and forested areas.",
+    "Code": "STP"
+  },
+  {
+    "Name": "Plateau",
+    "Description": "Elevated flatlands with steep edges, formed by tectonic activity or erosion.",
+    "Code": "PLT"
+  },
+  {
+    "Name": "Delta",
+    "Description": "Low-lying land formed by river sediment deposition at the mouth of a river.",
+    "Code": "DLT"
+  },
+  {
+    "Name": "Cave",
+    "Description": "Underground formations created by geological processes, often found in limestone regions.",
+    "Code": "CAV"
+  },
+  {
+    "Name": "Glacier",
+    "Description": "Large masses of ice that move slowly over land, shaping the terrain through erosion.",
+    "Code": "GLC"
+  },
+  {
+    "Name": "Mangrove",
+    "Description": "Coastal ecosystems dominated by salt-tolerant trees, found in tropical and subtropical regions.",
+    "Code": "MNG"
+  },
+  {
+    "Name": "Coral Reef",
+    "Description": "Marine ecosystems built by coral organisms, supporting a diverse range of sea life.",
+    "Code": "CRF"
+  },
+  {
+    "Name": "Fjord",
+    "Description": "Deep, narrow sea inlets carved by glaciers, commonly found in cold coastal regions.",
+    "Code": "FJD"
+  },
+  {
+    "Name": "Canyon",
+    "Description": "Deep valleys with steep sides, often carved by river erosion over millions of years.",
+    "Code": "CYN"
+  },
+  {
+    "Name": "Oasis",
+    "Description": "Fertile area in a desert, where water allows vegetation to thrive.",
+    "Code": "OAS"
+  },
+  {
+    "Name": "Badlands",
+    "Description": "Eroded rock formations with steep ridges and minimal vegetation, found in arid regions.",
+    "Code": "BDL"
+  },
+  {
+    "Name": "Sinkhole",
+    "Description": "A natural depression caused by the collapse of underground cavities, often in limestone regions.",
+    "Code": "SKH"
+  },
+  {
+    "Name": "Salt Flat",
+    "Description": "Extensive, flat areas of land covered with salt deposits, formed by evaporated water bodies.",
+    "Code": "SLT"
+  },
+  {
+    "Name": "Prairie",
+    "Description": "Large, open grasslands with fertile soil, commonly found in temperate regions.",
+    "Code": "PRA"
+  },
+  {
+    "Name": "Geyser Basin",
+    "Description": "Regions with geothermal activity, where hot springs and geysers frequently erupt.",
+    "Code": "GBS"
+  },
+  {
+    "Name": "Rainforest",
+    "Description": "Densely forested areas with high rainfall and biodiversity, found in tropical and subtropical zones.",
+    "Code": "RFR"
+  },
+  {
+    "Name": "Sand Dunes",
+    "Description": "Hills of sand formed by wind, commonly found in deserts and coastal regions.",
+    "Code": "DUN"
+  },
+  {
+    "Name": "Karst",
+    "Description": "Limestone landscapes with caves, sinkholes, and underground rivers formed by water erosion.",
+    "Code": "KAR"
+  },
+  {
+    "Name": "Chaparral",
+    "Description": "Regions with dense, drought-resistant shrubs and hot, dry summers, often prone to wildfires.",
+    "Code": "CHP"
+  },
+  {
+    "Name": "Lake",
+    "Description": "Large inland bodies of water, either freshwater or saline, surrounded by land.",
+    "Code": "LAK"
+  },
+  {
+    "Name": "River",
+    "Description": "Flowing bodies of freshwater that move from higher elevations to lower areas, often emptying into larger water bodies.",
+    "Code": "RIV"
+  },
+  {
+    "Name": "Sea",
+    "Description": "Large saltwater bodies partially enclosed by land, often connected to oceans.",
+    "Code": "SEA"
+  },
+  {
+    "Name": "Ocean",
+    "Description": "Vast, continuous saltwater bodies covering most of Earth s surface.",
+    "Code": "OCN"
+  },
+  {
+    "Name": "N/A",
+    "Description": "N/A",
+    "Code": "N_A"
+  }
+]

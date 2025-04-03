@@ -1,10 +1,11 @@
+// source
 using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Natural.Locations.Models;
 
 namespace server.src.Domain.Geography.Natural.Timezones.Models;
 
 /// <summary>
-/// Represents a time zone with a standard identifier, offset, and description.
+/// Represents a time zone with a standard identifier, offset, DST support, and related locations.
 /// </summary>
 public class Timezone : BaseEntity
 {
@@ -13,6 +14,16 @@ public class Timezone : BaseEntity
     /// </summary>
     public string Name { get; set; }
 
+    /// <summary>
+    /// Gets or sets the description of the time zone (e.g., "Pacific Standard Time (PST)").
+    /// </summary>
+    public string Description { get; set; }
+
+    /// <summary>
+    /// Gets or sets the standardized code of the time zone (e.g., "PST", "EST", "UTC+5").
+    /// </summary>
+    public string Code { get; set; }
+    
     /// <summary>
     /// Gets or sets the UTC offset in hours (e.g., -8 for PST, 0 for UTC).
     /// </summary>
@@ -24,21 +35,16 @@ public class Timezone : BaseEntity
     public bool SupportsDaylightSaving { get; set; }
 
     /// <summary>
-    /// Gets or sets the status indicating if the time zone is active.
-    /// Determines whether the time zone is enabled for assignment or usage.
-    /// </summary>
-    public bool IsActive { get; set; }
-
-    /// <summary>
-    /// Gets or sets the description of the time zone (e.g., "Pacific Standard Time (PST)").
-    /// </summary>
-    public string Description { get; set; }
-
-    /// <summary>
     /// Gets or sets the UTC offset during daylight saving time (if applicable).
     /// If SupportsDaylightSaving is false, this will be the same as UtcOffset.
     /// </summary>
     public double? DstOffset { get; set; }
+    
+    /// <summary>
+    /// Gets or sets the status indicating if the time zone is active.
+    /// Determines whether the time zone is enabled for assignment or usage.
+    /// </summary>
+    public bool IsActive { get; set; }
 
     #region Navigation properties
 

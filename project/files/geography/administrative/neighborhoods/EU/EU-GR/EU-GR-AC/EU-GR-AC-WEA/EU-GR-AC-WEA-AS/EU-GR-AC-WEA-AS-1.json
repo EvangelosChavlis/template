@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "City Center",
+    "Description": "The heart of Aspropyrgos with commercial streets, government buildings, and residential zones.",
+    "Population": 15000,
+    "AreaKm2": 5.0,
+    "Zipcode": "19300",
+    "Code": "EU-GR-AC-WEA-AS-1-CC"
+  },
+  {
+    "Name": "Ano Aspropyrgos",
+    "Description": "A residential area with local markets and green spaces.",
+    "Population": 10000,
+    "AreaKm2": 5.0,
+    "Zipcode": "19301",
+    "Code": "EU-GR-AC-WEA-AS-1-AA"
+  }
+]

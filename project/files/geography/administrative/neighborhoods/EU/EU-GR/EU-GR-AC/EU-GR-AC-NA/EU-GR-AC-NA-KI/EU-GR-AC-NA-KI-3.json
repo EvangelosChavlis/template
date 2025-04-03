@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kifisia Business Park",
+    "Description": "A business-focused neighborhood with office spaces and corporate headquarters.",
+    "Population": 3000,
+    "AreaKm2": 2.0,
+    "Zipcode": "14569",
+    "Code": "EU-GR-AC-NA-KI-3-KBP"
+  },
+  {
+    "Name": "Kifisia Industrial Area",
+    "Description": "An industrial zone with warehouses, factories, and logistics centers.",
+    "Population": 2000,
+    "AreaKm2": 2.5,
+    "Zipcode": "14570",
+    "Code": "EU-GR-AC-NA-KI-3-KIA"
+  }
+]

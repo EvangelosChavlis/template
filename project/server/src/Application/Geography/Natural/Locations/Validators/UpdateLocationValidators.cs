@@ -22,15 +22,22 @@ public static class UpdateLocationValidators
         if (dto.Altitude < -500 || dto.Altitude > 9000) 
             errors.Add("Altitude must be a realistic value between -500 and 9000 meters.");
 
+        // Validation for Depth
+        if (dto.Depth < -12000 || dto.Depth > 0) 
+            errors.Add("Depth must be a realistic value between -12000 and 0 meters.");
+        
         // Validation for required foreign keys
         if (dto.TimezoneId == Guid.Empty)
             errors.Add("TimezoneId is required.");
 
-        if (dto.TerrainTypeId == Guid.Empty)
-            errors.Add("TerrainTypeId is required.");
+        if (dto.SurfaceTypeId == Guid.Empty)
+            errors.Add("SurfaceTypeId is required.");
 
         if (dto.ClimateZoneId == Guid.Empty)
             errors.Add("ClimateZoneId is required.");
+
+        if (dto.NaturalFeatureId == Guid.Empty)
+            errors.Add("NaturalFeatureId is required.");
 
         // Validation for Version
         if (dto.Version == Guid.Empty)

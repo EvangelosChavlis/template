@@ -33,7 +33,7 @@ public class ContinentConfiguration : IEntityTypeConfiguration<Continent>
             .HasMaxLength(ContinentLength.CodeLength);
 
         builder.Property(c => c.Description)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(ContinentLength.DescriptionLength);
 
         builder.Property(c => c.AreaKm2)

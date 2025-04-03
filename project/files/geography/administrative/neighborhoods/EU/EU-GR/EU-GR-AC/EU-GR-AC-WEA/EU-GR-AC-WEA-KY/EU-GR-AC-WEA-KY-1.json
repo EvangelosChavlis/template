@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A traditional neighborhood with small houses and community spaces.",
+        "Population": 3000,
+        "AreaKm2": 5.0,
+        "Zipcode": "19210",
+        "Code": "EU-GR-AC-WEA-KY-1-AN"
+    },
+    {
+        "Name": "Nea Kytarious",
+        "Description": "A newly developed residential area with modern apartments.",
+        "Population": 4000,
+        "AreaKm2": 7.0,
+        "Zipcode": "19211",
+        "Code": "EU-GR-AC-WEA-KY-1-NK"
+    }
+]

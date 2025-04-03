@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Central Fthiotida",
+    "Description": "The town center with historical landmarks, shopping, and local services.",
+    "Population": 4000,
+    "AreaKm2": 20.0,
+    "Zipcode": "35300",
+    "Code": "EU-GR-CG-PHT-FTH-1-CF"
+  },
+  {
+    "Name": "Archaeological Area",
+    "Description": "A district surrounding the ancient ruins and archaeological sites, attracting visitors and researchers.",
+    "Population": 2000,
+    "AreaKm2": 15.0,
+    "Zipcode": "35301",
+    "Code": "EU-GR-CG-PHT-FTH-1-AA"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Flisvos Marina",
+    "Description": "A famous marina area with luxury yachts, restaurants, and cafes overlooking the sea.",
+    "Population": 7000,
+    "AreaKm2": 1.0,
+    "Zipcode": "17561",
+    "Code": "EU-GR-AC-SA-PF-1-FM"
+  },
+  {
+    "Name": "Palaio Faliro Seafront",
+    "Description": "A vibrant waterfront area with beaches, parks, and cafes popular among locals and tourists.",
+    "Population": 15000,
+    "AreaKm2": 1.5,
+    "Zipcode": "17562",
+    "Code": "EU-GR-AC-SA-PF-1-PFS"
+  },
+  {
+    "Name": "Akti tou Iliou",
+    "Description": "A quieter beach area known for its relaxed atmosphere and beautiful sea views.",
+    "Population": 8000,
+    "AreaKm2": 1.0,
+    "Zipcode": "17563",
+    "Code": "EU-GR-AC-SA-PF-1-ATI"
+  }
+]

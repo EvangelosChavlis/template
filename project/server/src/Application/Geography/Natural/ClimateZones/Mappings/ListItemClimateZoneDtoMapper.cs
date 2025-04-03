@@ -20,8 +20,9 @@ public static class ListItemClimateZoneDtoMapper
         this ClimateZone model) => new(
             Id: model.Id,
             Name: model.Name,
-            AvgTemperatureC: model.AvgTemperatureC,  // Corrected
-            AvgPrecipitationMm: model.AvgPrecipitationMm,  // Corrected
+            Code: model.Code,
+            AvgTemperatureC: model.AvgTemperatureC,
+            AvgPrecipitationMm: model.AvgPrecipitationMm,
             IsActive: model.IsActive
         );
 }

@@ -18,9 +18,11 @@ public static class ErrorItemLocationDtoMapper
             Longitude: double.MinValue,
             Latitude: double.MinValue,
             Altitude: double.MinValue,
+            Depth: double.MinValue,
             IsActive: false,
             Timezone: string.Empty,
-            TerrainType: string.Empty,
+            NaturalFeature: string.Empty,
+            SurfaceType: string.Empty,
             ClimateZone: string.Empty,
             Version: Guid.Empty
         );

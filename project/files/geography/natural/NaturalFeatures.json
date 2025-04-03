@@ -1,0 +1,183 @@
+[
+    {
+      "Name": "Mount Everest",
+      "Description": "The highest mountain on Earth, located in the Himalayas.",
+      "Code": "MT_EVEREST"
+    },
+    {
+      "Name": "Grand Canyon",
+      "Description": "A massive canyon carved by the Colorado River in Arizona, USA.",
+      "Code": "GRAND_CANYON"
+    },
+    {
+      "Name": "Amazon River",
+      "Description": "The second longest river in the world, flowing through South America.",
+      "Code": "AMAZON_RIVER"
+    },
+    {
+      "Name": "Great Barrier Reef",
+      "Description": "The world s largest coral reef system, located in Australia.",
+      "Code": "GREAT_BARRIER"
+    },
+    {
+      "Name": "Sahara Desert",
+      "Description": "The largest hot desert in the world, covering much of North Africa.",
+      "Code": "SAHARA_DESERT"
+    },
+    {
+      "Name": "Niagara Falls",
+      "Description": "A famous group of waterfalls on the border of the USA and Canada.",
+      "Code": "NIAGARA_FALLS"
+    },
+    {
+      "Name": "Lake Baikal",
+      "Description": "The world s deepest freshwater lake, located in Russia.",
+      "Code": "LAKE_BAIKAL"
+    },
+    {
+      "Name": "Victoria Falls",
+      "Description": "One of the largest and most famous waterfalls in the world, located in Africa.",
+      "Code": "VICTORIA_FALLS"
+    },
+    {
+      "Name": "Rocky Mountains",
+      "Description": "A major mountain range in North America.",
+      "Code": "ROCKY_MOUNTAINS"
+    },
+    {
+      "Name": "Mount Fuji",
+      "Description": "An iconic volcano and the highest mountain in Japan.",
+      "Code": "MT_FUJI"
+    },
+    {
+      "Name": "Yosemite Valley",
+      "Description": "A famous glacial valley in Yosemite National Park, USA.",
+      "Code": "YOSEMITE_VALLEY"
+    },
+    {
+      "Name": "Gobi Desert",
+      "Description": "A vast desert in Asia, covering parts of China and Mongolia.",
+      "Code": "GOBI_DESERT"
+    },
+    {
+      "Name": "Angel Falls",
+      "Description": "The world s highest uninterrupted waterfall, located in Venezuela.",
+      "Code": "ANGEL_FALLS"
+    },
+    {
+      "Name": "Mount Kilimanjaro",
+      "Description": "Africa s highest mountain and a dormant volcano in Tanzania.",
+      "Code": "MT_KILIMANJARO"
+    },
+    {
+      "Name": "Mississippi River",
+      "Description": "One of the longest rivers in North America.",
+      "Code": "MISSISSIPPI_RIVER"
+    },
+    {
+      "Name": "Dead Sea",
+      "Description": "A hypersaline lake bordered by Jordan and Israel, known for its high salt content.",
+      "Code": "DEAD_SEA"
+    },
+    {
+      "Name": "Mount McKinley (Denali)",
+      "Description": "The highest peak in North America, located in Alaska.",
+      "Code": "DENALI"
+    },
+    {
+      "Name": "Krubera Cave",
+      "Description": "The deepest known cave on Earth, located in Georgia (Caucasus).",
+      "Code": "KRUBERA_CAVE"
+    },
+    {
+      "Name": "Patagonia",
+      "Description": "A rugged region in South America, famous for glaciers and mountains.",
+      "Code": "PATAGONIA"
+    },
+    {
+      "Name": "Great Lakes",
+      "Description": "A group of five large freshwater lakes in North America.",
+      "Code": "GREAT_LAKES"
+    },
+    {
+      "Name": "Blue Hole",
+      "Description": "A giant marine sinkhole off the coast of Belize.",
+      "Code": "BLUE_HOLE"
+    },
+    {
+      "Name": "Mariana Trench",
+      "Description": "The deepest part of the world s oceans, located in the Pacific Ocean.",
+      "Code": "MARIANA_TRENCH"
+    },
+    {
+      "Name": "Table Mountain",
+      "Description": "A flat-topped mountain in South Africa, overlooking Cape Town.",
+      "Code": "TABLE_MOUNTAIN"
+    },
+    {
+      "Name": "Uluru (Ayers Rock)",
+      "Description": "A massive sandstone monolith in central Australia.",
+      "Code": "ULURU"
+    },
+    {
+      "Name": "Antarctic Ice Sheet",
+      "Description": "The world s largest single mass of ice, covering Antarctica.",
+      "Code": "ANTARCTIC_ICE"
+    },
+    {
+      "Name": "Matterhorn",
+      "Description": "A famous pyramidal mountain in the Alps, on the border of Switzerland and Italy.",
+      "Code": "MATTERHORN"
+    },
+    {
+      "Name": "Yellowstone Caldera",
+      "Description": "A supervolcano in Yellowstone National Park, USA.",
+      "Code": "YELLOWSTONE_CALDERA"
+    },
+    {
+      "Name": "Lake Titicaca",
+      "Description": "The highest navigable lake in the world, located in South America.",
+      "Code": "LAKE_TITICACA"
+    },
+    {
+      "Name": "Mount Etna",
+      "Description": "Europe s highest and most active volcano, located in Italy.",
+      "Code": "MT_ETNA"
+    },
+    {
+      "Name": "Ha Long Bay",
+      "Description": "A stunning bay in Vietnam, known for its limestone islands.",
+      "Code": "HALONG_BAY"
+    },
+    {
+      "Name": "Danube River",
+      "Description": "A major river in Europe, flowing through multiple countries.",
+      "Code": "DANUBE_RIVER"
+    },
+    {
+      "Name": "Mount St. Helens",
+      "Description": "A well-known volcano in the USA that erupted in 1980.",
+      "Code": "MT_ST_HELENS"
+    },
+    {
+      "Name": "Iguazu Falls",
+      "Description": "A large and stunning waterfall system on the Argentina-Brazil border.",
+      "Code": "IGUAZU_FALLS"
+    },
+    {
+      "Name": "Mount Vesuvius",
+      "Description": "A volcano in Italy that famously destroyed Pompeii in AD 79.",
+      "Code": "MT_VESUVIUS"
+    },
+    {
+      "Name": "Atacama Desert",
+      "Description": "One of the driest deserts in the world, located in South America.",
+      "Code": "ATACAMA_DESERT"
+    },
+    {
+      "Name": "N/A",
+      "Description": "N/A",
+      "Code": "N_A"
+    }
+  ]
+  

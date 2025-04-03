@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "University Quarter",
+    "Description": "A student-friendly neighborhood near the local university campus.",
+    "Population": 3200,
+    "AreaKm2": 20.0,
+    "Zipcode": "32104",
+    "Code": "EU-GR-CG-BOE-LIV-3-UQ"
+  },
+  {
+    "Name": "New Horizon",
+    "Description": "An expanding residential area with parks and family homes.",
+    "Population": 4000,
+    "AreaKm2": 20.0,
+    "Zipcode": "32105",
+    "Code": "EU-GR-CG-BOE-LIV-3-NH"
+  }
+]

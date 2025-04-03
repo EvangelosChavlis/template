@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kalamaki",
+    "Description": "A suburban area with a mix of residential buildings, schools, and green spaces.",
+    "Population": 15000,
+    "AreaKm2": 3.0,
+    "Zipcode": "17458",
+    "Code": "EU-GR-AC-SA-AL-2-KA"
+  },
+  {
+    "Name": "Alimos Central",
+    "Description": "The main residential district of Alimos with easy access to local amenities and public transport.",
+    "Population": 5000,
+    "AreaKm2": 1.0,
+    "Zipcode": "17459",
+    "Code": "EU-GR-AC-SA-AL-2-AC"
+  }
+]

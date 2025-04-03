@@ -1,13 +1,10 @@
 // source
 using server.src.Domain.Common.Models;
-using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
+using server.src.Domain.Geography.Administrative.Stations.Models;
 using server.src.Domain.Geography.Natural.ClimateZones.Models;
 using server.src.Domain.Geography.Natural.NaturalFeatures.Models;
-using server.src.Domain.Geography.Natural.TerrainTypes.Models;
+using server.src.Domain.Geography.Natural.SurfaceTypes.Models;
 using server.src.Domain.Geography.Natural.Timezones.Models;
-using server.src.Domain.Weather.Forecasts.Models;
-using server.src.Domain.Weather.Observations.Models;
-
 
 namespace server.src.Domain.Geography.Natural.Locations.Models;
 
@@ -32,6 +29,11 @@ public class Location : BaseEntity
     public double Altitude { get; set; }
 
     /// <summary>
+    /// Gets or sets the depth of the location in meters below sea level.
+    /// </summary>
+    public double Depth { get; set; }
+
+    /// <summary>
     /// Gets or sets the status indicating if the location is active.
     /// Determines whether the location is enabled for assignment or usage.
     /// </summary>
@@ -45,9 +47,9 @@ public class Location : BaseEntity
     public Guid TimezoneId { get; set; }
 
     /// <summary>
-    /// Gets or sets the foreign key for the terrain type.
+    /// Gets or sets the foreign key for the surface type.
     /// </summary>
-    public Guid TerrainTypeId { get; set; }
+    public Guid SurfaceTypeId { get; set; }
 
     /// <summary>
     /// Gets or sets the foreign key for the climate zone.
@@ -60,9 +62,9 @@ public class Location : BaseEntity
     public Guid NaturalFeatureId { get; set; }
 
     /// <summary>
-    /// Foreign key for the associated neighborhood.
+    /// Foreign key for the associated station.
     /// </summary>
-    public Guid NeighborhoodId { get; set; }
+    public Guid? StationId { get; set; }
 
     #endregion
 
@@ -74,9 +76,9 @@ public class Location : BaseEntity
     public virtual Timezone Timezone { get; set; }
 
     /// <summary>
-    /// Gets or sets the associated terrain type of the location.
+    /// Gets or sets the associated surface type of the location.
     /// </summary>
-    public virtual TerrainType TerrainType { get; set; }
+    public virtual SurfaceType SurfaceType { get; set; }
 
     /// <summary>
     /// Gets or sets the associated climate zone of the location.
@@ -89,19 +91,9 @@ public class Location : BaseEntity
     public virtual NaturalFeature NaturalFeature { get; set; }
 
     /// <summary>
-    /// Navigation property to the neighborhood.
+    /// Navigation property to the station.
     /// </summary>
-    public virtual Neighborhood Neighborhood { get; set; }
-
-    /// <summary>
-    /// Gets or sets the list of forecasts associated with this location.
-    /// </summary>
-    public virtual List<Forecast> Forecasts { get; set; }
-
-    /// <summary>
-    /// Gets or sets the list of observations associated with this location.
-    /// </summary>
-    public virtual List<Observation> Observation { get; set; }
+    public virtual Station? Station { get; set; }
 
     #endregion
 }

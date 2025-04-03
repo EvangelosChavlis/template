@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kentro Anthousas",
+    "Description": "The central part of Anthousa, featuring local markets and public spaces.",
+    "Population": 5000,
+    "AreaKm2": 1.5,
+    "Zipcode": "15351",
+    "Code": "EU-GR-AC-EA-GE-2-KA"
+  },
+  {
+    "Name": "Ano Anthousa",
+    "Description": "A hilly area with a mix of residential homes and scenic views.",
+    "Population": 5000,
+    "AreaKm2": 1.5,
+    "Zipcode": "15352",
+    "Code": "EU-GR-AC-EA-GE-2-AA"
+  }
+]

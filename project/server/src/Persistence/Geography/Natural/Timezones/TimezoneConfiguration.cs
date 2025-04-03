@@ -1,9 +1,11 @@
 // packages
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using server.src.Domain.Geography.Natural.Timezones.Extensions;
 
 // source
 using server.src.Domain.Geography.Natural.Timezones.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Geography.Natural.Timezones;
 
@@ -20,15 +22,25 @@ public class TimezoneConfiguration : IEntityTypeConfiguration<Timezone>
 
     public void Configure(EntityTypeBuilder<Timezone> builder)
     {
-
-        builder.HasKey(t => t.Id);
+        builder.ConfigureBaseEntityProperties();
 
         builder.Property(t => t.Name)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(TimezoneLength.NameLength);
+            
+        builder.Property(t => t.Description)
+            .IsRequired()
+            .HasMaxLength(TimezoneLength.DescriptionLength);
+
+        builder.Property(t => t.Code)
+            .IsRequired()
+            .HasMaxLength(TimezoneLength.CodeLength);
 
         builder.Property(t => t.UtcOffset)
             .IsRequired();
+
+        builder.Property(t => t.DstOffset)
+            .IsRequired(false);
 
         builder.Property(t => t.SupportsDaylightSaving)
             .IsRequired();

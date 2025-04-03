@@ -9,5 +9,6 @@ public record ListItemLocationDto(
     double Longitude,
     double Latitude,
     double Altitude,
+    double Depth,
     bool IsActive
 );

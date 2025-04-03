@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Kareas",
+        "Description": "A residential area with scenic views, featuring traditional houses and quiet streets.",
+        "Population": 7000,
+        "AreaKm2": 0.25,
+        "Code": "EU-GR-AC-CA-VY-1-KA"
+    },
+    {
+        "Name": "Zoodochos Pigi and Anapirika",
+        "Description": "A mixed residential area, known for its accessibility and proximity to public transport.",
+        "Population": 5000,
+        "AreaKm2": 0.15,
+        "Code": "EU-GR-AC-CA-VY-1-ZA"
+    }
+]

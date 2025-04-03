@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kallithea",
+        "Description": "A quieter neighborhood known for its local cafés and residential charm.",
+        "Population": 4500,
+        "AreaKm2": 0.8,
+        "Zipcode": "12357",
+        "Code": "EU-GR-AC-WA-AV-3-KA"
+    },
+    {
+        "Name": "Kato Agia Varvara",
+        "Description": "An area with a mix of residential properties and smaller local shops, offering a more peaceful environment.",
+        "Population": 3800,
+        "AreaKm2": 0.7,
+        "Zipcode": "12358",
+        "Code": "EU-GR-AC-WA-AV-3-KAV"
+    },
+    {
+        "Name": "Ano Agia Varvara",
+        "Description": "An elevated neighborhood known for its panoramic views of the surrounding areas and green spaces.",
+        "Population": 3500,
+        "AreaKm2": 0.6,
+        "Zipcode": "12359",
+        "Code": "EU-GR-AC-WA-AV-3-AAV"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Dafni Center",
+        "Description": "The central area of Dafni, with shops, cafes, and a mix of residential and commercial properties.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "17235",
+        "Code": "EU-GR-AC-CA-DA-1-DC"
+    },
+    {
+        "Name": "Kato Dafni",
+        "Description": "A quieter residential neighborhood with parks and local schools, popular among families.",
+        "Population": 8000,
+        "AreaKm2": 1.2,
+        "Zipcode": "17236",
+        "Code": "EU-GR-AC-CA-DA-1-KD"
+    }
+]

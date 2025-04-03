@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Agios Vasileios Station",
+    "Description": "Station serving the Agios Vasileios neighborhood, residential with schools and parks.",
+    "Code": "EU-GR-AC-WA-PE-2-AV-STA",
+    "Latitude": 38.06,
+    "Longitude": 23.64,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-2-AV"
+  },
+  {
+    "Name": "Kalamaki Station",
+    "Description": "Station serving the Kalamaki neighborhood, a quiet residential area.",
+    "Code": "EU-GR-AC-WA-PE-2-KA-STA",
+    "Latitude": 38.07,
+    "Longitude": 23.63,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-2-KA"
+  },
+  {
+    "Name": "Peristeri Industrial Station",
+    "Description": "Station serving the Peristeri Industrial Area, characterized by warehouses and commercial spaces.",
+    "Code": "EU-GR-AC-WA-PE-2-PI-STA",
+    "Latitude": 38.08,
+    "Longitude": 23.62,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-2-PI"
+  },
+  {
+    "Name": "Vigla Station",
+    "Description": "Station serving the Vigla neighborhood, a mixed-use area with residential and commercial zones.",
+    "Code": "EU-GR-AC-WA-PE-2-VI-STA",
+    "Latitude": 38.09,
+    "Longitude": 23.61,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-2-VI"
+  },
+  {
+    "Name": "Kentriki Peristeri Station",
+    "Description": "Station serving the central area of Peristeri, busy with shops and transit connections.",
+    "Code": "EU-GR-AC-WA-PE-2-KP-STA",
+    "Latitude": 38.1,
+    "Longitude": 23.6,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-2-KP"
+  }
+]

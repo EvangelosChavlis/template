@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Central Aspropyrgos",
+    "Description": "The main urban area with commercial centers, public services, and residential neighborhoods.",
+    "Population": 25000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-WEA-AS-1"
+  },
+  {
+    "Name": "West Aspropyrgos",
+    "Description": "A mixed-use area with residential buildings and industrial zones.",
+    "Population": 15000,
+    "AreaKm2": 12.0,
+    "Code": "EU-GR-AC-WEA-AS-2"
+  },
+  {
+    "Name": "South Aspropyrgos",
+    "Description": "A coastal and industrial district with logistics hubs and residential settlements.",
+    "Population": 15000,
+    "AreaKm2": 16.0,
+    "Code": "EU-GR-AC-WEA-AS-3"
+  }
+]

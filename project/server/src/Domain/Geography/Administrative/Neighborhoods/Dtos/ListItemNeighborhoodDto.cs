@@ -8,6 +8,5 @@ public record ListItemNeighborhoodDto(
     string Name,
     string Zipcode,
     string Code,
-    bool IsActive,
-    int Count
+    bool IsActive
 );

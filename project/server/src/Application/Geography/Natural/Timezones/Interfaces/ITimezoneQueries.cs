@@ -27,11 +27,11 @@ public interface ITimezoneQueries
     Task<Response<List<PickerTimezoneDto>>> GetTimezonesPickerAsync(CancellationToken token = default);
 
     /// <summary>
-    /// Retrieves detailed information about a specific geography terrain type by its unique ID.
+    /// Retrieves detailed information about a specific geography surface type by its unique ID.
     /// </summary>
-    /// <param name="id">The unique identifier of the geography terrain type.</param>
+    /// <param name="id">The unique identifier of the geography surface type.</param>
     /// <param name="token">Optional cancellation token.</param>
-    /// <returns>Detailed information about the specified geography terrain type.</returns>
+    /// <returns>Detailed information about the specified geography surface type.</returns>
     Task<Response<ItemTimezoneDto>> GetTimezoneByIdAsync(Guid id, 
         CancellationToken token = default);
 }

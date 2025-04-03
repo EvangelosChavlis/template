@@ -10,7 +10,7 @@ public class NeighborhoodsIncludes
     {
         return
         [
-            new (n => n.Locations)
+            
         ];
     }
 }

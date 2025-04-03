@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Port Area",
+    "Description": "The main port of Perdika, with fishing boats and waterfront cafes.",
+    "Population": 1000,
+    "AreaKm2": 1.0,
+    "Zipcode": "18020",
+    "Code": "EU-GR-AC-IS-AE-3-PA"
+  },
+  {
+    "Name": "Old Perdika",
+    "Description": "A quieter neighborhood with traditional architecture and a slower pace of life.",
+    "Population": 1000,
+    "AreaKm2": 1.5,
+    "Zipcode": "18021",
+    "Code": "EU-GR-AC-IS-AE-3-OP"
+  }
+]

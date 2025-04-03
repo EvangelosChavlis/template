@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Nea Erythrea Square",
+    "Description": "A vibrant area with shops, cafes, and residential complexes.",
+    "Population": 6000,
+    "AreaKm2": 1.0,
+    "Zipcode": "14600",
+    "Code": "EU-GR-AC-NA-NE-1-NES"
+  },
+  {
+    "Name": "Nea Erythrea Park",
+    "Description": "A family-friendly neighborhood known for its nearby park and green spaces.",
+    "Population": 6000,
+    "AreaKm2": 1.0,
+    "Zipcode": "14601",
+    "Code": "EU-GR-AC-NA-NE-1-NEP"
+  }
+]

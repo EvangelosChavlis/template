@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Plataea Village",
+    "Description": "A small but historically significant village with ancient ruins.",
+    "Population": 3000,
+    "AreaKm2": 100.0,
+    "Zipcode": "32204",
+    "Code": "EU-GR-CG-BOE-THI-3-PV"
+  },
+  {
+    "Name": "Rural Plataea",
+    "Description": "Scenic farmlands and mountainous terrain around Plataea.",
+    "Population": 2000,
+    "AreaKm2": 50.0,
+    "Zipcode": "32205",
+    "Code": "EU-GR-CG-BOE-THI-3-RP"
+  }
+]

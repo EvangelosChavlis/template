@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Beachfront Area",
+    "Description": "A peaceful area along the coastline, with beachside cafes and residential properties.",
+    "Population": 100,
+    "AreaKm2": 1.0,
+    "Zipcode": "18042",
+    "Code": "EU-GR-AC-IS-HY-2-BA"
+  },
+  {
+    "Name": "Village Center",
+    "Description": "A quiet village area with a few houses, local restaurants, and a close-knit community.",
+    "Population": 100,
+    "AreaKm2": 1.0,
+    "Zipcode": "18043",
+    "Code": "EU-GR-AC-IS-HY-2-VC"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Neo Psychiko",
+    "Description": "A peaceful, residential neighborhood with green parks and wide streets.",
+    "Population": 7000,
+    "AreaKm2": 5.0,
+    "Zipcode": "14565",
+    "Code": "EU-GR-AC-NA-KI-2-NP"
+  },
+  {
+    "Name": "Kifisia Park",
+    "Description": "An upscale residential neighborhood with large properties and proximity to Kifisia Park.",
+    "Population": 5000,
+    "AreaKm2": 4.0,
+    "Zipcode": "14567",
+    "Code": "EU-GR-AC-NA-KI-2-KP"
+  }
+]

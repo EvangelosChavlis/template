@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Markopoulo Old Town",
+        "Description": "A historic neighborhood with traditional Greek houses, local markets, and cultural landmarks.",
+        "Population": 5000,
+        "AreaKm2": 8.0,
+        "Zipcode": "19003",
+        "Code": "EU-GR-AC-EA-MA-1-MO"
+    },
+    {
+        "Name": "Nea Markopoulo",
+        "Description": "A modern residential neighborhood with new developments, parks, and family-friendly facilities.",
+        "Population": 7000,
+        "AreaKm2": 10.0,
+        "Zipcode": "19004",
+        "Code": "EU-GR-AC-EA-MA-1-NM"
+    }
+]

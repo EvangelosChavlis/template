@@ -7,7 +7,7 @@ namespace server.src.Application.Geography.Administrative.Countries.Mappings;
 
 /// <summary>
 /// Provides mapping functionality to convert a <see cref="CreateCountryDto"/> into a <see cref="Country"/> model.
-/// This utility class is used to create new terrain type instances based on provided data transfer objects.
+/// This utility class is used to create new surface type instances based on provided data transfer objects.
 /// </summary>
 public static class CreateCountryModelMapper
 {

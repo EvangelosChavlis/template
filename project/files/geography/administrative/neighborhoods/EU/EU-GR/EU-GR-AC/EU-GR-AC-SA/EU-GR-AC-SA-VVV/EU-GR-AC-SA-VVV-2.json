@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Voula Beach",
+        "Description": "A coastal area with sandy beaches, beachfront cafes, and a lively atmosphere.",
+        "Population": 10000,
+        "AreaKm2": 4.0,
+        "Zipcode": "16673",
+        "Code": "EU-GR-AC-SA-VVV-2-VB"
+    },
+    {
+        "Name": "Voula Central",
+        "Description": "The town center with shopping areas, restaurants, and local amenities.",
+        "Population": 12000,
+        "AreaKm2": 3.5,
+        "Zipcode": "16674",
+        "Code": "EU-GR-AC-SA-VVV-2-VC"
+    },
+    {
+        "Name": "Voula Hills",
+        "Description": "A residential area with scenic views and green spaces.",
+        "Population": 8000,
+        "AreaKm2": 2.0,
+        "Zipcode": "16675",
+        "Code": "EU-GR-AC-SA-VVV-2-VH"
+    }
+]

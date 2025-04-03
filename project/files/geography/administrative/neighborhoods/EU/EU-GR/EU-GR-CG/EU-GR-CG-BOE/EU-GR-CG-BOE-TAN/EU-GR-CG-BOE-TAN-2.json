@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Vasilika",
+    "Description": "A small agricultural village known for its production of local crops and peaceful environment.",
+    "Population": 6000,
+    "AreaKm2": 100.0,
+    "Zipcode": "32003",
+    "Code": "EU-GR-CG-BOE-TAN-2-V"
+  },
+  {
+    "Name": "Stiri",
+    "Description": "A rural village with a focus on farming and traditional lifestyles.",
+    "Population": 4000,
+    "AreaKm2": 100.0,
+    "Zipcode": "32004",
+    "Code": "EU-GR-CG-BOE-TAN-2-S"
+  },
+  {
+    "Name": "Kavallari",
+    "Description": "A small village surrounded by forests and farms.",
+    "Population": 3340,
+    "AreaKm2": 80.0,
+    "Zipcode": "32005",
+    "Code": "EU-GR-CG-BOE-TAN-2-K"
+  }
+]

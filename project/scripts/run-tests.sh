@@ -14,8 +14,8 @@ dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests
 dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Common.PaginatedListTests
 dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Metrics.ErrorsDtoTests
 dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Metrics.TelemetryDtoTests
-dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Weather.ForecastsDtoTests
-dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Weather.WarningsDtoTests
+dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Weather.Collections.ForecastsDtoTests
+dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Dto.Weather.Collections.WarningsDtoTests
 dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Extensions.DateTimeExtensionsTests
 dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Models.Auth.RoleTests
 dotnet test server/test/Domain.Unit.Tests --filter server.test.Domain.Unit.Tests.Models.Auth.UserRoleTests
@@ -54,20 +54,20 @@ dotnet test server/test/Application.Unit.Tests --filter server.test.Application.
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Auth.UserIncludesTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Metrics.ErrorsIncludesTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Metrics.TelemetryIncludesTests
-dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Weather.ForecastsIncludesTests
-dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Weather.WarningsIncludesTests
+dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Weather.Collections.ForecastsIncludesTests
+dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Includes.Weather.Collections.WarningsIncludesTests
 dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Auth.RolesMappingsTests
 dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Auth.UsersMappingsTests
 dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Metrics.ErrorsMappingsTests
 dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Metrics.TelemetryMappingsTests
-dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Weather.ForecastsMappingsTests
-dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Weather.WarningsMappingsTests
+dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Weather.Collections.ForecastsMappingsTests
+dotnet test server/test/Application.Unit.Tests --filter server.tests.Application.Mappings.Weather.Collections.WarningsMappingsTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Auth.RoleServiceTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Auth.UserServiceTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Metrics.ErrorsServiceTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Metrics.TelemetryServiceTests
-dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Weather.ForecastsServiceTests
-dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Weather.WarningsServiceTests
+dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Weather.Collections.ForecastsServiceTests
+dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Services.Weather.Collections.WarningsServiceTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Auth.Enable2FAValidatorTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Auth.ForgotPasswordValidatorTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Auth.ResetPasswordValidatorTests
@@ -75,13 +75,13 @@ dotnet test server/test/Application.Unit.Tests --filter server.test.Application.
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Auth.UserLoginValidatorTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Auth.UserValidatorsTests
 dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Auth.Verify2FAValidatorTests
-dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Weather.ForecastsServiceTests
-dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Weather.WarningsServiceTests
+dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Weather.Collections.ForecastsServiceTests
+dotnet test server/test/Application.Unit.Tests --filter server.test.Application.Unit.Tests.Validators.Weather.Collections.WarningsServiceTests
 
 
 echo "Running Api.Integration.Tests"
-dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Weather.ForecastsControllerTests
-dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Weather.WarningsControllerTests
+dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Weather.Collections.ForecastsControllerTests
+dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Weather.Collections.WarningsControllerTests
 dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Metrics.ErrorsControllerTests;
 dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Metrics.TelemetryControllerTests;
 dotnet test server/test/Api.Integration.Tests --filter server.test.Api.Integration.Tests.Controllers.Auth.RolesControllerTests;

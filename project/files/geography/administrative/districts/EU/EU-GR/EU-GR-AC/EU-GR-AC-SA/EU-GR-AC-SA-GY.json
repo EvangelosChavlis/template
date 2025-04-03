@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Glyfada Beach Area",
+    "Description": "The beachside area with beautiful sandy shores, popular for summer activities and vibrant nightlife.",
+    "Population": 30000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-SA-GY-1"
+  },
+  {
+    "Name": "Glyfada Central Area",
+    "Description": "The heart of Glyfada, with commercial streets, shopping centers, and residential neighborhoods.",
+    "Population": 40000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-SA-GY-2"
+  },
+  {
+    "Name": "Glyfada South Area",
+    "Description": "A quieter suburban area known for its family-friendly environment and green spaces.",
+    "Population": 20000,
+    "AreaKm2": 7.4,
+    "Code": "EU-GR-AC-SA-GY-3"
+  }
+]

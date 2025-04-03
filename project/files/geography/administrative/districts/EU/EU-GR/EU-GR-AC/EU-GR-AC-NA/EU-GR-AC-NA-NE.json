@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Nea Erythrea Center",
+    "Description": "The central area of Nea Erythrea, home to local shops, residential buildings, and amenities.",
+    "Population": 12000,
+    "AreaKm2": 2.0,
+    "Code": "EU-GR-AC-NA-NE-1"
+  },
+  {
+    "Name": "Northern Nea Erythrea",
+    "Description": "A quieter, more suburban area with larger residential properties and open green spaces.",
+    "Population": 13000,
+    "AreaKm2": 3.2,
+    "Code": "EU-GR-AC-NA-NE-2"
+  }
+]

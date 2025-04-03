@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Amfissa",
+    "Code": "EU-GR-CG-FOK-AMF",
+    "Description": "The capital of Fokida, known for its historical sites and scenic landscapes.",
+    "Population": 55000,
+    "AreaKm2": 2067.0
+  },
+  {
+    "Name": "Delphi",
+    "Code": "EU-GR-CG-FOK-DEL",
+    "Description": "A municipality famous for the ancient archaeological site of Delphi, once considered the center of the world in Greek mythology.",
+    "Population": 3000,
+    "AreaKm2": 50.0
+  },
+  {
+    "Name": "Itea",
+    "Code": "EU-GR-CG-FOK-ITE",
+    "Description": "A coastal town known for its proximity to ancient Delphi and the Gulf of Corinth.",
+    "Population": 10000,
+    "AreaKm2": 60.0
+  },
+  {
+    "Name": "Lidoriki",
+    "Code": "EU-GR-CG-FOK-LID",
+    "Description": "A small town located near the borders of Fokida, with a rich history and close access to natural sites.",
+    "Population": 3500,
+    "AreaKm2": 40.0
+  }
+]

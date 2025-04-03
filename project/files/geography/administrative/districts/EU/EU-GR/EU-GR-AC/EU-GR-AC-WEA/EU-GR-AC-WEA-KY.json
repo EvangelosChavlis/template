@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Kytarious Center",
+    "Description": "The main urban area with residential neighborhoods, shops, and public services.",
+    "Population": 7000,
+    "AreaKm2": 12.0,
+    "Code": "EU-GR-AC-WEA-KY-1"
+  },
+  {
+    "Name": "Green Belt District",
+    "Description": "A natural area with parks, hiking trails, and ecological reserves.",
+    "Population": 4000,
+    "AreaKm2": 13.0,
+    "Code": "EU-GR-AC-WEA-KY-2"
+  }
+]

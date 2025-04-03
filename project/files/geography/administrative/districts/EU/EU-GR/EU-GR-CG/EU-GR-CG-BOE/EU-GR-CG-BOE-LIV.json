@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Livadeia Center",
+    "Description": "The historic and commercial heart of the city, home to landmarks and businesses.",
+    "Population": 18000,
+    "AreaKm2": 25.0,
+    "Code": "EU-GR-CG-BOE-LIV-1"
+  },
+  {
+    "Name": "Krya District",
+    "Description": "A scenic area with waterfalls, walking trails, and historical sites.",
+    "Population": 6000,
+    "AreaKm2": 30.0,
+    "Code": "EU-GR-CG-BOE-LIV-2"
+  },
+  {
+    "Name": "Nea Livadeia",
+    "Description": "A modern district with new residential developments and educational institutions.",
+    "Population": 7200,
+    "AreaKm2": 40.0,
+    "Code": "EU-GR-CG-BOE-LIV-3"
+  }
+]

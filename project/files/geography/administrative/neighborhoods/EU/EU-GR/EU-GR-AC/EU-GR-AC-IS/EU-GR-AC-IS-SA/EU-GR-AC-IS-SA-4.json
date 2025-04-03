@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Ancient Ruins Area",
+    "Description": "The area around the ancient ruins of Salamis, with archaeological sites and museums.",
+    "Population": 3000,
+    "AreaKm2": 7.0,
+    "Zipcode": "18906",
+    "Code": "EU-GR-AC-IS-SA-4-AR"
+  },
+  {
+    "Name": "Park Area",
+    "Description": "A neighborhood surrounded by green parks, ideal for outdoor activities and nature walks.",
+    "Population": 3000,
+    "AreaKm2": 8.6,
+    "Zipcode": "18907",
+    "Code": "EU-GR-AC-IS-SA-4-PA"
+  }
+]

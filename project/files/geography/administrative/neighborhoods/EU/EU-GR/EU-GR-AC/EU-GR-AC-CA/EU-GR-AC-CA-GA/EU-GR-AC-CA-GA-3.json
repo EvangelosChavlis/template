@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Galatsi Center",
+        "Description": "The heart of the district, offering a mix of residential and commercial spaces with local amenities and good transport links.",
+        "Population": 7000,
+        "AreaKm2": 0.5,
+        "Code": "EU-GR-AC-CA-GA-3-GC"
+    },
+    {
+        "Name": "Kifisias",
+        "Description": "A quieter, suburban area with tree-lined streets and low-rise buildings, ideal for families and nature lovers.",
+        "Population": 8000,
+        "AreaKm2": 0.5,
+        "Code": "EU-GR-AC-CA-GA-3-KF"
+    }
+]

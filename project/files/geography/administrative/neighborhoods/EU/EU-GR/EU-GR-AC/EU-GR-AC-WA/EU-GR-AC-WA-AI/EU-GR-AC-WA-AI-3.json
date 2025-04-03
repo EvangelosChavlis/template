@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Nea Liosia",
+        "Description": "A residential area with a variety of apartment complexes and local amenities, providing a calm and family-friendly environment.",
+        "Population": 4000,
+        "AreaKm2": 0.6,
+        "Zipcode": "12249",
+        "Code": "EU-GR-AC-WA-AI-3-NL"
+    },
+    {
+        "Name": "Votanikos",
+        "Description": "A well-connected neighborhood with easy access to industrial zones, residential areas, and green spaces.",
+        "Population": 4500,
+        "AreaKm2": 0.7,
+        "Zipcode": "12250",
+        "Code": "EU-GR-AC-WA-AI-3-VO"
+    },
+    {
+        "Name": "Piraeus Street",
+        "Description": "A lively area known for its proximity to major roads, making it a key commercial hub with retail shops and businesses.",
+        "Population": 4800,
+        "AreaKm2": 0.8,
+        "Zipcode": "12251",
+        "Code": "EU-GR-AC-WA-AI-3-PS"
+    }
+]

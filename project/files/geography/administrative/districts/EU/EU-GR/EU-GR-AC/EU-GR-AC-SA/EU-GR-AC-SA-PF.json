@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Palaio Faliro Beach Area",
+    "Description": "The coastal area with beautiful beaches, promenades, and cafes by the sea.",
+    "Population": 25000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-SA-PF-1"
+  },
+  {
+    "Name": "Palaio Faliro Residential Area",
+    "Description": "A residential area with a mix of apartment buildings and green spaces.",
+    "Population": 30000,
+    "AreaKm2": 4.5,
+    "Code": "EU-GR-AC-SA-PF-2"
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kalamaki",
+        "Description": "A residential neighborhood with a blend of houses and local businesses, known for its quiet streets.",
+        "Population": 3500,
+        "AreaKm2": 1.8,
+        "Zipcode": "12464",
+        "Code": "EU-GR-AC-WA-CH-2-KA"
+    },
+    {
+        "Name": "Ano Chaidari",
+        "Description": "A peaceful area featuring parks, schools, and residential areas with a strong community vibe.",
+        "Population": 3000,
+        "AreaKm2": 1.5,
+        "Zipcode": "12465",
+        "Code": "EU-GR-AC-WA-CH-2-AC"
+    },
+    {
+        "Name": "Nea Chaidari",
+        "Description": "A growing neighborhood with modern housing developments and new infrastructure.",
+        "Population": 4000,
+        "AreaKm2": 1.5,
+        "Zipcode": "12466",
+        "Code": "EU-GR-AC-WA-CH-2-NC"
+    }
+]

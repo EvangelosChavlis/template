@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Nikaias Center",
+    "Description": "The central area of Nikaias, with a combination of residential and commercial developments.",
+    "Population": 70000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-PI-NA-1"
+  },
+  {
+    "Name": "Agios Ioannis Rentis",
+    "Description": "A district known for its residential neighborhoods and proximity to industrial zones.",
+    "Population": 65000,
+    "AreaKm2": 3.8,
+    "Code": "EU-GR-AC-PI-NA-2"
+  }
+]

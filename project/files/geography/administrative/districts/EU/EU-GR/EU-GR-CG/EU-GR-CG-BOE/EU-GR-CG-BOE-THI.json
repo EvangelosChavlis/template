@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Central Thebes",
+    "Description": "The historical and commercial heart of Thebes, home to ancient ruins and modern businesses.",
+    "Population": 20000,
+    "AreaKm2": 300.0,
+    "Code": "EU-GR-CG-BOE-THI-1"
+  },
+  {
+    "Name": "Thespies",
+    "Description": "A historic town within Thebes, known for its connection to the Battle of Thermopylae.",
+    "Population": 8000,
+    "AreaKm2": 200.0,
+    "Code": "EU-GR-CG-BOE-THI-2"
+  },
+  {
+    "Name": "Plataea",
+    "Description": "A district known for its role in ancient Greek warfare, particularly the Battle of Plataea.",
+    "Population": 5000,
+    "AreaKm2": 150.0,
+    "Code": "EU-GR-CG-BOE-THI-3"
+  },
+  {
+    "Name": "Eleonas",
+    "Description": "A smaller district with a strong agricultural presence.",
+    "Population": 3500,
+    "AreaKm2": 172.92,
+    "Code": "EU-GR-CG-BOE-THI-4"
+  }
+]

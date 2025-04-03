@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kalamaki New",
+        "Description": "A newly developed area offering modern housing, local shops, and easy access to transportation.",
+        "Population": 4000,
+        "AreaKm2": 0.6,
+        "Zipcode": "13133",
+        "Code": "EU-GR-AC-WA-IL-5-KN"
+    },
+    {
+        "Name": "Pefki Heights",
+        "Description": "A higher elevation neighborhood with scenic views, family homes, and local parks.",
+        "Population": 4500,
+        "AreaKm2": 0.7,
+        "Zipcode": "13134",
+        "Code": "EU-GR-AC-WA-IL-5-PH"
+    },
+    {
+        "Name": "Nea Kifisia",
+        "Description": "A suburban area known for its spacious houses, green spaces, and local markets.",
+        "Population": 5000,
+        "AreaKm2": 0.8,
+        "Zipcode": "13135",
+        "Code": "EU-GR-AC-WA-IL-5-NK"
+    }
+]

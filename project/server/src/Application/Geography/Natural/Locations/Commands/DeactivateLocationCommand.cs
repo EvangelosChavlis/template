@@ -10,9 +10,10 @@ using server.src.Domain.Common.Dtos;
 using server.src.Domain.Common.Extensions;
 using server.src.Domain.Geography.Natural.Locations.Models;
 using server.src.Persistence.Common.Interfaces;
-using server.src.Domain.Weather.Forecasts.Models;
-using server.src.Domain.Weather.Observations.Models;
+using server.src.Domain.Weather.Collections.Forecasts.Models;
+using server.src.Domain.Weather.Collections.Observations.Models;
 using server.src.Domain.Geography.Natural.Locations.Extensions;
+using server.src.Domain.Geography.Administrative.Stations.Models;
 
 namespace server.src.Application.Geography.Natural.Locations.Commands;
 
@@ -113,35 +114,21 @@ public class DeactivateLocationHandler : IRequestHandler<DeactivateLocationComma
                 .WithData("Location is deactivated.");
         }
             
-        var forecastFilters = new Expression<Func<Forecast, bool>>[] { l => l.LocationId == location.Id };
-        var forecastsWithLocation = await _commonRepository.AnyExistsAsync(forecastFilters, token);
+        var stationFilters = new Expression<Func<Station, bool>>[] { s => s.LocationId == location.Id };
+        var stationsWithLocation = await _commonRepository.AnyExistsAsync(stationFilters, token);
         
-        if (forecastsWithLocation)
+        if (stationsWithLocation)
         {
-            var forecastsCounter = await _commonRepository.GetCountAsync(forecastFilters, token);
+            var stationsCounter = await _commonRepository.GetCountAsync(stationFilters, token);
 
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error deactivating location.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
-                .WithData($"This location is used from {forecastsCounter} and cannot be deactivated.");
+                .WithData($"This location is used from {stationsCounter} stations and cannot be deactivated.");
         }
 
-        var observationFilters = new Expression<Func<Observation, bool>>[] { o => o.LocationId == location.Id };
-        var observationsWithLocation = await _commonRepository.AnyExistsAsync(observationFilters, token);
-        
-        if (observationsWithLocation)
-        {
-            var observationsCounter = await _commonRepository.GetCountAsync(observationFilters, token);
-
-            await _unitOfWork.RollbackTransactionAsync(token);
-            return new Response<string>()
-                .WithMessage("Error deactivating location.")
-                .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithSuccess(false)
-                .WithData($"This location is used from {observationsCounter} and cannot be deactivated.");
-        }
             
         // Validating, Saving Item
         location.IsActive = false;

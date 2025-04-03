@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "The central district of Ilion, featuring commercial streets, public offices, and cultural venues.",
+        "Population": 22000,
+        "AreaKm2": 2.5,
+        "Code": "EU-GR-AC-WA-IL-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A primarily residential area with schools, parks, and community spaces.",
+        "Population": 18000,
+        "AreaKm2": 2.0,
+        "Code": "EU-GR-AC-WA-IL-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "An area known for its modern developments and expanding infrastructure.",
+        "Population": 16000,
+        "AreaKm2": 1.8,
+        "Code": "EU-GR-AC-WA-IL-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A quieter district with a mix of traditional and modern housing, offering easy access to parks and schools.",
+        "Population": 15000,
+        "AreaKm2": 1.6,
+        "Code": "EU-GR-AC-WA-IL-4"
+    },
+    {
+        "Name": "5th District",
+        "Description": "A developing area featuring new housing projects and improving infrastructure.",
+        "Population": 14000,
+        "AreaKm2": 1.55,
+        "Code": "EU-GR-AC-WA-IL-5"
+    }
+]

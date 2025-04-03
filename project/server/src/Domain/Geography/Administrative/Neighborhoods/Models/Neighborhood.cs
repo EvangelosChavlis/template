@@ -1,7 +1,7 @@
 // source
 using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Administrative.Districts.Models;
-using server.src.Domain.Geography.Natural.Locations.Models;
+using server.src.Domain.Geography.Administrative.Stations.Models;
 
 namespace server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 
@@ -53,6 +53,11 @@ public class Neighborhood : BaseEntity
     /// </summary>
     public Guid DistrictId { get; set; }
 
+    /// <summary>
+    /// Gets or sets the foreign key for the station that this neighborhood belongs to.
+    /// </summary>
+    public Guid? StationId { get; set; }
+
     #endregion
 
     #region Navigation properties
@@ -63,9 +68,9 @@ public class Neighborhood : BaseEntity
     public virtual District District { get; set; }
 
     /// <summary>
-    /// Gets or sets the list of locations within the neighborhood.
+    /// Gets or sets the associated weather station for the neighborhood.
     /// </summary>
-    public virtual List<Location> Locations { get; set; }
+    public virtual Station? Station { get; set; }
 
     #endregion
 }

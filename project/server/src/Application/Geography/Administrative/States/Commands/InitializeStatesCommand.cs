@@ -98,11 +98,11 @@ public class InitializeStatesHandler : IRequestHandler<InitializeStatesCommand, 
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
-                .WithMessage("Error initializing state.")
+                .WithMessage("Error initializing states.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(result)
                 .WithFailures(failures)
-                .WithData("Failed to initialize state.");
+                .WithData("Failed to initialize states.");
         }
             
         // Commit Transaction

@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Mikrolimano",
+        "Description": "A charming neighborhood by the sea, known for its seafood restaurants and yacht marina.",
+        "Population": 20000,
+        "AreaKm2": 2.0,
+        "Zipcode": "18539",
+        "Code": "EU-GR-AC-PI-PI-2-ML"
+    },
+    {
+        "Name": "Kalamaki",
+        "Description": "A residential area with a relaxed atmosphere, located near the beach and coastal roads.",
+        "Population": 15000,
+        "AreaKm2": 2.5,
+        "Zipcode": "18540",
+        "Code": "EU-GR-AC-PI-PI-2-KA"
+    },
+    {
+        "Name": "Agios Dionysios",
+        "Description": "A mostly residential area with a mix of apartment complexes and small local businesses.",
+        "Population": 15000,
+        "AreaKm2": 4.5,
+        "Zipcode": "18541",
+        "Code": "EU-GR-AC-PI-PI-2-AD"
+    }
+]

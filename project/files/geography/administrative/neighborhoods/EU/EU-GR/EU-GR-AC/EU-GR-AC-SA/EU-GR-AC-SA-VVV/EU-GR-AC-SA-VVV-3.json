@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Vari Beach",
+    "Description": "A quiet beach area known for its relaxed atmosphere and beachfront cafes.",
+    "Population": 8000,
+    "AreaKm2": 3.5,
+    "Zipcode": "16600",
+    "Code": "EU-GR-AC-SA-VVV-3-VB"
+  },
+  {
+    "Name": "Vari Center",
+    "Description": "The central part of Vari with local shops, schools, and residential streets.",
+    "Population": 10000,
+    "AreaKm2": 5.0,
+    "Zipcode": "16601",
+    "Code": "EU-GR-AC-SA-VVV-3-VC"
+  },
+  {
+    "Name": "Vari Hills",
+    "Description": "A more elevated residential area offering large homes and scenic views.",
+    "Population": 8000,
+    "AreaKm2": 3.0,
+    "Zipcode": "16602",
+    "Code": "EU-GR-AC-SA-VVV-3-VH"
+  }
+]

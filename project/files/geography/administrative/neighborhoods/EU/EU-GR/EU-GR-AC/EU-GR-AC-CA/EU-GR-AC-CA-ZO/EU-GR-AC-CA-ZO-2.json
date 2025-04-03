@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kareas",
+    "Description": "A peaceful residential neighborhood with a suburban feel, ideal for families and individuals seeking tranquility.",
+    "Population": 8000,
+    "AreaKm2": 0.8,
+    "Zipcode": "15773",
+    "Code": "EU-GR-AC-CA-ZO-1-KA"
+  },
+  {
+    "Name": "Kifisos River Area",
+    "Description": "A neighborhood near the Kifisos River, with a mix of residential homes and local shops.",
+    "Population": 12000,
+    "AreaKm2": 0.7,
+    "Zipcode": "15773",
+    "Code": "EU-GR-AC-CA-ZO-2-KRA"
+  }
+]

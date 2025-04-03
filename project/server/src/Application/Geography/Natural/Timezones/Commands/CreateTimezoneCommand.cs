@@ -44,7 +44,7 @@ public class CreateTimezoneHandler : IRequestHandler<CreateTimezoneCommand, Resp
         var filters = new Expression<Func<Timezone, bool>>[] { t => t.Name!.Equals(command.Dto.Name) };
         var existingTimezone = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the surface type already exists in the system
         if (existingTimezone is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
@@ -73,10 +73,10 @@ public class CreateTimezoneHandler : IRequestHandler<CreateTimezoneCommand, Resp
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
-                .WithMessage("Error creating terrain type.")
+                .WithMessage("Error creating surface type.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
-                .WithData("Failed to create terrain type.");
+                .WithData("Failed to create surface type.");
         }
             
         // Commit Transaction

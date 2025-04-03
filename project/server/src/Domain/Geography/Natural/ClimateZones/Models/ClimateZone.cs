@@ -20,6 +20,11 @@ public class ClimateZone : BaseEntity
     public string Description { get; set; }
 
     /// <summary>
+    /// Gets or sets the classification code based on the Köppen climate classification system (e.g., Af, BWh, Cfb).
+    /// </summary>
+    public string Code { get; set; }
+
+    /// <summary>
     /// Gets or sets the average annual temperature in Celsius.
     /// </summary>
     public double AvgTemperatureC { get; set; }

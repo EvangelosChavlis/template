@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Megalochori",
+    "Description": "The main village on the island, known for its traditional charm, narrow streets, and local shops.",
+    "Population": 1000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-IS-AG-1"
+  },
+  {
+    "Name": "Skala",
+    "Description": "A seaside area known for its beach resorts and tourism, popular during the summer months.",
+    "Population": 800,
+    "AreaKm2": 4.0,
+    "Code": "EU-GR-AC-IS-AG-2"
+  }
+]

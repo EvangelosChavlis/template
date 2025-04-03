@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Harbor Front",
+    "Description": "The bustling area along the waterfront, with cafes, restaurants, and shops.",
+    "Population": 3000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18020",
+    "Code": "EU-GR-AC-IS-PO-1-HF"
+  },
+  {
+    "Name": "Old Town",
+    "Description": "The historic center of Poros Town, featuring narrow streets and neoclassical buildings.",
+    "Population": 3000,
+    "AreaKm2": 5.0,
+    "Zipcode": "18021",
+    "Code": "EU-GR-AC-IS-PO-1-OT"
+  }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Ilioupoli Center",
+        "Description": "The heart of the municipality, offering commercial areas, parks, and a strong community atmosphere.",
+        "Population": 20000,
+        "AreaKm2": 1.5,
+        "Zipcode": "16345",
+        "Code": "EU-GR-AC-CA-IL-1-IC"
+    },
+    {
+        "Name": "Kallithea",
+        "Description": "A peaceful residential neighborhood, with family homes, green spaces, and easy access to public services.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "16346",
+        "Code": "EU-GR-AC-CA-IL-1-KA"
+    }
+]

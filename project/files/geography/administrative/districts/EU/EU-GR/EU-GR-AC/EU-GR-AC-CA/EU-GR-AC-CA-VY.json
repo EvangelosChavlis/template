@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "A vibrant and cultural district known for its traditional architecture and proximity to Athens' southern landmarks.",
+        "Population": 30000,
+        "AreaKm2": 1.0,
+        "Code": "EU-GR-AC-CA-VY-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A lively residential area, offering a mix of modern amenities and traditional Greek charm.",
+        "Population": 35000,
+        "AreaKm2": 1.2,
+        "Code": "EU-GR-AC-CA-VY-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A quieter district with a suburban feel, offering green spaces and easy access to the city center.",
+        "Population": 25000,
+        "AreaKm2": 1.5,
+        "Code": "EU-GR-AC-CA-VY-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A bustling neighborhood with a mix of residential and commercial spaces, home to various cafes and shops.",
+        "Population": 35000,
+        "AreaKm2": 2.3,
+        "Code": "EU-GR-AC-CA-VY-4"
+    }
+]

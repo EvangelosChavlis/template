@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "The heart of Athens, known for its historical landmarks, including the Acropolis and the Parthenon.",
+        "Population": 120000,
+        "AreaKm2": 6.0,
+        "Code": "EU-GR-AC-CA-AT-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A bustling district filled with vibrant neighborhoods, restaurants, and nightlife.",
+        "Population": 110000,
+        "AreaKm2": 5.5,
+        "Code": "EU-GR-AC-CA-AT-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A central district with a mix of residential and commercial areas, home to many government buildings.",
+        "Population": 100000,
+        "AreaKm2": 7.0,
+        "Code": "EU-GR-AC-CA-AT-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A vibrant and artsy district, home to galleries, theatres, and cultural venues.",
+        "Population": 90000,
+        "AreaKm2": 6.5,
+        "Code": "EU-GR-AC-CA-AT-4"
+    },
+    {
+        "Name": "5th District",
+        "Description": "A more residential area with local shops, green spaces, and family-friendly amenities.",
+        "Population": 85000,
+        "AreaKm2": 6.0,
+        "Code": "EU-GR-AC-CA-AT-5"
+    }
+]

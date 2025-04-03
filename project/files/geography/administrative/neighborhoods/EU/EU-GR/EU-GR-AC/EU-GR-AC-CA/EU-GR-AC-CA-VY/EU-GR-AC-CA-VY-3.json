@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Metamorfosi",
+        "Description": "A suburban neighborhood known for its parks and family-friendly environment, offering easy access to the city.",
+        "Population": 7500,
+        "AreaKm2": 0.40,
+        "Code": "EU-GR-AC-CA-VY-3-ME"
+    },
+    {
+        "Name": "Duncan",
+        "Description": "A quiet residential area with spacious streets and a close-knit community, perfect for those seeking tranquility.",
+        "Population": 4500,
+        "AreaKm2": 0.25,
+        "Code": "EU-GR-AC-CA-VY-3-DU"
+    }
+]

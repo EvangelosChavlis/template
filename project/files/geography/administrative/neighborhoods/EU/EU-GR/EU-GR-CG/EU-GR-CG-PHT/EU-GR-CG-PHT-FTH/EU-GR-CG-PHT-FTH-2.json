@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Lianokladi",
+    "Description": "A small village known for its agricultural production and traditional Greek lifestyle.",
+    "Population": 3000,
+    "AreaKm2": 30.0,
+    "Zipcode": "35310",
+    "Code": "EU-GR-CG-PHT-FTH-2-LI"
+  },
+  {
+    "Name": "Nea Mavra",
+    "Description": "A rural settlement famous for its olive groves and peaceful environment.",
+    "Population": 4000,
+    "AreaKm2": 60.0,
+    "Zipcode": "35320",
+    "Code": "EU-GR-CG-PHT-FTH-2-NM"
+  },
+  {
+    "Name": "Kallithea",
+    "Description": "A picturesque village known for its natural beauty, hiking trails, and agricultural areas.",
+    "Population": 3000,
+    "AreaKm2": 50.0,
+    "Zipcode": "35330",
+    "Code": "EU-GR-CG-PHT-FTH-2-KA"
+  }
+]

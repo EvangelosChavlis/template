@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Anthoupoli Station",
+    "Description": "Station serving the Anthoupoli neighborhood, known for residential areas and green spaces.",
+    "Code": "EU-GR-AC-WA-PE-3-AN-STA",
+    "Latitude": 38.11,
+    "Longitude": 23.59,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-3-AN"
+  },
+  {
+    "Name": "Lofos Axiomatikon Station",
+    "Description": "Station serving the Lofos Axiomatikon neighborhood, known for military housing and community presence.",
+    "Code": "EU-GR-AC-WA-PE-3-LA-STA",
+    "Latitude": 38.12,
+    "Longitude": 23.58,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-3-LA"
+  },
+  {
+    "Name": "Nea Zoi Station",
+    "Description": "Station serving the Nea Zoi neighborhood, a developing area with modern infrastructure.",
+    "Code": "EU-GR-AC-WA-PE-3-NZ-STA",
+    "Latitude": 38.13,
+    "Longitude": 23.57,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-3-NZ"
+  },
+  {
+    "Name": "Tsallavouta Station",
+    "Description": "Station serving the Tsallavouta neighborhood, a historic area with residential and commercial spaces.",
+    "Code": "EU-GR-AC-WA-PE-3-TS-STA",
+    "Latitude": 38.14,
+    "Longitude": 23.56,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-3-TS"
+  }
+]

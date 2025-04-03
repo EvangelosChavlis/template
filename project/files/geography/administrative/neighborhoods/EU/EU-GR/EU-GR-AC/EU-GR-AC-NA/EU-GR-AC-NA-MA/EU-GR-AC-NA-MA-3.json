@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "O.T.E. Business Park",
+    "Description": "A major business park, home to many tech companies and large offices.",
+    "Population": 4000,
+    "AreaKm2": 2.0,
+    "Zipcode": "15128",
+    "Code": "EU-GR-AC-NA-MA-3-OBP"
+  },
+  {
+    "Name": "Athens Mall",
+    "Description": "A large shopping center located in the southern part of the district, popular with both locals and visitors.",
+    "Population": 5000,
+    "AreaKm2": 3.0,
+    "Zipcode": "15129",
+    "Code": "EU-GR-AC-NA-MA-3-AM"
+  }
+]

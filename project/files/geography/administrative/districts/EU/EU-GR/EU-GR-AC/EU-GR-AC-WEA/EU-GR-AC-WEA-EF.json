@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Central Elefsina",
+    "Description": "The historic and commercial center of the city, home to major archaeological sites and cultural landmarks.",
+    "Population": 12000,
+    "AreaKm2": 7.0,
+    "Code": "EU-GR-AC-WEA-EF-1"
+  },
+  {
+    "Name": "West Elefsina",
+    "Description": "A mainly residential district with modern developments and local markets.",
+    "Population": 8000,
+    "AreaKm2": 6.0,
+    "Code": "EU-GR-AC-WEA-EF-2"
+  },
+  {
+    "Name": "South Elefsina",
+    "Description": "A coastal district with access to the Saronic Gulf and industrial ports.",
+    "Population": 5000,
+    "AreaKm2": 7.0,
+    "Code": "EU-GR-AC-WEA-EF-3"
+  }
+]

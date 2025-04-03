@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Korydallos Park Area",
+    "Description": "A suburban area with parks and recreational spaces for residents.",
+    "Population": 30000,
+    "AreaKm2": 2.5,
+    "Zipcode": "18112",
+    "Code": "EU-GR-AC-PI-KO-2-KPA"
+  },
+  {
+    "Name": "Korydallos South Residential",
+    "Description": "A quieter area with residential buildings and local shops.",
+    "Population": 30000,
+    "AreaKm2": 3.1,
+    "Zipcode": "18113",
+    "Code": "EU-GR-AC-PI-KO-2-KSR"
+  }
+]

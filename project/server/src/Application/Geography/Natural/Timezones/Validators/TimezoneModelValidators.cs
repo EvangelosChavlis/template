@@ -1,6 +1,7 @@
 // source
 using server.src.Application.Common.Validators;
 using server.src.Domain.Common.Models;
+using server.src.Domain.Geography.Natural.Timezones.Extensions;
 using server.src.Domain.Geography.Natural.Timezones.Models;
 
 namespace server.src.Application.Geography.Natural.Timezones.Validators;
@@ -14,22 +15,32 @@ public static class TimezoneModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > 100)
-            errors.Add("Name must not exceed 100 characters.");
+        else if (model.Name.Length > TimezoneLength.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {TimezoneLength.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
-            errors.Add("Name contains invalid characters.");
+            errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
-            errors.Add("Name contains non-printable characters.");
+            errors.Add($"Name {model.Name} contains non-printable characters.");
 
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > 250)
-            errors.Add("Description must not exceed 250 characters.");
+        else if (model.Description.Length > TimezoneLength.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {TimezoneLength.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
-            errors.Add("Description contains invalid characters.");
+            errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
-            errors.Add("Description contains non-printable characters.");
+            errors.Add($"Description {model.Description} contains non-printable characters.");
+
+        // Validation for Code
+        if (string.IsNullOrWhiteSpace(model.Code))
+            errors.Add("Code is required.");
+        else if (model.Code.Length > TimezoneLength.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {TimezoneLength.CodeLength} characters.");
+        else if (model.Code.ContainsInjectionCharacters())
+            errors.Add($"Code {model.Code} contains invalid characters.");
+        else if (model.Code.ContainsNonPrintableCharacters())
+            errors.Add($"Code {model.Code} contains non-printable characters.");
 
         // Validation for UtcOffset
         if (model.UtcOffset < -12 || model.UtcOffset > 14)

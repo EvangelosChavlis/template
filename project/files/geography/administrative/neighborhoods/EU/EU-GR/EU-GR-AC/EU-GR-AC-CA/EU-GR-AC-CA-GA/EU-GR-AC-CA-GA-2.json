@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Nea Ionia",
+        "Description": "A lively neighborhood known for its modern shops, cafes, and residential complexes, offering both urban living and green spaces.",
+        "Population": 10000,
+        "AreaKm2": 0.6,
+        "Code": "EU-GR-AC-CA-GA-2-NI"
+    },
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A cozy area with small local shops, traditional taverns, and close access to transport hubs, perfect for daily commuters.",
+        "Population": 10000,
+        "AreaKm2": 0.6,
+        "Code": "EU-GR-AC-CA-GA-2-AN"
+    }
+]

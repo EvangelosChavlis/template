@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Keratsini Port",
+    "Description": "The port area of Keratsini, vital for the local economy with its maritime activities.",
+    "Population": 25000,
+    "AreaKm2": 2.5,
+    "Zipcode": "18755",
+    "Code": "EU-GR-AC-PI-KD-1-KP"
+  },
+  {
+    "Name": "Keratsini Main Street",
+    "Description": "A busy commercial street connecting various businesses and residential zones.",
+    "Population": 35000,
+    "AreaKm2": 3.5,
+    "Zipcode": "18756",
+    "Code": "EU-GR-AC-PI-KD-1-KMS"
+  }
+]

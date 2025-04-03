@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Magoula Industrial Park",
+    "Description": "A key business hub with warehouses, factories, and logistics companies.",
+    "Population": 2000,
+    "AreaKm2": 4.0,
+    "Zipcode": "19622",
+    "Code": "EU-GR-AC-WEA-MA-2-MIP"
+  },
+  {
+    "Name": "Thriasio Area",
+    "Description": "A major transportation and logistics hub in the West Attica region.",
+    "Population": 2000,
+    "AreaKm2": 3.0,
+    "Zipcode": "19623",
+    "Code": "EU-GR-AC-WEA-MA-2-TH"
+  }
+]

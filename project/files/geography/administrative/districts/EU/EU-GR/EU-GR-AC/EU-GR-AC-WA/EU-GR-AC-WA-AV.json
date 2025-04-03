@@ -1,0 +1,23 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "A central district with a mix of residential buildings, shops, and local services.",
+        "Population": 8000,
+        "AreaKm2": 0.9,
+        "Code": "EU-GR-AC-WA-AV-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "Mainly residential with green spaces and community centers, offering a quieter atmosphere.",
+        "Population": 7000,
+        "AreaKm2": 0.7,
+        "Code": "EU-GR-AC-WA-AV-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A developing area with new housing projects and local businesses, becoming an urban hub.",
+        "Population": 7000,
+        "AreaKm2": 0.8,
+        "Code": "EU-GR-AC-WA-AV-3"
+    }
+]

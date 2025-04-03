@@ -1,10 +1,9 @@
 // packages
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using server.src.Domain.Geography.Administrative.Neighborhoods.Extensions;
-
 
 // source
+using server.src.Domain.Geography.Administrative.Neighborhoods.Extensions;
 using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -30,7 +29,7 @@ public class NeighborhoodConfiguration : IEntityTypeConfiguration<Neighborhood>
             .HasMaxLength(NeighborhoodLength.NameLength);
 
         builder.Property(n => n.Description)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(NeighborhoodLength.DescriptionLength);
 
         builder.Property(n => n.Population)

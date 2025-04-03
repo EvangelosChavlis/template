@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Vrilissia Square",
+    "Description": "A lively area known for its cafes, shops, and small residential blocks.",
+    "Population": 6000,
+    "AreaKm2": 1.2,
+    "Zipcode": "15235",
+    "Code": "EU-GR-AC-NA-VR-1-VS"
+  },
+  {
+    "Name": "Vrilissia Park",
+    "Description": "A quieter area near the local park, offering green spaces and family-friendly atmosphere.",
+    "Population": 6000,
+    "AreaKm2": 1.8,
+    "Zipcode": "15236",
+    "Code": "EU-GR-AC-NA-VR-1-VP"
+  }
+]

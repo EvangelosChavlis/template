@@ -1,42 +1,42 @@
 [
-    {
-        "Name": "Agios Vasileios",
-        "Description": "A neighborhood in Peristeri known for its residential areas, schools, and local parks.",
-        "Population": 11000,
-        "AreaKm2": 1.5,
-        "Zipcode": "12144",
-        "Code": "EU-GR-AC-WA-PE-2-AV"
-    },
-    {
-        "Name": "Kalamaki",
-        "Description": "A quiet residential neighborhood with a mix of modern and traditional housing.",
-        "Population": 9500,
-        "AreaKm2": 1.3,
-        "Zipcode": "12145",
-        "Code": "EU-GR-AC-WA-PE-2-KA"
-    },
-    {
-        "Name": "Peristeri Industrial Area",
-        "Description": "An area characterized by industrial sites, warehouses, and commercial spaces.",
-        "Population": 5000,
-        "AreaKm2": 2.0,
-        "Zipcode": "12146",
-        "Code": "EU-GR-AC-WA-PE-2-PI"
-    },
-    {
-        "Name": "Vigla",
-        "Description": "A mixed-use neighborhood with both residential and commercial areas, including local businesses.",
-        "Population": 8000,
-        "AreaKm2": 1.0,
-        "Zipcode": "12147",
-        "Code": "EU-GR-AC-WA-PE-2-VI"
-    },
-    {
-        "Name": "Kentriki Peristeri",
-        "Description": "The central area of Peristeri, known for its busy streets, shopping centers, and transportation links.",
-        "Population": 13000,
-        "AreaKm2": 1.8,
-        "Zipcode": "12148",
-        "Code": "EU-GR-AC-WA-PE-2-KP"
-    }
+  {
+    "Name": "Agios Vasileios",
+    "Description": "A neighborhood in Peristeri known for its residential areas, schools, and local parks.",
+    "Population": 11000,
+    "AreaKm2": 1.5,
+    "Zipcode": "12144",
+    "Code": "EU-GR-AC-WA-PE-2-AV"
+  },
+  {
+    "Name": "Kalamaki",
+    "Description": "A quiet residential neighborhood with a mix of modern and traditional housing.",
+    "Population": 9500,
+    "AreaKm2": 1.3,
+    "Zipcode": "12145",
+    "Code": "EU-GR-AC-WA-PE-2-KA"
+  },
+  {
+    "Name": "Peristeri Industrial Area",
+    "Description": "An area characterized by industrial sites, warehouses, and commercial spaces.",
+    "Population": 5000,
+    "AreaKm2": 2.0,
+    "Zipcode": "12146",
+    "Code": "EU-GR-AC-WA-PE-2-PI"
+  },
+  {
+    "Name": "Vigla",
+    "Description": "A mixed-use neighborhood with both residential and commercial areas, including local businesses.",
+    "Population": 8000,
+    "AreaKm2": 1.0,
+    "Zipcode": "12147",
+    "Code": "EU-GR-AC-WA-PE-2-VI"
+  },
+  {
+    "Name": "Kentriki Peristeri",
+    "Description": "The central area of Peristeri, known for its busy streets, shopping centers, and transportation links.",
+    "Population": 13000,
+    "AreaKm2": 1.8,
+    "Zipcode": "12148",
+    "Code": "EU-GR-AC-WA-PE-2-KP"
+  }
 ]

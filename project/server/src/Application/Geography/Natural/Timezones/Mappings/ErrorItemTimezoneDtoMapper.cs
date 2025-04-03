@@ -17,11 +17,12 @@ public class ErrorItemTimezoneDtoMapper
         new (
             Id: Guid.Empty,
             Name: string.Empty,
+            Description: string.Empty,
+            Code: string.Empty,
             UtcOffset: double.MinValue,
+            DstOffset: double.MinValue,
             SupportsDaylightSaving: false,
             IsActive: false,
-            Description: string.Empty,
-            DstOffset: null,
             Version: Guid.Empty 
         );
 }

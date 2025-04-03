@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Spata Center",
+    "Description": "The heart of Spata with traditional markets, town hall, and local businesses.",
+    "Population": 5000,
+    "AreaKm2": 15.0,
+    "Zipcode": "19004",
+    "Code": "EU-GR-AC-EA-SA-1-SC"
+  },
+  {
+    "Name": "Airport Zone",
+    "Description": "The area surrounding Athens International Airport, with hotels, logistics centers, and businesses.",
+    "Population": 2000,
+    "AreaKm2": 20.0,
+    "Zipcode": "19019",
+    "Code": "EU-GR-AC-EA-SA-1-AZ"
+  },
+  {
+    "Name": "Agios Ioannis",
+    "Description": "A quiet residential neighborhood with traditional homes and green spaces.",
+    "Population": 3000,
+    "AreaKm2": 10.0,
+    "Zipcode": "19005",
+    "Code": "EU-GR-AC-EA-SA-1-AI"
+  }
+]

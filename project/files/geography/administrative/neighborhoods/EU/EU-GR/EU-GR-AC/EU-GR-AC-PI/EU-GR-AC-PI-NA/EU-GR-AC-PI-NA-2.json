@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Agios Ioannis Rentis Residential Area",
+    "Description": "A primarily residential zone with a mix of modern and older housing.",
+    "Population": 40000,
+    "AreaKm2": 2.0,
+    "Zipcode": "18200",
+    "Code": "EU-GR-AC-PI-NA-2-AIR"
+  },
+  {
+    "Name": "Agios Ioannis Rentis Industrial Zone",
+    "Description": "A key industrial area with a focus on manufacturing and warehousing.",
+    "Population": 25000,
+    "AreaKm2": 1.8,
+    "Zipcode": "18201",
+    "Code": "EU-GR-AC-PI-NA-2-AIRZ"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Central Tanagra",
+    "Description": "The heart of the town, with government buildings, shops, and cultural centers.",
+    "Population": 3000,
+    "AreaKm2": 50.0,
+    "Zipcode": "32001",
+    "Code": "EU-GR-CG-BOE-TAN-1-CT"
+  },
+  {
+    "Name": "Kato Tanagra",
+    "Description": "A more residential part of Tanagra with local homes and community areas.",
+    "Population": 3000,
+    "AreaKm2": 50.0,
+    "Zipcode": "32002",
+    "Code": "EU-GR-CG-BOE-TAN-1-KT"
+  }
+]

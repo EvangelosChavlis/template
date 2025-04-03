@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Port Area",
+    "Description": "The main port area with ferry docks, cafes, and local shops.",
+    "Population": 400,
+    "AreaKm2": 4.0,
+    "Zipcode": "80104",
+    "Code": "EU-GR-AC-IS-KY-3-PA"
+  },
+  {
+    "Name": "Harbor View",
+    "Description": "A scenic area near the harbor offering views of the sea and surrounding islands.",
+    "Population": 400,
+    "AreaKm2": 6.0,
+    "Zipcode": "80105",
+    "Code": "EU-GR-AC-IS-KY-3-HV"
+  }
+]

@@ -76,8 +76,8 @@ The tests are grouped into the following categories:
 ## 3. Application Unit Tests
 
 ### Mappings
-- **`server.tests.Application.Mappings.Weather.ForecastsMappingsTests`**: Tests related to mapping of weather forecast models.
-- **`server.tests.Application.Mappings.Weather.WarningsMappingsTests`**: Tests for mapping of weather warnings models.
+- **`server.tests.Application.Mappings.Weather.Collections.ForecastsMappingsTests`**: Tests related to mapping of weather forecast models.
+- **`server.tests.Application.Mappings.Weather.Collections.WarningsMappingsTests`**: Tests for mapping of weather warnings models.
 - **`server.tests.Application.Mappings.Metrics.ErrorsMappingsTests`**: Tests for mapping of error models in metrics.
 - **`server.tests.Application.Mappings.Metrics.TelemetryMappingsTests`**: Tests for mapping of telemetry data.
 - **`server.tests.Application.Mappings.Auth.RolesMappingsTests`**: Tests for mapping roles-related data.
@@ -97,8 +97,8 @@ The tests are grouped into the following categories:
 - **`server.test.Application.Unit.Tests.Services.Metrics.TelemetryServiceTests`**: Tests for telemetry data services.
 
 ### Includes and Filters
-- **`server.test.Application.Unit.Tests.Includes.Weather.ForecastsIncludesTests`**: Tests for inclusion of related weather forecast data.
-- **`server.test.Application.Unit.Tests.Includes.Weather.WarningsIncludesTests`**: Tests for inclusion of related weather warning data.
+- **`server.test.Application.Unit.Tests.Includes.Weather.Collections.ForecastsIncludesTests`**: Tests for inclusion of related weather forecast data.
+- **`server.test.Application.Unit.Tests.Includes.Weather.Collections.WarningsIncludesTests`**: Tests for inclusion of related weather warning data.
 - **`server.test.Application.Unit.Tests.Includes.Metrics.TelemetryIncludesTests`**: Tests for inclusion of related telemetry data.
 - **`server.test.Application.Unit.Tests.Includes.Errors.ErrorsIncludesTests`**: Tests for inclusion of related error data.
 - **`server.test.Application.Unit.Tests.Includes.Auth.UserIncludesTests`**: Tests for inclusion of user-related data in authentication.
@@ -113,8 +113,8 @@ The tests are grouped into the following categories:
 ## 4. API Integration Tests
 
 ### Weather and Metrics Controllers
-- **`server.test.Api.Integration.Tests.Controllers.Weather.ForecastsControllerTests`**: Integration tests for the weather forecast controller.
-- **`server.test.Api.Integration.Tests.Controllers.Weather.WarningsControllerTests`**: Integration tests for the weather warnings controller.
+- **`server.test.Api.Integration.Tests.Controllers.Weather.Collections.ForecastsControllerTests`**: Integration tests for the weather forecast controller.
+- **`server.test.Api.Integration.Tests.Controllers.Weather.Collections.WarningsControllerTests`**: Integration tests for the weather warnings controller.
 - **`server.test.Api.Integration.Tests.Controllers.Metrics.ErrorsControllerTests`**: Integration tests for the metrics error handling controller.
 - **`server.test.Api.Integration.Tests.Controllers.Metrics.TelemetryControllerTests`**: Integration tests for the telemetry data controller.
 

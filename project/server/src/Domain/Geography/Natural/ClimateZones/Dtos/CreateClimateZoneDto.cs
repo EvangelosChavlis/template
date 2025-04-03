@@ -7,6 +7,7 @@ namespace server.src.Domain.Geography.Natural.ClimateZones.Dtos;
 public record CreateClimateZoneDto(
     string Name,
     string Description,
+    string Code,
     double AvgTemperatureC,
     double AvgPrecipitationMm
 );

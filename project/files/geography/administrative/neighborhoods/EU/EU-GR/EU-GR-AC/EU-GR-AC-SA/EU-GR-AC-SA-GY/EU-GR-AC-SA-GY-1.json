@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Glyfada Marina",
+    "Description": "A high-end marina area with yachts, cafes, and exclusive shopping.",
+    "Population": 8000,
+    "AreaKm2": 2.0,
+    "Zipcode": "16675",
+    "Code": "EU-GR-AC-SA-GY-1-GM"
+  },
+  {
+    "Name": "Asteras Glyfada",
+    "Description": "An upscale beachfront area known for luxury resorts and fine dining.",
+    "Population": 7000,
+    "AreaKm2": 1.5,
+    "Zipcode": "16674",
+    "Code": "EU-GR-AC-SA-GY-1-AG"
+  },
+  {
+    "Name": "Glyfada Beach Promenade",
+    "Description": "A lively waterfront promenade lined with restaurants, cafes, and bars.",
+    "Population": 15000,
+    "AreaKm2": 2.0,
+    "Zipcode": "16677",
+    "Code": "EU-GR-AC-SA-GY-1-GBP"
+  }
+]

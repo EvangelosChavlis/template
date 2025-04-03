@@ -6,7 +6,7 @@ namespace server.src.Application.Geography.Administrative.Continents.Mappings;
 
 /// <summary>
 /// Provides mapping functionality to convert a <see cref="CreateContinentDto"/> into a <see cref="Continent"/> model.
-/// This utility class is used to create new terrain type instances based on provided data transfer objects.
+/// This utility class is used to create new surface type instances based on provided data transfer objects.
 /// </summary>
 public static class CreateContinentModelMapper
 {

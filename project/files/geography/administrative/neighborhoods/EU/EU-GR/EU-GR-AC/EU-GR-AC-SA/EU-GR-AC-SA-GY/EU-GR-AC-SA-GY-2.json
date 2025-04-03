@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Glyfada Center",
+    "Description": "The central shopping district, with boutiques, cafes, and vibrant street life.",
+    "Population": 15000,
+    "AreaKm2": 2.5,
+    "Zipcode": "16680",
+    "Code": "EU-GR-AC-SA-GY-2-GC"
+  },
+  {
+    "Name": "Kavouri Area",
+    "Description": "A residential area with parks, schools, and quiet streets, close to the coastline.",
+    "Population": 12000,
+    "AreaKm2": 3.0,
+    "Zipcode": "16682",
+    "Code": "EU-GR-AC-SA-GY-2-KA"
+  },
+  {
+    "Name": "Vouliagmeni Road",
+    "Description": "A bustling commercial area along the main road with a mix of businesses and residential buildings.",
+    "Population": 13000,
+    "AreaKm2": 4.5,
+    "Zipcode": "16683",
+    "Code": "EU-GR-AC-SA-GY-2-VR"
+  }
+]

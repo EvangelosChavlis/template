@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Pikermi Center",
+    "Description": "A small-town area with traditional houses, local markets, and historic charm.",
+    "Population": 7000,
+    "AreaKm2": 3.0,
+    "Zipcode": "19012",
+    "Code": "EU-GR-AC-EA-RP-2-PC"
+  },
+  {
+    "Name": "Drafi",
+    "Description": "A residential neighborhood with luxury villas, offering views of the surrounding nature.",
+    "Population": 5000,
+    "AreaKm2": 3.5,
+    "Zipcode": "19013",
+    "Code": "EU-GR-AC-EA-RP-2-DR"
+  },
+  {
+    "Name": "Neos Voutzas",
+    "Description": "A quiet area with a mix of permanent residences and vacation homes, surrounded by pine forests.",
+    "Population": 3000,
+    "AreaKm2": 1.5,
+    "Zipcode": "19014",
+    "Code": "EU-GR-AC-EA-RP-2-NV"
+  }
+]

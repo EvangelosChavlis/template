@@ -1,12 +1,15 @@
 // packages
+using System.Linq.Expressions;
 using System.Net;
-using System.Text;
 
 // source
 using server.src.Application.Common.Interfaces;
-using server.src.Application.Geography.Natural.ClimateZones.Interfaces;
+using server.src.Application.Geography.Natural.ClimateZones.Mappings;
+using server.src.Application.Geography.Natural.ClimateZones.Validators;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Geography.Natural.ClimateZones.Dtos;
+using server.src.Domain.Geography.Natural.ClimateZones.Models;
+using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Geography.Natural.ClimateZones.Commands;
 
@@ -14,39 +17,90 @@ public record InitializeClimateZonesCommand(List<CreateClimateZoneDto> Dto) : IR
 
 public class InitializeClimateZonesHandler : IRequestHandler<InitializeClimateZonesCommand, Response<string>>
 {
-    private readonly IClimateZoneCommands _climatezoneCommands;
+    private readonly ICommonRepository _commonRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public InitializeClimateZonesHandler(IClimateZoneCommands climatezoneCommands)
+    public InitializeClimateZonesHandler(ICommonRepository commonRepository, IUnitOfWork unitOfWork)
     {
-        _climatezoneCommands = climatezoneCommands;
+        _commonRepository = commonRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task<Response<string>> Handle(InitializeClimateZonesCommand command, CancellationToken token = default)
     {
-        var success = true;
-        var messageBuilder = new StringBuilder();
+        // Begin Transaction
+        await _unitOfWork.BeginTransactionAsync(token);
+
+        var climateZones = new List<ClimateZone>();
+        var existingCodes = new HashSet<string>();
+
+        var failures = new List<string>();
 
         foreach (var item in command.Dto)
         {
-            var result = await _climatezoneCommands.CreateClimateZoneAsync(item, token);
-            success &= result.Success;
+             // Dto Validation
+            var dtoValidationResult = item.Validate();
+            if (!dtoValidationResult.IsValid)
+            {
+                failures.Add(string.Join("\n", dtoValidationResult.Errors));
+                continue;
+            }
 
-            messageBuilder.AppendLine(result.Data);
+            // Searching Item
+            var filters = new Expression<Func<ClimateZone, bool>>[] 
+            { 
+                c => c.Name!.Equals(item.Name) ||
+                    c.Code!.Equals(item.Code)
+            };
+            var existingClimateZone = await _commonRepository.GetResultByIdAsync(filters, token: token);
+
+            // Check if the surface type already exists in the system
+            if (existingClimateZone is not null)
+            {
+                failures.Add($"Climate zone with name {existingClimateZone.Name} or code {existingClimateZone.Code} already exists.");
+                continue;
+            }
+
+            // Mapping and Saving ClimateZone
+            var climateZone = item.CreateClimateZoneModelMapping();
+            var modelValidationResult = climateZone.Validate();
+            if (!modelValidationResult.IsValid)
+            {
+                failures.Add(string.Join("\n", modelValidationResult.Errors));
+                continue;                
+            }
+
+            if (existingCodes.Contains(climateZone.Code))
+            {
+                failures.Add($"Code {climateZone.Code} already exists in the list of climatezones.");
+                continue;
+            }
+            
+            climateZones.Add(climateZone);
+            existingCodes.Add(climateZone.Code);
+        }
+        var result = await _commonRepository.AddRangeAsync(climateZones, token);
+
+        if (!result)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error initializing climateZones.")
+                .WithStatusCode((int)HttpStatusCode.InternalServerError)
+                .WithSuccess(result)
+                .WithFailures(failures)
+                .WithData("Failed to initialize climateZones.");
         }
 
-        var message = messageBuilder.ToString().TrimEnd();
+        // Commit Transaction
+        await _unitOfWork.CommitTransactionAsync(token);
 
-        if (!success)
-            return new Response<string>()
-                .WithMessage("Error initializing climate zones.")
-                .WithStatusCode((int)HttpStatusCode.InternalServerError)
-                .WithSuccess(false)
-                .WithData("Failed to initialize climate zones.");
-
+        // Initializing object
         return new Response<string>()
-            .WithMessage("Success initializing climate zones.")
+            .WithMessage("Success initializing climateZones.")
             .WithStatusCode((int)HttpStatusCode.OK)
-            .WithSuccess(success)
-            .WithData(message);
+            .WithSuccess(result)
+            .WithFailures(failures)
+            .WithData($"{climateZones.Count}/{command.Dto.Count} climateZones inserted successfully!");
     }
 }

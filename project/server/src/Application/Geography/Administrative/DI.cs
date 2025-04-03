@@ -9,6 +9,7 @@ using server.src.Application.Geography.Administrative.Municipalities;
 using server.src.Application.Geography.Administrative.Neighborhoods;
 using server.src.Application.Geography.Administrative.Regions;
 using server.src.Application.Geography.Administrative.States;
+using server.src.Application.Geography.Administrative.Stations;
 
 namespace server.src.Application.Geography.Administrative;
 
@@ -18,12 +19,13 @@ public static class DI
     {
         services.RegisterContinents();
         services.RegisterCountries();
-        services.RegisterStates();
-        services.RegisterRegions();
-        services.RegisterMunicipalities();
         services.RegisterDistricts();
+        services.RegisterMunicipalities();
         services.RegisterNeighborhoods();
-
+        services.RegisterRegions();
+        services.RegisterStates();
+        services.RegisterStations();
+    
         return services;
     }
 }

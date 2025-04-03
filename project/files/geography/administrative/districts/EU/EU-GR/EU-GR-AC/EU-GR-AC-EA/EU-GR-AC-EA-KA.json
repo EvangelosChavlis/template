@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Kalyvia Thorikou",
+    "Description": "The main district, known for its traditional village charm and local markets.",
+    "Population": 9000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-EA-KA-1"
+  },
+  {
+    "Name": "Lagonisi",
+    "Description": "A coastal district with luxury residences, resorts, and beach areas.",
+    "Population": 8000,
+    "AreaKm2": 11.0,
+    "Code": "EU-GR-AC-EA-KA-2"
+  }
+]

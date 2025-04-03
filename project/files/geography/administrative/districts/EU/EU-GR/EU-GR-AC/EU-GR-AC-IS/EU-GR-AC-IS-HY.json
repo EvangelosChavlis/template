@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Hydra Town",
+    "Description": "The main town of Hydra, known for its beautiful stone houses, narrow alleys, and scenic harbor.",
+    "Population": 1500,
+    "AreaKm2": 5.0,
+    "Code": "EU-GR-AC-IS-HY-1"
+  },
+  {
+    "Name": "Kamini",
+    "Description": "A small village located just outside Hydra Town, known for its tranquil environment and proximity to the sea.",
+    "Population": 200,
+    "AreaKm2": 2.0,
+    "Code": "EU-GR-AC-IS-HY-2"
+  },
+  {
+    "Name": "Vlichos",
+    "Description": "A serene village with a few scattered houses and scenic views of the island's landscape.",
+    "Population": 300,
+    "AreaKm2": 4.0,
+    "Code": "EU-GR-AC-IS-HY-3"
+  }
+]

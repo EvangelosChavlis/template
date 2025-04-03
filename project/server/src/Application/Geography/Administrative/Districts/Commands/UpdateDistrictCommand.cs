@@ -99,7 +99,7 @@ public class UpdateDistrictHandler : IRequestHandler<UpdateDistrictCommand, Resp
                 .WithMessage("Concurrency conflict.")
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
-                .WithData("The terrain type has been modified by another user. Please try again.");
+                .WithData("The surface type has been modified by another user. Please try again.");
         }
 
         // Searching Item

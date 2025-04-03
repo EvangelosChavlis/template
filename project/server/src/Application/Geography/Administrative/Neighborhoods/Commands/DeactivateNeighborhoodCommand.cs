@@ -9,6 +9,7 @@ using server.src.Application.Geography.Administrative.Neighborhoods.Validators;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Common.Extensions;
 using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
+using server.src.Domain.Geography.Administrative.Stations.Models;
 using server.src.Domain.Geography.Natural.Locations.Models;
 using server.src.Persistence.Common.Interfaces;
 
@@ -111,19 +112,17 @@ public class DeactivateNeighborhoodHandler : IRequestHandler<DeactivateNeighborh
                 .WithData("Neighborhood is deactivated.");
         }
             
-        var locationsFilters = new Expression<Func<Location, bool>>[] { l =>l.NeighborhoodId == neighborhood.Id };
-        var locationsWithNeighborhood = await _commonRepository.AnyExistsAsync(locationsFilters, token);
+        var stationFilters = new Expression<Func<Station, bool>>[] { l =>l.NeighborhoodId == neighborhood.Id };
+        var stationWithNeighborhood = await _commonRepository.AnyExistsAsync(stationFilters, token);
         
-        if (locationsWithNeighborhood)
+        if (stationWithNeighborhood)
         {
-            var locationsCounter = await _commonRepository.GetCountAsync(locationsFilters, token);
-
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error deactivating neighborhood.")
                 .WithStatusCode((int)HttpStatusCode.InternalServerError)
                 .WithSuccess(false)
-                .WithData($"This neighborhood is used from {locationsCounter} and cannot be deactivated.");
+                .WithData($"This neighborhood is used and cannot be deactivated.");
         }
             
         // Validating, Saving Item

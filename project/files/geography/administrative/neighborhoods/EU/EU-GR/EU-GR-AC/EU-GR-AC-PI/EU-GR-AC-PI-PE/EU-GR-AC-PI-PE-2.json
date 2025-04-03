@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Industrial Park",
+    "Description": "An area with factories and manufacturing plants, serving as a hub for industrial work in the region.",
+    "Population": 10000,
+    "AreaKm2": 10.0,
+    "Zipcode": "18865",
+    "Code": "EU-GR-AC-PI-PE-2-IP"
+  },
+  {
+    "Name": "Residential Perama",
+    "Description": "A residential area offering housing to workers in the nearby industrial zone.",
+    "Population": 7000,
+    "AreaKm2": 4.0,
+    "Zipcode": "18866",
+    "Code": "EU-GR-AC-PI-PE-2-RP"
+  }
+]

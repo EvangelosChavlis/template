@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Kato Galatsi",
+        "Description": "A quiet residential neighborhood with a mix of apartments and green areas, offering a peaceful environment.",
+        "Population": 5000,
+        "AreaKm2": 0.5,
+        "Code": "EU-GR-AC-CA-GA-1-KG"
+    },
+    {
+        "Name": "Pallini",
+        "Description": "A family-friendly neighborhood with parks and schools, offering a suburban atmosphere while being close to the city center.",
+        "Population": 8000,
+        "AreaKm2": 0.6,
+        "Code": "EU-GR-AC-CA-GA-1-PL"
+    }
+]

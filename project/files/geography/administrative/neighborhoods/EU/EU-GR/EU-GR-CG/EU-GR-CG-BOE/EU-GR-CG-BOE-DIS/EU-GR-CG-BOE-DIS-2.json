@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Central Arachova",
+    "Description": "The main town center with cafes, shops, and a lively atmosphere.",
+    "Population": 2500,
+    "AreaKm2": 70.0,
+    "Zipcode": "32009",
+    "Code": "EU-GR-CG-BOE-DIS-2-CA"
+  },
+  {
+    "Name": "Livadi",
+    "Description": "A high-altitude area known for luxury chalets and ski lodges.",
+    "Population": 1000,
+    "AreaKm2": 50.0,
+    "Zipcode": "32010",
+    "Code": "EU-GR-CG-BOE-DIS-2-LI"
+  }
+]

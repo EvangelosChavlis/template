@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Nea Zoi",
+    "Description": "A newly developed neighborhood with residential housing and small businesses.",
+    "Population": 7000,
+    "AreaKm2": 6.0,
+    "Zipcode": "19302",
+    "Code": "EU-GR-AC-WEA-AS-2-NZ"
+  },
+  {
+    "Name": "Refinery Area",
+    "Description": "An industrial sector with oil refineries and large factories.",
+    "Population": 8000,
+    "AreaKm2": 6.0,
+    "Zipcode": "19303",
+    "Code": "EU-GR-AC-WEA-AS-2-RA"
+  }
+]

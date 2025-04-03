@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Vouliagmeni",
+    "Description": "A prestigious coastal area known for its luxurious homes, beaches, and high-end services.",
+    "Population": 30000,
+    "AreaKm2": 13.5,
+    "Code": "EU-GR-AC-SA-VVV-1"
+  },
+  {
+    "Name": "Voula",
+    "Description": "A vibrant area known for its beautiful beaches, shopping streets, and family-friendly environment.",
+    "Population": 30000,
+    "AreaKm2": 14.0,
+    "Code": "EU-GR-AC-SA-VVV-2"
+  },
+  {
+    "Name": "Vari",
+    "Description": "A peaceful area with a mix of residential zones and easy access to the beach, offering a more suburban lifestyle.",
+    "Population": 27000,
+    "AreaKm2": 13.4,
+    "Code": "EU-GR-AC-SA-VVV-3"
+  }
+]

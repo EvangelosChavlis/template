@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Platia Geraka",
+    "Description": "The central square, surrounded by cafes, restaurants, and shops.",
+    "Population": 5000,
+    "AreaKm2": 1.5,
+    "Zipcode": "15344",
+    "Code": "EU-GR-AC-EA-GE-1-PG"
+  },
+  {
+    "Name": "Nea Gerakas",
+    "Description": "A modern residential neighborhood with newly developed housing areas.",
+    "Population": 10000,
+    "AreaKm2": 2.5,
+    "Zipcode": "15345",
+    "Code": "EU-GR-AC-EA-GE-1-NG"
+  }
+]

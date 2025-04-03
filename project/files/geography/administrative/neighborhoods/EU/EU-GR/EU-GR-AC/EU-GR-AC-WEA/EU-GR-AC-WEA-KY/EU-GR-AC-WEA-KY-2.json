@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Forest Heights",
+    "Description": "An area with eco-friendly housing and nature reserves.",
+    "Population": 2000,
+    "AreaKm2": 6.0,
+    "Zipcode": "19212",
+    "Code": "EU-GR-AC-WEA-KY-2-FH"
+  },
+  {
+    "Name": "Lakeside Community",
+    "Description": "A small residential area near the lake, offering scenic views.",
+    "Population": 2000,
+    "AreaKm2": 7.0,
+    "Zipcode": "19213",
+    "Code": "EU-GR-AC-WEA-KY-2-LC"
+  }
+]

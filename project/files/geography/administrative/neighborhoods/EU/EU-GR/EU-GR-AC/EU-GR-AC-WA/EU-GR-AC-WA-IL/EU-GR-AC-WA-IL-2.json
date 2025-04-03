@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kato Ilion",
+        "Description": "A mainly residential neighborhood with local shops, schools, and parks.",
+        "Population": 6000,
+        "AreaKm2": 0.7,
+        "Zipcode": "13124",
+        "Code": "EU-GR-AC-WA-IL-2-KI"
+    },
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A quiet, family-oriented neighborhood with green spaces and local businesses.",
+        "Population": 5500,
+        "AreaKm2": 0.6,
+        "Zipcode": "13125",
+        "Code": "EU-GR-AC-WA-IL-2-AN"
+    },
+    {
+        "Name": "Nea Peristeri",
+        "Description": "A newly developed area, blending modern housing with schools and small businesses.",
+        "Population": 6000,
+        "AreaKm2": 0.7,
+        "Zipcode": "13126",
+        "Code": "EU-GR-AC-WA-IL-2-NP"
+    }
+]

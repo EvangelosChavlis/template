@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Artemida Center",
+    "Description": "The main hub of Artemida with commercial streets, restaurants, and local services.",
+    "Population": 6000,
+    "AreaKm2": 18.0,
+    "Zipcode": "19016",
+    "Code": "EU-GR-AC-EA-SA-2-AC"
+  },
+  {
+    "Name": "Vravrona",
+    "Description": "A historical neighborhood near the archaeological site of the Temple of Artemis.",
+    "Population": 3000,
+    "AreaKm2": 12.0,
+    "Zipcode": "19017",
+    "Code": "EU-GR-AC-EA-SA-2-VR"
+  },
+  {
+    "Name": "Loutsa Beach",
+    "Description": "A popular seaside area with summer residences, beach bars, and watersports activities.",
+    "Population": 4000,
+    "AreaKm2": 20.0,
+    "Zipcode": "19018",
+    "Code": "EU-GR-AC-EA-SA-2-LB"
+  }
+]

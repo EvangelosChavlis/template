@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Keratsini Center",
+    "Description": "The central area of Keratsini, which includes both residential and commercial zones.",
+    "Population": 60000,
+    "AreaKm2": 6.0,
+    "Code": "EU-GR-AC-PI-KD-1"
+  },
+  {
+    "Name": "Drapetsona",
+    "Description": "The central district of Drapetsona, traditionally known for its fishing port and maritime industry.",
+    "Population": 55000,
+    "AreaKm2": 6.0,
+    "Code": "EU-GR-AC-PI-KD-2"
+  }
+]

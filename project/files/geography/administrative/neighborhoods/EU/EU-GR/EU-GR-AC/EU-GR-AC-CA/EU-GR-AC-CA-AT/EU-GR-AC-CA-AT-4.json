@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Koukaki",
+        "Description": "A vibrant residential area known for its proximity to the Acropolis and its lively cafes, bars, and cultural spaces.",
+        "Population": 12000,
+        "AreaKm2": 1.0,
+        "Zipcode": "11741",
+        "Code": "EU-GR-AC-CA-AT-4-KO"
+    },
+    {
+        "Name": "Neos Kosmos",
+        "Description": "A residential neighborhood popular with young professionals, offering easy access to the city center and the beautiful Filopappou Hill.",
+        "Population": 15000,
+        "AreaKm2": 1.5,
+        "Zipcode": "11745",
+        "Code": "EU-GR-AC-CA-AT-4-NK"
+    },
+    {
+        "Name": "Pangrati",
+        "Description": "A charming residential area with a mix of old and modern buildings, featuring parks, museums, and a vibrant local community.",
+        "Population": 16000,
+        "AreaKm2": 1.3,
+        "Zipcode": "11634",
+        "Code": "EU-GR-AC-CA-AT-4-PA"
+    },
+    {
+        "Name": "Kallimarmaro",
+        "Description": "A neighborhood known for the Panathenaic Stadium (Kallimarmaro), the site of the first modern Olympic Games, and its surrounding green spaces.",
+        "Population": 8000,
+        "AreaKm2": 0.6,
+        "Zipcode": "11636",
+        "Code": "EU-GR-AC-CA-AT-4-KA"
+    },
+    {
+        "Name": "Exarchia",
+        "Description": "A historical and alternative neighborhood with a strong intellectual and political presence, filled with street art, cafes, and cultural venues.",
+        "Population": 20000,
+        "AreaKm2": 1.4,
+        "Zipcode": "10680",
+        "Code": "EU-GR-AC-CA-AT-4-EX"
+    }
+]

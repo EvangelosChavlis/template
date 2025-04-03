@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Orchomenos Town",
+    "Description": "The central town area, home to the ancient archaeological site and modern settlements.",
+    "Population": 8000,
+    "AreaKm2": 150.0,
+    "Code": "EU-GR-CG-BOE-ORC-1"
+  },
+  {
+    "Name": "Rural Orchomenos",
+    "Description": "The rural part of Orchomenos, with agricultural land and small villages.",
+    "Population": 3570,
+    "AreaKm2": 286.41,
+    "Code": "EU-GR-CG-BOE-ORC-2"
+  }
+]

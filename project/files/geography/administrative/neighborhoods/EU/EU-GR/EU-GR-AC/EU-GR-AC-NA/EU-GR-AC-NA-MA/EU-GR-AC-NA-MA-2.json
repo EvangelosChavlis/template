@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Penteli",
+    "Description": "A suburban area with plenty of green spaces, popular with families and retirees.",
+    "Population": 5000,
+    "AreaKm2": 3.0,
+    "Zipcode": "15124",
+    "Code": "EU-GR-AC-NA-MA-2-PE"
+  },
+  {
+    "Name": "Nea Filothei",
+    "Description": "A residential area offering a blend of traditional houses and modern amenities.",
+    "Population": 6000,
+    "AreaKm2": 2.5,
+    "Zipcode": "15122",
+    "Code": "EU-GR-AC-NA-MA-2-NF"
+  }
+]

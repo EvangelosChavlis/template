@@ -19,11 +19,12 @@ public static class UpdateTimezoneMapper
     public static void UpdateTimezoneMapping(this UpdateTimezoneDto dto, Timezone model)
     {
         model.Name = dto.Name;
+        model.Description = dto.Description;
+        model.Code = dto.Code;
         model.UtcOffset = dto.UtcOffset;
+        model.DstOffset = dto.DstOffset;
         model.SupportsDaylightSaving = dto.SupportsDaylightSaving;
         model.IsActive = model.IsActive;
-        model.Description = dto.Description;
-        model.DstOffset = dto.DstOffset;
         model.Version = Guid.NewGuid();
     }
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Alimos Beach Area",
+    "Description": "The coastal area with beautiful beaches, promenades, and cafes along the waterfront.",
+    "Population": 20000,
+    "AreaKm2": 3.0,
+    "Code": "EU-GR-AC-SA-AL-1"
+  },
+  {
+    "Name": "Alimos Residential Area",
+    "Description": "A quiet residential area with parks, local shops, and family-friendly streets.",
+    "Population": 20000,
+    "AreaKm2": 4.0,
+    "Code": "EU-GR-AC-SA-AL-2"
+  }
+]

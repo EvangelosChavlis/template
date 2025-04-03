@@ -9,6 +9,7 @@ using server.src.Persistence.Geography.Administrative.Municipalities;
 using server.src.Persistence.Geography.Administrative.Neighborhoods;
 using server.src.Persistence.Geography.Administrative.Regions;
 using server.src.Persistence.Geography.Administrative.States;
+using server.src.Persistence.Geography.Administrative.Stations;
 
 namespace server.src.Persistence.Geography.Administrative;
 
@@ -26,6 +27,7 @@ public static class SetupBuilder
         modelBuilder.ApplyConfiguration(new NeighborhoodConfiguration("Neighborhoods", _administrativeSchema));
         modelBuilder.ApplyConfiguration(new RegionConfiguration("Regions", _administrativeSchema));
         modelBuilder.ApplyConfiguration(new StateConfiguration("States", _administrativeSchema));
+        modelBuilder.ApplyConfiguration(new StationConfiguration("Stations", _administrativeSchema));
         #endregion
 
         #region Indexes
@@ -36,6 +38,7 @@ public static class SetupBuilder
         modelBuilder.ApplyConfiguration(new NeighborhoodIndexes());
         modelBuilder.ApplyConfiguration(new RegionIndexes());
         modelBuilder.ApplyConfiguration(new StateIndexes());
+        modelBuilder.ApplyConfiguration(new StationIndexes());
         #endregion
     }
 }

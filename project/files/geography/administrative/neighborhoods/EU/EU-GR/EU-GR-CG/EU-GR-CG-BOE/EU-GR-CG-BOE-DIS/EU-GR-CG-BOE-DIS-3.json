@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Antikyra Center",
+    "Description": "The main settlement, featuring a harbor, seafood restaurants, and local markets.",
+    "Population": 1200,
+    "AreaKm2": 45.0,
+    "Zipcode": "32011",
+    "Code": "EU-GR-CG-BOE-DIS-3-AC"
+  },
+  {
+    "Name": "Paralia Antikyras",
+    "Description": "A seaside area with beaches and summer resorts.",
+    "Population": 500,
+    "AreaKm2": 27.7,
+    "Zipcode": "32012",
+    "Code": "EU-GR-CG-BOE-DIS-3-PA"
+  }
+]

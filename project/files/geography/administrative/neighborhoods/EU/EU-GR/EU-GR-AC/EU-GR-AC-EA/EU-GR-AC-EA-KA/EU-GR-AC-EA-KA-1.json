@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kalyvia Center",
+    "Description": "The heart of Kalyvia, featuring the central square, shops, and cafes.",
+    "Population": 5000,
+    "AreaKm2": 4.0,
+    "Zipcode": "19010",
+    "Code": "EU-GR-AC-EA-KA-1-KC"
+  },
+  {
+    "Name": "Agios Georgios",
+    "Description": "A residential area with traditional homes and scenic landscapes.",
+    "Population": 4000,
+    "AreaKm2": 6.0,
+    "Zipcode": "19011",
+    "Code": "EU-GR-AC-EA-KA-1-AG"
+  }
+]

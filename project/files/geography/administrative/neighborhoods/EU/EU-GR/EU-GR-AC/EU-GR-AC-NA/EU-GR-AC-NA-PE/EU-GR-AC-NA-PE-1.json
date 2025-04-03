@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Pefki Park",
+    "Description": "A neighborhood surrounding Pefki Park, known for its green spaces and family-friendly environment.",
+    "Population": 5000,
+    "AreaKm2": 1.0,
+    "Zipcode": "14562",
+    "Code": "EU-GR-AC-NA-PE-1-PP"
+  },
+  {
+    "Name": "Pefki Square",
+    "Description": "A busy area with local cafes, shops, and residential buildings.",
+    "Population": 7000,
+    "AreaKm2": 1.0,
+    "Zipcode": "14564",
+    "Code": "EU-GR-AC-NA-PE-1-PS"
+  }
+]

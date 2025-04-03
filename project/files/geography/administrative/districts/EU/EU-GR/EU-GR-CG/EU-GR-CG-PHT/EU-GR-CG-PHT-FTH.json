@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Fthiotida City",
+    "Description": "The main urban area known for its rich history and proximity to important archaeological sites.",
+    "Population": 8000,
+    "AreaKm2": 50.0,
+    "Code": "EU-GR-CG-PHT-FTH-1"
+  },
+  {
+    "Name": "Rural Fthiotida",
+    "Description": "The surrounding rural areas known for agricultural activities and scenic landscapes.",
+    "Population": 10000,
+    "AreaKm2": 170.0,
+    "Code": "EU-GR-CG-PHT-FTH-2"
+  }
+]

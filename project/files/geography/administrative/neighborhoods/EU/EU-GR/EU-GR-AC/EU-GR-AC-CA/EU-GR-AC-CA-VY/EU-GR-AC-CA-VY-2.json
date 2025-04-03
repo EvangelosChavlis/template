@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Frygia",
+        "Description": "A peaceful neighborhood with green spaces, ideal for families and young professionals.",
+        "Population": 8000,
+        "AreaKm2": 0.30,
+        "Code": "EU-GR-AC-CA-VY-2-FR"
+    },
+    {
+        "Name": "Nea Elvetia",
+        "Description": "A popular residential area with a blend of modern and classic architecture, offering a calm atmosphere.",
+        "Population": 6000,
+        "AreaKm2": 0.20,
+        "Code": "EU-GR-AC-CA-VY-2-NE"
+    }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Chalandri Park",
+    "Description": "A peaceful neighborhood near large parks and family-oriented spaces.",
+    "Population": 25000,
+    "AreaKm2": 3.0,
+    "Zipcode": "15233",
+    "Code": "EU-GR-AC-NA-CH-2-CP"
+  },
+  {
+    "Name": "Chalandri Hills",
+    "Description": "A residential area known for its larger homes and views of the surrounding area.",
+    "Population": 25000,
+    "AreaKm2": 3.6,
+    "Zipcode": "15234",
+    "Code": "EU-GR-AC-NA-CH-2-CHH"
+  }
+]

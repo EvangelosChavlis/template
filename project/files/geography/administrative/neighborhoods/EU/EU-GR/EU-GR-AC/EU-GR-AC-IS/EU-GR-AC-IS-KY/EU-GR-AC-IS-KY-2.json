@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Beachfront",
+    "Description": "The main area along the beach, filled with restaurants, shops, and tourist accommodations.",
+    "Population": 500,
+    "AreaKm2": 5.0,
+    "Zipcode": "80102",
+    "Code": "EU-GR-AC-IS-KY-2-BF"
+  },
+  {
+    "Name": "Residential Area",
+    "Description": "A quieter area behind the beach with local homes and vacation rentals.",
+    "Population": 500,
+    "AreaKm2": 10.0,
+    "Zipcode": "80103",
+    "Code": "EU-GR-AC-IS-KY-2-RA"
+  }
+]

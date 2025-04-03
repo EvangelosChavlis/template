@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Perama Center",
+    "Description": "The central area of Perama, home to industrial facilities and local businesses.",
+    "Population": 12000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-PI-PE-1"
+  },
+  {
+    "Name": "Industrial Zone",
+    "Description": "An area focused on the industrial and manufacturing sectors, located to the east of Perama center.",
+    "Population": 17000,
+    "AreaKm2": 14.0,
+    "Code": "EU-GR-AC-PI-PE-2"
+  }
+]

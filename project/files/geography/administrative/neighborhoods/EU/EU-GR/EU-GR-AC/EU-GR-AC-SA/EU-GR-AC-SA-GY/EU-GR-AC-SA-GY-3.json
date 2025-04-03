@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Glyfada South Residential",
+    "Description": "A peaceful residential neighborhood with a mix of houses and apartments.",
+    "Population": 12000,
+    "AreaKm2": 4.0,
+    "Zipcode": "16685",
+    "Code": "EU-GR-AC-SA-GY-3-GSR"
+  },
+  {
+    "Name": "Kifisia-Limni Area",
+    "Description": "A suburban area with green spaces, quiet streets, and parks.",
+    "Population": 8000,
+    "AreaKm2": 3.4,
+    "Zipcode": "16686",
+    "Code": "EU-GR-AC-SA-GY-3-KLA"
+  }
+]

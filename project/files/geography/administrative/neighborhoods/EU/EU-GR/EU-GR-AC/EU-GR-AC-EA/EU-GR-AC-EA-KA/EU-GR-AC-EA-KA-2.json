@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Lagonisi Center",
+    "Description": "The main hub of Lagonisi with commercial streets, restaurants, and beachfront properties.",
+    "Population": 5000,
+    "AreaKm2": 5.0,
+    "Zipcode": "19012",
+    "Code": "EU-GR-AC-EA-KA-2-LC"
+  },
+  {
+    "Name": "Saronida Border",
+    "Description": "An upscale neighborhood near the town of Saronida, offering stunning sea views.",
+    "Population": 3000,
+    "AreaKm2": 6.0,
+    "Zipcode": "19013",
+    "Code": "EU-GR-AC-EA-KA-2-SB"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Mehano Village",
+    "Description": "A small, quiet village with traditional architecture and a rural charm.",
+    "Population": 1500,
+    "AreaKm2": 10.0,
+    "Zipcode": "18022",
+    "Code": "EU-GR-AC-IS-TRM-2-MV"
+  },
+  {
+    "Name": "Hillside Area",
+    "Description": "An area located on the slopes with panoramic views of the nearby coastline and villages.",
+    "Population": 1000,
+    "AreaKm2": 15.0,
+    "Zipcode": "18023",
+    "Code": "EU-GR-AC-IS-TRM-2-HA"
+  }
+]

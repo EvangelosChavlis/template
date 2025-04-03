@@ -29,7 +29,7 @@ public class RegionConfiguration : IEntityTypeConfiguration<Region>
             .HasMaxLength(RegionLength.NameLength);
 
         builder.Property(r => r.Description)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(RegionLength.DescriptionLength);
 
         builder.Property(r => r.AreaKm2)

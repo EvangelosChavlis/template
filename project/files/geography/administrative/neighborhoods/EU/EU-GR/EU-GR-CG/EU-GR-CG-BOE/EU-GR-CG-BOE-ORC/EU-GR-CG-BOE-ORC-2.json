@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Agia Marina",
+    "Description": "A small village with a focus on agriculture and local produce.",
+    "Population": 1500,
+    "AreaKm2": 100.0,
+    "Zipcode": "32102",
+    "Code": "EU-GR-CG-BOE-ORC-2-AM"
+  },
+  {
+    "Name": "Nea Kallithea",
+    "Description": "A more recently developed village with a growing community.",
+    "Population": 2070,
+    "AreaKm2": 186.41,
+    "Zipcode": "32103",
+    "Code": "EU-GR-CG-BOE-ORC-2-NK"
+  }
+]

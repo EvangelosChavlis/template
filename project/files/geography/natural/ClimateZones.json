@@ -1,0 +1,128 @@
+[
+  {
+    "Name": "Tropical Rainforest",
+    "Description": "Hot and humid year-round with heavy rainfall.",
+    "Code": "Af",
+    "AvgTemperatureC": 27.0,
+    "AvgPrecipitationMm": 2500
+  },
+  {
+    "Name": "Tropical Monsoon",
+    "Description": "Heavy seasonal rainfall with a short dry season.",
+    "Code": "Am",
+    "AvgTemperatureC": 26.5,
+    "AvgPrecipitationMm": 2000
+  },
+  {
+    "Name": "Mediterranean",
+    "Description": "Hot, dry summers and mild, wet winters.",
+    "Code": "Csa",
+    "AvgTemperatureC": 18.0,
+    "AvgPrecipitationMm": 700
+  },
+  {
+    "Name": "Mediterranean Warm-Summer",
+    "Description": "Warm summer with mild winters and dry summer conditions.",
+    "Code": "Csb",
+    "AvgTemperatureC": 16.0,
+    "AvgPrecipitationMm": 700
+  },
+  {
+    "Name": "Humid Subtropical",
+    "Description": "Hot summers and mild winters with year-round precipitation.",
+    "Code": "Cfa",
+    "AvgTemperatureC": 21.0,
+    "AvgPrecipitationMm": 1000
+  },
+  {
+    "Name": "Oceanic",
+    "Description": "Mild temperatures year-round with regular rainfall.",
+    "Code": "Cfb",
+    "AvgTemperatureC": 15.0,
+    "AvgPrecipitationMm": 1200
+  },
+  {
+    "Name": "Oceanic Warm-Summer",
+    "Description": "Mild summers and winters with relatively high precipitation.",
+    "Code": "Cfc",
+    "AvgTemperatureC": 13.0,
+    "AvgPrecipitationMm": 1000
+  },
+  {
+    "Name": "Humid Continental",
+    "Description": "Warm summers and cold winters with moderate precipitation.",
+    "Code": "Dfa",
+    "AvgTemperatureC": 10.0,
+    "AvgPrecipitationMm": 800
+  },
+  {
+    "Name": "Humid Continental Warm-Summer",
+    "Description": "Hot summers with very cold winters and moderate precipitation.",
+    "Code": "Dfb",
+    "AvgTemperatureC": 7.0,
+    "AvgPrecipitationMm": 800
+  },
+  {
+    "Name": "Subarctic",
+    "Description": "Short, cool summers and long, harsh winters.",
+    "Code": "Dfc",
+    "AvgTemperatureC": -5.0,
+    "AvgPrecipitationMm": 500
+  },
+  {
+    "Name": "Subarctic Cold-Summer",
+    "Description": "Long, extremely cold winters with short, cool summers.",
+    "Code": "Dfd",
+    "AvgTemperatureC": -10.0,
+    "AvgPrecipitationMm": 400
+  },
+  {
+    "Name": "Tundra",
+    "Description": "Cold year-round with very short summers and little precipitation.",
+    "Code": "ET",
+    "AvgTemperatureC": -10.0,
+    "AvgPrecipitationMm": 300
+  },
+  {
+    "Name": "Ice Cap",
+    "Description": "Permanently frozen with extremely cold temperatures.",
+    "Code": "EF",
+    "AvgTemperatureC": -30.0,
+    "AvgPrecipitationMm": 100
+  },
+  {
+    "Name": "Desert",
+    "Description": "Very hot, dry areas, usually with very little precipitation.",
+    "Code": "BWh",
+    "AvgTemperatureC": 30.0,
+    "AvgPrecipitationMm": 250
+  },
+  {
+    "Name": "Steppe",
+    "Description": "Dry areas with moderate precipitation, often near deserts.",
+    "Code": "BSh",
+    "AvgTemperatureC": 22.0,
+    "AvgPrecipitationMm": 500
+  },
+  {
+    "Name": "Savanna",
+    "Description": "Tropical regions with distinct wet and dry seasons.",
+    "Code": "Aw",
+    "AvgTemperatureC": 25.0,
+    "AvgPrecipitationMm": 1200
+  },
+  {
+    "Name": "Tropical Wet and Dry",
+    "Description": "Hot climate with wet and dry periods.",
+    "Code": "As",
+    "AvgTemperatureC": 27.0,
+    "AvgPrecipitationMm": 1500
+  },
+  {
+    "Name": "N/A",
+    "Description": "N/A",
+    "Code": "N_A",
+    "AvgTemperatureC": 0,
+    "AvgPrecipitationMm": 0
+  }
+]

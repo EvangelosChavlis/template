@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Nea Filadelfeia Center",
+        "Description": "The main commercial hub, home to shopping streets, cafes, and residential buildings.",
+        "Population": 15000,
+        "AreaKm2": 1.5,
+        "Zipcode": "14341",
+        "Code": "EU-GR-AC-CA-NF-1-FC"
+    },
+    {
+        "Name": "Pefkakia",
+        "Description": "A residential neighborhood known for its parks, tree-lined streets, and family-friendly atmosphere.",
+        "Population": 10000,
+        "AreaKm2": 1.0,
+        "Zipcode": "14342",
+        "Code": "EU-GR-AC-CA-NF-1-PE"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Kallithea",
+        "Description": "A lively neighborhood with a mix of residential homes, shops, and eateries, providing a vibrant atmosphere.",
+        "Population": 6000,
+        "AreaKm2": 0.7,
+        "Zipcode": "12243",
+        "Code": "EU-GR-AC-WA-AI-1-KA"
+    },
+    {
+        "Name": "Aigaleo Center",
+        "Description": "The commercial heart of Aigaleo, filled with retail shops, cafes, and busy streets.",
+        "Population": 7000,
+        "AreaKm2": 0.8,
+        "Zipcode": "12244",
+        "Code": "EU-GR-AC-WA-AI-1-AC"
+    },
+    {
+        "Name": "Agios Ioannis",
+        "Description": "A quiet, residential area known for its local community, small parks, and family-friendly atmosphere.",
+        "Population": 5000,
+        "AreaKm2": 0.6,
+        "Zipcode": "12245",
+        "Code": "EU-GR-AC-WA-AI-1-AI"
+    }
+]

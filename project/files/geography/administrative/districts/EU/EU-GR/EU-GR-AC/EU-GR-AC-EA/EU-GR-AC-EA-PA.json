@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Pallini Center",
+    "Description": "The main urban area of Pallini, known for its commercial hubs, residential neighborhoods, and proximity to local amenities.",
+    "Population": 20000,
+    "AreaKm2": 15.0,
+    "Code": "EU-GR-AC-EA-PA-1"
+  },
+  {
+    "Name": "Koropi",
+    "Description": "A suburban area located to the south, known for its quiet residential neighborhoods and its proximity to the coast.",
+    "Population": 25000,
+    "AreaKm2": 20.0,
+    "Code": "EU-GR-AC-EA-PA-2"
+  }
+]

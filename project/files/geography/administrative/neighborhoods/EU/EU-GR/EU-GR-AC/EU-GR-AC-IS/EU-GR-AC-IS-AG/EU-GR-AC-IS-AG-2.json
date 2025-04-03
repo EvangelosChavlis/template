@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Beachfront",
+    "Description": "The main area along the beach, lined with restaurants, bars, and water activities.",
+    "Population": 500,
+    "AreaKm2": 2.0,
+    "Zipcode": "18012",
+    "Code": "EU-GR-AC-IS-AG-2-BF"
+  },
+  {
+    "Name": "Residential Area",
+    "Description": "A quiet, residential area located behind the beach, with vacation homes and villas.",
+    "Population": 300,
+    "AreaKm2": 2.0,
+    "Zipcode": "18013",
+    "Code": "EU-GR-AC-IS-AG-2-RA"
+  }
+]

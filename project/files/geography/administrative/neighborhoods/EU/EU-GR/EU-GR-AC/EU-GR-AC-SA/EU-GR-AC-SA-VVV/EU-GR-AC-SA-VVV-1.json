@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Vouliagmeni Beach",
+    "Description": "A popular beach area with upscale restaurants and seaside resorts.",
+    "Population": 8000,
+    "AreaKm2": 3.0,
+    "Zipcode": "16671",
+    "Code": "EU-GR-AC-SA-VVV-1-VB"
+  },
+  {
+    "Name": "Lake Vouliagmeni",
+    "Description": "A scenic area with a natural lake, offering relaxation spots and local cafés.",
+    "Population": 5000,
+    "AreaKm2": 1.5,
+    "Zipcode": "16672",
+    "Code": "EU-GR-AC-SA-VVV-1-LV"
+  },
+  {
+    "Name": "Vouliagmeni Hills",
+    "Description": "A residential area with panoramic views and luxurious homes.",
+    "Population": 7000,
+    "AreaKm2": 1.5,
+    "Zipcode": "16673",
+    "Code": "EU-GR-AC-SA-VVV-1-VH"
+  }
+]

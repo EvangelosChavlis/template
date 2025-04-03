@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Piraeus East Residential",
+    "Description": "A suburban area with a focus on family homes and green spaces.",
+    "Population": 25000,
+    "AreaKm2": 4.0,
+    "Zipcode": "18542",
+    "Code": "EU-GR-AC-PI-PI-3-PER"
+  },
+  {
+    "Name": "Renti",
+    "Description": "An area known for its residential communities and proximity to Piraeus' industrial zones.",
+    "Population": 20000,
+    "AreaKm2": 2.5,
+    "Zipcode": "18543",
+    "Code": "EU-GR-AC-PI-PI-3-RE"
+  }
+]

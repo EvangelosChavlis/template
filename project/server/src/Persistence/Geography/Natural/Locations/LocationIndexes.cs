@@ -13,7 +13,12 @@ public class LocationIndexes : IEntityTypeConfiguration<Location>
     {
         builder.HasIndex(l => l.Id)
             .IsUnique()
-            .HasDatabaseName($"IX_{nameof(Location)}_{nameof(Location.Id)}");
+            .HasDatabaseName(@$"IX_
+                {nameof(Location)}_
+                {nameof(Location.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
 
         builder.HasIndex(l 
             => new { 
@@ -21,6 +26,7 @@ public class LocationIndexes : IEntityTypeConfiguration<Location>
                 l.Longitude,
                 l.Latitude,
                 l.Altitude,
+                l.Depth,
                 l.IsActive
             })
             .IsUnique()
@@ -30,6 +36,7 @@ public class LocationIndexes : IEntityTypeConfiguration<Location>
                 {nameof(Location.Longitude)}_
                 {nameof(Location.Latitude)}_
                 {nameof(Location.Altitude)}_
+                {nameof(Location.Depth)}_
                 {nameof(Location.IsActive)}"
             .Replace("\r\n", "")
             .Replace(" ", "")

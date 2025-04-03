@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Kifisia Center",
+    "Description": "The central area of Kifisia, known for its upscale shopping, cafes, and cultural spaces.",
+    "Population": 20000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-NA-KI-1"
+  },
+  {
+    "Name": "Northern Kifisia",
+    "Description": "A quieter, residential area with large villas and beautiful gardens, ideal for families.",
+    "Population": 15000,
+    "AreaKm2": 12.0,
+    "Code": "EU-GR-AC-NA-KI-2"
+  },
+  {
+    "Name": "Southern Kifisia",
+    "Description": "A more suburban part of Kifisia, with easy access to major highways and commercial areas.",
+    "Population": 10000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-NA-KI-3"
+  }
+]

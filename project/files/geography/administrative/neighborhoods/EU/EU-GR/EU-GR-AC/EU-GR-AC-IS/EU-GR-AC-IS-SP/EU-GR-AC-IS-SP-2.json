@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Church Area",
+    "Description": "A neighborhood around the Church of Agios Mamas, known for its peaceful environment.",
+    "Population": 500,
+    "AreaKm2": 2.0,
+    "Zipcode": "18052",
+    "Code": "EU-GR-AC-IS-SP-2-CA"
+  },
+  {
+    "Name": "Residential Zone",
+    "Description": "A quiet area with residential homes and local amenities.",
+    "Population": 500,
+    "AreaKm2": 3.0,
+    "Zipcode": "18053",
+    "Code": "EU-GR-AC-IS-SP-2-RZ"
+  }
+]

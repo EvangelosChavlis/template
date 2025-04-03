@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "The central district of Kallithea, known for its commercial hubs, shopping streets, and proximity to transportation.",
+        "Population": 25000,
+        "AreaKm2": 1.5,
+        "Code": "EU-GR-AC-CA-KA-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A more residential district with parks, schools, and a strong community atmosphere.",
+        "Population": 20000,
+        "AreaKm2": 1.2,
+        "Code": "EU-GR-AC-CA-KA-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A mixed area with both residential and commercial spaces, close to local amenities and cultural sites.",
+        "Population": 30000,
+        "AreaKm2": 1.7,
+        "Code": "EU-GR-AC-CA-KA-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A quieter area known for its residential housing, green spaces, and proximity to the sea.",
+        "Population": 20000,
+        "AreaKm2": 1.0,
+        "Code": "EU-GR-AC-CA-KA-4"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Magoula",
+        "Description": "A suburban neighborhood with a mix of residential homes and small businesses.",
+        "Population": 5000,
+        "AreaKm2": 3.5,
+        "Zipcode": "19202",
+        "Code": "EU-GR-AC-WEA-EF-2-MA"
+    },
+    {
+        "Name": "Thriasio",
+        "Description": "An area known for its industrial presence and logistics hubs.",
+        "Population": 3000,
+        "AreaKm2": 2.5,
+        "Zipcode": "19203",
+        "Code": "EU-GR-AC-WEA-EF-2-TH"
+    }
+]

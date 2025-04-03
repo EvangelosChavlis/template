@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Central Stylida",
+    "Description": "The town center with shopping areas, restaurants, and local businesses.",
+    "Population": 5000,
+    "AreaKm2": 15.0,
+    "Zipcode": "35200",
+    "Code": "EU-GR-CG-PHT-STY-1-CS"
+  },
+  {
+    "Name": "Stylida Beach",
+    "Description": "A coastal neighborhood known for its beaches and leisure activities.",
+    "Population": 3000,
+    "AreaKm2": 10.0,
+    "Zipcode": "35201",
+    "Code": "EU-GR-CG-PHT-STY-1-SB"
+  },
+  {
+    "Name": "Stylida Port",
+    "Description": "A maritime area with a port offering access to nearby islands and fishing activities.",
+    "Population": 2000,
+    "AreaKm2": 5.0,
+    "Zipcode": "35202",
+    "Code": "EU-GR-CG-PHT-STY-1-SP"
+  }
+]

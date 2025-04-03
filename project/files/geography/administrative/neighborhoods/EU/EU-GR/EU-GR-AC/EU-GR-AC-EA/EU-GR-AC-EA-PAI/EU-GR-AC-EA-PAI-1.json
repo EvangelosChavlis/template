@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Paiania Old Town",
+        "Description": "The historical core of Paiania, featuring traditional houses, small squares, and local tavernas.",
+        "Population": 5000,
+        "AreaKm2": 5.0,
+        "Zipcode": "19002",
+        "Code": "EU-GR-AC-EA-PAI-1-PO"
+    },
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A residential neighborhood with family-friendly parks, schools, and local amenities.",
+        "Population": 4000,
+        "AreaKm2": 4.0,
+        "Zipcode": "19003",
+        "Code": "EU-GR-AC-EA-PAI-1-AG"
+    }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Alimos District",
+    "Description": "A residential zone known for its family-friendly environment, local shops, and parks.",
+    "Population": 12000,
+    "AreaKm2": 2.0,
+    "Zipcode": "17564",
+    "Code": "EU-GR-AC-SA-PF-2-AL"
+  },
+  {
+    "Name": "Kalamaki",
+    "Description": "A well-established residential neighborhood with schools, green spaces, and local amenities.",
+    "Population": 12000,
+    "AreaKm2": 1.5,
+    "Zipcode": "17565",
+    "Code": "EU-GR-AC-SA-PF-2-KA"
+  },
+  {
+    "Name": "Palaio Faliro Center",
+    "Description": "The heart of Palaio Faliro with shopping streets, cafes, and easy access to public transportation.",
+    "Population": 6000,
+    "AreaKm2": 1.0,
+    "Zipcode": "17566",
+    "Code": "EU-GR-AC-SA-PF-2-PFC"
+  }
+]

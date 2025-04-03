@@ -3,7 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 // source
 using server.src.Application.Geography.Natural.ClimateZones;
 using server.src.Application.Geography.Natural.Locations;
-using server.src.Application.Geography.Natural.TerrainTypes;
+using server.src.Application.Geography.Natural.NaturalFeatures;
+using server.src.Application.Geography.Natural.SurfaceTypes;
 using server.src.Application.Geography.Natural.Timezones;
 
 namespace server.src.Application.Geography.Natural;
@@ -14,8 +15,9 @@ public static class DI
     {
         services.RegisterClimateZones();
         services.RegisterLocations();
+        services.RegisterNaturalFeatures();
+        services.RegisterSurfaceTypes();
         services.RegisterTimezones();
-        services.RegisterTerrainTypes();
 
         return services;
     }

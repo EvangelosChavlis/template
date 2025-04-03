@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Central Zografou",
+        "Description": "The heart of Zografou, known for its vibrant student population, cafes, and proximity to the University of Athens.",
+        "Population": 35000,
+        "AreaKm2": 2.0,
+        "Code": "EU-GR-AC-CA-ZO-1"
+    },
+    {
+        "Name": "Northern Zografou",
+        "Description": "A quieter and more residential area, known for its green spaces and family-oriented atmosphere.",
+        "Population": 20000,
+        "AreaKm2": 1.5,
+        "Code": "EU-GR-AC-CA-ZO-2"
+    }
+]

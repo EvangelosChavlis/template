@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Dionysou",
+    "Description": "A neighborhood known for its green areas and family-friendly environment.",
+    "Population": 5000,
+    "AreaKm2": 1.5,
+    "Zipcode": "15354",
+    "Code": "EU-GR-AC-EA-GE-3-DI"
+  },
+  {
+    "Name": "Kato Gerakas",
+    "Description": "A suburban area with schools and playgrounds, ideal for families.",
+    "Population": 5000,
+    "AreaKm2": 1.5,
+    "Zipcode": "15355",
+    "Code": "EU-GR-AC-EA-GE-3-KG"
+  }
+]

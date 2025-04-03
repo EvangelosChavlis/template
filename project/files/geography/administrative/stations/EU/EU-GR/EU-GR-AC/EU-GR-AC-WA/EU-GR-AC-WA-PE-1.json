@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Agios Antonios Station",
+    "Description": "Station serving the Agios Antonios neighborhood, central Peristeri.",
+    "Code": "EU-GR-AC-WA-PE-1-AA-STA",
+    "Latitude": 38.01,
+    "Longitude": 23.69,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-1-AA"
+  },
+  {
+    "Name": "Agios Nikolaos Station",
+    "Description": "Station serving the Agios Nikolaos neighborhood, residential Peristeri.",
+    "Code": "EU-GR-AC-WA-PE-1-AN-STA",
+    "Latitude": 38.02,
+    "Longitude": 23.68,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-1-AN"
+  },
+  {
+    "Name": "Peristeri Center Station",
+    "Description": "Main station serving the commercial center of Peristeri.",
+    "Code": "EU-GR-AC-WA-PE-1-PC-STA",
+    "Latitude": 38.03,
+    "Longitude": 23.67,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-1-PC"
+  },
+  {
+    "Name": "Kokkinia Station",
+    "Description": "Station serving the Kokkinia neighborhood, a vibrant mixed-use area.",
+    "Code": "EU-GR-AC-WA-PE-1-KO-STA",
+    "Latitude": 38.04,
+    "Longitude": 23.66,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-1-KO"
+  },
+  {
+    "Name": "Stavros Station",
+    "Description": "Station serving the Stavros neighborhood, residential and peaceful.",
+    "Code": "EU-GR-AC-WA-PE-1-SS-STA",
+    "Latitude": 38.05,
+    "Longitude": 23.65,
+    "NeighborhoodCode": "EU-GR-AC-WA-PE-1-SS"
+  }
+]

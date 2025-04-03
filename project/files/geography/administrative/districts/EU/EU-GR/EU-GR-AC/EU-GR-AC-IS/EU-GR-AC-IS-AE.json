@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Aegina Town",
+    "Description": "The main town of Aegina, known for its historic sites, port, and vibrant local life.",
+    "Population": 7000,
+    "AreaKm2": 3.5,
+    "Code": "EU-GR-AC-IS-AE-1"
+  },
+  {
+    "Name": "Agia Marina",
+    "Description": "A popular seaside area known for its beach resorts, nightlife, and relaxed atmosphere.",
+    "Population": 4000,
+    "AreaKm2": 4.0,
+    "Code": "EU-GR-AC-IS-AE-2"
+  },
+  {
+    "Name": "Perdika",
+    "Description": "A small, picturesque village known for its serene beauty and fish taverns by the sea.",
+    "Population": 2000,
+    "AreaKm2": 2.5,
+    "Code": "EU-GR-AC-IS-AE-3"
+  }
+]

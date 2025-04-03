@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Port Area",
+        "Description": "The busy harbor area with shops, cafes, and maritime activities.",
+        "Population": 8000,
+        "AreaKm2": 8.0,
+        "Zipcode": "18900",
+        "Code": "EU-GR-AC-IS-SA-1-PA"
+    },
+    {
+        "Name": "Historical Center",
+        "Description": "The town's center featuring ancient ruins, museums, and neoclassical architecture.",
+        "Population": 7000,
+        "AreaKm2": 12.0,
+        "Zipcode": "18901",
+        "Code": "EU-GR-AC-IS-SA-1-HC"
+    }
+]

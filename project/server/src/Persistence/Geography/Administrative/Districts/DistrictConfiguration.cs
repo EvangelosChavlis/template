@@ -29,7 +29,7 @@ public class DistrictConfiguration : IEntityTypeConfiguration<District>
             .HasMaxLength(DistrictLength.NameLength);
 
         builder.Property(d => d.Description)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(DistrictLength.DescriptionLength);
 
         builder.Property(d => d.Population)

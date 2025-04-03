@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Chalandri Center",
+    "Description": "The central area of Chalandri, home to bustling shops, cafes, and restaurants.",
+    "Population": 35000,
+    "AreaKm2": 4.0,
+    "Code": "EU-GR-AC-NA-CH-1"
+  },
+  {
+    "Name": "Northern Chalandri",
+    "Description": "A quieter suburban area with residential properties and some local parks.",
+    "Population": 50000,
+    "AreaKm2": 6.6,
+    "Code": "EU-GR-AC-NA-CH-2"
+  }
+]

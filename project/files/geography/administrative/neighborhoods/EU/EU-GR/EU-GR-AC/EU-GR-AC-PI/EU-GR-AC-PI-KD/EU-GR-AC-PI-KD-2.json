@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Drapetsona Port",
+    "Description": "Drapetsona's main port area, focused on shipping and industrial activities.",
+    "Population": 30000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18757",
+    "Code": "EU-GR-AC-PI-KD-2-DP"
+  },
+  {
+    "Name": "Drapetsona Residential Area",
+    "Description": "A residential area with a mix of older homes and new developments.",
+    "Population": 25000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18758",
+    "Code": "EU-GR-AC-PI-KD-2-DRA"
+  }
+]

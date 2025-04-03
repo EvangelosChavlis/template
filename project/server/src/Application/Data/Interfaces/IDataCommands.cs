@@ -15,6 +15,20 @@ public interface IDataCommands
     /// <returns>A task that represents the asynchronous operation. The task result contains a CommandResponse with a status message.</returns>
     Task<Response<string>> SeedDataAsync(CancellationToken token = default);
 
+    Task<Response<string>> SeedTimezonesAsync(string basePath, 
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedClimateZonesAsync(string basePath, 
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedSurfaceTypeAsync(string basePath, 
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedNaturalFeatureAsync(string basePath, 
+        CancellationToken token = default);
+
+    Task<Response<string>> SeedLocationsAsync(CancellationToken token = default);
+
     Task<Response<string>> SeedContinentsAsync(string basePath, 
         CancellationToken token = default);
 

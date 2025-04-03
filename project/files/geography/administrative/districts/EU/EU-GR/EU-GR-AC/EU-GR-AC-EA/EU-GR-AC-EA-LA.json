@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Lavrio",
+    "Description": "The main district, known for its port, historical mines, and maritime economy.",
+    "Population": 12000,
+    "AreaKm2": 80.0,
+    "Code": "EU-GR-AC-EA-LA-1"
+  },
+  {
+    "Name": "Keratea",
+    "Description": "A district with a rural character, known for its agricultural lands and traditional charm.",
+    "Population": 8000,
+    "AreaKm2": 131.0,
+    "Code": "EU-GR-AC-EA-LA-2"
+  }
+]

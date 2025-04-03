@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Korydallos Center",
+    "Description": "The central area of Korydallos, with a mix of residential and commercial developments.",
+    "Population": 70000,
+    "AreaKm2": 4.5,
+    "Code": "EU-GR-AC-PI-KO-1"
+  },
+  {
+    "Name": "Korydallos South",
+    "Description": "A district of Korydallos known for its quieter residential areas and proximity to green spaces.",
+    "Population": 60000,
+    "AreaKm2": 5.6,
+    "Code": "EU-GR-AC-PI-KO-2"
+  }
+]

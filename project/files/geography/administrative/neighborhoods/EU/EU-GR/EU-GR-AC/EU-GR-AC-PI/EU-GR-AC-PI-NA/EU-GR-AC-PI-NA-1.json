@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Nikaias Port",
+    "Description": "A port area contributing to the local economy with maritime and industrial activities.",
+    "Population": 35000,
+    "AreaKm2": 2.0,
+    "Zipcode": "18450",
+    "Code": "EU-GR-AC-PI-NA-1-NP"
+  },
+  {
+    "Name": "Nikaias Commercial District",
+    "Description": "A busy area with retail stores, businesses, and local services.",
+    "Population": 35000,
+    "AreaKm2": 1.5,
+    "Zipcode": "18451",
+    "Code": "EU-GR-AC-PI-NA-1-NCD"
+  }
+]

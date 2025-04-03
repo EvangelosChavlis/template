@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Mandra",
+    "Description": "The central town of the municipality, with residential areas and industrial activity.",
+    "Population": 15000,
+    "AreaKm2": 40.0,
+    "Code": "EU-GR-AC-WEA-MAE-1"
+  },
+  {
+    "Name": "Erythres",
+    "Description": "A rural area with agricultural lands and traditional villages.",
+    "Population": 7000,
+    "AreaKm2": 30.0,
+    "Code": "EU-GR-AC-WEA-MAE-2"
+  },
+  {
+    "Name": "Vilia",
+    "Description": "A scenic district at the foothills of Mount Patera, known for its forests and hiking trails.",
+    "Population": 5000,
+    "AreaKm2": 40.0,
+    "Code": "EU-GR-AC-WEA-MAE-3"
+  }
+]

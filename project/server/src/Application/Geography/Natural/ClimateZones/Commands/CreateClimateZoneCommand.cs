@@ -41,10 +41,14 @@ public class CreateClimateZoneHandler : IRequestHandler<CreateClimateZoneCommand
         await _unitOfWork.BeginTransactionAsync(token);
 
         // Searching Item
-        var filters = new Expression<Func<ClimateZone, bool>>[] { c => c.Name!.Equals(command.Dto.Name) };
+        var filters = new Expression<Func<ClimateZone, bool>>[] 
+        { 
+            c => c.Name!.Equals(command.Dto.Name) ||
+                c.Code!.Equals(command.Dto.Code)
+        };
         var existingClimateZone = await _commonRepository.GetResultByIdAsync(filters, token: token);
 
-        // Check if the terrain type already exists in the system
+        // Check if the surface type already exists in the system
         if (existingClimateZone is not null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);

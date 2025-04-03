@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Thespies Center",
+    "Description": "The central area with local markets and historical sites.",
+    "Population": 5000,
+    "AreaKm2": 120.0,
+    "Zipcode": "32202",
+    "Code": "EU-GR-CG-BOE-THI-2-TC"
+  },
+  {
+    "Name": "Rural Thespies",
+    "Description": "Agricultural lands and smaller settlements around the town.",
+    "Population": 3000,
+    "AreaKm2": 80.0,
+    "Zipcode": "32203",
+    "Code": "EU-GR-CG-BOE-THI-2-RT"
+  }
+]

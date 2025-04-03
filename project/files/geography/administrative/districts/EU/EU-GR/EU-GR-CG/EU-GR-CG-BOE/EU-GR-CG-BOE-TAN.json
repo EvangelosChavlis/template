@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Tanagra Town",
+    "Description": "The central area of Tanagra, where most administrative functions and services are located.",
+    "Population": 6000,
+    "AreaKm2": 100.0,
+    "Code": "EU-GR-CG-BOE-TAN-1"
+  },
+  {
+    "Name": "Rural Tanagra",
+    "Description": "The rural area of Tanagra, with agricultural land and small villages.",
+    "Population": 13340,
+    "AreaKm2": 454.01,
+    "Code": "EU-GR-CG-BOE-TAN-2"
+  }
+]

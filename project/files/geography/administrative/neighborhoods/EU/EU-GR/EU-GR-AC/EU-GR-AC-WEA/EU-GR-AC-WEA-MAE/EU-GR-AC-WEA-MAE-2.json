@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Erythres Village",
+    "Description": "A historic village known for its traditional architecture and local farming.",
+    "Population": 4000,
+    "AreaKm2": 15.0,
+    "Zipcode": "19008",
+    "Code": "EU-GR-AC-WEA-MAE-2-EV"
+  },
+  {
+    "Name": "Agios Sotiras",
+    "Description": "A small settlement surrounded by agricultural fields and olive groves.",
+    "Population": 3000,
+    "AreaKm2": 15.0,
+    "Zipcode": "19009",
+    "Code": "EU-GR-AC-WEA-MAE-2-AS"
+  }
+]

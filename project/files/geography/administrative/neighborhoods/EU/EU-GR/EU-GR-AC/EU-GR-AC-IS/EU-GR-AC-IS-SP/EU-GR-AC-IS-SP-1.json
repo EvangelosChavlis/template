@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Old Town",
+    "Description": "The historic center of Spetses with traditional houses, narrow streets, and a lively atmosphere.",
+    "Population": 2000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18050",
+    "Code": "EU-GR-AC-IS-SP-1-OT"
+  },
+  {
+    "Name": "Port Area",
+    "Description": "The bustling port area where ferries dock, lined with cafes, shops, and restaurants.",
+    "Population": 2000,
+    "AreaKm2": 5.0,
+    "Zipcode": "18051",
+    "Code": "EU-GR-AC-IS-SP-1-PA"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Port Area",
+    "Description": "The main port area of Megalochori with a small marina, shops, and cafes.",
+    "Population": 500,
+    "AreaKm2": 1.0,
+    "Zipcode": "18010",
+    "Code": "EU-GR-AC-IS-AG-1-PA"
+  },
+  {
+    "Name": "Old Town",
+    "Description": "A traditional area with old stone houses and a quiet atmosphere.",
+    "Population": 500,
+    "AreaKm2": 2.5,
+    "Zipcode": "18011",
+    "Code": "EU-GR-AC-IS-AG-1-OT"
+  }
+]

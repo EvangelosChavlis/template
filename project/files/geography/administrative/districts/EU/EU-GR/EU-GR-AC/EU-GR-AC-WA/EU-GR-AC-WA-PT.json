@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "The central district of Petroupoli, featuring main commercial streets and public services.",
+        "Population": 15000,
+        "AreaKm2": 1.8,
+        "Code": "EU-GR-AC-WA-PT-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A mainly residential area with schools, parks, and local businesses.",
+        "Population": 14000,
+        "AreaKm2": 1.6,
+        "Code": "EU-GR-AC-WA-PT-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "Known for its proximity to Mount Parnitha, offering hiking trails and green spaces.",
+        "Population": 13000,
+        "AreaKm2": 1.5,
+        "Code": "EU-GR-AC-WA-PT-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A quieter district with suburban-style housing and a strong community feel.",
+        "Population": 9000,
+        "AreaKm2": 0.9,
+        "Code": "EU-GR-AC-WA-PT-4"
+    },
+    {
+        "Name": "5th District",
+        "Description": "An emerging area with new developments, modern housing, and expanding infrastructure.",
+        "Population": 11000,
+        "AreaKm2": 0.8,
+        "Code": "EU-GR-AC-WA-PT-5"
+    }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Livadeia",
+    "Code": "EU-GR-CG-BOE-LIV",
+    "Description": "The capital of Boeotia, known for its historical significance and natural beauty.",
+    "Population": 31230,
+    "AreaKm2": 698.79
+  },
+  {
+    "Name": "Aliartos-Thespies",
+    "Code": "EU-GR-CG-BOE-ALI",
+    "Description": "A municipality that includes the historic areas of Aliartos and Thespies.",
+    "Population": 10850,
+    "AreaKm2": 256.89
+  },
+  {
+    "Name": "Distomo-Arachova-Antikyra",
+    "Code": "EU-GR-CG-BOE-DIS",
+    "Description": "A municipality known for the picturesque town of Arachova and the historic sites of Distomo and Antikyra.",
+    "Population": 8200,
+    "AreaKm2": 292.7
+  },
+  {
+    "Name": "Thebes",
+    "Code": "EU-GR-CG-BOE-THI",
+    "Description": "An ancient city with a rich mythological and historical heritage.",
+    "Population": 36540,
+    "AreaKm2": 822.92
+  },
+  {
+    "Name": "Orchomenos",
+    "Code": "EU-GR-CG-BOE-ORC",
+    "Description": "A historic town with archaeological significance in Boeotia.",
+    "Population": 11570,
+    "AreaKm2": 436.41
+  },
+  {
+    "Name": "Tanagra",
+    "Code": "EU-GR-CG-BOE-TAN",
+    "Description": "A municipality known for its strategic location and historical importance.",
+    "Population": 19340,
+    "AreaKm2": 554.01
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Lamia City",
+    "Description": "The central urban area, known for its historical landmarks and the modern infrastructure of the city.",
+    "Population": 100000,
+    "AreaKm2": 120.0,
+    "Code": "EU-GR-CG-PHT-LAM-1"
+  },
+  {
+    "Name": "Rural Lamia",
+    "Description": "The surrounding rural areas, known for their agricultural activities and small villages.",
+    "Population": 60000,
+    "AreaKm2": 2936.0,
+    "Code": "EU-GR-CG-PHT-LAM-2"
+  }
+]

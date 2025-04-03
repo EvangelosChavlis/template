@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Kampos",
+    "Description": "A small rural village known for its olive groves and traditional farming.",
+    "Population": 4000,
+    "AreaKm2": 40.0,
+    "Zipcode": "35210",
+    "Code": "EU-GR-CG-PHT-STY-2-KA"
+  },
+  {
+    "Name": "Agios Georgios",
+    "Description": "A scenic village surrounded by hills, with hiking trails and agricultural land.",
+    "Population": 3000,
+    "AreaKm2": 30.0,
+    "Zipcode": "35220",
+    "Code": "EU-GR-CG-PHT-STY-2-AG"
+  },
+  {
+    "Name": "Kalliopi",
+    "Description": "A peaceful rural settlement known for its natural beauty and small farms.",
+    "Population": 4000,
+    "AreaKm2": 45.0,
+    "Zipcode": "35230",
+    "Code": "EU-GR-CG-PHT-STY-2-KA"
+  }
+]

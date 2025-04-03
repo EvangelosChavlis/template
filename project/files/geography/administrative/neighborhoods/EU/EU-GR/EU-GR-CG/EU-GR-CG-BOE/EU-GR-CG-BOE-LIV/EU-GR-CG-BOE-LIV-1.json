@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Platania",
+    "Description": "A central neighborhood with traditional houses and cafes by the river.",
+    "Population": 5000,
+    "AreaKm2": 8.0,
+    "Zipcode": "32100",
+    "Code": "EU-GR-CG-BOE-LIV-1-PL"
+  },
+  {
+    "Name": "Agios Ioannis",
+    "Description": "A residential area near the city’s main church, known for its quiet streets.",
+    "Population": 6000,
+    "AreaKm2": 10.0,
+    "Zipcode": "32101",
+    "Code": "EU-GR-CG-BOE-LIV-1-AI"
+  }
+]

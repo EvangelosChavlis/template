@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Drama",
+    "Code": "EU-GR-CM-DRA-DRA",
+    "Description": "The capital of Drama, known for its historical sites, scenic beauty, and proximity to mountain ranges.",
+    "Population": 100000,
+    "AreaKm2": 1845.0
+  },
+  {
+    "Name": "Kavala",
+    "Code": "EU-GR-CM-DRA-KAV",
+    "Description": "A coastal town near Drama, known for its rich cultural heritage and beautiful beaches.",
+    "Population": 25000,
+    "AreaKm2": 100.0
+  },
+  {
+    "Name": "Paranesti",
+    "Code": "EU-GR-CM-DRA-PAR",
+    "Description": "A municipality known for its mountainous terrain and natural beauty, perfect for outdoor activities.",
+    "Population": 10000,
+    "AreaKm2": 150.0
+  },
+  {
+    "Name": "Nea Zichni",
+    "Code": "EU-GR-CM-DRA-NZZ",
+    "Description": "A town known for its peaceful atmosphere and rich agricultural land.",
+    "Population": 8000,
+    "AreaKm2": 120.0
+  },
+  {
+    "Name": "Angilion",
+    "Code": "EU-GR-CM-DRA-ANG",
+    "Description": "A rural municipality located in the western part of Drama, famous for its traditional culture.",
+    "Population": 5000,
+    "AreaKm2": 90.0
+  },
+  {
+    "Name": "Vistonida",
+    "Code": "EU-GR-CM-DRA-VIS",
+    "Description": "A municipality known for its natural landscapes, including lakes and mountainous areas.",
+    "Population": 6000,
+    "AreaKm2": 150.0
+  }
+]

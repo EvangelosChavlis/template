@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Agios Georgios",
+        "Description": "A family-friendly neighborhood with schools, parks, and a strong local community.",
+        "Population": 7500,
+        "AreaKm2": 0.9,
+        "Zipcode": "13235",
+        "Code": "EU-GR-AC-WA-PT-2-AG"
+    },
+    {
+        "Name": "Dytiki Petroupoli",
+        "Description": "A well-connected area featuring modern residential buildings and local businesses.",
+        "Population": 7200,
+        "AreaKm2": 0.85,
+        "Zipcode": "13236",
+        "Code": "EU-GR-AC-WA-PT-2-DP"
+    },
+    {
+        "Name": "Neo Zografou",
+        "Description": "A developing neighborhood with new housing projects and expanding infrastructure.",
+        "Population": 6800,
+        "AreaKm2": 0.75,
+        "Zipcode": "13237",
+        "Code": "EU-GR-AC-WA-PT-2-NZ"
+    },
+    {
+        "Name": "Profitis Ilias",
+        "Description": "A quiet, residential neighborhood with green spaces and close proximity to local churches.",
+        "Population": 6500,
+        "AreaKm2": 0.7,
+        "Zipcode": "13238",
+        "Code": "EU-GR-AC-WA-PT-2-PI"
+    }
+]

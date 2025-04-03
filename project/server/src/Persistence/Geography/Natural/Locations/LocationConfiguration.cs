@@ -1,9 +1,12 @@
 // packages
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using server.src.Domain.Geography.Administrative.Stations.Models;
+
 
 // source
 using server.src.Domain.Geography.Natural.Locations.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Geography.Natural.Locations;
 
@@ -20,8 +23,8 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
 
     public void Configure(EntityTypeBuilder<Location> builder)
     {
-        builder.HasKey(l => l.Id);
-        
+        builder.ConfigureBaseEntityProperties();
+
         builder.Property(l => l.Longitude)
             .IsRequired();
 
@@ -29,6 +32,9 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
             .IsRequired();
 
         builder.Property(l => l.Altitude)
+            .IsRequired();
+
+        builder.Property(l => l.Depth)
             .IsRequired();
 
         builder.Property(l => l.IsActive)
@@ -40,11 +46,14 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
         builder.Property(l => l.NaturalFeatureId)
             .IsRequired();
 
-        builder.Property(l => l.TerrainTypeId)
+        builder.Property(l => l.SurfaceTypeId)
             .IsRequired();
 
         builder.Property(l => l.TimezoneId)
             .IsRequired();
+
+        builder.Property(l => l.StationId)
+            .IsRequired(false);
 
         builder.HasOne(l => l.ClimateZone)
             .WithMany(tz => tz.Locations)
@@ -56,9 +65,9 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
             .HasForeignKey(l => l.NaturalFeatureId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne(l => l.TerrainType)
+        builder.HasOne(l => l.SurfaceType)
             .WithMany(tz => tz.Locations)
-            .HasForeignKey(l => l.TerrainTypeId)
+            .HasForeignKey(l => l.SurfaceTypeId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(l => l.Timezone)
@@ -66,15 +75,10 @@ public class LocationConfiguration : IEntityTypeConfiguration<Location>
             .HasForeignKey(l => l.TimezoneId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne(l => l.Neighborhood)
-            .WithMany(n => n.Locations)
-            .HasForeignKey(l => l.NeighborhoodId)
+        builder.HasOne(l => l.Station)
+            .WithOne(s => s.Location)
+            .HasForeignKey<Station>(s => s.LocationId)
             .OnDelete(DeleteBehavior.Restrict);
-
-        builder.HasMany(l => l.Forecasts)
-            .WithOne(f => f.Location)
-            .HasForeignKey(f => f.LocationId)
-            .OnDelete(DeleteBehavior.Cascade);
 
         builder.ToTable(_tableName, _schema);
     }

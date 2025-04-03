@@ -30,7 +30,7 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
             .HasMaxLength(CountryLength.NameLength);
 
         builder.Property(c => c.Description)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(CountryLength.DescriptionLength);
 
         builder.Property(c => c.Code)
@@ -38,7 +38,7 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
             .HasMaxLength(CountryLength.CodeLength);
 
         builder.Property(c => c.Capital)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(CountryLength.CapitalLength);
 
         builder.Property(c => c.Population)

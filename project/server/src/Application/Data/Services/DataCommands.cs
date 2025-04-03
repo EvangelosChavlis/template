@@ -4,6 +4,7 @@ using server.src.Application.Data.Interfaces;
 using server.src.Domain.Common.Dtos;
 using server.src.Application.Common.Services;
 using server.src.Application.Data.Commands.Seed.Geography.Administrative;
+using server.src.Application.Data.Commands.Seed.Geography.Natural;
 
 namespace server.src.Application.Auth.Roles.Services;
 
@@ -21,6 +22,45 @@ public class DataCommands : IDataCommands
         var command = new SeedDataCommand();
         return await _requestExecutor
             .Execute<SeedDataCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedTimezonesAsync(string basePath, 
+        CancellationToken token = default)
+    {
+        var command = new SeedTimezonesCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedTimezonesCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedClimateZonesAsync(string basePath, 
+        CancellationToken token = default)
+    {
+        var command = new SeedClimateZonesCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedClimateZonesCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedSurfaceTypeAsync(string basePath, 
+        CancellationToken token = default)
+    {
+        var command = new SeedSurfaceTypesCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedSurfaceTypesCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedNaturalFeatureAsync(string basePath, 
+        CancellationToken token = default)
+    {
+        var command = new SeedNaturalFeaturesCommand(basePath);
+        return await _requestExecutor
+            .Execute<SeedNaturalFeaturesCommand, Response<string>>(command, token);
+    }
+
+    public async Task<Response<string>> SeedLocationsAsync(CancellationToken token = default)
+    {
+        var command = new SeedLocationsCommand();
+        return await _requestExecutor
+            .Execute<SeedLocationsCommand, Response<string>>(command, token);
     }
 
     public async Task<Response<string>> SeedContinentsAsync(string basePath, 

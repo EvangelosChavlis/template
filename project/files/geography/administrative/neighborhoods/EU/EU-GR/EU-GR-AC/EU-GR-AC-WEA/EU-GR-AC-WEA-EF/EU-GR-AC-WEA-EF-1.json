@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Eleusis Archaeological Zone",
+        "Description": "The area surrounding the ancient ruins and the Eleusinian Mysteries site.",
+        "Population": 4000,
+        "AreaKm2": 2.5,
+        "Zipcode": "19200",
+        "Code": "EU-GR-AC-WEA-EF-1-EAZ"
+    },
+    {
+        "Name": "City Center",
+        "Description": "The heart of Elefsina with commercial streets, government buildings, and residential areas.",
+        "Population": 8000,
+        "AreaKm2": 4.5,
+        "Zipcode": "19201",
+        "Code": "EU-GR-AC-WEA-EF-1-CC"
+    }
+]

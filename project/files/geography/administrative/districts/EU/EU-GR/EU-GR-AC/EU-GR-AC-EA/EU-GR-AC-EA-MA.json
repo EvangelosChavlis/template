@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Markopoulo Center",
+    "Description": "The main urban hub of Markopoulo, featuring commercial centers, residential areas, and public institutions.",
+    "Population": 12000,
+    "AreaKm2": 25.0,
+    "Code": "EU-GR-AC-EA-MA-1"
+  },
+  {
+    "Name": "Porto Rafti",
+    "Description": "A coastal district popular for its beaches, summer houses, and vibrant nightlife.",
+    "Population": 10000,
+    "AreaKm2": 40.0,
+    "Code": "EU-GR-AC-EA-MA-2"
+  },
+  {
+    "Name": "Vravrona",
+    "Description": "A historical district famous for the ancient Temple of Artemis and its natural beauty.",
+    "Population": 5000,
+    "AreaKm2": 20.0,
+    "Code": "EU-GR-AC-EA-MA-3"
+  }
+]

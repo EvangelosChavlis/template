@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Ano Terpsithea",
+        "Description": "A peaceful neighborhood near Mount Parnitha, offering great views and green spaces.",
+        "Population": 7000,
+        "AreaKm2": 0.85,
+        "Zipcode": "13239",
+        "Code": "EU-GR-AC-WA-PT-3-AT"
+    },
+    {
+        "Name": "Kallithea Petroupolis",
+        "Description": "A developing area with modern residences and easy access to public transport.",
+        "Population": 6700,
+        "AreaKm2": 0.8,
+        "Zipcode": "13240",
+        "Code": "EU-GR-AC-WA-PT-3-KP"
+    },
+    {
+        "Name": "Pefka",
+        "Description": "A scenic neighborhood surrounded by pine trees, known for its quiet atmosphere.",
+        "Population": 6300,
+        "AreaKm2": 0.75,
+        "Zipcode": "13241",
+        "Code": "EU-GR-AC-WA-PT-3-PF"
+    },
+    {
+        "Name": "Ilioupoli Petroupolis",
+        "Description": "A mix of traditional and modern housing with local markets and schools nearby.",
+        "Population": 6200,
+        "AreaKm2": 0.7,
+        "Zipcode": "13242",
+        "Code": "EU-GR-AC-WA-PT-3-IP"
+    }
+]

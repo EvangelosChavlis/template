@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Keratea Center",
+    "Description": "A lively town center with local markets, cafes, and historic sites.",
+    "Population": 5000,
+    "AreaKm2": 60.0,
+    "Zipcode": "19001",
+    "Code": "EU-GR-AC-EA-LA-2-KC"
+  },
+  {
+    "Name": "Daskaleio",
+    "Description": "A seaside neighborhood with stunning beaches and vacation homes.",
+    "Population": 3000,
+    "AreaKm2": 71.0,
+    "Zipcode": "19002",
+    "Code": "EU-GR-AC-EA-LA-2-DA"
+  }
+]

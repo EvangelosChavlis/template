@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Ancient Orchomenos",
+    "Description": "The archaeological area with ruins from the ancient city.",
+    "Population": 4000,
+    "AreaKm2": 50.0,
+    "Zipcode": "32100",
+    "Code": "EU-GR-CG-BOE-ORC-1-AO"
+  },
+  {
+    "Name": "Modern Orchomenos",
+    "Description": "The modern area with residential neighborhoods, shops, and local businesses.",
+    "Population": 4000,
+    "AreaKm2": 100.0,
+    "Zipcode": "32101",
+    "Code": "EU-GR-CG-BOE-ORC-1-MO"
+  }
+]

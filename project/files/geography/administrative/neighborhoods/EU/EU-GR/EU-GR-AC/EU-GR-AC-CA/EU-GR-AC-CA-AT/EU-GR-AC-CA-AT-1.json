@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Plaka",
+        "Description": "One of the most famous and oldest neighborhoods in Athens, known for its narrow streets, historical buildings, and proximity to the Acropolis.",
+        "Population": 12000,
+        "AreaKm2": 1.5,
+        "Zipcode": "10558",
+        "Code": "EU-GR-AC-CA-AT-1-PL"
+    },
+    {
+        "Name": "Monastiraki",
+        "Description": "A vibrant neighborhood known for its flea market, historic sites, and cafes, located near the ancient Agora and the Acropolis.",
+        "Population": 15000,
+        "AreaKm2": 2.0,
+        "Zipcode": "10555",
+        "Code": "EU-GR-AC-CA-AT-1-MO"
+    },
+    {
+        "Name": "Syntagma",
+        "Description": "A central district of Athens, home to Syntagma Square, the Parliament building, and a hub for shopping and tourism.",
+        "Population": 25000,
+        "AreaKm2": 2.5,
+        "Zipcode": "10563",
+        "Code": "EU-GR-AC-CA-AT-1-SY"
+    },
+    {
+        "Name": "Psiri",
+        "Description": "Known for its nightlife, lively bars, restaurants, and a mix of traditional and modern elements.",
+        "Population": 8000,
+        "AreaKm2": 1.0,
+        "Zipcode": "10554",
+        "Code": "EU-GR-AC-CA-AT-1-PS"
+    },
+    {
+        "Name": "Koukaki",
+        "Description": "A trendy and residential neighborhood with a great view of the Acropolis, home to cafes, shops, and cultural spots.",
+        "Population": 18000,
+        "AreaKm2": 1.8,
+        "Zipcode": "11741",
+        "Code": "EU-GR-AC-CA-AT-1-KO"
+    }
+]

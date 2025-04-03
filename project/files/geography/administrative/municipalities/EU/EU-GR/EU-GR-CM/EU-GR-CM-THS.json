@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Thessaloniki",
+    "Code": "EU-GR-CM-THS-THS",
+    "Description": "The capital and largest city of the region, known for its rich cultural history, vibrant atmosphere, and historical landmarks.",
+    "Population": 1000000,
+    "AreaKm2": 1125.0
+  },
+  {
+    "Name": "Nea Filadelfeia",
+    "Code": "EU-GR-CM-THS-NFF",
+    "Description": "A municipality known for its suburban setting and modern cultural life.",
+    "Population": 25000,
+    "AreaKm2": 35.0
+  },
+  {
+    "Name": "Nea Ionia",
+    "Code": "EU-GR-CM-THS-NIO",
+    "Description": "A vibrant suburb of Thessaloniki known for its dynamic community and proximity to the city center.",
+    "Population": 15000,
+    "AreaKm2": 20.0
+  },
+  {
+    "Name": "Kalamaria",
+    "Code": "EU-GR-CM-THS-KAL",
+    "Description": "A coastal municipality famous for its scenic waterfront and lively commercial areas.",
+    "Population": 100000,
+    "AreaKm2": 40.0
+  },
+  {
+    "Name": "Pylaia-Chortiatis",
+    "Code": "EU-GR-CM-THS-PCH",
+    "Description": "A municipality known for its blend of natural beauty and modern urban living.",
+    "Population": 60000,
+    "AreaKm2": 150.0
+  },
+  {
+    "Name": "Perea",
+    "Code": "EU-GR-CM-THS-PER",
+    "Description": "A seaside town near Thessaloniki, known for its beach and relaxed atmosphere.",
+    "Population": 25000,
+    "AreaKm2": 35.0
+  }
+]

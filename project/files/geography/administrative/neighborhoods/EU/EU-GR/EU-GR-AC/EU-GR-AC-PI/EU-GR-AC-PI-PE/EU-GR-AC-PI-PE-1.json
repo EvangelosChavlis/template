@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Port Area",
+    "Description": "The main industrial and commercial area near the port of Piraeus.",
+    "Population": 8000,
+    "AreaKm2": 5.0,
+    "Zipcode": "18863",
+    "Code": "EU-GR-AC-PI-PE-1-PA"
+  },
+  {
+    "Name": "Perama Main Street",
+    "Description": "A busy commercial street running through the heart of Perama.",
+    "Population": 4000,
+    "AreaKm2": 3.0,
+    "Zipcode": "18864",
+    "Code": "EU-GR-AC-PI-PE-1-PMS"
+  }
+]

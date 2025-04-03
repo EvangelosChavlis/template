@@ -1,0 +1,30 @@
+[
+    {
+        "Name": "1st District",
+        "Description": "A quiet, residential area with plenty of parks and local businesses, ideal for families.",
+        "Population": 18000,
+        "AreaKm2": 1.1,
+        "Code": "EU-GR-AC-CA-GA-1"
+    },
+    {
+        "Name": "2nd District",
+        "Description": "A lively area featuring a mix of modern buildings and green spaces, popular for its local cafes and shops.",
+        "Population": 20000,
+        "AreaKm2": 1.2,
+        "Code": "EU-GR-AC-CA-GA-2"
+    },
+    {
+        "Name": "3rd District",
+        "Description": "A residential district known for its quiet streets, small parks, and easy access to transportation.",
+        "Population": 15000,
+        "AreaKm2": 1.0,
+        "Code": "EU-GR-AC-CA-GA-3"
+    },
+    {
+        "Name": "4th District",
+        "Description": "A vibrant district with a mix of commercial and residential spaces, offering excellent local amenities.",
+        "Population": 17000,
+        "AreaKm2": 1.2,
+        "Code": "EU-GR-AC-CA-GA-4"
+    }
+]

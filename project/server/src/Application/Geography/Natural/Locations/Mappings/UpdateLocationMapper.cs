@@ -2,7 +2,8 @@
 using server.src.Domain.Geography.Natural.ClimateZones.Models;
 using server.src.Domain.Geography.Natural.Locations.Dtos;
 using server.src.Domain.Geography.Natural.Locations.Models;
-using server.src.Domain.Geography.Natural.TerrainTypes.Models;
+using server.src.Domain.Geography.Natural.NaturalFeatures.Models;
+using server.src.Domain.Geography.Natural.SurfaceTypes.Models;
 using server.src.Domain.Geography.Natural.Timezones.Models;
 
 namespace server.src.Application.Geography.Natural.Locations.Mappings;
@@ -23,17 +24,21 @@ public static class UpdateLocationMapper
         this UpdateLocationDto dto, 
         Location locationModel,
         ClimateZone climateZoneModel,
-        TerrainType terrainTypeModel, 
+        NaturalFeature naturalFeatureModel,
+        SurfaceType surfaceTypeModel, 
         Timezone timezoneModel)
     {
         locationModel.Longitude = dto.Longitude;
         locationModel.Latitude = dto.Latitude;
         locationModel.Altitude = dto.Altitude;
+        locationModel.Depth = dto.Depth;
         locationModel.IsActive = locationModel.IsActive;
         locationModel.ClimateZoneId = climateZoneModel.Id;
         locationModel.ClimateZone = climateZoneModel;
-        locationModel.TerrainTypeId = terrainTypeModel.Id;
-        locationModel.TerrainType = terrainTypeModel;
+        locationModel.NaturalFeatureId = naturalFeatureModel.Id;
+        locationModel.NaturalFeature = naturalFeatureModel;
+        locationModel.SurfaceTypeId = surfaceTypeModel.Id;
+        locationModel.SurfaceType = surfaceTypeModel;
         locationModel.TimezoneId = timezoneModel.Id;
         locationModel.Timezone = timezoneModel;
         locationModel.Version = Guid.NewGuid();

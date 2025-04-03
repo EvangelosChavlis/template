@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Edessa",
+    "Code": "EU-GR-CM-PEL-EDE",
+    "Description": "The capital of Pella, known for its beautiful waterfalls and rich history as an ancient city.",
+    "Population": 50000,
+    "AreaKm2": 750.0
+  },
+  {
+    "Name": "Pella",
+    "Code": "EU-GR-CM-PEL-PEL",
+    "Description": "The ancient city of Pella, once the capital of the Kingdom of Macedon and the birthplace of Alexander the Great.",
+    "Population": 15000,
+    "AreaKm2": 100.0
+  },
+  {
+    "Name": "Aridaia",
+    "Code": "EU-GR-CM-PEL-ARI",
+    "Description": "A town in Pella, known for its thermal springs and natural surroundings.",
+    "Population": 12000,
+    "AreaKm2": 130.0
+  },
+  {
+    "Name": "Skydra",
+    "Code": "EU-GR-CM-PEL-SKY",
+    "Description": "A municipality known for its agricultural economy and scenic landscapes.",
+    "Population": 25000,
+    "AreaKm2": 200.0
+  },
+  {
+    "Name": "Almopia",
+    "Code": "EU-GR-CM-PEL-ALM",
+    "Description": "A municipality known for its natural beauty and historical significance, located near the borders of Pella.",
+    "Population": 9000,
+    "AreaKm2": 220.0
+  },
+  {
+    "Name": "Vardar",
+    "Code": "EU-GR-CM-PEL-VAR",
+    "Description": "A rural municipality with a strong agricultural presence and rich natural resources.",
+    "Population": 7000,
+    "AreaKm2": 100.0
+  }
+]

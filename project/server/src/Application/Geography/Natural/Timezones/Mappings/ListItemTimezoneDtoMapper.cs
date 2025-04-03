@@ -20,6 +20,7 @@ public static class ListItemTimezoneDtoMapper
         this Timezone model) => new(
             Id: model.Id,
             Name: model.Name,
+            Code: model.Code,
             UtcOffset: model.UtcOffset,
             IsActive: model.IsActive,
             Count: model.Locations.Count

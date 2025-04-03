@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Neraida",
+        "Description": "A lively neighborhood with a mix of local shops, cafes, and a vibrant community atmosphere.",
+        "Population": 10000,
+        "AreaKm2": 0.50,
+        "Code": "EU-GR-AC-CA-VY-4-NE"
+    },
+    {
+        "Name": "Center",
+        "Description": "The heart of Vyronas, bustling with cultural landmarks, cafes, and restaurants, attracting both locals and tourists.",
+        "Population": 12000,
+        "AreaKm2": 1.0,
+        "Code": "EU-GR-AC-CA-VY-4-CE"
+    }
+]

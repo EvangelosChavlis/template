@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Rafina Center",
+    "Description": "The main urban hub with the port, commercial areas, and residential neighborhoods.",
+    "Population": 25000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-EA-RP-1"
+  },
+  {
+    "Name": "Pikermi",
+    "Description": "A semi-rural district known for its vineyards, nature, and suburban lifestyle.",
+    "Population": 15000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-EA-RP-2"
+  },
+  {
+    "Name": "Marikes",
+    "Description": "A coastal district with sandy beaches and a laid-back summer atmosphere.",
+    "Population": 10000,
+    "AreaKm2": 7.5,
+    "Code": "EU-GR-AC-EA-RP-3"
+  }
+]

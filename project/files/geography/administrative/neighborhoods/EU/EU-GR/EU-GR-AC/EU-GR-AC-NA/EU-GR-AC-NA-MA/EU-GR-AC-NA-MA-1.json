@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kifisias Avenue",
+    "Description": "A major road lined with office buildings, shops, and businesses.",
+    "Population": 8000,
+    "AreaKm2": 2.0,
+    "Zipcode": "15125",
+    "Code": "EU-GR-AC-NA-MA-1-KA"
+  },
+  {
+    "Name": "Marousi Square",
+    "Description": "A bustling area with cafes, shops, and the central square.",
+    "Population": 7000,
+    "AreaKm2": 1.5,
+    "Zipcode": "15123",
+    "Code": "EU-GR-AC-NA-MA-1-MS"
+  }
+]

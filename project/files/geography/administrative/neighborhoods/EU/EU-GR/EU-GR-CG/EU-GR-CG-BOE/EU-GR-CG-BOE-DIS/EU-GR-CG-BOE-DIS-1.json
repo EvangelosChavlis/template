@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Distomo",
+    "Description": "A historic town known for the Distomo Massacre memorial and its cultural significance.",
+    "Population": 3000,
+    "AreaKm2": 100.0,
+    "Code": "EU-GR-CG-BOE-DIS-1"
+  },
+  {
+    "Name": "Arachova",
+    "Description": "A popular winter destination known for its ski resort, traditional architecture, and vibrant nightlife.",
+    "Population": 3500,
+    "AreaKm2": 120.0,
+    "Code": "EU-GR-CG-BOE-DIS-2"
+  },
+  {
+    "Name": "Antikyra",
+    "Description": "A coastal district with a picturesque harbor and a rich maritime history.",
+    "Population": 1700,
+    "AreaKm2": 72.7,
+    "Code": "EU-GR-CG-BOE-DIS-3"
+  }
+]

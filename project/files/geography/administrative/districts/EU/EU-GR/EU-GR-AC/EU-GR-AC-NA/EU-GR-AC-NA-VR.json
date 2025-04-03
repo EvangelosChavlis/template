@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Vrilissia Center",
+    "Description": "The central area of Vrilissia, home to local shops, cafes, and public spaces.",
+    "Population": 12000,
+    "AreaKm2": 3.0,
+    "Code": "EU-GR-AC-NA-VR-1"
+  },
+  {
+    "Name": "Southern Vrilissia",
+    "Description": "A suburban area with larger houses, quiet streets, and easy access to green spaces.",
+    "Population": 14000,
+    "AreaKm2": 4.6,
+    "Code": "EU-GR-AC-NA-VR-2"
+  }
+]

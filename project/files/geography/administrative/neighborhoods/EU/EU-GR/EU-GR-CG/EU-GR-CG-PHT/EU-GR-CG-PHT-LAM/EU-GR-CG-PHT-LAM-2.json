@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Almyros",
+    "Description": "A village known for its fertile agricultural land and farming activities.",
+    "Population": 15000,
+    "AreaKm2": 150.0,
+    "Zipcode": "35200",
+    "Code": "EU-GR-CG-PHT-LAM-2-AL"
+  },
+  {
+    "Name": "Gorgopotamos",
+    "Description": "A scenic village located near the Gorgopotamos River, famous for its bridge and historical significance.",
+    "Population": 5000,
+    "AreaKm2": 100.0,
+    "Zipcode": "35210",
+    "Code": "EU-GR-CG-PHT-LAM-2-GO"
+  },
+  {
+    "Name": "Kileler",
+    "Description": "A rural village surrounded by olive groves and farmland, known for its quiet and peaceful environment.",
+    "Population": 8000,
+    "AreaKm2": 80.0,
+    "Zipcode": "35220",
+    "Code": "EU-GR-CG-PHT-LAM-2-KI"
+  },
+  {
+    "Name": "Pteleos",
+    "Description": "A village with scenic views of the surrounding mountains and agricultural land.",
+    "Population": 7000,
+    "AreaKm2": 70.0,
+    "Zipcode": "35230",
+    "Code": "EU-GR-CG-PHT-LAM-2-PT"
+  }
+]

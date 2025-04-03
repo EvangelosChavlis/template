@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Poros Town",
+    "Description": "The main town of the island, known for its picturesque harbor and traditional architecture.",
+    "Population": 6000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-IS-PO-1"
+  },
+  {
+    "Name": "Askeli",
+    "Description": "A coastal area on the eastern side of the island, known for its beaches and vacation resorts.",
+    "Population": 4000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-IS-PO-2"
+  },
+  {
+    "Name": "Neorion",
+    "Description": "A small industrial and residential area near the main port, known for its shipyards and local economy.",
+    "Population": 2000,
+    "AreaKm2": 6.0,
+    "Code": "EU-GR-AC-IS-PO-3"
+  }
+]

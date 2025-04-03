@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Agia Triada",
+        "Description": "A peaceful neighborhood with family homes, schools, and a strong community vibe.",
+        "Population": 5000,
+        "AreaKm2": 0.6,
+        "Zipcode": "13127",
+        "Code": "EU-GR-AC-WA-IL-3-AT"
+    },
+    {
+        "Name": "Pefki",
+        "Description": "A residential area surrounded by parks, offering a tranquil environment and local amenities.",
+        "Population": 4500,
+        "AreaKm2": 0.5,
+        "Zipcode": "13128",
+        "Code": "EU-GR-AC-WA-IL-3-PE"
+    },
+    {
+        "Name": "Kalamaki",
+        "Description": "A mixed-use neighborhood with a combination of residential buildings and commercial spaces.",
+        "Population": 6000,
+        "AreaKm2": 0.7,
+        "Zipcode": "13129",
+        "Code": "EU-GR-AC-WA-IL-3-KA"
+    }
+]

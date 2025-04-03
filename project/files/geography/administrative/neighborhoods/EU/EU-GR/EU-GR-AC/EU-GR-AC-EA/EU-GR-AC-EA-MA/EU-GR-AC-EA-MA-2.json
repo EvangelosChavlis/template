@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Porto Rafti Beach",
+        "Description": "A seaside neighborhood known for its beaches, restaurants, and holiday homes.",
+        "Population": 5000,
+        "AreaKm2": 15.0,
+        "Zipcode": "19005",
+        "Code": "EU-GR-AC-EA-MA-2-PB"
+    },
+    {
+        "Name": "Agios Spyridonas",
+        "Description": "A quiet residential area with scenic views, nature trails, and a peaceful environment.",
+        "Population": 5000,
+        "AreaKm2": 12.0,
+        "Zipcode": "19006",
+        "Code": "EU-GR-AC-EA-MA-2-AS"
+    }
+]

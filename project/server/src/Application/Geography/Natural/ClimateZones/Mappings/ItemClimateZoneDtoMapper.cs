@@ -20,8 +20,9 @@ public static class ItemClimateZoneDtoMapper
             Id: model.Id,
             Name: model.Name,
             Description: model.Description,
-            AvgTemperatureC: model.AvgTemperatureC,  // Corrected
-            AvgPrecipitationMm: model.AvgPrecipitationMm,  // Corrected
+            Code: model.Code,
+            AvgTemperatureC: model.AvgTemperatureC,
+            AvgPrecipitationMm: model.AvgPrecipitationMm,
             IsActive: model.IsActive,
             Version: model.Version
         );

@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Alimos Marina",
+    "Description": "A popular marina area with yachts, restaurants, and shops by the sea.",
+    "Population": 7000,
+    "AreaKm2": 1.0,
+    "Zipcode": "17455",
+    "Code": "EU-GR-AC-SA-AL-1-AM"
+  },
+  {
+    "Name": "Kalamaki Beach",
+    "Description": "A beach area known for its sandy shore, perfect for sunbathing and leisure activities.",
+    "Population": 10000,
+    "AreaKm2": 1.2,
+    "Zipcode": "17456",
+    "Code": "EU-GR-AC-SA-AL-1-KB"
+  },
+  {
+    "Name": "Alimos Promenade",
+    "Description": "A lively waterfront promenade with cafes, bars, and views of the sea.",
+    "Population": 12000,
+    "AreaKm2": 0.8,
+    "Zipcode": "17457",
+    "Code": "EU-GR-AC-SA-AL-1-AP"
+  }
+]

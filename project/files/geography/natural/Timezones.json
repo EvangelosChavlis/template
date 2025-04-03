@@ -1,0 +1,314 @@
+[
+  {
+    "Name": "UTC−12:00 (Baker Island, Howland Island)",
+    "Description": "Baker Island, Howland Island",
+    "Code": "UTC−12:00",
+    "UtcOffset": -12.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−11:00 (American Samoa, Jarvis Island, Kingman Reef)",
+    "Description": "American Samoa, Jarvis Island, Kingman Reef, Midway Atoll, Niue, Palmyra Atoll",
+    "Code": "UTC−11:00",
+    "UtcOffset": -11.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−10:00 (Cook Islands, French Polynesia)",
+    "Description": "Cook Islands, French Polynesia (most), Johnston Atoll, United States: Hawaii, United States: Andreanof Islands, Islands of Four Mountains, Near Islands, Rat Islands (Aleutian Islands, Alaska)",
+    "Code": "UTC−10:00",
+    "UtcOffset": -10.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−09:30 (French Polynesia: Marquesas Islands)",
+    "Description": "French Polynesia: Marquesas Islands",
+    "Code": "UTC−09:30",
+    "UtcOffset": -9.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−09:00 (French Polynesia: Gambier Islands, United States: Alaska)",
+    "Description": "French Polynesia: Gambier Islands, United States: Alaska (most)",
+    "Code": "UTC−09:00",
+    "UtcOffset": -9.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": -8.0
+  },
+  {
+    "Name": "UTC−08:00 (Clipperton Island, Pitcairn Islands)",
+    "Description": "Clipperton Island, Pitcairn Islands, Canada: British Columbia (most), Mexico: Baja California, United States: California, Idaho (north), Nevada (most), Oregon (most), Washington",
+    "Code": "UTC−08:00",
+    "UtcOffset": -8.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": -7.0
+  },
+  {
+    "Name": "UTC−07:00 (Canada: British Columbia, Yukon)",
+    "Description": "Canada: British Columbia (northeast), Yukon, Mexico: Baja California Sur, Nayarit (most), Sinaloa, Sonora, United States: Arizona (most)",
+    "Code": "UTC−07:00",
+    "UtcOffset": -7.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": -6.0
+  },
+  {
+    "Name": "UTC−06:00 (Belize, Guatemala, Honduras)",
+    "Description": "Belize, Canada: Saskatchewan (most), Costa Rica, Ecuador: Galápagos, El Salvador, Guatemala, Honduras, Mexico (most), Nicaragua",
+    "Code": "UTC−06:00",
+    "UtcOffset": -6.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": -5.0
+  },
+  {
+    "Name": "UTC−05:00 (Colombia, Panama, Peru)",
+    "Description": "Brazil: Acre, Amazonas (southwest), Canada: Atikokan, Mishkeegogamang, Southampton Island, Cayman Islands, Colombia, Ecuador (most), Jamaica, Mexico: Quintana Roo, Navassa Island, Panama, Peru, Bahamas",
+    "Code": "UTC−05:00",
+    "UtcOffset": -5.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": -4.0
+  },
+  {
+    "Name": "UTC−04:00 (Anguilla, Antigua and Barbuda)",
+    "Description": "Anguilla, Antigua and Barbuda, Aruba, Barbados, Bolivia, Brazil: Amazonas (most), Mato Grosso, Mato Grosso do Sul, Rondônia, Roraima, British Virgin Islands",
+    "Code": "UTC−04:00",
+    "UtcOffset": -4.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": -3.0
+  },
+  {
+    "Name": "UTC−03:30 (Canada: Newfoundland, Labrador)",
+    "Description": "Canada: Newfoundland, Labrador (southeast)",
+    "Code": "UTC−03:30",
+    "UtcOffset": -3.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−03:00 (Argentina, Brazil)",
+    "Description": "Argentina, Brazil (most), Chile: Magallanes Region, Falkland Islands, French Guiana, Paraguay, Suriname, Uruguay, Saint Pierre and Miquelon",
+    "Code": "UTC−03:00",
+    "UtcOffset": -3.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−02:00 (Brazil: Fernando de Noronha)",
+    "Description": "Brazil: Fernando de Noronha, South Georgia and the South Sandwich Islands",
+    "Code": "UTC−02:00",
+    "UtcOffset": -2.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC−01:00 (Cape Verde, Portugal: Azores)",
+    "Description": "Cape Verde, Portugal: Azores",
+    "Code": "UTC−01:00",
+    "UtcOffset": -1.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+00:00 (Burkina Faso, Ghana, Liberia)",
+    "Description": "Burkina Faso, Gambia, Ghana, Greenland: National Park (east coast), Guinea, Guinea-Bissau, Iceland, Ivory Coast, Liberia, Mali, Mauritania, Saint Helena, Ascension and Tristan da Cunha",
+    "Code": "UTC+00:00",
+    "UtcOffset": 0.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+01:00 (Algeria, Tunisia)",
+    "Description": "Algeria, Angola, Benin, Cameroon, Central African Republic, Chad, Congo, Democratic Republic of the Congo: Équateur, Kinshasa, Kongo Central, Kwango, Kwilu, Mai-Ndombe, Mongala, Nord-Ubangi, Sud-Ubangi, Tshuapa, Morocco, Niger, Nigeria, Tunisia",
+    "Code": "UTC+01:00",
+    "UtcOffset": 1.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": 2.0
+  },
+  {
+    "Name": "UTC+02:00 (Botswana, Libya, South Africa)",
+    "Description": "Botswana, Burundi, Democratic Republic of the Congo (most), Eswatini, Lesotho, Libya, Malawi, Mozambique, Namibia, Russia: Kaliningrad, Rwanda, South Africa (most), South Sudan, Sudan, Zambia, Zimbabwe",
+    "Code": "UTC+02:00",
+    "UtcOffset": 2.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": 3.0
+  },
+  {
+    "Name": "UTC+03:00 (Abkhazia, Bahrain, Belarus)",
+    "Description": "Abkhazia, Bahrain, Belarus, Comoros, Djibouti, Eritrea, Ethiopia, French Southern and Antarctic Lands: Scattered Islands, Iraq, Jordan, Kenya, Kuwait, Madagascar, Mayotte, Qatar, Russia (most of European part), Saudi Arabia, Somalia, Somaliland",
+    "Code": "UTC+03:00",
+    "UtcOffset": 3.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+03:30 (Iran)",
+    "Description": "Iran",
+    "Code": "UTC+03:30",
+    "UtcOffset": 3.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+04:00 (Armenia, Azerbaijan)",
+    "Description": "Armenia, Azerbaijan, French Southern and Antarctic Lands: Crozet Islands, Georgia, Mauritius, Oman, Russia: Astrakhan, Samara, Saratov, Udmurtia, Ulyanovsk, Réunion, Seychelles, United Arab Emirates",
+    "Code": "UTC+04:00",
+    "UtcOffset": 4.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+04:30 (Afghanistan)",
+    "Description": "Afghanistan",
+    "Code": "UTC+04:30",
+    "UtcOffset": 4.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+05:00 (Kazakhstan, Maldives, Pakistan)",
+    "Description": "French Southern and Antarctic Lands: Kerguelen Islands, Saint Paul Island, Amsterdam Island, Heard Island and McDonald Islands, Kazakhstan, Maldives, Pakistan, Russia: Bashkortostan, Chelyabinsk, Khanty-Mansi, Kurgan, Orenburg, Perm, Sverdlovsk, Tyumen, Yamalia, Tajikistan, Turkmenistan, Uzbekistan",
+    "Code": "UTC+05:00",
+    "UtcOffset": 5.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+05:30 (India, Sri Lanka)",
+    "Description": "India, Sri Lanka",
+    "Code": "UTC+05:30",
+    "UtcOffset": 5.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+05:45 (Nepal)",
+    "Description": "Nepal",
+    "Code": "UTC+05:45",
+    "UtcOffset": 5.75,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+06:00 (Bangladesh, Bhutan)",
+    "Description": "Bangladesh, Bhutan, British Indian Ocean Territory, Kyrgyzstan, Russia: Omsk",
+    "Code": "UTC+06:00",
+    "UtcOffset": 6.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+06:30 (Cocos Islands, Myanmar)",
+    "Description": "Cocos (Keeling) Islands, Myanmar",
+    "Code": "UTC+06:30",
+    "UtcOffset": 6.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+07:00 (Cambodia, Laos, Thailand)",
+    "Description": "Cambodia, Christmas Island, Indonesia: Sumatra, Java, West Kalimantan, Central Kalimantan, Laos, Mongolia: Bayan-Ölgii, Khovd, Uvs, Russia: Altai Krai, Altai Republic, Kemerovo, Khakassia, Krasnoyarsk, Novosibirsk, Tomsk, Tuva, Thailand, Vietnam",
+    "Code": "UTC+07:00",
+    "UtcOffset": 7.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+08:00 (China, Hong Kong, Malaysia)",
+    "Description": "Australia: Western Australia (most), Brunei, China, Hong Kong, Indonesia: South Kalimantan, East Kalimantan, North Kalimantan, Sulawesi, Lesser Sunda Islands, Macau, Malaysia, Mongolia (most), Philippines, Russia: Buryatia, Irkutsk, Singapore, Taiwan",
+    "Code": "UTC+08:00",
+    "UtcOffset": 8.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+08:45 (Australia: Eucla)",
+    "Description": "Australia: Eucla",
+    "Code": "UTC+08:45",
+    "UtcOffset": 8.75,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+09:00 (Japan, North Korea)",
+    "Description": "Timor-Leste, Indonesia: Maluku Islands, Western New Guinea, Japan, North Korea, Palau, Russia: Amur, Sakha (most), Zabaykalsky, South Korea",
+    "Code": "UTC+09:00",
+    "UtcOffset": 9.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+09:30 (Australia: Northern Territory)",
+    "Description": "Australia: Northern Territory",
+    "Code": "UTC+09:30",
+    "UtcOffset": 9.5,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+10:00 (Australia: Queensland, Papua New Guinea)",
+    "Description": "Australia: Queensland, Guam, Micronesia: Chuuk, Yap, Northern Mariana Islands, Papua New Guinea (most), Russia: Jewish, Khabarovsk, Primorsky, Sakha (central-east), Australia: Australian Capital Territory, Jervis Bay Territory, New South Wales (most), Tasmania, Victoria",
+    "Code": "UTC+10:00",
+    "UtcOffset": 10.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": 11.0
+  },
+  {
+    "Name": "UTC+10:30 (Australia: Lord Howe Island)",
+    "Description": "Australia: Lord Howe Island (DST increase is 30 minutes)",
+    "Code": "UTC+10:30",
+    "UtcOffset": 10.5,
+    "SupportsDaylightSaving": true,
+    "DstOffset": 11.0
+  },
+  {
+    "Name": "UTC+11:00 (Solomon Islands, Vanuatu)",
+    "Description": "Micronesia: Kosrae, Pohnpei, New Caledonia, Papua New Guinea: Bougainville, Russia: Magadan, Sakha (east), Sakhalin, Solomon Islands, Vanuatu, Norfolk Island",
+    "Code": "UTC+11:00",
+    "UtcOffset": 11.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+12:00 (Fiji, Kiribati)",
+    "Description": "Fiji, Kiribati: Gilbert Islands, Marshall Islands, Nauru, Russia: Chukotka, Kamchatka, Tuvalu, Wake Island, Wallis and Futuna, New Zealand (most)",
+    "Code": "UTC+12:00",
+    "UtcOffset": 12.0,
+    "SupportsDaylightSaving": true,
+    "DstOffset": 13.0
+  },
+  {
+    "Name": "UTC+12:45 (New Zealand: Chatham Islands)",
+    "Description": "New Zealand: Chatham Islands",
+    "Code": "UTC+12:45",
+    "UtcOffset": 12.75,
+    "SupportsDaylightSaving": true,
+    "DstOffset": 13.75
+  },
+  {
+    "Name": "UTC+13:00 (Samoa, Tonga)",
+    "Description": "Kiribati: Phoenix Islands, Samoa, Tokelau, Tonga",
+    "Code": "UTC+13:00",
+    "UtcOffset": 13.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "UTC+14:00 (Kiribati: Line Islands)",
+    "Description": "Kiribati: Line Islands",
+    "Code": "UTC+14:00",
+    "UtcOffset": 14.0,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  },
+  {
+    "Name": "N/A",
+    "Description": "N/A",
+    "Code": "N_A",
+    "UtcOffset": 0.01,
+    "SupportsDaylightSaving": false,
+    "DstOffset": null
+  }
+]

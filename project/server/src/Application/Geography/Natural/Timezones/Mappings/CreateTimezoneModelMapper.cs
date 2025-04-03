@@ -1,12 +1,11 @@
 // source
-using server.src.Domain.Geography.Natural.Timezones.Dtos;
 using server.src.Domain.Geography.Natural.Timezones.Models;
 
 namespace server.src.Application.Geography.Natural.Timezones.Mappings;
 
 /// <summary>
 /// Provides mapping functionality to convert a <see cref="CreateTimezoneDto"/> into a <see cref="Timezone"/> model.
-/// This utility class is used to create new terrain type instances based on provided data transfer objects.
+/// This utility class is used to create new surface type instances based on provided data transfer objects.
 /// </summary>
 public static class CreateTimezoneModelMapper
 {
@@ -19,9 +18,11 @@ public static class CreateTimezoneModelMapper
         => new()
         {
             Name = dto.Name,
-            UtcOffset = dto.UtcOffset,
-            SupportsDaylightSaving = dto.SupportsDaylightSaving,
             Description = dto.Description,
+            Code = dto.Code,
+            UtcOffset = dto.UtcOffset,
+            DstOffset = dto.DstOffset,
+            SupportsDaylightSaving = dto.SupportsDaylightSaving,
             IsActive = true,
             Version = Guid.NewGuid()
         };

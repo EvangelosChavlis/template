@@ -585,6 +585,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("character varying(2)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -644,6 +645,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("double precision");
 
                     b.Property<string>("Capital")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
@@ -661,6 +663,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("character varying(5)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -737,6 +740,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("character varying(40)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -806,6 +810,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("character varying(30)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -875,6 +880,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("character varying(45)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -894,6 +900,9 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<long>("Population")
                         .HasColumnType("bigint");
+
+                    b.Property<Guid?>("StationId")
+                        .HasColumnType("uuid");
 
                     b.Property<Guid?>("TenantId")
                         .HasColumnType("uuid");
@@ -949,6 +958,7 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("character varying(20)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -1073,6 +1083,77 @@ namespace Persistence.Migrations.Archive
                     b.ToTable("States", "geography_administrative");
                 });
 
+            modelBuilder.Entity("server.src.Domain.Geography.Administrative.Stations.Models.Station", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("LocationId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("NeighborhoodId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Station_Code");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Station_Id");
+
+                    b.HasIndex("LocationId")
+                        .IsUnique();
+
+                    b.HasIndex("NeighborhoodId")
+                        .IsUnique();
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Code", "LocationId")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Station_Id_Code_LocationId");
+
+                    b.HasIndex("Id", "Name", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Station_Id_Name_Code_IsActive");
+
+                    b.ToTable("Stations", "geography_administrative");
+                });
+
             modelBuilder.Entity("server.src.Domain.Geography.Natural.ClimateZones.Models.ClimateZone", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1085,6 +1166,11 @@ namespace Persistence.Migrations.Archive
                     b.Property<double>("AvgTemperatureC")
                         .HasColumnType("double precision");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -1095,9 +1181,6 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid?>("LockedByUserId")
-                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1115,13 +1198,21 @@ namespace Persistence.Migrations.Archive
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LockedByUserId");
-
-                    b.HasIndex("Id", "Name", "AvgTemperatureC", "AvgPrecipitationMm", "IsActive")
+                    b.HasIndex("Code")
                         .IsUnique()
-                        .HasDatabaseName("IX_ClimateZone_Id_Name_AvgTemperatureC_AvgPrecipitationMm_IsActive");
+                        .HasDatabaseName("IX_ClimateZone_Code");
 
-                    b.ToTable("ClimateZone", "geography_natural");
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_ClimateZone_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Code", "AvgTemperatureC", "AvgPrecipitationMm", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_ClimateZone_Id_Name_Code_AvgTemperatureC_AvgPrecipitationMm_IsActive");
+
+                    b.ToTable("ClimateZones", "geography_natural");
                 });
 
             modelBuilder.Entity("server.src.Domain.Geography.Natural.Locations.Models.Location", b =>
@@ -1136,6 +1227,9 @@ namespace Persistence.Migrations.Archive
                     b.Property<Guid>("ClimateZoneId")
                         .HasColumnType("uuid");
 
+                    b.Property<double>("Depth")
+                        .HasColumnType("double precision");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
@@ -1145,22 +1239,19 @@ namespace Persistence.Migrations.Archive
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid?>("LockedByUserId")
-                        .HasColumnType("uuid");
-
                     b.Property<double>("Longitude")
                         .HasColumnType("double precision");
 
                     b.Property<Guid>("NaturalFeatureId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("NeighborhoodId")
+                    b.Property<Guid?>("StationId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SurfaceTypeId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid?>("TenantId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("TerrainTypeId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("TimezoneId")
@@ -1180,19 +1271,17 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Location_Id");
 
-                    b.HasIndex("LockedByUserId");
-
                     b.HasIndex("NaturalFeatureId");
 
-                    b.HasIndex("NeighborhoodId");
-
-                    b.HasIndex("TerrainTypeId");
+                    b.HasIndex("SurfaceTypeId");
 
                     b.HasIndex("TimezoneId");
 
-                    b.HasIndex("Id", "Longitude", "Latitude", "Altitude", "IsActive")
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Longitude", "Latitude", "Altitude", "Depth", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_Location_Id_Longitude_Latitude_Altitude_IsActive");
+                        .HasDatabaseName("IX_Location_Id_Longitude_Latitude_Altitude_Depth_IsActive");
 
                     b.ToTable("Locations", "geography_natural");
                 });
@@ -1203,44 +1292,10 @@ namespace Persistence.Migrations.Archive
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
-                    b.Property<DateTime?>("LockUntil")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid?>("LockedByUserId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid?>("TenantId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid?>("UserLockedId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("Version")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("LockedByUserId");
-
-                    b.ToTable("NaturalFeature");
-                });
-
-            modelBuilder.Entity("server.src.Domain.Geography.Natural.TerrainTypes.Models.TerrainType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -1252,9 +1307,6 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid?>("LockedByUserId")
-                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1272,13 +1324,68 @@ namespace Persistence.Migrations.Archive
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LockedByUserId");
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_NaturalFeature_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_NaturalFeature_Id_Name_Code_IsActive");
+
+                    b.ToTable("NaturalFeatures", "geography_natural");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Geography.Natural.SurfaceTypes.Models.SurfaceType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_SurfaceType_Id");
+
+                    b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "Name", "Description", "IsActive")
                         .IsUnique()
-                        .HasDatabaseName("IX_TerrainType_Id_Name_Description_IsActive");
+                        .HasDatabaseName("IX_SurfaceType_Id_Name_Description_IsActive");
 
-                    b.ToTable("TerrainTypes", "geography_natural");
+                    b.ToTable("SurfaceTypes", "geography_natural");
                 });
 
             modelBuilder.Entity("server.src.Domain.Geography.Natural.Timezones.Models.Timezone", b =>
@@ -1287,9 +1394,15 @@ namespace Persistence.Migrations.Archive
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
+
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
 
                     b.Property<double?>("DstOffset")
                         .HasColumnType("double precision");
@@ -1299,9 +1412,6 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid?>("LockedByUserId")
-                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1325,13 +1435,21 @@ namespace Persistence.Migrations.Archive
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LockedByUserId");
-
-                    b.HasIndex("Id", "Name", "UtcOffset", "IsActive")
+                    b.HasIndex("Code")
                         .IsUnique()
-                        .HasDatabaseName("IX_Timezone_Id_Name_UtcOffset_IsActive");
+                        .HasDatabaseName("IX_Timezone_Code");
 
-                    b.ToTable("TimeZones", "geography_natural");
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Timezone_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "Code", "UtcOffset", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Timezone_Id_Name_Code_UtcOffset_IsActive");
+
+                    b.ToTable("Timezones", "geography_natural");
                 });
 
             modelBuilder.Entity("server.src.Domain.Metrics.AuditLogs.Models.AuditLog", b =>
@@ -1562,7 +1680,7 @@ namespace Persistence.Migrations.Archive
                     b.ToTable("Trails", "metrics");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Forecasts.Models.Forecast", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Forecasts.Models.Forecast", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -1586,9 +1704,6 @@ namespace Persistence.Migrations.Archive
                     b.Property<int>("LightningProbability")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("LocationId")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
 
@@ -1603,6 +1718,9 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<double>("PressureHpa")
                         .HasColumnType("double precision");
+
+                    b.Property<Guid>("StationId")
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Summary")
                         .IsRequired()
@@ -1648,9 +1766,9 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Forecast_Id");
 
-                    b.HasIndex("LocationId");
-
                     b.HasIndex("MoonPhaseId");
+
+                    b.HasIndex("StationId");
 
                     b.HasIndex("UserLockedId");
 
@@ -1663,11 +1781,16 @@ namespace Persistence.Migrations.Archive
                     b.ToTable("Forecasts", "weather");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.MoonPhases.Models.MoonPhase", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -1717,14 +1840,14 @@ namespace Persistence.Migrations.Archive
 
                     b.HasIndex("UserLockedId");
 
-                    b.HasIndex("Id", "Name", "Description")
+                    b.HasIndex("Id", "Name", "Code")
                         .IsUnique()
-                        .HasDatabaseName("IX_MoonPhase_Id_Name_Description");
+                        .HasDatabaseName("IX_MoonPhase_Id_Name_Code");
 
                     b.ToTable("MoonPhases", "weather");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Observations.Models.Observation", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Observations.Models.Observation", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -1742,9 +1865,6 @@ namespace Persistence.Migrations.Archive
                     b.Property<int>("LightningProbability")
                         .HasColumnType("integer");
 
-                    b.Property<Guid>("LocationId")
-                        .HasColumnType("uuid");
-
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
 
@@ -1759,6 +1879,9 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<double>("PressureHpa")
                         .HasColumnType("double precision");
+
+                    b.Property<Guid>("StationId")
+                        .HasColumnType("uuid");
 
                     b.Property<int>("TemperatureC")
                         .HasColumnType("integer");
@@ -1793,9 +1916,9 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Observation_Id");
 
-                    b.HasIndex("LocationId");
-
                     b.HasIndex("MoonPhaseId");
+
+                    b.HasIndex("StationId");
 
                     b.HasIndex("UserLockedId");
 
@@ -1806,11 +1929,16 @@ namespace Persistence.Migrations.Archive
                     b.ToTable("Observations", "weather");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Warnings.Models.Warning", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Warnings.Models.Warning", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -1822,9 +1950,6 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<DateTime?>("LockUntil")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid?>("LockedByUserId")
-                        .HasColumnType("uuid");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1851,7 +1976,7 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Warning_Id");
 
-                    b.HasIndex("LockedByUserId");
+                    b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "Name", "Description")
                         .IsUnique()
@@ -2127,11 +2252,37 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("LockedByUser");
                 });
 
+            modelBuilder.Entity("server.src.Domain.Geography.Administrative.Stations.Models.Station", b =>
+                {
+                    b.HasOne("server.src.Domain.Geography.Natural.Locations.Models.Location", "Location")
+                        .WithOne("Station")
+                        .HasForeignKey("server.src.Domain.Geography.Administrative.Stations.Models.Station", "LocationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", "Neighborhood")
+                        .WithOne("Station")
+                        .HasForeignKey("server.src.Domain.Geography.Administrative.Stations.Models.Station", "NeighborhoodId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Location");
+
+                    b.Navigation("LockedByUser");
+
+                    b.Navigation("Neighborhood");
+                });
+
             modelBuilder.Entity("server.src.Domain.Geography.Natural.ClimateZones.Models.ClimateZone", b =>
                 {
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
-                        .HasForeignKey("LockedByUserId");
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LockedByUser");
                 });
@@ -2144,25 +2295,15 @@ namespace Persistence.Migrations.Archive
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
-                        .WithMany()
-                        .HasForeignKey("LockedByUserId");
-
                     b.HasOne("server.src.Domain.Geography.Natural.NaturalFeatures.Models.NaturalFeature", "NaturalFeature")
                         .WithMany("Locations")
                         .HasForeignKey("NaturalFeatureId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", "Neighborhood")
+                    b.HasOne("server.src.Domain.Geography.Natural.SurfaceTypes.Models.SurfaceType", "SurfaceType")
                         .WithMany("Locations")
-                        .HasForeignKey("NeighborhoodId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("server.src.Domain.Geography.Natural.TerrainTypes.Models.TerrainType", "TerrainType")
-                        .WithMany("Locations")
-                        .HasForeignKey("TerrainTypeId")
+                        .HasForeignKey("SurfaceTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -2172,15 +2313,18 @@ namespace Persistence.Migrations.Archive
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("ClimateZone");
 
                     b.Navigation("LockedByUser");
 
                     b.Navigation("NaturalFeature");
 
-                    b.Navigation("Neighborhood");
-
-                    b.Navigation("TerrainType");
+                    b.Navigation("SurfaceType");
 
                     b.Navigation("Timezone");
                 });
@@ -2189,16 +2333,18 @@ namespace Persistence.Migrations.Archive
                 {
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
-                        .HasForeignKey("LockedByUserId");
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LockedByUser");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Geography.Natural.TerrainTypes.Models.TerrainType", b =>
+            modelBuilder.Entity("server.src.Domain.Geography.Natural.SurfaceTypes.Models.SurfaceType", b =>
                 {
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
-                        .HasForeignKey("LockedByUserId");
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LockedByUser");
                 });
@@ -2207,7 +2353,8 @@ namespace Persistence.Migrations.Archive
                 {
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
-                        .HasForeignKey("LockedByUserId");
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LockedByUser");
                 });
@@ -2298,18 +2445,18 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("TargetAuditLog");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Forecasts.Models.Forecast", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Forecasts.Models.Forecast", b =>
                 {
-                    b.HasOne("server.src.Domain.Geography.Natural.Locations.Models.Location", "Location")
-                        .WithMany("Forecasts")
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("server.src.Domain.Weather.MoonPhases.Models.MoonPhase", "MoonPhase")
+                    b.HasOne("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", "MoonPhase")
                         .WithMany("Forecasts")
                         .HasForeignKey("MoonPhaseId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Geography.Administrative.Stations.Models.Station", "Station")
+                        .WithMany("Forecasts")
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
@@ -2317,22 +2464,22 @@ namespace Persistence.Migrations.Archive
                         .HasForeignKey("UserLockedId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.HasOne("server.src.Domain.Weather.Warnings.Models.Warning", "Warning")
+                    b.HasOne("server.src.Domain.Weather.Collections.Warnings.Models.Warning", "Warning")
                         .WithMany("Forecasts")
                         .HasForeignKey("WarningId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Location");
-
                     b.Navigation("LockedByUser");
 
                     b.Navigation("MoonPhase");
 
+                    b.Navigation("Station");
+
                     b.Navigation("Warning");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.MoonPhases.Models.MoonPhase", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", b =>
                 {
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
@@ -2342,37 +2489,38 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("LockedByUser");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Observations.Models.Observation", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Observations.Models.Observation", b =>
                 {
-                    b.HasOne("server.src.Domain.Geography.Natural.Locations.Models.Location", "Location")
-                        .WithMany("Observation")
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("server.src.Domain.Weather.MoonPhases.Models.MoonPhase", "MoonPhase")
+                    b.HasOne("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", "MoonPhase")
                         .WithMany("Observations")
                         .HasForeignKey("MoonPhaseId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("server.src.Domain.Geography.Administrative.Stations.Models.Station", "Station")
+                        .WithMany("Observations")
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
                         .HasForeignKey("UserLockedId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.Navigation("Location");
-
                     b.Navigation("LockedByUser");
 
                     b.Navigation("MoonPhase");
+
+                    b.Navigation("Station");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Warnings.Models.Warning", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Warnings.Models.Warning", b =>
                 {
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
-                        .HasForeignKey("LockedByUserId");
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LockedByUser");
                 });
@@ -2445,7 +2593,7 @@ namespace Persistence.Migrations.Archive
 
             modelBuilder.Entity("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", b =>
                 {
-                    b.Navigation("Locations");
+                    b.Navigation("Station");
                 });
 
             modelBuilder.Entity("server.src.Domain.Geography.Administrative.Regions.Models.Region", b =>
@@ -2458,6 +2606,13 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("Regions");
                 });
 
+            modelBuilder.Entity("server.src.Domain.Geography.Administrative.Stations.Models.Station", b =>
+                {
+                    b.Navigation("Forecasts");
+
+                    b.Navigation("Observations");
+                });
+
             modelBuilder.Entity("server.src.Domain.Geography.Natural.ClimateZones.Models.ClimateZone", b =>
                 {
                     b.Navigation("Locations");
@@ -2465,9 +2620,7 @@ namespace Persistence.Migrations.Archive
 
             modelBuilder.Entity("server.src.Domain.Geography.Natural.Locations.Models.Location", b =>
                 {
-                    b.Navigation("Forecasts");
-
-                    b.Navigation("Observation");
+                    b.Navigation("Station");
                 });
 
             modelBuilder.Entity("server.src.Domain.Geography.Natural.NaturalFeatures.Models.NaturalFeature", b =>
@@ -2475,7 +2628,7 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("Locations");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Geography.Natural.TerrainTypes.Models.TerrainType", b =>
+            modelBuilder.Entity("server.src.Domain.Geography.Natural.SurfaceTypes.Models.SurfaceType", b =>
                 {
                     b.Navigation("Locations");
                 });
@@ -2497,14 +2650,14 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("Stories");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.MoonPhases.Models.MoonPhase", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", b =>
                 {
                     b.Navigation("Forecasts");
 
                     b.Navigation("Observations");
                 });
 
-            modelBuilder.Entity("server.src.Domain.Weather.Warnings.Models.Warning", b =>
+            modelBuilder.Entity("server.src.Domain.Weather.Collections.Warnings.Models.Warning", b =>
                 {
                     b.Navigation("Forecasts");
                 });

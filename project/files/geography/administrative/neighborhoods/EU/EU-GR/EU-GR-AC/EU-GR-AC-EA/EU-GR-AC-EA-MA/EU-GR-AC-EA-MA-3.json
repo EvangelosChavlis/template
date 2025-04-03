@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Vravrona Archaeological Site",
+        "Description": "An area known for the Temple of Artemis, attracting history enthusiasts and tourists.",
+        "Population": 2000,
+        "AreaKm2": 8.0,
+        "Zipcode": "19007",
+        "Code": "EU-GR-AC-EA-MA-3-VA"
+    },
+    {
+        "Name": "Loutsa",
+        "Description": "A coastal area with sandy beaches and a mix of permanent residences and holiday homes.",
+        "Population": 3000,
+        "AreaKm2": 10.0,
+        "Zipcode": "19008",
+        "Code": "EU-GR-AC-EA-MA-3-LO"
+    }
+]

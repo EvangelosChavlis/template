@@ -13,9 +13,10 @@ using server.src.Domain.Geography.Natural.Locations.Models;
 using server.src.Domain.Common.Extensions;
 using server.src.Persistence.Common.Interfaces;
 using server.src.Domain.Geography.Natural.Timezones.Models;
-using server.src.Domain.Geography.Natural.TerrainTypes.Models;
+using server.src.Domain.Geography.Natural.SurfaceTypes.Models;
 using server.src.Domain.Geography.Natural.ClimateZones.Models;
 using server.src.Domain.Geography.Natural.Locations.Extensions;
+using server.src.Domain.Geography.Natural.NaturalFeatures.Models;
 
 namespace server.src.Application.Geography.Natural.Locations.Commands;
 
@@ -102,7 +103,7 @@ public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, Resp
                 .WithMessage("Concurrency conflict.")
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
-                .WithData("The terrain type has been modified by another user. Please try again.");
+                .WithData("The surface type has been modified by another user. Please try again.");
         }
 
          // Searching Item
@@ -121,18 +122,18 @@ public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, Resp
         }
 
         // Searching Item
-        var terrainTypeFilters = new Expression<Func<TerrainType, bool>>[] { t => t.Id == command.Dto.TerrainTypeId };
-        var terrainType = await _commonRepository.GetResultByIdAsync(terrainTypeFilters, token: token);
+        var surfaceTypeFilters = new Expression<Func<SurfaceType, bool>>[] { t => t.Id == command.Dto.SurfaceTypeId };
+        var surfaceType = await _commonRepository.GetResultByIdAsync(surfaceTypeFilters, token: token);
 
         // Check for existence
-        if (terrainType is null)
+        if (surfaceType is null)
         {
             await _unitOfWork.RollbackTransactionAsync(token);
             return new Response<string>()
                 .WithMessage("Error creating location.")
                 .WithStatusCode((int)HttpStatusCode.NotFound)
                 .WithSuccess(false)
-                .WithData("Terrain type not found.");
+                .WithData("Surface type not found.");
         }
 
         // Searching Item
@@ -150,11 +151,27 @@ public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, Resp
                 .WithData("Timezone not found.");
         }
 
+        // Searching Item
+        var naturalFeatureFilters = new Expression<Func<NaturalFeature, bool>>[] { nf => nf.Id == command.Dto.TimezoneId };
+        var naturalFeature = await _commonRepository.GetResultByIdAsync(naturalFeatureFilters, token: token);
+
+        // Check for existence
+        if (naturalFeature is null)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error creating location.")
+                .WithStatusCode((int)HttpStatusCode.NotFound)
+                .WithSuccess(false)
+                .WithData("Natural feature not found.");
+        }
+
         // Mapping, Validating, Saving Item
         command.Dto.UpdateLocationMapping(
             location,
             climateZone,
-            terrainType,
+            naturalFeature,
+            surfaceType,
             timezone
         );
         var modelValidationResult = location.Validate();

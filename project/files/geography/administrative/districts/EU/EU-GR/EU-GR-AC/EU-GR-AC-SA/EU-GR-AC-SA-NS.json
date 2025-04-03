@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Nea Smyrni Center",
+    "Description": "The bustling heart of Nea Smyrni, featuring parks, shopping streets, and cultural centers.",
+    "Population": 40000,
+    "AreaKm2": 1.5,
+    "Code": "EU-GR-AC-SA-NS-1"
+  },
+  {
+    "Name": "Nea Smyrni South",
+    "Description": "A quieter, predominantly residential area, known for its family-friendly environment.",
+    "Population": 40000,
+    "AreaKm2": 2.5,
+    "Code": "EU-GR-AC-SA-NS-2"
+  }
+]

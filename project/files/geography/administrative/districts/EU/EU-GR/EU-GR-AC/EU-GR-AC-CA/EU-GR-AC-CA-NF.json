@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "Nea Filadelfeia",
+        "Description": "A bustling district with a mix of residential neighborhoods and commercial areas, known for its parks and green spaces.",
+        "Population": 45000,
+        "AreaKm2": 4.0,
+        "Code": "EU-GR-AC-CA-NF-1"
+    },
+    {
+        "Name": "Nea Chalkidona",
+        "Description": "A dynamic area with a mix of residential, industrial, and commercial spaces, offering easy access to the center of Athens.",
+        "Population": 45000,
+        "AreaKm2": 4.5,
+        "Code": "EU-GR-AC-CA-NF-2"
+    }
+]

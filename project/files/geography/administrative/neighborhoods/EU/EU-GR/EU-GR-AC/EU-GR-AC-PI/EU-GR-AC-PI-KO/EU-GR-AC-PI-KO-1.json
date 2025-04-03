@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Korydallos Main Square",
+    "Description": "A central area with shops, cafes, and public services.",
+    "Population": 35000,
+    "AreaKm2": 1.8,
+    "Zipcode": "18110",
+    "Code": "EU-GR-AC-PI-KO-1-KMS"
+  },
+  {
+    "Name": "Korydallos Residential Area",
+    "Description": "A predominantly residential neighborhood with family homes and apartment buildings.",
+    "Population": 35000,
+    "AreaKm2": 2.0,
+    "Zipcode": "18111",
+    "Code": "EU-GR-AC-PI-KO-1-KRA"
+  }
+]

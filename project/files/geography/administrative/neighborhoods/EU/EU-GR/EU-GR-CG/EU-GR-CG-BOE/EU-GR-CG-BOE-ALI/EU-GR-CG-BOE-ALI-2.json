@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Thespies Center",
+    "Description": "The heart of the town, with local markets and historic landmarks.",
+    "Population": 2000,
+    "AreaKm2": 50.0,
+    "Zipcode": "32003",
+    "Code": "EU-GR-CG-BOE-ALI-2-TC"
+  },
+  {
+    "Name": "Kastellia",
+    "Description": "A scenic neighborhood with views of the surrounding hills.",
+    "Population": 1500,
+    "AreaKm2": 40.0,
+    "Zipcode": "32004",
+    "Code": "EU-GR-CG-BOE-ALI-2-KA"
+  }
+]

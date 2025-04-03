@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Monastiraki",
+        "Description": "A bustling area known for its vibrant flea market, historic sites, and proximity to ancient landmarks like the Acropolis.",
+        "Population": 9000,
+        "AreaKm2": 0.7,
+        "Zipcode": "10555",
+        "Code": "EU-GR-AC-CA-AT-3-MO"
+    },
+    {
+        "Name": "Syntagma",
+        "Description": "The heart of Athens, home to the Greek Parliament and a major transportation hub, offering a mix of government buildings and shopping.",
+        "Population": 12000,
+        "AreaKm2": 1.0,
+        "Zipcode": "10563",
+        "Code": "EU-GR-AC-CA-AT-3-SY"
+    },
+    {
+        "Name": "Psiri",
+        "Description": "A lively nightlife area with numerous bars, restaurants, and art galleries, making it one of the city s trendiest neighborhoods.",
+        "Population": 7000,
+        "AreaKm2": 0.6,
+        "Zipcode": "10554",
+        "Code": "EU-GR-AC-CA-AT-3-PS"
+    },
+    {
+        "Name": "Kerameikos",
+        "Description": "An archaeological area known for its ancient cemetery and proximity to the trendy Gazi neighborhood, filled with cafes and bars.",
+        "Population": 5000,
+        "AreaKm2": 0.8,
+        "Zipcode": "10435",
+        "Code": "EU-GR-AC-CA-AT-3-KE"
+    }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Beachfront",
+    "Description": "A vibrant area lined with cafes, bars, and restaurants along the beach.",
+    "Population": 2000,
+    "AreaKm2": 1.5,
+    "Zipcode": "18013",
+    "Code": "EU-GR-AC-IS-AE-2-BF"
+  },
+  {
+    "Name": "Old Village",
+    "Description": "A traditional area with narrow streets, old houses, and a quiet atmosphere.",
+    "Population": 2000,
+    "AreaKm2": 2.5,
+    "Zipcode": "18014",
+    "Code": "EU-GR-AC-IS-AE-2-OV"
+  }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Ilion Center",
+        "Description": "The heart of Ilion, featuring busy commercial streets, public offices, and cultural landmarks.",
+        "Population": 8000,
+        "AreaKm2": 1.0,
+        "Zipcode": "13121",
+        "Code": "EU-GR-AC-WA-IL-1-IC"
+    },
+    {
+        "Name": "Nea Ilion",
+        "Description": "A residential neighborhood with a mix of traditional and modern housing, close to major roads.",
+        "Population": 7000,
+        "AreaKm2": 0.8,
+        "Zipcode": "13122",
+        "Code": "EU-GR-AC-WA-IL-1-NI"
+    },
+    {
+        "Name": "Palatiani",
+        "Description": "A vibrant area with local markets, restaurants, and community spaces.",
+        "Population": 7000,
+        "AreaKm2": 0.7,
+        "Zipcode": "13123",
+        "Code": "EU-GR-AC-WA-IL-1-PA"
+    }
+]

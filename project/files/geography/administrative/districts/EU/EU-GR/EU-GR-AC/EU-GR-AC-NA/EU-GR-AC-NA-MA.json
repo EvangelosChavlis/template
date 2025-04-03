@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Center",
+    "Description": "The central area of Marousi, known for its commercial hubs, shopping centers, and public transport links.",
+    "Population": 25000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-NA-MA-1"
+  },
+  {
+    "Name": "Northern Residential Area",
+    "Description": "A residential district known for its quiet streets, family homes, and green spaces.",
+    "Population": 20000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-NA-MA-2"
+  },
+  {
+    "Name": "Southern Business Area",
+    "Description": "The southern part of Marousi, home to many commercial and office buildings, retail centers, and business parks.",
+    "Population": 15000,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-NA-MA-3"
+  }
+]

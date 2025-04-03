@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Mandra Center",
+    "Description": "The heart of Mandra, with government buildings, commercial areas, and residential streets.",
+    "Population": 8000,
+    "AreaKm2": 15.0,
+    "Zipcode": "19600",
+    "Code": "EU-GR-AC-WEA-MAE-1-MC"
+  },
+  {
+    "Name": "Nea Mandra",
+    "Description": "A suburban neighborhood with modern housing and green spaces.",
+    "Population": 7000,
+    "AreaKm2": 25.0,
+    "Zipcode": "19601",
+    "Code": "EU-GR-AC-WEA-MAE-1-NM"
+  }
+]

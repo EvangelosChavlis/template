@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Nea Smyrni South Residential",
+    "Description": "A peaceful residential neighborhood with tree-lined streets and local amenities.",
+    "Population": 15000,
+    "AreaKm2": 1.2,
+    "Zipcode": "17124",
+    "Code": "EU-GR-AC-SA-NS-2-NSR"
+  },
+  {
+    "Name": "Agios Nikolaos Area",
+    "Description": "An area centered around the Agios Nikolaos church, with a mix of homes and local shops.",
+    "Population": 12000,
+    "AreaKm2": 0.8,
+    "Zipcode": "17125",
+    "Code": "EU-GR-AC-SA-NS-2-AN"
+  },
+  {
+    "Name": "Stadium Area",
+    "Description": "A neighborhood surrounding the local stadium, with sports facilities and residential buildings.",
+    "Population": 13000,
+    "AreaKm2": 0.5,
+    "Zipcode": "17126",
+    "Code": "EU-GR-AC-SA-NS-2-SA"
+  }
+]

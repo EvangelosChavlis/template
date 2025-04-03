@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Pikermi",
+        "Description": "A quiet residential area known for its tree-lined streets and family-friendly atmosphere.",
+        "Population": 2200,
+        "AreaKm2": 1.2,
+        "Zipcode": "12467",
+        "Code": "EU-GR-AC-WA-CH-3-PI"
+    },
+    {
+        "Name": "Peristeri View",
+        "Description": "A neighborhood with scenic views, surrounded by green spaces and offering a mix of residential homes.",
+        "Population": 1800,
+        "AreaKm2": 1.0,
+        "Zipcode": "12468",
+        "Code": "EU-GR-AC-WA-CH-3-PV"
+    },
+    {
+        "Name": "Agiou Nikolaou",
+        "Description": "A small but lively neighborhood with local shops and easy access to nearby parks.",
+        "Population": 1500,
+        "AreaKm2": 0.8,
+        "Zipcode": "12469",
+        "Code": "EU-GR-AC-WA-CH-3-AN"
+    }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Vilia Center",
+    "Description": "The main town in the Vilia district, offering a mix of traditional and modern housing.",
+    "Population": 3000,
+    "AreaKm2": 20.0,
+    "Zipcode": "19010",
+    "Code": "EU-GR-AC-WEA-MAE-3-VC"
+  },
+  {
+    "Name": "Kato Vilia",
+    "Description": "A rural neighborhood known for its vineyards and natural scenery.",
+    "Population": 2000,
+    "AreaKm2": 20.0,
+    "Zipcode": "19011",
+    "Code": "EU-GR-AC-WEA-MAE-3-KV"
+  }
+]

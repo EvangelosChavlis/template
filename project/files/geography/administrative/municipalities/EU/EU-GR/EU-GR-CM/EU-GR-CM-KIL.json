@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Kilkis",
+    "Code": "EU-GR-CM-KIL-KIL",
+    "Description": "The capital of Kilkis, known for its agricultural economy and proximity to the North Macedonian border.",
+    "Population": 150000,
+    "AreaKm2": 1825.0
+  },
+  {
+    "Name": "Pella",
+    "Code": "EU-GR-CM-KIL-PEL",
+    "Description": "A municipality with historical significance, including the ancient city of Pella.",
+    "Population": 45000,
+    "AreaKm2": 300.0
+  },
+  {
+    "Name": "Polykastro",
+    "Code": "EU-GR-CM-KIL-POL",
+    "Description": "A small town near the border with North Macedonia, known for its agricultural landscape.",
+    "Population": 10000,
+    "AreaKm2": 150.0
+  },
+  {
+    "Name": "Drosopigi",
+    "Code": "EU-GR-CM-KIL-DRO",
+    "Description": "A rural municipality known for its natural beauty and agricultural heritage.",
+    "Population": 5000,
+    "AreaKm2": 70.0
+  },
+  {
+    "Name": "Angistron",
+    "Code": "EU-GR-CM-KIL-ANG",
+    "Description": "A village located in a mountainous area, known for its picturesque surroundings and traditional lifestyle.",
+    "Population": 2500,
+    "AreaKm2": 80.0
+  },
+  {
+    "Name": "Choristi",
+    "Code": "EU-GR-CM-KIL-CHO",
+    "Description": "A municipality known for its rural landscapes and proximity to the border region.",
+    "Population": 3500,
+    "AreaKm2": 100.0
+  }
+]

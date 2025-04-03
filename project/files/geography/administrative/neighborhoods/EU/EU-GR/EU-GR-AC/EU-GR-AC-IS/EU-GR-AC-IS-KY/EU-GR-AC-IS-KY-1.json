@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Old Town",
+    "Description": "The historic center with narrow cobblestone streets, traditional houses, and cultural landmarks.",
+    "Population": 600,
+    "AreaKm2": 2.0,
+    "Zipcode": "80100",
+    "Code": "EU-GR-AC-IS-KY-1-OT"
+  },
+  {
+    "Name": "Central Square",
+    "Description": "A lively area with cafes, local shops, and the island's main square.",
+    "Population": 600,
+    "AreaKm2": 3.0,
+    "Zipcode": "80101",
+    "Code": "EU-GR-AC-IS-KY-1-CS"
+  }
+]

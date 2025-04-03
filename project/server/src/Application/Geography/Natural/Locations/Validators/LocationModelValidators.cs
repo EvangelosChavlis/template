@@ -22,6 +22,10 @@ public static class LocationModelValidators
         if (model.Altitude < -500 || model.Altitude > 9000) 
             errors.Add("Altitude must be a realistic value between -500 and 9000 meters.");
 
+        // Validation for Depth
+        if (model.Depth < -12000 || model.Depth > 0) 
+            errors.Add("Depth must be a realistic value between -12000 and 0 meters.");
+
         // Validation for IsActive (boolean)
         if (model.IsActive is not true && model.IsActive is not false)
             errors.Add("IsActive must be either true or false.");
@@ -30,11 +34,14 @@ public static class LocationModelValidators
         if (model.TimezoneId == Guid.Empty)
             errors.Add("TimezoneId is required.");
 
-        if (model.TerrainTypeId == Guid.Empty)
-            errors.Add("TerrainTypeId is required.");
+        if (model.SurfaceTypeId == Guid.Empty)
+            errors.Add("SurfaceTypeId is required.");
 
         if (model.ClimateZoneId == Guid.Empty)
             errors.Add("ClimateZoneId is required.");
+        
+        if (model.NaturalFeatureId == Guid.Empty)
+            errors.Add("NaturalFeatureId is required.");
 
         // Return validation result
         return errors.Count > 0 ? 

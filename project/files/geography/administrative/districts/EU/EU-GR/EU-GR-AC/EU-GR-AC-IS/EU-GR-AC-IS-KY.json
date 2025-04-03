@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Chora",
+    "Description": "The capital of the island, known for its traditional architecture, narrow alleys, and vibrant community.",
+    "Population": 1200,
+    "AreaKm2": 5.0,
+    "Code": "EU-GR-AC-IS-KY-1"
+  },
+  {
+    "Name": "Agia Pelagia",
+    "Description": "A popular coastal village known for its beautiful beaches and charming atmosphere.",
+    "Population": 1000,
+    "AreaKm2": 15.0,
+    "Code": "EU-GR-AC-IS-KY-2"
+  },
+  {
+    "Name": "Diakofti",
+    "Description": "A small coastal village, the port of the island, and a hub for ferries traveling to the mainland.",
+    "Population": 800,
+    "AreaKm2": 10.0,
+    "Code": "EU-GR-AC-IS-KY-3"
+  }
+]

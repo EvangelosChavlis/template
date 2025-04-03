@@ -20,6 +20,7 @@ public static class UpdateClimateZoneMapper
     {
         model.Name = dto.Name;
         model.Description = dto.Description;
+        model.Code = dto.Code;
         model.AvgTemperatureC = dto.AvgTemperatureC;
         model.AvgPrecipitationMm = dto.AvgPrecipitationMm;
         model.IsActive = model.IsActive;

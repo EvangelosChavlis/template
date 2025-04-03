@@ -100,7 +100,7 @@ public class UpdateMunicipalityHandler : IRequestHandler<UpdateMunicipalityComma
                 .WithMessage("Concurrency conflict.")
                 .WithStatusCode((int)HttpStatusCode.Conflict)
                 .WithSuccess(false)
-                .WithData("The terrain type has been modified by another user. Please try again.");
+                .WithData("The surface type has been modified by another user. Please try again.");
         }
 
         // Searching Item

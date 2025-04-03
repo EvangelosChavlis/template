@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Paiania Center",
+    "Description": "The heart of Paiania, featuring local markets, cultural landmarks, and a mix of residential and commercial areas.",
+    "Population": 12000,
+    "AreaKm2": 15.0,
+    "Code": "EU-GR-AC-EA-PAI-1"
+  },
+  {
+    "Name": "Glyka Nera",
+    "Description": "A growing suburban district known for its green spaces, modern housing, and accessibility to Athens.",
+    "Population": 9000,
+    "AreaKm2": 20.0,
+    "Code": "EU-GR-AC-EA-PAI-2"
+  },
+  {
+    "Name": "Kantza",
+    "Description": "A semi-rural district famous for its vineyards, wineries, and open landscapes, offering a peaceful living environment.",
+    "Population": 6000,
+    "AreaKm2": 18.2,
+    "Code": "EU-GR-AC-EA-PAI-3"
+  }
+]

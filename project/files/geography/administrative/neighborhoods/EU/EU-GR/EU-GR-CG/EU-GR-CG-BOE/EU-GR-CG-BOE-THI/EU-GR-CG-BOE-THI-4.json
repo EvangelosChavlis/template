@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Eleonas Center",
+    "Description": "The main settlement with local markets and community life.",
+    "Population": 2500,
+    "AreaKm2": 100.0,
+    "Zipcode": "32206",
+    "Code": "EU-GR-CG-BOE-THI-4-EC"
+  },
+  {
+    "Name": "Agricultural Lands",
+    "Description": "Vast farmlands producing olives, grains, and other local crops.",
+    "Population": 1000,
+    "AreaKm2": 72.92,
+    "Zipcode": "32207",
+    "Code": "EU-GR-CG-BOE-THI-4-AL"
+  }
+]

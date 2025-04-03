@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Agia Varvara Center",
+        "Description": "The central area of Agia Varvara, featuring main streets, local shops, and cafes.",
+        "Population": 3000,
+        "AreaKm2": 0.3,
+        "Zipcode": "12351",
+        "Code": "EU-GR-AC-WA-AV-1-AVC"
+    },
+    {
+        "Name": "Kato Agia Varvara",
+        "Description": "A quieter residential neighborhood with parks and local schools.",
+        "Population": 2500,
+        "AreaKm2": 0.5,
+        "Zipcode": "12352",
+        "Code": "EU-GR-AC-WA-AV-1-KAV"
+    },
+    {
+        "Name": "Kalamaki",
+        "Description": "A residential area with a mix of family homes and small businesses.",
+        "Population": 2000,
+        "AreaKm2": 0.4,
+        "Zipcode": "12353",
+        "Code": "EU-GR-AC-WA-AV-1-KA"
+    }
+]

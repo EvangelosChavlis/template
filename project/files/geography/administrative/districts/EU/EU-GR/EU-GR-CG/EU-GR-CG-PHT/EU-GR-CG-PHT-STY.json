@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Stylida City",
+    "Description": "The main urban area, known for its proximity to the Gulf of Maliakos and its scenic coastal views.",
+    "Population": 10000,
+    "AreaKm2": 30.0,
+    "Code": "EU-GR-CG-PHT-STY-1"
+  },
+  {
+    "Name": "Rural Stylida",
+    "Description": "The surrounding rural areas, known for their agriculture, olive groves, and natural landscapes.",
+    "Population": 11000,
+    "AreaKm2": 115.0,
+    "Code": "EU-GR-CG-PHT-STY-2"
+  }
+]

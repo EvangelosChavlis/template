@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Fishing Village",
+    "Description": "A quaint neighborhood known for its small fishing boats and seafood restaurants.",
+    "Population": 3000,
+    "AreaKm2": 5.0,
+    "Zipcode": "18904",
+    "Code": "EU-GR-AC-IS-SA-3-FV"
+  },
+  {
+    "Name": "Beachfront",
+    "Description": "A beautiful area with sandy beaches, tourist accommodations, and beachside cafes.",
+    "Population": 4000,
+    "AreaKm2": 10.0,
+    "Zipcode": "18905",
+    "Code": "EU-GR-AC-IS-SA-3-BF"
+  }
+]

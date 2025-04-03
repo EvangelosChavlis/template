@@ -29,7 +29,7 @@ public class MunicipalityConfiguration : IEntityTypeConfiguration<Municipality>
             .HasMaxLength(MunicipalityLength.NameLength);
 
         builder.Property(m => m.Description)
-            .IsRequired(false)
+            .IsRequired()
             .HasMaxLength(MunicipalityLength.DescriptionLength);
 
         builder.Property(m => m.Population)

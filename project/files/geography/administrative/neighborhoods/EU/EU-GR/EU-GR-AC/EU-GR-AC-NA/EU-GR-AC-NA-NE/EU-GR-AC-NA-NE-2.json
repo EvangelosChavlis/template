@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Nea Erythrea Hills",
+    "Description": "A peaceful neighborhood located on the hills, with larger houses and scenic views.",
+    "Population": 7000,
+    "AreaKm2": 1.5,
+    "Zipcode": "14602",
+    "Code": "EU-GR-AC-NA-NE-2-NEH"
+  },
+  {
+    "Name": "Kato Nea Erythrea",
+    "Description": "A suburban neighborhood with a mix of modern housing and green areas.",
+    "Population": 6000,
+    "AreaKm2": 1.5,
+    "Zipcode": "14603",
+    "Code": "EU-GR-AC-NA-NE-2-KNE"
+  }
+]

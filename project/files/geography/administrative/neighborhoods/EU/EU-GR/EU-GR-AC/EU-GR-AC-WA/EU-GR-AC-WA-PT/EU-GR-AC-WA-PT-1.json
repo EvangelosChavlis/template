@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "Petroupoli Center",
+        "Description": "The heart of Petroupoli, featuring shopping streets, restaurants, and cultural landmarks.",
+        "Population": 8000,
+        "AreaKm2": 0.9,
+        "Zipcode": "13231",
+        "Code": "EU-GR-AC-WA-PT-1-PC"
+    },
+    {
+        "Name": "Agios Dimitrios",
+        "Description": "A vibrant neighborhood with a mix of residential areas, schools, and local businesses.",
+        "Population": 7000,
+        "AreaKm2": 0.8,
+        "Zipcode": "13232",
+        "Code": "EU-GR-AC-WA-PT-1-AD"
+    },
+    {
+        "Name": "Terpsithea",
+        "Description": "A peaceful residential area with parks and family-friendly amenities.",
+        "Population": 6000,
+        "AreaKm2": 0.7,
+        "Zipcode": "13233",
+        "Code": "EU-GR-AC-WA-PT-1-TP"
+    },
+    {
+        "Name": "Ano Petroupoli",
+        "Description": "An elevated neighborhood offering scenic views of the city and easy access to Mount Parnitha.",
+        "Population": 5500,
+        "AreaKm2": 0.6,
+        "Zipcode": "13234",
+        "Code": "EU-GR-AC-WA-PT-1-AP"
+    }
+]

@@ -9,4 +9,5 @@ public class SeedDataSettings
     public string MunicipalitiesPath { get; set; }
     public string DistrictsPath { get; set; }
     public string NeighborhoodsPath { get; set; }
+    public string NaturalPath { get; set; }
 }

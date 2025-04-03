@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Agios Nikolaos",
+        "Description": "A peaceful, residential neighborhood known for its family-friendly environment and proximity to schools and parks.",
+        "Population": 4000,
+        "AreaKm2": 0.5,
+        "Zipcode": "12252",
+        "Code": "EU-GR-AC-WA-AI-4-AN"
+    },
+    {
+        "Name": "Liosia",
+        "Description": "An area characterized by its strong community presence and local small businesses, offering a more laid-back, suburban lifestyle.",
+        "Population": 3500,
+        "AreaKm2": 0.6,
+        "Zipcode": "12253",
+        "Code": "EU-GR-AC-WA-AI-4-LI"
+    },
+    {
+        "Name": "Aigaleo Park",
+        "Description": "A neighborhood surrounding a large park, offering green spaces, playgrounds, and recreational areas for families and outdoor enthusiasts.",
+        "Population": 3000,
+        "AreaKm2": 0.7,
+        "Zipcode": "12254",
+        "Code": "EU-GR-AC-WA-AI-4-AP"
+    }
+]

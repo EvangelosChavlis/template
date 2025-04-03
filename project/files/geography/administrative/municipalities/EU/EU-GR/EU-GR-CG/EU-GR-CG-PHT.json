@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Lamia",
+    "Code": "EU-GR-CG-PHT-LAM",
+    "Description": "The capital of Phthiotis, known for its rich history and as a key city in central Greece.",
+    "Population": 160000,
+    "AreaKm2": 3056.0
+  },
+  {
+    "Name": "Stylida",
+    "Code": "EU-GR-CG-PHT-STY",
+    "Description": "A coastal municipality located near the Gulf of Maliakos, with a blend of historical and natural beauty.",
+    "Population": 21000,
+    "AreaKm2": 145.0
+  },
+  {
+    "Name": "Fthiotida",
+    "Code": "EU-GR-CG-PHT-FTH",
+    "Description": "A municipality known for its archaeological sites and connection to the ancient region of Fthiotis.",
+    "Population": 18000,
+    "AreaKm2": 220.0
+  },
+  {
+    "Name": "Malesina",
+    "Code": "EU-GR-CG-PHT-MAL",
+    "Description": "A town in Phthiotis known for its proximity to the Gulf of Maliakos and its agricultural importance.",
+    "Population": 10000,
+    "AreaKm2": 120.0
+  }
+]

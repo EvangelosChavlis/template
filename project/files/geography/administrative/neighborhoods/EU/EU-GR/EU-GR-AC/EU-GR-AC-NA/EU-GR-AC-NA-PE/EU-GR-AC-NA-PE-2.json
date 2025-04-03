@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kifisia-Pefki Border",
+    "Description": "A neighborhood on the border of Kifisia, blending suburban and urban vibes.",
+    "Population": 6000,
+    "AreaKm2": 1.5,
+    "Zipcode": "14565",
+    "Code": "EU-GR-AC-NA-PE-2-KPB"
+  },
+  {
+    "Name": "Pefki Hills",
+    "Description": "A residential area located in the hills of Pefki, offering expansive views and quiet surroundings.",
+    "Population": 4000,
+    "AreaKm2": 1.0,
+    "Zipcode": "14567",
+    "Code": "EU-GR-AC-NA-PE-2-PH"
+  }
+]

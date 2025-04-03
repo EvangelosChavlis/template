@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Chalandri Square",
+    "Description": "A vibrant area with many retail stores, cafes, and local businesses.",
+    "Population": 15000,
+    "AreaKm2": 1.2,
+    "Zipcode": "15231",
+    "Code": "EU-GR-AC-NA-CH-1-CS"
+  },
+  {
+    "Name": "Chalandri High Street",
+    "Description": "A major commercial street with a mix of shops, restaurants, and office buildings.",
+    "Population": 20000,
+    "AreaKm2": 2.8,
+    "Zipcode": "15232",
+    "Code": "EU-GR-AC-NA-CH-1-CHS"
+  }
+]

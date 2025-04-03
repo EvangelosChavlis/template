@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Poligiros",
+    "Code": "EU-GR-CM-HAL-POL",
+    "Description": "The capital of Halkidiki, known for its picturesque setting and historical significance.",
+    "Population": 25000,
+    "AreaKm2": 150.0
+  },
+  {
+    "Name": "Kassandra",
+    "Code": "EU-GR-CM-HAL-KAS",
+    "Description": "One of the three peninsulas of Halkidiki, famous for its sandy beaches and vibrant tourism.",
+    "Population": 55000,
+    "AreaKm2": 450.0
+  },
+  {
+    "Name": "Sithonia",
+    "Code": "EU-GR-CM-HAL-SIT",
+    "Description": "A scenic peninsula known for its natural beauty, crystal-clear waters, and peaceful atmosphere.",
+    "Population": 25000,
+    "AreaKm2": 520.0
+  },
+  {
+    "Name": "Mount Athos",
+    "Code": "EU-GR-CM-HAL-MTA",
+    "Description": "A region famous for the monastic community and the UNESCO World Heritage Site of Mount Athos.",
+    "Population": 2000,
+    "AreaKm2": 335.0
+  },
+  {
+    "Name": "Arnea",
+    "Code": "EU-GR-CM-HAL-ARN",
+    "Description": "A historic town located inland, known for its traditional architecture and cultural heritage.",
+    "Population": 5000,
+    "AreaKm2": 60.0
+  },
+  {
+    "Name": "Nea Moudania",
+    "Code": "EU-GR-CM-HAL-NMO",
+    "Description": "A coastal town and important commercial center in Halkidiki, located near the western coast.",
+    "Population": 20000,
+    "AreaKm2": 60.0
+  }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Neo Kentro",
+        "Description": "A newly developed area with modern housing complexes and commercial spaces.",
+        "Population": 5800,
+        "AreaKm2": 0.4,
+        "Zipcode": "13247",
+        "Code": "EU-GR-AC-WA-PT-5-NK"
+    },
+    {
+        "Name": "Dytiki Petroupoli",
+        "Description": "A growing neighborhood with easy access to major roads and public transport.",
+        "Population": 5300,
+        "AreaKm2": 0.4,
+        "Zipcode": "13248",
+        "Code": "EU-GR-AC-WA-PT-5-DP"
+    }
+]

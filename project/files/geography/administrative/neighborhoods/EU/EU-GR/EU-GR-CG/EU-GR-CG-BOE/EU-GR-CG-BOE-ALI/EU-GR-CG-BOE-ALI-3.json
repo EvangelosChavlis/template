@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Koronia Village",
+    "Description": "A small village with a strong agricultural presence.",
+    "Population": 1200,
+    "AreaKm2": 30.0,
+    "Zipcode": "32005",
+    "Code": "EU-GR-CG-BOE-ALI-3-KV"
+  },
+  {
+    "Name": "Ano Koronia",
+    "Description": "A highland area with traditional stone houses and a rural atmosphere.",
+    "Population": 650,
+    "AreaKm2": 16.89,
+    "Zipcode": "32006",
+    "Code": "EU-GR-CG-BOE-ALI-3-AK"
+  }
+]

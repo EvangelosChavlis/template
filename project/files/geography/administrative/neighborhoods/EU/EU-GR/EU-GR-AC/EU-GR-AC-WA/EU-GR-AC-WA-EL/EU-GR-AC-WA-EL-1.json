@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "Eleonas Industrial Zone",
+        "Description": "A light industrial area with warehouses, small factories, and transport hubs.",
+        "Population": 1200,
+        "AreaKm2": 1.5,
+        "Zipcode": "12345",
+        "Code": "EU-GR-AC-WA-EL-1-EI"
+    },
+    {
+        "Name": "Kallithea Park",
+        "Description": "A residential neighborhood with a mix of apartments and houses, near local parks and schools.",
+        "Population": 1500,
+        "AreaKm2": 1.2,
+        "Zipcode": "12346",
+        "Code": "EU-GR-AC-WA-EL-1-KP"
+    },
+    {
+        "Name": "Eleonas Center",
+        "Description": "The commercial hub of the district, home to local shops, restaurants, and services.",
+        "Population": 1300,
+        "AreaKm2": 1.0,
+        "Zipcode": "12347",
+        "Code": "EU-GR-AC-WA-EL-1-EC"
+    }
+]

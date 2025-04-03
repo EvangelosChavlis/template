@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Beachfront",
+    "Description": "A beautiful neighborhood along the coastline with beach resorts and seaside cafes.",
+    "Population": 500,
+    "AreaKm2": 3.0,
+    "Zipcode": "18054",
+    "Code": "EU-GR-AC-IS-SP-3-BF"
+  },
+  {
+    "Name": "Villas Area",
+    "Description": "An upscale area with luxury villas and exclusive properties.",
+    "Population": 500,
+    "AreaKm2": 3.0,
+    "Zipcode": "18055",
+    "Code": "EU-GR-AC-IS-SP-3-VA"
+  }
+]

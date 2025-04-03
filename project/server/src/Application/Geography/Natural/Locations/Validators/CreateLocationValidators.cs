@@ -18,19 +18,26 @@ public static class CreateLocationValidators
         if (dto.Latitude < -90 || dto.Latitude > 90)
             errors.Add("Latitude must be between -90 and 90 degrees.");
 
-        // Validation for Altitude (assuming no specific limit, but you can set one)
+        // Validation for Altitude
         if (dto.Altitude < -500 || dto.Altitude > 9000) 
             errors.Add("Altitude must be a realistic value between -500 and 9000 meters.");
+
+        // Validation for Depth
+        if (dto.Depth < -12000 || dto.Depth > 0) 
+            errors.Add("Depth must be a realistic value between -12000 and 0 meters.");
 
         // Validation for required foreign keys
         if (dto.TimezoneId == Guid.Empty)
             errors.Add("TimezoneId is required.");
 
-        if (dto.TerrainTypeId == Guid.Empty)
-            errors.Add("TerrainTypeId is required.");
+        if (dto.SurfaceTypeId == Guid.Empty)
+            errors.Add("SurfaceTypeId is required.");
 
         if (dto.ClimateZoneId == Guid.Empty)
             errors.Add("ClimateZoneId is required.");
+
+        if (dto.NaturalFeatureId == Guid.Empty)
+            errors.Add("NaturalFeatureId is required.");
 
         // Return validation result
         return errors.Count > 0 ? 

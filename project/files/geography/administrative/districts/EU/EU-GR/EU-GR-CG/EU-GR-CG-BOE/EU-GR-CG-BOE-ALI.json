@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "Aliartos",
+    "Description": "The main town of the municipality, known for its agricultural heritage and historical sites.",
+    "Population": 5500,
+    "AreaKm2": 120.0,
+    "Code": "EU-GR-CG-BOE-ALI-1"
+  },
+  {
+    "Name": "Thespies",
+    "Description": "A historic area known for its role in the Battle of Thermopylae and its cultural heritage.",
+    "Population": 3500,
+    "AreaKm2": 90.0,
+    "Code": "EU-GR-CG-BOE-ALI-2"
+  },
+  {
+    "Name": "Koronia",
+    "Description": "A rural district known for its connection to the ancient Lake Copais region.",
+    "Population": 1850,
+    "AreaKm2": 46.89,
+    "Code": "EU-GR-CG-BOE-ALI-3"
+  }
+]

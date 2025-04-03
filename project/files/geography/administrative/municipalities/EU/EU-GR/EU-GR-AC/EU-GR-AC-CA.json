@@ -1,30 +1,58 @@
 [
-    {
+  {
       "Name": "Athens",
+      "Code": "EU-GR-AC-CA-AT",
       "Description": "The capital and largest city of Greece, known for its ancient history and vibrant cultural life.",
-      "AreaKm2": 38.96,
       "Population": 665000,
-      "Code": "EU-GR-AC-CA-AT"
-    },
-    {
-      "Name": "Kallithea",
-      "Description": "A central municipality known for its commercial hubs and proximity to the sea.",
-      "AreaKm2": 5.08,
-      "Population": 100000,
-      "Code": "EU-GR-AC-CA-KA"
-    },
-    {
-      "Name": "Psyrrí",
-      "Description": "A historic and vibrant district known for its alternative culture, nightclubs, and cafes.",
-      "AreaKm2": 1.01,
-      "Population": 25000,
-      "Code": "EU-GR-AC-CA-PS"
-    },
-    {
-      "Name": "Kolonaki",
-      "Description": "A posh and fashionable district known for high-end shopping, cafes, and elegant apartments.",
-      "AreaKm2": 1.00,
-      "Population": 25000,
-      "Code": "EU-GR-AC-CA-KO"
-    }
-]  
+      "AreaKm2": 38.96
+  },
+  {
+      "Name": "Vyronas",
+      "Code": "EU-GR-AC-CA-VY",
+      "Description": "A residential area with a rich cultural life and a strong community spirit, located in the southern part of Athens.",
+      "Population": 140000,
+      "AreaKm2": 6.0
+  },
+  {
+      "Name": "Galatsi",
+      "Code": "EU-GR-AC-CA-GA",
+      "Description": "A residential area in the northern part of Athens, known for its green spaces and local amenities.",
+      "Population": 70000,
+      "AreaKm2": 4.5
+  },
+  {
+      "Name": "Dafni-Ymittos",
+      "Code": "EU-GR-AC-CA-DA",
+      "Description": "Known for its proximity to Mount Ymittos and its blend of residential areas with modern infrastructure.",
+      "Population": 80000,
+      "AreaKm2": 7.0
+  },
+  {
+      "Name": "Zografou",
+      "Code": "EU-GR-AC-CA-ZO",
+      "Description": "A largely residential area, home to many students due to its proximity to the University of Athens.",
+      "Population": 75000,
+      "AreaKm2": 4.0
+  },
+  {
+      "Name": "Ilioupoli",
+      "Code": "EU-GR-AC-CA-IL",
+      "Description": "A suburban area in southern Athens, known for its green areas and family-friendly environment.",
+      "Population": 90000,
+      "AreaKm2": 7.5
+  },
+  {
+      "Name": "Kesariani",
+      "Code": "EU-GR-AC-CA-KE",
+      "Description": "A historical area at the foot of Mount Hymettus, known for its natural beauty and proximity to the city center.",
+      "Population": 35000,
+      "AreaKm2": 4.0
+  },
+  {
+      "Name": "Nea Filadelfeia-Nea Chalkidona",
+      "Code": "EU-GR-AC-CA-NF",
+      "Description": "A vibrant, mixed-use area known for its diverse population and central location in Athens.",
+      "Population": 90000,
+      "AreaKm2": 6.5
+  }
+]

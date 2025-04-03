@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Old Town",
+    "Description": "The oldest part of Thebes, rich in historical sites and archaeological ruins.",
+    "Population": 8000,
+    "AreaKm2": 100.0,
+    "Zipcode": "32200",
+    "Code": "EU-GR-CG-BOE-THI-1-OT"
+  },
+  {
+    "Name": "Modern Center",
+    "Description": "A bustling area with shops, cafes, and municipal buildings.",
+    "Population": 12000,
+    "AreaKm2": 200.0,
+    "Zipcode": "32201",
+    "Code": "EU-GR-CG-BOE-THI-1-MC"
+  }
+]

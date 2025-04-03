@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Kifisia Square",
+    "Description": "A vibrant square surrounded by shops, cafes, and restaurants.",
+    "Population": 5000,
+    "AreaKm2": 2.0,
+    "Zipcode": "14562",
+    "Code": "EU-GR-AC-NA-KI-1-KS"
+  },
+  {
+    "Name": "Kifisia High Street",
+    "Description": "A main road filled with luxury boutiques and international brands.",
+    "Population": 7000,
+    "AreaKm2": 2.5,
+    "Zipcode": "14564",
+    "Code": "EU-GR-AC-NA-KI-1-KHS"
+  }
+]

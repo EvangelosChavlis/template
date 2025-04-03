@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Spata",
+    "Description": "An inland district known for its airport access, agricultural areas, and suburban character.",
+    "Population": 12000,
+    "AreaKm2": 70.0,
+    "Code": "EU-GR-AC-EA-SA-1"
+  },
+  {
+    "Name": "Artemida",
+    "Description": "A coastal district known for its beaches, summer tourism, and vibrant local culture.",
+    "Population": 13000,
+    "AreaKm2": 62.0,
+    "Code": "EU-GR-AC-EA-SA-2"
+  }
+]

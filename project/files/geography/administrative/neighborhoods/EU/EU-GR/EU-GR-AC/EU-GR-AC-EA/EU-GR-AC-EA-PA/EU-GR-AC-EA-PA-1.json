@@ -1,0 +1,18 @@
+[
+    {
+        "Name": "Koropi Town",
+        "Description": "The main area of Koropi, with a mix of residential homes, shops, and parks.",
+        "Population": 12000,
+        "AreaKm2": 7.0,
+        "Zipcode": "19400",
+        "Code": "EU-GR-AC-EA-PA-1-KT"
+    },
+    {
+        "Name": "Agia Marina",
+        "Description": "A coastal neighborhood known for its beautiful beaches, local restaurants, and relaxed atmosphere.",
+        "Population": 8000,
+        "AreaKm2": 6.0,
+        "Zipcode": "19401",
+        "Code": "EU-GR-AC-EA-PA-1-AM"
+    }
+]

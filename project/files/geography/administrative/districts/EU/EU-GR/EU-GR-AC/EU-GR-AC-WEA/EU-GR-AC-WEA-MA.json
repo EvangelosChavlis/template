@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Magoula Center",
+    "Description": "The central part of Magoula with commercial areas, residential zones, and public services.",
+    "Population": 8000,
+    "AreaKm2": 8.0,
+    "Code": "EU-GR-AC-WEA-MA-1"
+  },
+  {
+    "Name": "Industrial Zone",
+    "Description": "An area focused on manufacturing and logistics, housing several industries.",
+    "Population": 4000,
+    "AreaKm2": 7.0,
+    "Code": "EU-GR-AC-WEA-MA-2"
+  }
+]
