@@ -15,8 +15,8 @@ public static class UpdateRegionValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > RegionLength.NameLength)
-            errors.Add($"Name {dto.Name} must not exceed {RegionLength.NameLength} characters.");
+        else if (dto.Name.Length > RegionSettings.NameLength)
+            errors.Add($"Name {dto.Name} must not exceed {RegionSettings.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
             errors.Add($"Name {dto.Name} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class UpdateRegionValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > RegionLength.DescriptionLength)
-            errors.Add($"Description {dto.Description} must not exceed {RegionLength.DescriptionLength} characters.");
+        else if (dto.Description.Length > RegionSettings.DescriptionLength)
+            errors.Add($"Description {dto.Description} must not exceed {RegionSettings.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class UpdateRegionValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Code is required.");
-        else if (dto.Code.Length > RegionLength.CodeLength)
-            errors.Add($"Code {dto.Code} must not exceed {RegionLength.CodeLength} characters.");
+        else if (dto.Code.Length > RegionSettings.CodeLength)
+            errors.Add($"Code {dto.Code} must not exceed {RegionSettings.CodeLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
             errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())

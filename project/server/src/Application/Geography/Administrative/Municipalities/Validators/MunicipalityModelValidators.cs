@@ -15,8 +15,8 @@ public static class MunicipalityModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > MunicipalityLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {MunicipalityLength.NameLength} characters.");
+        else if (model.Name.Length > MunicipalitySettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {MunicipalitySettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class MunicipalityModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > MunicipalityLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {MunicipalityLength.DescriptionLength} characters.");
+        else if (model.Description.Length > MunicipalitySettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {MunicipalitySettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class MunicipalityModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Description is required.");
-        else if (model.Code.Length > MunicipalityLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {MunicipalityLength.CodeLength} characters.");
+        else if (model.Code.Length > MunicipalitySettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {MunicipalitySettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

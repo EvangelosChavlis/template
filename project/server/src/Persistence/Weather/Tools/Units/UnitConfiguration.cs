@@ -26,15 +26,15 @@ public class UnitConfiguration : IEntityTypeConfiguration<Unit>
 
         builder.Property(u => u.Name)
             .IsRequired()
-            .HasMaxLength(UnitLength.NameLength);
+            .HasMaxLength(UnitSettings.NameLength);
 
         builder.Property(u => u.Symbol)
             .IsRequired()
-            .HasMaxLength(UnitLength.SymbolLength);
+            .HasMaxLength(UnitSettings.SymbolLength);
 
         builder.Property(u => u.Description)
             .IsRequired()
-            .HasMaxLength(UnitLength.DescriptionLength);
+            .HasMaxLength(UnitSettings.DescriptionLength);
 
         builder.Property(u => u.IsActive)
             .IsRequired();

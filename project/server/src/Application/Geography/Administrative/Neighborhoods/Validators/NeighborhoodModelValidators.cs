@@ -15,8 +15,8 @@ public static class NeighborhoodModelValidators
        // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > NeighborhoodLength.NameLength)
-            errors.Add($"Name must not exceed {NeighborhoodLength.NameLength} characters.");
+        else if (model.Name.Length > NeighborhoodSettings.NameLength)
+            errors.Add($"Name must not exceed {NeighborhoodSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class NeighborhoodModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > NeighborhoodLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {NeighborhoodLength.DescriptionLength} characters.");
+        else if (model.Description.Length > NeighborhoodSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {NeighborhoodSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class NeighborhoodModelValidators
         // Validation for Zipcode
         if (string.IsNullOrWhiteSpace(model.Zipcode))
             errors.Add("Zipcode is required.");
-        else if (model.Zipcode.Length > NeighborhoodLength.ZipCodeLength)
-            errors.Add($"Zipcode {model.Zipcode} must not exceed {NeighborhoodLength.ZipCodeLength} characters.");
+        else if (model.Zipcode.Length > NeighborhoodSettings.ZipCodeLength)
+            errors.Add($"Zipcode {model.Zipcode} must not exceed {NeighborhoodSettings.ZipCodeLength} characters.");
         else if (model.Zipcode.ContainsInjectionCharacters())
             errors.Add($"Zipcode {model.Zipcode} contains invalid characters.");
         else if (model.Zipcode.ContainsNonPrintableCharacters())
@@ -45,8 +45,8 @@ public static class NeighborhoodModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > NeighborhoodLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {NeighborhoodLength.CodeLength} characters.");
+        else if (model.Code.Length > NeighborhoodSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {NeighborhoodSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

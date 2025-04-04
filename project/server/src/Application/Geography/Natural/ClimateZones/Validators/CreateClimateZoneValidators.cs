@@ -21,8 +21,8 @@ public static class CreateClimateZoneValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > ClimateZoneLength.NameLength)
-            errors.Add($"Name {dto.Name} must not exceed {ClimateZoneLength.NameLength} characters.");
+        else if (dto.Name.Length > ClimateZoneSettings.NameLength)
+            errors.Add($"Name {dto.Name} must not exceed {ClimateZoneSettings.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
             errors.Add($"Name {dto.Name} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
@@ -31,8 +31,8 @@ public static class CreateClimateZoneValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > ClimateZoneLength.DescriptionLength)
-            errors.Add($"Description {dto.Description} must not exceed {ClimateZoneLength.DescriptionLength} characters.");
+        else if (dto.Description.Length > ClimateZoneSettings.DescriptionLength)
+            errors.Add($"Description {dto.Description} must not exceed {ClimateZoneSettings.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
@@ -41,8 +41,8 @@ public static class CreateClimateZoneValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Code is required.");
-        else if (dto.Code.Length > ClimateZoneLength.CodeLength)
-            errors.Add($"Code {dto.Code} must not exceed {ClimateZoneLength.CodeLength} characters.");
+        else if (dto.Code.Length > ClimateZoneSettings.CodeLength)
+            errors.Add($"Code {dto.Code} must not exceed {ClimateZoneSettings.CodeLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
             errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Code.ContainsNonPrintableCharacters())

@@ -11,12 +11,21 @@ public class LogErrorIndexes : IEntityTypeConfiguration<LogError>
 {
     public void Configure(EntityTypeBuilder<LogError> builder)
     {
-        builder.HasIndex(e 
+        builder.HasIndex(le => le.Id)
+            .IsUnique()
+            .HasDatabaseName(@$"IX_
+                {nameof(LogError)}_
+                {nameof(LogError.Id)}"
+            .Replace("\r\n", "")
+            .Replace(" ", "")
+            .Trim());
+
+        builder.HasIndex(le 
             => new { 
-                e.Id, 
-                e.Error, 
-                e.StatusCode, 
-                e.Timestamp
+                le.Id, 
+                le.Error, 
+                le.StatusCode, 
+                le.Timestamp
             })
             .IsUnique()
             .HasDatabaseName($@"IX_

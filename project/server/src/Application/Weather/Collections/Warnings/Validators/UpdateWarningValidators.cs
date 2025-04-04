@@ -15,8 +15,8 @@ public static class UpdateWarningValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > WarningLength.NameLength)
-            errors.Add($"Name {dto.Name} must not exceed {WarningLength.NameLength} characters.");
+        else if (dto.Name.Length > WarningSettings.NameLength)
+            errors.Add($"Name {dto.Name} must not exceed {WarningSettings.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
             errors.Add($"Name {dto.Name} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class UpdateWarningValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > WarningLength.DescriptionLength)
-            errors.Add($"Description {dto.Description} must not exceed {WarningLength.DescriptionLength} characters.");
+        else if (dto.Description.Length > WarningSettings.DescriptionLength)
+            errors.Add($"Description {dto.Description} must not exceed {WarningSettings.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class UpdateWarningValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Code is required.");
-        else if (dto.Code.Length > WarningLength.CodeLength)
-            errors.Add($"Code {dto.Code} must not exceed {WarningLength.CodeLength} characters.");
+        else if (dto.Code.Length > WarningSettings.CodeLength)
+            errors.Add($"Code {dto.Code} must not exceed {WarningSettings.CodeLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
             errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Code.ContainsNonPrintableCharacters())
@@ -45,8 +45,8 @@ public static class UpdateWarningValidators
         // Validation for RecommendedActions
         if (string.IsNullOrWhiteSpace(dto.RecommendedActions))
             errors.Add("RecommendedActions is required.");
-        else if (dto.RecommendedActions.Length > WarningLength.RecommendedActionsLength)
-            errors.Add($"RecommendedActions {dto.RecommendedActions} must not exceed {WarningLength.RecommendedActionsLength} characters.");
+        else if (dto.RecommendedActions.Length > WarningSettings.RecommendedActionsLength)
+            errors.Add($"RecommendedActions {dto.RecommendedActions} must not exceed {WarningSettings.RecommendedActionsLength} characters.");
         else if (dto.RecommendedActions.ContainsInjectionCharacters())
             errors.Add($"RecommendedActions {dto.RecommendedActions} contains invalid characters.");
         else if (dto.RecommendedActions.ContainsNonPrintableCharacters())

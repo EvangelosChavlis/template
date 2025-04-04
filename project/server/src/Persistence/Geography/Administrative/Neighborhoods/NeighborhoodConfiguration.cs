@@ -26,11 +26,11 @@ public class NeighborhoodConfiguration : IEntityTypeConfiguration<Neighborhood>
 
         builder.Property(n => n.Name)
             .IsRequired()
-            .HasMaxLength(NeighborhoodLength.NameLength);
+            .HasMaxLength(NeighborhoodSettings.NameLength);
 
         builder.Property(n => n.Description)
             .IsRequired()
-            .HasMaxLength(NeighborhoodLength.DescriptionLength);
+            .HasMaxLength(NeighborhoodSettings.DescriptionLength);
 
         builder.Property(n => n.Population)
             .IsRequired();
@@ -40,11 +40,11 @@ public class NeighborhoodConfiguration : IEntityTypeConfiguration<Neighborhood>
 
         builder.Property(n => n.Zipcode)
             .IsRequired()
-            .HasMaxLength(NeighborhoodLength.ZipCodeLength);
+            .HasMaxLength(NeighborhoodSettings.ZipCodeLength);
 
         builder.Property(n => n.Code)
             .IsRequired()
-            .HasMaxLength(NeighborhoodLength.CodeLength);
+            .HasMaxLength(NeighborhoodSettings.CodeLength);
 
         builder.Property(n => n.IsActive)
             .IsRequired();

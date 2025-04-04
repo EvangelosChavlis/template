@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
 using server.src.Domain.Metrics.Trails;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Metrics.Trails;
 
@@ -20,7 +21,7 @@ public class TrailConfiguration : IEntityTypeConfiguration<Trail>
 
     public void Configure(EntityTypeBuilder<Trail> builder)
     {
-        builder.HasKey(c => c.Id);
+        builder.ConfigureBaseEntityProperties();
 
         builder.Property(c => c.Timestamp)
                 .IsRequired();

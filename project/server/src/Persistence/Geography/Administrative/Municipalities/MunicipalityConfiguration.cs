@@ -26,11 +26,11 @@ public class MunicipalityConfiguration : IEntityTypeConfiguration<Municipality>
 
         builder.Property(m => m.Name)
             .IsRequired()
-            .HasMaxLength(MunicipalityLength.NameLength);
+            .HasMaxLength(MunicipalitySettings.NameLength);
 
         builder.Property(m => m.Description)
             .IsRequired()
-            .HasMaxLength(MunicipalityLength.DescriptionLength);
+            .HasMaxLength(MunicipalitySettings.DescriptionLength);
 
         builder.Property(m => m.Population)
             .IsRequired();
@@ -40,7 +40,7 @@ public class MunicipalityConfiguration : IEntityTypeConfiguration<Municipality>
 
         builder.Property(r => r.Code)
             .IsRequired()
-            .HasMaxLength(MunicipalityLength.CodeLength);
+            .HasMaxLength(MunicipalitySettings.CodeLength);
 
         builder.Property(m => m.IsActive)
             .IsRequired();

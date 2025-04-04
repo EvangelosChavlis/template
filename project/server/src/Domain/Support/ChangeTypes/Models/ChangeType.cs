@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Support.Changes.Models;
 
 namespace server.src.Domain.Support.ChangeTypes.Models;
@@ -7,13 +8,8 @@ namespace server.src.Domain.Support.ChangeTypes.Models;
 /// Represents a type of change in the system.
 /// Defines different categories of modifications, such as additions, updates, or deletions.
 /// </summary>
-public class ChangeType
+public class ChangeType : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the change type.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the change type.
     /// Provides a label for the type of modification, such as "Update" or "Delete."

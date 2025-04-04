@@ -15,8 +15,8 @@ public static class ContinentModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > ContinentLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {ContinentLength.NameLength} characters.");
+        else if (model.Name.Length > ContinentSettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {ContinentSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class ContinentModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > ContinentLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {ContinentLength.CodeLength} characters.");
+        else if (model.Code.Length > ContinentSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {ContinentSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class ContinentModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > ContinentLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {ContinentLength.DescriptionLength} characters.");
+        else if (model.Description.Length > ContinentSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {ContinentSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())

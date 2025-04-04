@@ -26,18 +26,18 @@ public class RegionConfiguration : IEntityTypeConfiguration<Region>
 
         builder.Property(r => r.Name)
             .IsRequired()
-            .HasMaxLength(RegionLength.NameLength);
+            .HasMaxLength(RegionSettings.NameLength);
 
         builder.Property(r => r.Description)
             .IsRequired()
-            .HasMaxLength(RegionLength.DescriptionLength);
+            .HasMaxLength(RegionSettings.DescriptionLength);
 
         builder.Property(r => r.AreaKm2)
             .IsRequired();
 
         builder.Property(r => r.Code)
             .IsRequired()
-            .HasMaxLength(RegionLength.CodeLength);
+            .HasMaxLength(RegionSettings.CodeLength);
 
         builder.Property(r => r.IsActive)
             .IsRequired();

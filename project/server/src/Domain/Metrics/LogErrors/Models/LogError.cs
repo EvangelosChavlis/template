@@ -1,19 +1,14 @@
 // source
 using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Models;
 
 namespace server.src.Domain.Metrics.LogErrors.Models;
 
 /// <summary>
 /// Represents an error log entry in the system. This class is typically used to store error details for logging purposes.
 /// </summary>
-public class LogError
+public class LogError : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the error log entry.
-    /// This can be used to uniquely identify an error in a logging system or database.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the error message describing the nature of the error.
     /// This message provides a brief explanation of the error that occurred.

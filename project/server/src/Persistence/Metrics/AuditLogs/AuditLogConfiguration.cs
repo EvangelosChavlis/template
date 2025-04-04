@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Metrics.AuditLogs.Extensions;
 using server.src.Domain.Metrics.AuditLogs.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Metrics.AuditLogs;
 
@@ -20,14 +22,13 @@ public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
 
     public void Configure(EntityTypeBuilder<AuditLog> builder)
     {
-        builder.HasKey(a => a.Id);
+        builder.ConfigureBaseEntityProperties();
 
         builder.Property(a => a.EntityId)
                 .IsRequired();
 
         builder.Property(a => a.EntityType)
-                .IsRequired()
-                .HasConversion<string>();
+                .IsRequired();
 
         builder.Property(a => a.Action)
                 .IsRequired()
@@ -40,19 +41,19 @@ public class AuditLogConfiguration : IEntityTypeConfiguration<AuditLog>
                 .IsRequired();
 
         builder.Property(a => a.IPAddress)
-                .HasMaxLength(45);
+                .HasMaxLength(AuditLogSettings.IPAddressLength);
 
         builder.Property(a => a.Reason)
-                .HasMaxLength(500);
+                .HasMaxLength(AuditLogSettings.ReasonLength);
 
         builder.Property(a => a.AdditionalMetadata)
-                .HasColumnType("jsonb"); 
+                .HasColumnType(AuditLogSettings.AdditionalMetadataType); 
 
         builder.Property(a => a.BeforeValues)
-                .HasColumnType("jsonb");
+                .HasColumnType(AuditLogSettings.BeforeValuesType);
 
         builder.Property(a => a.AfterValues)
-                .HasColumnType("jsonb");
+                .HasColumnType(AuditLogSettings.AfterValuesType);
 
         builder.HasOne(a => a.User)
                 .WithMany(u => u.AuditLogs)

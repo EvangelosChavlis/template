@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
 using server.src.Domain.Metrics.TelemetryRecords.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Metrics.TelemetryRecords;
 
@@ -20,7 +21,7 @@ public class TelemetryRecordConfiguration : IEntityTypeConfiguration<TelemetryRe
 
     public void Configure(EntityTypeBuilder<TelemetryRecord> builder)
     {
-        builder.HasKey(t => t.Id);
+        builder.ConfigureBaseEntityProperties();
 
         builder.Property(t => t.Method)
             .IsRequired();

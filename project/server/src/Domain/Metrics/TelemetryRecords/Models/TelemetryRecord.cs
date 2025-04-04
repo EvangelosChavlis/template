@@ -1,5 +1,6 @@
 // source
 using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Models;
 using server.src.Domain.Metrics.AuditLogs.Models;
 using server.src.Domain.Metrics.Stories;
 
@@ -9,14 +10,8 @@ namespace server.src.Domain.Metrics.TelemetryRecords.Models;
 /// This class stores performance metrics related to the request and response lifecycle, 
 /// such as request method, status code, response time, memory usage, etc.
 /// </summary>
-public class TelemetryRecord
+public class TelemetryRecord : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the telemetry record.
-    /// This can be used to uniquely identify the telemetry entry in a logging system or database.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the HTTP method used for the request (e.g., GET, POST, PUT, DELETE).
     /// This represents the type of operation performed on the server.

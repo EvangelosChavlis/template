@@ -26,15 +26,15 @@ public class HealthStatusConfiguration : IEntityTypeConfiguration<HealthStatus>
 
         builder.Property(hs => hs.Name)
             .IsRequired()
-            .HasMaxLength(HealthStatusLength.NameLength);
+            .HasMaxLength(HealthStatusSettings.NameLength);
 
         builder.Property(hs => hs.Description)
             .IsRequired()
-            .HasMaxLength(HealthStatusLength.DescriptionLength);
+            .HasMaxLength(HealthStatusSettings.DescriptionLength);
 
         builder.Property(hs => hs.Code)
             .IsRequired()
-            .HasMaxLength(HealthStatusLength.CodeLength);
+            .HasMaxLength(HealthStatusSettings.CodeLength);
 
         builder.Property(hs => hs.IsActive)
             .IsRequired();

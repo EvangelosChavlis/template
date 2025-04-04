@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Support.Changes.Models;
 
 namespace server.src.Domain.Support.ChangeLogs.Models;
@@ -6,18 +7,13 @@ namespace server.src.Domain.Support.ChangeLogs.Models;
 /// <summary>
 /// Represents a log entry that tracks changes made to the system.
 /// </summary>
-public class ChangeLog
+public class ChangeLog : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the change log entry.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the version associated with the change log.
     /// This can be used to track changes across different application versions.
     /// </summary>
-    public string Version { get; set; }
+    public string VersionLog { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the change log entry.

@@ -15,18 +15,18 @@ public static class NaturalFeatureModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > NaturalFeatureLength.NameLength)
-            errors.Add($"Name {NaturalFeatureLength.NameLength} must not exceed {NaturalFeatureLength.NameLength} characters.");
+        else if (model.Name.Length > NaturalFeatureSettings.NameLength)
+            errors.Add($"Name {NaturalFeatureSettings.NameLength} must not exceed {NaturalFeatureSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
-            errors.Add($"Name {NaturalFeatureLength.NameLength} contains invalid characters.");
+            errors.Add($"Name {NaturalFeatureSettings.NameLength} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
-            errors.Add($"Name {NaturalFeatureLength.NameLength} contains non-printable characters.");
+            errors.Add($"Name {NaturalFeatureSettings.NameLength} contains non-printable characters.");
 
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > NaturalFeatureLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {NaturalFeatureLength.DescriptionLength} characters.");
+        else if (model.Description.Length > NaturalFeatureSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {NaturalFeatureSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class NaturalFeatureModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > NaturalFeatureLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {NaturalFeatureLength.CodeLength} characters.");
+        else if (model.Code.Length > NaturalFeatureSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {NaturalFeatureSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())

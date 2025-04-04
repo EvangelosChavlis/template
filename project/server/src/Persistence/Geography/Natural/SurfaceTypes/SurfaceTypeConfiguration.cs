@@ -26,15 +26,15 @@ public class SurfaceTypeConfiguration : IEntityTypeConfiguration<SurfaceType>
 
         builder.Property(s => s.Name)
             .IsRequired()
-            .HasMaxLength(SurfaceTypeLength.NameLength);
+            .HasMaxLength(SurfaceTypeSettings.NameLength);
 
         builder.Property(s => s.Description)
             .IsRequired()
-            .HasMaxLength(SurfaceTypeLength.DescriptionLength);
+            .HasMaxLength(SurfaceTypeSettings.DescriptionLength);
 
         builder.Property(s => s.Code)
             .IsRequired()
-            .HasMaxLength(SurfaceTypeLength.CodeLength);
+            .HasMaxLength(SurfaceTypeSettings.CodeLength);
 
         builder.Property(s => s.IsActive)
             .IsRequired();

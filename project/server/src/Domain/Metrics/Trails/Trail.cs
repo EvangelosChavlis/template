@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Metrics.AuditLogs.Models;
 
 namespace server.src.Domain.Metrics.Trails;
@@ -8,13 +9,8 @@ namespace server.src.Domain.Metrics.Trails;
 /// forming a sequential record of changes for an entity.  
 /// This allows tracking of how an entity's state evolves over time.  
 /// </summary>
-public class Trail
+public class Trail : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier of the trail entry.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the timestamp when this trail entry was created.
     /// </summary>

@@ -1,18 +1,19 @@
 // source
-using server.src.Domain.Support.FAQCategories;
+using server.src.Domain.Common.Models;
+using server.src.Domain.Support.FAQCategories.Models;
 
 namespace server.src.Domain.Support.FAQs.Models;
 
 /// <summary>
 /// Represents a Frequently Asked Question (FAQ).
 /// </summary>
-public class FAQ
+public class FAQ : BaseEntity
 {
     /// <summary>
-    /// Unique identifier for the FAQ.
+    /// The title of the FAQ.
     /// </summary>
-    public Guid Id { get; set; }
-
+    public string Title { get; set; }
+    
     /// <summary>
     /// The question being asked.
     /// </summary>

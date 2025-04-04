@@ -15,8 +15,8 @@ public static class MoonPhaseModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > MoonPhaseLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {MoonPhaseLength.NameLength} characters.");
+        else if (model.Name.Length > MoonPhaseSettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {MoonPhaseSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class MoonPhaseModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > MoonPhaseLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {MoonPhaseLength.DescriptionLength} characters.");
+        else if (model.Description.Length > MoonPhaseSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {MoonPhaseSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class MoonPhaseModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > MoonPhaseLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {MoonPhaseLength.CodeLength} characters.");
+        else if (model.Code.Length > MoonPhaseSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {MoonPhaseSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

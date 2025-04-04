@@ -26,15 +26,15 @@ public class StateConfiguration : IEntityTypeConfiguration<State>
 
         builder.Property(s => s.Name)
             .IsRequired()
-            .HasMaxLength(StateLength.NameLength);
+            .HasMaxLength(StateSettings.NameLength);
 
         builder.Property(s => s.Description)
             .IsRequired(false)
-            .HasMaxLength(StateLength.DescriptionLength);
+            .HasMaxLength(StateSettings.DescriptionLength);
 
         builder.Property(s => s.Capital)
             .IsRequired(false)
-            .HasMaxLength(StateLength.CapitalLength);
+            .HasMaxLength(StateSettings.CapitalLength);
 
         builder.Property(s => s.Population)
             .IsRequired();
@@ -44,7 +44,7 @@ public class StateConfiguration : IEntityTypeConfiguration<State>
 
         builder.Property(s => s.Code)
             .IsRequired()
-            .HasMaxLength(StateLength.CodeLength);
+            .HasMaxLength(StateSettings.CodeLength);
 
         builder.Property(s => s.IsActive)
             .IsRequired();

@@ -81,8 +81,8 @@ public static class ForecastModelValidators
         // Validation for Summary
         if (string.IsNullOrWhiteSpace(model.Summary))
             errors.Add("Summary is required.");
-        else if (model.Summary.Length > ForecastLength.SummaryLength)
-            errors.Add($"Summary {model.Summary} must not exceed {ForecastLength.SummaryLength} characters.");
+        else if (model.Summary.Length > ForecastSettings.SummaryLength)
+            errors.Add($"Summary {model.Summary} must not exceed {ForecastSettings.SummaryLength} characters.");
         else if (model.Summary.ContainsInjectionCharacters())
             errors.Add($"Summary {model.Summary} contains invalid characters.");
         else if (model.Summary.ContainsNonPrintableCharacters())

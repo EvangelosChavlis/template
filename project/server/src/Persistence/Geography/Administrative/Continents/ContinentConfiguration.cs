@@ -26,15 +26,15 @@ public class ContinentConfiguration : IEntityTypeConfiguration<Continent>
 
         builder.Property(c => c.Name)
             .IsRequired()
-            .HasMaxLength(ContinentLength.NameLength);
+            .HasMaxLength(ContinentSettings.NameLength);
 
         builder.Property(c => c.Code)
             .IsRequired()
-            .HasMaxLength(ContinentLength.CodeLength);
+            .HasMaxLength(ContinentSettings.CodeLength);
 
         builder.Property(c => c.Description)
             .IsRequired()
-            .HasMaxLength(ContinentLength.DescriptionLength);
+            .HasMaxLength(ContinentSettings.DescriptionLength);
 
         builder.Property(c => c.AreaKm2)
             .IsRequired();

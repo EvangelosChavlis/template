@@ -26,15 +26,15 @@ public class TimezoneConfiguration : IEntityTypeConfiguration<Timezone>
 
         builder.Property(t => t.Name)
             .IsRequired()
-            .HasMaxLength(TimezoneLength.NameLength);
+            .HasMaxLength(TimezoneSettings.NameLength);
             
         builder.Property(t => t.Description)
             .IsRequired()
-            .HasMaxLength(TimezoneLength.DescriptionLength);
+            .HasMaxLength(TimezoneSettings.DescriptionLength);
 
         builder.Property(t => t.Code)
             .IsRequired()
-            .HasMaxLength(TimezoneLength.CodeLength);
+            .HasMaxLength(TimezoneSettings.CodeLength);
 
         builder.Property(t => t.UtcOffset)
             .IsRequired();

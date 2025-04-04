@@ -25,8 +25,8 @@ public static class ClimateZoneModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > ClimateZoneLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {ClimateZoneLength.NameLength} characters.");
+        else if (model.Name.Length > ClimateZoneSettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {ClimateZoneSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class ClimateZoneModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > ClimateZoneLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {ClimateZoneLength.DescriptionLength} characters.");
+        else if (model.Description.Length > ClimateZoneSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {ClimateZoneSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -45,8 +45,8 @@ public static class ClimateZoneModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > ClimateZoneLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {ClimateZoneLength.CodeLength} characters.");
+        else if (model.Code.Length > ClimateZoneSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {ClimateZoneSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

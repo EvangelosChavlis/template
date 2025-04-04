@@ -11,7 +11,7 @@ public class SensorIndexes : IEntityTypeConfiguration<Sensor>
 {
     public void Configure(EntityTypeBuilder<Sensor> builder)
     {
-        builder.HasIndex(hs => hs.Id)
+        builder.HasIndex(s => s.Id)
             .IsUnique()
             .HasDatabaseName(@$"IX_
                 {nameof(Sensor)}_
@@ -20,12 +20,12 @@ public class SensorIndexes : IEntityTypeConfiguration<Sensor>
             .Replace(" ", "")
             .Trim());
 
-        builder.HasIndex(hs 
+        builder.HasIndex(s 
             => new { 
-                hs.Id, 
-                hs.Name, 
-                hs.SN,
-                hs.IsActive
+                s.Id, 
+                s.Name, 
+                s.SN,
+                s.IsActive
             })
             .IsUnique()
             .HasDatabaseName($@"IX_

@@ -15,8 +15,8 @@ public static class StateModelValidators
        // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > StateLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {StateLength.NameLength} characters.");
+        else if (model.Name.Length > StateSettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {StateSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class StateModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > StateLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {StateLength.DescriptionLength} characters.");
+        else if (model.Description.Length > StateSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {StateSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class StateModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > StateLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {StateLength.CodeLength} characters.");
+        else if (model.Code.Length > StateSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {StateSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())
@@ -45,8 +45,8 @@ public static class StateModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > StateLength.CodeLength)
-            errors.Add($"Code must not exceed {StateLength.CodeLength} characters.");
+        else if (model.Code.Length > StateSettings.CodeLength)
+            errors.Add($"Code must not exceed {StateSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

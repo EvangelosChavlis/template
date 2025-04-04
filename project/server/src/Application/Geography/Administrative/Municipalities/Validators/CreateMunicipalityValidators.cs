@@ -15,8 +15,8 @@ public static class CreateMunicipalityValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > MunicipalityLength.NameLength)
-            errors.Add($"Name {dto.Name} must not exceed {MunicipalityLength.NameLength} characters.");
+        else if (dto.Name.Length > MunicipalitySettings.NameLength)
+            errors.Add($"Name {dto.Name} must not exceed {MunicipalitySettings.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
             errors.Add($"Name {dto.Name} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class CreateMunicipalityValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > MunicipalityLength.DescriptionLength)
-            errors.Add($"Description {dto.Description} must not exceed {MunicipalityLength.DescriptionLength} characters.");
+        else if (dto.Description.Length > MunicipalitySettings.DescriptionLength)
+            errors.Add($"Description {dto.Description} must not exceed {MunicipalitySettings.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class CreateMunicipalityValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Description is required.");
-        else if (dto.Code.Length > MunicipalityLength.CodeLength)
-            errors.Add($"Code {dto.Code} must not exceed {MunicipalityLength.CodeLength} characters.");
+        else if (dto.Code.Length > MunicipalitySettings.CodeLength)
+            errors.Add($"Code {dto.Code} must not exceed {MunicipalitySettings.CodeLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
             errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Code.ContainsNonPrintableCharacters())

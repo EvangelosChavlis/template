@@ -26,21 +26,15 @@ public class SensorConfiguration : IEntityTypeConfiguration<Sensor>
         
         builder.Property(s => s.Name)
             .IsRequired()
-            .HasMaxLength(SensorLength.NameLength);
+            .HasMaxLength(SensorSettings.NameLength);
 
         builder.Property(s => s.Manufacturer)
             .IsRequired()
-            .HasMaxLength(SensorLength.ManufacturerLength);
+            .HasMaxLength(SensorSettings.ManufacturerLength);
 
         builder.Property(s => s.SN)
             .IsRequired()
-            .HasMaxLength(SensorLength.SNLength);
-
-        builder.Property(s => s.CurreantValue)
-            .IsRequired();
-
-        builder.Property(s => s.Timestamp)
-            .IsRequired();
+            .HasMaxLength(SensorSettings.SNLength);
 
         builder.Property(s => s.IsActive)
             .IsRequired();
@@ -58,6 +52,11 @@ public class SensorConfiguration : IEntityTypeConfiguration<Sensor>
         builder.HasOne(s => s.Station)
             .WithMany(st => st.Sensors)
             .HasForeignKey(s => s.StationId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(s => s.Series)
+            .WithOne(se => se.Sensor)
+            .HasForeignKey(se => se.SensorId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.ToTable(_tableName, _schema);

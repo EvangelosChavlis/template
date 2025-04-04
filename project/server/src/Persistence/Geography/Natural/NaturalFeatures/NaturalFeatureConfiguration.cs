@@ -26,15 +26,15 @@ public class NaturalFeatureConfiguration : IEntityTypeConfiguration<NaturalFeatu
 
         builder.Property(nf => nf.Name)
             .IsRequired()
-            .HasMaxLength(NaturalFeatureLength.NameLength);
+            .HasMaxLength(NaturalFeatureSettings.NameLength);
 
         builder.Property(nf => nf.Description)
             .IsRequired()
-            .HasMaxLength(NaturalFeatureLength.DescriptionLength);
+            .HasMaxLength(NaturalFeatureSettings.DescriptionLength);
 
         builder.Property(nf => nf.Code)
             .IsRequired()
-            .HasMaxLength(NaturalFeatureLength.CodeLength);
+            .HasMaxLength(NaturalFeatureSettings.CodeLength);
 
         builder.Property(nf => nf.IsActive)
             .IsRequired();

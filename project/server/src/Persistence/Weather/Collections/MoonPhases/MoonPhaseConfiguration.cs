@@ -26,13 +26,13 @@ public class MoonPhaseConfiguration : IEntityTypeConfiguration<MoonPhase>
         
         builder.Property(m => m.Name)
                 .IsRequired()
-                .HasMaxLength(MoonPhaseLength.NameLength); 
+                .HasMaxLength(MoonPhaseSettings.NameLength); 
 
         builder.Property(m => m.Description)
-                .HasMaxLength(MoonPhaseLength.DescriptionLength);
+                .HasMaxLength(MoonPhaseSettings.DescriptionLength);
 
         builder.Property(m => m.Code)
-                .HasMaxLength(MoonPhaseLength.CodeLength);
+                .HasMaxLength(MoonPhaseSettings.CodeLength);
 
         builder.Property(m => m.IlluminationPercentage)
             .IsRequired();

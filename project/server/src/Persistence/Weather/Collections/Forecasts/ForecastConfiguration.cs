@@ -73,7 +73,7 @@ public class ForecastConfiguration : IEntityTypeConfiguration<Forecast>
               .IsRequired();
 
        builder.Property(f => f.Summary)
-              .HasMaxLength(ForecastLength.SummaryLength);
+              .HasMaxLength(ForecastSettings.SummaryLength);
 
        builder.Property(f => f.WarningId)
               .IsRequired();

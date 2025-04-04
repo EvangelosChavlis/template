@@ -15,8 +15,8 @@ public static class CountryModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > CountryLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {CountryLength.NameLength} characters.");
+        else if (model.Name.Length > CountrySettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {CountrySettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class CountryModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > CountryLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {CountryLength.DescriptionLength} characters.");
+        else if (model.Description.Length > CountrySettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {CountrySettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class CountryModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > CountryLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {CountryLength.CodeLength} characters.");
+        else if (model.Code.Length > CountrySettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {CountrySettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())
@@ -45,8 +45,8 @@ public static class CountryModelValidators
         // Validation for PhoneCode
         if (string.IsNullOrWhiteSpace(model.PhoneCode))
             errors.Add("PhoneCode is required.");
-        else if (model.PhoneCode.Length > CountryLength.PhoneCodeLength)
-            errors.Add($"PhoneCode {model.PhoneCode} must not exceed {CountryLength.PhoneCodeLength} characters.");
+        else if (model.PhoneCode.Length > CountrySettings.PhoneCodeLength)
+            errors.Add($"PhoneCode {model.PhoneCode} must not exceed {CountrySettings.PhoneCodeLength} characters.");
         else if (model.PhoneCode.ContainsInjectionCharacters())
             errors.Add($"PhoneCode {model.PhoneCode} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())
@@ -55,8 +55,8 @@ public static class CountryModelValidators
         // Validation for TLD
         if (string.IsNullOrWhiteSpace(model.TLD))
             errors.Add("TLD is required.");
-        else if (model.TLD.Length > CountryLength.TLDLength)
-            errors.Add($"TLD {model.TLD} must not exceed {CountryLength.TLDLength} characters.");
+        else if (model.TLD.Length > CountrySettings.TLDLength)
+            errors.Add($"TLD {model.TLD} must not exceed {CountrySettings.TLDLength} characters.");
         else if (model.TLD.ContainsInjectionCharacters())
             errors.Add($"TLD {model.TLD} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())
@@ -65,8 +65,8 @@ public static class CountryModelValidators
         // Validation for Currency
         if (string.IsNullOrWhiteSpace(model.Currency))
             errors.Add("Currency is required.");
-        else if (model.TLD.Length > CountryLength.TLDLength)
-            errors.Add($"Currency {model.Currency} must not exceed {CountryLength.CurrencyLength} characters.");
+        else if (model.TLD.Length > CountrySettings.TLDLength)
+            errors.Add($"Currency {model.Currency} must not exceed {CountrySettings.CurrencyLength} characters.");
         else if (model.TLD.ContainsInjectionCharacters())
             errors.Add($"Currency {model.Currency} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

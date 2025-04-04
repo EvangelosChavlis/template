@@ -15,8 +15,8 @@ public static class UpdateMoonPhaseValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > MoonPhaseLength.NameLength)
-            errors.Add($"Name {dto.Name} must not exceed {MoonPhaseLength.NameLength} characters.");
+        else if (dto.Name.Length > MoonPhaseSettings.NameLength)
+            errors.Add($"Name {dto.Name} must not exceed {MoonPhaseSettings.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
             errors.Add($"Name {dto.Name} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class UpdateMoonPhaseValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > MoonPhaseLength.DescriptionLength)
-            errors.Add($"Description {dto.Description} must not exceed {MoonPhaseLength.DescriptionLength} characters.");
+        else if (dto.Description.Length > MoonPhaseSettings.DescriptionLength)
+            errors.Add($"Description {dto.Description} must not exceed {MoonPhaseSettings.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class UpdateMoonPhaseValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Code is required.");
-        else if (dto.Code.Length > MoonPhaseLength.CodeLength)
-            errors.Add($"Code {dto.Code} must not exceed {MoonPhaseLength.CodeLength} characters.");
+        else if (dto.Code.Length > MoonPhaseSettings.CodeLength)
+            errors.Add($"Code {dto.Code} must not exceed {MoonPhaseSettings.CodeLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
             errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Code.ContainsNonPrintableCharacters())

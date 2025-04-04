@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Metrics.LogErrors.Extensions;
 using server.src.Domain.Metrics.LogErrors.Models;
+using server.src.Persistence.Common.Configuration;
 
 namespace server.src.Persistence.Metrics.LogErrors;
 
@@ -19,33 +21,33 @@ public class LogErrorConfiguration : IEntityTypeConfiguration<LogError>
     }
 
     public void Configure(EntityTypeBuilder<LogError> builder)
-    {
-        builder.HasKey(c => c.Id);
+    { 
+        builder.ConfigureBaseEntityProperties();
 
-        builder.Property(c => c.Error)
+        builder.Property(le => le.Error)
             .IsRequired()
-            .HasMaxLength(500);
+            .HasMaxLength(LogErrorSettings.ErrorLength);
 
-        builder.Property(c => c.StatusCode)
+        builder.Property(le => le.StatusCode)
             .IsRequired();
 
-        builder.Property(c => c.Instance)
+        builder.Property(le => le.Instance)
             .IsRequired()
-            .HasMaxLength(200);
+            .HasMaxLength(LogErrorSettings.InstanceLength);
 
-        builder.Property(c => c.ExceptionType)
+        builder.Property(le => le.ExceptionType)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(LogErrorSettings.ExceptionTypeLength);
 
-        builder.Property(c => c.StackTrace)
-            .HasMaxLength(10000);
+        builder.Property(le => le.StackTrace)
+            .HasMaxLength(LogErrorSettings.StackTraceLength);
 
-        builder.Property(c => c.Timestamp)
+        builder.Property(le => le.Timestamp)
             .IsRequired();
 
-        builder.HasOne(c => c.User)
+        builder.HasOne(le => le.User)
             .WithMany(u => u.LogErrors)
-            .HasForeignKey(c => c.UserId)
+            .HasForeignKey(le => le.UserId)
             .OnDelete(DeleteBehavior.SetNull);
 
         builder.ToTable(_tableName, _schema);

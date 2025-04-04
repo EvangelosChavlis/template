@@ -27,19 +27,19 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
 
         builder.Property(c => c.Name)
             .IsRequired()
-            .HasMaxLength(CountryLength.NameLength);
+            .HasMaxLength(CountrySettings.NameLength);
 
         builder.Property(c => c.Description)
             .IsRequired()
-            .HasMaxLength(CountryLength.DescriptionLength);
+            .HasMaxLength(CountrySettings.DescriptionLength);
 
         builder.Property(c => c.Code)
             .IsRequired()
-            .HasMaxLength(CountryLength.CodeLength);
+            .HasMaxLength(CountrySettings.CodeLength);
 
         builder.Property(c => c.Capital)
             .IsRequired()
-            .HasMaxLength(CountryLength.CapitalLength);
+            .HasMaxLength(CountrySettings.CapitalLength);
 
         builder.Property(c => c.Population)
             .IsRequired();
@@ -49,15 +49,15 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
 
         builder.Property(c => c.PhoneCode)
             .IsRequired()
-            .HasMaxLength(CountryLength.PhoneCodeLength);
+            .HasMaxLength(CountrySettings.PhoneCodeLength);
 
         builder.Property(c => c.TLD)
             .IsRequired()
-            .HasMaxLength(CountryLength.TLDLength);
+            .HasMaxLength(CountrySettings.TLDLength);
 
         builder.Property(c => c.Currency)
             .IsRequired()
-            .HasMaxLength(CountryLength.CurrencyLength);
+            .HasMaxLength(CountrySettings.CurrencyLength);
 
         builder.Property(c => c.IsActive)
             .IsRequired();

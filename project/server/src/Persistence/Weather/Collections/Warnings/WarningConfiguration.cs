@@ -26,19 +26,19 @@ public class WarningConfiguration : IEntityTypeConfiguration<Warning>
         
         builder.Property(w => w.Name)
                 .IsRequired()
-                .HasMaxLength(WarningLength.NameLength); 
+                .HasMaxLength(WarningSettings.NameLength); 
 
         builder.Property(w => w.Description)
                 .IsRequired()
-                .HasMaxLength(WarningLength.DescriptionLength);
+                .HasMaxLength(WarningSettings.DescriptionLength);
 
         builder.Property(w => w.Code)
                 .IsRequired()
-                .HasMaxLength(WarningLength.CodeLength);
+                .HasMaxLength(WarningSettings.CodeLength);
 
         builder.Property(w => w.RecommendedActions)
                 .IsRequired()
-                .HasMaxLength(WarningLength.RecommendedActionsLength);
+                .HasMaxLength(WarningSettings.RecommendedActionsLength);
 
         builder.Property(w => w.IsActive)
                 .IsRequired();

@@ -26,15 +26,15 @@ public class ClimateZoneConfiguration : IEntityTypeConfiguration<ClimateZone>
 
         builder.Property(cz => cz.Name)
             .IsRequired()
-            .HasMaxLength(ClimateZoneLength.NameLength);
+            .HasMaxLength(ClimateZoneSettings.NameLength);
 
         builder.Property(cz => cz.Description)
             .IsRequired()
-            .HasMaxLength(ClimateZoneLength.DescriptionLength);
+            .HasMaxLength(ClimateZoneSettings.DescriptionLength);
 
         builder.Property(cz => cz.Code)
             .IsRequired()
-            .HasMaxLength(ClimateZoneLength.CodeLength);
+            .HasMaxLength(ClimateZoneSettings.CodeLength);
 
         builder.Property(cz => cz.AvgTemperatureC)
             .IsRequired();

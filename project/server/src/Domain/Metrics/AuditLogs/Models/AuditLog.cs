@@ -1,5 +1,6 @@
 // source
 using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Common.Models;
 using server.src.Domain.Metrics.AuditLogs.Enums;
 using server.src.Domain.Metrics.TelemetryRecords.Models;
 using server.src.Domain.Metrics.Trails;
@@ -10,13 +11,8 @@ namespace server.src.Domain.Metrics.AuditLogs.Models;
 /// Represents an audit log entry for tracking changes to entities in the system.
 /// This includes details about the entity affected, the action performed, and the user responsible.
 /// </summary>
-public class AuditLog
+public class AuditLog : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier of the audit log entry.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the unique identifier of the entity being changed (e.g., User.Id, Product.Id).
     /// </summary>

@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Support.ChangeLogs.Models;
 using server.src.Domain.Support.ChangeTypes.Models;
 
@@ -7,13 +8,8 @@ namespace server.src.Domain.Support.Changes.Models;
 /// <summary>
 /// Represents an individual change entry linked to a change log.
 /// </summary>
-public class Change
+public class Change : BaseEntity
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the change entry.
-    /// </summary>
-    public Guid Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the change.
     /// Provides a brief title or identifier for the modification.

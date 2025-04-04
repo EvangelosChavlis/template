@@ -1,8 +1,8 @@
-// source
 using server.src.Domain.Geography.Administrative.Stations.Models;
 using server.src.Domain.Weather.Tools.Units.Models;
 using server.src.Domain.Weather.Tools.HealthStatuses.Models;
 using server.src.Domain.Common.Models;
+using server.src.Domain.Weather.Tools.Series.Models;
 
 namespace server.src.Domain.Weather.Tools.Sensors.Models;
 
@@ -27,13 +27,6 @@ public class Sensor : BaseEntity
     public string SN { get; set; }
 
     /// <summary>
-    /// Gets or sets the current value measured by the sensor (nullable).
-    /// </summary>
-    public double? CurreantValue { get; set; }
-
-    public DateTime Timestamp { get; set; }
-
-     /// <summary>
     /// Gets or sets a value indicating whether the sensor is active.
     /// </summary>
     public bool IsActive { get; set; }
@@ -73,6 +66,11 @@ public class Sensor : BaseEntity
     /// Gets or sets the associated station.
     /// </summary>
     public virtual Station Station { get; set; }
+
+    /// <summary>
+    /// Gets or sets the series of recorded data points for this sensor.
+    /// </summary>
+    public virtual List<Serie> Series { get; set; }
 
     #endregion
 }

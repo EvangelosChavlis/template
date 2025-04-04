@@ -1,18 +1,14 @@
 // source
+using server.src.Domain.Common.Models;
 using server.src.Domain.Support.FAQs.Models;
 
-namespace server.src.Domain.Support.FAQCategories;
+namespace server.src.Domain.Support.FAQCategories.Models;
 
 /// <summary>
 /// Represents a category for FAQs, grouping related questions together.
 /// </summary>
-public class FAQCategory
+public class FAQCategory : BaseEntity
 {
-    /// <summary>
-    /// Unique identifier for the FAQ category.
-    /// </summary>
-    public int Id { get; set; }
-
     /// <summary>
     /// Name of the FAQ category (e.g.,"General", "Account", "Billing", "Technical Support").
     /// </summary>

@@ -15,8 +15,8 @@ public static class TimezoneModelValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(model.Name))
             errors.Add("Name is required.");
-        else if (model.Name.Length > TimezoneLength.NameLength)
-            errors.Add($"Name {model.Name} must not exceed {TimezoneLength.NameLength} characters.");
+        else if (model.Name.Length > TimezoneSettings.NameLength)
+            errors.Add($"Name {model.Name} must not exceed {TimezoneSettings.NameLength} characters.");
         else if (model.Name.ContainsInjectionCharacters())
             errors.Add($"Name {model.Name} contains invalid characters.");
         else if (model.Name.ContainsNonPrintableCharacters())
@@ -25,8 +25,8 @@ public static class TimezoneModelValidators
         // Validation for Description
         if (string.IsNullOrWhiteSpace(model.Description))
             errors.Add("Description is required.");
-        else if (model.Description.Length > TimezoneLength.DescriptionLength)
-            errors.Add($"Description {model.Description} must not exceed {TimezoneLength.DescriptionLength} characters.");
+        else if (model.Description.Length > TimezoneSettings.DescriptionLength)
+            errors.Add($"Description {model.Description} must not exceed {TimezoneSettings.DescriptionLength} characters.");
         else if (model.Description.ContainsInjectionCharacters())
             errors.Add($"Description {model.Description} contains invalid characters.");
         else if (model.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class TimezoneModelValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(model.Code))
             errors.Add("Code is required.");
-        else if (model.Code.Length > TimezoneLength.CodeLength)
-            errors.Add($"Code {model.Code} must not exceed {TimezoneLength.CodeLength} characters.");
+        else if (model.Code.Length > TimezoneSettings.CodeLength)
+            errors.Add($"Code {model.Code} must not exceed {TimezoneSettings.CodeLength} characters.");
         else if (model.Code.ContainsInjectionCharacters())
             errors.Add($"Code {model.Code} contains invalid characters.");
         else if (model.Code.ContainsNonPrintableCharacters())

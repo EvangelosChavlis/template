@@ -26,11 +26,11 @@ public class DistrictConfiguration : IEntityTypeConfiguration<District>
 
         builder.Property(d => d.Name)
             .IsRequired()
-            .HasMaxLength(DistrictLength.NameLength);
+            .HasMaxLength(DistrictSettings.NameLength);
 
         builder.Property(d => d.Description)
             .IsRequired()
-            .HasMaxLength(DistrictLength.DescriptionLength);
+            .HasMaxLength(DistrictSettings.DescriptionLength);
 
         builder.Property(d => d.Population)
             .IsRequired();
@@ -40,7 +40,7 @@ public class DistrictConfiguration : IEntityTypeConfiguration<District>
 
         builder.Property(d => d.Code)
             .IsRequired()
-            .HasMaxLength(DistrictLength.CodeLength);
+            .HasMaxLength(DistrictSettings.CodeLength);
 
         builder.Property(d => d.IsActive)
             .IsRequired();

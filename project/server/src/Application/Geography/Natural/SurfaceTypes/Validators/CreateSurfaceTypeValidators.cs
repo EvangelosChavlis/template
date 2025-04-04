@@ -15,18 +15,18 @@ public static class CreateSurfaceTypeValidators
         // Validation for Name
         if (string.IsNullOrWhiteSpace(dto.Name))
             errors.Add("Name is required.");
-        else if (dto.Name.Length > SurfaceTypeLength.NameLength)
-            errors.Add($"Name {SurfaceTypeLength.NameLength} must not exceed {SurfaceTypeLength.NameLength} characters.");
+        else if (dto.Name.Length > SurfaceTypeSettings.NameLength)
+            errors.Add($"Name {SurfaceTypeSettings.NameLength} must not exceed {SurfaceTypeSettings.NameLength} characters.");
         else if (dto.Name.ContainsInjectionCharacters())
-            errors.Add($"Name {SurfaceTypeLength.NameLength} contains invalid characters.");
+            errors.Add($"Name {SurfaceTypeSettings.NameLength} contains invalid characters.");
         else if (dto.Name.ContainsNonPrintableCharacters())
-            errors.Add($"Name {SurfaceTypeLength.NameLength} contains non-printable characters.");
+            errors.Add($"Name {SurfaceTypeSettings.NameLength} contains non-printable characters.");
 
         // Validation for Description
         if (string.IsNullOrWhiteSpace(dto.Description))
             errors.Add("Description is required.");
-        else if (dto.Description.Length > SurfaceTypeLength.DescriptionLength)
-            errors.Add($"Description {dto.Description} must not exceed {SurfaceTypeLength.DescriptionLength} characters.");
+        else if (dto.Description.Length > SurfaceTypeSettings.DescriptionLength)
+            errors.Add($"Description {dto.Description} must not exceed {SurfaceTypeSettings.DescriptionLength} characters.");
         else if (dto.Description.ContainsInjectionCharacters())
             errors.Add($"Description {dto.Description} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())
@@ -35,8 +35,8 @@ public static class CreateSurfaceTypeValidators
         // Validation for Code
         if (string.IsNullOrWhiteSpace(dto.Code))
             errors.Add("Code is required.");
-        else if (dto.Code.Length > SurfaceTypeLength.DescriptionLength)
-            errors.Add($"Code {dto.Description} must not exceed {SurfaceTypeLength.DescriptionLength} characters.");
+        else if (dto.Code.Length > SurfaceTypeSettings.DescriptionLength)
+            errors.Add($"Code {dto.Description} must not exceed {SurfaceTypeSettings.DescriptionLength} characters.");
         else if (dto.Code.ContainsInjectionCharacters())
             errors.Add($"Code {dto.Code} contains invalid characters.");
         else if (dto.Description.ContainsNonPrintableCharacters())

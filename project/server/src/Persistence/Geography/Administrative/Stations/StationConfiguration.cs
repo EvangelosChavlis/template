@@ -26,15 +26,15 @@ public class StationConfiguration : IEntityTypeConfiguration<Station>
 
         builder.Property(s => s.Name)
             .IsRequired()
-            .HasMaxLength(StationLength.NameLength);
+            .HasMaxLength(StationSettings.NameLength);
 
         builder.Property(s => s.Description)
             .IsRequired()
-            .HasMaxLength(StationLength.DescriptionLength);
+            .HasMaxLength(StationSettings.DescriptionLength);
 
         builder.Property(s => s.Code)
             .IsRequired()
-            .HasMaxLength(StationLength.CodeLength);
+            .HasMaxLength(StationSettings.CodeLength);
 
         builder.Property(s => s.IsActive)
             .IsRequired();
