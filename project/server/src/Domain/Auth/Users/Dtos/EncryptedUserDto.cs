@@ -9,7 +9,6 @@ namespace server.src.Domain.Auth.Users.Dtos;
 /// <param name="NormalizedEmailEncrypted">The encrypted normalized email address of the user.</param>
 /// <param name="PasswordHash">The securely hashed password of the user.</param>
 /// <param name="AddressEncrypted">The encrypted physical address of the user.</param>
-/// <param name="ZipCodeEncrypted">The encrypted ZIP code of the user's address.</param>
 /// <param name="PhoneNumberEncrypted">The encrypted phone number of the user.</param>
 /// <param name="MobilePhoneNumberEncrypted">The encrypted mobile phone number of the user.</param>
 /// <param name="BioEncrypted">The encrypted biography or additional user information.</param>
@@ -21,7 +20,6 @@ public record EncryptedUserDto(
     string NormalizedEmailEncrypted,
     string PasswordHash,
     string AddressEncrypted,
-    string ZipCodeEncrypted,
     string PhoneNumberEncrypted,
     string MobilePhoneNumberEncrypted,
     string BioEncrypted,

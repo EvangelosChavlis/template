@@ -1,6 +1,6 @@
 namespace server.src.Domain.Support.FAQs.Extensions;
 
-public class FAQSettings
+public static class FAQSettings
 {
     public static int TitleLength { get; } = 50;
     public static int QuestionLength { get; } = 1024;

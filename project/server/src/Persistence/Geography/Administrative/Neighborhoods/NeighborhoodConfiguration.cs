@@ -54,6 +54,11 @@ public class NeighborhoodConfiguration : IEntityTypeConfiguration<Neighborhood>
             .HasForeignKey(n => n.DistrictId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.HasMany(n => n.Users)
+            .WithOne(u => u.Neighborhood)
+            .HasForeignKey(u => u.NeighborhoodId)
+            .OnDelete(DeleteBehavior.Restrict);
+
         builder.ToTable(_tableName, _schema);
     }
 }

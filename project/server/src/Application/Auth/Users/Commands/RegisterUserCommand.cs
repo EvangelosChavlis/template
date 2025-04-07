@@ -11,6 +11,7 @@ using server.src.Domain.Auth.Roles.Models;
 using server.src.Domain.Auth.Users.Dtos;
 using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Common.Dtos;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
@@ -85,15 +86,29 @@ public class RegisterUserHandler : IRequestHandler<RegisterUserCommand, Response
             NormalizedEmailEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.Email.ToUpperInvariant(), token),
             PasswordHash: await _commonQueries.HashPassword(command.Dto.Password, token),
             AddressEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.Address, token),
-            ZipCodeEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.ZipCode, token),
             PhoneNumberEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.PhoneNumber, token),
             MobilePhoneNumberEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.MobilePhoneNumber, token),
             BioEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.Bio, token),
             DateOfBirthEncrypted: await _commonQueries.EncryptSensitiveData(command.Dto.DateOfBirth, token)
         );
 
+        // Searching Item for existing username
+        var neighborhoodFilters = new Expression<Func<Neighborhood, bool>>[] { n => n.Id == command.Dto.NeighborhoodId };
+        var neighborhood = await _commonRepository.GetResultByIdAsync(neighborhoodFilters, token: token);
+
+        // Check if neighborhood exists in the system
+        if (neighborhood is null)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error creating user.")
+                .WithStatusCode((int)HttpStatusCode.BadRequest)
+                .WithSuccess(false)
+                .WithData("Neighborhood not found");
+        }
+
         // Mapping and Saving User
-        var user = command.Dto.CreateUserModelMapping(command.Registered, encryptedUserDto);
+        var user = command.Dto.CreateUserModelMapping(command.Registered, encryptedUserDto, neighborhood);
         var modelValidationResult = UserModelValidators.Validate(user);
         if (!modelValidationResult.IsValid)
         {

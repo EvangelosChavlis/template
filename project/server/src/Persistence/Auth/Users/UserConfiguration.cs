@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 // source
+using server.src.Domain.Auth.Users.Extensions;
 using server.src.Domain.Auth.Users.Models;
 using server.src.Persistence.Common.Configuration;
 
@@ -34,24 +35,12 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(u => u.UserName)
             .IsRequired()
-            .HasMaxLength(50);
+            .HasMaxLength(UserSettings.UserNameLength);
 
         builder.Property(u => u.PasswordHash)
             .IsRequired();
 
         builder.Property(u => u.Address)
-            .IsRequired();
-
-        builder.Property(u => u.ZipCode)
-            .IsRequired();
-
-        builder.Property(u => u.City)
-            .IsRequired();
-
-        builder.Property(u => u.State)
-            .IsRequired();
-
-        builder.Property(u => u.Country)
             .IsRequired();
 
         builder.Property(u => u.PhoneNumber)
@@ -80,6 +69,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .IsRequired(false);
 
         builder.Property(u => u.Version)
+            .IsRequired();
+
+        builder.Property(u => u.NeighborhoodId)
             .IsRequired();
 
         builder.HasMany(u => u.UserRoles)
@@ -117,6 +109,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasForeignKey(le => le.UserId)
             .OnDelete(DeleteBehavior.SetNull);
 
+        builder.HasOne(u => u.Neighborhood)
+            .WithMany(n => n.Users)
+            .HasForeignKey(u => u.NeighborhoodId)
+            .OnDelete(DeleteBehavior.Restrict);
 
         builder.ToTable(_tableName, _schema);
     }

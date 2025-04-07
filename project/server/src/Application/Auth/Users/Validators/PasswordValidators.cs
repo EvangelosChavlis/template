@@ -1,4 +1,7 @@
+// packages
 using System.Text.RegularExpressions;
+
+// source
 using server.src.Domain.Common.Models;
 
 namespace server.src.Application.Auth.Users.Validators;
@@ -12,8 +15,8 @@ public static class PasswordValidators
         // Validation for Password
         if (string.IsNullOrWhiteSpace(password))
             errors.Add("Password is required.");
-        else if (password.Length < 8)
-            errors.Add("Password must be at least 8 characters.");
+        else if (password.Length < 8 || password.Length > 64)
+            errors.Add("Password must be between 8 and 64 characters."); 
         else if (!Regex.IsMatch(password, @"[A-Z]"))
             errors.Add("Password must contain at least one uppercase letter.");
         else if (!Regex.IsMatch(password, @"[a-z]"))

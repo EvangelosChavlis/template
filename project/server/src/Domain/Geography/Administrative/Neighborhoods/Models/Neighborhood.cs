@@ -1,4 +1,5 @@
 // source
+using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Common.Models;
 using server.src.Domain.Geography.Administrative.Districts.Models;
 using server.src.Domain.Geography.Administrative.Stations.Models;
@@ -71,6 +72,12 @@ public class Neighborhood : BaseEntity
     /// Gets or sets the associated weather station for the neighborhood.
     /// </summary>
     public virtual Station? Station { get; set; }
+
+    /// <summary>
+    /// Gets or sets the list of users associated with this neighborhood.
+    /// Represents a one-to-many relationship between the neighborhood and users.
+    /// </summary>
+    public virtual List<User> Users { get; set; }
 
     #endregion
 }

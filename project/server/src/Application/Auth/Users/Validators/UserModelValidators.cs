@@ -1,4 +1,5 @@
 // source
+using server.src.Application.Common.Validators;
 using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Common.Models;
 
@@ -6,7 +7,6 @@ namespace server.src.Application.Auth.Users.Validators;
 
 public static class UserModelValidators
 {
-
     public static ValidationResult Validate(this User model)
     {
         var errors = new List<string>();
@@ -34,10 +34,6 @@ public static class UserModelValidators
         // Validation for Address
         if (string.IsNullOrWhiteSpace(model.Address))
             errors.Add("Address is required.");
-
-        // Validation for ZipCode
-        if (string.IsNullOrWhiteSpace(model.ZipCode))
-            errors.Add("Zip code is required.");
     
         // Validation for PhoneNumber
         if (string.IsNullOrWhiteSpace(model.PhoneNumber))
@@ -56,8 +52,9 @@ public static class UserModelValidators
             errors.Add("IsActive must be either true or false.");
 
         // Validation for Version
-        if (model.Version == Guid.Empty)
-            errors.Add("Invalid version. The GUID must not be empty.");
+        model.Version.ValidateId();
+        // Validation for Neighbourhood
+        model.NeighborhoodId.ValidateId();
 
         // Return validation result
         return errors.Count > 0 ? 

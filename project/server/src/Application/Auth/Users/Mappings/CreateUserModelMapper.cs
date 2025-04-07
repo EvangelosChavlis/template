@@ -1,6 +1,7 @@
 // source
 using server.src.Domain.Auth.Users.Dtos;
 using server.src.Domain.Auth.Users.Models;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 
 namespace server.src.Application.Auth.Users.Mappings;
 
@@ -21,7 +22,7 @@ public static class CreateUserModelMapper
     /// <param name="encryptedUserDto">The <see cref="EncryptedUserDto"/> containing encrypted user details.</param>
     /// <returns>A new <see cref="User"/> model populated with data from the provided DTOs.</returns>
     public static User CreateUserModelMapping(this CreateUserDto userDto, bool registered, 
-        EncryptedUserDto encryptedUserDto) 
+        EncryptedUserDto encryptedUserDto, Neighborhood neighborhoodModel) 
     => new()
     {
         // Authentication Information
@@ -45,14 +46,12 @@ public static class CreateUserModelMapper
 
         // Contact Information
         Address = encryptedUserDto.AddressEncrypted,
-        ZipCode = encryptedUserDto.ZipCodeEncrypted,
-        City = userDto.City,
-        State = userDto.State,
-        Country = userDto.Country,
         PhoneNumber = encryptedUserDto.PhoneNumberEncrypted,
         PhoneNumberConfirmed = false,
         MobilePhoneNumber = encryptedUserDto.MobilePhoneNumberEncrypted,
         MobilePhoneNumberConfirmed = false,
+        NeighborhoodId = neighborhoodModel.Id,
+        Neighborhood = neighborhoodModel,
 
         // Profile Information
         Bio = encryptedUserDto.BioEncrypted,

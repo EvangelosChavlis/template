@@ -11,6 +11,7 @@ using server.src.Domain.Auth.Users.Dtos;
 using server.src.Domain.Auth.Users.Models;
 using server.src.Domain.Common.Dtos;
 using server.src.Domain.Common.Extensions;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 using server.src.Persistence.Common.Interfaces;
 
 namespace server.src.Application.Auth.Users.Commands;
@@ -110,10 +111,25 @@ public class UpdateUserHandler : IRequestHandler<UpdateUserCommand, Response<str
                 .WithStatusCode((int)HttpStatusCode.BadRequest)
                 .WithSuccess(false)
                 .WithData("User is deactivated.");
+        }
+
+        // Searching Item for existing username
+        var neighborhoodFilters = new Expression<Func<Neighborhood, bool>>[] { n => n.Id == command.Dto.NeighborhoodId };
+        var neighborhood = await _commonRepository.GetResultByIdAsync(neighborhoodFilters, token: token);
+
+        // Check if neighborhood exists in the system
+        if (neighborhood is null)
+        {
+            await _unitOfWork.RollbackTransactionAsync(token);
+            return new Response<string>()
+                .WithMessage("Error updating user.")
+                .WithStatusCode((int)HttpStatusCode.BadRequest)
+                .WithSuccess(false)
+                .WithData("Neighborhood not found");
         }   
             
         // Validating, Saving Item
-        command.Dto.UpdateUserModelMapping(user);
+        command.Dto.UpdateUserModelMapping(user, neighborhood);
         var modelValidationResult = UserModelValidators.Validate(user);
         if (!modelValidationResult.IsValid)
         {

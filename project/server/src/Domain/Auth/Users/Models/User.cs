@@ -4,6 +4,7 @@ using server.src.Domain.Auth.UserLogins.Models;
 using server.src.Domain.Auth.UserLogouts.Models;
 using server.src.Domain.Auth.UserRoles.Models;
 using server.src.Domain.Common.Models;
+using server.src.Domain.Geography.Administrative.Neighborhoods.Models;
 using server.src.Domain.Metrics.AuditLogs.Models;
 using server.src.Domain.Metrics.LogErrors.Models;
 using server.src.Domain.Metrics.Stories;
@@ -136,29 +137,19 @@ public class User : BaseEntity
     #region Contact Information
 
     /// <summary>
+    /// Gets or sets the foreign key for the neighborhood where the user resides.
+    /// </summary>
+    public Guid NeighborhoodId { get; set; }
+
+    /// <summary>
+    /// Gets or sets the neighborhood associated with the user.
+    /// </summary>
+    public virtual Neighborhood Neighborhood { get; set; }
+
+    /// <summary>
     /// Gets or sets the user's address.
     /// </summary>
     public string Address { get; set; }
-
-    /// <summary>
-    /// Gets or sets the user's postal code.
-    /// </summary>
-    public string ZipCode { get; set; }
-
-    /// <summary>
-    /// Gets or sets the user's city.
-    /// </summary>
-    public string City { get; set; }
-
-    /// <summary>
-    /// Gets or sets the user's state.
-    /// </summary>
-    public string State { get; set; }
-
-    /// <summary>
-    /// Gets or sets the user's country.
-    /// </summary>
-    public string Country { get; set; }
 
     /// <summary>
     /// Gets or sets the user's mobile phone number.

@@ -20,7 +20,7 @@ public class GetForecastsStatsHandler : IRequestHandler<GetForecastsStatsQuery, 
     private readonly DataContext _context;
     private readonly IMemoryCache _memoryCache;
 
-    public GetForecastsStatsHandler(DataContext context,IMemoryCache memoryCache)
+    public GetForecastsStatsHandler(DataContext context, IMemoryCache memoryCache)
     {
         _context = context;
         _memoryCache = memoryCache;
@@ -37,7 +37,7 @@ public class GetForecastsStatsHandler : IRequestHandler<GetForecastsStatsQuery, 
         }
 
         // If data is not in cache or is empty, fetch data from the database
-        var dto = await _context.WeatherDbSets.Forecasts
+        var dto = await _context.WeatherDbSets.CollectionsDbSets.Forecasts
             .OrderBy(f => f.Date)
             .Select(f => f.StatItemForecastDtoMapping())
             .ToListAsync(token);

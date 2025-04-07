@@ -37,7 +37,7 @@ public class GetObservationsStatsHandler : IRequestHandler<GetObservationsStatsQ
         }
 
         // If data is not in cache or is empty, fetch data from the database
-        var dto = await _context.WeatherDbSets.Observations
+        var dto = await _context.WeatherDbSets.CollectionsDbSets.Observations
             .OrderBy(f => f.Timestamp)
             .Select(f => f.StatItemObservationDtoMapping())
             .ToListAsync(token);

@@ -25,11 +25,16 @@ public static class ErrorItemUserDtoMapper
             LockoutEnd: string.Empty,
             InitialPassword: string.Empty,
 
-            Address: string.Empty,
+            Neighborhood: string.Empty,
             ZipCode: string.Empty,
-            City: string.Empty,
+            Address: string.Empty,
+            District: string.Empty,
+            Municipality: string.Empty,
             State: string.Empty,
+            Region: string.Empty,
             Country: string.Empty,
+            Continent: string.Empty,
+
             PhoneNumber: string.Empty,
             PhoneNumberConfirmed: false,
             MobilePhoneNumber: string.Empty,
@@ -37,6 +42,7 @@ public static class ErrorItemUserDtoMapper
 
             Bio: string.Empty,
             DateOfBirth: string.Empty,
+            
             IsActive: false,
             Version: Guid.Empty
         );

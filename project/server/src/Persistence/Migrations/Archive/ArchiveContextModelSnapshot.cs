@@ -263,15 +263,7 @@ namespace Persistence.Migrations.Archive
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("ConcurrencyStamp")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Country")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -317,6 +309,9 @@ namespace Persistence.Migrations.Archive
                     b.Property<bool>("MobilePhoneNumberConfirmed")
                         .HasColumnType("boolean");
 
+                    b.Property<Guid>("NeighborhoodId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("NormalizedEmail")
                         .IsRequired()
                         .HasColumnType("text");
@@ -347,10 +342,6 @@ namespace Persistence.Migrations.Archive
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<Guid?>("TenantId")
                         .HasColumnType("uuid");
 
@@ -375,15 +366,13 @@ namespace Persistence.Migrations.Archive
                     b.Property<Guid>("Version")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("ZipCode")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.HasKey("Id");
 
                     b.HasIndex("Id")
                         .IsUnique()
                         .HasDatabaseName("IX_User_Id");
+
+                    b.HasIndex("NeighborhoodId");
 
                     b.HasIndex("UserLockedId");
 
@@ -1479,11 +1468,14 @@ namespace Persistence.Migrations.Archive
                         .HasColumnType("text");
 
                     b.Property<string>("IPAddress")
-                        .HasMaxLength(45)
-                        .HasColumnType("character varying(45)");
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
 
                     b.Property<bool>("IsSystemAction")
                         .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Reason")
                         .HasMaxLength(500)
@@ -1492,10 +1484,19 @@ namespace Persistence.Migrations.Archive
                     b.Property<Guid>("TelemetryId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
@@ -1503,6 +1504,8 @@ namespace Persistence.Migrations.Archive
                     b.HasIndex("TelemetryId");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserLockedId");
 
                     b.ToTable("AuditLogs", "metrics");
                 });
@@ -1525,8 +1528,11 @@ namespace Persistence.Migrations.Archive
 
                     b.Property<string>("Instance")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("character varying(200)");
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("StackTrace")
                         .IsRequired()
@@ -1536,15 +1542,30 @@ namespace Persistence.Migrations.Archive
                     b.Property<int>("StatusCode")
                         .HasColumnType("integer");
 
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_LogError_Id");
+
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "Error", "StatusCode", "Timestamp")
                         .IsUnique()
@@ -1600,6 +1621,9 @@ namespace Persistence.Migrations.Archive
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<long>("MemoryUsed")
                         .HasColumnType("bigint");
 
@@ -1629,6 +1653,9 @@ namespace Persistence.Migrations.Archive
                     b.Property<int>("StatusCode")
                         .HasColumnType("integer");
 
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("ThreadId")
                         .IsRequired()
                         .HasColumnType("text");
@@ -1640,9 +1667,17 @@ namespace Persistence.Migrations.Archive
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("UserLockedId");
 
                     b.HasIndex("Id", "Method", "Path", "StatusCode", "ResponseTime", "RequestTimestamp")
                         .IsUnique()
@@ -1660,14 +1695,26 @@ namespace Persistence.Migrations.Archive
                     b.Property<Guid?>("AuditLogId")
                         .HasColumnType("uuid");
 
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<Guid?>("SourceAuditLogId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid?>("TargetAuditLogId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -1677,7 +1724,271 @@ namespace Persistence.Migrations.Archive
 
                     b.HasIndex("TargetAuditLogId");
 
+                    b.HasIndex("UserLockedId");
+
                     b.ToTable("Trails", "metrics");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.ChangeLogs.Models.ChangeLog", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("VersionLog")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("character varying(5)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_ChangeLog_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "VersionLog", "DateTime")
+                        .IsUnique()
+                        .HasDatabaseName("IX_ChangeLog_VersionLog_DateTime");
+
+                    b.ToTable("ChangeLogs", "supprort");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.ChangeTypes.Models.ChangeType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_ChangeType_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_ChangeType_Id_Name_IsActive");
+
+                    b.ToTable("ChangeTypes", "supprort");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.Changes.Models.Change", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ChangeLogId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ChangeTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ChangeTypeId1")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChangeLogId");
+
+                    b.HasIndex("ChangeTypeId");
+
+                    b.HasIndex("ChangeTypeId1");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Change_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Change_Id_Name");
+
+                    b.ToTable("Changes", "supprort");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.FAQCategories.Models.FAQCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_FAQCategory_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_FAQCategory_Id_Name_IsActive");
+
+                    b.ToTable("FAQCategories", "supprort");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.FAQs.Models.FAQ", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Answer")
+                        .IsRequired()
+                        .HasMaxLength(2048)
+                        .HasColumnType("character varying(2048)");
+
+                    b.Property<Guid>("FAQCategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Question")
+                        .IsRequired()
+                        .HasMaxLength(1024)
+                        .HasColumnType("character varying(1024)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ViewCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FAQCategoryId");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_FAQ_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Title", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_FAQ_Id_Title_IsActive");
+
+                    b.ToTable("FAQs", "supprort");
                 });
 
             modelBuilder.Entity("server.src.Domain.Weather.Collections.Forecasts.Models.Forecast", b =>
@@ -1778,7 +2089,7 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Forecast_Id_Date_TemperatureC_Humidity");
 
-                    b.ToTable("Forecasts", "weather");
+                    b.ToTable("Forecasts", "weather_collections");
                 });
 
             modelBuilder.Entity("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", b =>
@@ -1844,7 +2155,7 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_MoonPhase_Id_Name_Code");
 
-                    b.ToTable("MoonPhases", "weather");
+                    b.ToTable("MoonPhases", "weather_collections");
                 });
 
             modelBuilder.Entity("server.src.Domain.Weather.Collections.Observations.Models.Observation", b =>
@@ -1926,7 +2237,7 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Observation_Id_Timestamp_TemperatureC_Humidity");
 
-                    b.ToTable("Observations", "weather");
+                    b.ToTable("Observations", "weather_collections");
                 });
 
             modelBuilder.Entity("server.src.Domain.Weather.Collections.Warnings.Models.Warning", b =>
@@ -1982,7 +2293,240 @@ namespace Persistence.Migrations.Archive
                         .IsUnique()
                         .HasDatabaseName("IX_Warning_Id_Name_Description");
 
-                    b.ToTable("Warnings", "weather");
+                    b.ToTable("Warnings", "weather_collections");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.HealthStatuses.Models.HealthStatus", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("IX_HealthStatus_Code");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_HealthStatus_Id");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name")
+                        .IsUnique()
+                        .HasDatabaseName("IX_HealthStatus_Id_Name");
+
+                    b.HasIndex("Id", "Name", "Code", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_HealthStatus_Id_Name_Code_IsActive");
+
+                    b.ToTable("HealthStasus", "weather_tools");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Sensors.Models.Sensor", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("HealthStatusId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Manufacturer")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("SN")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<Guid>("StationId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UnitId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HealthStatusId");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Sensor_Id");
+
+                    b.HasIndex("StationId");
+
+                    b.HasIndex("UnitId");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name", "SN", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Sensor_Id_Name_SN_IsActive");
+
+                    b.ToTable("Sensors", "weather_tools");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Series.Models.Serie", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Remarks")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<Guid>("SensorId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("double precision");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Serie_Id");
+
+                    b.HasIndex("SensorId");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Value", "Timestamp")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Serie_Id_Value_Timestamp");
+
+                    b.ToTable("Series", "weather_tools");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Units.Models.Unit", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("LockUntil")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Symbol")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
+
+                    b.Property<Guid?>("TenantId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("UserLockedId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("Version")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Unit_Id");
+
+                    b.HasIndex("Symbol")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Unit_Symbol");
+
+                    b.HasIndex("UserLockedId");
+
+                    b.HasIndex("Id", "Name")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Unit_Id_Name");
+
+                    b.HasIndex("Id", "Name", "Symbol", "IsActive")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Unit_Id_Name_Symbol_IsActive");
+
+                    b.ToTable("Units", "weather_tools");
                 });
 
             modelBuilder.Entity("server.src.Domain.Auth.Permissions.Models.Permission", b =>
@@ -2066,12 +2610,20 @@ namespace Persistence.Migrations.Archive
 
             modelBuilder.Entity("server.src.Domain.Auth.Users.Models.User", b =>
                 {
+                    b.HasOne("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", "Neighborhood")
+                        .WithMany("Users")
+                        .HasForeignKey("NeighborhoodId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
                         .WithMany()
                         .HasForeignKey("UserLockedId")
                         .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("LockedByUser");
+
+                    b.Navigation("Neighborhood");
                 });
 
             modelBuilder.Entity("server.src.Domain.Developer.Actions.Models.Action", b =>
@@ -2373,6 +2925,13 @@ namespace Persistence.Migrations.Archive
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+
                     b.Navigation("TelemetryRecord");
 
                     b.Navigation("User");
@@ -2384,6 +2943,13 @@ namespace Persistence.Migrations.Archive
                         .WithMany("LogErrors")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
 
                     b.Navigation("User");
                 });
@@ -2421,6 +2987,13 @@ namespace Persistence.Migrations.Archive
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+
                     b.Navigation("User");
                 });
 
@@ -2440,9 +3013,96 @@ namespace Persistence.Migrations.Archive
                         .HasForeignKey("TargetAuditLogId")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+
                     b.Navigation("SourceAuditLog");
 
                     b.Navigation("TargetAuditLog");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.ChangeLogs.Models.ChangeLog", b =>
+                {
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.ChangeTypes.Models.ChangeType", b =>
+                {
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.Changes.Models.Change", b =>
+                {
+                    b.HasOne("server.src.Domain.Support.ChangeLogs.Models.ChangeLog", "ChangeLog")
+                        .WithMany("Changes")
+                        .HasForeignKey("ChangeLogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Support.ChangeTypes.Models.ChangeType", null)
+                        .WithMany("Changes")
+                        .HasForeignKey("ChangeTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Support.ChangeTypes.Models.ChangeType", "ChangeType")
+                        .WithMany()
+                        .HasForeignKey("ChangeTypeId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("ChangeLog");
+
+                    b.Navigation("ChangeType");
+
+                    b.Navigation("LockedByUser");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.FAQCategories.Models.FAQCategory", b =>
+                {
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.FAQs.Models.FAQ", b =>
+                {
+                    b.HasOne("server.src.Domain.Support.FAQCategories.Models.FAQCategory", "FAQCategory")
+                        .WithMany("FAQs")
+                        .HasForeignKey("FAQCategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("FAQCategory");
+
+                    b.Navigation("LockedByUser");
                 });
 
             modelBuilder.Entity("server.src.Domain.Weather.Collections.Forecasts.Models.Forecast", b =>
@@ -2525,6 +3185,78 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("LockedByUser");
                 });
 
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.HealthStatuses.Models.HealthStatus", b =>
+                {
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Sensors.Models.Sensor", b =>
+                {
+                    b.HasOne("server.src.Domain.Weather.Tools.HealthStatuses.Models.HealthStatus", "Status")
+                        .WithMany("Sensors")
+                        .HasForeignKey("HealthStatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Geography.Administrative.Stations.Models.Station", "Station")
+                        .WithMany("Sensors")
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Weather.Tools.Units.Models.Unit", "Unit")
+                        .WithMany("Sensors")
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+
+                    b.Navigation("Station");
+
+                    b.Navigation("Status");
+
+                    b.Navigation("Unit");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Series.Models.Serie", b =>
+                {
+                    b.HasOne("server.src.Domain.Weather.Tools.Sensors.Models.Sensor", "Sensor")
+                        .WithMany("Series")
+                        .HasForeignKey("SensorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+
+                    b.Navigation("Sensor");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Units.Models.Unit", b =>
+                {
+                    b.HasOne("server.src.Domain.Auth.Users.Models.User", "LockedByUser")
+                        .WithMany()
+                        .HasForeignKey("UserLockedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("LockedByUser");
+                });
+
             modelBuilder.Entity("server.src.Domain.Auth.Permissions.Models.Permission", b =>
                 {
                     b.Navigation("Aggregates");
@@ -2594,6 +3326,8 @@ namespace Persistence.Migrations.Archive
             modelBuilder.Entity("server.src.Domain.Geography.Administrative.Neighborhoods.Models.Neighborhood", b =>
                 {
                     b.Navigation("Station");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("server.src.Domain.Geography.Administrative.Regions.Models.Region", b =>
@@ -2611,6 +3345,8 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("Forecasts");
 
                     b.Navigation("Observations");
+
+                    b.Navigation("Sensors");
                 });
 
             modelBuilder.Entity("server.src.Domain.Geography.Natural.ClimateZones.Models.ClimateZone", b =>
@@ -2650,6 +3386,21 @@ namespace Persistence.Migrations.Archive
                     b.Navigation("Stories");
                 });
 
+            modelBuilder.Entity("server.src.Domain.Support.ChangeLogs.Models.ChangeLog", b =>
+                {
+                    b.Navigation("Changes");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.ChangeTypes.Models.ChangeType", b =>
+                {
+                    b.Navigation("Changes");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Support.FAQCategories.Models.FAQCategory", b =>
+                {
+                    b.Navigation("FAQs");
+                });
+
             modelBuilder.Entity("server.src.Domain.Weather.Collections.MoonPhases.Models.MoonPhase", b =>
                 {
                     b.Navigation("Forecasts");
@@ -2660,6 +3411,21 @@ namespace Persistence.Migrations.Archive
             modelBuilder.Entity("server.src.Domain.Weather.Collections.Warnings.Models.Warning", b =>
                 {
                     b.Navigation("Forecasts");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.HealthStatuses.Models.HealthStatus", b =>
+                {
+                    b.Navigation("Sensors");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Sensors.Models.Sensor", b =>
+                {
+                    b.Navigation("Series");
+                });
+
+            modelBuilder.Entity("server.src.Domain.Weather.Tools.Units.Models.Unit", b =>
+                {
+                    b.Navigation("Sensors");
                 });
 #pragma warning restore 612, 618
         }
